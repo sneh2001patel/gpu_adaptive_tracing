@@ -1,0 +1,154 @@
+{
+  "created_at": "2026-06-15T15:59:47-0400",
+  "run_dirs": [
+    "RQ1/runs/rq1_compare_rep1",
+    "RQ1/runs/rq1_compare_rep2",
+    "RQ1/runs/rq1_compare_rep3",
+    "RQ1/runs/rq1_compare_rep4",
+    "RQ1/runs/rq1_compare_rep5"
+  ],
+  "summary_csv": "RQ2/analysis/step9_accuracy/rq2_accuracy_summary_1781553587.csv",
+  "confusion_csv": "RQ2/analysis/step9_accuracy/rq2_confusion_1781553587.csv",
+  "disagreement_csv": "RQ2/analysis/step9_accuracy/rq2_disagreement_1781553587.csv",
+  "summary": [
+    {
+      "workload": "compute_bound",
+      "mode": "automatic",
+      "expected_label": "compute_bound",
+      "runs": 5,
+      "windows": 32,
+      "suspicious_windows": 25,
+      "match_rate_on_suspicious_or_all": 1.0,
+      "ambiguous_or_unknown_rate": 0.0,
+      "first_correct_window_mean": 0.0,
+      "first_correct_window_stdev": 0.0,
+      "first_correct_window_missing_runs": 0
+    },
+    {
+      "workload": "compute_bound",
+      "mode": "fixed_window",
+      "expected_label": "compute_bound",
+      "runs": 5,
+      "windows": 36,
+      "suspicious_windows": 29,
+      "match_rate_on_suspicious_or_all": 1.0,
+      "ambiguous_or_unknown_rate": 0.0,
+      "first_correct_window_mean": 0.0,
+      "first_correct_window_stdev": 0.0,
+      "first_correct_window_missing_runs": 0
+    },
+    {
+      "workload": "launch_overhead_or_small_kernel",
+      "mode": "automatic",
+      "expected_label": "launch_overhead_or_small_kernel",
+      "runs": 5,
+      "windows": 35,
+      "suspicious_windows": 30,
+      "match_rate_on_suspicious_or_all": 1.0,
+      "ambiguous_or_unknown_rate": 0.0,
+      "first_correct_window_mean": 0.0,
+      "first_correct_window_stdev": 0.0,
+      "first_correct_window_missing_runs": 0
+    },
+    {
+      "workload": "launch_overhead_or_small_kernel",
+      "mode": "fixed_window",
+      "expected_label": "launch_overhead_or_small_kernel",
+      "runs": 5,
+      "windows": 44,
+      "suspicious_windows": 39,
+      "match_rate_on_suspicious_or_all": 1.0,
+      "ambiguous_or_unknown_rate": 0.0,
+      "first_correct_window_mean": 0.0,
+      "first_correct_window_stdev": 0.0,
+      "first_correct_window_missing_runs": 0
+    },
+    {
+      "workload": "mixed",
+      "mode": "automatic",
+      "expected_label": "mixed",
+      "runs": 5,
+      "windows": 33,
+      "suspicious_windows": 25,
+      "match_rate_on_suspicious_or_all": 1.0,
+      "ambiguous_or_unknown_rate": 0.0,
+      "first_correct_window_mean": 0.0,
+      "first_correct_window_stdev": 0.0,
+      "first_correct_window_missing_runs": 0
+    },
+    {
+      "workload": "mixed",
+      "mode": "fixed_window",
+      "expected_label": "mixed",
+      "runs": 5,
+      "windows": 40,
+      "suspicious_windows": 25,
+      "match_rate_on_suspicious_or_all": 1.0,
+      "ambiguous_or_unknown_rate": 0.0,
+      "first_correct_window_mean": 0.0,
+      "first_correct_window_stdev": 0.0,
+      "first_correct_window_missing_runs": 0
+    }
+  ],
+  "confusion": [
+    {
+      "mode": "automatic",
+      "workload": "compute_bound",
+      "expected_label": "compute_bound",
+      "diagnosis_label": "compute_bound",
+      "count": 25
+    },
+    {
+      "mode": "automatic",
+      "workload": "launch_overhead_or_small_kernel",
+      "expected_label": "launch_overhead_or_small_kernel",
+      "diagnosis_label": "launch_overhead_or_small_kernel",
+      "count": 30
+    },
+    {
+      "mode": "automatic",
+      "workload": "mixed",
+      "expected_label": "mixed",
+      "diagnosis_label": "mixed",
+      "count": 25
+    },
+    {
+      "mode": "fixed_window",
+      "workload": "compute_bound",
+      "expected_label": "compute_bound",
+      "diagnosis_label": "compute_bound",
+      "count": 29
+    },
+    {
+      "mode": "fixed_window",
+      "workload": "launch_overhead_or_small_kernel",
+      "expected_label": "launch_overhead_or_small_kernel",
+      "diagnosis_label": "launch_overhead_or_small_kernel",
+      "count": 39
+    },
+    {
+      "mode": "fixed_window",
+      "workload": "mixed",
+      "expected_label": "mixed",
+      "diagnosis_label": "mixed",
+      "count": 25
+    }
+  ],
+  "disagreement": [
+    {
+      "workload": "compute_bound",
+      "paired_windows": 32,
+      "disagreement_rate": 0.25
+    },
+    {
+      "workload": "launch_overhead_or_small_kernel",
+      "paired_windows": 35,
+      "disagreement_rate": 0.02857142857142857
+    },
+    {
+      "workload": "mixed",
+      "paired_windows": 33,
+      "disagreement_rate": 0.21212121212121213
+    }
+  ]
+}
