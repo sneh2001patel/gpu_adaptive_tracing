@@ -296,23 +296,246 @@ Step 9 verification results:
   - Fixed-window expected-label match rate on suspicious windows was 1.0 for all three workloads.
   - Automatic versus fixed-window disagreement rate was 0.25 for `compute_bound`, 0.0286 for `launch_overhead_or_small_kernel`, and 0.2121 for `mixed`.
 
-## Next Steps
-
 ### Step 10:
 
-- Add a scaled-down vLLM smoke plan for the RTX 4060 Ti 8GB.
-- Select a small or quantized model that fits in 8GB VRAM.
-- Define vLLM smoke scenarios:
+- Re-ran the RQ1 microbenchmark experiment on a cloud NVIDIA L4 24GB GPU.
+- Installed Nsight Systems CLI on the L4 host from the NVIDIA CUDA Ubuntu repository:
+  - `cuda-nsight-systems-12-8`.
+  - Nsight Systems version: `2024.6.2.225-246235244400v0`.
+- Used the existing `main` conda environment at `/venv/main`.
+- Verified PyTorch GPU execution before running:
+  - PyTorch version: `2.5.1`.
+  - PyTorch CUDA version: `12.4`.
+  - CUDA available in PyTorch: `True`.
+  - GPU detected by PyTorch: `NVIDIA L4`.
+- Adjusted `RQ1/scripts/run_microbenchmarks.py` so Nsight profiling is bounded by the profiled target process duration instead of using `nsys profile --duration`.
+  - On the L4 host, `nsys profile --duration` terminated the child process with return code 143 and produced reports without CUDA kernel tables.
+  - Direct target-duration profiling produced valid CUDA kernel summaries.
+- Ran 5 fresh L4 comparison repetitions:
+  - `RQ1/runs/rq1_l4_compare_rep1/`.
+  - `RQ1/runs/rq1_l4_compare_rep2/`.
+  - `RQ1/runs/rq1_l4_compare_rep3/`.
+  - `RQ1/runs/rq1_l4_compare_rep4/`.
+  - `RQ1/runs/rq1_l4_compare_rep5/`.
+- Wrote reproducibility manifests for all 5 L4 repetitions.
+- Re-ran the enhanced RQ1 aggregate across the L4 repetitions.
+- Generated RQ1 paper tables, success checks, and SVG figures for the L4 snapshot.
+
+Step 10 verification results:
+
+- L4 comparison summaries:
+  - `RQ1/runs/rq1_l4_compare_rep1/comparison_1781639088.json`.
+  - `RQ1/runs/rq1_l4_compare_rep2/comparison_1781639310.json`.
+  - `RQ1/runs/rq1_l4_compare_rep3/comparison_1781639532.json`.
+  - `RQ1/runs/rq1_l4_compare_rep4/comparison_1781639758.json`.
+  - `RQ1/runs/rq1_l4_compare_rep5/comparison_1781639976.json`.
+- L4 five-repetition RQ1 aggregate CSV: `RQ1/analysis/l4_5rep_snapshot/aggregate_1781639990.csv`.
+- L4 five-repetition RQ1 aggregate JSON: `RQ1/analysis/l4_5rep_snapshot/aggregate_1781639990.json`.
+- L4 paper-ready Markdown table: `RQ1/analysis/l4_5rep_snapshot/paper_tables/paper_table_1781640003.md`.
+- L4 paper-ready LaTeX table: `RQ1/analysis/l4_5rep_snapshot/paper_tables/paper_table_1781640003.tex`.
+- L4 success criteria report: `RQ1/analysis/l4_5rep_snapshot/paper_tables/success_criteria_1781640003.json`.
+- L4 trace-time savings figure: `RQ1/analysis/l4_5rep_snapshot/figures/trace_time_saved_percent_1781640003.svg`.
+- L4 diagnosis match-rate figure: `RQ1/analysis/l4_5rep_snapshot/figures/diagnosis_match_rate_1781640003.svg`.
+- Nsight artifact check:
+  - 30 `.nsys-rep` reports.
+  - 30 kernel-summary JSON files.
+  - 0 failed or `no_kernel_table` kernel summaries.
+- L4 five-repetition RQ1 result:
+  - `compute_bound`: automatic trace mean 12.412s, fixed-window trace mean 18.134s, saved 31.6%, expected-label match rate 1.0.
+  - `launch_overhead_or_small_kernel`: automatic trace mean 12.994s, fixed-window trace mean 23.993s, saved 45.8%, expected-label match rate 1.0.
+  - `mixed`: automatic trace mean 11.964s, fixed-window trace mean 18.533s, saved 35.4%, expected-label match rate 1.0.
+- All three workloads passed the current RQ1 success criteria on the L4.
+- Syntax check passed with `python -m py_compile RQ1/scripts/run_microbenchmarks.py`.
+
+### Step 11:
+
+- Treat the L4 24GB host as the active development and experiment target going forward.
+- Added a vLLM smoke plan for the L4 at `RQ1/vllm_smoke_plan.md`.
+- Selected `Qwen/Qwen2.5-7B-Instruct` as the default L4 smoke model.
+- Selected `Qwen/Qwen2.5-1.5B-Instruct` as a plumbing fallback only if the 7B model download or startup is blocked.
+- Defined vLLM smoke scenarios:
   - Healthy low-concurrency serving.
   - Queue pressure.
   - Long prompt or long output pressure.
-  - GPU compute saturation if feasible.
-- Decide the minimal request-level metrics to add before vLLM:
+  - GPU compute saturation.
+  - KV-cache or memory-pressure behavior if feasible on 24GB.
+- Decided the minimal request-level metrics to add before vLLM:
   - Request latency.
   - Throughput.
   - Queueing delay if available.
   - Prompt and output token counts.
-- Extend the controller schema so RQ1/RQ2 tables can include vLLM labels after the microbenchmark phase.
+- Extended the controller schema for vLLM smoke rows in `RQ1/vllm_smoke_plan.md`.
+- Added `RQ1/scripts/run_vllm_smoke.py` to drive a running vLLM OpenAI-compatible server and write:
+  - Per-request CSV files.
+  - Per-window CSV files.
+  - A summary JSON file.
+  - Request latency, throughput, prompt/output token estimates, scenario labels, cheap GPU metrics, and first-pass controller state fields.
+- Updated `RQ1/README.md` with L4-first microbenchmark commands and L4 vLLM smoke commands.
+
+Step 11 verification results:
+
+- Syntax check passed with `python -m py_compile RQ1/scripts/run_vllm_smoke.py RQ1/scripts/run_microbenchmarks.py`.
+- Current environment check found that `vllm` is not installed yet in `/venv/main`.
+- L4 GPU/PyTorch check remains valid:
+  - GPU: `NVIDIA L4`.
+  - PyTorch version: `2.5.1`.
+  - PyTorch CUDA version: `12.4`.
+  - CUDA compute capability: `(8, 9)`.
+
+### Step 12:
+
+- Created a separate vLLM serving environment at `/venv/vllm` so the validated RQ1 microbenchmark environment at `/venv/main` stayed unchanged.
+- Installed and validated the serving stack:
+  - `vllm==0.10.2`.
+  - `torch==2.8.0+cu128` inside `/venv/vllm`.
+  - `transformers==4.56.2`.
+  - `tokenizers==0.22.1`.
+  - `fastapi==0.115.14`.
+  - `starlette==0.46.2`.
+  - `prometheus-fastapi-instrumentator==7.1.0`.
+  - `uvicorn==0.34.3`.
+- Avoided the latest `vllm==0.23.0` path because it pulled CUDA 13-era PyTorch and failed against the current L4 driver.
+- Started the L4 vLLM server with `Qwen/Qwen2.5-7B-Instruct`.
+  - Used `HF_HOME=/dev/shm/hf-cache` for model cache space.
+  - Model loading used about 14.25 GiB.
+  - Final server startup reported about 64,704 KV-cache tokens and maximum concurrency of about 15.8x for 4096-token requests.
+- Fixed an initial server 500 issue by pinning the FastAPI/Starlette/Prometheus instrumentation stack in `/venv/vllm`.
+- Ran a quick healthy smoke check:
+  - Output: `RQ1/runs/vllm_l4_smoke_quick_fixed/`.
+  - Success rate: 100%.
+- Ran the full L4 smoke scenario sweep:
+  - Output: `RQ1/runs/vllm_l4_smoke_full/`.
+  - `healthy`, `queue_pressure`, `long_output`, and `compute_saturation` succeeded.
+- Corrected the `long_prompt` and `kv_cache_pressure` prompt sizes after vLLM rejected the original requests for exceeding the effective context limit.
+  - Updated `RQ1/scripts/run_vllm_smoke.py` so these scenarios fit under the `max_model_len - max_tokens` input cap.
+  - Added HTTP response-body capture for failed vLLM requests.
+  - Corrected long-prompt output: `RQ1/runs/vllm_l4_smoke_long_prompt_fixed/`.
+  - Corrected KV-cache pressure output: `RQ1/runs/vllm_l4_smoke_kv_fixed/`.
+- Added `RQ1/scripts/run_vllm_nsys_compare.py`.
+  - The harness launches a temporary vLLM server under Nsight Systems.
+  - It waits for API readiness before starting the captured range.
+  - It triggers `cudaProfilerStart`/`cudaProfilerStop` around the smoke workload so startup is mostly outside the captured range.
+  - It writes automatic and fixed-window `.nsys-rep` files plus extracted CUDA kernel summaries.
+- Ran a short automatic versus fixed-window Nsight proof run on `queue_pressure`:
+  - Output: `RQ1/runs/vllm_l4_nsys_queue_pressure/`.
+  - Comparison: `RQ1/runs/vllm_l4_nsys_queue_pressure/vllm_nsys_comparison_1781642848.json`.
+  - Summary table: `RQ1/runs/vllm_l4_nsys_queue_pressure/vllm_nsys_summary_table_1781642848.csv`.
+  - Automatic report: `RQ1/runs/vllm_l4_nsys_queue_pressure/automatic/profiles/vllm_queue_pressure_automatic_1781642668.nsys-rep`.
+  - Fixed-window report: `RQ1/runs/vllm_l4_nsys_queue_pressure/fixed_window/profiles/vllm_queue_pressure_fixed_window_1781642747.nsys-rep`.
+
+Step 12 verification results:
+
+- Syntax check passed with `python -m py_compile RQ1/scripts/run_vllm_smoke.py RQ1/scripts/run_vllm_nsys_compare.py`.
+- Corrected L4 smoke comparison against healthy:
+  - `healthy`: p95 mean 3708.2 ms, GPU util 98.1%, memory used 96.72%, success 100%.
+  - `queue_pressure`: p95 mean 7113.6 ms, GPU util 98.1%, memory used 97.68%, success 100%.
+  - `long_prompt`: p95 mean 7451.6 ms, GPU util 98.1%, memory used 97.69%, success 100%.
+  - `long_output`: p95 mean 30807.1 ms, GPU util 98.0%, memory used 97.69%, success 100%.
+  - `compute_saturation`: p95 mean 9751.5 ms, GPU util 98.0%, memory used 97.69%, success 100%.
+  - `kv_cache_pressure`: p95 mean 19709.7 ms, GPU util 98.6%, memory used 97.69%, success 100%.
+- Pressure scenarios raised p95 latency relative to healthy.
+- GPU utilization was already saturated in healthy for this 7B model on L4, so pressure scenarios mainly raised latency and modestly increased memory/KV-cache pressure rather than moving utilization from low to high.
+- Short vLLM Nsight comparison result:
+  - Automatic duration: 77.601 s, 38,606 kernel instances, 3,681,774,386 ns kernel time.
+  - Fixed-window duration: 99.741 s, 77,760 kernel instances, 7,462,777,025 ns kernel time.
+  - Automatic saved 22.140 s, or 22.2%, in this first proof run.
+
+## Next Steps
+
+### Step 13:
+
+- Selected `queue_pressure` as the main vLLM serving workload for the RQ1 comparison.
+  - Rationale: it gives a clean serving-specific latency-pressure signal, keeps success rate at 100%, and avoids the much longer wall time of `long_output` or the heavier context footprint of `kv_cache_pressure`.
+- Added seed support to the vLLM smoke and Nsight comparison harnesses.
+  - `RQ1/scripts/run_vllm_smoke.py` now records `--seed` in the summary, includes it in prompts, and passes it through the OpenAI-compatible request `seed` field.
+  - `RQ1/scripts/run_vllm_nsys_compare.py` now accepts `--seed`, passes it to the smoke client, and records it in the comparison JSON.
+- Added `RQ1/scripts/analyze_vllm_nsys_repetitions.py` for vLLM Nsight comparison aggregation.
+  - Aggregates comparison JSON files by scenario.
+  - Records per-mode durations, kernel instances, kernel time, smoke request counts, smoke success rates, seeds, and comparison artifact paths.
+- Ran 3 seeded repetitions for `queue_pressure`:
+  - Rep 1 seed `101`: `RQ1/runs/vllm_l4_nsys_queue_pressure_rep1/vllm_nsys_comparison_1781644604.json`.
+  - Rep 2 seed `202`: `RQ1/runs/vllm_l4_nsys_queue_pressure_rep2/vllm_nsys_comparison_1781644788.json`.
+  - Rep 3 seed `303`: `RQ1/runs/vllm_l4_nsys_queue_pressure_rep3/vllm_nsys_comparison_1781644961.json`.
+- Wrote the 3-repetition vLLM aggregate:
+  - CSV: `RQ1/analysis/vllm_l4_nsys_queue_pressure/vllm_nsys_aggregate_1781644983.csv`.
+  - JSON: `RQ1/analysis/vllm_l4_nsys_queue_pressure/vllm_nsys_aggregate_1781644983.json`.
+- Considered reducing healthy prompt/output size for a lower-utilization baseline.
+  - No change made for Step 13 because the selected comparison workload is `queue_pressure`, and the serving comparison is currently focused on profiler-duration savings for a fixed workload rather than healthy-versus-pressure classification.
+  - If a lower-utilization serving baseline is needed later, add a separate `healthy_light` scenario instead of changing the existing `healthy` scenario and invalidating Step 12 comparisons.
+
+Step 13 verification results:
+
+- Syntax check passed with `python -m py_compile RQ1/scripts/run_vllm_smoke.py RQ1/scripts/run_vllm_nsys_compare.py RQ1/scripts/analyze_vllm_nsys_repetitions.py`.
+- All 3 repetitions completed with `automatic` status `ok` and `fixed_window` status `ok`.
+- All 3 repetitions had 100% smoke success in both modes.
+- Aggregate `queue_pressure` result across seeds `101|202|303`:
+  - Automatic duration mean: 77.721 s.
+  - Fixed-window duration mean: 92.978 s.
+  - Profiler duration saved mean: 15.257 s.
+  - Profiler duration saved mean percent: 16.424%.
+  - Automatic kernel instances mean: 38,760.667.
+  - Fixed-window kernel instances mean: 77,844.000.
+  - Automatic smoke requests mean: 32.
+  - Fixed-window smoke requests mean: 64.
+
+### Step 14:
+
+- Promoted the vLLM aggregate into a paper-table/figure pipeline with vLLM-specific scripts:
+  - `RQ1/scripts/make_vllm_paper_tables.py`.
+  - `RQ1/scripts/make_vllm_paper_figures.py`.
+- Generated paper artifacts for the Step 13 short-window vLLM aggregate:
+  - Table CSV: `RQ1/analysis/vllm_l4_nsys_queue_pressure/paper_tables/vllm_paper_table_1781645308.csv`.
+  - Table Markdown: `RQ1/analysis/vllm_l4_nsys_queue_pressure/paper_tables/vllm_paper_table_1781645308.md`.
+  - Table LaTeX: `RQ1/analysis/vllm_l4_nsys_queue_pressure/paper_tables/vllm_paper_table_1781645308.tex`.
+  - Success criteria: `RQ1/analysis/vllm_l4_nsys_queue_pressure/paper_tables/vllm_success_criteria_1781645308.json`.
+  - Trace-time savings figure: `RQ1/analysis/vllm_l4_nsys_queue_pressure/figures/vllm_trace_time_saved_percent_1781645308.svg`.
+  - Kernel-instance figure: `RQ1/analysis/vllm_l4_nsys_queue_pressure/figures/vllm_kernel_instances_1781645308.svg`.
+- Ran longer vLLM comparison windows to reduce the effect of server startup/export overhead:
+  - Automatic smoke duration: 30 s.
+  - Fixed-window smoke duration: 60 s.
+  - Window size: 10 s.
+  - Workload: `queue_pressure`.
+- Ran 3 longer-window seeded repetitions:
+  - Rep 1 seed `1111`: `RQ1/runs/vllm_l4_nsys_queue_pressure_long_rep1/vllm_nsys_comparison_1781645557.json`.
+  - Rep 2 seed `2222`: `RQ1/runs/vllm_l4_nsys_queue_pressure_long_rep2/vllm_nsys_comparison_1781645844.json`.
+  - Rep 3 seed `3333`: `RQ1/runs/vllm_l4_nsys_queue_pressure_long_rep3/vllm_nsys_comparison_1781646096.json`.
+- Wrote the longer-window vLLM aggregate:
+  - CSV: `RQ1/analysis/vllm_l4_nsys_queue_pressure_long/vllm_nsys_aggregate_1781646112.csv`.
+  - JSON: `RQ1/analysis/vllm_l4_nsys_queue_pressure_long/vllm_nsys_aggregate_1781646112.json`.
+- Generated paper artifacts for the longer-window aggregate:
+  - Table CSV: `RQ1/analysis/vllm_l4_nsys_queue_pressure_long/paper_tables/vllm_paper_table_1781646125.csv`.
+  - Table Markdown: `RQ1/analysis/vllm_l4_nsys_queue_pressure_long/paper_tables/vllm_paper_table_1781646125.md`.
+  - Table LaTeX: `RQ1/analysis/vllm_l4_nsys_queue_pressure_long/paper_tables/vllm_paper_table_1781646125.tex`.
+  - Success criteria: `RQ1/analysis/vllm_l4_nsys_queue_pressure_long/paper_tables/vllm_success_criteria_1781646125.json`.
+  - Trace-time savings figure: `RQ1/analysis/vllm_l4_nsys_queue_pressure_long/figures/vllm_trace_time_saved_percent_1781646125.svg`.
+  - Kernel-instance figure: `RQ1/analysis/vllm_l4_nsys_queue_pressure_long/figures/vllm_kernel_instances_1781646125.svg`.
+- Did not add `healthy_light` in Step 14.
+  - The current RQ1 vLLM result compares automatic and fixed-window profiling on the same serving workload.
+  - A lower-utilization healthy class is more relevant to RQ2/RQ3 classification and should be added later as a separate scenario, not by changing the existing `healthy` definition.
+
+Step 14 verification results:
+
+- Syntax check passed with `python -m py_compile RQ1/scripts/make_vllm_paper_tables.py RQ1/scripts/make_vllm_paper_figures.py`.
+- All 3 longer-window repetitions completed with `automatic` status `ok` and `fixed_window` status `ok`.
+- All longer-window repetitions had 100% smoke success in both modes.
+- Longer-window aggregate `queue_pressure` result across seeds `1111|2222|3333`:
+  - Automatic duration mean: 104.561 s.
+  - Fixed-window duration mean: 133.545 s.
+  - Profiler duration saved mean: 28.983 s.
+  - Profiler duration saved mean percent: 21.661%.
+  - Automatic kernel instances mean: 97,382.
+  - Fixed-window kernel instances mean: 175,338.
+  - Automatic smoke requests mean: 80.
+  - Fixed-window smoke requests mean: 144.
+- Longer-window vLLM paper success criteria passed:
+  - Minimum trace-time saved percent: 15%.
+  - Minimum smoke success rate: 99%.
+
+### RQ1 Completion Status:
+
+- RQ1 is complete for the current L4 scope.
+- Microbenchmark RQ1 results are complete with 5 L4 repetitions, aggregate outputs, paper tables, and figures.
+- vLLM RQ1 serving results are complete with short and longer `queue_pressure` repetitions, aggregate outputs, paper tables, and figures.
 
 Selected GPU-heavy microbenchmark workload set:
 
@@ -339,7 +562,7 @@ Deferred workload candidates:
    - Goal: stress GPU memory bandwidth more than CPU scheduling.
 
 2. GPU memory pressure workload
-   - Allocate and hold large tensors near a safe fraction of 8GB VRAM, then run smaller kernels.
+   - Allocate and hold large tensors near a safe fraction of available VRAM, then run smaller kernels.
    - Expected label: `memory_pressure`.
    - Goal: test whether memory utilization and free-memory signals help explain slowdown.
 
@@ -378,5 +601,6 @@ Cheap metrics to collect continuously:
 
 ## Notes
 
-- The RTX 4060 Ti 8GB should be treated as a development GPU only.
-- Final publishable cross-GPU claims should use the planned cloud GPU set.
+- The RTX 4060 Ti 8GB is historical Phase 0 context only; new work should focus on the L4 host.
+- The L4 RQ1 microbenchmark snapshot is complete enough to use as the current cloud-GPU baseline.
+- Broader cross-GPU claims should still wait for additional cloud GPUs such as A10 and A100.

@@ -17,11 +17,24 @@ EXPECTED_LABELS = {
     "compute_bound": "compute_bound",
     "launch_overhead_or_small_kernel": "launch_overhead_or_small_kernel",
     "mixed": "mixed",
+    "healthy": "vllm_healthy",
+    "queue_pressure": "vllm_queue_pressure",
+    "long_prompt": "vllm_long_prompt",
+    "long_output": "vllm_long_output",
+    "compute_saturation": "vllm_compute_saturation",
+    "kv_cache_pressure": "vllm_kv_cache_pressure",
+    "vllm_healthy": "vllm_healthy",
+    "vllm_queue_pressure": "vllm_queue_pressure",
+    "vllm_long_prompt": "vllm_long_prompt",
+    "vllm_long_output": "vllm_long_output",
+    "vllm_compute_saturation": "vllm_compute_saturation",
+    "vllm_kv_cache_pressure": "vllm_kv_cache_pressure",
 }
 
 AMBIGUOUS_LABELS = {
     "healthy_or_not_suspicious",
     "latency_regression_unknown_gpu_cause",
+    "vllm_latency_regression_unknown_gpu_cause",
     "possible_launch_overhead_or_small_kernel",
     "possible_memory_pressure",
 }
@@ -34,6 +47,13 @@ def as_int(value: Any) -> int:
         return int(float(value or 0))
     except (TypeError, ValueError):
         return 0
+
+
+def as_float(value: Any) -> float:
+    try:
+        return float(value or 0)
+    except (TypeError, ValueError):
+        return 0.0
 
 
 def mean(values: list[float]) -> float:
@@ -51,10 +71,14 @@ def run_dirs(input_root: Path, pattern: str) -> list[Path]:
 def load_windows(run_dir: Path) -> list[dict[str, Any]]:
     records = []
     for mode in MODES:
-        for csv_path in sorted((run_dir / mode).glob("*.csv")):
+        for csv_path in sorted((run_dir / mode).rglob("*.csv")):
             with csv_path.open("r", newline="", encoding="utf-8") as handle:
                 for row in csv.DictReader(handle):
-                    workload = row.get("workload", "")
+                    if "window_id" not in row or "diagnosis_label" not in row:
+                        continue
+                    workload = row.get("workload") or row.get("scenario") or row.get("workload_phase_label", "")
+                    if not workload:
+                        continue
                     records.append(
                         {
                             "run_dir": str(run_dir),
@@ -62,8 +86,16 @@ def load_windows(run_dir: Path) -> list[dict[str, Any]]:
                             "workload": workload,
                             "expected_label": EXPECTED_LABELS.get(workload, workload),
                             "window_id": as_int(row.get("window_id")),
+                            "timestamp_start": as_float(row.get("timestamp_start")),
+                            "timestamp_end": as_float(row.get("timestamp_end")),
                             "diagnosis_label": row.get("diagnosis_label", ""),
                             "trigger_trace": as_int(row.get("trigger_trace")),
+                            "profiler_duration_s": as_float(row.get("profiler_duration_s")),
+                            "profiler_kernel_instances": as_float(row.get("profiler_kernel_instances")),
+                            "profiler_kernel_total_time_ns": as_float(row.get("profiler_kernel_total_time_ns")),
+                            "profiler_report_count": len(
+                                [path for path in str(row.get("profiler_report_paths", "")).split("|") if path]
+                            ),
                             "csv": str(csv_path),
                         }
                     )
@@ -79,6 +111,19 @@ def first_correct_window(records: list[dict[str, Any]]) -> int | None:
     return min(correct) if correct else None
 
 
+def first_correct_seconds(records: list[dict[str, Any]]) -> float | None:
+    timestamp_starts = [as_float(record.get("timestamp_start")) for record in records if as_float(record.get("timestamp_start")) > 0]
+    if not timestamp_starts:
+        return None
+    run_start = min(timestamp_starts)
+    correct_ends = [
+        as_float(record.get("timestamp_end")) - run_start
+        for record in records
+        if record["diagnosis_label"] == record["expected_label"] and as_float(record.get("timestamp_end")) > 0
+    ]
+    return min(correct_ends) if correct_ends else None
+
+
 def summarize(records: list[dict[str, Any]]) -> list[dict[str, Any]]:
     groups: dict[tuple[str, str], list[dict[str, Any]]] = defaultdict(list)
     for record in records:
@@ -91,12 +136,17 @@ def summarize(records: list[dict[str, Any]]) -> list[dict[str, Any]]:
         denominator = suspicious or group
         correct = [record for record in denominator if record["diagnosis_label"] == expected]
         ambiguous = [record for record in denominator if record["diagnosis_label"] in AMBIGUOUS_LABELS]
+        profiler_rows = [record for record in group if as_float(record.get("profiler_duration_s")) > 0]
         first_windows_by_run = []
+        first_seconds_by_run = []
         for run_dir in sorted({str(record["run_dir"]) for record in group}):
             run_group = [record for record in group if record["run_dir"] == run_dir]
             first = first_correct_window(run_group)
             if first is not None:
                 first_windows_by_run.append(float(first))
+            first_seconds = first_correct_seconds(run_group)
+            if first_seconds is not None:
+                first_seconds_by_run.append(float(first_seconds))
         rows.append(
             {
                 "workload": workload,
@@ -110,6 +160,17 @@ def summarize(records: list[dict[str, Any]]) -> list[dict[str, Any]]:
                 "first_correct_window_mean": mean(first_windows_by_run),
                 "first_correct_window_stdev": stdev(first_windows_by_run),
                 "first_correct_window_missing_runs": len({str(record["run_dir"]) for record in group}) - len(first_windows_by_run),
+                "first_correct_seconds_mean": mean(first_seconds_by_run),
+                "first_correct_seconds_stdev": stdev(first_seconds_by_run),
+                "first_correct_seconds_missing_runs": len({str(record["run_dir"]) for record in group}) - len(first_seconds_by_run),
+                "profiler_burst_count": len(profiler_rows),
+                "profiler_duration_s_total": sum(as_float(record.get("profiler_duration_s")) for record in profiler_rows),
+                "profiler_duration_s_mean": mean([as_float(record.get("profiler_duration_s")) for record in profiler_rows]),
+                "profiler_kernel_instances_total": sum(as_float(record.get("profiler_kernel_instances")) for record in profiler_rows),
+                "profiler_kernel_instances_mean": mean([as_float(record.get("profiler_kernel_instances")) for record in profiler_rows]),
+                "profiler_kernel_total_time_ns_total": sum(as_float(record.get("profiler_kernel_total_time_ns")) for record in profiler_rows),
+                "profiler_kernel_total_time_ns_mean": mean([as_float(record.get("profiler_kernel_total_time_ns")) for record in profiler_rows]),
+                "profiler_report_count_total": sum(as_int(record.get("profiler_report_count")) for record in profiler_rows),
             }
         )
     return rows

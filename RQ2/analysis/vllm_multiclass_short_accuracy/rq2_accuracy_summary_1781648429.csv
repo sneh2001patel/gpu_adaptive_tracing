@@ -1,0 +1,13 @@
+workload,mode,expected_label,runs,windows,suspicious_windows,match_rate_on_suspicious_or_all,ambiguous_or_unknown_rate,first_correct_window_mean,first_correct_window_stdev,first_correct_window_missing_runs,first_correct_seconds_mean,first_correct_seconds_stdev,first_correct_seconds_missing_runs,profiler_burst_count,profiler_duration_s_total,profiler_duration_s_mean,profiler_kernel_instances_total,profiler_kernel_instances_mean,profiler_kernel_total_time_ns_total,profiler_kernel_total_time_ns_mean,profiler_report_count_total
+compute_saturation,automatic,vllm_compute_saturation,1,8,8,1.0,0.0,0.0,0.0,0,6.0,0.0,0,0,0,0.0,0,0.0,0,0.0,0
+compute_saturation,fixed_window,vllm_compute_saturation,1,10,10,1.0,0.0,0.0,0.0,0,6.0,0.0,0,0,0,0.0,0,0.0,0,0.0,0
+healthy,automatic,vllm_healthy,1,6,6,1.0,0.0,0.0,0.0,0,6.0,0.0,0,0,0,0.0,0,0.0,0,0.0,0
+healthy,fixed_window,vllm_healthy,1,10,10,1.0,0.0,0.0,0.0,0,6.0,0.0,0,0,0,0.0,0,0.0,0,0.0,0
+kv_cache_pressure,automatic,vllm_kv_cache_pressure,1,8,8,1.0,0.0,0.0,0.0,0,6.0,0.0,0,0,0,0.0,0,0.0,0,0.0,0
+kv_cache_pressure,fixed_window,vllm_kv_cache_pressure,1,14,14,1.0,0.0,0.0,0.0,0,6.0,0.0,0,0,0,0.0,0,0.0,0,0.0,0
+long_output,automatic,vllm_long_output,1,12,12,1.0,0.0,0.0,0.0,0,6.0,0.0,0,0,0,0.0,0,0.0,0,0.0,0
+long_output,fixed_window,vllm_long_output,1,12,12,1.0,0.0,0.0,0.0,0,6.0,0.0,0,0,0,0.0,0,0.0,0,0.0,0
+long_prompt,automatic,vllm_long_prompt,1,6,6,1.0,0.0,0.0,0.0,0,6.0,0.0,0,0,0,0.0,0,0.0,0,0.0,0
+long_prompt,fixed_window,vllm_long_prompt,1,12,10,1.0,0.0,0.0,0.0,0,6.0,0.0,0,0,0,0.0,0,0.0,0,0.0,0
+queue_pressure,automatic,vllm_queue_pressure,1,6,6,1.0,0.0,0.0,0.0,0,6.0,0.0,0,0,0,0.0,0,0.0,0,0.0,0
+queue_pressure,fixed_window,vllm_queue_pressure,1,10,10,1.0,0.0,0.0,0.0,0,6.0,0.0,0,0,0,0.0,0,0.0,0,0.0,0

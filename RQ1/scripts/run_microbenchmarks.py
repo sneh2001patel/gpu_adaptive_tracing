@@ -439,8 +439,6 @@ def collect_nsys_burst(
         "none",
         "--force-overwrite",
         "true",
-        "--duration",
-        str(burst_seconds),
         "--output",
         str(output_prefix),
         sys.executable,

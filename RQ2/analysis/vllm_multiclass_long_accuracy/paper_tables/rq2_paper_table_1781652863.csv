@@ -1,0 +1,13 @@
+workload,mode,expected_label,runs,windows,suspicious_windows,expected_label_match_rate,ambiguous_or_unknown_rate,first_correct_window_mean,first_correct_window_stdev,first_correct_window_missing_runs,first_correct_seconds_mean,first_correct_seconds_stdev,first_correct_seconds_missing_runs,auto_fixed_disagreement_rate,profiler_burst_count,profiler_duration_s_total,profiler_duration_s_mean,profiler_kernel_instances_total,profiler_kernel_instances_mean,profiler_kernel_total_time_ns_total,profiler_report_count_total,match_rate_pass,ambiguous_rate_pass,first_correct_pass,overall_pass
+compute_saturation,automatic,vllm_compute_saturation,3,24,24,1.0,0.0,0.0,0.0,0,10.0,0.0,0,0.0,0,0.0,0.0,0.0,0.0,0.0,0,True,True,True,True
+compute_saturation,fixed_window,vllm_compute_saturation,3,42,42,1.0,0.0,0.0,0.0,0,10.0,0.0,0,0.0,0,0.0,0.0,0.0,0.0,0.0,0,True,True,True,True
+healthy,automatic,vllm_healthy,3,24,24,1.0,0.0,0.0,0.0,0,10.0,0.0,0,0.0,0,0.0,0.0,0.0,0.0,0.0,0,True,True,True,True
+healthy,fixed_window,vllm_healthy,3,42,42,1.0,0.0,0.0,0.0,0,10.0,0.0,0,0.0,0,0.0,0.0,0.0,0.0,0.0,0,True,True,True,True
+kv_cache_pressure,automatic,vllm_kv_cache_pressure,3,24,24,1.0,0.0,0.0,0.0,0,10.0,0.0,0,0.0,0,0.0,0.0,0.0,0.0,0.0,0,True,True,True,True
+kv_cache_pressure,fixed_window,vllm_kv_cache_pressure,3,48,48,1.0,0.0,0.0,0.0,0,10.0,0.0,0,0.0,0,0.0,0.0,0.0,0.0,0.0,0,True,True,True,True
+long_output,automatic,vllm_long_output,3,24,24,1.0,0.0,0.0,0.0,0,10.0,0.0,0,0.0,0,0.0,0.0,0.0,0.0,0.0,0,True,True,True,True
+long_output,fixed_window,vllm_long_output,3,42,42,1.0,0.0,0.0,0.0,0,10.0,0.0,0,0.0,0,0.0,0.0,0.0,0.0,0.0,0,True,True,True,True
+long_prompt,automatic,vllm_long_prompt,3,24,18,1.0,0.0,0.0,0.0,0,10.0,0.0,0,0.25,0,0.0,0.0,0.0,0.0,0.0,0,True,True,True,True
+long_prompt,fixed_window,vllm_long_prompt,3,42,38,1.0,0.0,0.0,0.0,0,10.0,0.0,0,0.25,0,0.0,0.0,0.0,0.0,0.0,0,True,True,True,True
+queue_pressure,automatic,vllm_queue_pressure,3,24,24,1.0,0.0,0.0,0.0,0,10.0,0.0,0,0.0,0,0.0,0.0,0.0,0.0,0.0,0,True,True,True,True
+queue_pressure,fixed_window,vllm_queue_pressure,3,42,42,1.0,0.0,0.0,0.0,0,10.0,0.0,0,0.0,0,0.0,0.0,0.0,0.0,0.0,0,True,True,True,True
