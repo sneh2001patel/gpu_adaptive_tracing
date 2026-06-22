@@ -99,6 +99,7 @@ def write_markdown(rows: list[dict[str, Any]], output_dir: Path, timestamp: int)
         "First correct s",
         "Disagree rate",
         "Trace s",
+        "Kernel instances",
         "Pass",
     ]
     lines = [
@@ -118,6 +119,7 @@ def write_markdown(rows: list[dict[str, Any]], output_dir: Path, timestamp: int)
                     str(row["first_correct_seconds_mean"]),
                     str(row["auto_fixed_disagreement_rate"]),
                     str(row["profiler_duration_s_total"]),
+                    str(row["profiler_kernel_instances_total"]),
                     "yes" if row["overall_pass"] else "no",
                 ]
             )
@@ -130,9 +132,9 @@ def write_markdown(rows: list[dict[str, Any]], output_dir: Path, timestamp: int)
 def write_latex(rows: list[dict[str, Any]], output_dir: Path, timestamp: int) -> Path:
     path = output_dir / f"rq2_paper_table_{timestamp}.tex"
     lines = [
-        "\\begin{tabular}{llrrrrrr}",
+        "\\begin{tabular}{llrrrrrrr}",
         "\\hline",
-        "Workload & Mode & Match rate & Ambiguous rate & First correct & First correct s & Disagree rate & Trace s \\\\",
+        "Workload & Mode & Match rate & Ambiguous rate & First correct & First correct s & Disagree rate & Trace s & Kernel instances \\\\",
         "\\hline",
     ]
     for row in rows:
@@ -141,7 +143,7 @@ def write_latex(rows: list[dict[str, Any]], output_dir: Path, timestamp: int) ->
             f"{row['expected_label_match_rate']} & {row['ambiguous_or_unknown_rate']} & "
             f"{row['first_correct_window_mean']} & {row['first_correct_seconds_mean']} & "
             f"{row['auto_fixed_disagreement_rate']} & "
-            f"{row['profiler_duration_s_total']} \\\\"
+            f"{row['profiler_duration_s_total']} & {row['profiler_kernel_instances_total']} \\\\"
         )
     lines.extend(["\\hline", "\\end{tabular}"])
     path.write_text("\n".join(lines) + "\n", encoding="utf-8")

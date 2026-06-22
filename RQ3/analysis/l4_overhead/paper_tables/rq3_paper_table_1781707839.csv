@@ -1,0 +1,12 @@
+source,workload,repetitions,automatic_trace_s,fixed_window_trace_s,trace_saved_s,trace_saved_percent,automatic_kernel_instances,fixed_window_kernel_instances,kernel_instances_avoided,kernel_instances_avoided_percent,automatic_success_or_match_rate,fixed_window_success_or_match_rate,p95_latency_ms_automatic,p95_latency_ms_fixed_window,p95_latency_regression_percent,throughput_rps_automatic,throughput_rps_fixed_window,trace_savings_pass,kernel_savings_pass,match_rate_pass,p95_latency_pass,overall_pass
+rq1_microbenchmark,compute_bound,5,12.412,18.134,5.722,31.556,332.4,1305.2,972.8,74.533,1.0,1.0,0.0,0.0,0.0,0.0,0.0,True,True,True,True,True
+rq1_microbenchmark,launch_overhead_or_small_kernel,5,12.994,23.993,10.999,45.842,124877.8,477389.8,352512.0,73.842,1.0,1.0,0.0,0.0,0.0,0.0,0.0,True,True,True,True,True
+rq1_microbenchmark,mixed,5,11.964,18.533,6.569,35.444,1293.0,5928.0,4635.0,78.188,1.0,1.0,0.0,0.0,0.0,0.0,0.0,True,True,True,True,True
+rq1_vllm_profiler_savings,queue_pressure,3,104.561,133.545,28.983,21.703,97382.0,175338.0,77956.0,44.46,1.0,1.0,0.0,0.0,0.0,0.0,0.0,True,True,True,True,True
+rq2_vllm_multiclass,compute_saturation,3,336.771,415.072,78.301,18.864,264744.0,463302.0,198558.0,42.857,1.0,1.0,9812.146,9817.126,-0.051,2.441,2.441,True,True,True,True,True
+rq2_vllm_multiclass,healthy,3,301.255,391.865,90.61,23.123,189945.0,344715.0,154770.0,44.898,1.0,1.0,3766.836,3806.311,-1.037,0.267,0.266,True,True,True,True,True
+rq2_vllm_multiclass,kv_cache_pressure,3,329.383,449.337,119.954,26.696,247290.0,494580.0,247290.0,50.0,1.0,1.0,19804.966,19816.853,-0.06,0.404,0.404,True,True,True,True,True
+rq2_vllm_multiclass,long_output,3,291.005,397.137,106.132,26.724,293334.0,586477.0,293143.0,49.984,1.0,1.0,30909.277,30943.009,-0.109,0.129,0.129,True,True,True,True,True
+rq2_vllm_multiclass,long_prompt,3,290.366,380.965,90.599,23.781,172668.0,345336.0,172668.0,50.0,1.0,1.0,7510.034,7537.282,-0.362,0.533,0.532,True,True,True,True,True
+rq2_vllm_multiclass,queue_pressure,3,309.702,403.356,93.653,23.219,292230.0,525031.0,232801.0,44.34,1.0,1.0,7150.489,7261.554,-1.529,2.235,2.231,True,True,True,True,True
+rq2_vllm_multiclass_total,all_vllm_scenarios,18,1858.482,2437.731,579.249,23.762,1460211.0,2759441.0,1299230.0,47.083,1.0,1.0,9541.103,9691.891,-1.556,1.95,1.915,True,True,True,True,True

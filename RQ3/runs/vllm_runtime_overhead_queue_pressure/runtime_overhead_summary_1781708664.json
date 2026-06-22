@@ -1,0 +1,141 @@
+{
+  "created_at": "2026-06-17T15:04:24+0000",
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "scenario": "queue_pressure",
+  "seeds": [
+    6101,
+    6102,
+    6103
+  ],
+  "records": [
+    {
+      "comparison_path": "RQ3/runs/vllm_runtime_overhead_queue_pressure/queue_pressure_seed6101/runtime_overhead_comparison_1781708408.json",
+      "created_at": "2026-06-17T15:00:08+0000",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "scenario": "queue_pressure",
+      "seed": 6101,
+      "port": 8061,
+      "duration_seconds": 30.0,
+      "no_profiler": {
+        "mode": "no_profiler",
+        "status": "ok",
+        "request_csv": "RQ3/runs/vllm_runtime_overhead_queue_pressure/queue_pressure_seed6101/no_profiler/queue_pressure_requests_1781708372.csv",
+        "request_count": 80.0,
+        "success_rate": 100.0,
+        "p50_latency_ms": 7037.609577178955,
+        "p95_latency_ms": 7117.358291149139,
+        "throughput_rps": 2.247159879696991,
+        "prompt_tokens_mean": 156.0,
+        "output_tokens_mean": 39.8375,
+        "duration_s": 35.60049319267273
+      },
+      "cheap_metrics_only": {
+        "mode": "cheap_metrics_only",
+        "status": "ok",
+        "request_csv": "RQ3/runs/vllm_runtime_overhead_queue_pressure/queue_pressure_seed6101/cheap_metrics_only/queue_pressure_requests_1781708407.csv",
+        "window_csv": "RQ3/runs/vllm_runtime_overhead_queue_pressure/queue_pressure_seed6101/cheap_metrics_only/queue_pressure_windows_1781708407.csv",
+        "window_count": 4,
+        "request_count": 80.0,
+        "success_rate": 100.0,
+        "p50_latency_ms": 5991.65666103363,
+        "p95_latency_ms": 6014.218580722809,
+        "throughput_rps": 2.6659042207782018,
+        "prompt_tokens_mean": 156.0,
+        "output_tokens_mean": 38.3125,
+        "duration_s": 30.008579969406128
+      },
+      "comparison": {
+        "p95_latency_delta_ms": -1103.1397104263306,
+        "p95_latency_regression_percent": -15.499285904970538,
+        "throughput_delta_rps": 0.4187443410812106,
+        "throughput_change_percent": 18.634381330164832
+      }
+    },
+    {
+      "comparison_path": "RQ3/runs/vllm_runtime_overhead_queue_pressure/queue_pressure_seed6102/runtime_overhead_comparison_1781708538.json",
+      "created_at": "2026-06-17T15:02:18+0000",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "scenario": "queue_pressure",
+      "seed": 6102,
+      "port": 8062,
+      "duration_seconds": 30.0,
+      "no_profiler": {
+        "mode": "no_profiler",
+        "status": "ok",
+        "request_csv": "RQ3/runs/vllm_runtime_overhead_queue_pressure/queue_pressure_seed6102/no_profiler/queue_pressure_requests_1781708494.csv",
+        "request_count": 80.0,
+        "success_rate": 100.0,
+        "p50_latency_ms": 7051.161527633667,
+        "p95_latency_ms": 7433.745300769806,
+        "throughput_rps": 2.2250342881897014,
+        "prompt_tokens_mean": 156.0,
+        "output_tokens_mean": 46.1,
+        "duration_s": 35.95450210571289
+      },
+      "cheap_metrics_only": {
+        "mode": "cheap_metrics_only",
+        "status": "ok",
+        "request_csv": "RQ3/runs/vllm_runtime_overhead_queue_pressure/queue_pressure_seed6102/cheap_metrics_only/queue_pressure_requests_1781708537.csv",
+        "window_csv": "RQ3/runs/vllm_runtime_overhead_queue_pressure/queue_pressure_seed6102/cheap_metrics_only/queue_pressure_windows_1781708537.csv",
+        "window_count": 4,
+        "request_count": 96.0,
+        "success_rate": 100.0,
+        "p50_latency_ms": 5987.695932388306,
+        "p95_latency_ms": 7060.308158397675,
+        "throughput_rps": 2.5883930123930945,
+        "prompt_tokens_mean": 156.0,
+        "output_tokens_mean": 44.145833333333336,
+        "duration_s": 37.08864903450012
+      },
+      "comparison": {
+        "p95_latency_delta_ms": -373.43714237213135,
+        "p95_latency_regression_percent": -5.0235396460712725,
+        "throughput_delta_rps": 0.3633587242033931,
+        "throughput_change_percent": 16.330477518125058
+      }
+    },
+    {
+      "comparison_path": "RQ3/runs/vllm_runtime_overhead_queue_pressure/queue_pressure_seed6103/runtime_overhead_comparison_1781708664.json",
+      "created_at": "2026-06-17T15:04:24+0000",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "scenario": "queue_pressure",
+      "seed": 6103,
+      "port": 8063,
+      "duration_seconds": 30.0,
+      "no_profiler": {
+        "mode": "no_profiler",
+        "status": "ok",
+        "request_csv": "RQ3/runs/vllm_runtime_overhead_queue_pressure/queue_pressure_seed6103/no_profiler/queue_pressure_requests_1781708620.csv",
+        "request_count": 80.0,
+        "success_rate": 100.0,
+        "p50_latency_ms": 7070.50895690918,
+        "p95_latency_ms": 7135.429668426514,
+        "throughput_rps": 2.241001373969813,
+        "prompt_tokens_mean": 156.0,
+        "output_tokens_mean": 47.2125,
+        "duration_s": 35.69832706451416
+      },
+      "cheap_metrics_only": {
+        "mode": "cheap_metrics_only",
+        "status": "ok",
+        "request_csv": "RQ3/runs/vllm_runtime_overhead_queue_pressure/queue_pressure_seed6103/cheap_metrics_only/queue_pressure_requests_1781708663.csv",
+        "window_csv": "RQ3/runs/vllm_runtime_overhead_queue_pressure/queue_pressure_seed6103/cheap_metrics_only/queue_pressure_windows_1781708663.csv",
+        "window_count": 4,
+        "request_count": 96.0,
+        "success_rate": 100.0,
+        "p50_latency_ms": 5986.780405044556,
+        "p95_latency_ms": 7069.992780685425,
+        "throughput_rps": 2.5885052312110255,
+        "prompt_tokens_mean": 156.0,
+        "output_tokens_mean": 47.104166666666664,
+        "duration_s": 37.08704113960266
+      },
+      "comparison": {
+        "p95_latency_delta_ms": -65.43688774108887,
+        "p95_latency_regression_percent": -0.9170700403738803,
+        "throughput_delta_rps": 0.34750385724121235,
+        "throughput_change_percent": 15.506632939971295
+      }
+    }
+  ]
+}

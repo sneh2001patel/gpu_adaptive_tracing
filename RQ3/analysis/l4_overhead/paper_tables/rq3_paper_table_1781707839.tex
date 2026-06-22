@@ -1,0 +1,17 @@
+\begin{tabular}{llrrrrrrr}
+\hline
+Source & Workload & Reps & Saved \% & Kernel avoided \% & Match & Auto p95 ms & Fixed p95 ms & p95 regress \% \\
+\hline
+rq1_microbenchmark & compute_bound & 5 & 31.556 & 74.533 & 1.0 & 0.0 & 0.0 & 0.0 \\
+rq1_microbenchmark & launch_overhead_or_small_kernel & 5 & 45.842 & 73.842 & 1.0 & 0.0 & 0.0 & 0.0 \\
+rq1_microbenchmark & mixed & 5 & 35.444 & 78.188 & 1.0 & 0.0 & 0.0 & 0.0 \\
+rq1_vllm_profiler_savings & queue_pressure & 3 & 21.703 & 44.46 & 1.0 & 0.0 & 0.0 & 0.0 \\
+rq2_vllm_multiclass & compute_saturation & 3 & 18.864 & 42.857 & 1.0 & 9812.146 & 9817.126 & -0.051 \\
+rq2_vllm_multiclass & healthy & 3 & 23.123 & 44.898 & 1.0 & 3766.836 & 3806.311 & -1.037 \\
+rq2_vllm_multiclass & kv_cache_pressure & 3 & 26.696 & 50.0 & 1.0 & 19804.966 & 19816.853 & -0.06 \\
+rq2_vllm_multiclass & long_output & 3 & 26.724 & 49.984 & 1.0 & 30909.277 & 30943.009 & -0.109 \\
+rq2_vllm_multiclass & long_prompt & 3 & 23.781 & 50.0 & 1.0 & 7510.034 & 7537.282 & -0.362 \\
+rq2_vllm_multiclass & queue_pressure & 3 & 23.219 & 44.34 & 1.0 & 7150.489 & 7261.554 & -1.529 \\
+rq2_vllm_multiclass_total & all_vllm_scenarios & 18 & 23.762 & 47.083 & 1.0 & 9541.103 & 9691.891 & -1.556 \\
+\hline
+\end{tabular}

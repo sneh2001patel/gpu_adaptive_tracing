@@ -18,7 +18,7 @@ The automatic controller is evaluated against that baseline using diagnosis agre
 
 ## Current Scope
 
-The current RQ2 implementation reuses RQ1 per-window outputs rather than launching separate RQ2 experiments.
+The current RQ2 implementation reuses RQ1 per-window o[text](../RQ1)utputs rather than launching separate RQ2 experiments.
 
 This is intentional for the first pass:
 
@@ -453,18 +453,106 @@ Step 11 result:
   - 0.0 for all workloads except `long_prompt`.
   - 0.25 for `long_prompt`.
 - The `long_prompt` disagreement is not an accuracy failure because both modes still matched the expected label and passed the ambiguity criteria.
-- Current vLLM paper tables show profiler bridge columns as 0.0. The vLLM accuracy result is complete, but the profiler-cost bridge should be tightened later if the vLLM RQ2 table needs to report trace duration and kernel-count columns directly.
+- Step 12 supersedes the earlier note that vLLM paper-table profiler bridge columns were 0.0.
+
+### Step 12: Tighten vLLM Cost Bridge
+
+- Decided that RQ2 vLLM paper tables should include profiler-duration and kernel-count columns directly.
+- Extended `RQ2/scripts/analyze_accuracy.py` so vLLM runs can read profiler-cost fields from `vllm_nsys_comparison_*.json` files in addition to per-window CSV rows.
+- For vLLM runs, the analyzer now loads one profiler-cost record per run and mode from each comparison JSON:
+  - `automatic.duration_s`
+  - `fixed_window.duration_s`
+  - `kernel_summary.kernel_instances`
+  - `kernel_summary.kernel_total_time_ns`
+  - `report_paths`
+- The analyzer only injects comparison-JSON profiler costs when the per-window CSV rows do not already contain profiler-cost fields. This keeps the existing microbenchmark cost path unchanged.
+- Updated `RQ2/scripts/make_paper_tables.py` so the rendered Markdown and LaTeX paper tables include total kernel instances as well as trace seconds.
+- Re-ran the vLLM short and long RQ2 analyses with profiler-cost bridge fields.
+
+Updated short-validation output files:
+
+- `RQ2/analysis/vllm_multiclass_short_accuracy/rq2_accuracy_1781706527.json`
+- `RQ2/analysis/vllm_multiclass_short_accuracy/rq2_accuracy_summary_1781706527.csv`
+- `RQ2/analysis/vllm_multiclass_short_accuracy/rq2_confusion_1781706527.csv`
+- `RQ2/analysis/vllm_multiclass_short_accuracy/rq2_disagreement_1781706527.csv`
+- `RQ2/analysis/vllm_multiclass_short_accuracy/paper_tables/rq2_paper_table_1781706568.csv`
+- `RQ2/analysis/vllm_multiclass_short_accuracy/paper_tables/rq2_paper_table_1781706568.md`
+- `RQ2/analysis/vllm_multiclass_short_accuracy/paper_tables/rq2_paper_table_1781706568.tex`
+- `RQ2/analysis/vllm_multiclass_short_accuracy/paper_tables/rq2_success_criteria_1781706568.json`
+
+Updated long-run output files:
+
+- `RQ2/analysis/vllm_multiclass_long_accuracy/rq2_accuracy_1781706527.json`
+- `RQ2/analysis/vllm_multiclass_long_accuracy/rq2_accuracy_summary_1781706527.csv`
+- `RQ2/analysis/vllm_multiclass_long_accuracy/rq2_confusion_1781706527.csv`
+- `RQ2/analysis/vllm_multiclass_long_accuracy/rq2_disagreement_1781706527.csv`
+- `RQ2/analysis/vllm_multiclass_long_accuracy/paper_tables/rq2_paper_table_1781706568.csv`
+- `RQ2/analysis/vllm_multiclass_long_accuracy/paper_tables/rq2_paper_table_1781706568.md`
+- `RQ2/analysis/vllm_multiclass_long_accuracy/paper_tables/rq2_paper_table_1781706568.tex`
+- `RQ2/analysis/vllm_multiclass_long_accuracy/paper_tables/rq2_success_criteria_1781706568.json`
+
+Step 12 verification results:
+
+- Syntax check passed with `python -m py_compile RQ2/scripts/analyze_accuracy.py RQ2/scripts/make_paper_tables.py`.
+- Short-validation vLLM accuracy still passed overall.
+- Long-run vLLM accuracy still passed overall.
+- Short-validation total trace duration across all vLLM rows: 1071.130 s.
+- Short-validation total kernel instances across all vLLM rows: 709819.
+- Long-run total trace duration across all vLLM rows: 4296.214 s.
+- Long-run total kernel instances across all vLLM rows: 4219652.
+- Long-run paper table now reports nonzero trace seconds and kernel instances for every vLLM workload and mode.
+
+### Step 13: Decide RQ3 Entry Point
+
+- Use the RQ1 profiler-savings outputs and the now cost-augmented RQ2 vLLM tables to define the RQ3 overhead analysis.
+- Created `RQ3/progress_journal.md`.
+- Defined the first RQ3 overhead analysis around two existing evidence streams:
+  - RQ1 profiler-savings outputs.
+  - RQ2 cost-augmented vLLM accuracy tables.
+- Selected the primary RQ1 microbenchmark inputs:
+  - `RQ1/analysis/l4_5rep_snapshot/paper_tables/paper_table_1781640003.md`
+  - `RQ1/analysis/l4_5rep_snapshot/aggregate_1781639990.json`
+- Selected the primary RQ1 vLLM profiler-savings inputs:
+  - `RQ1/analysis/vllm_l4_nsys_queue_pressure_long/paper_tables/vllm_paper_table_1781646125.md`
+  - `RQ1/analysis/vllm_l4_nsys_queue_pressure_long/vllm_nsys_aggregate_1781646112.json`
+- Selected the primary RQ2 vLLM cost-augmented inputs:
+  - `RQ2/analysis/vllm_multiclass_long_accuracy/paper_tables/rq2_paper_table_1781706568.md`
+  - `RQ2/analysis/vllm_multiclass_long_accuracy/rq2_accuracy_1781706527.json`
+
+Step 13 definition:
+
+- RQ3 should first report tracing-cost overhead:
+  - Automatic trace duration.
+  - Fixed-window trace duration.
+  - Trace duration saved.
+  - Trace duration saved percent.
+  - Automatic kernel instances.
+  - Fixed-window kernel instances.
+  - Kernel instances avoided.
+  - Kernel instances avoided percent.
+  - Profiler report count.
+  - Diagnosis success or expected-label match rate.
+- RQ3 should later add request-level vLLM overhead when available:
+  - p50 request latency.
+  - p95 request latency.
+  - Throughput.
+  - Queueing delay if available.
+  - Prompt and output token counts.
+- Current evidence for the RQ3 entry point:
+  - L4 microbenchmarks show 31.6% to 45.8% trace-duration savings with match rate 1.0.
+  - L4 vLLM queue-pressure RQ1 shows 21.7% trace-duration savings with success 100.0%.
+  - L4 vLLM multiclass RQ2 shows all serving labels pass while automatic mode uses less trace duration and fewer kernel instances than fixed-window mode.
 
 ## Next Steps
 
-### Step 12: Tighten vLLM Cost Bridge If Needed
+### Step 14: Begin RQ3 Only After Confirming Scope
 
-- Decide whether RQ2 vLLM paper tables need profiler-duration and kernel-count columns, or whether those should stay in RQ1/RQ3 tables.
-- If they should appear in RQ2 vLLM tables, extend the analyzer to read profiler-cost fields from the vLLM comparison JSON files in addition to per-window CSV rows.
+- Add an RQ3 aggregation script only after deciding whether to include just tracing-cost overhead first or also request-level vLLM latency/throughput overhead.
 
 ## Notes
 
 - The existing `RQ2/analysis/step9_accuracy/` result came from the earlier local/Phase 0-style RQ1 run names, not the latest L4 run names.
 - The L4 microbenchmark RQ2 analysis now exists in original, cost-augmented, and time-to-diagnosis forms.
 - The L4 vLLM multiclass accuracy analysis now exists in short-validation and long seeded forms.
+- RQ3 now has an initial progress journal that defines the overhead-analysis inputs and metrics.
 - `healthy_light` from RQ1 Step 14 should only be added later if RQ2/RQ3 need a low-utilization serving baseline.

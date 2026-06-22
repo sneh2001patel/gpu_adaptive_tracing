@@ -1,0 +1,11 @@
+scenario,seed,window_id,expected_label,diagnosis_label,target_correct_stop,target_ambiguous_stop,diagnosis_stable_2,diagnosis_changed_from_previous,diagnosis_confident,diagnosis_margin_clear,latency_recovered,queue_delay_recovered,gpu_util_recovered,memory_pressure_low,throughput_recovered,queue_pressure_low,kernel_duration_stable,latency_ratio_vs_baseline,queue_delay_proxy_p95_ms,gpu_util_percent_mean,gpu_memory_used_percent_mean,request_throughput_rps,throughput_ratio_vs_baseline,queue_pressure_score,diagnosis_confidence,diagnosis_rank_margin,kernel_duration_cv,kernel_duration_stability_delta_percent
+healthy,,0,vllm_healthy,vllm_healthy,1,0,0,0,0,1,1,1,0,0,1,1,0,1.0,0.0,86.276,96.722,0.2,1.0,0.0,0.55,0.222,0.0,0.0
+healthy,,1,vllm_healthy,vllm_healthy,1,0,1,0,0,1,1,1,0,0,1,1,0,0.864,0.0,98.364,96.722,0.2,1.0,0.0,0.55,0.296,0.0,0.0
+healthy,,2,vllm_healthy,vllm_healthy,1,0,1,0,0,1,1,1,0,0,1,1,0,0.866,0.0,98.033,96.722,0.2,1.0,0.0,0.55,0.294,0.0,0.0
+healthy,,3,vllm_healthy,vllm_healthy,1,0,1,0,0,1,1,1,0,0,1,1,0,0.866,0.0,97.969,96.722,0.4,2.0,0.0,0.55,0.293,0.0,0.0
+healthy,,4,vllm_healthy,vllm_healthy,1,0,1,0,0,1,1,1,0,0,0,1,0,0.0,0.0,98.5,96.722,0.0,0.0,0.0,0.55,0.314,0.0,0.0
+queue_pressure,,0,vllm_queue_pressure,vllm_queue_pressure,1,0,0,0,0,1,1,1,0,0,0,1,0,0.0,0.0,92.133,97.622,0.0,0.0,0.0,0.55,0.266,0.0,0.0
+queue_pressure,,1,vllm_queue_pressure,vllm_queue_pressure,1,0,1,0,0,1,1,1,0,0,1,0,0,1.0,46.773,97.4,97.686,3.2,1.0,0.187,0.55,0.305,0.0,0.0
+queue_pressure,,2,vllm_queue_pressure,vllm_queue_pressure,1,0,1,0,0,1,1,0,0,0,1,0,0,1.006,114.167,97.844,97.686,3.2,1.0,0.463,0.55,0.31,0.0,0.0
+queue_pressure,,3,vllm_queue_pressure,vllm_queue_pressure,1,0,1,0,0,1,1,1,0,0,0,1,0,0.0,0.0,98.469,97.686,0.0,0.0,0.0,0.55,0.314,0.0,0.0
+queue_pressure,,4,vllm_queue_pressure,vllm_queue_pressure,1,0,1,0,0,1,1,0,0,0,1,0,0,1.004,101.271,98.375,97.686,11.266,3.521,0.409,0.55,0.313,0.0,0.0

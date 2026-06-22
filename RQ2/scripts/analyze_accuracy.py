@@ -68,8 +68,32 @@ def run_dirs(input_root: Path, pattern: str) -> list[Path]:
     return sorted(path for path in input_root.glob(pattern) if path.is_dir())
 
 
+def load_vllm_profiler_costs(run_dir: Path) -> dict[str, dict[str, float]]:
+    comparison_paths = sorted(run_dir.glob("vllm_nsys_comparison_*.json"))
+    if not comparison_paths:
+        return {}
+
+    payload = json.loads(comparison_paths[-1].read_text(encoding="utf-8"))
+    costs = {}
+    for mode in MODES:
+        mode_payload = payload.get(mode) or {}
+        kernel_summary = mode_payload.get("kernel_summary") or {}
+        report_paths = mode_payload.get("report_paths") or []
+        duration_s = as_float(mode_payload.get("duration_s"))
+        if duration_s <= 0:
+            continue
+        costs[mode] = {
+            "profiler_duration_s": duration_s,
+            "profiler_kernel_instances": as_float(kernel_summary.get("kernel_instances")),
+            "profiler_kernel_total_time_ns": as_float(kernel_summary.get("kernel_total_time_ns")),
+            "profiler_report_count": float(len(report_paths)),
+        }
+    return costs
+
+
 def load_windows(run_dir: Path) -> list[dict[str, Any]]:
     records = []
+    profiler_costs = load_vllm_profiler_costs(run_dir)
     for mode in MODES:
         for csv_path in sorted((run_dir / mode).rglob("*.csv")):
             with csv_path.open("r", newline="", encoding="utf-8") as handle:
@@ -99,6 +123,11 @@ def load_windows(run_dir: Path) -> list[dict[str, Any]]:
                             "csv": str(csv_path),
                         }
                     )
+        mode_records = [record for record in records if record["run_dir"] == str(run_dir) and record["mode"] == mode]
+        has_csv_profiler_cost = any(as_float(record.get("profiler_duration_s")) > 0 for record in mode_records)
+        if mode in profiler_costs and mode_records and not has_csv_profiler_cost:
+            mode_records[0].update(profiler_costs[mode])
+            mode_records[0]["profiler_cost_source"] = "vllm_comparison_json"
     return records
 
 

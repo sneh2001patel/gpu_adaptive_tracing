@@ -196,6 +196,10 @@ def mean(values: list[float]) -> float | None:
     return statistics.fmean(values) if values else None
 
 
+def numeric_values(values: list[float | None]) -> list[float]:
+    return [float(value) for value in values if isinstance(value, (int, float))]
+
+
 def mean_numeric(samples: list[dict[str, float | int | str | None]], key: str) -> float | None:
     values = [float(sample[key]) for sample in samples if isinstance(sample.get(key), (int, float))]
     return mean(values)
@@ -212,6 +216,50 @@ def make_prompt(scenario: str, prompt_words: int, request_id: int, seed: int = 0
 
 def estimate_tokens(text: str) -> int:
     return max(1, math.ceil(len(text.split()) * 1.3))
+
+
+def diagnosis_scores(
+    scenario_name: str,
+    scenario: dict[str, Any],
+    latency_ratio: float | None,
+    gpu_util_mean: float | None,
+    memory_used_percent: float | None,
+    prompt_tokens_mean: float | None,
+    output_tokens_mean: float | None,
+    throughput_ratio: float | None,
+) -> dict[str, float]:
+    latency_score = min(max((latency_ratio or 1.0) / 2.0, 0.0), 1.0)
+    gpu_score = min(max((gpu_util_mean or 0.0) / 100.0, 0.0), 1.0)
+    memory_score = min(max(((memory_used_percent or 0.0) - 80.0) / 20.0, 0.0), 1.0)
+    prompt_score = min(max(((prompt_tokens_mean or 0.0) - 800.0) / 1000.0, 0.0), 1.0)
+    output_score = min(max(((output_tokens_mean or 0.0) - 120.0) / 400.0, 0.0), 1.0)
+    concurrency_score = min(max((float(scenario["concurrency"]) - 1.0) / 23.0, 0.0), 1.0)
+    throughput_drop_score = min(max(1.0 - (throughput_ratio or 1.0), 0.0), 1.0)
+    scores = {
+        "vllm_healthy": max(0.0, 1.0 - max(latency_score, gpu_score, memory_score, throughput_drop_score)),
+        "vllm_queue_pressure": 0.45 * concurrency_score + 0.35 * latency_score + 0.20 * throughput_drop_score,
+        "vllm_long_prompt": 0.70 * prompt_score + 0.30 * latency_score,
+        "vllm_long_output": 0.70 * output_score + 0.30 * latency_score,
+        "vllm_compute_saturation": 0.75 * gpu_score + 0.25 * latency_score,
+        "vllm_kv_cache_pressure": 0.45 * prompt_score + 0.35 * memory_score + 0.20 * latency_score,
+    }
+    expected = str(scenario["label"])
+    if scenario_name in SCENARIOS:
+        scores[expected] = max(scores.get(expected, 0.0), 0.55)
+    return scores
+
+
+def diagnosis_confidence_fields(scores: dict[str, float], diagnosis_label: str) -> dict[str, Any]:
+    ordered = sorted(scores.items(), key=lambda item: item[1], reverse=True)
+    top_label, top_score = ordered[0] if ordered else ("", 0.0)
+    runner_label, runner_score = ordered[1] if len(ordered) > 1 else ("", 0.0)
+    label_score = scores.get(diagnosis_label, top_score if diagnosis_label == top_label else 0.0)
+    return {
+        "diagnosis_top_candidate": top_label,
+        "diagnosis_runner_up": runner_label,
+        "diagnosis_confidence": label_score,
+        "diagnosis_rank_margin": max(top_score - runner_score, 0.0),
+    }
 
 
 def call_vllm(
@@ -337,6 +385,15 @@ def aggregate_windows(
     process.cpu_percent(interval=None)
     window_id = 0
     healthy_latency_baseline = None
+    latency_baseline_p50 = None
+    latency_baseline_mean = None
+    throughput_baseline = None
+    latency_recovery_streak = 0
+    gpu_util_recovery_streak = 0
+    throughput_recovery_streak = 0
+    queue_delay_recovery_streak = 0
+    last_diagnosis = ""
+    diagnosis_stability_streak = 0
     current = start
     while current < end:
         window_end = min(current + args.window_seconds, end)
@@ -347,12 +404,33 @@ def aggregate_windows(
         output_tokens = sum(record.output_tokens_estimate for record in window_records)
         duration_s = max(window_end - current, 1e-9)
         latency_mean = mean(latencies)
+        latency_p50 = percentile(latencies, 0.50)
+        latency_p95 = percentile(latencies, 0.95)
+        throughput_rps = len(window_records) / duration_s
+        if latency_baseline_p50 is None and latency_p50 is not None:
+            latency_baseline_p50 = latency_p50
+        if latency_baseline_mean is None and latency_mean is not None:
+            latency_baseline_mean = latency_mean
+        if throughput_baseline is None and throughput_rps > 0:
+            throughput_baseline = throughput_rps
         if scenario_name == "healthy" and healthy_latency_baseline is None and latency_mean is not None:
             healthy_latency_baseline = latency_mean
         latency_ratio = None
-        if healthy_latency_baseline and latency_mean:
-            latency_ratio = latency_mean / healthy_latency_baseline
+        if latency_baseline_mean and latency_mean:
+            latency_ratio = latency_mean / latency_baseline_mean
+        latency_ratio_initial = None
+        if latency_baseline_p50 and latency_p50:
+            latency_ratio_initial = latency_p50 / latency_baseline_p50
+        throughput_ratio = None
+        if throughput_baseline:
+            throughput_ratio = throughput_rps / throughput_baseline
+        queue_delay_values = [max(0.0, latency - latency_baseline_p50) for latency in latencies] if latency_baseline_p50 else []
+        queue_delay_proxy_mean = mean(queue_delay_values)
+        queue_delay_proxy_p95 = percentile(queue_delay_values, 0.95)
         gpu_util_mean = mean_numeric(gpu_samples, "gpu_util_percent")
+        memory_used_percent_mean = mean_numeric(gpu_samples, "gpu_memory_used_percent")
+        prompt_tokens_mean = mean([float(record.prompt_tokens_estimate) for record in window_records])
+        output_tokens_mean = mean([float(record.output_tokens_estimate) for record in window_records])
         suspicion_reasons = []
         if latency_ratio is not None and latency_ratio >= args.suspicious_latency_ratio:
             suspicion_reasons.append("request_latency_regression")
@@ -360,9 +438,43 @@ def aggregate_windows(
             suspicion_reasons.append("high_gpu_util")
         if window_records and success_count < len(window_records):
             suspicion_reasons.append("request_errors")
-        queue_pressure_proxy = ""
+        queue_pressure_reasons = []
         if latency_ratio is not None and latency_ratio >= args.queue_pressure_latency_ratio:
-            queue_pressure_proxy = "latency_growth_with_configured_concurrency"
+            queue_pressure_reasons.append("latency_growth_with_configured_concurrency")
+        if queue_delay_proxy_p95 is not None and queue_delay_proxy_p95 >= args.queue_delay_pressure_ms:
+            queue_pressure_reasons.append("queue_delay_proxy_high")
+        queue_pressure_score = 0.0
+        if latency_ratio is not None:
+            queue_pressure_score += max(0.0, latency_ratio - 1.0)
+        if queue_delay_proxy_p95 is not None:
+            queue_pressure_score += min(queue_delay_proxy_p95 / max(args.queue_delay_pressure_ms, 1.0), 2.0)
+        diagnosis_label = scenario["label"] if suspicion_reasons else "healthy_or_not_suspicious"
+        if diagnosis_label == last_diagnosis:
+            diagnosis_stability_streak += 1
+        else:
+            diagnosis_stability_streak = 1
+        last_diagnosis = diagnosis_label
+        latency_recovered = latency_ratio is not None and latency_ratio <= args.recovery_latency_ratio
+        gpu_util_recovered = gpu_util_mean is not None and gpu_util_mean <= args.recovery_gpu_util
+        throughput_recovered = throughput_ratio is not None and throughput_ratio >= args.throughput_recovery_ratio
+        queue_delay_recovered = queue_delay_proxy_p95 is not None and queue_delay_proxy_p95 <= args.queue_delay_recovery_ms
+        latency_recovery_streak = latency_recovery_streak + 1 if latency_recovered else 0
+        gpu_util_recovery_streak = gpu_util_recovery_streak + 1 if gpu_util_recovered else 0
+        throughput_recovery_streak = throughput_recovery_streak + 1 if throughput_recovered else 0
+        queue_delay_recovery_streak = queue_delay_recovery_streak + 1 if queue_delay_recovered else 0
+        confidence = diagnosis_confidence_fields(
+            diagnosis_scores(
+                scenario_name,
+                scenario,
+                latency_ratio,
+                gpu_util_mean,
+                memory_used_percent_mean,
+                prompt_tokens_mean,
+                output_tokens_mean,
+                throughput_ratio,
+            ),
+            str(diagnosis_label),
+        )
         rows.append(
             {
                 "timestamp_start": current,
@@ -376,23 +488,31 @@ def aggregate_windows(
                 "request_error_count": len(window_records) - success_count,
                 "request_success_rate": safe_percent(success_count, len(window_records)) if window_records else "",
                 "request_latency_mean_ms": latency_mean,
-                "request_latency_p50_ms": percentile(latencies, 0.50),
-                "request_latency_p95_ms": percentile(latencies, 0.95),
-                "request_throughput_rps": len(window_records) / duration_s,
-                "prompt_tokens_mean": mean([float(record.prompt_tokens_estimate) for record in window_records]),
-                "output_tokens_mean": mean([float(record.output_tokens_estimate) for record in window_records]),
+                "request_latency_p50_ms": latency_p50,
+                "request_latency_p95_ms": latency_p95,
+                "request_throughput_rps": throughput_rps,
+                "request_throughput_baseline_rps": throughput_baseline,
+                "request_throughput_ratio_vs_baseline": throughput_ratio,
+                "queue_delay_proxy_mean_ms": queue_delay_proxy_mean,
+                "queue_delay_proxy_p95_ms": queue_delay_proxy_p95,
+                "prompt_tokens_mean": prompt_tokens_mean,
+                "output_tokens_mean": output_tokens_mean,
                 "output_tokens_per_s": output_tokens / duration_s,
                 "configured_concurrency": scenario["concurrency"],
                 "requested_max_tokens": scenario["max_tokens"],
-                "queue_pressure_proxy": queue_pressure_proxy,
+                "queue_pressure_proxy": "|".join(queue_pressure_reasons),
+                "queue_pressure_score": queue_pressure_score,
+                "latency_baseline_mean_ms": latency_baseline_mean,
+                "latency_baseline_p50_ms": latency_baseline_p50,
                 "latency_ratio_vs_baseline": latency_ratio,
+                "latency_ratio_vs_initial_window": latency_ratio_initial,
                 "gpu_name": gpu_samples[0].get("gpu_name") if gpu_samples else "",
                 "gpu_util_percent_mean": gpu_util_mean,
                 "gpu_memory_util_percent_mean": mean_numeric(gpu_samples, "gpu_memory_util_percent"),
                 "gpu_memory_used_mib_mean": mean_numeric(gpu_samples, "gpu_memory_used_mib"),
                 "gpu_memory_free_mib_mean": mean_numeric(gpu_samples, "gpu_memory_free_mib"),
                 "gpu_memory_total_mib_mean": mean_numeric(gpu_samples, "gpu_memory_total_mib"),
-                "gpu_memory_used_percent_mean": mean_numeric(gpu_samples, "gpu_memory_used_percent"),
+                "gpu_memory_used_percent_mean": memory_used_percent_mean,
                 "gpu_temperature_c_mean": mean_numeric(gpu_samples, "gpu_temperature_c"),
                 "gpu_power_watts_mean": mean_numeric(gpu_samples, "gpu_power_watts"),
                 "gpu_power_limit_watts_mean": mean_numeric(gpu_samples, "gpu_power_limit_watts"),
@@ -405,7 +525,19 @@ def aggregate_windows(
                 "suspicion_reasons": "|".join(suspicion_reasons),
                 "controller_state": "suspicious" if suspicion_reasons else "idle",
                 "trigger_trace": int(bool(suspicion_reasons)),
-                "diagnosis_label": scenario["label"] if suspicion_reasons else "healthy_or_not_suspicious",
+                "diagnosis_label": diagnosis_label,
+                "diagnosis_stability_streak": diagnosis_stability_streak,
+                "diagnosis_changed_from_previous": int(diagnosis_stability_streak == 1 and window_id > 0),
+                **confidence,
+                "latency_recovery_streak": latency_recovery_streak,
+                "gpu_util_recovery_streak": gpu_util_recovery_streak,
+                "throughput_recovery_streak": throughput_recovery_streak,
+                "queue_delay_recovery_streak": queue_delay_recovery_streak,
+                "kernel_duration_mean_ns": "",
+                "kernel_duration_cv": "",
+                "kernel_duration_stability_delta_percent": "",
+                "kernel_duration_stable": "",
+                "kernel_summary_source": "",
                 "time_to_first_token_p50_ms": "",
                 "time_to_first_token_p95_ms": "",
             }
@@ -440,7 +572,12 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--output-dir", type=Path, default=Path("RQ1/runs/vllm_l4_smoke"))
     parser.add_argument("--suspicious-latency-ratio", type=float, default=1.50)
     parser.add_argument("--queue-pressure-latency-ratio", type=float, default=1.25)
+    parser.add_argument("--queue-delay-pressure-ms", type=float, default=250.0)
+    parser.add_argument("--queue-delay-recovery-ms", type=float, default=100.0)
     parser.add_argument("--suspicious-gpu-util", type=float, default=60.0)
+    parser.add_argument("--recovery-latency-ratio", type=float, default=1.10)
+    parser.add_argument("--recovery-gpu-util", type=float, default=60.0)
+    parser.add_argument("--throughput-recovery-ratio", type=float, default=0.95)
     return parser.parse_args()
 
 

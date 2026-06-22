@@ -1,0 +1,201 @@
+{
+  "created_at": "2026-06-18T18:40:29+0000",
+  "stable_summary": "RQ5/analysis/stop_signals_stable_l4_vllm/rq5_signal_summary_1781808022.json",
+  "stress_summary": "RQ5/analysis/stop_signals_stress_l4_vllm/rq5_signal_summary_1781808022.json",
+  "criteria": {
+    "paper_ready_precision_floor": 0.9,
+    "paper_ready_stress_correct_f1": 0.7,
+    "paper_ready_max_stress_ambiguous_f1": 0.1
+  },
+  "signal_rows": [
+    {
+      "signal": "diagnosis_stable_2",
+      "stable_correct_f1": 0.85,
+      "stress_correct_f1": 0.786,
+      "stress_ambiguous_f1": 0.0,
+      "precision_floor": 1.0,
+      "paper_signal_score": 0.851,
+      "paper_ready": true,
+      "rank": 1
+    },
+    {
+      "signal": "latency_recovered",
+      "stable_correct_f1": 1.0,
+      "stress_correct_f1": 0.85,
+      "stress_ambiguous_f1": 0.414,
+      "precision_floor": 0.739,
+      "paper_signal_score": 0.777,
+      "paper_ready": false,
+      "rank": 2
+    },
+    {
+      "signal": "queue_delay_recovered",
+      "stable_correct_f1": 1.0,
+      "stress_correct_f1": 0.85,
+      "stress_ambiguous_f1": 0.414,
+      "precision_floor": 0.739,
+      "paper_signal_score": 0.777,
+      "paper_ready": false,
+      "rank": 3
+    },
+    {
+      "signal": "queue_pressure_low",
+      "stable_correct_f1": 1.0,
+      "stress_correct_f1": 0.85,
+      "stress_ambiguous_f1": 0.414,
+      "precision_floor": 0.739,
+      "paper_signal_score": 0.777,
+      "paper_ready": false,
+      "rank": 4
+    },
+    {
+      "signal": "throughput_recovered",
+      "stable_correct_f1": 0.878,
+      "stress_correct_f1": 0.8,
+      "stress_ambiguous_f1": 0.333,
+      "precision_floor": 0.778,
+      "paper_signal_score": 0.74,
+      "paper_ready": false,
+      "rank": 5
+    },
+    {
+      "signal": "diagnosis_changed_from_previous",
+      "stable_correct_f1": 0.0,
+      "stress_correct_f1": 0.522,
+      "stress_ambiguous_f1": 0.0,
+      "precision_floor": 0.0,
+      "paper_signal_score": 0.235,
+      "paper_ready": false,
+      "rank": 6
+    },
+    {
+      "signal": "diagnosis_confident",
+      "stable_correct_f1": 0.0,
+      "stress_correct_f1": 0.0,
+      "stress_ambiguous_f1": 0.0,
+      "precision_floor": 0.0,
+      "paper_signal_score": 0.0,
+      "paper_ready": false,
+      "rank": 7
+    },
+    {
+      "signal": "diagnosis_margin_clear",
+      "stable_correct_f1": 0.0,
+      "stress_correct_f1": 0.0,
+      "stress_ambiguous_f1": 0.0,
+      "precision_floor": 0.0,
+      "paper_signal_score": 0.0,
+      "paper_ready": false,
+      "rank": 8
+    },
+    {
+      "signal": "gpu_util_recovered",
+      "stable_correct_f1": 0.0,
+      "stress_correct_f1": 0.0,
+      "stress_ambiguous_f1": 0.0,
+      "precision_floor": 0.0,
+      "paper_signal_score": 0.0,
+      "paper_ready": false,
+      "rank": 9
+    },
+    {
+      "signal": "kernel_duration_stable",
+      "stable_correct_f1": 0.0,
+      "stress_correct_f1": 0.0,
+      "stress_ambiguous_f1": 0.0,
+      "precision_floor": 0.0,
+      "paper_signal_score": 0.0,
+      "paper_ready": false,
+      "rank": 10
+    },
+    {
+      "signal": "memory_pressure_low",
+      "stable_correct_f1": 0.0,
+      "stress_correct_f1": 0.0,
+      "stress_ambiguous_f1": 0.0,
+      "precision_floor": 0.0,
+      "paper_signal_score": 0.0,
+      "paper_ready": false,
+      "rank": 11
+    }
+  ],
+  "numeric_rows": [
+    {
+      "signal": "gpu_util_percent_mean",
+      "correlation_with_correct_stop": 0.967,
+      "correlation_with_ambiguous_stop": -0.967,
+      "mean_when_correct_stop": 98.084,
+      "mean_when_not_correct_stop": 94.325
+    },
+    {
+      "signal": "request_throughput_rps",
+      "correlation_with_correct_stop": 0.185,
+      "correlation_with_ambiguous_stop": -0.185,
+      "mean_when_correct_stop": 1.244,
+      "mean_when_not_correct_stop": 0.767
+    },
+    {
+      "signal": "throughput_ratio_vs_baseline",
+      "correlation_with_correct_stop": 0.17,
+      "correlation_with_ambiguous_stop": -0.17,
+      "mean_when_correct_stop": 0.865,
+      "mean_when_not_correct_stop": 0.633
+    },
+    {
+      "signal": "latency_ratio_vs_baseline",
+      "correlation_with_correct_stop": -0.065,
+      "correlation_with_ambiguous_stop": 0.065,
+      "mean_when_correct_stop": 0.117,
+      "mean_when_not_correct_stop": 0.167
+    },
+    {
+      "signal": "gpu_memory_used_percent_mean",
+      "correlation_with_correct_stop": -0.002,
+      "correlation_with_ambiguous_stop": 0.002,
+      "mean_when_correct_stop": 98.464,
+      "mean_when_not_correct_stop": 98.465
+    },
+    {
+      "signal": "queue_delay_proxy_p95_ms",
+      "correlation_with_correct_stop": 0.0,
+      "correlation_with_ambiguous_stop": 0.0,
+      "mean_when_correct_stop": 0.0,
+      "mean_when_not_correct_stop": 0.0
+    },
+    {
+      "signal": "queue_pressure_score",
+      "correlation_with_correct_stop": 0.0,
+      "correlation_with_ambiguous_stop": 0.0,
+      "mean_when_correct_stop": 0.0,
+      "mean_when_not_correct_stop": 0.0
+    },
+    {
+      "signal": "diagnosis_confidence",
+      "correlation_with_correct_stop": 0.0,
+      "correlation_with_ambiguous_stop": 0.0,
+      "mean_when_correct_stop": 0.0,
+      "mean_when_not_correct_stop": 0.0
+    },
+    {
+      "signal": "diagnosis_rank_margin",
+      "correlation_with_correct_stop": 0.0,
+      "correlation_with_ambiguous_stop": 0.0,
+      "mean_when_correct_stop": 0.0,
+      "mean_when_not_correct_stop": 0.0
+    },
+    {
+      "signal": "kernel_duration_cv",
+      "correlation_with_correct_stop": 0.0,
+      "correlation_with_ambiguous_stop": 0.0,
+      "mean_when_correct_stop": 0.0,
+      "mean_when_not_correct_stop": 0.0
+    },
+    {
+      "signal": "kernel_duration_stability_delta_percent",
+      "correlation_with_correct_stop": 0.0,
+      "correlation_with_ambiguous_stop": 0.0,
+      "mean_when_correct_stop": 0.0,
+      "mean_when_not_correct_stop": 0.0
+    }
+  ]
+}

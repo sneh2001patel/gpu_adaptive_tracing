@@ -1,0 +1,46 @@
+{
+  "created_at": "2026-06-17T20:39:47+0000",
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "scenario": "healthy",
+  "seed": 6302,
+  "port": 8092,
+  "duration_seconds": 30.0,
+  "mode_order": [
+    "cheap_metrics_only",
+    "no_profiler"
+  ],
+  "no_profiler": {
+    "mode": "no_profiler",
+    "status": "ok",
+    "request_csv": "RQ3/runs/vllm_runtime_overhead_healthy_randomized/healthy_seed6302/no_profiler/healthy_requests_1781728786.csv",
+    "request_count": 9.0,
+    "success_rate": 100.0,
+    "p50_latency_ms": 3676.2046813964844,
+    "p95_latency_ms": 3679.044723510742,
+    "throughput_rps": 0.27206339942441854,
+    "prompt_tokens_mean": 156.0,
+    "output_tokens_mean": 23.0,
+    "duration_s": 33.08052468299866
+  },
+  "cheap_metrics_only": {
+    "mode": "cheap_metrics_only",
+    "status": "ok",
+    "request_csv": "RQ3/runs/vllm_runtime_overhead_healthy_randomized/healthy_seed6302/cheap_metrics_only/healthy_requests_1781728747.csv",
+    "window_csv": "RQ3/runs/vllm_runtime_overhead_healthy_randomized/healthy_seed6302/cheap_metrics_only/healthy_windows_1781728747.csv",
+    "window_count": 4,
+    "request_count": 9.0,
+    "success_rate": 100.0,
+    "p50_latency_ms": 3720.667600631714,
+    "p95_latency_ms": 3735.691452026367,
+    "throughput_rps": 0.2686949412728858,
+    "prompt_tokens_mean": 156.0,
+    "output_tokens_mean": 23.0,
+    "duration_s": 33.49523425102234
+  },
+  "comparison": {
+    "p95_latency_delta_ms": 56.646728515625,
+    "p95_latency_regression_percent": 1.5397129628141528,
+    "throughput_delta_rps": -0.0033684581515327494,
+    "throughput_change_percent": -1.2381151447269683
+  }
+}
