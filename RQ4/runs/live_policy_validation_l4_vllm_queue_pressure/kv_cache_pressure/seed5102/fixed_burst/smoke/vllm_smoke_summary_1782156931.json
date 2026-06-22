@@ -1,0 +1,16 @@
+{
+  "created_at": "2026-06-22T19:35:11+0000",
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "endpoint": "http://127.0.0.1:8144/v1/completions",
+  "seed": 5102,
+  "scenarios": {
+    "kv_cache_pressure": {
+      "label": "vllm_kv_cache_pressure",
+      "request_count": 8,
+      "window_count": 3,
+      "request_csv": "RQ4/runs/live_policy_validation_l4_vllm_queue_pressure/kv_cache_pressure/seed5102/fixed_burst/smoke/kv_cache_pressure_requests_1782156931.csv",
+      "window_csv": "RQ4/runs/live_policy_validation_l4_vllm_queue_pressure/kv_cache_pressure/seed5102/fixed_burst/smoke/kv_cache_pressure_windows_1782156931.csv",
+      "success_rate": 100.0
+    }
+  }
+}

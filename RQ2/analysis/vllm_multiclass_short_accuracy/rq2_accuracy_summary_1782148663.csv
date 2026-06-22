@@ -1,0 +1,13 @@
+workload,mode,expected_label,runs,windows,suspicious_windows,match_rate_on_suspicious_or_all,ambiguous_or_unknown_rate,first_correct_window_mean,first_correct_window_stdev,first_correct_window_missing_runs,first_correct_seconds_mean,first_correct_seconds_stdev,first_correct_seconds_missing_runs,profiler_burst_count,profiler_duration_s_total,profiler_duration_s_mean,profiler_kernel_instances_total,profiler_kernel_instances_mean,profiler_kernel_total_time_ns_total,profiler_kernel_total_time_ns_mean,profiler_report_count_total
+compute_saturation,automatic,vllm_compute_saturation,1,4,4,1.0,0.0,0.0,0.0,0,6.0,0.0,0,1,84.67250084877014,84.67250084877014,44124.0,44124.0,4473129920.0,4473129920.0,1
+compute_saturation,fixed_window,vllm_compute_saturation,1,5,5,1.0,0.0,0.0,0.0,0,6.0,0.0,0,1,94.51112937927246,94.51112937927246,66186.0,66186.0,6724217160.0,6724217160.0,1
+healthy,automatic,vllm_healthy,1,3,3,1.0,0.0,0.0,0.0,0,6.0,0.0,0,1,81.33276176452637,81.33276176452637,28140.0,28140.0,1590332066.0,1590332066.0,1
+healthy,fixed_window,vllm_healthy,1,5,5,1.0,0.0,0.0,0.0,0,6.0,0.0,0,1,90.28915667533875,90.28915667533875,49245.0,49245.0,2799843858.0,2799843858.0,1
+kv_cache_pressure,automatic,vllm_kv_cache_pressure,1,4,4,1.0,0.0,0.0,0.0,0,6.0,0.0,0,1,84.21758246421814,84.21758246421814,41215.0,41215.0,9324074520.0,9324074520.0,1
+kv_cache_pressure,fixed_window,vllm_kv_cache_pressure,1,7,7,1.0,0.0,0.0,0.0,0,6.0,0.0,0,1,102.13025450706482,102.13025450706482,82430.0,82430.0,18665723932.0,18665723932.0,1
+long_output,automatic,vllm_long_output,1,6,6,1.0,0.0,0.0,0.0,0,6.0,0.0,0,1,96.11373472213745,96.11373472213745,97447.0,97447.0,3254551859.0,3254551859.0,1
+long_output,fixed_window,vllm_long_output,1,6,6,1.0,0.0,0.0,0.0,0,6.0,0.0,0,1,96.5978512763977,96.5978512763977,97806.0,97806.0,3286361406.0,3286361406.0,1
+long_prompt,automatic,vllm_long_prompt,1,3,3,1.0,0.0,0.0,0.0,0,6.0,0.0,0,1,76.38799285888672,76.38799285888672,28778.0,28778.0,8068068828.0,8068068828.0,1
+long_prompt,fixed_window,vllm_long_prompt,1,6,5,1.0,0.0,0.0,0.0,0,6.0,0.0,0,1,93.6588487625122,93.6588487625122,57556.0,57556.0,16156190145.0,16156190145.0,1
+queue_pressure,automatic,vllm_queue_pressure,1,3,3,1.0,0.0,0.0,0.0,0,6.0,0.0,0,1,77.34465765953064,77.34465765953064,38964.0,38964.0,3764029355.0,3764029355.0,1
+queue_pressure,fixed_window,vllm_queue_pressure,1,5,5,1.0,0.0,0.0,0.0,0,6.0,0.0,0,1,93.87210130691528,93.87210130691528,77928.0,77928.0,7564880792.0,7564880792.0,1

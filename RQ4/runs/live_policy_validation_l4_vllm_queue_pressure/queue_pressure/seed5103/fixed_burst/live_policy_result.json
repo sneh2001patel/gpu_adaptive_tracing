@@ -1,0 +1,45 @@
+{
+  "created_at": "2026-06-22T18:13:05+0000",
+  "status": "ok",
+  "returncode": 0,
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "scenario": "queue_pressure",
+  "seed": 5103,
+  "policy": "fixed_burst",
+  "expected_label": "vllm_queue_pressure",
+  "selected_windows": 1,
+  "requested_trace_duration_s": 10.0,
+  "wall_duration_s": 81.08499431610107,
+  "port": 8114,
+  "report_paths": [
+    "RQ4/runs/live_policy_validation_l4_vllm_queue_pressure/queue_pressure/seed5103/fixed_burst/profiles/vllm_queue_pressure_fixed_burst_seed5103_1782151903.nsys-rep"
+  ],
+  "kernel_summary": {
+    "status": "ok",
+    "returncode": 0,
+    "stats_path": "RQ4/runs/live_policy_validation_l4_vllm_queue_pressure/queue_pressure/seed5103/fixed_burst/profiles/vllm_queue_pressure_fixed_burst_seed5103_1782151903.kernel_summary.json",
+    "kernel_count": 40,
+    "kernel_instances": 38964,
+    "kernel_total_time_ns": 3843866003.0,
+    "kernel_avg_duration_ns": 98651.72987886253,
+    "top_kernel_name": "void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8>(T1::Params)"
+  },
+  "smoke_metrics": {
+    "smoke_summary_paths": [
+      "RQ4/runs/live_policy_validation_l4_vllm_queue_pressure/queue_pressure/seed5103/fixed_burst/smoke/vllm_smoke_summary_1782151971.json"
+    ],
+    "request_count": 32.0,
+    "success_rate": 100.0,
+    "request_csv": "RQ4/runs/live_policy_validation_l4_vllm_queue_pressure/queue_pressure/seed5103/fixed_burst/smoke/queue_pressure_requests_1782151971.csv",
+    "p95_latency_ms": 7277.913451194763,
+    "throughput_rps": 2.1899299923560003
+  },
+  "replay": {
+    "top1_correct": 0,
+    "ever_correct": 0,
+    "premature_stop": 1,
+    "re_escalation_needed": 1,
+    "diagnosis_sequence": "vllm_latency_regression_unknown_gpu_cause"
+  },
+  "stderr_tail": ""
+}

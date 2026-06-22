@@ -1,0 +1,45 @@
+{
+  "created_at": "2026-06-22T18:11:43+0000",
+  "status": "ok",
+  "returncode": 0,
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "scenario": "queue_pressure",
+  "seed": 5103,
+  "policy": "counter_recovery_stop",
+  "expected_label": "vllm_queue_pressure",
+  "selected_windows": 4,
+  "requested_trace_duration_s": 35.804,
+  "wall_duration_s": 105.84842324256897,
+  "port": 8113,
+  "report_paths": [
+    "RQ4/runs/live_policy_validation_l4_vllm_queue_pressure/queue_pressure/seed5103/counter_recovery_stop/profiles/vllm_queue_pressure_counter_recovery_stop_seed5103_1782151795.nsys-rep"
+  ],
+  "kernel_summary": {
+    "status": "ok",
+    "returncode": 0,
+    "stats_path": "RQ4/runs/live_policy_validation_l4_vllm_queue_pressure/queue_pressure/seed5103/counter_recovery_stop/profiles/vllm_queue_pressure_counter_recovery_stop_seed5103_1782151795.kernel_summary.json",
+    "kernel_count": 41,
+    "kernel_instances": 97410,
+    "kernel_total_time_ns": 9656192676.0,
+    "kernel_avg_duration_ns": 99129.37764089929,
+    "top_kernel_name": "void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8>(T1::Params)"
+  },
+  "smoke_metrics": {
+    "smoke_summary_paths": [
+      "RQ4/runs/live_policy_validation_l4_vllm_queue_pressure/queue_pressure/seed5103/counter_recovery_stop/smoke/vllm_smoke_summary_1782151885.json"
+    ],
+    "request_count": 80.0,
+    "success_rate": 100.0,
+    "request_csv": "RQ4/runs/live_policy_validation_l4_vllm_queue_pressure/queue_pressure/seed5103/counter_recovery_stop/smoke/queue_pressure_requests_1782151885.csv",
+    "p95_latency_ms": 7274.153387546539,
+    "throughput_rps": 2.1954092707994293
+  },
+  "replay": {
+    "top1_correct": 1,
+    "ever_correct": 1,
+    "premature_stop": 0,
+    "re_escalation_needed": 0,
+    "diagnosis_sequence": "vllm_latency_regression_unknown_gpu_cause|vllm_queue_pressure|vllm_queue_pressure|vllm_queue_pressure"
+  },
+  "stderr_tail": ""
+}

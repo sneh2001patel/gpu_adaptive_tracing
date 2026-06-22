@@ -1,0 +1,16 @@
+{
+  "created_at": "2026-06-22T18:25:17+0000",
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "endpoint": "http://127.0.0.1:8103/v1/completions",
+  "seed": 5101,
+  "scenarios": {
+    "compute_saturation": {
+      "label": "vllm_compute_saturation",
+      "request_count": 96,
+      "window_count": 5,
+      "request_csv": "RQ4/runs/live_policy_validation_l4_vllm_queue_pressure/compute_saturation/seed5101/hybrid_stop/smoke/compute_saturation_requests_1782152757.csv",
+      "window_csv": "RQ4/runs/live_policy_validation_l4_vllm_queue_pressure/compute_saturation/seed5101/hybrid_stop/smoke/compute_saturation_windows_1782152757.csv",
+      "success_rate": 100.0
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "created_at": "2026-06-22T20:07:24+0000",
+  "status": "ok",
+  "returncode": 0,
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "scenario": "long_output",
+  "seed": 5102,
+  "policy": "fixed_burst",
+  "expected_label": "vllm_long_output",
+  "selected_windows": 1,
+  "requested_trace_duration_s": 10.0,
+  "wall_duration_s": 98.34274911880493,
+  "port": 8162,
+  "report_paths": [
+    "RQ4/runs/live_policy_validation_l4_vllm_queue_pressure/long_output/seed5102/fixed_burst/profiles/vllm_long_output_fixed_burst_seed5102_1782158744.nsys-rep"
+  ],
+  "kernel_summary": {
+    "status": "ok",
+    "returncode": 0,
+    "stats_path": "RQ4/runs/live_policy_validation_l4_vllm_queue_pressure/long_output/seed5102/fixed_burst/profiles/vllm_long_output_fixed_burst_seed5102_1782158744.kernel_summary.json",
+    "kernel_count": 34,
+    "kernel_instances": 97806,
+    "kernel_total_time_ns": 3300856650.0,
+    "kernel_avg_duration_ns": 33749.01999877308,
+    "top_kernel_name": "void cutlass::Kernel2<cutlass_80_wmma_tensorop_bf16_s161616gemm_bf16_16x16_128x2_tn_align8>(T1::Params)"
+  },
+  "smoke_metrics": {
+    "smoke_summary_paths": [
+      "RQ4/runs/live_policy_validation_l4_vllm_queue_pressure/long_output/seed5102/fixed_burst/smoke/vllm_smoke_summary_1782158827.json"
+    ],
+    "request_count": 4.0,
+    "success_rate": 100.0,
+    "request_csv": "RQ4/runs/live_policy_validation_l4_vllm_queue_pressure/long_output/seed5102/fixed_burst/smoke/long_output_requests_1782158827.csv",
+    "p95_latency_ms": 31313.331985473633,
+    "throughput_rps": 0.1277182582307066
+  },
+  "replay": {
+    "top1_correct": 0,
+    "ever_correct": 0,
+    "premature_stop": 1,
+    "re_escalation_needed": 1,
+    "diagnosis_sequence": "vllm_latency_regression_unknown_gpu_cause"
+  },
+  "stderr_tail": ""
+}

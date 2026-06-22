@@ -1,0 +1,48 @@
+{
+  "created_at": "2026-06-22T17:43:55+0000",
+  "detail_csv": "RQ4/analysis/policy_stress_l4_vllm/rq4_policy_detail_1781806067.csv",
+  "output_dir": "RQ4/runs/live_policy_validation_l4_vllm",
+  "job_count": 1,
+  "ok_count": 0,
+  "aggregate_by_policy": {
+    "fixed_burst": {
+      "runs": 1,
+      "ok_runs": 0,
+      "mean_requested_trace_duration_s": 10.0,
+      "mean_wall_duration_s": 0.7209994792938232,
+      "mean_kernel_instances": 0.0,
+      "mean_success_rate": 0.0
+    }
+  },
+  "results": [
+    {
+      "created_at": "2026-06-22T17:43:55+0000",
+      "status": "failed",
+      "returncode": 1,
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "scenario": "queue_pressure",
+      "seed": 5101,
+      "policy": "fixed_burst",
+      "expected_label": "vllm_queue_pressure",
+      "selected_windows": 1,
+      "requested_trace_duration_s": 10.0,
+      "wall_duration_s": 0.7209994792938232,
+      "port": 8101,
+      "report_paths": [],
+      "kernel_summary": {},
+      "smoke_metrics": {
+        "smoke_summary_paths": [],
+        "request_count": 0.0,
+        "success_rate": 0.0
+      },
+      "replay": {
+        "top1_correct": 0,
+        "ever_correct": 0,
+        "premature_stop": 1,
+        "re_escalation_needed": 1,
+        "diagnosis_sequence": "vllm_latency_regression_unknown_gpu_cause"
+      },
+      "stderr_tail": "Traceback (most recent call last):\n  File \"/root/gpu_adaptive_tracing/RQ4/scripts/run_live_policy_validation.py\", line 461, in <module>\n    main()\n  File \"/root/gpu_adaptive_tracing/RQ4/scripts/run_live_policy_validation.py\", line 428, in main\n    run_profile_target(args)\n  File \"/root/gpu_adaptive_tracing/RQ4/scripts/run_live_policy_validation.py\", line 152, in run_profile_target\n    server = subprocess.Popen(server_command, stdout=log, stderr=subprocess.STDOUT, env=env)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.12/subprocess.py\", line 1026, in __init__\n    self._execute_child(args, executable, preexec_fn, close_fds,\n  File \"/usr/lib/python3.12/subprocess.py\", line 1955, in _execute_child\n    raise child_exception_type(errno_num, err_msg, err_filename)\nFileNotFoundError: [Errno 2] No such file or directory: '/venv/vllm/bin/python3'\n"
+    }
+  ]
+}

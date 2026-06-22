@@ -93,6 +93,7 @@ def load_vllm_profiler_costs(run_dir: Path) -> dict[str, dict[str, float]]:
 
 def load_windows(run_dir: Path) -> list[dict[str, Any]]:
     records = []
+    seen_windows: set[tuple[str, str, str, int, float, float]] = set()
     profiler_costs = load_vllm_profiler_costs(run_dir)
     for mode in MODES:
         for csv_path in sorted((run_dir / mode).rglob("*.csv")):
@@ -103,15 +104,22 @@ def load_windows(run_dir: Path) -> list[dict[str, Any]]:
                     workload = row.get("workload") or row.get("scenario") or row.get("workload_phase_label", "")
                     if not workload:
                         continue
+                    window_id = as_int(row.get("window_id"))
+                    timestamp_start = as_float(row.get("timestamp_start"))
+                    timestamp_end = as_float(row.get("timestamp_end"))
+                    window_key = (str(run_dir), mode, workload, window_id, timestamp_start, timestamp_end)
+                    if window_key in seen_windows:
+                        continue
+                    seen_windows.add(window_key)
                     records.append(
                         {
                             "run_dir": str(run_dir),
                             "mode": mode,
                             "workload": workload,
                             "expected_label": EXPECTED_LABELS.get(workload, workload),
-                            "window_id": as_int(row.get("window_id")),
-                            "timestamp_start": as_float(row.get("timestamp_start")),
-                            "timestamp_end": as_float(row.get("timestamp_end")),
+                            "window_id": window_id,
+                            "timestamp_start": timestamp_start,
+                            "timestamp_end": timestamp_end,
                             "diagnosis_label": row.get("diagnosis_label", ""),
                             "trigger_trace": as_int(row.get("trigger_trace")),
                             "profiler_duration_s": as_float(row.get("profiler_duration_s")),

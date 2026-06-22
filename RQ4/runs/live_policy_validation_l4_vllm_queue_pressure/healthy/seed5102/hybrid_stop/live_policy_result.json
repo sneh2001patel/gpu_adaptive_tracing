@@ -1,0 +1,45 @@
+{
+  "created_at": "2026-06-22T19:06:47+0000",
+  "status": "ok",
+  "returncode": 0,
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "scenario": "healthy",
+  "seed": 5102,
+  "policy": "hybrid_stop",
+  "expected_label": "vllm_healthy",
+  "selected_windows": 4,
+  "requested_trace_duration_s": 33.72,
+  "wall_duration_s": 102.6079421043396,
+  "port": 8127,
+  "report_paths": [
+    "RQ4/runs/live_policy_validation_l4_vllm_queue_pressure/healthy/seed5102/hybrid_stop/profiles/vllm_healthy_hybrid_stop_seed5102_1782155102.nsys-rep"
+  ],
+  "kernel_summary": {
+    "status": "ok",
+    "returncode": 0,
+    "stats_path": "RQ4/runs/live_policy_validation_l4_vllm_queue_pressure/healthy/seed5102/hybrid_stop/profiles/vllm_healthy_hybrid_stop_seed5102_1782155102.kernel_summary.json",
+    "kernel_count": 32,
+    "kernel_instances": 63315,
+    "kernel_total_time_ns": 3614160571.0,
+    "kernel_avg_duration_ns": 57082.217025981205,
+    "top_kernel_name": "std::enable_if<!T7, void>::type internal::gemvx::kernel<int, int, __nv_bfloat16, __nv_bfloat16, __nv_bfloat16, float, (bool)0, (bool)1, (bool)1, (bool)0, (int)7, (bool)0, cublasGemvParamsEx<int, cublasGemvTensorStridedBatched<const __nv_bfloat16>, cublasGemvTensorStridedBatched<const __nv_bfloat16>, cublasGemvTensorStridedBatched<__nv_bfloat16>, float>>(T13)"
+  },
+  "smoke_metrics": {
+    "smoke_summary_paths": [
+      "RQ4/runs/live_policy_validation_l4_vllm_queue_pressure/healthy/seed5102/hybrid_stop/smoke/vllm_smoke_summary_1782155190.json"
+    ],
+    "request_count": 9.0,
+    "success_rate": 100.0,
+    "request_csv": "RQ4/runs/live_policy_validation_l4_vllm_queue_pressure/healthy/seed5102/hybrid_stop/smoke/healthy_requests_1782155190.csv",
+    "p95_latency_ms": 3839.345598220825,
+    "throughput_rps": 0.26279523030526586
+  },
+  "replay": {
+    "top1_correct": 1,
+    "ever_correct": 1,
+    "premature_stop": 0,
+    "re_escalation_needed": 0,
+    "diagnosis_sequence": "vllm_latency_regression_unknown_gpu_cause|vllm_healthy|vllm_healthy|vllm_healthy"
+  },
+  "stderr_tail": ""
+}
