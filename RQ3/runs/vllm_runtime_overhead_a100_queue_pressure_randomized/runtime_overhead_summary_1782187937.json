@@ -1,0 +1,154 @@
+{
+  "created_at": "2026-06-23T04:12:17+0000",
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "scenario": "queue_pressure",
+  "seeds": [
+    6201,
+    6202,
+    6203
+  ],
+  "mode_order": "randomized",
+  "records": [
+    {
+      "comparison_path": "RQ3/runs/vllm_runtime_overhead_a100_queue_pressure_randomized/queue_pressure_seed6201/runtime_overhead_comparison_1782187712.json",
+      "created_at": "2026-06-23T04:08:32+0000",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "scenario": "queue_pressure",
+      "seed": 6201,
+      "port": 8071,
+      "duration_seconds": 30.0,
+      "mode_order": [
+        "no_profiler",
+        "cheap_metrics_only"
+      ],
+      "no_profiler": {
+        "mode": "no_profiler",
+        "status": "ok",
+        "request_csv": "RQ3/runs/vllm_runtime_overhead_a100_queue_pressure_randomized/queue_pressure_seed6201/no_profiler/queue_pressure_requests_1782187674.csv",
+        "request_count": 288.0,
+        "success_rate": 100.0,
+        "p50_latency_ms": 1732.4780225753784,
+        "p95_latency_ms": 1825.3919601440427,
+        "throughput_rps": 9.10168912587427,
+        "prompt_tokens_mean": 156.0,
+        "output_tokens_mean": 39.458333333333336,
+        "duration_s": 31.642478227615356
+      },
+      "cheap_metrics_only": {
+        "mode": "cheap_metrics_only",
+        "status": "ok",
+        "request_csv": "RQ3/runs/vllm_runtime_overhead_a100_queue_pressure_randomized/queue_pressure_seed6201/cheap_metrics_only/queue_pressure_requests_1782187710.csv",
+        "window_csv": "RQ3/runs/vllm_runtime_overhead_a100_queue_pressure_randomized/queue_pressure_seed6201/cheap_metrics_only/queue_pressure_windows_1782187710.csv",
+        "window_count": 4,
+        "request_count": 336.0,
+        "success_rate": 100.0,
+        "p50_latency_ms": 1425.1511096954346,
+        "p95_latency_ms": 1742.9888248443604,
+        "throughput_rps": 10.828410216698188,
+        "prompt_tokens_mean": 156.0,
+        "output_tokens_mean": 40.5,
+        "duration_s": 31.02948570251465
+      },
+      "comparison": {
+        "p95_latency_delta_ms": -82.40313529968239,
+        "p95_latency_regression_percent": -4.514270748359158,
+        "throughput_delta_rps": 1.7267210908239186,
+        "throughput_change_percent": 18.971435597763918
+      }
+    },
+    {
+      "comparison_path": "RQ3/runs/vllm_runtime_overhead_a100_queue_pressure_randomized/queue_pressure_seed6202/runtime_overhead_comparison_1782187825.json",
+      "created_at": "2026-06-23T04:10:25+0000",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "scenario": "queue_pressure",
+      "seed": 6202,
+      "port": 8072,
+      "duration_seconds": 30.0,
+      "mode_order": [
+        "cheap_metrics_only",
+        "no_profiler"
+      ],
+      "no_profiler": {
+        "mode": "no_profiler",
+        "status": "ok",
+        "request_csv": "RQ3/runs/vllm_runtime_overhead_a100_queue_pressure_randomized/queue_pressure_seed6202/no_profiler/queue_pressure_requests_1782187823.csv",
+        "request_count": 336.0,
+        "success_rate": 100.0,
+        "p50_latency_ms": 1408.4872007369995,
+        "p95_latency_ms": 1736.4265322685242,
+        "throughput_rps": 10.937916117660226,
+        "prompt_tokens_mean": 156.0,
+        "output_tokens_mean": 38.267857142857146,
+        "duration_s": 30.718831300735474
+      },
+      "cheap_metrics_only": {
+        "mode": "cheap_metrics_only",
+        "status": "ok",
+        "request_csv": "RQ3/runs/vllm_runtime_overhead_a100_queue_pressure_randomized/queue_pressure_seed6202/cheap_metrics_only/queue_pressure_requests_1782187787.csv",
+        "window_csv": "RQ3/runs/vllm_runtime_overhead_a100_queue_pressure_randomized/queue_pressure_seed6202/cheap_metrics_only/queue_pressure_windows_1782187787.csv",
+        "window_count": 4,
+        "request_count": 288.0,
+        "success_rate": 100.0,
+        "p50_latency_ms": 1734.699010848999,
+        "p95_latency_ms": 1799.3863224983215,
+        "throughput_rps": 9.10125977256004,
+        "prompt_tokens_mean": 156.0,
+        "output_tokens_mean": 38.06944444444444,
+        "duration_s": 31.64397096633911
+      },
+      "comparison": {
+        "p95_latency_delta_ms": 62.95979022979736,
+        "p95_latency_regression_percent": 3.625825167941004,
+        "throughput_delta_rps": -1.8366563451001863,
+        "throughput_change_percent": -16.791647744808934
+      }
+    },
+    {
+      "comparison_path": "RQ3/runs/vllm_runtime_overhead_a100_queue_pressure_randomized/queue_pressure_seed6203/runtime_overhead_comparison_1782187937.json",
+      "created_at": "2026-06-23T04:12:17+0000",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "scenario": "queue_pressure",
+      "seed": 6203,
+      "port": 8073,
+      "duration_seconds": 30.0,
+      "mode_order": [
+        "cheap_metrics_only",
+        "no_profiler"
+      ],
+      "no_profiler": {
+        "mode": "no_profiler",
+        "status": "ok",
+        "request_csv": "RQ3/runs/vllm_runtime_overhead_a100_queue_pressure_randomized/queue_pressure_seed6203/no_profiler/queue_pressure_requests_1782187936.csv",
+        "request_count": 336.0,
+        "success_rate": 100.0,
+        "p50_latency_ms": 1415.7198667526245,
+        "p95_latency_ms": 1744.9012398719788,
+        "throughput_rps": 10.898035268996438,
+        "prompt_tokens_mean": 156.0,
+        "output_tokens_mean": 37.526785714285715,
+        "duration_s": 30.83124542236328
+      },
+      "cheap_metrics_only": {
+        "mode": "cheap_metrics_only",
+        "status": "ok",
+        "request_csv": "RQ3/runs/vllm_runtime_overhead_a100_queue_pressure_randomized/queue_pressure_seed6203/cheap_metrics_only/queue_pressure_requests_1782187900.csv",
+        "window_csv": "RQ3/runs/vllm_runtime_overhead_a100_queue_pressure_randomized/queue_pressure_seed6203/cheap_metrics_only/queue_pressure_windows_1782187900.csv",
+        "window_count": 4,
+        "request_count": 288.0,
+        "success_rate": 100.0,
+        "p50_latency_ms": 1731.0154438018799,
+        "p95_latency_ms": 1821.74197435379,
+        "throughput_rps": 9.115237582851739,
+        "prompt_tokens_mean": 156.0,
+        "output_tokens_mean": 37.354166666666664,
+        "duration_s": 31.595446348190308
+      },
+      "comparison": {
+        "p95_latency_delta_ms": 76.8407344818113,
+        "p95_latency_regression_percent": 4.403729719823513,
+        "throughput_delta_rps": -1.7827976861446988,
+        "throughput_change_percent": -16.358890773794226
+      }
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+Traceback (most recent call last):
+  File "/root/gpu_adaptive_tracing/RQ1/scripts/run_vllm_nsys_compare.py", line 383, in <module>
+    main()
+  File "/root/gpu_adaptive_tracing/RQ1/scripts/run_vllm_nsys_compare.py", line 367, in main
+    run_profile_target(args)
+  File "/root/gpu_adaptive_tracing/RQ1/scripts/run_vllm_nsys_compare.py", line 118, in run_profile_target
+    wait_for_server(args, log_path)
+  File "/root/gpu_adaptive_tracing/RQ1/scripts/run_vllm_nsys_compare.py", line 70, in wait_for_server
+    raise RuntimeError(f"vLLM server did not become ready: {last_error}\n{tail}")
+RuntimeError: vLLM server did not become ready: <urlopen error [Errno 111] Connection refused>
+0m   File "/venv/vllm/lib/python3.10/site-packages/vllm/entrypoints/openai/api_server.py", line 2011, in <module>
+[1;36m(APIServer pid=5463)[0;0m     uvloop.run(run_server(args))
+[1;36m(APIServer pid=5463)[0;0m   File "/venv/vllm/lib/python3.10/site-packages/uvloop/__init__.py", line 69, in run
+[1;36m(APIServer pid=5463)[0;0m     return loop.run_until_complete(wrapper())
+[1;36m(APIServer pid=5463)[0;0m   File "uvloop/loop.pyx", line 1518, in uvloop.loop.Loop.run_until_complete
+[1;36m(APIServer pid=5463)[0;0m   File "/venv/vllm/lib/python3.10/site-packages/uvloop/__init__.py", line 48, in wrapper
+[1;36m(APIServer pid=5463)[0;0m     return await main
+[1;36m(APIServer pid=5463)[0;0m   File "/venv/vllm/lib/python3.10/site-packages/vllm/entrypoints/openai/api_server.py", line 1941, in run_server
+[1;36m(APIServer pid=5463)[0;0m     await run_server_worker(listen_address, sock, args, **uvicorn_kwargs)
+[1;36m(APIServer pid=5463)[0;0m   File "/venv/vllm/lib/python3.10/site-packages/vllm/entrypoints/openai/api_server.py", line 1961, in run_server_worker
+[1;36m(APIServer pid=5463)[0;0m     async with build_async_engine_client(
+[1;36m(APIServer pid=5463)[0;0m   File "/venv/main/lib/python3.10/contextlib.py", line 199, in __aenter__
+[1;36m(APIServer pid=5463)[0;0m     return await anext(self.gen)
+[1;36m(APIServer pid=5463)[0;0m   File "/venv/vllm/lib/python3.10/site-packages/vllm/entrypoints/openai/api_server.py", line 179, in build_async_engine_client
+[1;36m(APIServer pid=5463)[0;0m     async with build_async_engine_client_from_engine_args(
+[1;36m(APIServer pid=5463)[0;0m   File "/venv/main/lib/python3.10/contextlib.py", line 199, in __aenter__
+[1;36m(APIServer pid=5463)[0;0m     return await anext(self.gen)
+[1;36m(APIServer pid=5463)[0;0m   File "/venv/vllm/lib/python3.10/site-packages/vllm/entrypoints/openai/api_server.py", line 221, in build_async_engine_client_from_engine_args
+[1;36m(APIServer pid=5463)[0;0m     async_llm = AsyncLLM.from_vllm_config(
+[1;36m(APIServer pid=5463)[0;0m   File "/venv/vllm/lib/python3.10/site-packages/vllm/utils/__init__.py", line 1589, in inner
+[1;36m(APIServer pid=5463)[0;0m     return fn(*args, **kwargs)
+[1;36m(APIServer pid=5463)[0;0m   File "/venv/vllm/lib/python3.10/site-packages/vllm/v1/engine/async_llm.py", line 212, in from_vllm_config
+[1;36m(APIServer pid=5463)[0;0m     return cls(
+[1;36m(APIServer pid=5463)[0;0m   File "/venv/vllm/lib/python3.10/site-packages/vllm/v1/engine/async_llm.py", line 136, in __init__
+[1;36m(APIServer pid=5463)[0;0m     self.engine_core = EngineCoreClient.make_async_mp_client(
+[1;36m(APIServer pid=5463)[0;0m   File "/venv/vllm/lib/python3.10/site-packages/vllm/v1/engine/core_client.py", line 102, in make_async_mp_client
+[1;36m(APIServer pid=5463)[0;0m     return AsyncMPClient(*client_args)
+[1;36m(APIServer pid=5463)[0;0m   File "/venv/vllm/lib/python3.10/site-packages/vllm/v1/engine/core_client.py", line 769, in __init__
+[1;36m(APIServer pid=5463)[0;0m     super().__init__(
+[1;36m(APIServer pid=5463)[0;0m   File "/venv/vllm/lib/python3.10/site-packages/vllm/v1/engine/core_client.py", line 448, in __init__
+[1;36m(APIServer pid=5463)[0;0m     with launch_core_engines(vllm_config, executor_class,
+[1;36m(APIServer pid=5463)[0;0m   File "/venv/main/lib/python3.10/contextlib.py", line 142, in __exit__
+[1;36m(APIServer pid=5463)[0;0m     next(self.gen)
+[1;36m(APIServer pid=5463)[0;0m   File "/venv/vllm/lib/python3.10/site-packages/vllm/v1/engine/utils.py", line 729, in launch_core_engines
+[1;36m(APIServer pid=5463)[0;0m     wait_for_engine_startup(
+[1;36m(APIServer pid=5463)[0;0m   File "/venv/vllm/lib/python3.10/site-packages/vllm/v1/engine/utils.py", line 782, in wait_for_engine_startup
+[1;36m(APIServer pid=5463)[0;0m     raise RuntimeError("Engine core initialization failed. "
+[1;36m(APIServer pid=5463)[0;0m RuntimeError: Engine core initialization failed. See root cause above. Failed core proc(s): {}
+

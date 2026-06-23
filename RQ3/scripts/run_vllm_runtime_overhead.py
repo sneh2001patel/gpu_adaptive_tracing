@@ -254,7 +254,12 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--max-num-seqs", type=int, default=32)
     parser.add_argument("--suspicious-latency-ratio", type=float, default=1.50)
     parser.add_argument("--queue-pressure-latency-ratio", type=float, default=1.25)
+    parser.add_argument("--queue-delay-pressure-ms", type=float, default=250.0)
+    parser.add_argument("--queue-delay-recovery-ms", type=float, default=100.0)
     parser.add_argument("--suspicious-gpu-util", type=float, default=60.0)
+    parser.add_argument("--recovery-latency-ratio", type=float, default=1.10)
+    parser.add_argument("--recovery-gpu-util", type=float, default=60.0)
+    parser.add_argument("--throughput-recovery-ratio", type=float, default=0.95)
     parser.add_argument(
         "--mode-order",
         choices=("no_profiler_first", "cheap_metrics_first", "randomized"),

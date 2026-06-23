@@ -1,0 +1,57 @@
+{
+  "created_at": "2026-06-23T03:12:51+0000",
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "scenario": "long_output",
+  "seed": 5102,
+  "port": 8060,
+  "automatic": {
+    "mode": "automatic",
+    "status": "ok",
+    "returncode": 0,
+    "duration_s": 101.55956625938416,
+    "output_prefix": "RQ1/runs/vllm_rq2_multiclass_a100/long_output_seed5102/automatic/profiles/vllm_long_output_automatic_1782184116",
+    "report_paths": [
+      "RQ1/runs/vllm_rq2_multiclass_a100/long_output_seed5102/automatic/profiles/vllm_long_output_automatic_1782184116.nsys-rep"
+    ],
+    "kernel_summary": {
+      "status": "ok",
+      "returncode": 0,
+      "stats_path": "RQ1/runs/vllm_rq2_multiclass_a100/long_output_seed5102/automatic/profiles/vllm_long_output_automatic_1782184116.kernel_summary.json",
+      "kernel_count": 38,
+      "kernel_instances": 488946,
+      "kernel_total_time_ns": 5231227113.0,
+      "kernel_avg_duration_ns": 10698.987440330835,
+      "top_kernel_name": "ampere_bf16_s16816gemm_bf16_64x64_sliced1x2_ldg8_f2f_stages_64x5_tn"
+    },
+    "smoke_summary_paths": [
+      "RQ1/runs/vllm_rq2_multiclass_a100/long_output_seed5102/automatic/smoke/vllm_smoke_summary_1782184198.json"
+    ],
+    "stderr_tail": ""
+  },
+  "fixed_window": {
+    "mode": "fixed_window",
+    "status": "ok",
+    "returncode": 0,
+    "duration_s": 138.60888147354126,
+    "output_prefix": "RQ1/runs/vllm_rq2_multiclass_a100/long_output_seed5102/fixed_window/profiles/vllm_long_output_fixed_window_1782184223",
+    "report_paths": [
+      "RQ1/runs/vllm_rq2_multiclass_a100/long_output_seed5102/fixed_window/profiles/vllm_long_output_fixed_window_1782184223.nsys-rep"
+    ],
+    "kernel_summary": {
+      "status": "ok",
+      "returncode": 0,
+      "stats_path": "RQ1/runs/vllm_rq2_multiclass_a100/long_output_seed5102/fixed_window/profiles/vllm_long_output_fixed_window_1782184223.kernel_summary.json",
+      "kernel_count": 38,
+      "kernel_instances": 879643,
+      "kernel_total_time_ns": 9420866285.0,
+      "kernel_avg_duration_ns": 10709.87467074711,
+      "top_kernel_name": "ampere_bf16_s16816gemm_bf16_64x64_sliced1x2_ldg8_f2f_stages_64x5_tn"
+    },
+    "smoke_summary_paths": [
+      "RQ1/runs/vllm_rq2_multiclass_a100/long_output_seed5102/fixed_window/smoke/vllm_smoke_summary_1782184333.json"
+    ],
+    "stderr_tail": ""
+  },
+  "profiler_duration_saved_s": 37.049315214157104,
+  "profiler_duration_saved_percent": 26.72939484128899
+}

@@ -1,0 +1,59 @@
+{
+  "created_at": "2026-06-16T20:00:05+0000",
+  "run_dir": "RQ1/runs/rq1_l4_compare_rep4",
+  "command_settings": {
+    "mode": "compare",
+    "workload": "all",
+    "duration_seconds": 20.0,
+    "window_seconds": 5.0,
+    "enable_nsys_bursts": true,
+    "nsys_burst_seconds": 2.0,
+    "fixed_window_nsys_seconds": 8.0,
+    "max_nsys_bursts_per_workload": 1,
+    "fixed_window_bursts_per_workload": 1,
+    "stability_stop_windows": 2
+  },
+  "environment": {
+    "python_version": "3.10.14",
+    "platform": "Linux-6.8.0-64-generic-x86_64-with-glibc2.39",
+    "torch_version": "2.5.1",
+    "torch_cuda_version": "12.4",
+    "torch_cuda_available": true,
+    "gpu_name": "NVIDIA L4",
+    "nvidia_smi": "550.144.03, NVIDIA L4",
+    "nsys_version": "NVIDIA Nsight Systems version 2024.6.2.225-246235244400v0"
+  },
+  "artifacts": {
+    "comparison_files": [
+      "RQ1/runs/rq1_l4_compare_rep4/comparison_1781639758.json"
+    ],
+    "summary_files": [
+      "RQ1/runs/rq1_l4_compare_rep4/automatic/summary_1781639635.json",
+      "RQ1/runs/rq1_l4_compare_rep4/fixed_window/summary_1781639758.json"
+    ],
+    "window_csv_files": [
+      "RQ1/runs/rq1_l4_compare_rep4/automatic/compute_bound_1781639601.csv",
+      "RQ1/runs/rq1_l4_compare_rep4/automatic/launch_overhead_or_small_kernel_1781639536.csv",
+      "RQ1/runs/rq1_l4_compare_rep4/automatic/mixed_1781639569.csv",
+      "RQ1/runs/rq1_l4_compare_rep4/fixed_window/compute_bound_1781639718.csv",
+      "RQ1/runs/rq1_l4_compare_rep4/fixed_window/launch_overhead_or_small_kernel_1781639635.csv",
+      "RQ1/runs/rq1_l4_compare_rep4/fixed_window/mixed_1781639680.csv"
+    ],
+    "nsight_reports": [
+      "RQ1/runs/rq1_l4_compare_rep4/automatic/profiles/compute_bound_window0_automatic_trigger_1781639606.nsys-rep",
+      "RQ1/runs/rq1_l4_compare_rep4/automatic/profiles/launch_overhead_or_small_kernel_window0_automatic_trigger_1781639541.nsys-rep",
+      "RQ1/runs/rq1_l4_compare_rep4/automatic/profiles/mixed_window0_automatic_trigger_1781639574.nsys-rep",
+      "RQ1/runs/rq1_l4_compare_rep4/fixed_window/profiles/compute_bound_window0_fixed_window_1781639723.nsys-rep",
+      "RQ1/runs/rq1_l4_compare_rep4/fixed_window/profiles/launch_overhead_or_small_kernel_window0_fixed_window_1781639640.nsys-rep",
+      "RQ1/runs/rq1_l4_compare_rep4/fixed_window/profiles/mixed_window0_fixed_window_1781639685.nsys-rep"
+    ],
+    "kernel_summary_files": [
+      "RQ1/runs/rq1_l4_compare_rep4/automatic/profiles/compute_bound_window0_automatic_trigger_1781639606.kernel_summary.json",
+      "RQ1/runs/rq1_l4_compare_rep4/automatic/profiles/launch_overhead_or_small_kernel_window0_automatic_trigger_1781639541.kernel_summary.json",
+      "RQ1/runs/rq1_l4_compare_rep4/automatic/profiles/mixed_window0_automatic_trigger_1781639574.kernel_summary.json",
+      "RQ1/runs/rq1_l4_compare_rep4/fixed_window/profiles/compute_bound_window0_fixed_window_1781639723.kernel_summary.json",
+      "RQ1/runs/rq1_l4_compare_rep4/fixed_window/profiles/launch_overhead_or_small_kernel_window0_fixed_window_1781639640.kernel_summary.json",
+      "RQ1/runs/rq1_l4_compare_rep4/fixed_window/profiles/mixed_window0_fixed_window_1781639685.kernel_summary.json"
+    ]
+  }
+}

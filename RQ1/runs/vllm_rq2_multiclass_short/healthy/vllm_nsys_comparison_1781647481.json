@@ -1,0 +1,57 @@
+{
+  "created_at": "2026-06-16T22:04:41+0000",
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "scenario": "healthy",
+  "seed": 4101,
+  "port": 8031,
+  "automatic": {
+    "mode": "automatic",
+    "status": "ok",
+    "returncode": 0,
+    "duration_s": 81.33276176452637,
+    "output_prefix": "RQ1/runs/vllm_rq2_multiclass_short/healthy/automatic/profiles/vllm_healthy_automatic_1781647307",
+    "report_paths": [
+      "RQ1/runs/vllm_rq2_multiclass_short/healthy/automatic/profiles/vllm_healthy_automatic_1781647307.nsys-rep"
+    ],
+    "kernel_summary": {
+      "status": "ok",
+      "returncode": 0,
+      "stats_path": "RQ1/runs/vllm_rq2_multiclass_short/healthy/automatic/profiles/vllm_healthy_automatic_1781647307.kernel_summary.json",
+      "kernel_count": 32,
+      "kernel_instances": 28140,
+      "kernel_total_time_ns": 1590332066.0,
+      "kernel_avg_duration_ns": 56514.99879175551,
+      "top_kernel_name": "std::enable_if<!T7, void>::type internal::gemvx::kernel<int, int, __nv_bfloat16, __nv_bfloat16, __nv_bfloat16, float, (bool)0, (bool)1, (bool)1, (bool)0, (int)7, (bool)0, cublasGemvParamsEx<int, cublasGemvTensorStridedBatched<const __nv_bfloat16>, cublasGemvTensorStridedBatched<const __nv_bfloat16>, cublasGemvTensorStridedBatched<__nv_bfloat16>, float>>(T13)"
+    },
+    "smoke_summary_paths": [
+      "RQ1/runs/vllm_rq2_multiclass_short/healthy/automatic/smoke/vllm_smoke_summary_1781647376.json"
+    ],
+    "stderr_tail": ""
+  },
+  "fixed_window": {
+    "mode": "fixed_window",
+    "status": "ok",
+    "returncode": 0,
+    "duration_s": 90.28915667533875,
+    "output_prefix": "RQ1/runs/vllm_rq2_multiclass_short/healthy/fixed_window/profiles/vllm_healthy_fixed_window_1781647390",
+    "report_paths": [
+      "RQ1/runs/vllm_rq2_multiclass_short/healthy/fixed_window/profiles/vllm_healthy_fixed_window_1781647390.nsys-rep"
+    ],
+    "kernel_summary": {
+      "status": "ok",
+      "returncode": 0,
+      "stats_path": "RQ1/runs/vllm_rq2_multiclass_short/healthy/fixed_window/profiles/vllm_healthy_fixed_window_1781647390.kernel_summary.json",
+      "kernel_count": 32,
+      "kernel_instances": 49245,
+      "kernel_total_time_ns": 2799843858.0,
+      "kernel_avg_duration_ns": 56855.39360341151,
+      "top_kernel_name": "std::enable_if<!T7, void>::type internal::gemvx::kernel<int, int, __nv_bfloat16, __nv_bfloat16, __nv_bfloat16, float, (bool)0, (bool)1, (bool)1, (bool)0, (int)7, (bool)0, cublasGemvParamsEx<int, cublasGemvTensorStridedBatched<const __nv_bfloat16>, cublasGemvTensorStridedBatched<const __nv_bfloat16>, cublasGemvTensorStridedBatched<__nv_bfloat16>, float>>(T13)"
+    },
+    "smoke_summary_paths": [
+      "RQ1/runs/vllm_rq2_multiclass_short/healthy/fixed_window/smoke/vllm_smoke_summary_1781647466.json"
+    ],
+    "stderr_tail": ""
+  },
+  "profiler_duration_saved_s": 8.956394910812378,
+  "profiler_duration_saved_percent": 9.919679439489876
+}

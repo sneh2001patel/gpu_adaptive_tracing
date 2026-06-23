@@ -1,0 +1,13 @@
+workload,mode,expected_label,runs,windows,suspicious_windows,expected_label_match_rate,ambiguous_or_unknown_rate,first_correct_window_mean,first_correct_window_stdev,first_correct_window_missing_runs,first_correct_seconds_mean,first_correct_seconds_stdev,first_correct_seconds_missing_runs,auto_fixed_disagreement_rate,profiler_burst_count,profiler_duration_s_total,profiler_duration_s_mean,profiler_kernel_instances_total,profiler_kernel_instances_mean,profiler_kernel_total_time_ns_total,profiler_report_count_total,match_rate_pass,ambiguous_rate_pass,first_correct_pass,overall_pass
+compute_saturation,automatic,vllm_compute_saturation,3,12,12,1.0,0.0,0.0,0.0,0,10.0,0.0,0,0.0,3,282.862,94.287,996920.0,332306.667,26305149523.0,3,True,True,True,True
+compute_saturation,fixed_window,vllm_compute_saturation,3,21,21,1.0,0.0,0.0,0.0,0,10.0,0.0,0,0.0,3,401.714,133.905,1993846.0,664615.333,52711648927.0,3,True,True,True,True
+healthy,automatic,vllm_healthy,3,12,12,1.0,0.0,0.0,0.0,0,10.0,0.0,0,0.0,3,285.276,95.092,717570.0,239190.0,11560540728.0,3,True,True,True,True
+healthy,fixed_window,vllm_healthy,3,21,20,1.0,0.0,0.0,0.0,0,10.0,0.0,0,0.0,3,400.111,133.37,1421070.0,473690.0,22866668327.0,3,True,True,True,True
+kv_cache_pressure,automatic,vllm_kv_cache_pressure,3,12,12,1.0,0.0,0.0,0.0,0,10.0,0.0,0,0.0,3,278.21,92.737,741870.0,247290.0,48615686045.0,3,True,True,True,True
+kv_cache_pressure,fixed_window,vllm_kv_cache_pressure,3,21,21,1.0,0.0,0.0,0.0,0,10.0,0.0,0,0.0,3,385.865,128.622,1483740.0,494580.0,97504514251.0,3,True,True,True,True
+long_output,automatic,vllm_long_output,3,12,12,1.0,0.0,0.0,0.0,0,10.0,0.0,0,0.0,3,306.51,102.17,1466922.0,488974.0,15714920800.0,3,True,True,True,True
+long_output,fixed_window,vllm_long_output,3,21,21,1.0,0.0,0.0,0.0,0,10.0,0.0,0,0.0,3,415.477,138.492,2639708.0,879902.667,28273405060.0,3,True,True,True,True
+long_prompt,automatic,vllm_long_prompt,3,12,12,1.0,0.0,0.0,0.0,0,10.0,0.0,0,0.0,3,282.216,94.072,690672.0,230224.0,57433516550.0,3,True,True,True,True
+long_prompt,fixed_window,vllm_long_prompt,3,21,20,1.0,0.0,0.0,0.0,0,10.0,0.0,0,0.0,3,385.721,128.574,1323788.0,441262.667,110478088920.0,3,True,True,True,True
+queue_pressure,automatic,vllm_queue_pressure,3,12,12,1.0,0.0,0.0,0.0,0,10.0,0.0,0,0.0,3,283.368,94.456,993217.0,331072.333,28870432217.0,3,True,True,True,True
+queue_pressure,fixed_window,vllm_queue_pressure,3,21,21,1.0,0.0,0.0,0.0,0,10.0,0.0,0,0.0,3,396.469,132.156,1986434.0,662144.667,57830801666.0,3,True,True,True,True

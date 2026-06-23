@@ -1,0 +1,55 @@
+{
+  "created_at": "2026-06-23T00:22:11+0000",
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "scenario": "long_prompt",
+  "seed": 5103,
+  "port": 8058,
+  "automatic": {
+    "mode": "automatic",
+    "status": "ok",
+    "returncode": 0,
+    "duration_s": 93.43620276451111,
+    "output_prefix": "RQ1/runs/vllm_rq2_multiclass_a100/long_prompt_seed5103/automatic/profiles/vllm_long_prompt_automatic_1782173912",
+    "report_paths": [
+      "RQ1/runs/vllm_rq2_multiclass_a100/long_prompt_seed5103/automatic/profiles/vllm_long_prompt_automatic_1782173912.nsys-rep"
+    ],
+    "kernel_summary": {
+      "status": "ok",
+      "returncode": 0,
+      "stats_path": "RQ1/runs/vllm_rq2_multiclass_a100/long_prompt_seed5103/automatic/profiles/vllm_long_prompt_automatic_1782173912.kernel_summary.json",
+      "kernel_count": 37,
+      "kernel_instances": 215835,
+      "kernel_total_time_ns": 18100424889.0,
+      "kernel_avg_duration_ns": 83862.324873167,
+      "top_kernel_name": "ampere_bf16_s16816gemm_bf16_256x128_ldg8_f2f_stages_64x3_tn"
+    },
+    "smoke_summary_paths": [
+      "RQ1/runs/vllm_rq2_multiclass_a100/long_prompt_seed5103/automatic/smoke/vllm_smoke_summary_1782173990.json"
+    ],
+    "stderr_tail": ""
+  },
+  "fixed_window": {
+    "mode": "fixed_window",
+    "status": "failed",
+    "returncode": 139,
+    "duration_s": 121.05371427536011,
+    "output_prefix": "RQ1/runs/vllm_rq2_multiclass_a100/long_prompt_seed5103/fixed_window/profiles/vllm_long_prompt_fixed_window_1782174008",
+    "report_paths": [
+      "RQ1/runs/vllm_rq2_multiclass_a100/long_prompt_seed5103/fixed_window/profiles/vllm_long_prompt_fixed_window_1782174008.nsys-rep"
+    ],
+    "kernel_summary": {
+      "status": "ok",
+      "returncode": 0,
+      "stats_path": "RQ1/runs/vllm_rq2_multiclass_a100/long_prompt_seed5103/fixed_window/profiles/vllm_long_prompt_fixed_window_1782174008.kernel_summary.json",
+      "kernel_count": 37,
+      "kernel_instances": 76173,
+      "kernel_total_time_ns": 7093028459.0,
+      "kernel_avg_duration_ns": 93117.35731820986,
+      "top_kernel_name": "ampere_bf16_s16816gemm_bf16_256x128_ldg8_f2f_stages_64x3_tn"
+    },
+    "smoke_summary_paths": [],
+    "stderr_tail": "The target application terminated. One or more process it created re-parented.\nWaiting for termination of re-parented processes.\nUse the `--wait` option to modify this behavior.\n"
+  },
+  "profiler_duration_saved_s": 27.617511510849,
+  "profiler_duration_saved_percent": 22.81426197962635
+}

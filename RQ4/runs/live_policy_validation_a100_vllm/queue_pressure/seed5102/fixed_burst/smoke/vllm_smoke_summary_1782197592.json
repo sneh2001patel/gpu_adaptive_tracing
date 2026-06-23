@@ -1,0 +1,16 @@
+{
+  "created_at": "2026-06-23T06:53:01+0000",
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "endpoint": "http://127.0.0.1:8198/v1/completions",
+  "seed": 5102,
+  "scenarios": {
+    "queue_pressure": {
+      "label": "vllm_queue_pressure",
+      "request_count": 96,
+      "window_count": 2,
+      "request_csv": "RQ4/runs/live_policy_validation_a100_vllm/queue_pressure/seed5102/fixed_burst/smoke/queue_pressure_requests_1782197592.csv",
+      "window_csv": "RQ4/runs/live_policy_validation_a100_vllm/queue_pressure/seed5102/fixed_burst/smoke/queue_pressure_windows_1782197592.csv",
+      "success_rate": 100.0
+    }
+  }
+}
