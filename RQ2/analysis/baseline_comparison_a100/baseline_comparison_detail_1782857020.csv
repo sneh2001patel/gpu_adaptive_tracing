@@ -1,0 +1,127 @@
+baseline,source,scenario,seed,streams,top1_accuracy,ambiguous_rate,premature_stop_rate,re_escalation_rate,profiler_duration_s,kernel_instances,trace_windows
+Adaptive live,live,compute_saturation,5101,1,1.0,0.0,0.0,,94.067,332306.0,
+Manual long fixed-window live,live,compute_saturation,5101,1,1.0,0.0,0.0,,133.111,664615.0,
+Adaptive live,live,compute_saturation,5102,1,1.0,0.0,0.0,,94.139,332306.0,
+Manual long fixed-window live,live,compute_saturation,5102,1,1.0,0.0,0.0,,133.065,664617.0,
+Adaptive live,live,compute_saturation,5103,1,1.0,0.0,0.0,,94.656,332308.0,
+Manual long fixed-window live,live,compute_saturation,5103,1,1.0,0.0,0.0,,135.537,664614.0,
+Adaptive live,live,healthy,5101,1,1.0,0.0,0.0,,93.583,239190.0,
+Manual long fixed-window live,live,healthy,5101,1,1.0,0.0,0.0,,133.075,471345.0,
+Adaptive live,live,healthy,5102,1,1.0,0.0,0.0,,95.568,239190.0,
+Manual long fixed-window live,live,healthy,5102,1,1.0,0.0,0.0,,131.852,478380.0,
+Adaptive live,live,healthy,5103,1,1.0,0.0,0.0,,96.125,239190.0,
+Manual long fixed-window live,live,healthy,5103,1,1.0,0.0,0.0,,135.185,471345.0,
+Adaptive live,live,kv_cache_pressure,5101,1,1.0,0.0,0.0,,92.158,247290.0,
+Manual long fixed-window live,live,kv_cache_pressure,5101,1,1.0,0.0,0.0,,128.783,494580.0,
+Adaptive live,live,kv_cache_pressure,5102,1,1.0,0.0,0.0,,94.02,247290.0,
+Manual long fixed-window live,live,kv_cache_pressure,5102,1,1.0,0.0,0.0,,128.241,494580.0,
+Adaptive live,live,kv_cache_pressure,5103,1,1.0,0.0,0.0,,92.032,247290.0,
+Manual long fixed-window live,live,kv_cache_pressure,5103,1,1.0,0.0,0.0,,128.842,494580.0,
+Adaptive live,live,long_output,5101,1,1.0,0.0,0.0,,101.098,489030.0,
+Manual long fixed-window live,live,long_output,5101,1,1.0,0.0,0.0,,138.885,880170.0,
+Adaptive live,live,long_output,5102,1,1.0,0.0,0.0,,101.56,488946.0,
+Manual long fixed-window live,live,long_output,5102,1,1.0,0.0,0.0,,138.609,879643.0,
+Adaptive live,live,long_output,5103,1,1.0,0.0,0.0,,103.853,488946.0,
+Manual long fixed-window live,live,long_output,5103,1,1.0,0.0,0.0,,137.983,879895.0,
+Adaptive live,live,long_prompt,5101,1,1.0,0.0,0.0,,94.683,230224.0,
+Manual long fixed-window live,live,long_prompt,5101,1,1.0,0.0,0.0,,127.838,446059.0,
+Adaptive live,live,long_prompt,5102,1,1.0,0.0,0.0,,94.77,230224.0,
+Manual long fixed-window live,live,long_prompt,5102,1,1.0,0.0,0.0,,130.349,446059.0,
+Adaptive live,live,long_prompt,5103,1,1.0,0.0,0.0,,92.763,230224.0,
+Manual long fixed-window live,live,long_prompt,5103,1,1.0,0.0,0.0,,127.533,431670.0,
+Adaptive live,live,queue_pressure,5101,1,1.0,0.0,0.0,,93.844,331194.0,
+Manual long fixed-window live,live,queue_pressure,5101,1,1.0,0.0,0.0,,132.584,662023.0,
+Adaptive live,live,queue_pressure,5102,1,1.0,0.0,0.0,,95.903,331194.0,
+Manual long fixed-window live,live,queue_pressure,5102,1,1.0,0.0,0.0,,132.051,662388.0,
+Adaptive live,live,queue_pressure,5103,1,1.0,0.0,0.0,,93.621,330829.0,
+Manual long fixed-window live,live,queue_pressure,5103,1,1.0,0.0,0.0,,131.835,662023.0,
+Equal-duration fixed burst replay,offline replay,compute_saturation,5101,1,1.0,,0.0,1.0,10.0,,1.0
+Repeated fixed burst N=3 replay,offline replay,compute_saturation,5101,1,1.0,,0.0,1.0,30.0,,3.0
+Stability Stop K=2 replay,offline replay,compute_saturation,5101,1,1.0,,0.0,1.0,20.0,,2.0
+Counter-Recovery Stop replay,offline replay,compute_saturation,5101,1,1.0,,0.0,0.0,30.649,,4.0
+Hybrid Stop replay,offline replay,compute_saturation,5101,1,1.0,,0.0,0.0,30.649,,4.0
+Equal-duration fixed burst replay,offline replay,compute_saturation,5102,1,1.0,,0.0,1.0,10.0,,1.0
+Repeated fixed burst N=3 replay,offline replay,compute_saturation,5102,1,1.0,,0.0,1.0,30.0,,3.0
+Stability Stop K=2 replay,offline replay,compute_saturation,5102,1,1.0,,0.0,1.0,20.0,,2.0
+Counter-Recovery Stop replay,offline replay,compute_saturation,5102,1,1.0,,0.0,0.0,30.706,,4.0
+Hybrid Stop replay,offline replay,compute_saturation,5102,1,1.0,,0.0,0.0,30.706,,4.0
+Equal-duration fixed burst replay,offline replay,compute_saturation,5103,1,1.0,,0.0,1.0,10.0,,1.0
+Repeated fixed burst N=3 replay,offline replay,compute_saturation,5103,1,1.0,,0.0,1.0,30.0,,3.0
+Stability Stop K=2 replay,offline replay,compute_saturation,5103,1,1.0,,0.0,1.0,20.0,,2.0
+Counter-Recovery Stop replay,offline replay,compute_saturation,5103,1,1.0,,0.0,0.0,30.824,,4.0
+Hybrid Stop replay,offline replay,compute_saturation,5103,1,1.0,,0.0,0.0,30.824,,4.0
+Equal-duration fixed burst replay,offline replay,healthy,5101,1,1.0,,0.0,1.0,10.0,,1.0
+Repeated fixed burst N=3 replay,offline replay,healthy,5101,1,1.0,,0.0,1.0,30.0,,3.0
+Stability Stop K=2 replay,offline replay,healthy,5101,1,1.0,,0.0,1.0,20.0,,2.0
+Counter-Recovery Stop replay,offline replay,healthy,5101,1,1.0,,0.0,0.0,30.341,,4.0
+Hybrid Stop replay,offline replay,healthy,5101,1,1.0,,0.0,0.0,30.341,,4.0
+Equal-duration fixed burst replay,offline replay,healthy,5102,1,1.0,,0.0,1.0,10.0,,1.0
+Repeated fixed burst N=3 replay,offline replay,healthy,5102,1,1.0,,0.0,1.0,30.0,,3.0
+Stability Stop K=2 replay,offline replay,healthy,5102,1,1.0,,0.0,1.0,20.0,,2.0
+Counter-Recovery Stop replay,offline replay,healthy,5102,1,1.0,,0.0,0.0,30.447,,4.0
+Hybrid Stop replay,offline replay,healthy,5102,1,1.0,,0.0,0.0,30.447,,4.0
+Equal-duration fixed burst replay,offline replay,healthy,5103,1,1.0,,0.0,1.0,10.0,,1.0
+Repeated fixed burst N=3 replay,offline replay,healthy,5103,1,1.0,,0.0,1.0,30.0,,3.0
+Stability Stop K=2 replay,offline replay,healthy,5103,1,1.0,,0.0,1.0,20.0,,2.0
+Counter-Recovery Stop replay,offline replay,healthy,5103,1,1.0,,0.0,0.0,30.476,,4.0
+Hybrid Stop replay,offline replay,healthy,5103,1,1.0,,0.0,0.0,30.476,,4.0
+Equal-duration fixed burst replay,offline replay,kv_cache_pressure,5101,1,1.0,,0.0,1.0,10.0,,1.0
+Repeated fixed burst N=3 replay,offline replay,kv_cache_pressure,5101,1,1.0,,0.0,1.0,30.0,,3.0
+Stability Stop K=2 replay,offline replay,kv_cache_pressure,5101,1,1.0,,0.0,1.0,20.0,,2.0
+Counter-Recovery Stop replay,offline replay,kv_cache_pressure,5101,1,1.0,,0.0,0.0,30.695,,4.0
+Hybrid Stop replay,offline replay,kv_cache_pressure,5101,1,1.0,,0.0,0.0,30.695,,4.0
+Equal-duration fixed burst replay,offline replay,kv_cache_pressure,5102,1,1.0,,0.0,1.0,10.0,,1.0
+Repeated fixed burst N=3 replay,offline replay,kv_cache_pressure,5102,1,1.0,,0.0,1.0,30.0,,3.0
+Stability Stop K=2 replay,offline replay,kv_cache_pressure,5102,1,1.0,,0.0,1.0,20.0,,2.0
+Counter-Recovery Stop replay,offline replay,kv_cache_pressure,5102,1,1.0,,0.0,0.0,30.611,,4.0
+Hybrid Stop replay,offline replay,kv_cache_pressure,5102,1,1.0,,0.0,0.0,30.611,,4.0
+Equal-duration fixed burst replay,offline replay,kv_cache_pressure,5103,1,1.0,,0.0,1.0,10.0,,1.0
+Repeated fixed burst N=3 replay,offline replay,kv_cache_pressure,5103,1,1.0,,0.0,1.0,30.0,,3.0
+Stability Stop K=2 replay,offline replay,kv_cache_pressure,5103,1,1.0,,0.0,1.0,20.0,,2.0
+Counter-Recovery Stop replay,offline replay,kv_cache_pressure,5103,1,1.0,,0.0,0.0,30.673,,4.0
+Hybrid Stop replay,offline replay,kv_cache_pressure,5103,1,1.0,,0.0,0.0,30.673,,4.0
+Equal-duration fixed burst replay,offline replay,long_output,5101,1,1.0,,0.0,1.0,10.0,,1.0
+Repeated fixed burst N=3 replay,offline replay,long_output,5101,1,1.0,,0.0,1.0,30.0,,3.0
+Stability Stop K=2 replay,offline replay,long_output,5101,1,1.0,,0.0,1.0,20.0,,2.0
+Counter-Recovery Stop replay,offline replay,long_output,5101,1,1.0,,0.0,0.0,35.712,,4.0
+Hybrid Stop replay,offline replay,long_output,5101,1,1.0,,0.0,0.0,35.712,,4.0
+Equal-duration fixed burst replay,offline replay,long_output,5102,1,1.0,,0.0,1.0,10.0,,1.0
+Repeated fixed burst N=3 replay,offline replay,long_output,5102,1,1.0,,0.0,1.0,30.0,,3.0
+Stability Stop K=2 replay,offline replay,long_output,5102,1,1.0,,0.0,1.0,20.0,,2.0
+Counter-Recovery Stop replay,offline replay,long_output,5102,1,1.0,,0.0,0.0,35.637,,4.0
+Hybrid Stop replay,offline replay,long_output,5102,1,1.0,,0.0,0.0,35.637,,4.0
+Equal-duration fixed burst replay,offline replay,long_output,5103,1,1.0,,0.0,1.0,10.0,,1.0
+Repeated fixed burst N=3 replay,offline replay,long_output,5103,1,1.0,,0.0,1.0,30.0,,3.0
+Stability Stop K=2 replay,offline replay,long_output,5103,1,1.0,,0.0,1.0,20.0,,2.0
+Counter-Recovery Stop replay,offline replay,long_output,5103,1,1.0,,0.0,0.0,35.636,,4.0
+Hybrid Stop replay,offline replay,long_output,5103,1,1.0,,0.0,0.0,35.636,,4.0
+Equal-duration fixed burst replay,offline replay,long_prompt,5101,1,1.0,,0.0,1.0,10.0,,1.0
+Repeated fixed burst N=3 replay,offline replay,long_prompt,5101,1,1.0,,0.0,1.0,30.0,,3.0
+Stability Stop K=2 replay,offline replay,long_prompt,5101,1,1.0,,0.0,1.0,20.0,,2.0
+Counter-Recovery Stop replay,offline replay,long_prompt,5101,1,1.0,,0.0,0.0,31.946,,4.0
+Hybrid Stop replay,offline replay,long_prompt,5101,1,1.0,,0.0,0.0,31.946,,4.0
+Equal-duration fixed burst replay,offline replay,long_prompt,5102,1,1.0,,0.0,1.0,10.0,,1.0
+Repeated fixed burst N=3 replay,offline replay,long_prompt,5102,1,1.0,,0.0,1.0,30.0,,3.0
+Stability Stop K=2 replay,offline replay,long_prompt,5102,1,1.0,,0.0,1.0,20.0,,2.0
+Counter-Recovery Stop replay,offline replay,long_prompt,5102,1,1.0,,0.0,0.0,31.98,,4.0
+Hybrid Stop replay,offline replay,long_prompt,5102,1,1.0,,0.0,0.0,31.98,,4.0
+Equal-duration fixed burst replay,offline replay,long_prompt,5103,1,1.0,,0.0,1.0,10.0,,1.0
+Repeated fixed burst N=3 replay,offline replay,long_prompt,5103,1,1.0,,0.0,1.0,30.0,,3.0
+Stability Stop K=2 replay,offline replay,long_prompt,5103,1,1.0,,0.0,1.0,20.0,,2.0
+Counter-Recovery Stop replay,offline replay,long_prompt,5103,1,1.0,,0.0,0.0,31.908,,4.0
+Hybrid Stop replay,offline replay,long_prompt,5103,1,1.0,,0.0,0.0,31.908,,4.0
+Equal-duration fixed burst replay,offline replay,queue_pressure,5101,1,1.0,,0.0,1.0,10.0,,1.0
+Repeated fixed burst N=3 replay,offline replay,queue_pressure,5101,1,1.0,,0.0,1.0,30.0,,3.0
+Stability Stop K=2 replay,offline replay,queue_pressure,5101,1,1.0,,0.0,1.0,20.0,,2.0
+Counter-Recovery Stop replay,offline replay,queue_pressure,5101,1,1.0,,0.0,0.0,30.472,,4.0
+Hybrid Stop replay,offline replay,queue_pressure,5101,1,1.0,,0.0,0.0,30.472,,4.0
+Equal-duration fixed burst replay,offline replay,queue_pressure,5102,1,1.0,,0.0,1.0,10.0,,1.0
+Repeated fixed burst N=3 replay,offline replay,queue_pressure,5102,1,1.0,,0.0,1.0,30.0,,3.0
+Stability Stop K=2 replay,offline replay,queue_pressure,5102,1,1.0,,0.0,1.0,20.0,,2.0
+Counter-Recovery Stop replay,offline replay,queue_pressure,5102,1,1.0,,0.0,0.0,30.495,,4.0
+Hybrid Stop replay,offline replay,queue_pressure,5102,1,1.0,,0.0,0.0,30.495,,4.0
+Equal-duration fixed burst replay,offline replay,queue_pressure,5103,1,1.0,,0.0,1.0,10.0,,1.0
+Repeated fixed burst N=3 replay,offline replay,queue_pressure,5103,1,1.0,,0.0,1.0,30.0,,3.0
+Stability Stop K=2 replay,offline replay,queue_pressure,5103,1,1.0,,0.0,1.0,20.0,,2.0
+Counter-Recovery Stop replay,offline replay,queue_pressure,5103,1,1.0,,0.0,0.0,30.371,,4.0
+Hybrid Stop replay,offline replay,queue_pressure,5103,1,1.0,,0.0,0.0,30.371,,4.0
