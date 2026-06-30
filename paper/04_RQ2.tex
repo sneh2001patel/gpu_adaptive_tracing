@@ -1,0 +1,70 @@
+\subsection{RQ2: How Accurate Is Automatic GPU Tracing Compared with Manual Profiling?}
+
+\subsubsection{Metrics}
+
+We evaluate diagnosis accuracy using expected-label match rate, ambiguous or unknown rate, time-to-diagnosis, and automatic-versus-fixed-window disagreement rate. Expected-label match rate is evaluated separately for automatic and fixed-window modes, with a success threshold of at least 0.95; the ambiguous or unknown rate has a target of at most 0.05. Time-to-diagnosis is the mean elapsed time from run start to the first window assigned the expected label. Disagreement measures the fraction of paired windows for which automatic and fixed-window modes assign different labels; disagreement alone is not an accuracy failure when both modes match the expected label in their respective suspicious windows.
+
+\subsubsection{Microbenchmark Results}
+
+Across all three L4 microbenchmark workloads and five repetitions each, automatic and fixed-window tracing achieved a 1.0 expected-label match rate and a 0.0 ambiguous rate. Both modes identified the expected bottleneck in the first evidence window, within approximately 5--6\,s.
+
+\subsubsection{vLLM Multiclass Results}
+
+Table~\ref{tab:rq2-vllm} reports RQ2 accuracy for the vLLM multiclass long-run experiments (three seeded repetitions per scenario, 402 per-window records total across six scenarios).
+
+\begin{table*}[t]
+\centering
+\caption{RQ2 vLLM multiclass accuracy (3 seeds per scenario, L4). All six scenarios pass
+all accuracy criteria in both modes. Auto trace and fixed-window trace columns report total
+profiler duration across all repetitions.}
+\label{tab:rq2-vllm}
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{0.95}
+\begin{tabular}{llrrrrrr}
+\toprule
+\textbf{Scenario} & \textbf{Mode} & \textbf{Match} & \textbf{Ambig.} &
+\textbf{TTD (s)} & \textbf{Disagree} & \textbf{Trace (s)} & \textbf{Kernels} \\
+\midrule
+\texttt{healthy}
+  & Auto  & 1.0 & 0.0 & 10.0 & \multirow{2}{*}{0.00} & 301.3 & 730K \\
+  & Fixed & 1.0 & 0.0 & 10.0 &                        & 391.9 & 1380K \\
+\midrule
+\texttt{queue\_pressure}
+  & Auto  & 1.0 & 0.0 & 10.0 & \multirow{2}{*}{0.00} & 309.7 & 748K \\
+  & Fixed & 1.0 & 0.0 & 10.0 &                        & 403.4 & 1380K \\
+\midrule
+\texttt{long\_prompt}
+  & Auto  & 1.0 & 0.0 & 10.0 & \multirow{2}{*}{0.25} & 290.4 & 732K \\
+  & Fixed & 1.0 & 0.0 & 10.0 &                        & 381.0 & 1380K \\
+\midrule
+\texttt{long\_output}
+  & Auto  & 1.0 & 0.0 & 10.0 & \multirow{2}{*}{0.00} & 291.0 & 729K \\
+  & Fixed & 1.0 & 0.0 & 10.0 &                        & 397.1 & 1380K \\
+\midrule
+\texttt{compute\_saturation}
+  & Auto  & 1.0 & 0.0 & 10.0 & \multirow{2}{*}{0.00} & 336.8 & 757K \\
+  & Fixed & 1.0 & 0.0 & 10.0 &                        & 415.1 & 1380K \\
+\midrule
+\texttt{kv\_cache\_pressure}
+  & Auto  & 1.0 & 0.0 & 10.0 & \multirow{2}{*}{0.00} & 329.4 & 731K \\
+  & Fixed & 1.0 & 0.0 & 10.0 &                        & 449.3 & 1380K \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+% All six vLLM serving scenarios pass all accuracy criteria in both automatic and fixed-window modes. The expected-label match rate is 1.0, the ambiguous rate is 0.0, and time-to-diagnosis is the first 10\,s evidence window for every scenario and mode.
+Automatic and fixed-window tracing satisfy all accuracy criteria across the six vLLM serving scenarios (Table~\ref{tab:rq2-vllm}), with a perfect expected-label match rate, zero ambiguous rate, and diagnosis in the first 10\,s evidence window.
+
+% The disagreement rate is 0.0 for five of the six scenarios. The non-zero disagreement for \texttt{long\_prompt} (0.25) is again a sequence-level difference rather than an accuracy failure: both modes match the expected label on their respective suspicious windows.
+Non-zero disagreement rates reflect sequence-level differences rather than diagnosis failures. \texttt{long\_prompt} is the only vLLM scenario with non-zero disagreement (0.25), because automatic mode stops collecting bursts earlier, so automatic and fixed-window tracing do not always assign profiler-enriched labels to the same windows; both modes still assign the correct expected label on every suspicious window.
+
+
+% Across all six vLLM scenarios, automatic mode uses 1,858\,s of total profiler time against 2,438\,s for fixed-window mode, capturing 1,460K kernel instances against 2,759K for fixed-window mode. Automatic mode achieves the same accuracy while profiling for 23.8\% less time and recording 47.1\% fewer kernel instances.
+
+Across all six vLLM scenarios, automatic mode achieves the same diagnosis accuracy as fixed-window tracing while profiling for 23.8\% less time and recording 47.1\% fewer kernel instances.
+
+
+\subsubsection{RQ2: Answer}
+
+Automatic GPU tracing matches the diagnosis accuracy of manual fixed-window profiling exactly: an expected-label match rate of 1.0 and an ambiguous rate of 0.0 across all microbenchmark workloads and all six vLLM serving scenarios, with time-to-diagnosis at the first evidence window in every case. Automatic mode reaches this accuracy using 23.8\% less profiler time and recording 47.1\% fewer kernel instances.

@@ -1,0 +1,148 @@
+\section{Introduction}
+
+GPU-heavy serving systems, particularly large language model~(LLM) inference engines, can
+experience performance problems for many reasons: request queuing, batching delays, GPU
+compute saturation, GPU memory pressure, long input or output sequences, or transient
+workload shifts.
+Operators typically have access to cheap, always-on telemetry---request latency, throughput,
+GPU utilization, and GPU memory utilization---that can reveal \emph{that} something is wrong.
+These cheap signals, however, frequently cannot explain \emph{why} a system is slow: a spike
+in p95 latency can be produced by queueing delay, by a compute-bound kernel, by memory-bound
+data movement, or by some combination of the three, and cheap utilization counters alone
+cannot distinguish between these causes.
+
+GPU profiling tools such as NVIDIA Nsight Systems can resolve this ambiguity by exposing
+kernel-level evidence: execution timing, launch frequency, and duration distributions for
+individual GPU kernels.
+This evidence is detailed enough to identify the true bottleneck class, but heavy profiling
+is also expensive to collect and disruptive to run.
+In current practice, GPU profiling is almost always a manual activity: an operator notices a
+problem, starts a profiler with a fixed-duration window, waits for the window to elapse,
+and then inspects the resulting trace.
+This workflow has four practical limitations.
+First, it requires a human in the loop, which does not scale to automated monitoring
+pipelines.
+Second, it relies on a fixed profiling window that is set in advance and cannot adapt to how
+quickly the evidence actually converges.
+Third, a fixed window can easily collect more evidence than necessary, wasting profiler
+overhead and producing oversized trace artifacts.
+Fourth, and most fundamentally, manual fixed-window profiling has no principled way to
+answer when enough evidence has been collected---it stops because the timer expired, not
+because the diagnosis is complete.
+
+This last limitation motivates the central problem studied in this paper:
+
+\begin{quote}
+\emph{When has a GPU tracing system collected sufficient evidence to make a diagnosis, and
+when is additional heavy tracing no longer worth its cost?}
+\end{quote}
+
+We refer to this as the problem of \emph{diagnostic sufficiency}.
+It is distinct from, and complementary to, the problem of trace volume reduction studied by
+prior work on adaptive distributed tracing.
+Adaptive tracing systems for distributed request-level traces decide which requests or spans
+to sample, but they generally operate above the GPU and do not reason about GPU-specific
+evidence tiers such as utilization counters, memory pressure, or kernel-level timing.
+Conversely, GPU profiling tools expose rich low-level evidence but are built as manual,
+fixed-window instruments; they do not decide when profiling should start, continue, or stop.
+The gap between these two bodies of work is a missing runtime control problem: managing the
+lifecycle of heavy GPU tracing automatically, from activation through evidence sufficiency to
+de-escalation.
+
+\subsection{Approach}
+
+This paper proposes and evaluates an \emph{adaptive GPU tracing controller} that closes this
+gap.
+The controller organizes evidence into two cost tiers.
+Cheap evidence---request latency, throughput, queueing delay, GPU utilization, and GPU memory
+utilization---is collected continuously at negligible cost.
+Heavy evidence---kernel execution timing collected via short Nsight Systems profiler
+bursts---is collected only when the cheap evidence is insufficient to explain an observed
+anomaly.
+After each burst, the controller evaluates whether the resulting kernel-level diagnosis has
+stabilized.
+If additional bursts would no longer change the diagnosis, or if cheap signals show sustained
+recovery, the controller de-escalates and returns to cheap-only monitoring.
+We design and compare six concrete short-burst stopping policies that instantiate this idea
+with different cost--reliability tradeoffs, ranging from a single fixed burst to a hybrid
+policy that requires both diagnosis stability and workload recovery before stopping.
+
+We implement and evaluate this controller on a realistic GPU-heavy serving system: vLLM
+serving the \texttt{Qwen2.5-7B-Instruct} model on NVIDIA L4 and A100 GPUs, across six
+distinct serving scenarios (healthy operation, queue pressure, long prompts, long outputs,
+compute saturation, and KV-cache pressure) and three controlled CUDA/PyTorch microbenchmarks
+with known ground-truth bottleneck labels.
+
+\subsection{Research Questions}
+
+We structure our evaluation around five research questions that together examine whether,
+how accurately, at what cost, and through which mechanism an adaptive controller can manage
+GPU trace de-escalation.
+
+\paragraph{RQ1: Can an adaptive GPU tracing controller determine when heavy GPU tracing has
+collected sufficient diagnostic evidence?}
+This is the central research question of the paper. It asks whether the controller can stop
+heavy tracing automatically, once additional kernel-timing evidence no longer changes the
+diagnosis, while still producing a correct diagnosis. We evaluate whether the controller
+stops earlier than a fixed manual profiling window, whether it avoids stopping prematurely,
+and whether it preserves diagnosis quality while doing so.
+
+\paragraph{RQ2: How accurate is automatic GPU tracing compared with a manual profiling
+approach?}
+Reducing tracing duration is only useful if it does not come at the cost of diagnostic
+accuracy. RQ2 directly compares the automatic controller against a manual fixed-window
+baseline using expected-label match rate, ambiguous-diagnosis rate, and time-to-diagnosis,
+to establish whether automatic tracing is a safe substitute for manual profiling rather than
+merely a cheaper one.
+
+\paragraph{RQ3: Does automatic GPU tracing introduce overhead compared with manual profiling,
+and is the overhead negligible?}
+An adaptive controller must itself be cheap to run continuously. RQ3 measures two forms of
+overhead: the profiler-cost overhead of heavy tracing relative to the fixed-window baseline,
+and the runtime perturbation introduced by the controller's own always-on cheap-metric
+collection, measured as request-latency and throughput impact on the serving workload.
+
+\paragraph{RQ4: Which short-burst GPU tracing policies work best?}
+Diagnostic sufficiency can be operationalized through different stopping policies, each
+making a different cost--reliability tradeoff. RQ4 compares six candidate policies---Fixed
+Burst, Repeated Fixed Burst, Stability Stop, Marginal Utility Stop, Counter-Recovery Stop,
+and Hybrid Stop---on diagnosis accuracy, tracing duration, premature-stop rate, and
+re-escalation rate, including under a controlled ambiguity stress condition that tests
+robustness when the first burst of evidence is inconclusive.
+
+\paragraph{RQ5: Which runtime signals are most useful for deciding when to stop heavy GPU
+tracing?}
+The policies in RQ4 are built from underlying runtime signals: diagnosis stability, latency
+recovery, throughput recovery, GPU utilization recovery, and others. RQ5 isolates these
+signals and evaluates each one's precision and reliability at identifying correct stopping
+points, while also testing whether each signal can be fooled by ambiguous evidence. This RQ
+is motivated by the observation that the best signal for \emph{starting} heavy tracing may
+not be the best signal for \emph{stopping} it.
+
+\subsection{Contributions}
+
+This paper makes the following contributions.
+
+\begin{enumerate}
+  \item A formulation of automatic GPU trace de-escalation as a runtime control problem,
+        distinct from existing adaptive distributed tracing and manual GPU profiling.
+  \item A short-burst GPU tracing controller that activates and stops heavy kernel-level
+        profiling without manual intervention, built on a two-tier evidence model.
+  \item Six short-burst tracing policies, evaluated for diagnosis accuracy, tracing cost,
+        premature-stop rate, and re-escalation rate, including under a controlled ambiguity
+        stress condition.
+  \item An evaluation against a manual fixed-window profiling baseline across controlled
+        microbenchmarks and six realistic vLLM serving scenarios on two GPU platforms.
+  \item Evidence that automatic tracing matches manual diagnosis accuracy while reducing
+        profiler duration by 18.9\%--48.5\% and captured kernel instances by
+        42.9\%--78.2\%, with negligible runtime overhead.
+  \item A signal-level analysis identifying diagnosis stability as the most reliable stopping
+        signal, and characterizing why several intuitive recovery-based signals are not safe
+        to use as standalone stopping criteria.
+\end{enumerate}
+
+The remainder of this paper is organized as follows.
+Section~\ref{sec:methodology} describes the controller design, evidence tiers, stopping
+policies, and experimental implementation.
+Section~\ref{sec:evaluation} presents the evaluation, organized by research question.
+Later sections discuss related work, threats to validity, and conclusions.

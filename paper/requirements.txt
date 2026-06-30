@@ -1,0 +1,32 @@
+# Main/controller environment for RQ1-RQ5 experiment scripts, analysis, and
+# paper figure generation. Install with:
+#
+#   python3 -m venv .venv
+#   source .venv/bin/activate
+#   pip install -r requirements.txt
+#
+# torch must match the CUDA toolkit/driver on the host. The reference L4 runs
+# used torch 2.5.1 with CUDA 12.4. If the default PyPI wheel does not match
+# your CUDA driver, install from the matching PyTorch index instead, e.g.:
+#   pip install torch==2.5.1 --index-url https://download.pytorch.org/whl/cu124
+torch==2.5.1
+
+# NVML bindings used for cheap GPU utilization/memory telemetry (imported as
+# `pynvml`, but the maintained package on PyPI is `nvidia-ml-py`).
+nvidia-ml-py>=12.560.30
+
+# Host-side CPU/process metrics used by the microbenchmark and vLLM smoke
+# harnesses.
+psutil>=5.9
+
+# Figure generation for the paper (paper/scripts/*.py).
+matplotlib>=3.8
+
+# Everything else used by the RQ1-RQ5 scripts (argparse, csv, json, pathlib,
+# statistics, subprocess, threading, urllib, etc.) is in the Python standard
+# library and needs no extra package.
+
+# vLLM serving is intentionally kept out of this file - it has its own,
+# heavier and more version-sensitive dependency set that conflicts with the
+# pinned torch build above. Install it into a separate environment using
+# requirements-vllm.txt; see README.md for details.

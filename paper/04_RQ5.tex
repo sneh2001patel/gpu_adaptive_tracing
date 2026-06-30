@@ -1,0 +1,72 @@
+\subsection{RQ5: Which Runtime Signals Are Most Useful for Deciding When to Stop Heavy GPU Tracing?}
+\label{sec:rq5}
+
+\subsubsection{Evaluation Approach}
+
+RQ5 evaluates the nine candidate stopping signals defined in Section~\ref{sec:stopping-policies} on two datasets.
+
+\begin{itemize}
+  \item[] \textbf{Real enriched L4 runs.} 18 vLLM serving runs (6 scenarios $\times$ 3 seeds, 60\,s per run) collected with the enriched window schema that includes non-sparse baseline ratio fields, recovery streak counters, and diagnosis confidence and margin fields. These runs provide a realistic serving signal distribution for evaluating which signals identify correct stopping points.
+  \item[] \textbf{Ambiguity stress replay.} The same stress dataset used in RQ4 (first suspicious window relabeled as unknown). This dataset tests whether a signal fires on ambiguous stopping points as well as correct ones; a signal that cannot distinguish between the two is not safe to use as a standalone stopping criterion.
+\end{itemize}
+
+A signal is considered \emph{paper-ready} if it satisfies all three of the following criteria simultaneously: (1) precision $\geq 0.90$ on both datasets, (2) correct-stop F1 $\geq 0.70$ on the stress replay, and (3) ambiguous-stop F1 $\leq 0.10$ on the stress replay. Criterion (3) is the strictest filter: a signal that fires reliably on correct windows but also fires on ambiguous windows would cause the controller to stop too early when the diagnosis has not yet converged.
+
+\subsubsection{Signal Ranking Results}
+
+Table~\ref{tab:rq5-signals} reports precision, recall, and F1 for each candidate signal across the two evaluation datasets, together with the paper-ready verdict.
+
+\begin{table*}[t]
+\centering
+\caption{RQ5 stopping signal ranking. Signals are sorted by composite score. Only
+\texttt{diagnosis\_stable\_2} passes all paper-ready criteria.}
+\label{tab:rq5-signals}
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{0.95}
+\begin{tabular}{lrrrrrrl}
+\toprule
+& \multicolumn{3}{c}{\textbf{Real enriched}} &
+  \multicolumn{3}{c}{\textbf{Stress replay}} & \\
+\cmidrule(lr){2-4} \cmidrule(lr){5-7}
+\textbf{Signal} & \textbf{Prec.} & \textbf{Rec.} & \textbf{F1} &
+\textbf{Prec.} & \textbf{F1 (correct)} & \textbf{F1 (ambig.)} &
+\textbf{Paper-ready} \\
+\midrule
+\texttt{diagnosis\_stable\_2}   & 1.000 & 0.860 & 0.925 & 1.000 & 0.786 & 0.000 & \textbf{yes} \\
+\texttt{latency\_recovered}     & 1.000 & 1.000 & 1.000 & 0.739 & 0.850 & 0.414 & no \\
+\texttt{throughput\_recovered}  & 1.000 & 0.884 & 0.938 & 0.778 & 0.800 & 0.333 & no \\
+\texttt{queue\_delay\_recovered}& 1.000 & 0.659 & 0.794 & 0.739 & 0.850 & 0.414 & no \\
+\texttt{diagnosis\_margin\_clear}& 1.000 & 0.744 & 0.853 & 0.000 & 0.000 & 0.000 & no \\
+\texttt{diagnosis\_changed}     & 1.000 & 0.465 & 0.635 & 1.000 & 0.522 & 0.000 & no \\
+\texttt{gpu\_util\_recovered}   & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & no \\
+\texttt{memory\_pressure\_low}  & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & no \\
+\texttt{kernel\_duration\_stable}& 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & no \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\texttt{diagnosis\_stable\_2} is the only signal passing all three paper-ready criteria (Table~\ref{tab:rq5-signals}).
+
+\subsubsection{Analysis of Individual Signal Groups}
+
+\paragraph{Diagnosis-evidence signals.}
+\texttt{diagnosis\_stable\_2} is the strongest and most defensible signal because it is derived directly from the kernel-level evidence the controller has already collected. It requires no external baseline calibration and does not depend on the workload's utilization or request rate returning to a specific threshold. Its main limitation is recall: on the real enriched runs it fires on 86\% of correct stopping points rather than all of them, meaning it occasionally requires one additional window before triggering.
+\texttt{diagnosis\_margin\_clear} is promising on the real enriched runs (F1 0.853) but scores 0.000 on the stress replay, because the stress dataset predates the enriched schema and the margin field is absent.
+
+\texttt{diagnosis\_changed} has perfect precision but low recall (F1 0.635 on real enriched runs). It is better understood as a \emph{continuation signal} than a stopping signal: when the diagnosis changes from one window to the next, the controller should continue tracing rather than stop. This is the inverse of its intended stopping role.
+
+\paragraph{Recovery signals.}
+\texttt{latency\_recovered} and \texttt{queue\_delay\_recovered} achieve the highest F1scores on the real enriched runs (1.000 and 0.794 respectively) but fail the paper-ready ambiguous-stop criterion with stress replay F1 values of 0.414. These signals fire on ambiguous stress windows because the stress transformation only relabels the diagnosis field, not the request latency values---latency recovery can therefore be observed even when the diagnosis is still unknown. They are valuable as supporting signals within the \textsc{CR} and \textsc{HS} policies, but they are not safe as standalone stopping signals.
+
+\texttt{throughput\_recovered} shows a similar pattern: high F1 on real enriched runs (0.938) but fails the ambiguity criterion (stress F1 0.333).
+
+\paragraph{GPU counter signals.}
+At default thresholds (60\% util, 95\% memory), both score 0.000 since utilization never drops that low (observed range: 92.4--99.4\% util, 96.7--97.7\% memory). Recalibrating util to 99\% raises \texttt{gpu\_util\_recovered}'s recall to 0.953, but it then fires on 100\% of ambiguous windows (F1 0.419), violating the safety criterion; \texttt{memory\_pressure\_low} stays near-uninformative (recall 0.054) even at 97.5\%.
+
+\paragraph{Kernel duration stability.}
+\texttt{kernel\_duration\_stable} scores 0.000 because it requires two successive T2 bursts, and the \textsc{FB} policy used as the comparison baseline never collects a second burst.
+
+\subsubsection{RQ5: Answer}
+
+Diagnosis stability is the only stopping signal that is simultaneously precise, informative, and safe against ambiguous early windows. \texttt{diagnosis\_stable\_2} is the sole signal that passes all paper-ready criteria: it achieves 1.000 precision and an F1 of 0.925 on real enriched L4 runs, and never fires on ambiguous stopping points (stress ambiguous-stop F1 of 0.000). Recovery signals (\texttt{latency\_recovered}, \texttt{throughput\_recovered}) are strong on non-ambiguous workloads but fail the ambiguity safety criterion, making them suitable as supporting signals within \textsc{HS} and \textsc{CR} but not as standalone stopping criteria. GPU counter signals (\texttt{gpu\_util\_recovered}, \texttt{memory\_pressure\_low}) are inoperative for saturated LLM inference workloads.
