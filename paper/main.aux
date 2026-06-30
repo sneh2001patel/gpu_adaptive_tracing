@@ -1,0 +1,92 @@
+\relax 
+\@writefile{toc}{\contentsline {section}{\numberline {I}Introduction}{1}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {I-A}}Contributions}{1}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {II}Methodology}{2}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {II-A}}System Overview}{2}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\mbox  {II-A}1}Evidence Tiers}{2}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {I}{\ignorespaces Evidence tiers used by the adaptive tracing controller.}}{2}{}\protected@file@percent }
+\newlabel{tab:evidence-tiers}{{I}{2}{}{table.1}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\mbox  {II-A}2}Controller State Machine}{2}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\mbox  {II-A}3}Windowing and Aggregation}{2}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\mbox  {II-A}4}Anomaly Detection}{2}{}\protected@file@percent }
+\citation{kwon2023efficient}
+\citation{qwen2025}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\mbox  {II-A}5}Tracing Budget}{3}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {II-B}}Short-Burst Stopping Policies}{3}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\mbox  {II-B}1}Policy Definitions}{3}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\numberline {\mbox  {II-B}1a}Fixed Burst (\textsc  {FB}).}{3}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\numberline {\mbox  {II-B}1b}Repeated Fixed Burst (\textsc  {RFB}).}{3}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\numberline {\mbox  {II-B}1c}Stability Stop (\textsc  {SS}).}{3}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\numberline {\mbox  {II-B}1d}Marginal Utility Stop (\textsc  {MU}).}{3}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\numberline {\mbox  {II-B}1e}Counter-Recovery Stop (\textsc  {CR}).}{3}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\numberline {\mbox  {II-B}1f}Hybrid Stop (\textsc  {HS}).}{3}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\mbox  {II-B}2}Policy Summary}{3}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\mbox  {II-B}3}Stopping Signals}{3}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {II-C}}Baselines}{3}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\numberline {\mbox  {II-C}0a}No Heavy Tracing (\textsc  {NT}).}{3}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\numberline {\mbox  {II-C}0b}Manual Fixed-Window Profiling (\textsc  {FW}).}{3}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\numberline {\mbox  {II-C}0c}Always-Profile (\textsc  {AP}).}{3}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {II}{\ignorespaces Short-burst stopping policies compared by stopping condition and cost--reliability tradeoff.}}{4}{}\protected@file@percent }
+\newlabel{tab:policies}{{II}{4}{}{table.2}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {III}{\ignorespaces Candidate stopping signals evaluated in this paper.}}{4}{}\protected@file@percent }
+\newlabel{tab:stopping-signals}{{III}{4}{}{table.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {II-D}}Implementation}{4}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\mbox  {II-D}1}Serving Stack}{4}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\mbox  {II-D}2}Cheap Metric Collection (T0 and T1)}{4}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\mbox  {II-D}3}Heavy Metric Collection (T2)}{4}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {III}Evaluation}{4}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {III-A}}Experimental Setup}{4}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\mbox  {III-A}1}Controller Parameters}{5}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {IV}{\ignorespaces Controller and policy parameters used in all experiments.}}{5}{}\protected@file@percent }
+\newlabel{tab:setup-params}{{IV}{5}{}{table.4}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\mbox  {III-A}2}Repetitions and Seeds}{5}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {III-B}}RQ1: Can the Controller Determine When Sufficient Diagnostic Evidence Has Been Collected?}{5}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\mbox  {III-B}1}Metrics}{5}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\mbox  {III-B}2}Microbenchmark Results}{5}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {V}{\ignorespaces RQ1 microbenchmark results: automatic vs.\ fixed-window profiler duration (mean over 5 repetitions). All rows pass the combined success criterion.}}{5}{}\protected@file@percent }
+\newlabel{tab:rq1-micro}{{V}{5}{}{table.5}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\mbox  {III-B}3}vLLM Serving Results}{5}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {VI}{\ignorespaces RQ1 vLLM serving results for the \texttt  {queue\_pressure} scenario (mean over 3 repetitions). Request success rate was 100\% in all repetitions.}}{5}{}\protected@file@percent }
+\newlabel{tab:rq1-vllm}{{VI}{5}{}{table.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {III-C}}RQ2: How Accurate Is Automatic GPU Tracing Compared with Manual Profiling?}{5}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\mbox  {III-C}1}Metrics}{5}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\mbox  {III-C}2}Microbenchmark Results}{5}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {VII}{\ignorespaces RQ2 microbenchmark accuracy on the L4 (5 repetitions). Both modes pass all criteria on every workload.}}{6}{}\protected@file@percent }
+\newlabel{tab:rq2-micro}{{VII}{6}{}{table.7}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\mbox  {III-C}3}vLLM Multiclass Results}{6}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {III-D}}RQ3: Does Automatic GPU Tracing Introduce Overhead Compared with Manual Profiling?}{6}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\mbox  {III-D}1}Metrics}{6}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\mbox  {III-D}2}Profiler-Cost Overhead}{6}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\mbox  {III-D}3}Dedicated Runtime Perturbation}{6}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {III-E}}RQ4: Which Short-Burst GPU Tracing Policies Work Best?}{6}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\mbox  {III-E}1}Evaluation Approach}{6}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {VIII}{\ignorespaces RQ2 vLLM multiclass accuracy (3 seeds per scenario, L4). All six scenarios pass all accuracy criteria in both modes. Auto trace and fixed-window trace columns report total profiler duration across all repetitions.}}{7}{}\protected@file@percent }
+\newlabel{tab:rq2-vllm}{{VIII}{7}{}{table.8}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {IX}{\ignorespaces RQ3 dedicated runtime-overhead results (randomised mode order). Negative p95 regression indicates lower latency in cheap-metrics mode. All rows pass the criteria.}}{7}{}\protected@file@percent }
+\newlabel{tab:rq3-runtime}{{IX}{7}{}{table.9}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\mbox  {III-E}2}Metrics}{7}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\mbox  {III-E}3}Stable Replay Results}{7}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\mbox  {III-E}4}Ambiguity Stress Replay Results}{7}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\mbox  {III-E}5}Policy Tradeoff Analysis}{7}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {X}{\ignorespaces RQ4 stable replay policy ranking (18 streams, all labels clear in first window). All policies achieve top-1 accuracy of 1.0; rankings are determined by re-escalation rate and cost.}}{8}{}\protected@file@percent }
+\newlabel{tab:rq4-stable}{{X}{8}{}{table.10}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {XI}{\ignorespaces RQ4 ambiguity stress policy ranking (18 streams, first window relabeled as unknown). \textsc  {FB} fails entirely; multi-window policies recover to top-1 accuracy of 1.0.}}{8}{}\protected@file@percent }
+\newlabel{tab:rq4-stress}{{XI}{8}{}{table.11}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Cost--safety tradeoff across the six stopping policies on the ambiguity stress replay (L4, 18 streams). \textsc  {Fixed Burst} is cheapest but fails entirely under first-window ambiguity (re-escalation rate 1.0). \textsc  {Stability Stop}, \textsc  {Marginal Utility Stop}, and \textsc  {Repeated Fixed Burst} occupy a middle tier (re-escalation rate 0.83). \textsc  {Counter-Recovery Stop} and \textsc  {Hybrid Stop} eliminate re-escalation entirely at modest additional tracing cost. Markers within a tied cluster are spread horizontally for legibility; exact values are reported in Table~\ref {tab:rq4-stress}.}}{8}{}\protected@file@percent }
+\newlabel{fig:rq4-tradeoff}{{1}{8}{}{figure.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {III-F}}RQ5: Which Runtime Signals Are Most Useful for Deciding When to Stop Heavy GPU Tracing?}{8}{}\protected@file@percent }
+\newlabel{sec:rq5}{{\mbox  {III-F}}{8}{}{subsection.3.6}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\mbox  {III-F}1}Evaluation Approach}{8}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\mbox  {III-F}2}Signal Ranking Results}{8}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\mbox  {III-F}3}Analysis of Individual Signal Groups}{8}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\numberline {\mbox  {III-F}3a}Diagnosis-evidence signals.}{8}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {XII}{\ignorespaces RQ5 stopping signal ranking. Signals are sorted by composite score. Only \texttt  {diagnosis\_stable\_2} passes all paper-ready criteria.}}{9}{}\protected@file@percent }
+\newlabel{tab:rq5-signals}{{XII}{9}{}{table.12}{}}
+\@writefile{toc}{\contentsline {paragraph}{\numberline {\mbox  {III-F}3b}Recovery signals.}{9}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\numberline {\mbox  {III-F}3c}GPU counter signals.}{9}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\numberline {\mbox  {III-F}3d}Kernel duration stability.}{9}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {IV}Threats to Validity}{9}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {V}Conclusion}{10}{}\protected@file@percent }
+\bibstyle{splncs04}
+\bibdata{references}
+\gdef \@abspage@last{10}
