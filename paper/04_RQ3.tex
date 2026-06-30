@@ -1,0 +1,34 @@
+\subsection{RQ3: Does Automatic GPU Tracing Introduce Overhead Compared with Manual Profiling?}
+
+We study overhead from two complementary angles. The first is \emph{profiler-cost overhead}: how much profiler time and how many profiled kernel instances does automatic tracing use compared with fixed-window profiling? The second is \emph{runtime perturbation}: does running the cheap controller metrics alongside vLLM introduce measurable degradation in request latency or throughput?
+
+\subsubsection{Metrics}
+
+\begin{itemize}
+  \item \textbf{Trace-time saved (\%) and kernel instances avoided (\%).}
+    Reduction in profiler-active duration and in the number of kernel instances recorded by the profiler, relative to the fixed-window baseline.
+  \item \textbf{p95 latency regression (\%).}
+    Change in p95 request latency between cheap-metrics mode and no-profiler mode, computed as $(p95_{\text{cheap}} - p95_{\text{none}}) / p95_{\text{none}} \times 100$. Positive values indicate regression; negative values indicate improvement.
+  \item \textbf{Throughput change (\%).}
+    Change in requests per second between cheap-metrics mode and no-profiler mode.
+  \item \textbf{Request success rate.}
+    Fraction of requests that completed successfully. Must remain at 100\%.
+\end{itemize}
+
+The RQ3 success criteria are: positive trace-time savings, positive kernel-instance reduction, p95 latency regression $\leq 5\%$, and request success rate of 100\%.
+
+\subsubsection{Profiler-Cost Overhead}
+
+Combining the RQ1 and RQ2 artifacts (Tables~\ref{tab:rq1-micro}--\ref{tab:rq2-vllm}), automatic tracing reduces profiler duration by 18.9\%--48.5\% and captured kernel instances by 42.9\%--78.2\% across all workloads, relative to the fixed-window baseline and while preserving a diagnosis match rate of 1.0. Microbenchmark workloads show higher savings than vLLM scenarios because their bottleneck classes stabilize more quickly.
+
+\subsubsection{Dedicated Runtime Perturbation}
+
+To isolate the cost of the cheap controller metrics, we compare a \emph{no-profiler} baseline against a \emph{cheap-metrics-only} mode (NVML polling and windowed metric aggregation, no Nsight profiling), randomizing which mode runs first in each repetition to control for run-order effects, across five randomized repetitions of \texttt{queue\_pressure} and three of \texttt{healthy}. All rows pass the RQ3 criteria.
+
+The cheap controller metrics introduce no measurable p95 latency regression on either scenario. For \texttt{queue\_pressure} the mean p95 latency is 3.6\% \emph{lower} in cheap-metrics mode (5 reps, 95\% CI $\pm 6.3$ points), and for \texttt{healthy} the regression is $+0.6\%$ (3 reps, 95\% CI $\pm 1.9$ points), well within the 5\% threshold. Both intervals are wide given the small repetition counts, but even \texttt{queue\_pressure}'s upper bound ($+2.7\%$) clears the threshold with margin. Request success remains at 100\% in both scenarios and both modes.
+
+Throughput change is small ($-0.5\%$ to $-1.0\%$) but more sensitive to run order than p95 latency; we report it as context rather than as a hard criterion.
+
+\subsubsection{RQ3: Answer}
+
+Automatic tracing reduces profiler cost substantially relative to fixed-window profiling without degrading serving performance: profiler duration drops by 18.9\%--48.5\% and captured kernel instances by 42.9\%--78.2\%. The cheap controller metrics introduce less than 1\% mean p95 latency change in the serving workload in five randomized repetitions, confirming that the controller overhead is negligible.

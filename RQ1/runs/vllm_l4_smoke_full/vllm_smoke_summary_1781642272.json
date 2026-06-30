@@ -1,0 +1,55 @@
+{
+  "created_at": "2026-06-16T20:31:34+0000",
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "endpoint": "http://127.0.0.1:8000/v1/completions",
+  "scenarios": {
+    "healthy": {
+      "label": "vllm_healthy",
+      "request_count": 17,
+      "window_count": 7,
+      "request_csv": "RQ1/runs/vllm_l4_smoke_full/healthy_requests_1781641957.csv",
+      "window_csv": "RQ1/runs/vllm_l4_smoke_full/healthy_windows_1781641957.csv",
+      "success_rate": 100.0
+    },
+    "queue_pressure": {
+      "label": "vllm_queue_pressure",
+      "request_count": 144,
+      "window_count": 7,
+      "request_csv": "RQ1/runs/vllm_l4_smoke_full/queue_pressure_requests_1781642022.csv",
+      "window_csv": "RQ1/runs/vllm_l4_smoke_full/queue_pressure_windows_1781642022.csv",
+      "success_rate": 100.0
+    },
+    "long_prompt": {
+      "label": "vllm_long_prompt",
+      "request_count": 6976,
+      "window_count": 7,
+      "request_csv": "RQ1/runs/vllm_l4_smoke_full/long_prompt_requests_1781642082.csv",
+      "window_csv": "RQ1/runs/vllm_l4_smoke_full/long_prompt_windows_1781642082.csv",
+      "success_rate": 0.0
+    },
+    "long_output": {
+      "label": "vllm_long_output",
+      "request_count": 8,
+      "window_count": 7,
+      "request_csv": "RQ1/runs/vllm_l4_smoke_full/long_output_requests_1781642143.csv",
+      "window_csv": "RQ1/runs/vllm_l4_smoke_full/long_output_windows_1781642143.csv",
+      "success_rate": 100.0
+    },
+    "compute_saturation": {
+      "label": "vllm_compute_saturation",
+      "request_count": 168,
+      "window_count": 7,
+      "request_csv": "RQ1/runs/vllm_l4_smoke_full/compute_saturation_requests_1781642212.csv",
+      "window_csv": "RQ1/runs/vllm_l4_smoke_full/compute_saturation_windows_1781642212.csv",
+      "success_rate": 100.0
+    },
+    "kv_cache_pressure": {
+      "label": "vllm_kv_cache_pressure",
+      "request_count": 7352,
+      "window_count": 7,
+      "request_csv": "RQ1/runs/vllm_l4_smoke_full/kv_cache_pressure_requests_1781642272.csv",
+      "window_csv": "RQ1/runs/vllm_l4_smoke_full/kv_cache_pressure_windows_1781642272.csv",
+      "success_rate": 0.0
+    }
+  }
+}

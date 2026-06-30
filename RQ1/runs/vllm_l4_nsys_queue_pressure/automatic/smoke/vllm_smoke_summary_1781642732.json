@@ -1,0 +1,15 @@
+{
+  "created_at": "2026-06-16T20:45:18+0000",
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "endpoint": "http://127.0.0.1:8010/v1/completions",
+  "scenarios": {
+    "queue_pressure": {
+      "label": "vllm_queue_pressure",
+      "request_count": 32,
+      "window_count": 3,
+      "request_csv": "RQ1/runs/vllm_l4_nsys_queue_pressure/automatic/smoke/queue_pressure_requests_1781642732.csv",
+      "window_csv": "RQ1/runs/vllm_l4_nsys_queue_pressure/automatic/smoke/queue_pressure_windows_1781642732.csv",
+      "success_rate": 100.0
+    }
+  }
+}

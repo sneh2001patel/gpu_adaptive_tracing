@@ -1,0 +1,290 @@
+
+\section{Methodology}
+
+
+\subsection{System Overview}
+
+GPU-heavy serving systems such as large language model~(LLM) inference engines can experience performance anomalies for many reasons: request queueing, compute saturation, memory pressure, long input or output sequences, or transient workload shifts. Cheap always-on performance telemetry can reveal that something is wrong but often cannot explain why. Heavy GPU profiling can explain why, but it is expensive, typically invoked manually, and usually runs for a fixed window regardless of whether the collected evidence is already sufficient.
+
+We present an \emph{adaptive GPU tracing controller} that bridges these two extremes. The controller collects cheap evidence continuously and activates a short burst of heavy GPU profiling only when cheap evidence is insufficient to explain an anomaly. After each burst it evaluates whether the collected kernel-level evidence has stabilized into a
+diagnosis. When additional profiling would no longer change that diagnosis, the controller stops heavy tracing and returns to cheap-only monitoring.
+
+\subsubsection{Evidence Tiers}
+
+The controller organizes evidence into three tiers ordered by collection cost, summarized in Table~\ref{tab:evidence-tiers}.
+
+\begin{table}[h]
+\centering
+\caption{Evidence tiers used by the adaptive tracing controller.}
+\label{tab:evidence-tiers}
+\scriptsize
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabularx}{\columnwidth}{@{}l W N l@{}}
+\toprule
+\textbf{Tier} & \textbf{Signals} & \textbf{Collection mode} & \textbf{Cost} \\
+\midrule
+T0 & Request latency (p50, p95), throughput (req/s), queueing-delay proxy
+   & Always-on, per request
+   & Negligible \\
+\addlinespace
+T1 & GPU utilization, GPU memory utilization, SM clock, power draw
+   & Always-on, NVML polling
+   & Negligible \\
+\addlinespace
+T2 & Kernel execution timing, duration distribution, kernel launch frequency
+   & Short profiler burst, Nsight Systems CLI
+   & High \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+T0 and T1 signals are sampled continuously and aggregated into fixed-size time windows (10\,s in all experiments). T2 evidence is collected only when the controller determines that T0/T1 evidence alone is insufficient to identify the bottleneck class. T2 collection is bounded to a short burst duration and does not run continuously.
+
+\subsubsection{Controller State Machine}
+
+The controller operates as a finite-state loop over evidence windows. Figure~\ref{fig:state-machine} illustrates the five states and the transitions between them.
+
+\begin{figure*}[t]
+\centering
+\begin{tikzpicture}[
+  node distance=1.85cm,
+  state/.style={draw, rounded corners, fill=gray!10, minimum width=1.9cm, minimum height=0.9cm, align=center, font=\small},
+  >=Stealth, thick
+]
+\node[state] (idle) {Idle};
+\node[state, right=of idle] (susp) {Suspicious};
+\node[state, right=of susp] (trace) {Tracing};
+\node[state, right=of trace] (eval) {Evaluating};
+\node[state, right=of eval] (rec) {Recovered};
+
+\draw[->] (idle) -- node[above, font=\scriptsize]{anomaly detected} (susp);
+\draw[->] (susp) -- node[above, font=\scriptsize]{T2 triggered} (trace);
+\draw[->] (trace) -- node[above, font=\scriptsize]{burst complete} (eval);
+\draw[->] (eval) -- node[above, font=\scriptsize]{stop} (rec);
+\draw[->] (eval) to[out=250,in=290,looseness=2.2] node[below=2pt, font=\scriptsize]{continue} (trace);
+\draw[->] (rec) to[out=110,in=70,looseness=0.65] node[above=2pt, font=\scriptsize, align=center]{recovered: signals \& diagnosis\\stable $\geq 2$ windows; reset budget} (idle);
+\end{tikzpicture}
+\caption{Controller state machine. The controller escalates from \textsc{Idle} through \textsc{Suspicious} and \textsc{Tracing} to \textsc{Evaluating}, which either launches another burst (returning to \textsc{Tracing}) or de-escalates to \textsc{Recovered}; the controller returns to \textsc{Idle} once cheap signals and diagnosis stability both confirm recovery.}
+\label{fig:state-machine}
+\end{figure*}
+
+In \textsc{Evaluating}, the controller classifies the bottleneck from the kernel summary (kernel count, total and mean kernel time, top kernel name) combined with the current T0/T1 window, then applies the active stopping policy to decide whether to stop or launch another burst.
+
+
+\subsubsection{Windowing and Aggregation}
+
+Evidence is aggregated over non-overlapping fixed-size time windows. Within each window the controller computes:
+
+\begin{itemize}
+  \raggedright
+  \item \textbf{Latency statistics}: mean, p50, p95 request latency; ratio versus the initial-window baseline.
+  \item \textbf{Throughput}: requests per second; ratio versus the initial-window baseline.
+  \item \textbf{Queueing delay proxy}: difference between request completion time and a minimum expected service time, aggregated at p95 across the window.
+  \item \textbf{GPU utilization}: mean and standard deviation of NVML \texttt{utilization.gpu} samples taken every 0.5\,s during the window.
+  \item \textbf{GPU memory utilization}: mean NVML \texttt{utilization.memory} and used-memory fraction.
+  \item \textbf{Diagnosis stability streak}: number of consecutive windows for which the top bottleneck class has remained unchanged.
+  \item \textbf{Recovery streaks}: number of consecutive windows for which each recovery condition (latency, throughput, queueing delay, GPU utilization) has been satisfied.
+\end{itemize}
+
+When T2 evidence is available for a window, the controller additionally records the kernel summary extracted from the Nsight Systems report: total kernel instances, total kernel time, mean kernel duration, kernel duration coefficient of variation~(CV), and the name of the most time-consuming kernel.
+
+
+\subsubsection{Anomaly Detection}
+
+A window is marked suspicious when any of the following conditions holds:
+
+\begin{enumerate}
+  \item \textbf{Latency regression}: the current window p95 latency exceeds $1.5\times$ the initial-window p50 baseline.
+  \item \textbf{High GPU utilization}: mean GPU utilization exceeds 85\% for two or more consecutive windows while request latency is also elevated.
+  \item \textbf{High kernel launch rate}: the kernel launch frequency in the current window is more than $2\times$ the observed baseline, indicating many short-lived kernels.
+\end{enumerate}
+
+A suspicious window that already carries a stable bottleneck classification does not re-trigger T2 profiling. T2 is triggered only when the window is suspicious and the current diagnosis is absent, ambiguous, or unstable.
+
+\subsubsection{Tracing Budget}
+
+Each anomaly episode is capped at six profiler bursts. Budget exhaustion forces de-escalation and is logged as a distinct stop reason. In our experiments, the active stopping policy de-escalated before reaching this limit.
+
+
+\subsection{Short-Burst Stopping Policies}
+\label{sec:stopping-policies}
+A stopping policy controls when the controller de-escalates from heavy GPU tracing back to cheap-only monitoring. After each profiler burst, the controller invokes the active policy to decide whether to launch another burst or stop. We define six candidate policies that span the spectrum from aggressive cost reduction to conservative reliability, applying the same cost-awareness behind adaptive and volume-reducing tracing decisions for distributed request traces~\cite{lascasas2019sifter,chen2024tracemesh,huang2024mint,chen2025tracezip,zhang2021threemilebeach} to GPU kernel-level evidence instead.
+
+
+\subsubsection{Policy Definitions}
+
+\paragraph{Fixed Burst (\textsc{FB}).}
+Collect exactly one profiler burst after the first suspicious window, then stop. \textsc{FB} is the most aggressive fixed-count policy: it commits to a diagnosis from a single burst and never continues, making it the cheapest option but brittle when that one burst is ambiguous.
+
+\paragraph{Repeated Fixed Burst (\textsc{RFB}).}
+Collect a fixed number $N$ of bursts (default $N=3$), then stop regardless of diagnosis stability. \textsc{RFB} generalizes \textsc{FB} (which is the $N=1$ case): it buys more evidence than a single burst but, like \textsc{FB}, ignores whether that evidence has converged. It serves as the evidence-blind, fixed-cost baseline against which the adaptive policies (\textsc{SS}, \textsc{MU}) are compared.
+
+\paragraph{Stability Stop (\textsc{SS}).}
+Continue collecting bursts until the bottleneck class label has remained unchanged for $K$ consecutive evidence windows (default $K=2$), then stop. \textsc{SS} is evidence-aware: it collects more bursts when early windows are ambiguous and fewer when the label is clear from the start.
+
+\paragraph{Marginal Utility Stop (\textsc{MU}).}
+\textsc{MU} is the aggressive special case of \textsc{SS} with $K=1$: it stops as soon as one burst reproduces the previous burst's label, treating a single repeat as evidence that further bursts add no diagnostic value. Because it requires only one match rather than $K$ consecutive matches, it collects fewer bursts than \textsc{SS} but is more vulnerable to stopping on a transient agreement that later windows would contradict.
+
+\paragraph{Counter-Recovery Stop (\textsc{CR}).}
+Continue collecting bursts until T0/T1 cheap signals return to their pre-anomaly baselines: specifically, until p95 request latency drops below $1.1\times$ the initial-window baseline and GPU utilization drops below 60\%. If recovery does not occur before the budget is exhausted, the controller stops at budget. \textsc{CR} couples de-escalation to observable workload recovery rather than to diagnosis stability, making it robust against scenarios where the bottleneck clears before the diagnosis has converged.
+
+\paragraph{Hybrid Stop (\textsc{HS}).}
+Stop only when \emph{both} conditions hold: (1) the diagnosis has been stable for $K$ consecutive windows (as in \textsc{SS}), and (2) T0/T1 cheap signals show sustained recovery (as in \textsc{CR}). \textsc{HS} is the most conservative policy: it requires corroborating evidence from both the kernel-level diagnosis and the cheap runtime signals before committing to de-escalation. Neither condition alone is sufficient.
+
+\subsubsection{Policy Summary}
+
+Table~\ref{tab:policies} summarizes the six policies, their stopping conditions, and the primary tradeoff each makes between tracing cost and stopping reliability.
+
+\begin{table*}
+\centering
+\caption{Short-burst stopping policies compared by stopping condition and cost--reliability tradeoff.}
+\label{tab:policies}
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{0.95}
+\begin{tabularx}{\textwidth}{@{}l l >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}X@{}}
+\toprule
+\textbf{Policy} & \textbf{Abbrev.} & \textbf{Stopping condition} & \textbf{Primary tradeoff} \\
+\midrule
+Fixed Burst           & \textsc{FB}  & After 1 burst                                      & Cheapest; brittle on ambiguous first burst \\
+Repeated Fixed Burst  & \textsc{RFB} & After $N$ bursts                                   & Predictable cost; ignores convergence \\
+Stability Stop        & \textsc{SS}  & Bottleneck class stable for $K$ windows            & Evidence-aware; may over-collect on slow-stabilizing workloads \\
+Marginal Utility Stop & \textsc{MU}  & New burst matches previous diagnosis               & Stops at first convergence; slightly more aggressive than \textsc{SS} \\
+Counter-Recovery Stop & \textsc{CR}  & T0/T1 signals return to baseline                   & Workload-aware; may collect more when recovery is slow \\
+Hybrid Stop           & \textsc{HS}  & Diagnosis stable \emph{and} T0/T1 signals recover  & Most conservative; lowest re-escalation risk \\
+\bottomrule
+\end{tabularx}
+\end{table*}
+
+
+% \subsubsection{Policy Parameters}
+
+% All policies share a common parameter set that is held constant across experiments. Table~\ref{tab:policy-params} lists the values used in this paper.
+
+% \begin{table}[h]
+% \centering
+% \caption{Policy parameter values used in all experiments.}
+% \label{tab:policy-params}
+% \begin{tabular}{lll}
+% \toprule
+% \textbf{Parameter} & \textbf{Value} & \textbf{Used by} \\
+% \midrule
+% Stability window count $K$           & 2     & \textsc{SS}, \textsc{HS} \\
+% Repeated burst count $N$             & 3     & \textsc{RFB} \\
+% Maximum budget (burst cap)           & 6     & All policies \\
+% Latency recovery ratio               & 1.10  & \textsc{CR}, \textsc{HS} \\
+% GPU utilization recovery threshold   & 60\%  & \textsc{CR}, \textsc{HS} \\
+% \bottomrule
+% \end{tabular}
+% \end{table}
+
+\subsubsection{Stopping Signals}
+
+Each policy is implemented in terms of one or more \emph{stopping signals}: boolean or numeric per-window features that the controller evaluates after each burst. Table~\ref{tab:stopping-signals} lists the candidate signals studied in this paper. Section~\ref{sec:rq5} (RQ5) evaluates which signals are most reliable for predicting correct de-escalation points.
+
+\begin{table}[h]
+\centering
+\caption{Candidate stopping signals evaluated in this paper.}
+\label{tab:stopping-signals}
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\begin{tabularx}{\columnwidth}{@{}l >{\raggedright\arraybackslash}X@{}}
+\toprule
+\textbf{Signal} & \textbf{Definition} \\
+\midrule
+\texttt{diagnosis\_stable\_2}            & Top bottleneck class unchanged for $\geq 2$ consecutive windows \\
+\texttt{diagnosis\_changed\_from\_prev}  & Top bottleneck class differs from the immediately preceding window \\
+\texttt{diagnosis\_margin\_clear}        & Confidence margin between top and runner-up diagnosis exceeds threshold \\
+\texttt{latency\_recovered}              & p95 latency below $1.1\times$ initial-window baseline \\
+\texttt{throughput\_recovered}           & Throughput above $0.9\times$ initial-window baseline \\
+\texttt{queue\_delay\_recovered}         & p95 queueing delay proxy below recovery threshold \\
+\texttt{gpu\_util\_recovered}            & Mean GPU utilization below 60\% \\
+\texttt{memory\_pressure\_low}           & GPU memory used fraction below 80\% \\
+\texttt{kernel\_duration\_stable}        & Kernel duration CV change across successive bursts below 10\% \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+% Diagnosis-evidence signals (\texttt{diagnosis\_stable\_2}, \texttt{diagnosis\_changed\_from\_prev}, \texttt{diagnosis\_margin\_clear}) depend only on the controller's kernel-summary classification  and are available whenever T2 evidence has been collected. Recovery signals (\texttt{latency\_recovered}, \texttt{throughput\_recovered}, \texttt{queue\_delay\_recovered}) depend on T0 request metrics and require a stable initial-window baseline. GPU counter signals (\texttt{gpu\_util\_recovered}, \texttt{memory\_pressure\_low}) depend on T1 NVML fields and are always available but may not vary meaningfully when the workload keeps the GPU consistently saturated. The kernel stability signal (\texttt{kernel\_duration\_stable}) requires at least two successive T2 bursts and is therefore unavailable to \textsc{FB}.
+
+
+\subsection{Baselines}
+
+We compare the adaptive controller against three baselines that model the range of existing profiling practices.
+
+
+\paragraph{No Heavy Tracing (\textsc{NT}).}
+The controller collects T0 and T1 evidence continuously but never activates a T2 profiler burst. Anomaly detection fires normally; the controller labels each suspicious window using cheap signals alone. \textsc{NT} represents the status quo for operators who rely entirely on utilization counters and request metrics for diagnosis, with no kernel-level profiling. It establishes the accuracy floor: any benefit from heavy tracing must exceed what T0/T1 evidence can provide on its own.
+
+\paragraph{Manual Fixed-Window Profiling (\textsc{FW}).}
+When an anomaly is detected, the controller starts a single Nsight Systems profiler burst of fixed duration, collects the kernel summary, produces a diagnosis, and stops. No further bursts are collected regardless of whether the diagnosis has stabilized. The fixed-window duration is set longer than the automatic burst duration to model a conservative manual profiling window (approximately $1.6\times$ to $2.0\times$ the automatic burst length across experiments).
+
+\textsc{FW} models the standard operational practice of a developer or operator who: (1) notices an anomaly, (2) starts a profiler with a fixed rule such as ``profile for 30 seconds,'' (3) reads the resulting kernel report, and (4) stops. The fixed duration is chosen conservatively so that \textsc{FW} is not handicapped by an unrealistically short window; any savings from the adaptive controller are conservative estimates.
+
+\paragraph{Always-Profile (\textsc{AP}).}
+The T2 profiler remains active for the entire duration of the anomaly episode, from the first suspicious window until the controller observes sustained recovery. \textsc{AP} represents the upper bound on profiling cost: it collects the maximum possible kernel evidence but does not attempt to stop early. It is included to bound the overhead side of the comparison: if the adaptive controller approaches \textsc{AP} accuracy while using far less profiler time, the cost reduction is clearly worthwhile.
+
+% \subsubsection{Baseline Summary}
+
+% Table~\ref{tab:baselines} summarizes the three baselines alongside the adaptive controller.
+
+% \begin{table}[h]
+% \centering
+% \caption{Comparison of the adaptive controller and the three baselines.}
+% \label{tab:baselines}
+% \scriptsize
+% \setlength{\tabcolsep}{3pt}
+% \renewcommand{\arraystretch}{1.1}
+% \begin{tabularx}{\columnwidth}{@{}>{\raggedright\arraybackslash}p{1.9cm} l l l >{\raggedright\arraybackslash}X@{}}
+% \toprule
+% & \textbf{T0/T1} & \textbf{T2 act.} & \textbf{T2 stopped by} & \textbf{Role} \\
+% \midrule
+% No Heavy Tracing (\textsc{NT})    & Always & Never             & ---             & Accuracy floor \\
+% Manual Fixed-Window (\textsc{FW}) & Always & First anomaly     & Fixed timer     & Operational baseline \\
+% Always-Profile (\textsc{AP})      & Always & First anomaly     & Recovery only   & Cost upper bound \\
+% Adaptive Controller               & Always & T1 ambiguous      & Stopping policy & Proposed system \\
+% \bottomrule
+% \end{tabularx}
+% \end{table}
+
+% The primary comparison throughout this paper is between the adaptive controller and \textsc{FW}, since \textsc{FW} most closely models current practice. \textsc{NT} and \textsc{AP} are used to bound the accuracy--cost space from below and above, respectively.
+
+\subsection{Implementation}
+
+\subsubsection{Serving Stack}
+% Our method uses vLLM~\cite{kwon2023vllm} v0.10.2 as the LLM serving system. vLLM is a widely-used open-source inference engine that implements PagedAttention for efficient KV-cache management and exposes an OpenAI-compatible HTTP API. All experiments serve \texttt{Qwen/Qwen2.5-7B-Instruct}~\cite{qwen2025}, a 7-billion-parameter instruction-tuned model. This model fits within 24\,GB of GPU memory with full BFloat16 precision, making it compatible with the NVIDIA~L4 and A100 GPUs used in our evaluation. The vLLM server is started with default settings except for the KV-cache token budget, which vLLM allocates automatically based on available GPU memory. On the L4~24\,GB host, vLLM reports approximately 64,704 KV-cache tokens and a maximum concurrency of roughly $15.8\times$ for 4096-token requests at startup.
+Our method uses vLLM~\cite{kwon2023vllm} v0.10.2 as the LLM serving system. vLLM is an open-source inference engine that implements PagedAttention for efficient KV-cache management and exposes an OpenAI-compatible HTTP API. All experiments serve \texttt{Qwen/Qwen2.5-7B-Instruct}~\cite{qwen2025}, a 7-billion-parameter instruction-tuned model. The model runs in full BFloat16 precision on the NVIDIA~L4 and A100 GPUs used in our evaluation. Unless otherwise stated, vLLM uses its default configuration and automatically allocates the KV cache from available GPU memory. On the 24\,GB L4 host, this configuration provides approximately 64,704 KV-cache tokens.
+
+
+
+\subsubsection{Cheap Metric Collection (T0 and T1)}
+
+T0 request metrics are collected by the load-generation client, which records per-request start/end timestamps, HTTP status, estimated prompt/output token counts, and scenario/seed labels. At the end of each evidence window the client aggregates per-request records into window-level statistics: p50 and p95 latency, throughput in requests per second, request success rate, queueing delay proxy at p95, and ratio fields versus the initial-window baseline.
+
+T1 GPU metrics are collected by a background NVML polling thread running at 0.5\,s intervals using \texttt{nvidia-ml-py}. At window close, the thread aggregates all samples taken during the window into mean and standard deviation for GPU utilization, GPU memory utilization, used memory in MiB, SM clock speed, and GPU power draw.
+
+\subsubsection{Heavy Metric Collection (T2)}
+
+T2 evidence is collected using the Nsight Systems command-line interface (\texttt{nsys}~2024.6), the same class of low-overhead GPU kernel tracing studied by Darche and Dagenais~\cite{darche2024lowoverhead}. When the controller activates a burst, it launches a child process under \texttt{nsys profile}, bounded by the target workload duration rather than a wall-clock \texttt{duration} flag. This avoids the process-termination behaviour that caused CUDA kernel tables to be absent in reports when \texttt{nsys} was given an explicit duration limit on some GPU hosts. The resulting kernel summary feeds a bottleneck classification scheme in the spirit of top-down GPU performance analysis~\cite{zhou2020topdown,hao2023drgpu}.
+
+
+After the burst completes, the controller runs \texttt{nsys stats report cuda\_gpu\_kern\_sum} on the resulting \texttt{.nsys-rep} file and parses the CUDA GPU kernel summary into the window record: distinct kernel type count, total kernel instances, total and mean kernel execution time, duration CV, and the name of the most time-consuming kernel.
+
+% \subsubsection{Bottleneck Classification}
+
+% The controller assigns each suspicious window a bottleneck class label from a fixed vocabulary. For microbenchmark workloads the labels are: \texttt{compute\_bound}, \texttt{launch\_overhead\_or\_small\_kernel}, \texttt{mixed}, and \texttt{latency\_regression\_unknown\_gpu\_cause}. For vLLM serving workloads the labels are: \texttt{vllm\_healthy},\texttt{vllm\_queue\_pressure}, \texttt{vllm\_long\_prompt}, \texttt{vllm\_long\_output}, \texttt{vllm\_compute\_saturation}, \texttt{vllm\_kv\_cache\_pressure}, and \texttt{vllm\_latency\_regression\_unknown\_gpu\_cause}.
+
+% Classification combines T0/T1 threshold rules with T2 kernel-summary features when available. The rules are deterministic and hand-specified rather than learned. The \texttt{unknown\_gpu\_cause} label is emitted when the anomaly trigger fires but no concrete bottleneck class can be assigned; it counts as ambiguous in all accuracy evaluations.
+
+% \subsubsection{Logging and Reproducibility}
+
+% Every run writes two output artefacts per evidence window:
+
+% \begin{enumerate}
+%   \item A per-request CSV file containing the raw request records.
+%   \item A per-window CSV file containing aggregated T0/T1 statistics, controller state fields,
+%         diagnosis fields, profiler cost fields, and all stopping-signal values.
+% \end{enumerate}
+
+% Each experiment is parameterized by a random seed passed to the load generator and recorded in the run summary JSON. Where multiple repetitions are reported, each repetition uses a distinct seed drawn from a pre-specified list, and all repetitions are aggregated before computing means and confidence intervals. An experiment manifest JSON records the GPU name, driver version, PyTorch version, Nsight Systems version, and key command-line settings for each run to support independent reproduction.

@@ -1,0 +1,17 @@
+\section{Related Work}
+\label{sec:related-work}
+
+Work relevant to adaptive, budget-aware GPU tracing spans three bodies of literature: distributed tracing systems that decide what request-level evidence to collect, GPU profiling tools that expose accelerator-level evidence, and GPU-heavy LLM serving systems that produce the ambiguous bottlenecks our controller diagnoses.
+
+\paragraph{Adaptive tracing.}
+Production tracing systems such as Dapper~\cite{sigelman2010dapper}, X-Trace~\cite{fonseca2007xtrace}, and Canopy~\cite{kaldor2017canopy} established always-on, low-cost request-level tracing, but treat neither GPU execution nor kernel launches as first-class evidence. More recent systems move beyond fixed instrumentation toward runtime-adaptive collection: TraStrainer~\cite{huang2024trastrainer} combines trace diversity with system runtime state (CPU and memory pressure) to drive online sampling decisions, conceptually mirroring our use of GPU utilization and memory pressure as the cheap signal tier, while Astraea~\cite{toslali2024astraea} formalizes tracing as a cost-constrained online learning problem under a budget -- the closest existing budget formalism we build on. Neither, however, treats GPU profiler activation or kernel-level tracing as a tiered evidence source with its own escalation and de-escalation policy.
+
+Both adapt a single scalar -- per-request sampling rate -- over distributed trace spans rather than activating a discrete GPU evidence tier, so we treat them as conceptually related rather than as ported baselines and leave a learned, budget-constrained GPU stopping policy as future work.
+
+\paragraph{GPU profiling tools.}
+NVBit~\cite{villa2019nvbit} provides dynamic binary instrumentation for fine-grained GPU kernel tracing, representative of the heaviest tier in our evidence hierarchy. HPCToolkit~\cite{zhou2021hpctoolkit} supports multiple evidence modes -- hardware counters, PC sampling, kernel tracing -- giving a practical existence proof of the multi-tier GPU evidence hierarchy our controller adopts. Both, however, assume a human operator or an offline workflow decides when to invoke the profiler and for how long; neither includes a runtime policy that activates, extends, or stops collection based on diagnostic sufficiency.
+
+\paragraph{LLM serving systems.}
+vLLM's PagedAttention~\cite{kwon2023vllm} demonstrates how GPU memory pressure, batching, and request latency interact during LLM serving, producing exactly the ambiguous, multi-cause bottlenecks that justify escalating to kernel-level evidence and that make premature de-escalation risky. We use vLLM as the concrete serving substrate on which our controller is evaluated.
+
+Our work sits at the intersection of these three areas: it adopts the adaptive, budget-aware control philosophy of systems such as TraStrainer and Astraea, applies it to the GPU evidence sources exposed by tools such as NVBit and HPCToolkit, and evaluates it on the realistic, ambiguous bottlenecks produced by LLM serving systems such as vLLM. To our knowledge, no prior work studies the runtime control problem of automatically starting, continuing, and stopping costly GPU tracing while preserving diagnosis quality.

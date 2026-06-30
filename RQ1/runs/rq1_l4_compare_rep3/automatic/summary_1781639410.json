@@ -1,0 +1,64 @@
+{
+  "created_at": "2026-06-16T19:50:10+0000",
+  "csv_files": [
+    "RQ1/runs/rq1_l4_compare_rep3/automatic/launch_overhead_or_small_kernel_1781639313.csv",
+    "RQ1/runs/rq1_l4_compare_rep3/automatic/mixed_1781639345.csv",
+    "RQ1/runs/rq1_l4_compare_rep3/automatic/compute_bound_1781639378.csv"
+  ],
+  "workloads": {
+    "launch_overhead_or_small_kernel_1781639313": {
+      "workload": "launch_overhead_or_small_kernel",
+      "windows": 7,
+      "suspicious_windows": 5,
+      "first_suspicious_window": "0",
+      "profiler_bursts": 1,
+      "profiler_duration_s": 12.525039911270142,
+      "profiler_report_paths": [
+        "RQ1/runs/rq1_l4_compare_rep3/automatic/profiles/launch_overhead_or_small_kernel_window0_automatic_trigger_1781639318.nsys-rep"
+      ],
+      "profiler_kernel_instances": 123393,
+      "profiler_kernel_total_time_ns": 152183422.0,
+      "diagnosis_counts": {
+        "launch_overhead_or_small_kernel": 5,
+        "latency_regression_unknown_gpu_cause": 2
+      },
+      "csv": "RQ1/runs/rq1_l4_compare_rep3/automatic/launch_overhead_or_small_kernel_1781639313.csv"
+    },
+    "mixed_1781639345": {
+      "workload": "mixed",
+      "windows": 7,
+      "suspicious_windows": 5,
+      "first_suspicious_window": "0",
+      "profiler_bursts": 1,
+      "profiler_duration_s": 12.055865287780762,
+      "profiler_report_paths": [
+        "RQ1/runs/rq1_l4_compare_rep3/automatic/profiles/mixed_window0_automatic_trigger_1781639350.nsys-rep"
+      ],
+      "profiler_kernel_instances": 738,
+      "profiler_kernel_total_time_ns": 875825012.0,
+      "diagnosis_counts": {
+        "mixed": 5,
+        "healthy_or_not_suspicious": 2
+      },
+      "csv": "RQ1/runs/rq1_l4_compare_rep3/automatic/mixed_1781639345.csv"
+    },
+    "compute_bound_1781639378": {
+      "workload": "compute_bound",
+      "windows": 7,
+      "suspicious_windows": 5,
+      "first_suspicious_window": "0",
+      "profiler_bursts": 1,
+      "profiler_duration_s": 12.093470335006714,
+      "profiler_report_paths": [
+        "RQ1/runs/rq1_l4_compare_rep3/automatic/profiles/compute_bound_window0_automatic_trigger_1781639383.nsys-rep"
+      ],
+      "profiler_kernel_instances": 334,
+      "profiler_kernel_total_time_ns": 1896353231.0,
+      "diagnosis_counts": {
+        "compute_bound": 5,
+        "healthy_or_not_suspicious": 2
+      },
+      "csv": "RQ1/runs/rq1_l4_compare_rep3/automatic/compute_bound_1781639378.csv"
+    }
+  }
+}

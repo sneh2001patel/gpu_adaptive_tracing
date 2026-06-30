@@ -1,0 +1,57 @@
+{
+  "created_at": "2026-06-16T21:16:44+0000",
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "scenario": "queue_pressure",
+  "seed": 101,
+  "port": 8011,
+  "automatic": {
+    "mode": "automatic",
+    "status": "ok",
+    "returncode": 0,
+    "duration_s": 78.35539317131042,
+    "output_prefix": "RQ1/runs/vllm_l4_nsys_queue_pressure_rep1/automatic/profiles/vllm_queue_pressure_automatic_1781644429",
+    "report_paths": [
+      "RQ1/runs/vllm_l4_nsys_queue_pressure_rep1/automatic/profiles/vllm_queue_pressure_automatic_1781644429.nsys-rep"
+    ],
+    "kernel_summary": {
+      "status": "ok",
+      "returncode": 0,
+      "stats_path": "RQ1/runs/vllm_l4_nsys_queue_pressure_rep1/automatic/profiles/vllm_queue_pressure_automatic_1781644429.kernel_summary.json",
+      "kernel_count": 40,
+      "kernel_instances": 38522,
+      "kernel_total_time_ns": 3731053344.0,
+      "kernel_avg_duration_ns": 96855.13067857329,
+      "top_kernel_name": "void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8>(T1::Params)"
+    },
+    "smoke_summary_paths": [
+      "RQ1/runs/vllm_l4_nsys_queue_pressure_rep1/automatic/smoke/vllm_smoke_summary_1781644494.json"
+    ],
+    "stderr_tail": ""
+  },
+  "fixed_window": {
+    "mode": "fixed_window",
+    "status": "ok",
+    "returncode": 0,
+    "duration_s": 94.06644344329834,
+    "output_prefix": "RQ1/runs/vllm_l4_nsys_queue_pressure_rep1/fixed_window/profiles/vllm_queue_pressure_fixed_window_1781644508",
+    "report_paths": [
+      "RQ1/runs/vllm_l4_nsys_queue_pressure_rep1/fixed_window/profiles/vllm_queue_pressure_fixed_window_1781644508.nsys-rep"
+    ],
+    "kernel_summary": {
+      "status": "ok",
+      "returncode": 0,
+      "stats_path": "RQ1/runs/vllm_l4_nsys_queue_pressure_rep1/fixed_window/profiles/vllm_queue_pressure_fixed_window_1781644508.kernel_summary.json",
+      "kernel_count": 40,
+      "kernel_instances": 77928,
+      "kernel_total_time_ns": 7518333212.0,
+      "kernel_avg_duration_ns": 96477.9438969305,
+      "top_kernel_name": "void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8>(T1::Params)"
+    },
+    "smoke_summary_paths": [
+      "RQ1/runs/vllm_l4_nsys_queue_pressure_rep1/fixed_window/smoke/vllm_smoke_summary_1781644587.json"
+    ],
+    "stderr_tail": ""
+  },
+  "profiler_duration_saved_s": 15.711050271987915,
+  "profiler_duration_saved_percent": 16.702077485748966
+}

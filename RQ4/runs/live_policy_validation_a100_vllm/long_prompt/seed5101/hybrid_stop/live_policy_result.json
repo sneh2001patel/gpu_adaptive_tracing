@@ -1,0 +1,45 @@
+{
+  "created_at": "2026-06-23T06:17:46+0000",
+  "status": "ok",
+  "returncode": 0,
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "scenario": "long_prompt",
+  "seed": 5101,
+  "policy": "hybrid_stop",
+  "expected_label": "vllm_long_prompt",
+  "selected_windows": 4,
+  "requested_trace_duration_s": 31.946,
+  "wall_duration_s": 94.65955805778503,
+  "port": 8175,
+  "report_paths": [
+    "RQ4/runs/live_policy_validation_a100_vllm/long_prompt/seed5101/hybrid_stop/profiles/vllm_long_prompt_hybrid_stop_seed5101_1782195369.nsys-rep"
+  ],
+  "kernel_summary": {
+    "status": "ok",
+    "returncode": 0,
+    "stats_path": "RQ4/runs/live_policy_validation_a100_vllm/long_prompt/seed5101/hybrid_stop/profiles/vllm_long_prompt_hybrid_stop_seed5101_1782195369.kernel_summary.json",
+    "kernel_count": 37,
+    "kernel_instances": 230224,
+    "kernel_total_time_ns": 19138967912.0,
+    "kernel_avg_duration_ns": 83131.94068385572,
+    "top_kernel_name": "ampere_bf16_s16816gemm_bf16_256x128_ldg8_f2f_stages_64x3_tn"
+  },
+  "smoke_metrics": {
+    "smoke_summary_paths": [
+      "RQ4/runs/live_policy_validation_a100_vllm/long_prompt/seed5101/hybrid_stop/smoke/vllm_smoke_summary_1782195448.json"
+    ],
+    "request_count": 64.0,
+    "success_rate": 100.0,
+    "request_csv": "RQ4/runs/live_policy_validation_a100_vllm/long_prompt/seed5101/hybrid_stop/smoke/long_prompt_requests_1782195448.csv",
+    "p95_latency_ms": 2002.9255509376526,
+    "throughput_rps": 2.0030559133526205
+  },
+  "replay": {
+    "top1_correct": 1,
+    "ever_correct": 1,
+    "premature_stop": 0,
+    "re_escalation_needed": 0,
+    "diagnosis_sequence": "vllm_latency_regression_unknown_gpu_cause|vllm_long_prompt|vllm_long_prompt|vllm_long_prompt"
+  },
+  "stderr_tail": ""
+}

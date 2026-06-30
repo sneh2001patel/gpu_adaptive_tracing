@@ -1,0 +1,64 @@
+{
+  "created_at": "2026-06-16T19:46:29+0000",
+  "csv_files": [
+    "RQ1/runs/rq1_l4_compare_rep2/automatic/launch_overhead_or_small_kernel_1781639092.csv",
+    "RQ1/runs/rq1_l4_compare_rep2/automatic/mixed_1781639124.csv",
+    "RQ1/runs/rq1_l4_compare_rep2/automatic/compute_bound_1781639157.csv"
+  ],
+  "workloads": {
+    "launch_overhead_or_small_kernel_1781639092": {
+      "workload": "launch_overhead_or_small_kernel",
+      "windows": 7,
+      "suspicious_windows": 4,
+      "first_suspicious_window": "1",
+      "profiler_bursts": 1,
+      "profiler_duration_s": 12.77038025856018,
+      "profiler_report_paths": [
+        "RQ1/runs/rq1_l4_compare_rep2/automatic/profiles/launch_overhead_or_small_kernel_window1_automatic_trigger_1781639102.nsys-rep"
+      ],
+      "profiler_kernel_instances": 119297,
+      "profiler_kernel_total_time_ns": 147141607.0,
+      "diagnosis_counts": {
+        "possible_launch_overhead_or_small_kernel": 3,
+        "launch_overhead_or_small_kernel": 4
+      },
+      "csv": "RQ1/runs/rq1_l4_compare_rep2/automatic/launch_overhead_or_small_kernel_1781639092.csv"
+    },
+    "mixed_1781639124": {
+      "workload": "mixed",
+      "windows": 7,
+      "suspicious_windows": 5,
+      "first_suspicious_window": "0",
+      "profiler_bursts": 1,
+      "profiler_duration_s": 12.268008470535278,
+      "profiler_report_paths": [
+        "RQ1/runs/rq1_l4_compare_rep2/automatic/profiles/mixed_window0_automatic_trigger_1781639129.nsys-rep"
+      ],
+      "profiler_kernel_instances": 1433,
+      "profiler_kernel_total_time_ns": 1716387008.0,
+      "diagnosis_counts": {
+        "mixed": 5,
+        "healthy_or_not_suspicious": 2
+      },
+      "csv": "RQ1/runs/rq1_l4_compare_rep2/automatic/mixed_1781639124.csv"
+    },
+    "compute_bound_1781639157": {
+      "workload": "compute_bound",
+      "windows": 7,
+      "suspicious_windows": 5,
+      "first_suspicious_window": "0",
+      "profiler_bursts": 1,
+      "profiler_duration_s": 11.496833562850952,
+      "profiler_report_paths": [
+        "RQ1/runs/rq1_l4_compare_rep2/automatic/profiles/compute_bound_window0_automatic_trigger_1781639162.nsys-rep"
+      ],
+      "profiler_kernel_instances": 334,
+      "profiler_kernel_total_time_ns": 1900182936.0,
+      "diagnosis_counts": {
+        "compute_bound": 5,
+        "healthy_or_not_suspicious": 2
+      },
+      "csv": "RQ1/runs/rq1_l4_compare_rep2/automatic/compute_bound_1781639157.csv"
+    }
+  }
+}

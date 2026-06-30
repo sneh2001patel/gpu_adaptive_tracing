@@ -1,0 +1,57 @@
+\section{Evaluation}
+
+We evaluate the adaptive tracing controller across five research questions. RQ1 asks whether the controller can determine when sufficient diagnostic evidence has been collected. RQ2 asks how accurate automatic tracing is compared with manual fixed-window profiling. RQ3 measures the overhead introduced by the controller. RQ4 compares the six short-burst stopping policies. RQ5 identifies which runtime signals are most useful for deciding when to stop heavy GPU tracing.
+
+
+% \subsection{Experimental Setup}
+
+% Experiments run on two single-GPU cloud platforms: an NVIDIA L4 (24\,GB, Ada Lovelace, \texttt{sm\_89}) as the primary platform for all research questions, and an NVIDIA A100 (40\,GB, Ampere, \texttt{sm\_80}) for cross-GPU validation in RQ1. All vLLM scenarios serve \texttt{Qwen/Qwen2.5-7B-Instruct} using vLLM v0.10.2 in BFloat16 precision. Controller and policy parameters are fixed across experiments as listed in Table~\ref{tab:setup-params}. Each workload uses five repetitions for microbenchmarks or three seeded repetitions for vLLM experiments, with results reported as means.
+
+\subsection{Experimental Setup}
+
+Experiments run on two single-GPU cloud platforms: an NVIDIA L4 (24,GB, Ada Lovelace, \texttt{sm\_89}) as the primary platform for all research questions, and an NVIDIA A100 (40,GB, Ampere, \texttt{sm\_80}) for cross-GPU validation in RQ1. All vLLM scenarios use vLLM v0.10.2~\cite{kwon2023vllm}, an open-source inference engine that implements PagedAttention for efficient KV-cache management and exposes an OpenAI-compatible HTTP API. The system serves \texttt{Qwen/Qwen2.5-7B-Instruct}~\cite{qwen2025}, a 7-billion-parameter instruction-tuned model, in BFloat16 precision.
+
+Unless otherwise stated, vLLM uses its default configuration and automatically allocates the KV cache from available GPU memory. This provides approximately 64,704 KV-cache tokens on the 24,GB L4 host and 334,016 tokens on the 40,GB A100 host. CUDA graph capture remains enabled throughout the experiments. Although graph replay groups multiple kernel launches into a single CPU-side submission, Nsight Systems still records the individual GPU kernels within each replayed graph; consequently, T2 kernel-level evidence, including execution time, launch frequency, and duration distributions, is unaffected.
+
+Controller and policy parameters are fixed across experiments as listed in Table~\ref{tab:setup-params}. Each workload uses five repetitions for microbenchmarks or three seeded repetitions for vLLM experiments, with results reported as means.
+
+\subsubsection{Controller Parameters}
+
+Table~\ref{tab:setup-params} lists the controller and policy parameters held constant across all experiments.
+
+\begin{table}[h]
+\centering
+\caption{Controller and policy parameters used in all experiments.}
+\label{tab:setup-params}
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{tabularx}{\columnwidth}{@{}l l >{\raggedright\arraybackslash}X@{}}
+\toprule
+\textbf{Parameter} & \textbf{Value} & \textbf{Notes} \\
+\midrule
+Evidence window size               & 10\,s              & All experiments \\
+Automatic burst duration           & $\approx$10--12\,s & Bounded by target process duration \\
+Fixed-window burst duration        & $\approx$17--24\,s & $1.6\times$--$2.0\times$ automatic \\
+Stability window count $K$         & 2                  & \textsc{SS}, \textsc{HS} \\
+Repeated burst count $N$           & 3                  & \textsc{RFB} \\
+Maximum tracing budget             & 6 bursts/episode   & All policies \\
+Latency recovery ratio             & 1.10               & \textsc{CR}, \textsc{HS} \\
+GPU utilization recovery threshold & 60\%               & \textsc{CR}, \textsc{HS} \\
+NVML polling interval              & 0.5\,s             & T1 collection \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+
+\subsubsection{Repetitions and Seeds}
+
+Microbenchmark experiments use five independent repetitions per workload, while vLLM serving experiments use three seeded repetitions per scenario; all results report means across repetitions and, where relevant, 95\% confidence interval half-widths.
+
+
+
+\input{04_RQ1}
+\input{04_RQ2}
+\input{04_RQ3}
+\input{04_RQ4}
+\input{04_RQ5}
+

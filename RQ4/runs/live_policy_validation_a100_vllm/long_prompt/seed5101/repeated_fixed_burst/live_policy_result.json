@@ -1,0 +1,45 @@
+{
+  "created_at": "2026-06-23T06:20:57+0000",
+  "status": "ok",
+  "returncode": 0,
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "scenario": "long_prompt",
+  "seed": 5101,
+  "policy": "repeated_fixed_burst",
+  "expected_label": "vllm_long_prompt",
+  "selected_windows": 3,
+  "requested_trace_duration_s": 30.0,
+  "wall_duration_s": 92.83340668678284,
+  "port": 8177,
+  "report_paths": [
+    "RQ4/runs/live_policy_validation_a100_vllm/long_prompt/seed5101/repeated_fixed_burst/profiles/vllm_long_prompt_repeated_fixed_burst_seed5101_1782195562.nsys-rep"
+  ],
+  "kernel_summary": {
+    "status": "ok",
+    "returncode": 0,
+    "stats_path": "RQ4/runs/live_policy_validation_a100_vllm/long_prompt/seed5101/repeated_fixed_burst/profiles/vllm_long_prompt_repeated_fixed_burst_seed5101_1782195562.kernel_summary.json",
+    "kernel_count": 37,
+    "kernel_instances": 230224,
+    "kernel_total_time_ns": 19168545021.0,
+    "kernel_avg_duration_ns": 83260.41169035374,
+    "top_kernel_name": "ampere_bf16_s16816gemm_bf16_256x128_ldg8_f2f_stages_64x3_tn"
+  },
+  "smoke_metrics": {
+    "smoke_summary_paths": [
+      "RQ4/runs/live_policy_validation_a100_vllm/long_prompt/seed5101/repeated_fixed_burst/smoke/vllm_smoke_summary_1782195639.json"
+    ],
+    "request_count": 64.0,
+    "success_rate": 100.0,
+    "request_csv": "RQ4/runs/live_policy_validation_a100_vllm/long_prompt/seed5101/repeated_fixed_burst/smoke/long_prompt_requests_1782195639.csv",
+    "p95_latency_ms": 2007.6792120933533,
+    "throughput_rps": 2.003835270068477
+  },
+  "replay": {
+    "top1_correct": 1,
+    "ever_correct": 1,
+    "premature_stop": 0,
+    "re_escalation_needed": 1,
+    "diagnosis_sequence": "vllm_latency_regression_unknown_gpu_cause|vllm_long_prompt|vllm_long_prompt"
+  },
+  "stderr_tail": ""
+}

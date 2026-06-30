@@ -1,0 +1,19 @@
+# Separate vLLM serving environment used by the RQ1-RQ5 vLLM experiments
+# (run_vllm_smoke.py, run_vllm_nsys_compare.py, run_vllm_runtime_overhead.py,
+# run_live_policy_validation.py). Keep this isolated from requirements.txt:
+# vLLM pulls in its own pinned torch/transformers stack that can conflict
+# with the main controller/analysis environment.
+#
+#   python3 -m venv .venv-vllm
+#   source .venv-vllm/bin/activate
+#   pip install -r requirements-vllm.txt
+#
+# Versions below match the ones validated against the reference L4/A100 runs
+# (see RQ1/README.md and REPRODUCE_ON_NEW_GPU.md).
+vllm==0.10.2
+transformers==4.56.2
+tokenizers==0.22.1
+fastapi==0.115.14
+starlette==0.46.2
+prometheus-fastapi-instrumentator==7.1.0
+uvicorn==0.34.3

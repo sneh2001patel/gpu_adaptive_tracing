@@ -1,0 +1,240 @@
+%% references.bib
+%% Bibliography for the Related Work section of "Automatic Short-Burst GPU Tracing"
+%% Generated from litterature_review/adaptive_gpu_tracing_literature_review.md
+
+%% ---------------------------------------------------------------
+%% 1. Distributed tracing infrastructure
+%% ---------------------------------------------------------------
+
+@inproceedings{sigelman2010dapper,
+  author    = {Sigelman, Benjamin H. and Barroso, Luiz A. and Burrows, Mike and
+               Stephenson, Pat and Plakal, Manoj and Beaver, Donald and
+               Jaspan, Saul and Shanbhag, Chandan},
+  title     = {Dapper, a Large-Scale Distributed Systems Tracing Infrastructure},
+  institution = {Google, Inc.},
+  type      = {Technical Report},
+  year      = {2010},
+  url       = {https://research.google/pubs/dapper-a-large-scale-distributed-systems-tracing-infrastructure/}
+}
+
+@inproceedings{fonseca2007xtrace,
+  author    = {Fonseca, Rodrigo and Porter, George and Katz, Randy H. and
+               Shenker, Scott and Stoica, Ion},
+  title     = {X-Trace: A Pervasive Network Tracing Framework},
+  booktitle = {Proceedings of the 4th USENIX Symposium on Networked Systems
+               Design and Implementation (NSDI)},
+  year      = {2007},
+  url       = {https://www.usenix.org/conference/nsdi-07/x-trace-pervasive-network-tracing-framework}
+}
+
+@inproceedings{kaldor2017canopy,
+  author    = {Kaldor, Jonathan and Mace, Jonathan and Bejda, Michael and
+               Gao, Edison and O'Neill, Joe and Ong, Kian Win and
+               Schaller, Bill and Shan, Pingjia and Viscomi, Brendan and
+               Venkataraman, Vinod and Veeraraghavan, Kaushik and Song, Yee Jiun},
+  title     = {Canopy: An End-to-End Performance Tracing and Analysis System},
+  booktitle = {Proceedings of the 26th Symposium on Operating Systems
+               Principles (SOSP)},
+  year      = {2017},
+  url       = {https://research.facebook.com/publications/canopy-end-to-end-performance-tracing-at-scale/}
+}
+
+%% ---------------------------------------------------------------
+%% 2. Dynamic and adaptive tracing
+%% ---------------------------------------------------------------
+
+@inproceedings{mace2015pivot,
+  author    = {Mace, Jonathan and Roelke, Ryan and Fonseca, Rodrigo},
+  title     = {Pivot Tracing: Dynamic Causal Monitoring for Distributed Systems},
+  booktitle = {Proceedings of the 25th Symposium on Operating Systems
+               Principles (SOSP)},
+  year      = {2015},
+  url       = {https://www.usenix.org/conference/atc16/technical-sessions/presentation/mace}
+}
+
+@inproceedings{zhang2023hindsight,
+  author    = {Zhang, Lei and Xie, Zhiqiang and Anand, Vaastav and
+               Vigfusson, Ymir and Mace, Jonathan},
+  title     = {The Benefit of Hindsight: Tracing Edge-Cases in Distributed Systems},
+  booktitle = {Proceedings of the 20th USENIX Symposium on Networked Systems
+               Design and Implementation (NSDI)},
+  year      = {2023},
+  url       = {https://www.usenix.org/conference/nsdi23/presentation/zhang-lei}
+}
+
+@inproceedings{lascasas2019sifter,
+  author    = {Las-Casas, Pedro and Papakerashvili, Giorgi and
+               Anand, Vaastav and Mace, Jonathan},
+  title     = {Sifter: Scalable Sampling for Distributed Traces, without
+               Feature Engineering},
+  booktitle = {Proceedings of the 14th European Conference on Computer
+               Systems (EuroSys)},
+  year      = {2019},
+  url       = {https://www.microsoft.com/en-us/research/publication/sifter-scalable-sampling-for-distributed-traces-without-feature-engineering/}
+}
+
+@inproceedings{huang2024trastrainer,
+  author    = {Huang, Haiyu and Zhang, Xiaoyu and Chen, Pengfei and
+               He, Zilong and Chen, Zhiming and Yu, Guangba and
+               Chen, Hongyang and Sun, Chen},
+  title     = {TraStrainer: Adaptive Sampling for Distributed Traces with
+               System Runtime State},
+  booktitle = {Proceedings of the 32nd ACM Joint European Software Engineering
+               Conference and Symposium on the Foundations of Software
+               Engineering (ESEC/FSE)},
+  year      = {2024},
+  url       = {https://2024.esec-fse.org/details/fse-2024-research-papers/48/TraStrainer-Adaptive-Sampling-for-Distributed-Traces-with-System-Runtime-State}
+}
+
+@misc{chen2024tracemesh,
+  author       = {Chen, Zhuangbin and Jiang, Zhihan and Su, Yuxin and
+                  Lyu, Michael R. and Zheng, Zibin},
+  title        = {TraceMesh: Scalable and Streaming Sampling for Distributed Traces},
+  year         = {2024},
+  eprint       = {2406.06975},
+  archivePrefix = {arXiv},
+  url          = {https://arxiv.org/abs/2406.06975}
+}
+
+@misc{toslali2024astraea,
+  author       = {Toslali, M. and Qasim, S. and Parthasarathy, S. and
+                  Oliveira, F. A. and Huang, H. and Stringhini, G. and
+                  Liu, Z. and Coskun, A. K.},
+  title        = {An Online Probabilistic Distributed Tracing System},
+  year         = {2024},
+  eprint       = {2405.15645},
+  archivePrefix = {arXiv},
+  url          = {https://arxiv.org/abs/2405.15645}
+}
+
+%% ---------------------------------------------------------------
+%% 3. Trace cost reduction
+%% ---------------------------------------------------------------
+
+@misc{huang2024mint,
+  author       = {Huang, Haiyu and Chen, Cheng and Chen, Kunyi and
+                  Chen, Pengfei and Yu, Guangba and He, Zilong and
+                  Wang, Yilun and Zhang, Huxing and Zhou, Qi},
+  title        = {Mint: Cost-Efficient Tracing with All Requests Collection
+                  via Commonality and Variability Analysis},
+  year         = {2024},
+  eprint       = {2411.04605},
+  archivePrefix = {arXiv},
+  url          = {https://arxiv.org/abs/2411.04605}
+}
+
+@misc{chen2025tracezip,
+  author       = {Chen, Zhuangbin and Pu, Junsong and Zheng, Zibin},
+  title        = {Tracezip: Efficient Distributed Tracing via Trace Compression},
+  year         = {2025},
+  eprint       = {2502.06318},
+  archivePrefix = {arXiv},
+  url          = {https://arxiv.org/abs/2502.06318}
+}
+
+@inproceedings{zhang2021threemilebeach,
+  author    = {Zhang, Jun and Ferydouni, Robert and Montana, Aldrin and
+               Bittman, Daniel and Alvaro, Peter},
+  title     = {3MileBeach: A Tracer with Teeth},
+  booktitle = {Proceedings of the ACM Symposium on Cloud Computing (SoCC)},
+  year      = {2021},
+  doi       = {10.1145/3472883.3486986},
+  url       = {https://dl.acm.org/doi/10.1145/3472883.3486986}
+}
+
+%% ---------------------------------------------------------------
+%% 4. GPU tracing and profiling
+%% ---------------------------------------------------------------
+
+@inproceedings{villa2019nvbit,
+  author    = {Villa, Oreste and Stephenson, Mark and Nellans, David and
+               Keckler, Stephen W.},
+  title     = {{NVBit}: A Dynamic Binary Instrumentation Framework for
+               {NVIDIA} {GPUs}},
+  booktitle = {Proceedings of the 52nd Annual IEEE/ACM International
+               Symposium on Microarchitecture (MICRO)},
+  year      = {2019},
+  url       = {https://research.nvidia.com/publication/2019-10_nvbit-dynamic-binary-instrumentation-framework-nvidia-gpus}
+}
+
+@article{darche2024lowoverhead,
+  author  = {Darche, Sebastien and Dagenais, Michel R.},
+  title   = {Low-Overhead Trace Collection and Profiling on {GPU} Compute Kernels},
+  journal = {ACM Transactions on Architecture and Code Optimization},
+  year    = {2024},
+  doi     = {10.1145/3649510},
+  url     = {https://dl.acm.org/doi/10.1145/3649510}
+}
+
+@misc{zhou2021hpctoolkit,
+  author       = {Zhou, Keren and Adhianto, Laksono and Anderson, Jonathon and
+                  Cherian, Aaron and Grubisic, Dejan and Krentel, Mark and
+                  Liu, Yumeng and Meng, Xiaozhu and Mellor-Crummey, John},
+  title        = {Measurement and Analysis of {GPU}-Accelerated Applications
+                  with {HPCToolkit}},
+  year         = {2021},
+  eprint       = {2109.06931},
+  archivePrefix = {arXiv},
+  url          = {https://arxiv.org/abs/2109.06931}
+}
+
+@inproceedings{zhou2020topdown,
+  author    = {Zhou, Keren and Krentel, Mark W. and Mellor-Crummey, John},
+  title     = {Tools for Top-Down Performance Analysis of {GPU}-Accelerated
+               Applications},
+  booktitle = {Proceedings of the 34th ACM International Conference on
+               Supercomputing (ICS)},
+  year      = {2020},
+  doi       = {10.1145/3392717.3392752},
+  url       = {https://dl.acm.org/doi/10.1145/3392717.3392752}
+}
+
+@inproceedings{hao2023drgpu,
+  author    = {Hao, Yueming and Jain, Neha and Van der Wijngaart, Rob F. and
+               Saxena, Nitin and Fan, Yifan and Liu, Xipeng},
+  title     = {{DrGPU}: A Top-Down Profiler for {GPU}},
+  booktitle = {Proceedings of the 2023 ACM/SPEC International Conference on
+               Performance Engineering (ICPE)},
+  year      = {2023},
+  url       = {https://research.spec.org/icpe_proceedings/2023/proceedings/p43.pdf}
+}
+
+%% ---------------------------------------------------------------
+%% 5. GPU-heavy LLM serving systems
+%% ---------------------------------------------------------------
+
+@inproceedings{kwon2023vllm,
+  author    = {Kwon, Woosuk and Li, Zhuohan and Zhuang, Siyuan and
+               Sheng, Ying and Zheng, Lianmin and Yu, Cody Hao and
+               Gonzalez, Joseph E. and Zhang, Hao and Stoica, Ion},
+  title     = {Efficient Memory Management for Large Language Model Serving
+               with {PagedAttention}},
+  booktitle = {Proceedings of the 29th Symposium on Operating Systems
+               Principles (SOSP)},
+  year      = {2023},
+  eprint    = {2309.06180},
+  archivePrefix = {arXiv},
+  url       = {https://arxiv.org/abs/2309.06180}
+}
+
+@inproceedings{yu2022orca,
+  author    = {Yu, Gyeong-In and Jeong, Joo Seong and Kim, Geon-Woo and
+               Kim, Soojeong and Chun, Byung-Gon},
+  title     = {Orca: A Distributed Serving System for Transformer-Based
+               Generative Models},
+  booktitle = {Proceedings of the 16th USENIX Symposium on Operating Systems
+               Design and Implementation (OSDI)},
+  year      = {2022},
+  url       = {https://www.usenix.org/conference/osdi22/presentation/yu}
+}
+
+@misc{agrawal2023sarathi,
+  author       = {Agrawal, Amey and Panwar, Ashish and Mohan, Jayashree and
+                  Kwatra, Nipun and Gulavani, Bhargav S. and Ramjee, Ramachandran},
+  title        = {{SARATHI}: Efficient {LLM} Inference by Piggybacking Decodes
+                  with Chunked Prefills},
+  year         = {2023},
+  eprint       = {2308.16369},
+  archivePrefix = {arXiv},
+  url          = {https://arxiv.org/abs/2308.16369}
+}
