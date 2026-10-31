@@ -1,4 +1,4 @@
-> **Archived.** This is the earlier ICSE-era study (RQ1-RQ5). It was moved from the repository root to `archive/icse_2026/`; paths below are relative to this folder. The current study is in `CAIN_paper/` and `revision/`.
+> **Archived.** This is the earlier ICSE-era study (RQ1-RQ5). It was moved from the repository root to `archive/icse_2026/`; paths below are relative to this folder. The current study is in `experiments/`.
 
 # Adaptive GPU Tracing: Knowing When to Stop
 
