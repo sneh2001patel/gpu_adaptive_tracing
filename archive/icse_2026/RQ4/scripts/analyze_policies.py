@@ -17,7 +17,7 @@ from typing import Any
 
 # Resolve the shared engine from both direct-script and imported entry points.
 sys.path.insert(0, str(Path(__file__).resolve().parents[4]))
-from revision.tracing.policies import (  # noqa: E402
+from experiments.tracing.policies import (  # noqa: E402
     POLICIES, POLICY_VERSION, PolicyConfig, PolicyEvidence, StoppingPolicy,
     is_concrete_label, recovery_observed,
 )
@@ -364,7 +364,7 @@ def write_markdown(path: Path, rows: list[dict[str, Any]]) -> None:
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--input-root", type=Path, default=Path("RQ1/runs/vllm_rq2_multiclass_long"))
-    parser.add_argument("--output-dir", type=Path, default=Path("revision/analysis/policy_replay_v2"))
+    parser.add_argument("--output-dir", type=Path, default=Path("experiments/analysis/policy_replay_v2"))
     parser.add_argument("--mode", choices=("automatic", "fixed_window", "all"), default="automatic")
     parser.add_argument("--stability-windows", type=int, default=2)
     parser.add_argument("--recovery-windows", type=int, default=2)

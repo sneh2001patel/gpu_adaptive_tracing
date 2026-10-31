@@ -1,6 +1,6 @@
 # Downloaded primary sources
 
-Downloaded 2026-10-28 for the related-work matrix ([revision/related_work_matrix.md](../../revision/related_work_matrix.md)). Each PDF was read in full before being cited. Text was extracted with pypdf into a temporary directory outside the repo.
+Downloaded 2026-10-28 for the related-work matrix ([experiments/related_work_matrix.md](../../experiments/related_work_matrix.md)). Each PDF was read in full before being cited. Text was extracted with pypdf into a temporary directory outside the repo.
 
 Copyright: these PDFs are publisher or author copies. Check their licences before committing or redistributing them.
 

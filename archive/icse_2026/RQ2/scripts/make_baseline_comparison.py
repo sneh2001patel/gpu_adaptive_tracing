@@ -250,7 +250,7 @@ def write_markdown(path: Path, rows: list[dict[str, Any]]) -> None:
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--input-root", type=Path, default=Path("experiment/RQ1/runs/vllm_rq2_multiclass_long"))
-    parser.add_argument("--output-dir", type=Path, default=Path("revision/analysis/baseline_comparison_v2"))
+    parser.add_argument("--output-dir", type=Path, default=Path("experiments/analysis/baseline_comparison_v2"))
     parser.add_argument("--mode", choices=("automatic", "fixed_window", "all"), default="automatic")
     parser.add_argument("--stability-windows", type=int, default=2)
     parser.add_argument("--recovery-windows", type=int, default=2)

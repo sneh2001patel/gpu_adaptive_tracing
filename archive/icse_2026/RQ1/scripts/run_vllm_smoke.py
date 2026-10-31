@@ -25,7 +25,7 @@ from evidence_classifier import CLASSIFIER_VERSION, ServingObservation, classify
 from vllm_expected_labels import EXPECTED_LABELS
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[4]))
-from revision.tracing.policies import advance_stability  # noqa: E402
+from experiments.tracing.policies import advance_stability  # noqa: E402
 
 
 SCENARIOS = {
