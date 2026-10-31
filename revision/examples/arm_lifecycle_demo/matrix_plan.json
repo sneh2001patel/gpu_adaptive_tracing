@@ -1,0 +1,39 @@
+{
+  "role": "cpu_fixture_only",
+  "arms": [
+    "full_horizon_reference",
+    "hybrid_stop",
+    "repeated_fixed_burst",
+    "stability_stop",
+    "counter_recovery_stop",
+    "cheap_only",
+    "no_profiler",
+    "fixed_burst"
+  ],
+  "schedule_file_sha256": "e762785e3913108cacdeae4a058538ce4508317a473d9129b7caa5535a2009ea",
+  "playback_config": {
+    "max_inflight": 8,
+    "request_timeout_s": 1,
+    "drain_s": 0.05,
+    "max_admission_lateness_s": 0.05,
+    "window_s": 0.05,
+    "grace_s": 0.005,
+    "min_latency_samples": 1,
+    "sample_interval_s": 0.01,
+    "sample_timeout_s": 0.2,
+    "telemetry_queue_size": 64,
+    "tick_s": 0.001
+  },
+  "session_config": {
+    "startup_s": 3,
+    "quiescence_s": 1,
+    "quiet_hold_s": 0.01,
+    "quiet_observations": 2,
+    "poll_s": 0.005,
+    "command_timeout_s": 0.5,
+    "cleanup_grace_s": 0.15,
+    "cleanup_timeout_s": 2,
+    "work_s": 0.05,
+    "report_s": 0.005
+  }
+}

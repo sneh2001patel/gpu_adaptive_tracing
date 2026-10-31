@@ -1,0 +1,55 @@
+{
+  "source_mode": "uncommitted_revision_snapshot",
+  "base_git_commit": "3ee0a1dfcef1fb6498e303decb42e39a1b1a24bb",
+  "working_tree_dirty": true,
+  "files": {
+    "revision/tracing/__init__.py": "4ab597ac06d2fb04af1d2b1722ddaa1ba288a5fae7e3169123c926ee43f3f8c9",
+    "revision/tracing/aggregation.py": "e2bc08efa562b9d2e99db4c5be1a95d1963b7bd3c416925afcd11ca51628c758",
+    "revision/tracing/command_profiler.py": "68e039b19ec9ea85e9d777375e8ee554faed30537be13120b1c7ebf48e491582",
+    "revision/tracing/controller.py": "8d120f11e0716bc9420dda4d3fc6e9575cbc8c79becceea634e48b7d3f43dad0",
+    "revision/tracing/evidence_gate.py": "b0635d13b64135152f0ed6329f6ecd87ca6887b559ff5381ae444f59c2910a2c",
+    "revision/tracing/nvml_sampler.py": "5a3a5e3700e2abad55f7a3578522049123684626efcbf59caaa43ae0a03a177a",
+    "revision/tracing/policies.py": "fe67f8cc4f0e5412222d2ff8e9ef6cc6e2dc7344b3b5fe0ea4630663de3f6f27",
+    "revision/tracing/producers.py": "6b31d5a95752ffea4230a5c15d0157b115db0f6af543fc5b3074b26944646815",
+    "revision/tracing/profiler.py": "cc6e44b0a7b80fdf22fedb21857e3bc33df38c1cab857dd03154fa161312ff02",
+    "revision/tracing/timing.py": "cd01e832527aeb090d58aa86b3145698b1f76a9944d9747474f24569aefd6463",
+    "revision/tracing/windows.py": "8f9278514cbd696c17f1b941bd357da7a11cc8e89efefca58e8a8f5056e6cf6a",
+    "revision/tracing/nsys_backend.py": "4de72e4c025f5ae225af2d6cae1f3cf77c6810aaf0c17b856a42dea97876149e",
+    "revision/tracing/vllm_cuda_worker.py": "1743ca82ed11dc705de9aff4e112a1df9050b1d4bad9c35e1e7314ad81108d2c",
+    "revision/scripts/audit_artifacts.py": "442f59e2c6ae532c79a80adbf4b9b76134c9374105e225099ecdd0b50d420a25",
+    "revision/scripts/demo_command_profiler.py": "c2b548ddf4cd46af72969824306337cca2996236f86f85cf3c5c4d0588f1b3e3",
+    "revision/scripts/demo_fake_profiler.py": "8ac38b5e1c9c1036f869bead5f8aeb0525b048d92b1de5d53b952e802bbe8c81",
+    "revision/scripts/demo_http_stream.py": "8c9131cafb719c75660baff82daf850a9910a049d3e06f7eb0ba13b66483a9e7",
+    "revision/scripts/demo_raw_stream.py": "730ac7bab39e025abd6fa07adfe1adb400b06fea76d10117632e1c7861642758",
+    "revision/scripts/demo_streaming_controller.py": "f482e1ee20bdf72000e32efa9cf880472a499a9db550a7ea4f35771d548b7fe6",
+    "revision/scripts/fake_profiler_command.py": "0fb2d35709f1b2225abd1bcc80d062b20e264991d1c93f930858857abc2c52a9",
+    "revision/scripts/preflight_gpu.py": "2c9fc7efbbfa747b00d2f71952f9050e853395e5ecde063657e6b23a3bc6e483",
+    "revision/scripts/nsys_callback.py": "cd79ec1398b959e054c3eeb615409b234e80e69259f0b8a6d3c45f5dafd1ff88",
+    "revision/scripts/profile_http_command.py": "b111319b2150efb15a2fa076576bdb68d13b54667aecee3c432a9d0cdca168c2",
+    "revision/scripts/run_l4_pilot.py": "71ec302630fc2bb36b5f7372f32aa58026c73c6cf017aac3cc26b9e44ca68d15",
+    "revision/scripts/serve_vllm_cuda.py": "8002edaf3d02b6fec56332ab58b9a7ebd9cf6111a80df6b8278c401f057865a9",
+    "revision/native/capture_probe.cu": "31d89184d86ca6cff39f8246299ecb4bc254a95c6e22ac71572bc9eadb628ae9"
+  },
+  "pinned_model_path": "/dev/shm/hf-cache/hub/models--Qwen--Qwen2.5-7B-Instruct/snapshots/a09a35458c702b33eeacc393d103063234e8bc28",
+  "configuration": {
+    "output": "/workspace/gpu_adaptive_tracing/revision/hardware/l4_20261027/pilot_001",
+    "device_uuid": "GPU-baa93118-dfa3-1258-be9e-b6051b77c1cb",
+    "model": "Qwen/Qwen2.5-7B-Instruct",
+    "model_path": "/dev/shm/hf-cache/hub/models--Qwen--Qwen2.5-7B-Instruct/snapshots/a09a35458c702b33eeacc393d103063234e8bc28",
+    "endpoint": "http://127.0.0.1:8010",
+    "horizon": 24,
+    "seeds": [
+      1001,
+      1002,
+      1003
+    ],
+    "policies": [
+      "fixed_burst",
+      "repeated_fixed_burst",
+      "stability_stop",
+      "counter_recovery_stop",
+      "hybrid_stop"
+    ],
+    "healthy_controls": true
+  }
+}

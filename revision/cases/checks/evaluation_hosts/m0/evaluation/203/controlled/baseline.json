@@ -1,0 +1,43 @@
+{
+ "p95_base_s": 7.078771352767944,
+ "p95_base_measure": "median over steady windows of p95 in-flight age",
+ "n_windows": 168,
+ "completed_p95_s": 7.986715078353882,
+ "n_completed": 165,
+ "baseline_ns_per_token": {
+  "gemm": 3846161.9454926625,
+  "attention": 50503.89517819707,
+  "other": 53716.64570230608
+ },
+ "baseline_tokens": 477.0,
+ "baseline_shares": {
+  "Kernel2<cutlass_80_wmma_tensorop_bf16_s161616gemm_bf16_16x16_128x2_tn_align8>": 0.9065932790290657,
+  "Kernel2<cutlass_80_wmma_tensorop_bf16_s161616gemm_bf16_16x16_128x1_tn_align8>": 0.06702432857222053,
+  "flash_fwd_splitkv_kernel": 0.009006225008768968,
+  "elementwise_kernel": 0.004060029330938984,
+  "flash_fwd_splitkv_combine_kernel": 0.0025327229333289313,
+  "triton_poi_fused_mul_silu_1": 0.0021439497093922034,
+  "triton_red_fused__to_copy_add__3...": 0.0015497090262383563,
+  "triton_red_fused__to_copy_add__2...": 0.0013194969949586063,
+  "reshape_and_cache_flash_kernel<__nv_bfloat16>": 0.001245610351285115,
+  "triton_poi_fused_cat_3": 0.000889051188157485,
+  "triton_poi_fused_cat_4": 0.0008646658945233701,
+  "vectorized_elementwise_kernel": 0.0007816725775362464,
+  "triton_poi_fused_view_5": 0.0005359738947041408,
+  "unrolled_elementwise_kernel": 0.00042204176958697873,
+  "apply_repetition_penalties_kernel<float>": 0.0003123700391878727,
+  "_scatter_gather_elementwise_kernel": 0.00026860706085830464,
+  "reduce_kernel": 0.0002496719732225,
+  "triton_red_fused__to_copy_add__1...": 7.045943526676397e-05,
+  "vectorized_gather_kernel": 3.865188446688775e-05,
+  "triton_poi_fused_cat_1": 3.7412188146337316e-05,
+  "triton_poi_fused_cat_2": 3.33359435238425e-05,
+  "triton_poi_fused_view_3": 2.073519462180932e-05
+ },
+ "baseline_busy_fraction": 0.8732540744838204,
+ "env": "v0110",
+ "version": "0.11.0",
+ "model": "/dev/shm/hf-cache/hub/models--Qwen--Qwen2.5-7B-Instruct/snapshots/a09a35458c702b33eeacc393d103063234e8bc28",
+ "schedule": "evaluation/203/controlled/healthy.jsonl",
+ "server_args": "--max-model-len 4096 --gpu-memory-utilization 0.85 --disable-log-requests --served-model-name Qwen/Qwen2.5-7B-Instruct"
+}

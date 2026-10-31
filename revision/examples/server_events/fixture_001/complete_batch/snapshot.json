@@ -1,0 +1,81 @@
+{
+  "version": "scheduler_hook_events_v1",
+  "binding": {
+    "session_nonce": "synthetic-owned",
+    "generation": 1,
+    "worker_pid": 43,
+    "device_uuid": "GPU-synthetic",
+    "model": "fixture",
+    "engine": "0",
+    "clock_domain": "synthetic-clock"
+  },
+  "token": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "requested_at_ns": 290000000,
+  "source_probe_ns": 300000000,
+  "epoch_ns": 0,
+  "clock_name": "time.monotonic_ns",
+  "attempted": 6,
+  "dropped": 0,
+  "faults": [],
+  "events": [
+    {
+      "sequence": 1,
+      "kind": "engine_admitted",
+      "request_id": "r1",
+      "hook_enter_ns": 1000000,
+      "hook_return_ns": 2000000,
+      "observed_at_ns": 2000000,
+      "terminal_status": null
+    },
+    {
+      "sequence": 2,
+      "kind": "engine_admitted",
+      "request_id": "r2",
+      "hook_enter_ns": 3000000,
+      "hook_return_ns": 4000000,
+      "observed_at_ns": 4000000,
+      "terminal_status": null
+    },
+    {
+      "sequence": 3,
+      "kind": "first_positive_schedule",
+      "request_id": "r1",
+      "hook_enter_ns": 25000000,
+      "hook_return_ns": 30000000,
+      "observed_at_ns": 30000000,
+      "terminal_status": null
+    },
+    {
+      "sequence": 4,
+      "kind": "first_positive_schedule",
+      "request_id": "r2",
+      "hook_enter_ns": 25000000,
+      "hook_return_ns": 30000000,
+      "observed_at_ns": 30000000,
+      "terminal_status": null
+    },
+    {
+      "sequence": 5,
+      "kind": "scheduler_finished",
+      "request_id": "r1",
+      "hook_enter_ns": 100000000,
+      "hook_return_ns": 101000000,
+      "observed_at_ns": 101000000,
+      "terminal_status": "FINISHED_STOPPED"
+    },
+    {
+      "sequence": 6,
+      "kind": "scheduler_finished",
+      "request_id": "r2",
+      "hook_enter_ns": 110000000,
+      "hook_return_ns": 111000000,
+      "observed_at_ns": 111000000,
+      "terminal_status": "FINISHED_STOPPED"
+    }
+  ],
+  "history_complete": true,
+  "semantics": "engine_admission_to_first_positive_CPU_schedule_decision_not_GPU_execution",
+  "phase_attribution": "not_instrumented",
+  "client_request_ID_mapping": "not_validated",
+  "scope": "single_owned_scheduler_host_process_no_GPU_clock_mapping"
+}

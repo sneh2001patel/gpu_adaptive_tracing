@@ -1,0 +1,81 @@
+{
+ "config": {
+  "env": "v0110",
+  "version": "0.11.0",
+  "model": "/workspace/hf-cache/hub/models--Qwen--Qwen2.5-7B-Instruct/snapshots/a09a35458c702b33eeacc393d103063234e8bc28",
+  "schedule": "evaluation/203/controlled/ctl_overload/schedule.jsonl",
+  "out": "evaluation/203/controlled/ctl_overload/NT",
+  "arm": "NT",
+  "fixed_bursts": 3,
+  "thresholds": "evaluation/thresholds_study_rule_v2_calibrated_2026-10-29.json",
+  "baseline": "evaluation/203/controlled/ctl_overload/../baseline.json",
+  "baseline_out": null,
+  "policy": "{}",
+  "trigger_latency_ratio": 1.5,
+  "trigger_windows": 2,
+  "burst_seconds": 2.0,
+  "window_seconds": 1.0,
+  "latency_window_seconds": 5.0,
+  "min_latency_samples": 3,
+  "drain_seconds": 60.0,
+  "unprofiled": false,
+  "graph_trace": "node",
+  "server_args": "--max-model-len 4096 --gpu-memory-utilization 0.85 --disable-log-requests --served-model-name Qwen/Qwen2.5-7B-Instruct",
+  "port": 8123,
+  "calibration_bursts": "",
+  "scrape_timeout": 5.0,
+  "withhold": "",
+  "case_patch": null
+ },
+ "launch": [
+  "nsys",
+  "launch",
+  "--session-new=ep_1793336258",
+  "--trace=cuda,nvtx,osrt",
+  "--cuda-graph-trace=node",
+  "v0110/bin/python",
+  "-m",
+  "vllm.entrypoints.openai.api_server",
+  "--model",
+  "/workspace/hf-cache/hub/models--Qwen--Qwen2.5-7B-Instruct/snapshots/a09a35458c702b33eeacc393d103063234e8bc28",
+  "--port",
+  "8123",
+  "--max-model-len",
+  "4096",
+  "--gpu-memory-utilization",
+  "0.85",
+  "--disable-log-requests",
+  "--served-model-name",
+  "Qwen/Qwen2.5-7B-Instruct"
+ ],
+ "thresholds": {
+  "latency_ratio": 1.95,
+  "waiting_requests": 1.0,
+  "kv_usage": 0.5768,
+  "preemptions_per_s": 0.5,
+  "gpu_util": 0.769,
+  "busy_fraction": 0.7373,
+  "kernel_time_ratio": Infinity,
+  "version": "study_rule_v2_calibrated_2026-10-29"
+ },
+ "thresholds_digest": "6cd8becf0bc9f45330875cd5dc523252d0794edb1613f90263d3d01f443f961a",
+ "thresholds_frozen": true,
+ "p95_base_s": 7.074002504348755,
+ "requests": {
+  "scheduled": 2463,
+  "completed": 2463,
+  "ok": 2463,
+  "censored_at_horizon": 0
+ },
+ "episode": {
+  "started_window": "w00073",
+  "stopped_window": null,
+  "decision": {
+   "stop": true,
+   "reason": "horizon_ended",
+   "policy": "NT"
+  },
+  "bursts": 0,
+  "final_state": "done"
+ }
+}

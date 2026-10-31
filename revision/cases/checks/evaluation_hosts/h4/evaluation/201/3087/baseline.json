@@ -1,0 +1,43 @@
+{
+ "p95_base_s": 0.3959012031555176,
+ "p95_base_measure": "median over steady windows of p95 in-flight age",
+ "n_windows": 57,
+ "completed_p95_s": 0.8044335842132568,
+ "n_completed": 87,
+ "baseline_ns_per_token": {
+  "other": 5082395.773722628,
+  "attention": 103119.26277372263,
+  "norm": 61243.029197080294,
+  "gemm": 64418.277372262775
+ },
+ "baseline_tokens": 137.0,
+ "baseline_shares": {
+  "kernel<int>": 0.9363807659589245,
+  "paged_attention_v2_kernel<__nv_bfloat16>": 0.012267910588474401,
+  "fused_add_rms_norm_kernel<c10::BFloat16>": 0.011194450511430063,
+  "act_and_mul_kernel<c10::BFloat16>": 0.0071458979397554905,
+  "ampere_bf16_s16816gemm_bf16_12_3...": 0.00649234016653759,
+  "rotary_embedding_kernel<c10::BFloat16>": 0.004831278810037875,
+  "ampere_bf16_s16816gemm_bf16_64_2...": 0.004204804813753173,
+  "reshape_and_cache_kernel<__nv_bfloat16>": 0.003926996479819524,
+  "cunn_SoftMaxForward": 0.003776060117843304,
+  "paged_attention_v2_reduce_kernel<__nv_bfloat16>": 0.0029700707195800557,
+  "ampere_bf16_s16816gemm_bf16_64_1...": 0.0014316704103651504,
+  "unrolled_elementwise_kernel": 0.0013872055745760058,
+  "reduce_kernel": 0.0010828329576798676,
+  "index_elementwise_kernel": 0.0010794480009342206,
+  "indexSelectSmallIndex<c10::BFloat16>": 0.0005676722263621479,
+  "vectorized_elementwise_kernel": 0.00035011144980392464,
+  "rms_norm_kernel<c10::BFloat16>": 0.00033652214720507865,
+  "elementwise_kernel": 0.00031699577065528057,
+  "flash_fwd_kernel": 0.00025054452073017947,
+  "indexSelectLargeIndex<c10::BFloat16>": 4.969550788574737e-06,
+  "elementwise_kernel_with_index<int>": 1.4512847435660736e-06
+ },
+ "baseline_busy_fraction": 0.3499888139850662,
+ "env": "v033",
+ "version": "0.3.3",
+ "model": "/workspace/hf-cache/hub/models--TinyLlama--TinyLlama-1.1B-Chat-v1.0/snapshots/fe8a4ea1ffedaf415f4da2f062534de366a451e6",
+ "schedule": "evaluation/201/3087/healthy.jsonl",
+ "server_args": "--max-model-len 2048 --gpu-memory-utilization 0.9 --disable-log-requests --served-model-name TinyLlama/TinyLlama-1.1B-Chat-v1.0"
+}

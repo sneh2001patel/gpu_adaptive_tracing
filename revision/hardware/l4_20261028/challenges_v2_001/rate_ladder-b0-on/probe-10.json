@@ -1,0 +1,2339 @@
+{
+  "command": {
+    "token": "e24828e43b2c44479426f4820d75bf8c",
+    "binding": {
+      "session_nonce": "13f3f14a01164568b02b0fffe44317ac",
+      "generation": 1,
+      "worker_pid": 9062,
+      "device_uuid": "GPU-baa93118-dfa3-1258-be9e-b6051b77c1cb",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "engine": "0",
+      "clock_domain": "process-monotonic-e0fc0afa-076f-474f-8ed0-0c6fbf58465f"
+    },
+    "requested_at_ns": 181805670080898
+  },
+  "received_at_ns": 181805680844696,
+  "raw_sha256": "11716a159e729c11fdaae535eb5535b012586d025a18cf6934d569bb6cd69de5",
+  "data": {
+    "version": "scheduler_hook_events_v1",
+    "binding": {
+      "session_nonce": "13f3f14a01164568b02b0fffe44317ac",
+      "generation": 1,
+      "worker_pid": 9062,
+      "device_uuid": "GPU-baa93118-dfa3-1258-be9e-b6051b77c1cb",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "engine": "0",
+      "clock_domain": "process-monotonic-e0fc0afa-076f-474f-8ed0-0c6fbf58465f"
+    },
+    "token": "e24828e43b2c44479426f4820d75bf8c",
+    "requested_at_ns": 181805670080898,
+    "source_probe_ns": 181805675512673,
+    "epoch_ns": 181742413840523,
+    "clock_name": "time.monotonic_ns",
+    "attempted": 255,
+    "dropped": 0,
+    "faults": [],
+    "events": [
+      {
+        "sequence": 1,
+        "kind": "engine_admitted",
+        "request_id": "cmpl-challenge-warmup-0",
+        "hook_enter_ns": 181743371231329,
+        "hook_return_ns": 181743371264865,
+        "observed_at_ns": 181743371299623,
+        "terminal_status": null
+      },
+      {
+        "sequence": 2,
+        "kind": "first_positive_schedule",
+        "request_id": "cmpl-challenge-warmup-0",
+        "hook_enter_ns": 181743371639165,
+        "hook_return_ns": 181743372112027,
+        "observed_at_ns": 181743372141766,
+        "terminal_status": null
+      },
+      {
+        "sequence": 3,
+        "kind": "scheduler_finished",
+        "request_id": "cmpl-challenge-warmup-0",
+        "hook_enter_ns": 181745504788328,
+        "hook_return_ns": 181745504906525,
+        "observed_at_ns": 181745504946420,
+        "terminal_status": "FINISHED_LENGTH_CAPPED"
+      },
+      {
+        "sequence": 4,
+        "kind": "engine_admitted",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0000-0",
+        "hook_enter_ns": 181745703327082,
+        "hook_return_ns": 181745703368526,
+        "observed_at_ns": 181745703411331,
+        "terminal_status": null
+      },
+      {
+        "sequence": 5,
+        "kind": "first_positive_schedule",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0000-0",
+        "hook_enter_ns": 181745704158599,
+        "hook_return_ns": 181745704517590,
+        "observed_at_ns": 181745704538227,
+        "terminal_status": null
+      },
+      {
+        "sequence": 6,
+        "kind": "engine_admitted",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0001-0",
+        "hook_enter_ns": 181747742282998,
+        "hook_return_ns": 181747742296424,
+        "observed_at_ns": 181747742319936,
+        "terminal_status": null
+      },
+      {
+        "sequence": 7,
+        "kind": "first_positive_schedule",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0001-0",
+        "hook_enter_ns": 181747742716943,
+        "hook_return_ns": 181747742863067,
+        "observed_at_ns": 181747742870372,
+        "terminal_status": null
+      },
+      {
+        "sequence": 8,
+        "kind": "scheduler_finished",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0000-0",
+        "hook_enter_ns": 181748023959275,
+        "hook_return_ns": 181748024051478,
+        "observed_at_ns": 181748024089299,
+        "terminal_status": "FINISHED_LENGTH_CAPPED"
+      },
+      {
+        "sequence": 9,
+        "kind": "engine_admitted",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0002-0",
+        "hook_enter_ns": 181749723713723,
+        "hook_return_ns": 181749723725315,
+        "observed_at_ns": 181749723732879,
+        "terminal_status": null
+      },
+      {
+        "sequence": 10,
+        "kind": "first_positive_schedule",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0002-0",
+        "hook_enter_ns": 181749724056751,
+        "hook_return_ns": 181749724192688,
+        "observed_at_ns": 181749724199633,
+        "terminal_status": null
+      },
+      {
+        "sequence": 11,
+        "kind": "scheduler_finished",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0001-0",
+        "hook_enter_ns": 181750075991043,
+        "hook_return_ns": 181750076036889,
+        "observed_at_ns": 181750076051538,
+        "terminal_status": "FINISHED_LENGTH_CAPPED"
+      },
+      {
+        "sequence": 12,
+        "kind": "engine_admitted",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0003-0",
+        "hook_enter_ns": 181751720306248,
+        "hook_return_ns": 181751720322133,
+        "observed_at_ns": 181751720345928,
+        "terminal_status": null
+      },
+      {
+        "sequence": 13,
+        "kind": "first_positive_schedule",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0003-0",
+        "hook_enter_ns": 181751720740130,
+        "hook_return_ns": 181751720875810,
+        "observed_at_ns": 181751720883385,
+        "terminal_status": null
+      },
+      {
+        "sequence": 14,
+        "kind": "scheduler_finished",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0002-0",
+        "hook_enter_ns": 181752072381770,
+        "hook_return_ns": 181752072507371,
+        "observed_at_ns": 181752072565180,
+        "terminal_status": "FINISHED_LENGTH_CAPPED"
+      },
+      {
+        "sequence": 15,
+        "kind": "engine_admitted",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0004-0",
+        "hook_enter_ns": 181753718722664,
+        "hook_return_ns": 181753718732310,
+        "observed_at_ns": 181753718742402,
+        "terminal_status": null
+      },
+      {
+        "sequence": 16,
+        "kind": "first_positive_schedule",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0004-0",
+        "hook_enter_ns": 181753719178418,
+        "hook_return_ns": 181753719313934,
+        "observed_at_ns": 181753719320917,
+        "terminal_status": null
+      },
+      {
+        "sequence": 17,
+        "kind": "scheduler_finished",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0003-0",
+        "hook_enter_ns": 181754075283978,
+        "hook_return_ns": 181754075330957,
+        "observed_at_ns": 181754075371459,
+        "terminal_status": "FINISHED_LENGTH_CAPPED"
+      },
+      {
+        "sequence": 18,
+        "kind": "engine_admitted",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0005-0",
+        "hook_enter_ns": 181754722620811,
+        "hook_return_ns": 181754722635318,
+        "observed_at_ns": 181754722658141,
+        "terminal_status": null
+      },
+      {
+        "sequence": 19,
+        "kind": "first_positive_schedule",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0005-0",
+        "hook_enter_ns": 181754723056837,
+        "hook_return_ns": 181754723213017,
+        "observed_at_ns": 181754723220797,
+        "terminal_status": null
+      },
+      {
+        "sequence": 20,
+        "kind": "engine_admitted",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0006-0",
+        "hook_enter_ns": 181755744997829,
+        "hook_return_ns": 181755745008937,
+        "observed_at_ns": 181755745017412,
+        "terminal_status": null
+      },
+      {
+        "sequence": 21,
+        "kind": "first_positive_schedule",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0006-0",
+        "hook_enter_ns": 181755745374252,
+        "hook_return_ns": 181755745529917,
+        "observed_at_ns": 181755745538840,
+        "terminal_status": null
+      },
+      {
+        "sequence": 22,
+        "kind": "scheduler_finished",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0004-0",
+        "hook_enter_ns": 181756345164800,
+        "hook_return_ns": 181756345233775,
+        "observed_at_ns": 181756345280350,
+        "terminal_status": "FINISHED_LENGTH_CAPPED"
+      },
+      {
+        "sequence": 23,
+        "kind": "engine_admitted",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0007-0",
+        "hook_enter_ns": 181756706189066,
+        "hook_return_ns": 181756706196524,
+        "observed_at_ns": 181756706204022,
+        "terminal_status": null
+      },
+      {
+        "sequence": 24,
+        "kind": "first_positive_schedule",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0007-0",
+        "hook_enter_ns": 181756706631994,
+        "hook_return_ns": 181756706775172,
+        "observed_at_ns": 181756706783317,
+        "terminal_status": null
+      },
+      {
+        "sequence": 25,
+        "kind": "scheduler_finished",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0005-0",
+        "hook_enter_ns": 181757360830345,
+        "hook_return_ns": 181757360910954,
+        "observed_at_ns": 181757360938888,
+        "terminal_status": "FINISHED_LENGTH_CAPPED"
+      },
+      {
+        "sequence": 26,
+        "kind": "engine_admitted",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0008-0",
+        "hook_enter_ns": 181757720998767,
+        "hook_return_ns": 181757721014460,
+        "observed_at_ns": 181757721024758,
+        "terminal_status": null
+      },
+      {
+        "sequence": 27,
+        "kind": "first_positive_schedule",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0008-0",
+        "hook_enter_ns": 181757721393399,
+        "hook_return_ns": 181757721528219,
+        "observed_at_ns": 181757721535400,
+        "terminal_status": null
+      },
+      {
+        "sequence": 28,
+        "kind": "scheduler_finished",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0006-0",
+        "hook_enter_ns": 181758375496060,
+        "hook_return_ns": 181758375563062,
+        "observed_at_ns": 181758375607720,
+        "terminal_status": "FINISHED_LENGTH_CAPPED"
+      },
+      {
+        "sequence": 29,
+        "kind": "engine_admitted",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0009-0",
+        "hook_enter_ns": 181758735559101,
+        "hook_return_ns": 181758735564621,
+        "observed_at_ns": 181758735572377,
+        "terminal_status": null
+      },
+      {
+        "sequence": 30,
+        "kind": "first_positive_schedule",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0009-0",
+        "hook_enter_ns": 181758735947514,
+        "hook_return_ns": 181758736090290,
+        "observed_at_ns": 181758736097855,
+        "terminal_status": null
+      },
+      {
+        "sequence": 31,
+        "kind": "scheduler_finished",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0007-0",
+        "hook_enter_ns": 181759330860605,
+        "hook_return_ns": 181759330908723,
+        "observed_at_ns": 181759330919598,
+        "terminal_status": "FINISHED_LENGTH_CAPPED"
+      },
+      {
+        "sequence": 32,
+        "kind": "engine_admitted",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0010-0",
+        "hook_enter_ns": 181759751284838,
+        "hook_return_ns": 181759751296258,
+        "observed_at_ns": 181759751311574,
+        "terminal_status": null
+      },
+      {
+        "sequence": 33,
+        "kind": "first_positive_schedule",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0010-0",
+        "hook_enter_ns": 181759751651338,
+        "hook_return_ns": 181759751774262,
+        "observed_at_ns": 181759751781749,
+        "terminal_status": null
+      },
+      {
+        "sequence": 34,
+        "kind": "scheduler_finished",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0008-0",
+        "hook_enter_ns": 181760351325259,
+        "hook_return_ns": 181760351455514,
+        "observed_at_ns": 181760351501272,
+        "terminal_status": "FINISHED_LENGTH_CAPPED"
+      },
+      {
+        "sequence": 35,
+        "kind": "engine_admitted",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0011-0",
+        "hook_enter_ns": 181760712692968,
+        "hook_return_ns": 181760712701687,
+        "observed_at_ns": 181760712710537,
+        "terminal_status": null
+      },
+      {
+        "sequence": 36,
+        "kind": "first_positive_schedule",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0011-0",
+        "hook_enter_ns": 181760713046320,
+        "hook_return_ns": 181760713176924,
+        "observed_at_ns": 181760713183865,
+        "terminal_status": null
+      },
+      {
+        "sequence": 37,
+        "kind": "scheduler_finished",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0009-0",
+        "hook_enter_ns": 181761369855560,
+        "hook_return_ns": 181761369900990,
+        "observed_at_ns": 181761369926333,
+        "terminal_status": "FINISHED_LENGTH_CAPPED"
+      },
+      {
+        "sequence": 38,
+        "kind": "engine_admitted",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0012-0",
+        "hook_enter_ns": 181761732700917,
+        "hook_return_ns": 181761732707984,
+        "observed_at_ns": 181761732715000,
+        "terminal_status": null
+      },
+      {
+        "sequence": 39,
+        "kind": "first_positive_schedule",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0012-0",
+        "hook_enter_ns": 181761733093198,
+        "hook_return_ns": 181761733238578,
+        "observed_at_ns": 181761733244983,
+        "terminal_status": null
+      },
+      {
+        "sequence": 40,
+        "kind": "engine_admitted",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0013-0",
+        "hook_enter_ns": 181762211543254,
+        "hook_return_ns": 181762211548611,
+        "observed_at_ns": 181762211555689,
+        "terminal_status": null
+      },
+      {
+        "sequence": 41,
+        "kind": "first_positive_schedule",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0013-0",
+        "hook_enter_ns": 181762211905478,
+        "hook_return_ns": 181762212075619,
+        "observed_at_ns": 181762212083404,
+        "terminal_status": null
+      },
+      {
+        "sequence": 42,
+        "kind": "scheduler_finished",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0010-0",
+        "hook_enter_ns": 181762624381063,
+        "hook_return_ns": 181762624419823,
+        "observed_at_ns": 181762624442193,
+        "terminal_status": "FINISHED_LENGTH_CAPPED"
+      },
+      {
+        "sequence": 43,
+        "kind": "engine_admitted",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0014-0",
+        "hook_enter_ns": 181762745617658,
+        "hook_return_ns": 181762745622859,
+        "observed_at_ns": 181762745630452,
+        "terminal_status": null
+      },
+      {
+        "sequence": 44,
+        "kind": "first_positive_schedule",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0014-0",
+        "hook_enter_ns": 181762746011798,
+        "hook_return_ns": 181762746156269,
+        "observed_at_ns": 181762746163570,
+        "terminal_status": null
+      },
+      {
+        "sequence": 45,
+        "kind": "engine_admitted",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0015-0",
+        "hook_enter_ns": 181763212109484,
+        "hook_return_ns": 181763212117436,
+        "observed_at_ns": 181763212132709,
+        "terminal_status": null
+      },
+      {
+        "sequence": 46,
+        "kind": "first_positive_schedule",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0015-0",
+        "hook_enter_ns": 181763212538555,
+        "hook_return_ns": 181763212686118,
+        "observed_at_ns": 181763212693503,
+        "terminal_status": null
+      },
+      {
+        "sequence": 47,
+        "kind": "engine_admitted",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0016-0",
+        "hook_enter_ns": 181763749235901,
+        "hook_return_ns": 181763749240566,
+        "observed_at_ns": 181763749247522,
+        "terminal_status": null
+      },
+      {
+        "sequence": 48,
+        "kind": "first_positive_schedule",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0016-0",
+        "hook_enter_ns": 181763749679928,
+        "hook_return_ns": 181763749825876,
+        "observed_at_ns": 181763749834575,
+        "terminal_status": null
+      },
+      {
+        "sequence": 49,
+        "kind": "scheduler_finished",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0011-0",
+        "hook_enter_ns": 181764032526835,
+        "hook_return_ns": 181764032583121,
+        "observed_at_ns": 181764032593219,
+        "terminal_status": "FINISHED_LENGTH_CAPPED"
+      },
+      {
+        "sequence": 50,
+        "kind": "engine_admitted",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0017-0",
+        "hook_enter_ns": 181764217157734,
+        "hook_return_ns": 181764217162542,
+        "observed_at_ns": 181764217170100,
+        "terminal_status": null
+      },
+      {
+        "sequence": 51,
+        "kind": "first_positive_schedule",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0017-0",
+        "hook_enter_ns": 181764217539076,
+        "hook_return_ns": 181764217691099,
+        "observed_at_ns": 181764217698901,
+        "terminal_status": null
+      },
+      {
+        "sequence": 52,
+        "kind": "engine_admitted",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0018-0",
+        "hook_enter_ns": 181764751550932,
+        "hook_return_ns": 181764751561776,
+        "observed_at_ns": 181764751585459,
+        "terminal_status": null
+      },
+      {
+        "sequence": 53,
+        "kind": "first_positive_schedule",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0018-0",
+        "hook_enter_ns": 181764751927255,
+        "hook_return_ns": 181764752096365,
+        "observed_at_ns": 181764752103972,
+        "terminal_status": null
+      },
+      {
+        "sequence": 54,
+        "kind": "engine_admitted",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0019-0",
+        "hook_enter_ns": 181765228802269,
+        "hook_return_ns": 181765228807304,
+        "observed_at_ns": 181765228814944,
+        "terminal_status": null
+      },
+      {
+        "sequence": 55,
+        "kind": "first_positive_schedule",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0019-0",
+        "hook_enter_ns": 181765229179465,
+        "hook_return_ns": 181765229344973,
+        "observed_at_ns": 181765229353794,
+        "terminal_status": null
+      },
+      {
+        "sequence": 56,
+        "kind": "scheduler_finished",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0012-0",
+        "hook_enter_ns": 181765521358044,
+        "hook_return_ns": 181765521427224,
+        "observed_at_ns": 181765521451578,
+        "terminal_status": "FINISHED_LENGTH_CAPPED"
+      },
+      {
+        "sequence": 57,
+        "kind": "engine_admitted",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0020-0",
+        "hook_enter_ns": 181765709585305,
+        "hook_return_ns": 181765709592576,
+        "observed_at_ns": 181765709599954,
+        "terminal_status": null
+      },
+      {
+        "sequence": 58,
+        "kind": "first_positive_schedule",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0020-0",
+        "hook_enter_ns": 181765709971791,
+        "hook_return_ns": 181765710156455,
+        "observed_at_ns": 181765710163897,
+        "terminal_status": null
+      },
+      {
+        "sequence": 59,
+        "kind": "scheduler_finished",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0013-0",
+        "hook_enter_ns": 181765997982520,
+        "hook_return_ns": 181765998066899,
+        "observed_at_ns": 181765998099610,
+        "terminal_status": "FINISHED_LENGTH_CAPPED"
+      },
+      {
+        "sequence": 60,
+        "kind": "engine_admitted",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0021-0",
+        "hook_enter_ns": 181766247931940,
+        "hook_return_ns": 181766247937089,
+        "observed_at_ns": 181766247943926,
+        "terminal_status": null
+      },
+      {
+        "sequence": 61,
+        "kind": "first_positive_schedule",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0021-0",
+        "hook_enter_ns": 181766248359274,
+        "hook_return_ns": 181766248535123,
+        "observed_at_ns": 181766248543372,
+        "terminal_status": null
+      },
+      {
+        "sequence": 62,
+        "kind": "scheduler_finished",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0014-0",
+        "hook_enter_ns": 181766538132304,
+        "hook_return_ns": 181766538171490,
+        "observed_at_ns": 181766538182026,
+        "terminal_status": "FINISHED_LENGTH_CAPPED"
+      },
+      {
+        "sequence": 63,
+        "kind": "engine_admitted",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0022-0",
+        "hook_enter_ns": 181766724814280,
+        "hook_return_ns": 181766724819387,
+        "observed_at_ns": 181766724827062,
+        "terminal_status": null
+      },
+      {
+        "sequence": 64,
+        "kind": "first_positive_schedule",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0022-0",
+        "hook_enter_ns": 181766725222999,
+        "hook_return_ns": 181766725416853,
+        "observed_at_ns": 181766725425577,
+        "terminal_status": null
+      },
+      {
+        "sequence": 65,
+        "kind": "scheduler_finished",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0015-0",
+        "hook_enter_ns": 181767015488824,
+        "hook_return_ns": 181767015526147,
+        "observed_at_ns": 181767015536778,
+        "terminal_status": "FINISHED_LENGTH_CAPPED"
+      },
+      {
+        "sequence": 66,
+        "kind": "engine_admitted",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0023-0",
+        "hook_enter_ns": 181767202402546,
+        "hook_return_ns": 181767202408136,
+        "observed_at_ns": 181767202415699,
+        "terminal_status": null
+      },
+      {
+        "sequence": 67,
+        "kind": "first_positive_schedule",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0023-0",
+        "hook_enter_ns": 181767202801038,
+        "hook_return_ns": 181767202983381,
+        "observed_at_ns": 181767202992703,
+        "terminal_status": null
+      },
+      {
+        "sequence": 68,
+        "kind": "scheduler_finished",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0016-0",
+        "hook_enter_ns": 181767552351374,
+        "hook_return_ns": 181767552393272,
+        "observed_at_ns": 181767552403775,
+        "terminal_status": "FINISHED_LENGTH_CAPPED"
+      },
+      {
+        "sequence": 69,
+        "kind": "engine_admitted",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0024-0",
+        "hook_enter_ns": 181767738166684,
+        "hook_return_ns": 181767738174683,
+        "observed_at_ns": 181767738195314,
+        "terminal_status": null
+      },
+      {
+        "sequence": 70,
+        "kind": "first_positive_schedule",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0024-0",
+        "hook_enter_ns": 181767738571587,
+        "hook_return_ns": 181767738757038,
+        "observed_at_ns": 181767738765451,
+        "terminal_status": null
+      },
+      {
+        "sequence": 71,
+        "kind": "scheduler_finished",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0017-0",
+        "hook_enter_ns": 181768029063726,
+        "hook_return_ns": 181768029107342,
+        "observed_at_ns": 181768029117063,
+        "terminal_status": "FINISHED_LENGTH_CAPPED"
+      },
+      {
+        "sequence": 72,
+        "kind": "engine_admitted",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0025-0",
+        "hook_enter_ns": 181768215696899,
+        "hook_return_ns": 181768215702449,
+        "observed_at_ns": 181768215710296,
+        "terminal_status": null
+      },
+      {
+        "sequence": 73,
+        "kind": "first_positive_schedule",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0025-0",
+        "hook_enter_ns": 181768216084363,
+        "hook_return_ns": 181768216281085,
+        "observed_at_ns": 181768216289954,
+        "terminal_status": null
+      },
+      {
+        "sequence": 74,
+        "kind": "scheduler_finished",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0018-0",
+        "hook_enter_ns": 181768568320966,
+        "hook_return_ns": 181768568361034,
+        "observed_at_ns": 181768568370918,
+        "terminal_status": "FINISHED_LENGTH_CAPPED"
+      },
+      {
+        "sequence": 75,
+        "kind": "engine_admitted",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0026-0",
+        "hook_enter_ns": 181768754044926,
+        "hook_return_ns": 181768754065760,
+        "observed_at_ns": 181768754072223,
+        "terminal_status": null
+      },
+      {
+        "sequence": 76,
+        "kind": "first_positive_schedule",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0026-0",
+        "hook_enter_ns": 181768754406957,
+        "hook_return_ns": 181768754581244,
+        "observed_at_ns": 181768754588951,
+        "terminal_status": null
+      },
+      {
+        "sequence": 77,
+        "kind": "scheduler_finished",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0019-0",
+        "hook_enter_ns": 181769045295952,
+        "hook_return_ns": 181769045422517,
+        "observed_at_ns": 181769045464492,
+        "terminal_status": "FINISHED_LENGTH_CAPPED"
+      },
+      {
+        "sequence": 78,
+        "kind": "engine_admitted",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0027-0",
+        "hook_enter_ns": 181769233458125,
+        "hook_return_ns": 181769233467599,
+        "observed_at_ns": 181769233488437,
+        "terminal_status": null
+      },
+      {
+        "sequence": 79,
+        "kind": "first_positive_schedule",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0027-0",
+        "hook_enter_ns": 181769233876877,
+        "hook_return_ns": 181769234075508,
+        "observed_at_ns": 181769234084459,
+        "terminal_status": null
+      },
+      {
+        "sequence": 80,
+        "kind": "scheduler_finished",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0020-0",
+        "hook_enter_ns": 181769523088260,
+        "hook_return_ns": 181769523133154,
+        "observed_at_ns": 181769523143159,
+        "terminal_status": "FINISHED_LENGTH_CAPPED"
+      },
+      {
+        "sequence": 81,
+        "kind": "engine_admitted",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0028-0",
+        "hook_enter_ns": 181769712428402,
+        "hook_return_ns": 181769712434136,
+        "observed_at_ns": 181769712440540,
+        "terminal_status": null
+      },
+      {
+        "sequence": 82,
+        "kind": "first_positive_schedule",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0028-0",
+        "hook_enter_ns": 181769712864927,
+        "hook_return_ns": 181769713051448,
+        "observed_at_ns": 181769713059535,
+        "terminal_status": null
+      },
+      {
+        "sequence": 83,
+        "kind": "scheduler_finished",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0021-0",
+        "hook_enter_ns": 181770064080005,
+        "hook_return_ns": 181770064132468,
+        "observed_at_ns": 181770064161231,
+        "terminal_status": "FINISHED_LENGTH_CAPPED"
+      },
+      {
+        "sequence": 84,
+        "kind": "engine_admitted",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0029-0",
+        "hook_enter_ns": 181770064583256,
+        "hook_return_ns": 181770064588882,
+        "observed_at_ns": 181770064595510,
+        "terminal_status": null
+      },
+      {
+        "sequence": 85,
+        "kind": "first_positive_schedule",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0029-0",
+        "hook_enter_ns": 181770064951685,
+        "hook_return_ns": 181770065140671,
+        "observed_at_ns": 181770065149474,
+        "terminal_status": null
+      },
+      {
+        "sequence": 86,
+        "kind": "engine_admitted",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0030-0",
+        "hook_enter_ns": 181770359892834,
+        "hook_return_ns": 181770359898411,
+        "observed_at_ns": 181770359906315,
+        "terminal_status": null
+      },
+      {
+        "sequence": 87,
+        "kind": "first_positive_schedule",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0030-0",
+        "hook_enter_ns": 181770360408023,
+        "hook_return_ns": 181770360596478,
+        "observed_at_ns": 181770360606766,
+        "terminal_status": null
+      },
+      {
+        "sequence": 88,
+        "kind": "engine_admitted",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0031-0",
+        "hook_enter_ns": 181770733573928,
+        "hook_return_ns": 181770733579083,
+        "observed_at_ns": 181770733587521,
+        "terminal_status": null
+      },
+      {
+        "sequence": 89,
+        "kind": "first_positive_schedule",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0031-0",
+        "hook_enter_ns": 181770734007745,
+        "hook_return_ns": 181770734219163,
+        "observed_at_ns": 181770734229192,
+        "terminal_status": null
+      },
+      {
+        "sequence": 90,
+        "kind": "scheduler_finished",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0022-0",
+        "hook_enter_ns": 181771020605728,
+        "hook_return_ns": 181771020686953,
+        "observed_at_ns": 181771020720370,
+        "terminal_status": "FINISHED_LENGTH_CAPPED"
+      },
+      {
+        "sequence": 91,
+        "kind": "engine_admitted",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0032-0",
+        "hook_enter_ns": 181771086350631,
+        "hook_return_ns": 181771086355203,
+        "observed_at_ns": 181771086361749,
+        "terminal_status": null
+      },
+      {
+        "sequence": 92,
+        "kind": "first_positive_schedule",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0032-0",
+        "hook_enter_ns": 181771086724473,
+        "hook_return_ns": 181771086905149,
+        "observed_at_ns": 181771086913557,
+        "terminal_status": null
+      },
+      {
+        "sequence": 93,
+        "kind": "engine_admitted",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0033-0",
+        "hook_enter_ns": 181771376862557,
+        "hook_return_ns": 181771376867459,
+        "observed_at_ns": 181771376874647,
+        "terminal_status": null
+      },
+      {
+        "sequence": 94,
+        "kind": "first_positive_schedule",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0033-0",
+        "hook_enter_ns": 181771377275442,
+        "hook_return_ns": 181771377480635,
+        "observed_at_ns": 181771377489896,
+        "terminal_status": null
+      },
+      {
+        "sequence": 95,
+        "kind": "scheduler_finished",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0023-0",
+        "hook_enter_ns": 181771751459583,
+        "hook_return_ns": 181771751499531,
+        "observed_at_ns": 181771751512013,
+        "terminal_status": "FINISHED_LENGTH_CAPPED"
+      },
+      {
+        "sequence": 96,
+        "kind": "engine_admitted",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0034-0",
+        "hook_enter_ns": 181771751845189,
+        "hook_return_ns": 181771751850537,
+        "observed_at_ns": 181771751856149,
+        "terminal_status": null
+      },
+      {
+        "sequence": 97,
+        "kind": "first_positive_schedule",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0034-0",
+        "hook_enter_ns": 181771752232287,
+        "hook_return_ns": 181771752448644,
+        "observed_at_ns": 181771752458566,
+        "terminal_status": null
+      },
+      {
+        "sequence": 98,
+        "kind": "engine_admitted",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0035-0",
+        "hook_enter_ns": 181772045732395,
+        "hook_return_ns": 181772045737628,
+        "observed_at_ns": 181772045745543,
+        "terminal_status": null
+      },
+      {
+        "sequence": 99,
+        "kind": "first_positive_schedule",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0035-0",
+        "hook_enter_ns": 181772046193557,
+        "hook_return_ns": 181772046406229,
+        "observed_at_ns": 181772046417353,
+        "terminal_status": null
+      },
+      {
+        "sequence": 100,
+        "kind": "engine_admitted",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0036-0",
+        "hook_enter_ns": 181772403915294,
+        "hook_return_ns": 181772403920434,
+        "observed_at_ns": 181772403927939,
+        "terminal_status": null
+      },
+      {
+        "sequence": 101,
+        "kind": "first_positive_schedule",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0036-0",
+        "hook_enter_ns": 181772404377489,
+        "hook_return_ns": 181772404613299,
+        "observed_at_ns": 181772404624218,
+        "terminal_status": null
+      },
+      {
+        "sequence": 102,
+        "kind": "engine_admitted",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0037-0",
+        "hook_enter_ns": 181772708501131,
+        "hook_return_ns": 181772708506537,
+        "observed_at_ns": 181772708514667,
+        "terminal_status": null
+      },
+      {
+        "sequence": 103,
+        "kind": "first_positive_schedule",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0037-0",
+        "hook_enter_ns": 181772708893159,
+        "hook_return_ns": 181772709132032,
+        "observed_at_ns": 181772709143171,
+        "terminal_status": null
+      },
+      {
+        "sequence": 104,
+        "kind": "scheduler_finished",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0024-0",
+        "hook_enter_ns": 181773011900627,
+        "hook_return_ns": 181773011938740,
+        "observed_at_ns": 181773011950393,
+        "terminal_status": "FINISHED_LENGTH_CAPPED"
+      },
+      {
+        "sequence": 105,
+        "kind": "engine_admitted",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0038-0",
+        "hook_enter_ns": 181773077326862,
+        "hook_return_ns": 181773077331901,
+        "observed_at_ns": 181773077338672,
+        "terminal_status": null
+      },
+      {
+        "sequence": 106,
+        "kind": "first_positive_schedule",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0038-0",
+        "hook_enter_ns": 181773077711656,
+        "hook_return_ns": 181773077936132,
+        "observed_at_ns": 181773077946855,
+        "terminal_status": null
+      },
+      {
+        "sequence": 107,
+        "kind": "engine_admitted",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0039-0",
+        "hook_enter_ns": 181773367319333,
+        "hook_return_ns": 181773367327854,
+        "observed_at_ns": 181773367346486,
+        "terminal_status": null
+      },
+      {
+        "sequence": 108,
+        "kind": "first_positive_schedule",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0039-0",
+        "hook_enter_ns": 181773367844005,
+        "hook_return_ns": 181773368109583,
+        "observed_at_ns": 181773368121030,
+        "terminal_status": null
+      },
+      {
+        "sequence": 109,
+        "kind": "scheduler_finished",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0025-0",
+        "hook_enter_ns": 181773734328912,
+        "hook_return_ns": 181773734390359,
+        "observed_at_ns": 181773734401381,
+        "terminal_status": "FINISHED_LENGTH_CAPPED"
+      },
+      {
+        "sequence": 110,
+        "kind": "engine_admitted",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0040-0",
+        "hook_enter_ns": 181773734698788,
+        "hook_return_ns": 181773734703463,
+        "observed_at_ns": 181773734708755,
+        "terminal_status": null
+      },
+      {
+        "sequence": 111,
+        "kind": "first_positive_schedule",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0040-0",
+        "hook_enter_ns": 181773734993801,
+        "hook_return_ns": 181773735232981,
+        "observed_at_ns": 181773735242521,
+        "terminal_status": null
+      },
+      {
+        "sequence": 112,
+        "kind": "engine_admitted",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0041-0",
+        "hook_enter_ns": 181774033188124,
+        "hook_return_ns": 181774033192541,
+        "observed_at_ns": 181774033207577,
+        "terminal_status": null
+      },
+      {
+        "sequence": 113,
+        "kind": "first_positive_schedule",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0041-0",
+        "hook_enter_ns": 181774033598222,
+        "hook_return_ns": 181774033864816,
+        "observed_at_ns": 181774033875835,
+        "terminal_status": null
+      },
+      {
+        "sequence": 114,
+        "kind": "engine_admitted",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0042-0",
+        "hook_enter_ns": 181774396545578,
+        "hook_return_ns": 181774396550154,
+        "observed_at_ns": 181774396557548,
+        "terminal_status": null
+      },
+      {
+        "sequence": 115,
+        "kind": "scheduler_finished",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0026-0",
+        "hook_enter_ns": 181774526477528,
+        "hook_return_ns": 181774526530192,
+        "observed_at_ns": 181774526540186,
+        "terminal_status": "FINISHED_LENGTH_CAPPED"
+      },
+      {
+        "sequence": 116,
+        "kind": "first_positive_schedule",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0042-0",
+        "hook_enter_ns": 181774526808560,
+        "hook_return_ns": 181774527021925,
+        "observed_at_ns": 181774527031131,
+        "terminal_status": null
+      },
+      {
+        "sequence": 117,
+        "kind": "engine_admitted",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0043-0",
+        "hook_enter_ns": 181774828506506,
+        "hook_return_ns": 181774828520059,
+        "observed_at_ns": 181774828557128,
+        "terminal_status": null
+      },
+      {
+        "sequence": 118,
+        "kind": "scheduler_finished",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0027-0",
+        "hook_enter_ns": 181775025251614,
+        "hook_return_ns": 181775025320283,
+        "observed_at_ns": 181775025334553,
+        "terminal_status": "FINISHED_LENGTH_CAPPED"
+      },
+      {
+        "sequence": 119,
+        "kind": "engine_admitted",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0044-0",
+        "hook_enter_ns": 181775025616073,
+        "hook_return_ns": 181775025620241,
+        "observed_at_ns": 181775025624888,
+        "terminal_status": null
+      },
+      {
+        "sequence": 120,
+        "kind": "first_positive_schedule",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0043-0",
+        "hook_enter_ns": 181775025968849,
+        "hook_return_ns": 181775026221727,
+        "observed_at_ns": 181775026232287,
+        "terminal_status": null
+      },
+      {
+        "sequence": 121,
+        "kind": "engine_admitted",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0045-0",
+        "hook_enter_ns": 181775395066987,
+        "hook_return_ns": 181775395074421,
+        "observed_at_ns": 181775395084995,
+        "terminal_status": null
+      },
+      {
+        "sequence": 122,
+        "kind": "scheduler_finished",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0028-0",
+        "hook_enter_ns": 181775525824570,
+        "hook_return_ns": 181775525875422,
+        "observed_at_ns": 181775525915344,
+        "terminal_status": "FINISHED_LENGTH_CAPPED"
+      },
+      {
+        "sequence": 123,
+        "kind": "first_positive_schedule",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0044-0",
+        "hook_enter_ns": 181775526227932,
+        "hook_return_ns": 181775526430616,
+        "observed_at_ns": 181775526439797,
+        "terminal_status": null
+      },
+      {
+        "sequence": 124,
+        "kind": "engine_admitted",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0046-0",
+        "hook_enter_ns": 181775829231524,
+        "hook_return_ns": 181775829237649,
+        "observed_at_ns": 181775829244101,
+        "terminal_status": null
+      },
+      {
+        "sequence": 125,
+        "kind": "scheduler_finished",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0029-0",
+        "hook_enter_ns": 181775895218112,
+        "hook_return_ns": 181775895261806,
+        "observed_at_ns": 181775895271729,
+        "terminal_status": "FINISHED_LENGTH_CAPPED"
+      },
+      {
+        "sequence": 126,
+        "kind": "first_positive_schedule",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0045-0",
+        "hook_enter_ns": 181775895552106,
+        "hook_return_ns": 181775895783050,
+        "observed_at_ns": 181775895792190,
+        "terminal_status": null
+      },
+      {
+        "sequence": 127,
+        "kind": "scheduler_finished",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0030-0",
+        "hook_enter_ns": 181776189798975,
+        "hook_return_ns": 181776189845083,
+        "observed_at_ns": 181776189855135,
+        "terminal_status": "FINISHED_LENGTH_CAPPED"
+      },
+      {
+        "sequence": 128,
+        "kind": "engine_admitted",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0047-0",
+        "hook_enter_ns": 181776190179737,
+        "hook_return_ns": 181776190184138,
+        "observed_at_ns": 181776190189501,
+        "terminal_status": null
+      },
+      {
+        "sequence": 129,
+        "kind": "first_positive_schedule",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0046-0",
+        "hook_enter_ns": 181776190515457,
+        "hook_return_ns": 181776190744716,
+        "observed_at_ns": 181776190754540,
+        "terminal_status": null
+      },
+      {
+        "sequence": 130,
+        "kind": "engine_admitted",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0048-0",
+        "hook_enter_ns": 181776503144833,
+        "hook_return_ns": 181776503149203,
+        "observed_at_ns": 181776503157533,
+        "terminal_status": null
+      },
+      {
+        "sequence": 131,
+        "kind": "scheduler_finished",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0031-0",
+        "hook_enter_ns": 181776569330071,
+        "hook_return_ns": 181776569374250,
+        "observed_at_ns": 181776569385425,
+        "terminal_status": "FINISHED_LENGTH_CAPPED"
+      },
+      {
+        "sequence": 132,
+        "kind": "first_positive_schedule",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0047-0",
+        "hook_enter_ns": 181776569669087,
+        "hook_return_ns": 181776569893674,
+        "observed_at_ns": 181776569903267,
+        "terminal_status": null
+      },
+      {
+        "sequence": 133,
+        "kind": "engine_admitted",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0049-0",
+        "hook_enter_ns": 181776868431525,
+        "hook_return_ns": 181776868441373,
+        "observed_at_ns": 181776868452154,
+        "terminal_status": null
+      },
+      {
+        "sequence": 134,
+        "kind": "scheduler_finished",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0032-0",
+        "hook_enter_ns": 181776935295014,
+        "hook_return_ns": 181776935335000,
+        "observed_at_ns": 181776935352977,
+        "terminal_status": "FINISHED_LENGTH_CAPPED"
+      },
+      {
+        "sequence": 135,
+        "kind": "first_positive_schedule",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0048-0",
+        "hook_enter_ns": 181776935651704,
+        "hook_return_ns": 181776935879953,
+        "observed_at_ns": 181776935889199,
+        "terminal_status": null
+      },
+      {
+        "sequence": 136,
+        "kind": "scheduler_finished",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0033-0",
+        "hook_enter_ns": 181777230761258,
+        "hook_return_ns": 181777230810807,
+        "observed_at_ns": 181777230824575,
+        "terminal_status": "FINISHED_LENGTH_CAPPED"
+      },
+      {
+        "sequence": 137,
+        "kind": "engine_admitted",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0050-0",
+        "hook_enter_ns": 181777231226736,
+        "hook_return_ns": 181777231231911,
+        "observed_at_ns": 181777231237938,
+        "terminal_status": null
+      },
+      {
+        "sequence": 138,
+        "kind": "first_positive_schedule",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0049-0",
+        "hook_enter_ns": 181777231610637,
+        "hook_return_ns": 181777231856364,
+        "observed_at_ns": 181777231867308,
+        "terminal_status": null
+      },
+      {
+        "sequence": 139,
+        "kind": "engine_admitted",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0051-0",
+        "hook_enter_ns": 181777540068679,
+        "hook_return_ns": 181777540074114,
+        "observed_at_ns": 181777540084570,
+        "terminal_status": null
+      },
+      {
+        "sequence": 140,
+        "kind": "scheduler_finished",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0034-0",
+        "hook_enter_ns": 181777606344619,
+        "hook_return_ns": 181777606390298,
+        "observed_at_ns": 181777606402016,
+        "terminal_status": "FINISHED_LENGTH_CAPPED"
+      },
+      {
+        "sequence": 141,
+        "kind": "first_positive_schedule",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0050-0",
+        "hook_enter_ns": 181777606712016,
+        "hook_return_ns": 181777606937889,
+        "observed_at_ns": 181777606948052,
+        "terminal_status": null
+      },
+      {
+        "sequence": 142,
+        "kind": "scheduler_finished",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0035-0",
+        "hook_enter_ns": 181777909023265,
+        "hook_return_ns": 181777909065482,
+        "observed_at_ns": 181777909078129,
+        "terminal_status": "FINISHED_LENGTH_CAPPED"
+      },
+      {
+        "sequence": 143,
+        "kind": "engine_admitted",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0052-0",
+        "hook_enter_ns": 181777910975019,
+        "hook_return_ns": 181777910982064,
+        "observed_at_ns": 181777910988646,
+        "terminal_status": null
+      },
+      {
+        "sequence": 144,
+        "kind": "first_positive_schedule",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0051-0",
+        "hook_enter_ns": 181777911361123,
+        "hook_return_ns": 181777911622902,
+        "observed_at_ns": 181777911634340,
+        "terminal_status": null
+      },
+      {
+        "sequence": 145,
+        "kind": "engine_admitted",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0053-0",
+        "hook_enter_ns": 181778205043233,
+        "hook_return_ns": 181778205048574,
+        "observed_at_ns": 181778205056328,
+        "terminal_status": null
+      },
+      {
+        "sequence": 146,
+        "kind": "engine_admitted",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0054-0",
+        "hook_enter_ns": 181778205494541,
+        "hook_return_ns": 181778205499679,
+        "observed_at_ns": 181778205505355,
+        "terminal_status": null
+      },
+      {
+        "sequence": 147,
+        "kind": "scheduler_finished",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0036-0",
+        "hook_enter_ns": 181778271191020,
+        "hook_return_ns": 181778271235635,
+        "observed_at_ns": 181778271246811,
+        "terminal_status": "FINISHED_LENGTH_CAPPED"
+      },
+      {
+        "sequence": 148,
+        "kind": "first_positive_schedule",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0052-0",
+        "hook_enter_ns": 181778271555551,
+        "hook_return_ns": 181778271771162,
+        "observed_at_ns": 181778271781164,
+        "terminal_status": null
+      },
+      {
+        "sequence": 149,
+        "kind": "scheduler_finished",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0037-0",
+        "hook_enter_ns": 181778573571168,
+        "hook_return_ns": 181778573613525,
+        "observed_at_ns": 181778573623906,
+        "terminal_status": "FINISHED_LENGTH_CAPPED"
+      },
+      {
+        "sequence": 150,
+        "kind": "engine_admitted",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0055-0",
+        "hook_enter_ns": 181778573964266,
+        "hook_return_ns": 181778573968888,
+        "observed_at_ns": 181778573974161,
+        "terminal_status": null
+      },
+      {
+        "sequence": 151,
+        "kind": "first_positive_schedule",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0053-0",
+        "hook_enter_ns": 181778574305078,
+        "hook_return_ns": 181778574553973,
+        "observed_at_ns": 181778574563365,
+        "terminal_status": null
+      },
+      {
+        "sequence": 152,
+        "kind": "engine_admitted",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0056-0",
+        "hook_enter_ns": 181778875308711,
+        "hook_return_ns": 181778875314889,
+        "observed_at_ns": 181778875322091,
+        "terminal_status": null
+      },
+      {
+        "sequence": 153,
+        "kind": "scheduler_finished",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0038-0",
+        "hook_enter_ns": 181778941346511,
+        "hook_return_ns": 181778941383778,
+        "observed_at_ns": 181778941394783,
+        "terminal_status": "FINISHED_LENGTH_CAPPED"
+      },
+      {
+        "sequence": 154,
+        "kind": "engine_admitted",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0057-0",
+        "hook_enter_ns": 181778941711098,
+        "hook_return_ns": 181778941716114,
+        "observed_at_ns": 181778941721731,
+        "terminal_status": null
+      },
+      {
+        "sequence": 155,
+        "kind": "first_positive_schedule",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0054-0",
+        "hook_enter_ns": 181778942047811,
+        "hook_return_ns": 181778942290707,
+        "observed_at_ns": 181778942300376,
+        "terminal_status": null
+      },
+      {
+        "sequence": 156,
+        "kind": "scheduler_finished",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0039-0",
+        "hook_enter_ns": 181779239576711,
+        "hook_return_ns": 181779239611782,
+        "observed_at_ns": 181779239622472,
+        "terminal_status": "FINISHED_LENGTH_CAPPED"
+      },
+      {
+        "sequence": 157,
+        "kind": "engine_admitted",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0058-0",
+        "hook_enter_ns": 181779239999717,
+        "hook_return_ns": 181779240011876,
+        "observed_at_ns": 181779240017372,
+        "terminal_status": null
+      },
+      {
+        "sequence": 158,
+        "kind": "first_positive_schedule",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0055-0",
+        "hook_enter_ns": 181779240313018,
+        "hook_return_ns": 181779240566551,
+        "observed_at_ns": 181779240576850,
+        "terminal_status": null
+      },
+      {
+        "sequence": 159,
+        "kind": "engine_admitted",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0059-0",
+        "hook_enter_ns": 181779551008947,
+        "hook_return_ns": 181779551013476,
+        "observed_at_ns": 181779551020969,
+        "terminal_status": null
+      },
+      {
+        "sequence": 160,
+        "kind": "scheduler_finished",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0040-0",
+        "hook_enter_ns": 181779616886380,
+        "hook_return_ns": 181779616932530,
+        "observed_at_ns": 181779616952652,
+        "terminal_status": "FINISHED_LENGTH_CAPPED"
+      },
+      {
+        "sequence": 161,
+        "kind": "first_positive_schedule",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0056-0",
+        "hook_enter_ns": 181779617255456,
+        "hook_return_ns": 181779617499755,
+        "observed_at_ns": 181779617509275,
+        "terminal_status": null
+      },
+      {
+        "sequence": 162,
+        "kind": "scheduler_finished",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0041-0",
+        "hook_enter_ns": 181779920098361,
+        "hook_return_ns": 181779920134722,
+        "observed_at_ns": 181779920145169,
+        "terminal_status": "FINISHED_LENGTH_CAPPED"
+      },
+      {
+        "sequence": 163,
+        "kind": "engine_admitted",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0060-0",
+        "hook_enter_ns": 181779920442579,
+        "hook_return_ns": 181779920447072,
+        "observed_at_ns": 181779920451947,
+        "terminal_status": null
+      },
+      {
+        "sequence": 164,
+        "kind": "first_positive_schedule",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0057-0",
+        "hook_enter_ns": 181779920770651,
+        "hook_return_ns": 181779921035429,
+        "observed_at_ns": 181779921045101,
+        "terminal_status": null
+      },
+      {
+        "sequence": 165,
+        "kind": "engine_admitted",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0061-0",
+        "hook_enter_ns": 181780219403440,
+        "hook_return_ns": 181780219408373,
+        "observed_at_ns": 181780219415288,
+        "terminal_status": null
+      },
+      {
+        "sequence": 166,
+        "kind": "engine_admitted",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0062-0",
+        "hook_enter_ns": 181780219748954,
+        "hook_return_ns": 181780219753638,
+        "observed_at_ns": 181780219758405,
+        "terminal_status": null
+      },
+      {
+        "sequence": 167,
+        "kind": "scheduler_finished",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0042-0",
+        "hook_enter_ns": 181780415179389,
+        "hook_return_ns": 181780415214412,
+        "observed_at_ns": 181780415224519,
+        "terminal_status": "FINISHED_LENGTH_CAPPED"
+      },
+      {
+        "sequence": 168,
+        "kind": "first_positive_schedule",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0058-0",
+        "hook_enter_ns": 181780415519253,
+        "hook_return_ns": 181780415735938,
+        "observed_at_ns": 181780415745684,
+        "terminal_status": null
+      },
+      {
+        "sequence": 169,
+        "kind": "engine_admitted",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0063-0",
+        "hook_enter_ns": 181780718515994,
+        "hook_return_ns": 181780718521257,
+        "observed_at_ns": 181780718530245,
+        "terminal_status": null
+      },
+      {
+        "sequence": 170,
+        "kind": "engine_admitted",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0064-0",
+        "hook_enter_ns": 181780718916520,
+        "hook_return_ns": 181780718937200,
+        "observed_at_ns": 181780718942834,
+        "terminal_status": null
+      },
+      {
+        "sequence": 171,
+        "kind": "scheduler_finished",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0043-0",
+        "hook_enter_ns": 181780914647121,
+        "hook_return_ns": 181780914680836,
+        "observed_at_ns": 181780914690333,
+        "terminal_status": "FINISHED_LENGTH_CAPPED"
+      },
+      {
+        "sequence": 172,
+        "kind": "first_positive_schedule",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0059-0",
+        "hook_enter_ns": 181780914953514,
+        "hook_return_ns": 181780915163376,
+        "observed_at_ns": 181780915171840,
+        "terminal_status": null
+      },
+      {
+        "sequence": 173,
+        "kind": "engine_admitted",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0065-0",
+        "hook_enter_ns": 181781221792956,
+        "hook_return_ns": 181781221798651,
+        "observed_at_ns": 181781221806823,
+        "terminal_status": null
+      },
+      {
+        "sequence": 174,
+        "kind": "engine_admitted",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0066-0",
+        "hook_enter_ns": 181781222208543,
+        "hook_return_ns": 181781222212786,
+        "observed_at_ns": 181781222217865,
+        "terminal_status": null
+      },
+      {
+        "sequence": 175,
+        "kind": "scheduler_finished",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0044-0",
+        "hook_enter_ns": 181781418420146,
+        "hook_return_ns": 181781418536922,
+        "observed_at_ns": 181781418580134,
+        "terminal_status": "FINISHED_LENGTH_CAPPED"
+      },
+      {
+        "sequence": 176,
+        "kind": "first_positive_schedule",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0060-0",
+        "hook_enter_ns": 181781419113298,
+        "hook_return_ns": 181781419406481,
+        "observed_at_ns": 181781419424685,
+        "terminal_status": null
+      },
+      {
+        "sequence": 177,
+        "kind": "engine_admitted",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0067-0",
+        "hook_enter_ns": 181781722111252,
+        "hook_return_ns": 181781722120905,
+        "observed_at_ns": 181781722131003,
+        "terminal_status": null
+      },
+      {
+        "sequence": 178,
+        "kind": "engine_admitted",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0068-0",
+        "hook_enter_ns": 181781722505100,
+        "hook_return_ns": 181781722509930,
+        "observed_at_ns": 181781722515159,
+        "terminal_status": null
+      },
+      {
+        "sequence": 179,
+        "kind": "scheduler_finished",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0045-0",
+        "hook_enter_ns": 181781789163107,
+        "hook_return_ns": 181781789206330,
+        "observed_at_ns": 181781789216702,
+        "terminal_status": "FINISHED_LENGTH_CAPPED"
+      },
+      {
+        "sequence": 180,
+        "kind": "first_positive_schedule",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0061-0",
+        "hook_enter_ns": 181781789480213,
+        "hook_return_ns": 181781789709296,
+        "observed_at_ns": 181781789718519,
+        "terminal_status": null
+      },
+      {
+        "sequence": 181,
+        "kind": "scheduler_finished",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0046-0",
+        "hook_enter_ns": 181782081838491,
+        "hook_return_ns": 181782081882417,
+        "observed_at_ns": 181782081893407,
+        "terminal_status": "FINISHED_LENGTH_CAPPED"
+      },
+      {
+        "sequence": 182,
+        "kind": "engine_admitted",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0069-0",
+        "hook_enter_ns": 181782082210579,
+        "hook_return_ns": 181782082215611,
+        "observed_at_ns": 181782082221294,
+        "terminal_status": null
+      },
+      {
+        "sequence": 183,
+        "kind": "first_positive_schedule",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0062-0",
+        "hook_enter_ns": 181782082567800,
+        "hook_return_ns": 181782082821512,
+        "observed_at_ns": 181782082832663,
+        "terminal_status": null
+      },
+      {
+        "sequence": 184,
+        "kind": "engine_admitted",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0070-0",
+        "hook_enter_ns": 181782396871901,
+        "hook_return_ns": 181782396887187,
+        "observed_at_ns": 181782396898301,
+        "terminal_status": null
+      },
+      {
+        "sequence": 185,
+        "kind": "scheduler_finished",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0047-0",
+        "hook_enter_ns": 181782463578791,
+        "hook_return_ns": 181782463618791,
+        "observed_at_ns": 181782463640109,
+        "terminal_status": "FINISHED_LENGTH_CAPPED"
+      },
+      {
+        "sequence": 186,
+        "kind": "engine_admitted",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0071-0",
+        "hook_enter_ns": 181782463918368,
+        "hook_return_ns": 181782463938629,
+        "observed_at_ns": 181782463943682,
+        "terminal_status": null
+      },
+      {
+        "sequence": 187,
+        "kind": "first_positive_schedule",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0063-0",
+        "hook_enter_ns": 181782464239668,
+        "hook_return_ns": 181782464480650,
+        "observed_at_ns": 181782464490532,
+        "terminal_status": null
+      },
+      {
+        "sequence": 188,
+        "kind": "engine_admitted",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0072-0",
+        "hook_enter_ns": 181782765000080,
+        "hook_return_ns": 181782765011887,
+        "observed_at_ns": 181782765020498,
+        "terminal_status": null
+      },
+      {
+        "sequence": 189,
+        "kind": "scheduler_finished",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0048-0",
+        "hook_enter_ns": 181782831061603,
+        "hook_return_ns": 181782831106499,
+        "observed_at_ns": 181782831117785,
+        "terminal_status": "FINISHED_LENGTH_CAPPED"
+      },
+      {
+        "sequence": 190,
+        "kind": "first_positive_schedule",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0064-0",
+        "hook_enter_ns": 181782831409131,
+        "hook_return_ns": 181782831639892,
+        "observed_at_ns": 181782831651582,
+        "terminal_status": null
+      },
+      {
+        "sequence": 191,
+        "kind": "scheduler_finished",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0049-0",
+        "hook_enter_ns": 181783120713820,
+        "hook_return_ns": 181783120755615,
+        "observed_at_ns": 181783120765846,
+        "terminal_status": "FINISHED_LENGTH_CAPPED"
+      },
+      {
+        "sequence": 192,
+        "kind": "engine_admitted",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0073-0",
+        "hook_enter_ns": 181783121079307,
+        "hook_return_ns": 181783121083719,
+        "observed_at_ns": 181783121088200,
+        "terminal_status": null
+      },
+      {
+        "sequence": 193,
+        "kind": "first_positive_schedule",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0065-0",
+        "hook_enter_ns": 181783121417854,
+        "hook_return_ns": 181783121658267,
+        "observed_at_ns": 181783121669158,
+        "terminal_status": null
+      },
+      {
+        "sequence": 194,
+        "kind": "engine_admitted",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0074-0",
+        "hook_enter_ns": 181783429238776,
+        "hook_return_ns": 181783429243354,
+        "observed_at_ns": 181783429250845,
+        "terminal_status": null
+      },
+      {
+        "sequence": 195,
+        "kind": "scheduler_finished",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0050-0",
+        "hook_enter_ns": 181783495029483,
+        "hook_return_ns": 181783495075128,
+        "observed_at_ns": 181783495086062,
+        "terminal_status": "FINISHED_LENGTH_CAPPED"
+      },
+      {
+        "sequence": 196,
+        "kind": "engine_admitted",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0075-0",
+        "hook_enter_ns": 181783495407860,
+        "hook_return_ns": 181783495412581,
+        "observed_at_ns": 181783495420905,
+        "terminal_status": null
+      },
+      {
+        "sequence": 197,
+        "kind": "first_positive_schedule",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0066-0",
+        "hook_enter_ns": 181783495786802,
+        "hook_return_ns": 181783496065987,
+        "observed_at_ns": 181783496077017,
+        "terminal_status": null
+      },
+      {
+        "sequence": 198,
+        "kind": "scheduler_finished",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0051-0",
+        "hook_enter_ns": 181783801749338,
+        "hook_return_ns": 181783801795336,
+        "observed_at_ns": 181783801806834,
+        "terminal_status": "FINISHED_LENGTH_CAPPED"
+      },
+      {
+        "sequence": 199,
+        "kind": "engine_admitted",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0076-0",
+        "hook_enter_ns": 181783802198536,
+        "hook_return_ns": 181783802203317,
+        "observed_at_ns": 181783802210099,
+        "terminal_status": null
+      },
+      {
+        "sequence": 200,
+        "kind": "first_positive_schedule",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0067-0",
+        "hook_enter_ns": 181783802536451,
+        "hook_return_ns": 181783802784050,
+        "observed_at_ns": 181783802795676,
+        "terminal_status": null
+      },
+      {
+        "sequence": 201,
+        "kind": "engine_admitted",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0077-0",
+        "hook_enter_ns": 181784105509898,
+        "hook_return_ns": 181784105519289,
+        "observed_at_ns": 181784105531336,
+        "terminal_status": null
+      },
+      {
+        "sequence": 202,
+        "kind": "scheduler_finished",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0052-0",
+        "hook_enter_ns": 181784177261049,
+        "hook_return_ns": 181784177300734,
+        "observed_at_ns": 181784177319784,
+        "terminal_status": "FINISHED_LENGTH_CAPPED"
+      },
+      {
+        "sequence": 203,
+        "kind": "first_positive_schedule",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0068-0",
+        "hook_enter_ns": 181784177602279,
+        "hook_return_ns": 181784177852652,
+        "observed_at_ns": 181784177862752,
+        "terminal_status": null
+      },
+      {
+        "sequence": 204,
+        "kind": "scheduler_finished",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0053-0",
+        "hook_enter_ns": 181784480892737,
+        "hook_return_ns": 181784480935727,
+        "observed_at_ns": 181784480948248,
+        "terminal_status": "FINISHED_LENGTH_CAPPED"
+      },
+      {
+        "sequence": 205,
+        "kind": "engine_admitted",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0078-0",
+        "hook_enter_ns": 181784481302541,
+        "hook_return_ns": 181784481307007,
+        "observed_at_ns": 181784481313271,
+        "terminal_status": null
+      },
+      {
+        "sequence": 206,
+        "kind": "engine_admitted",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0079-0",
+        "hook_enter_ns": 181784481671668,
+        "hook_return_ns": 181784481674931,
+        "observed_at_ns": 181784481679084,
+        "terminal_status": null
+      },
+      {
+        "sequence": 207,
+        "kind": "first_positive_schedule",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0069-0",
+        "hook_enter_ns": 181784481818444,
+        "hook_return_ns": 181784482062275,
+        "observed_at_ns": 181784482073712,
+        "terminal_status": null
+      },
+      {
+        "sequence": 208,
+        "kind": "engine_admitted",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0080-0",
+        "hook_enter_ns": 181784787973440,
+        "hook_return_ns": 181784787977932,
+        "observed_at_ns": 181784787985301,
+        "terminal_status": null
+      },
+      {
+        "sequence": 209,
+        "kind": "scheduler_finished",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0054-0",
+        "hook_enter_ns": 181784853793032,
+        "hook_return_ns": 181784853832837,
+        "observed_at_ns": 181784853842890,
+        "terminal_status": "FINISHED_LENGTH_CAPPED"
+      },
+      {
+        "sequence": 210,
+        "kind": "first_positive_schedule",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0070-0",
+        "hook_enter_ns": 181784854125927,
+        "hook_return_ns": 181784854314694,
+        "observed_at_ns": 181784854324375,
+        "terminal_status": null
+      },
+      {
+        "sequence": 211,
+        "kind": "scheduler_finished",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0055-0",
+        "hook_enter_ns": 181785153527402,
+        "hook_return_ns": 181785153565472,
+        "observed_at_ns": 181785153575500,
+        "terminal_status": "FINISHED_LENGTH_CAPPED"
+      },
+      {
+        "sequence": 212,
+        "kind": "engine_admitted",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0081-0",
+        "hook_enter_ns": 181785153890894,
+        "hook_return_ns": 181785153894937,
+        "observed_at_ns": 181785153899594,
+        "terminal_status": null
+      },
+      {
+        "sequence": 213,
+        "kind": "first_positive_schedule",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0071-0",
+        "hook_enter_ns": 181785154254813,
+        "hook_return_ns": 181785154512179,
+        "observed_at_ns": 181785154522913,
+        "terminal_status": null
+      },
+      {
+        "sequence": 214,
+        "kind": "engine_admitted",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0082-0",
+        "hook_enter_ns": 181785461915568,
+        "hook_return_ns": 181785461919972,
+        "observed_at_ns": 181785461926839,
+        "terminal_status": null
+      },
+      {
+        "sequence": 215,
+        "kind": "engine_admitted",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0083-0",
+        "hook_enter_ns": 181785462344552,
+        "hook_return_ns": 181785462349136,
+        "observed_at_ns": 181785462353670,
+        "terminal_status": null
+      },
+      {
+        "sequence": 216,
+        "kind": "scheduler_finished",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0056-0",
+        "hook_enter_ns": 181785528095230,
+        "hook_return_ns": 181785528144378,
+        "observed_at_ns": 181785528153278,
+        "terminal_status": "FINISHED_LENGTH_CAPPED"
+      },
+      {
+        "sequence": 217,
+        "kind": "first_positive_schedule",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0072-0",
+        "hook_enter_ns": 181785528414477,
+        "hook_return_ns": 181785528649888,
+        "observed_at_ns": 181785528659847,
+        "terminal_status": null
+      },
+      {
+        "sequence": 218,
+        "kind": "scheduler_finished",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0057-0",
+        "hook_enter_ns": 181785829173910,
+        "hook_return_ns": 181785829215906,
+        "observed_at_ns": 181785829226367,
+        "terminal_status": "FINISHED_LENGTH_CAPPED"
+      },
+      {
+        "sequence": 219,
+        "kind": "first_positive_schedule",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0073-0",
+        "hook_enter_ns": 181785831404847,
+        "hook_return_ns": 181785831642912,
+        "observed_at_ns": 181785831654354,
+        "terminal_status": null
+      },
+      {
+        "sequence": 220,
+        "kind": "scheduler_finished",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0058-0",
+        "hook_enter_ns": 181786328247705,
+        "hook_return_ns": 181786328283753,
+        "observed_at_ns": 181786328294992,
+        "terminal_status": "FINISHED_LENGTH_CAPPED"
+      },
+      {
+        "sequence": 221,
+        "kind": "first_positive_schedule",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0074-0",
+        "hook_enter_ns": 181786328566229,
+        "hook_return_ns": 181786328781475,
+        "observed_at_ns": 181786328791254,
+        "terminal_status": null
+      },
+      {
+        "sequence": 222,
+        "kind": "scheduler_finished",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0059-0",
+        "hook_enter_ns": 181786824866311,
+        "hook_return_ns": 181786824919020,
+        "observed_at_ns": 181786824929766,
+        "terminal_status": "FINISHED_LENGTH_CAPPED"
+      },
+      {
+        "sequence": 223,
+        "kind": "first_positive_schedule",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0075-0",
+        "hook_enter_ns": 181786825186863,
+        "hook_return_ns": 181786825415507,
+        "observed_at_ns": 181786825425342,
+        "terminal_status": null
+      },
+      {
+        "sequence": 224,
+        "kind": "scheduler_finished",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0060-0",
+        "hook_enter_ns": 181787327880124,
+        "hook_return_ns": 181787327914225,
+        "observed_at_ns": 181787327923701,
+        "terminal_status": "FINISHED_LENGTH_CAPPED"
+      },
+      {
+        "sequence": 225,
+        "kind": "first_positive_schedule",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0076-0",
+        "hook_enter_ns": 181787328174367,
+        "hook_return_ns": 181787328396630,
+        "observed_at_ns": 181787328406078,
+        "terminal_status": null
+      },
+      {
+        "sequence": 226,
+        "kind": "scheduler_finished",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0061-0",
+        "hook_enter_ns": 181787692662037,
+        "hook_return_ns": 181787692697737,
+        "observed_at_ns": 181787692715079,
+        "terminal_status": "FINISHED_LENGTH_CAPPED"
+      },
+      {
+        "sequence": 227,
+        "kind": "first_positive_schedule",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0077-0",
+        "hook_enter_ns": 181787693025679,
+        "hook_return_ns": 181787693257689,
+        "observed_at_ns": 181787693268359,
+        "terminal_status": null
+      },
+      {
+        "sequence": 228,
+        "kind": "scheduler_finished",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0062-0",
+        "hook_enter_ns": 181787986031967,
+        "hook_return_ns": 181787986071001,
+        "observed_at_ns": 181787986081106,
+        "terminal_status": "FINISHED_LENGTH_CAPPED"
+      },
+      {
+        "sequence": 229,
+        "kind": "first_positive_schedule",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0078-0",
+        "hook_enter_ns": 181787986359367,
+        "hook_return_ns": 181787986575095,
+        "observed_at_ns": 181787986585518,
+        "terminal_status": null
+      },
+      {
+        "sequence": 230,
+        "kind": "scheduler_finished",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0063-0",
+        "hook_enter_ns": 181788369319603,
+        "hook_return_ns": 181788369353131,
+        "observed_at_ns": 181788369362799,
+        "terminal_status": "FINISHED_LENGTH_CAPPED"
+      },
+      {
+        "sequence": 231,
+        "kind": "first_positive_schedule",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0079-0",
+        "hook_enter_ns": 181788369623290,
+        "hook_return_ns": 181788369857064,
+        "observed_at_ns": 181788369866637,
+        "terminal_status": null
+      },
+      {
+        "sequence": 232,
+        "kind": "scheduler_finished",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0064-0",
+        "hook_enter_ns": 181788736170008,
+        "hook_return_ns": 181788736207073,
+        "observed_at_ns": 181788736217378,
+        "terminal_status": "FINISHED_LENGTH_CAPPED"
+      },
+      {
+        "sequence": 233,
+        "kind": "first_positive_schedule",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0080-0",
+        "hook_enter_ns": 181788736499942,
+        "hook_return_ns": 181788736741520,
+        "observed_at_ns": 181788736750879,
+        "terminal_status": null
+      },
+      {
+        "sequence": 234,
+        "kind": "scheduler_finished",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0065-0",
+        "hook_enter_ns": 181789033674256,
+        "hook_return_ns": 181789033709867,
+        "observed_at_ns": 181789033719286,
+        "terminal_status": "FINISHED_LENGTH_CAPPED"
+      },
+      {
+        "sequence": 235,
+        "kind": "first_positive_schedule",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0081-0",
+        "hook_enter_ns": 181789034034433,
+        "hook_return_ns": 181789034244642,
+        "observed_at_ns": 181789034254018,
+        "terminal_status": null
+      },
+      {
+        "sequence": 236,
+        "kind": "scheduler_finished",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0066-0",
+        "hook_enter_ns": 181789415757802,
+        "hook_return_ns": 181789415793034,
+        "observed_at_ns": 181789415802922,
+        "terminal_status": "FINISHED_LENGTH_CAPPED"
+      },
+      {
+        "sequence": 237,
+        "kind": "first_positive_schedule",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0082-0",
+        "hook_enter_ns": 181789416097076,
+        "hook_return_ns": 181789416304250,
+        "observed_at_ns": 181789416314075,
+        "terminal_status": null
+      },
+      {
+        "sequence": 238,
+        "kind": "scheduler_finished",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0067-0",
+        "hook_enter_ns": 181789724319193,
+        "hook_return_ns": 181789724437864,
+        "observed_at_ns": 181789724477497,
+        "terminal_status": "FINISHED_LENGTH_CAPPED"
+      },
+      {
+        "sequence": 239,
+        "kind": "first_positive_schedule",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0083-0",
+        "hook_enter_ns": 181789724992503,
+        "hook_return_ns": 181789725318495,
+        "observed_at_ns": 181789725336915,
+        "terminal_status": null
+      },
+      {
+        "sequence": 240,
+        "kind": "scheduler_finished",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0068-0",
+        "hook_enter_ns": 181790088530484,
+        "hook_return_ns": 181790088575516,
+        "observed_at_ns": 181790088602129,
+        "terminal_status": "FINISHED_LENGTH_CAPPED"
+      },
+      {
+        "sequence": 241,
+        "kind": "scheduler_finished",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0069-0",
+        "hook_enter_ns": 181790153731907,
+        "hook_return_ns": 181790153768045,
+        "observed_at_ns": 181790153777055,
+        "terminal_status": "FINISHED_LENGTH_CAPPED"
+      },
+      {
+        "sequence": 242,
+        "kind": "scheduler_finished",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0070-0",
+        "hook_enter_ns": 181790282838863,
+        "hook_return_ns": 181790282877150,
+        "observed_at_ns": 181790282885804,
+        "terminal_status": "FINISHED_LENGTH_CAPPED"
+      },
+      {
+        "sequence": 243,
+        "kind": "scheduler_finished",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0071-0",
+        "hook_enter_ns": 181790347025309,
+        "hook_return_ns": 181790347075493,
+        "observed_at_ns": 181790347084134,
+        "terminal_status": "FINISHED_LENGTH_CAPPED"
+      },
+      {
+        "sequence": 244,
+        "kind": "scheduler_finished",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0072-0",
+        "hook_enter_ns": 181790474134947,
+        "hook_return_ns": 181790474183664,
+        "observed_at_ns": 181790474191821,
+        "terminal_status": "FINISHED_LENGTH_CAPPED"
+      },
+      {
+        "sequence": 245,
+        "kind": "scheduler_finished",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0073-0",
+        "hook_enter_ns": 181790537747794,
+        "hook_return_ns": 181790537785242,
+        "observed_at_ns": 181790537793807,
+        "terminal_status": "FINISHED_LENGTH_CAPPED"
+      },
+      {
+        "sequence": 246,
+        "kind": "scheduler_finished",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0074-0",
+        "hook_enter_ns": 181790790351212,
+        "hook_return_ns": 181790790394230,
+        "observed_at_ns": 181790790416922,
+        "terminal_status": "FINISHED_LENGTH_CAPPED"
+      },
+      {
+        "sequence": 247,
+        "kind": "scheduler_finished",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0075-0",
+        "hook_enter_ns": 181791040721143,
+        "hook_return_ns": 181791040754955,
+        "observed_at_ns": 181791040764089,
+        "terminal_status": "FINISHED_LENGTH_CAPPED"
+      },
+      {
+        "sequence": 248,
+        "kind": "scheduler_finished",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0076-0",
+        "hook_enter_ns": 181791289146791,
+        "hook_return_ns": 181791289187506,
+        "observed_at_ns": 181791289196934,
+        "terminal_status": "FINISHED_LENGTH_CAPPED"
+      },
+      {
+        "sequence": 249,
+        "kind": "scheduler_finished",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0077-0",
+        "hook_enter_ns": 181791412926743,
+        "hook_return_ns": 181791412966224,
+        "observed_at_ns": 181791412975066,
+        "terminal_status": "FINISHED_LENGTH_CAPPED"
+      },
+      {
+        "sequence": 250,
+        "kind": "scheduler_finished",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0078-0",
+        "hook_enter_ns": 181791474898390,
+        "hook_return_ns": 181791474936252,
+        "observed_at_ns": 181791474943986,
+        "terminal_status": "FINISHED_LENGTH_CAPPED"
+      },
+      {
+        "sequence": 251,
+        "kind": "scheduler_finished",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0079-0",
+        "hook_enter_ns": 181791597577215,
+        "hook_return_ns": 181791597611509,
+        "observed_at_ns": 181791597620554,
+        "terminal_status": "FINISHED_LENGTH_CAPPED"
+      },
+      {
+        "sequence": 252,
+        "kind": "scheduler_finished",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0080-0",
+        "hook_enter_ns": 181791719391024,
+        "hook_return_ns": 181791719432205,
+        "observed_at_ns": 181791719442030,
+        "terminal_status": "FINISHED_LENGTH_CAPPED"
+      },
+      {
+        "sequence": 253,
+        "kind": "scheduler_finished",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0081-0",
+        "hook_enter_ns": 181791780206612,
+        "hook_return_ns": 181791780246458,
+        "observed_at_ns": 181791780255785,
+        "terminal_status": "FINISHED_LENGTH_CAPPED"
+      },
+      {
+        "sequence": 254,
+        "kind": "scheduler_finished",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0082-0",
+        "hook_enter_ns": 181791900542655,
+        "hook_return_ns": 181791900574298,
+        "observed_at_ns": 181791900582147,
+        "terminal_status": "FINISHED_LENGTH_CAPPED"
+      },
+      {
+        "sequence": 255,
+        "kind": "scheduler_finished",
+        "request_id": "cmpl-v2-rate_ladder-rladder-0083-0",
+        "hook_enter_ns": 181791959608391,
+        "hook_return_ns": 181791959642384,
+        "observed_at_ns": 181791959650667,
+        "terminal_status": "FINISHED_LENGTH_CAPPED"
+      }
+    ],
+    "history_complete": true,
+    "semantics": "engine_admission_to_first_positive_CPU_schedule_decision_not_GPU_execution",
+    "phase_attribution": "not_instrumented",
+    "client_request_ID_mapping": "not_validated",
+    "scope": "single_owned_scheduler_host_process_no_GPU_clock_mapping"
+  }
+}

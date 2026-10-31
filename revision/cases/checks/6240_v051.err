@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "/workspace/cases/check_6240_kernels.py", line 50, in <module>
+    main()
+  File "/workspace/cases/check_6240_kernels.py", line 41, in main
+    cutlass_us = bench(lambda: ops.cutlass_scaled_mm(a, b, sa, sb, torch.bfloat16))
+  File "/workspace/cases/check_6240_kernels.py", line 21, in bench
+    torch.cuda.synchronize()
+  File "/workspace/cases/v051/lib/python3.10/site-packages/torch/cuda/__init__.py", line 792, in synchronize
+    return torch._C._cuda_synchronize()
+RuntimeError: CUDA error: unspecified launch failure
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+

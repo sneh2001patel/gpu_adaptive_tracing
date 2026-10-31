@@ -1,0 +1,31 @@
+{
+  "command": [
+    "nsys",
+    "profile",
+    "--trace=cuda",
+    "--sample=none",
+    "--cpuctxsw=none",
+    "--capture-range=cudaProfilerApi",
+    "--capture-range-end=repeat:2:async",
+    "--kill=none",
+    "--output=/workspace/gpu_adaptive_tracing/revision/hardware/l4_20261027/capture_smoke/capture",
+    "/workspace/gpu_adaptive_tracing/revision/hardware/l4_20261027/capture_smoke/probe"
+  ],
+  "events": [
+    {
+      "event": "report_observed_while_profile_running",
+      "report": "capture.1.nsys-rep",
+      "elapsed_s": 2.8221000189951155
+    },
+    {
+      "event": "report_observed_while_profile_running",
+      "report": "capture.2.nsys-rep",
+      "elapsed_s": 8.163876061007613
+    },
+    {
+      "event": "profiler_exited",
+      "returncode": 0,
+      "elapsed_s": 12.802212894996046
+    }
+  ]
+}

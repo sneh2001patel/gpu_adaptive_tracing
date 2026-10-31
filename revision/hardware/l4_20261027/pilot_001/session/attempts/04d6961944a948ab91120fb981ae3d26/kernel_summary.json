@@ -1,0 +1,139 @@
+{
+  "kernels": [
+    {
+      "name": "void cutlass::Kernel2<cutlass_80_wmma_tensorop_f16_s161616gemm_f16_16x16_128x2_tn_align8>(T1::Params)",
+      "count": 2016,
+      "total_ns": 954931060
+    },
+    {
+      "name": "void cutlass::Kernel2<cutlass_80_wmma_tensorop_f16_s161616gemm_f16_16x16_128x1_tn_align8>(T1::Params)",
+      "count": 18,
+      "total_ns": 78891559
+    },
+    {
+      "name": "void flash::flash_fwd_splitkv_kernel<Flash_fwd_kernel_traits<(int)128, (int)64, (int)128, (int)4, (bool)0, (bool)0, cutlass::half_t, Flash_kernel_traits<(int)128, (int)64, (int)128, (int)4, cutlass::half_t>>, (bool)0, (bool)0, (bool)0, (bool)0, (bool)1, (bool)0, (bool)0, (bool)0>(flash::Flash_fwd_params)",
+      "count": 504,
+      "total_ns": 8821559
+    },
+    {
+      "name": "void vllm::act_and_mul_kernel<c10::Half, &vllm::silu_kernel<c10::Half>, (bool)1>(T1 *, const T1 *, int)",
+      "count": 504,
+      "total_ns": 6374702
+    },
+    {
+      "name": "std::enable_if<T2>(int)0&&vllm::_typeConvert<T1>::exists, void>::type vllm::fused_add_rms_norm_kernel<c10::Half, (int)8>(T1 *, long, T1 *, const T1 *, float, int, int)",
+      "count": 1008,
+      "total_ns": 3607786
+    },
+    {
+      "name": "void at::native::elementwise_kernel<(int)128, (int)4, void at::native::gpu_kernel_impl_nocast<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase &)::[lambda() (instance 3)]::operator ()() const::[lambda() (instance 10)]::operator ()() const::[lambda(c10::Half) (instance 1)]>(at::TensorIteratorBase &, const T1 &)::[lambda(int) (instance 1)]>(int, T3)",
+      "count": 1008,
+      "total_ns": 2931496
+    },
+    {
+      "name": "void vllm::rotary_embedding_kernel<c10::Half, (bool)1>(const long *, T1 *, T1 *, const T1 *, int, long, long, long, int, int, int)",
+      "count": 504,
+      "total_ns": 1812645
+    },
+    {
+      "name": "void vllm::reshape_and_cache_flash_kernel<unsigned short, unsigned short, (vllm::Fp8KVCacheDataType)0>(const T1 *, const T1 *, T2 *, T2 *, const long *, long, long, long, long, long, int, int, int, const float *, const float *)",
+      "count": 504,
+      "total_ns": 1367523
+    },
+    {
+      "name": "void at::native::vectorized_elementwise_kernel<(int)4, at::native::CUDAFunctor_add<float>, std::array<char *, (unsigned long)3>>(int, T2, T3)",
+      "count": 36,
+      "total_ns": 1338759
+    },
+    {
+      "name": "void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kernel_impl_nocast<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase &)::[lambda() (instance 3)]::operator ()() const::[lambda() (instance 7)]::operator ()() const::[lambda(float) (instance 1)]>(at::TensorIteratorBase &, const T1 &)::[lambda(int) (instance 1)]>(int, T3)",
+      "count": 504,
+      "total_ns": 1096452
+    },
+    {
+      "name": "void at::native::elementwise_kernel<(int)128, (int)4, void at::native::gpu_kernel_impl<at::native::BinaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float>>>(at::TensorIteratorBase &, const T1 &)::[lambda(int) (instance 1)]>(int, T3)",
+      "count": 36,
+      "total_ns": 1010721
+    },
+    {
+      "name": "void at::native::vectorized_elementwise_kernel<(int)2, at::native::FillFunctor<long>, std::array<char *, (unsigned long)1>>(int, T2, T3)",
+      "count": 90,
+      "total_ns": 1001763
+    },
+    {
+      "name": "void at::native::elementwise_kernel<(int)128, (int)4, void at::native::gpu_kernel_impl_nocast<void at::native::compare_scalar_kernel<long>(at::TensorIteratorBase &, at::native::<unnamed>::OpType, T1)::[lambda(long) (instance 1)]>(at::TensorIteratorBase &, const T1 &)::[lambda(int) (instance 1)]>(int, T3)",
+      "count": 36,
+      "total_ns": 695394
+    },
+    {
+      "name": "void at::native::vectorized_elementwise_kernel<(int)4, at::native::FillFunctor<c10::Half>, std::array<char *, (unsigned long)1>>(int, T2, T3)",
+      "count": 504,
+      "total_ns": 661088
+    },
+    {
+      "name": "void vllm::apply_repetition_penalties_kernel<float>(T1 *, const bool *, const bool *, const T1 *, int, int, int)",
+      "count": 18,
+      "total_ns": 562464
+    },
+    {
+      "name": "void at::native::unrolled_elementwise_kernel<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase &)::[lambda() (instance 3)]::operator ()() const::[lambda() (instance 7)]::operator ()() const::[lambda(float) (instance 1)], std::array<char *, (unsigned long)2>, (int)4, TrivialOffsetCalculator<(int)1, unsigned int>, TrivialOffsetCalculator<(int)1, unsigned int>, at::native::memory::LoadWithCast<(int)1>, at::native::memory::StoreWithCast<(int)1>>(int, T1, T2, T4, T5, T6, T7)",
+      "count": 18,
+      "total_ns": 441856
+    },
+    {
+      "name": "void at::native::reduce_kernel<(int)512, (int)1, at::native::ReduceOp<float, at::native::ArgMaxOps<float>, unsigned int, long, (int)4, (int)4>>(T3)",
+      "count": 18,
+      "total_ns": 358659
+    },
+    {
+      "name": "void at::native::_scatter_gather_elementwise_kernel<(int)128, (int)8, void at::native::_cuda_scatter_gather_internal_kernel<(bool)1, long, long>::operator ()<at::native::ReduceAdd>(at::TensorIterator &, long, long, long, const T1 &)::[lambda(int) (instance 1)]>(int, T3)",
+      "count": 36,
+      "total_ns": 246561
+    },
+    {
+      "name": "void at::native::<unnamed>::indexSelectSmallIndex<c10::Half, long, unsigned int, (int)2, (int)2, (int)-2>(at::cuda::detail::TensorInfo<T1, T3>, at::cuda::detail::TensorInfo<const T1, T3>, at::cuda::detail::TensorInfo<const T2, T3>, int, int, T3, long)",
+      "count": 18,
+      "total_ns": 220770
+    },
+    {
+      "name": "void at::native::unrolled_elementwise_kernel<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase &)::[lambda() (instance 3)]::operator ()() const::[lambda() (instance 4)]::operator ()() const::[lambda(long) (instance 1)], std::array<char *, (unsigned long)2>, (int)4, TrivialOffsetCalculator<(int)1, unsigned int>, TrivialOffsetCalculator<(int)1, unsigned int>, at::native::memory::LoadWithCast<(int)1>, at::native::memory::StoreWithCast<(int)1>>(int, T1, T2, T4, T5, T6, T7)",
+      "count": 54,
+      "total_ns": 114912
+    },
+    {
+      "name": "void vllm::rms_norm_kernel<c10::Half>(T1 *, const T1 *, long, const T1 *, float, int, int)",
+      "count": 18,
+      "total_ns": 82112
+    },
+    {
+      "name": "void at::native::unrolled_elementwise_kernel<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase &)::[lambda() (instance 3)]::operator ()() const::[lambda() (instance 3)]::operator ()() const::[lambda(int) (instance 1)], std::array<char *, (unsigned long)2>, (int)4, TrivialOffsetCalculator<(int)1, unsigned int>, TrivialOffsetCalculator<(int)1, unsigned int>, at::native::memory::LoadWithCast<(int)1>, at::native::memory::StoreWithCast<(int)1>>(int, T1, T2, T4, T5, T6, T7)",
+      "count": 18,
+      "total_ns": 37376
+    },
+    {
+      "name": "void at::native::vectorized_gather_kernel<(int)16, long>(char *, char *, T2 *, int, long, long, long, long, bool)",
+      "count": 18,
+      "total_ns": 32448
+    },
+    {
+      "name": "void at::native::unrolled_elementwise_kernel<at::native::CUDAFunctorOnSelf_add<int>, std::array<char *, (unsigned long)2>, (int)4, TrivialOffsetCalculator<(int)1, unsigned int>, TrivialOffsetCalculator<(int)1, unsigned int>, at::native::memory::LoadWithoutCast, at::native::memory::StoreWithoutCast>(int, T1, T2, T4, T5, T6, T7)",
+      "count": 18,
+      "total_ns": 28768
+    }
+  ],
+  "kernel_count": 7506,
+  "kernel_time_sum_s": 1.066668433,
+  "kernel_envelope_s": 1.112529333,
+  "top_kernel_name": "void cutlass::Kernel2<cutlass_80_wmma_tensorop_f16_s161616gemm_f16_16x16_128x2_tn_align8>(T1::Params)",
+  "device_uuid": "GPU-baa93118-dfa3-1258-be9e-b6051b77c1cb",
+  "captured_worker_pids": [
+    4605
+  ],
+  "coverage": "single_configured_worker_and_device_verified",
+  "source": "nsys_sqlite",
+  "note": "Kernel sum/envelope are not capture-active time; no calibrated root-cause classifier.",
+  "artifact_hashes": {
+    "/workspace/gpu_adaptive_tracing/revision/hardware/l4_20261027/pilot_001/session/capture.11.nsys-rep": "98c76c9abde7a284b01769eb30839c00b52e2c58f4373e713894227ad1e67bf3",
+    "/workspace/gpu_adaptive_tracing/revision/hardware/l4_20261027/pilot_001/session/attempts/04d6961944a948ab91120fb981ae3d26/capture.sqlite": "ebfb386073186c83e282169585fd325c78078ebe7b6fe61cc3b4d3bfb11bfdf5"
+  }
+}

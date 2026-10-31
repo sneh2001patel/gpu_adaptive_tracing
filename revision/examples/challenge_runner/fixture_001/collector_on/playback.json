@@ -1,0 +1,909 @@
+{
+  "playback_version": "schedule_playback_v1",
+  "provenance": "synthetic_simulation",
+  "status": "completed",
+  "failure": null,
+  "schedule_file_sha256": "8fcd1806ed56faf9f84d62cfc450f831ba8394a402f5f1158139522ac0414b1a",
+  "schedule_content_sha256": "8fcd1806ed56faf9f84d62cfc450f831ba8394a402f5f1158139522ac0414b1a",
+  "config": {
+    "max_inflight": 2,
+    "request_timeout_s": 0.2,
+    "drain_s": 0.05,
+    "max_admission_lateness_s": 0.05,
+    "window_s": 0.04,
+    "grace_s": 0.02,
+    "min_latency_samples": 20,
+    "sample_interval_s": 0.02,
+    "sample_timeout_s": 2,
+    "telemetry_queue_size": 64,
+    "tick_s": 0.001
+  },
+  "start_ns": 227847493373502,
+  "horizon_ns": 227847613373502,
+  "finished_at_ns": 227847636196896,
+  "clock_domain": "process-monotonic-c0e98338-a6fe-462b-9186-bdd1cb708ae3",
+  "offered": 4,
+  "admitted": 4,
+  "counts": {
+    "completed": 4,
+    "failed": 0,
+    "censored": 0,
+    "admitted": 0,
+    "skipped_capacity": 0,
+    "skipped_scheduler": 0,
+    "skipped_horizon": 0,
+    "not_dispatched_run_abort": 0,
+    "offered": 0
+  },
+  "peak_inflight": 1,
+  "observed_horizon": {
+    "observed_at_ns": 227847613984419,
+    "pending_ids": []
+  },
+  "horizon_reached": true,
+  "accounting_checks": {
+    "all_offers_accounted": true,
+    "admitted_conserved": true,
+    "concurrency_respected": true
+  },
+  "pending_at_horizon_reconstructed": [],
+  "post_horizon_terminals": 0,
+  "post_horizon_completed": 0,
+  "post_horizon_failed": 0,
+  "telemetry_overflows": 0,
+  "sampling_skips": {
+    "server": 0,
+    "gpu": 0
+  },
+  "sampling_errors": {
+    "server": 0,
+    "gpu": 0
+  },
+  "sampling_cancelled": {
+    "server": 0,
+    "gpu": 0
+  },
+  "receipt_coverage_clean": true,
+  "interval_records": [],
+  "interval_collection_errors": 0,
+  "live_interval_tasks": 0,
+  "live_request_tasks": 0,
+  "live_sampling_tasks": 0,
+  "ledger": [
+    {
+      "request_id": "r0",
+      "offset_ns": 0,
+      "due_at_ns": 227847493373502,
+      "state": "completed",
+      "admitted_at_ns": 227847493983311,
+      "terminal": {
+        "completion": {
+          "request_id": "r0",
+          "start_ns": 227847495050610,
+          "end_ns": 227847500142688,
+          "available_at_ns": 227847500142688,
+          "clock_domain": "process-monotonic-c0e98338-a6fe-462b-9186-bdd1cb708ae3",
+          "success": true,
+          "error_kind": null
+        },
+        "prompt_tokens": 1072,
+        "output_tokens": 32,
+        "usage_error": null
+      },
+      "dispatch_at_ns": 227847493983311,
+      "lateness_ns": 609809,
+      "terminal_received_at_ns": 227847501301178
+    },
+    {
+      "request_id": "r1",
+      "offset_ns": 30000000,
+      "due_at_ns": 227847523373502,
+      "state": "completed",
+      "admitted_at_ns": 227847523948695,
+      "terminal": {
+        "completion": {
+          "request_id": "r1",
+          "start_ns": 227847525762309,
+          "end_ns": 227847530087484,
+          "available_at_ns": 227847530087484,
+          "clock_domain": "process-monotonic-c0e98338-a6fe-462b-9186-bdd1cb708ae3",
+          "success": true,
+          "error_kind": null
+        },
+        "prompt_tokens": 1072,
+        "output_tokens": 32,
+        "usage_error": null
+      },
+      "dispatch_at_ns": 227847523948695,
+      "lateness_ns": 575193,
+      "terminal_received_at_ns": 227847531064817
+    },
+    {
+      "request_id": "r2",
+      "offset_ns": 60000000,
+      "due_at_ns": 227847553373502,
+      "state": "completed",
+      "admitted_at_ns": 227847561235525,
+      "terminal": {
+        "completion": {
+          "request_id": "r2",
+          "start_ns": 227847562666438,
+          "end_ns": 227847567292501,
+          "available_at_ns": 227847567292501,
+          "clock_domain": "process-monotonic-c0e98338-a6fe-462b-9186-bdd1cb708ae3",
+          "success": true,
+          "error_kind": null
+        },
+        "prompt_tokens": 1072,
+        "output_tokens": 32,
+        "usage_error": null
+      },
+      "dispatch_at_ns": 227847561235525,
+      "lateness_ns": 7862023,
+      "terminal_received_at_ns": 227847568621643
+    },
+    {
+      "request_id": "r3",
+      "offset_ns": 90000000,
+      "due_at_ns": 227847583373502,
+      "state": "completed",
+      "admitted_at_ns": 227847583771282,
+      "terminal": {
+        "completion": {
+          "request_id": "r3",
+          "start_ns": 227847585142328,
+          "end_ns": 227847592840390,
+          "available_at_ns": 227847592840390,
+          "clock_domain": "process-monotonic-c0e98338-a6fe-462b-9186-bdd1cb708ae3",
+          "success": true,
+          "error_kind": null
+        },
+        "prompt_tokens": 1072,
+        "output_tokens": 32,
+        "usage_error": null
+      },
+      "dispatch_at_ns": 227847583771282,
+      "lateness_ns": 397780,
+      "terminal_received_at_ns": 227847594898665
+    }
+  ],
+  "raw_records": [
+    {
+      "type": "ServerSample",
+      "received_at_ns": 227847499606124,
+      "window_id": "window-0",
+      "accepted": true,
+      "record": {
+        "sample_id": "server-0",
+        "requested_at_ns": 227847495217996,
+        "received_at_ns": 227847495219496,
+        "clock_domain": "process-monotonic-c0e98338-a6fe-462b-9186-bdd1cb708ae3",
+        "queue_depth": 0.0,
+        "error": null
+      }
+    },
+    {
+      "type": "ObservedCompletion",
+      "received_at_ns": 227847501338347,
+      "window_id": "window-0",
+      "accepted": true,
+      "record": {
+        "completion": {
+          "request_id": "r0",
+          "start_ns": 227847495050610,
+          "end_ns": 227847500142688,
+          "available_at_ns": 227847500142688,
+          "clock_domain": "process-monotonic-c0e98338-a6fe-462b-9186-bdd1cb708ae3",
+          "success": true,
+          "error_kind": null
+        },
+        "prompt_tokens": 1072,
+        "output_tokens": 32,
+        "usage_error": null
+      }
+    },
+    {
+      "type": "ServerSample",
+      "received_at_ns": 227847518223204,
+      "window_id": "window-0",
+      "accepted": true,
+      "record": {
+        "sample_id": "server-1",
+        "requested_at_ns": 227847513614227,
+        "received_at_ns": 227847513615630,
+        "clock_domain": "process-monotonic-c0e98338-a6fe-462b-9186-bdd1cb708ae3",
+        "queue_depth": 0.0,
+        "error": null
+      }
+    },
+    {
+      "type": "ObservedCompletion",
+      "received_at_ns": 227847531098749,
+      "window_id": "window-0",
+      "accepted": true,
+      "record": {
+        "completion": {
+          "request_id": "r1",
+          "start_ns": 227847525762309,
+          "end_ns": 227847530087484,
+          "available_at_ns": 227847530087484,
+          "clock_domain": "process-monotonic-c0e98338-a6fe-462b-9186-bdd1cb708ae3",
+          "success": true,
+          "error_kind": null
+        },
+        "prompt_tokens": 1072,
+        "output_tokens": 32,
+        "usage_error": null
+      }
+    },
+    {
+      "type": "ServerSample",
+      "received_at_ns": 227847537911344,
+      "window_id": "window-1",
+      "accepted": true,
+      "record": {
+        "sample_id": "server-2",
+        "requested_at_ns": 227847533741902,
+        "received_at_ns": 227847533742646,
+        "clock_domain": "process-monotonic-c0e98338-a6fe-462b-9186-bdd1cb708ae3",
+        "queue_depth": 0.0,
+        "error": null
+      }
+    },
+    {
+      "type": "ServerSample",
+      "received_at_ns": 227847556487911,
+      "window_id": "window-1",
+      "accepted": true,
+      "record": {
+        "sample_id": "server-3",
+        "requested_at_ns": 227847553901341,
+        "received_at_ns": 227847553902120,
+        "clock_domain": "process-monotonic-c0e98338-a6fe-462b-9186-bdd1cb708ae3",
+        "queue_depth": 0.0,
+        "error": null
+      }
+    },
+    {
+      "type": "ObservedCompletion",
+      "received_at_ns": 227847568656392,
+      "window_id": "window-1",
+      "accepted": true,
+      "record": {
+        "completion": {
+          "request_id": "r2",
+          "start_ns": 227847562666438,
+          "end_ns": 227847567292501,
+          "available_at_ns": 227847567292501,
+          "clock_domain": "process-monotonic-c0e98338-a6fe-462b-9186-bdd1cb708ae3",
+          "success": true,
+          "error_kind": null
+        },
+        "prompt_tokens": 1072,
+        "output_tokens": 32,
+        "usage_error": null
+      }
+    },
+    {
+      "type": "ServerSample",
+      "received_at_ns": 227847578519711,
+      "window_id": "window-2",
+      "accepted": true,
+      "record": {
+        "sample_id": "server-4",
+        "requested_at_ns": 227847574917936,
+        "received_at_ns": 227847574918856,
+        "clock_domain": "process-monotonic-c0e98338-a6fe-462b-9186-bdd1cb708ae3",
+        "queue_depth": 0.0,
+        "error": null
+      }
+    },
+    {
+      "type": "ObservedCompletion",
+      "received_at_ns": 227847594933753,
+      "window_id": "window-2",
+      "accepted": true,
+      "record": {
+        "completion": {
+          "request_id": "r3",
+          "start_ns": 227847585142328,
+          "end_ns": 227847592840390,
+          "available_at_ns": 227847592840390,
+          "clock_domain": "process-monotonic-c0e98338-a6fe-462b-9186-bdd1cb708ae3",
+          "success": true,
+          "error_kind": null
+        },
+        "prompt_tokens": 1072,
+        "output_tokens": 32,
+        "usage_error": null
+      }
+    },
+    {
+      "type": "ServerSample",
+      "received_at_ns": 227847598909842,
+      "window_id": "window-2",
+      "accepted": true,
+      "record": {
+        "sample_id": "server-5",
+        "requested_at_ns": 227847596323871,
+        "received_at_ns": 227847596324544,
+        "clock_domain": "process-monotonic-c0e98338-a6fe-462b-9186-bdd1cb708ae3",
+        "queue_depth": 0.0,
+        "error": null
+      }
+    }
+  ],
+  "telemetry_drops": [],
+  "events": [
+    {
+      "sequence": 0,
+      "event": "offered_request_decided",
+      "received_at_ns": 227847494032825,
+      "request_id": "r0",
+      "state": "admitted",
+      "due_at_ns": 227847493373502
+    },
+    {
+      "sequence": 1,
+      "event": "offered_request_decided",
+      "received_at_ns": 227847524124507,
+      "request_id": "r1",
+      "state": "admitted",
+      "due_at_ns": 227847523373502
+    },
+    {
+      "sequence": 2,
+      "event": "window_closed",
+      "received_at_ns": 227847556671520,
+      "window_id": "window-0",
+      "outstanding_admitted_ids": []
+    },
+    {
+      "sequence": 3,
+      "event": "offered_request_decided",
+      "received_at_ns": 227847561287144,
+      "request_id": "r2",
+      "state": "admitted",
+      "due_at_ns": 227847553373502
+    },
+    {
+      "sequence": 4,
+      "event": "offered_request_decided",
+      "received_at_ns": 227847583811209,
+      "request_id": "r3",
+      "state": "admitted",
+      "due_at_ns": 227847583373502
+    },
+    {
+      "sequence": 5,
+      "event": "window_closed",
+      "received_at_ns": 227847595053237,
+      "window_id": "window-1",
+      "outstanding_admitted_ids": []
+    },
+    {
+      "sequence": 6,
+      "event": "window_closed",
+      "received_at_ns": 227847635094522,
+      "window_id": "window-2",
+      "outstanding_admitted_ids": []
+    }
+  ],
+  "feature_windows": [
+    {
+      "window_id": "window-0",
+      "metrics": [
+        {
+          "name": "request_p95_ms",
+          "source": "request",
+          "unit": "ms",
+          "value": null,
+          "valid_samples": 0,
+          "attempted_samples": 2,
+          "coverage": "unavailable",
+          "missing_reason": "insufficient_successful_completions",
+          "acquisition": {
+            "start_ns": 227847493373502,
+            "end_ns": 227847533373502,
+            "available_at_ns": 227847556513360,
+            "clock_domain": "process-monotonic-c0e98338-a6fe-462b-9186-bdd1cb708ae3"
+          }
+        },
+        {
+          "name": "completed_rps",
+          "source": "request",
+          "unit": "requests/s",
+          "value": 50.0,
+          "valid_samples": 1,
+          "attempted_samples": 1,
+          "coverage": "complete",
+          "missing_reason": null,
+          "acquisition": {
+            "start_ns": 227847493373502,
+            "end_ns": 227847533373502,
+            "available_at_ns": 227847556513360,
+            "clock_domain": "process-monotonic-c0e98338-a6fe-462b-9186-bdd1cb708ae3"
+          }
+        },
+        {
+          "name": "prompt_tokens_mean",
+          "source": "request",
+          "unit": "tokens",
+          "value": 1072.0,
+          "valid_samples": 2,
+          "attempted_samples": 2,
+          "coverage": "complete",
+          "missing_reason": null,
+          "acquisition": {
+            "start_ns": 227847493373502,
+            "end_ns": 227847533373502,
+            "available_at_ns": 227847556513360,
+            "clock_domain": "process-monotonic-c0e98338-a6fe-462b-9186-bdd1cb708ae3"
+          }
+        },
+        {
+          "name": "output_tokens_mean",
+          "source": "request",
+          "unit": "tokens",
+          "value": 32.0,
+          "valid_samples": 2,
+          "attempted_samples": 2,
+          "coverage": "complete",
+          "missing_reason": null,
+          "acquisition": {
+            "start_ns": 227847493373502,
+            "end_ns": 227847533373502,
+            "available_at_ns": 227847556513360,
+            "clock_domain": "process-monotonic-c0e98338-a6fe-462b-9186-bdd1cb708ae3"
+          }
+        },
+        {
+          "name": "queue_depth_mean",
+          "source": "server",
+          "unit": "requests",
+          "value": 0.0,
+          "valid_samples": 2,
+          "attempted_samples": 2,
+          "coverage": "complete",
+          "missing_reason": null,
+          "acquisition": {
+            "start_ns": 227847493373502,
+            "end_ns": 227847533373502,
+            "available_at_ns": 227847556513360,
+            "clock_domain": "process-monotonic-c0e98338-a6fe-462b-9186-bdd1cb708ae3"
+          }
+        },
+        {
+          "name": "gpu_util_mean",
+          "source": "gpu",
+          "unit": "percent",
+          "value": null,
+          "valid_samples": 0,
+          "attempted_samples": 0,
+          "coverage": "unavailable",
+          "missing_reason": "no_valid_gpu_samples",
+          "acquisition": {
+            "start_ns": 227847493373502,
+            "end_ns": 227847533373502,
+            "available_at_ns": 227847556513360,
+            "clock_domain": "process-monotonic-c0e98338-a6fe-462b-9186-bdd1cb708ae3"
+          }
+        },
+        {
+          "name": "request_wait_p95_ms",
+          "source": "server",
+          "unit": "ms",
+          "value": null,
+          "valid_samples": 0,
+          "attempted_samples": 0,
+          "coverage": "unavailable",
+          "missing_reason": "unsupported_interval_statistic_by_queue_gauge_collector",
+          "acquisition": {
+            "start_ns": 227847493373502,
+            "end_ns": 227847533373502,
+            "available_at_ns": 227847556513360,
+            "clock_domain": "process-monotonic-c0e98338-a6fe-462b-9186-bdd1cb708ae3"
+          }
+        },
+        {
+          "name": "prefill_service_fraction",
+          "source": "server",
+          "unit": "fraction",
+          "value": null,
+          "valid_samples": 0,
+          "attempted_samples": 0,
+          "coverage": "unavailable",
+          "missing_reason": "unsupported_interval_statistic_by_queue_gauge_collector",
+          "acquisition": {
+            "start_ns": 227847493373502,
+            "end_ns": 227847533373502,
+            "available_at_ns": 227847556513360,
+            "clock_domain": "process-monotonic-c0e98338-a6fe-462b-9186-bdd1cb708ae3"
+          }
+        }
+      ],
+      "audit": {
+        "start_ns": 227847493373502,
+        "end_ns": 227847533373502,
+        "deadline_ns": 227847553373502,
+        "closed_at_ns": 227847556513360,
+        "min_latency_samples": 20,
+        "threshold_role": "development_guard_not_calibrated",
+        "completion_count": 2,
+        "successful_completions": 2,
+        "request_errors": 0,
+        "usage_missing": 0,
+        "events": [
+          {
+            "kind": "server",
+            "identity": "server-0",
+            "received_at_ns": 227847499589116,
+            "accepted": true,
+            "reason": "accepted"
+          },
+          {
+            "kind": "request",
+            "identity": "r0",
+            "received_at_ns": 227847501330166,
+            "accepted": true,
+            "reason": "accepted"
+          },
+          {
+            "kind": "server",
+            "identity": "server-1",
+            "received_at_ns": 227847518214685,
+            "accepted": true,
+            "reason": "accepted"
+          },
+          {
+            "kind": "request",
+            "identity": "r1",
+            "received_at_ns": 227847531091559,
+            "accepted": true,
+            "reason": "accepted"
+          }
+        ],
+        "note": "Completion-cohort features; pending admissions/censoring are recorded by the workload driver. Gauge means are sample means, not time-weighted means."
+      }
+    },
+    {
+      "window_id": "window-1",
+      "metrics": [
+        {
+          "name": "request_p95_ms",
+          "source": "request",
+          "unit": "ms",
+          "value": null,
+          "valid_samples": 0,
+          "attempted_samples": 1,
+          "coverage": "unavailable",
+          "missing_reason": "insufficient_successful_completions",
+          "acquisition": {
+            "start_ns": 227847533373502,
+            "end_ns": 227847573373502,
+            "available_at_ns": 227847594955655,
+            "clock_domain": "process-monotonic-c0e98338-a6fe-462b-9186-bdd1cb708ae3"
+          }
+        },
+        {
+          "name": "completed_rps",
+          "source": "request",
+          "unit": "requests/s",
+          "value": 25.0,
+          "valid_samples": 1,
+          "attempted_samples": 1,
+          "coverage": "complete",
+          "missing_reason": null,
+          "acquisition": {
+            "start_ns": 227847533373502,
+            "end_ns": 227847573373502,
+            "available_at_ns": 227847594955655,
+            "clock_domain": "process-monotonic-c0e98338-a6fe-462b-9186-bdd1cb708ae3"
+          }
+        },
+        {
+          "name": "prompt_tokens_mean",
+          "source": "request",
+          "unit": "tokens",
+          "value": 1072.0,
+          "valid_samples": 1,
+          "attempted_samples": 1,
+          "coverage": "complete",
+          "missing_reason": null,
+          "acquisition": {
+            "start_ns": 227847533373502,
+            "end_ns": 227847573373502,
+            "available_at_ns": 227847594955655,
+            "clock_domain": "process-monotonic-c0e98338-a6fe-462b-9186-bdd1cb708ae3"
+          }
+        },
+        {
+          "name": "output_tokens_mean",
+          "source": "request",
+          "unit": "tokens",
+          "value": 32.0,
+          "valid_samples": 1,
+          "attempted_samples": 1,
+          "coverage": "complete",
+          "missing_reason": null,
+          "acquisition": {
+            "start_ns": 227847533373502,
+            "end_ns": 227847573373502,
+            "available_at_ns": 227847594955655,
+            "clock_domain": "process-monotonic-c0e98338-a6fe-462b-9186-bdd1cb708ae3"
+          }
+        },
+        {
+          "name": "queue_depth_mean",
+          "source": "server",
+          "unit": "requests",
+          "value": 0.0,
+          "valid_samples": 2,
+          "attempted_samples": 2,
+          "coverage": "complete",
+          "missing_reason": null,
+          "acquisition": {
+            "start_ns": 227847533373502,
+            "end_ns": 227847573373502,
+            "available_at_ns": 227847594955655,
+            "clock_domain": "process-monotonic-c0e98338-a6fe-462b-9186-bdd1cb708ae3"
+          }
+        },
+        {
+          "name": "gpu_util_mean",
+          "source": "gpu",
+          "unit": "percent",
+          "value": null,
+          "valid_samples": 0,
+          "attempted_samples": 0,
+          "coverage": "unavailable",
+          "missing_reason": "no_valid_gpu_samples",
+          "acquisition": {
+            "start_ns": 227847533373502,
+            "end_ns": 227847573373502,
+            "available_at_ns": 227847594955655,
+            "clock_domain": "process-monotonic-c0e98338-a6fe-462b-9186-bdd1cb708ae3"
+          }
+        },
+        {
+          "name": "request_wait_p95_ms",
+          "source": "server",
+          "unit": "ms",
+          "value": null,
+          "valid_samples": 0,
+          "attempted_samples": 0,
+          "coverage": "unavailable",
+          "missing_reason": "unsupported_interval_statistic_by_queue_gauge_collector",
+          "acquisition": {
+            "start_ns": 227847533373502,
+            "end_ns": 227847573373502,
+            "available_at_ns": 227847594955655,
+            "clock_domain": "process-monotonic-c0e98338-a6fe-462b-9186-bdd1cb708ae3"
+          }
+        },
+        {
+          "name": "prefill_service_fraction",
+          "source": "server",
+          "unit": "fraction",
+          "value": null,
+          "valid_samples": 0,
+          "attempted_samples": 0,
+          "coverage": "unavailable",
+          "missing_reason": "unsupported_interval_statistic_by_queue_gauge_collector",
+          "acquisition": {
+            "start_ns": 227847533373502,
+            "end_ns": 227847573373502,
+            "available_at_ns": 227847594955655,
+            "clock_domain": "process-monotonic-c0e98338-a6fe-462b-9186-bdd1cb708ae3"
+          }
+        }
+      ],
+      "audit": {
+        "start_ns": 227847533373502,
+        "end_ns": 227847573373502,
+        "deadline_ns": 227847593373502,
+        "closed_at_ns": 227847594955655,
+        "min_latency_samples": 20,
+        "threshold_role": "development_guard_not_calibrated",
+        "completion_count": 1,
+        "successful_completions": 1,
+        "request_errors": 0,
+        "usage_missing": 0,
+        "events": [
+          {
+            "kind": "server",
+            "identity": "server-2",
+            "received_at_ns": 227847537899790,
+            "accepted": true,
+            "reason": "accepted"
+          },
+          {
+            "kind": "server",
+            "identity": "server-3",
+            "received_at_ns": 227847556480868,
+            "accepted": true,
+            "reason": "accepted"
+          },
+          {
+            "kind": "request",
+            "identity": "r2",
+            "received_at_ns": 227847568648920,
+            "accepted": true,
+            "reason": "accepted"
+          }
+        ],
+        "note": "Completion-cohort features; pending admissions/censoring are recorded by the workload driver. Gauge means are sample means, not time-weighted means."
+      }
+    },
+    {
+      "window_id": "window-2",
+      "metrics": [
+        {
+          "name": "request_p95_ms",
+          "source": "request",
+          "unit": "ms",
+          "value": null,
+          "valid_samples": 0,
+          "attempted_samples": 1,
+          "coverage": "unavailable",
+          "missing_reason": "insufficient_successful_completions",
+          "acquisition": {
+            "start_ns": 227847573373502,
+            "end_ns": 227847613373502,
+            "available_at_ns": 227847634989020,
+            "clock_domain": "process-monotonic-c0e98338-a6fe-462b-9186-bdd1cb708ae3"
+          }
+        },
+        {
+          "name": "completed_rps",
+          "source": "request",
+          "unit": "requests/s",
+          "value": 25.0,
+          "valid_samples": 1,
+          "attempted_samples": 1,
+          "coverage": "complete",
+          "missing_reason": null,
+          "acquisition": {
+            "start_ns": 227847573373502,
+            "end_ns": 227847613373502,
+            "available_at_ns": 227847634989020,
+            "clock_domain": "process-monotonic-c0e98338-a6fe-462b-9186-bdd1cb708ae3"
+          }
+        },
+        {
+          "name": "prompt_tokens_mean",
+          "source": "request",
+          "unit": "tokens",
+          "value": 1072.0,
+          "valid_samples": 1,
+          "attempted_samples": 1,
+          "coverage": "complete",
+          "missing_reason": null,
+          "acquisition": {
+            "start_ns": 227847573373502,
+            "end_ns": 227847613373502,
+            "available_at_ns": 227847634989020,
+            "clock_domain": "process-monotonic-c0e98338-a6fe-462b-9186-bdd1cb708ae3"
+          }
+        },
+        {
+          "name": "output_tokens_mean",
+          "source": "request",
+          "unit": "tokens",
+          "value": 32.0,
+          "valid_samples": 1,
+          "attempted_samples": 1,
+          "coverage": "complete",
+          "missing_reason": null,
+          "acquisition": {
+            "start_ns": 227847573373502,
+            "end_ns": 227847613373502,
+            "available_at_ns": 227847634989020,
+            "clock_domain": "process-monotonic-c0e98338-a6fe-462b-9186-bdd1cb708ae3"
+          }
+        },
+        {
+          "name": "queue_depth_mean",
+          "source": "server",
+          "unit": "requests",
+          "value": 0.0,
+          "valid_samples": 2,
+          "attempted_samples": 2,
+          "coverage": "complete",
+          "missing_reason": null,
+          "acquisition": {
+            "start_ns": 227847573373502,
+            "end_ns": 227847613373502,
+            "available_at_ns": 227847634989020,
+            "clock_domain": "process-monotonic-c0e98338-a6fe-462b-9186-bdd1cb708ae3"
+          }
+        },
+        {
+          "name": "gpu_util_mean",
+          "source": "gpu",
+          "unit": "percent",
+          "value": null,
+          "valid_samples": 0,
+          "attempted_samples": 0,
+          "coverage": "unavailable",
+          "missing_reason": "no_valid_gpu_samples",
+          "acquisition": {
+            "start_ns": 227847573373502,
+            "end_ns": 227847613373502,
+            "available_at_ns": 227847634989020,
+            "clock_domain": "process-monotonic-c0e98338-a6fe-462b-9186-bdd1cb708ae3"
+          }
+        },
+        {
+          "name": "request_wait_p95_ms",
+          "source": "server",
+          "unit": "ms",
+          "value": null,
+          "valid_samples": 0,
+          "attempted_samples": 0,
+          "coverage": "unavailable",
+          "missing_reason": "unsupported_interval_statistic_by_queue_gauge_collector",
+          "acquisition": {
+            "start_ns": 227847573373502,
+            "end_ns": 227847613373502,
+            "available_at_ns": 227847634989020,
+            "clock_domain": "process-monotonic-c0e98338-a6fe-462b-9186-bdd1cb708ae3"
+          }
+        },
+        {
+          "name": "prefill_service_fraction",
+          "source": "server",
+          "unit": "fraction",
+          "value": null,
+          "valid_samples": 0,
+          "attempted_samples": 0,
+          "coverage": "unavailable",
+          "missing_reason": "unsupported_interval_statistic_by_queue_gauge_collector",
+          "acquisition": {
+            "start_ns": 227847573373502,
+            "end_ns": 227847613373502,
+            "available_at_ns": 227847634989020,
+            "clock_domain": "process-monotonic-c0e98338-a6fe-462b-9186-bdd1cb708ae3"
+          }
+        }
+      ],
+      "audit": {
+        "start_ns": 227847573373502,
+        "end_ns": 227847613373502,
+        "deadline_ns": 227847633373502,
+        "closed_at_ns": 227847634989020,
+        "min_latency_samples": 20,
+        "threshold_role": "development_guard_not_calibrated",
+        "completion_count": 1,
+        "successful_completions": 1,
+        "request_errors": 0,
+        "usage_missing": 0,
+        "events": [
+          {
+            "kind": "server",
+            "identity": "server-4",
+            "received_at_ns": 227847578511236,
+            "accepted": true,
+            "reason": "accepted"
+          },
+          {
+            "kind": "request",
+            "identity": "r3",
+            "received_at_ns": 227847594926225,
+            "accepted": true,
+            "reason": "accepted"
+          },
+          {
+            "kind": "server",
+            "identity": "server-5",
+            "received_at_ns": 227847598901798,
+            "accepted": true,
+            "reason": "accepted"
+          }
+        ],
+        "note": "Completion-cohort features; pending admissions/censoring are recorded by the workload driver. Gauge means are sample means, not time-weighted means."
+      }
+    }
+  ],
+  "note": "Offered schedule is fixed; admitted/completed work may differ. Reconstructed horizon state uses later receipts and is evaluator-only. No server/profiler lifecycle or calibrated diagnosis implemented."
+}

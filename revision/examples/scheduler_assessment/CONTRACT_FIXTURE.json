@@ -1,0 +1,329 @@
+{
+  "record_role": "synthetic_contract_fixture_not_scientific_choices_or_human_review",
+  "values_are_synthetic_not_study_choices": true,
+  "actual_assessor_input": false,
+  "packet": {
+    "audit_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "campaign_manifest_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+    "catalog": {
+      "source-a": {
+        "artifact": {
+          "artifact_id": "source-a",
+          "path": "source-a.json",
+          "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "channel": "server_diagnostics",
+          "acquisition": {
+            "start_ns": 10,
+            "end_ns": 20,
+            "available_at_ns": 100,
+            "clock_domain": "synthetic"
+          }
+        },
+        "family": "host_schedule_event_history"
+      },
+      "source-b": {
+        "artifact": {
+          "artifact_id": "source-b",
+          "path": "source-b.json",
+          "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "channel": "server_diagnostics",
+          "acquisition": {
+            "start_ns": 10,
+            "end_ns": 20,
+            "available_at_ns": 100,
+            "clock_domain": "synthetic"
+          }
+        },
+        "family": "host_schedule_event_history"
+      },
+      "client": {
+        "artifact": {
+          "artifact_id": "client",
+          "path": "client.json",
+          "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "channel": "request_diagnostics",
+          "acquisition": {
+            "start_ns": 10,
+            "end_ns": 20,
+            "available_at_ns": 100,
+            "clock_domain": "synthetic"
+          }
+        },
+        "family": "client_response_timing"
+      }
+    },
+    "cases": [
+      {
+        "case_id": "window-a",
+        "allowed_artifact_ids": [
+          "source-a",
+          "client"
+        ]
+      },
+      {
+        "case_id": "window-b",
+        "allowed_artifact_ids": [
+          "source-b"
+        ]
+      }
+    ],
+    "fixture_role": "synthetic_only_not_actual_assessment"
+  },
+  "criteria": {
+    "version": "scheduler_assessment_workflow_v1",
+    "record_role": "scientific_criteria_declaration_not_acceptance",
+    "source_audit_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "campaign_manifest_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+    "measurand": "host_engine_admission_to_first_positive_CPU_schedule_decision_interval",
+    "cohort": "schedule_bracket_wholly_inside_half_open_window",
+    "scientific_limits": {
+      "max_hook_bracket_width_ms": {
+        "value": 0.1,
+        "unit": "ms",
+        "definition": "Synthetic test definition only.",
+        "rationale": "Synthetic test rationale only."
+      },
+      "max_wait_interval_width_ms": {
+        "value": 0.1,
+        "unit": "ms",
+        "definition": "Synthetic test definition only.",
+        "rationale": "Synthetic test rationale only."
+      },
+      "relative_uncertainty_normalizer": {
+        "value": "synthetic_definition_not_a_study_choice",
+        "unit": "definition",
+        "definition": "Synthetic test definition only.",
+        "rationale": "Synthetic test rationale only."
+      },
+      "max_relative_wait_uncertainty": {
+        "value": 0.1,
+        "unit": "relative_fraction",
+        "definition": "Synthetic test definition only.",
+        "rationale": "Synthetic test rationale only."
+      },
+      "max_boundary_ambiguous_fraction": {
+        "value": 0.1,
+        "unit": "fraction",
+        "definition": "Synthetic test definition only.",
+        "rationale": "Synthetic test rationale only."
+      },
+      "min_scheduler_requests_per_window": {
+        "value": 2,
+        "unit": "requests",
+        "definition": "Synthetic test definition only.",
+        "rationale": "Synthetic test rationale only."
+      },
+      "target_percentile_precision": {
+        "value": 0.1,
+        "unit": "ms",
+        "definition": "Synthetic test definition only.",
+        "rationale": "Synthetic test rationale only."
+      },
+      "target_confidence_level": {
+        "value": 0.95,
+        "unit": "probability",
+        "definition": "Synthetic test definition only.",
+        "rationale": "Synthetic test rationale only."
+      },
+      "max_evidence_readiness_latency_ms": {
+        "value": 0.1,
+        "unit": "ms",
+        "definition": "Synthetic test definition only.",
+        "rationale": "Synthetic test rationale only."
+      },
+      "max_source_probe_gap_ms": {
+        "value": 0.1,
+        "unit": "ms",
+        "definition": "Synthetic test definition only.",
+        "rationale": "Synthetic test rationale only."
+      },
+      "max_pair_work_mismatch": {
+        "value": 0.1,
+        "unit": "mismatched_request_fraction",
+        "definition": "Synthetic test definition only.",
+        "rationale": "Synthetic test rationale only."
+      },
+      "max_pair_latency_mismatch": {
+        "value": 0.1,
+        "unit": "relative_fraction",
+        "definition": "Synthetic test definition only.",
+        "rationale": "Synthetic test rationale only."
+      },
+      "min_independent_repetitions": {
+        "value": 2,
+        "unit": "repetitions",
+        "definition": "Synthetic test definition only.",
+        "rationale": "Synthetic test rationale only."
+      },
+      "reference_agreement_requirement": {
+        "value": "synthetic_definition_not_a_study_choice",
+        "unit": "definition",
+        "definition": "Synthetic test definition only.",
+        "rationale": "Synthetic test rationale only."
+      }
+    },
+    "decision_provenance": {
+      "author": "synthetic-criterion-author",
+      "decided_at_utc": "2026-10-28T00:00:00Z",
+      "development_data_informed": true,
+      "rationale": "Synthetic declaration; no actual scientific decisions.",
+      "confirmation_scope": "future_disjoint_collection_only"
+    },
+    "evidence_separation": {
+      "classifier_evidence_families": [
+        "client_response_timing"
+      ],
+      "reference_evidence_families": [
+        "host_schedule_event_history"
+      ],
+      "rationale": "Separate synthetic families, not demonstrated causal independence."
+    }
+  },
+  "review": {
+    "version": "scheduler_assessment_workflow_v1",
+    "record_role": "evaluator_only_gap_worksheet_not_reference",
+    "packet_sha256": "41084ff73fc9941d6c93e51c220b96ea819e53415b70541d8d48362006c0bb10",
+    "criteria_sha256": "a9d0f14db67e9871b7f4c475ce8c0366b6f0c1cf04a19ab48ec2a63a7f77d835",
+    "assessor_id": "synthetic-assessor",
+    "blinded_to_predictions_and_policy": false,
+    "blinding_scope_statement": "Unblinded synthetic metadata.",
+    "independence_statement": "Fixture declaration only.",
+    "limitations": [
+      "Synthetic test, not a human assessment."
+    ],
+    "cases": [
+      {
+        "case_id": "window-a",
+        "outcome": "unresolved",
+        "reviewed_artifacts": [
+          {
+            "artifact_id": "source-a",
+            "purpose": "candidate_reference"
+          }
+        ],
+        "measurand_cohort_rationale": "Synthetic gap rationale only.",
+        "precision_missingness_rationale": "Synthetic gap rationale only.",
+        "independence_alternatives": "Synthetic gap rationale only.",
+        "negative_evidence_limits": "Synthetic gap rationale only.",
+        "readiness_and_mismatch_rationale": "Synthetic gap rationale only.",
+        "additional_evidence_needed": "Synthetic gap rationale only."
+      },
+      {
+        "case_id": "window-b",
+        "outcome": "unresolved",
+        "reviewed_artifacts": [
+          {
+            "artifact_id": "source-b",
+            "purpose": "candidate_reference"
+          }
+        ],
+        "measurand_cohort_rationale": "Synthetic gap rationale only.",
+        "precision_missingness_rationale": "Synthetic gap rationale only.",
+        "independence_alternatives": "Synthetic gap rationale only.",
+        "negative_evidence_limits": "Synthetic gap rationale only.",
+        "readiness_and_mismatch_rationale": "Synthetic gap rationale only.",
+        "additional_evidence_needed": "Synthetic gap rationale only."
+      }
+    ]
+  },
+  "complete_declarations_validation": {
+    "version": "scheduler_assessment_workflow_v1",
+    "criteria_sha256": "a9d0f14db67e9871b7f4c475ce8c0366b6f0c1cf04a19ab48ec2a63a7f77d835",
+    "structure_complete": true,
+    "status": "complete_declarations_only_not_scientific_acceptance",
+    "missing_fields": [],
+    "development_data_informed": true,
+    "scientific_adequacy_verified": false,
+    "decision_provenance_authenticated": false,
+    "existing_development_data_confirmed": false,
+    "reference_export_enabled": false,
+    "references_created": 0,
+    "references_locked": 0,
+    "calibration_enabled": false,
+    "study_ready": false
+  },
+  "gap_review_validation": {
+    "version": "scheduler_assessment_workflow_v1",
+    "review_sha256": "766a9d35c0b0d4b82b1cbce22815a315f36262046ef5cc2d6c915b10a8a31d0c",
+    "criteria_sha256": "a9d0f14db67e9871b7f4c475ce8c0366b6f0c1cf04a19ab48ec2a63a7f77d835",
+    "review_structure_complete": true,
+    "criteria_structure_complete": true,
+    "missing_fields": [],
+    "status": "gap_review_structure_complete_not_adjudication",
+    "assessor_identity_authenticated": false,
+    "actual_blinding_verified": false,
+    "causal_reference_validated": false,
+    "references_created": 0,
+    "references_locked": 0,
+    "reference_export_enabled": false,
+    "calibration_enabled": false,
+    "study_ready": false
+  },
+  "blank_criteria_validation": {
+    "version": "scheduler_assessment_workflow_v1",
+    "criteria_sha256": "cfbe793d1e9540c3bae503e0ae003878f6a6d485176355f30be9d13aa6156db2",
+    "structure_complete": false,
+    "status": "blocked_incomplete_criteria",
+    "missing_fields": [
+      "max_hook_bracket_width_ms.definition",
+      "max_hook_bracket_width_ms.rationale",
+      "max_hook_bracket_width_ms.value",
+      "max_wait_interval_width_ms.definition",
+      "max_wait_interval_width_ms.rationale",
+      "max_wait_interval_width_ms.value",
+      "relative_uncertainty_normalizer.definition",
+      "relative_uncertainty_normalizer.rationale",
+      "relative_uncertainty_normalizer.value",
+      "max_relative_wait_uncertainty.definition",
+      "max_relative_wait_uncertainty.rationale",
+      "max_relative_wait_uncertainty.value",
+      "max_boundary_ambiguous_fraction.definition",
+      "max_boundary_ambiguous_fraction.rationale",
+      "max_boundary_ambiguous_fraction.value",
+      "min_scheduler_requests_per_window.definition",
+      "min_scheduler_requests_per_window.rationale",
+      "min_scheduler_requests_per_window.value",
+      "target_percentile_precision.definition",
+      "target_percentile_precision.rationale",
+      "target_percentile_precision.value",
+      "target_confidence_level.definition",
+      "target_confidence_level.rationale",
+      "target_confidence_level.value",
+      "max_evidence_readiness_latency_ms.definition",
+      "max_evidence_readiness_latency_ms.rationale",
+      "max_evidence_readiness_latency_ms.value",
+      "max_source_probe_gap_ms.definition",
+      "max_source_probe_gap_ms.rationale",
+      "max_source_probe_gap_ms.value",
+      "max_pair_work_mismatch.definition",
+      "max_pair_work_mismatch.rationale",
+      "max_pair_work_mismatch.value",
+      "max_pair_latency_mismatch.definition",
+      "max_pair_latency_mismatch.rationale",
+      "max_pair_latency_mismatch.value",
+      "min_independent_repetitions.definition",
+      "min_independent_repetitions.rationale",
+      "min_independent_repetitions.value",
+      "reference_agreement_requirement.definition",
+      "reference_agreement_requirement.rationale",
+      "reference_agreement_requirement.value",
+      "decision_provenance.author",
+      "decision_provenance.rationale",
+      "decision_provenance.decided_at_utc",
+      "decision_provenance.development_data_informed",
+      "classifier_evidence_families",
+      "reference_evidence_families",
+      "evidence_separation.rationale"
+    ],
+    "development_data_informed": null,
+    "scientific_adequacy_verified": false,
+    "decision_provenance_authenticated": false,
+    "existing_development_data_confirmed": false,
+    "reference_export_enabled": false,
+    "references_created": 0,
+    "references_locked": 0,
+    "calibration_enabled": false,
+    "study_ready": false
+  },
+  "references_created": 0
+}

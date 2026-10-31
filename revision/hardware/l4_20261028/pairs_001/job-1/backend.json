@@ -1,0 +1,150 @@
+{
+  "backend_version": "nsys_serving_pilot_v1",
+  "capture_range_end_mode": "repeat_sync",
+  "nsys_contract": "2026.3.1",
+  "vllm_contract": "0.10.2",
+  "ordinal": 1,
+  "events": [
+    {
+      "event": "command_started",
+      "capture_id": "trace-job-1",
+      "timestamp_ns": 174041178343779,
+      "clock_domain": "process-monotonic-900bccaf-6fb7-4426-a27f-1426414b7896",
+      "stage": "start",
+      "argv": [
+        "/workspace/envs/vllm/bin/python",
+        "/workspace/gpu_adaptive_tracing_step025/revision/scripts/profile_http_command.py",
+        "http://127.0.0.1:8012/start_profile"
+      ],
+      "pid": 5700
+    },
+    {
+      "event": "command_exited",
+      "capture_id": "trace-job-1",
+      "timestamp_ns": 174041519350239,
+      "clock_domain": "process-monotonic-900bccaf-6fb7-4426-a27f-1426414b7896",
+      "stage": "start",
+      "returncode": 0
+    },
+    {
+      "event": "capture_started_ack_received",
+      "capture_id": "trace-job-1",
+      "timestamp_ns": 174041521612848,
+      "clock_domain": "process-monotonic-900bccaf-6fb7-4426-a27f-1426414b7896",
+      "worker_ack": [
+        {
+          "capture_id": "trace-job-1",
+          "token": "0ce4bc2f928042cda9787de187421695",
+          "ordinal": 1,
+          "action": "start",
+          "source": "cuda_worker_api",
+          "pid": 5432,
+          "device_uuid": "GPU-baa93118-dfa3-1258-be9e-b6051b77c1cb",
+          "requested_at_ns": 174041265934996,
+          "returned_at_ns": 174041495448509,
+          "cuda_return_code": 0,
+          "clock_domain": "process-monotonic-900bccaf-6fb7-4426-a27f-1426414b7896"
+        }
+      ],
+      "nsys_callback": {
+        "source": "nsys_callback",
+        "action": "start",
+        "timestamp_ns": 174041501307303,
+        "clock_domain": "process-monotonic-900bccaf-6fb7-4426-a27f-1426414b7896",
+        "session_name": "profile-5193",
+        "callback_name": "after-collection-start",
+        "capture_id": "trace-job-1",
+        "token": "0ce4bc2f928042cda9787de187421695",
+        "ordinal": 1
+      }
+    },
+    {
+      "event": "command_started",
+      "capture_id": "trace-job-1",
+      "timestamp_ns": 174049808839024,
+      "clock_domain": "process-monotonic-900bccaf-6fb7-4426-a27f-1426414b7896",
+      "stage": "stop",
+      "argv": [
+        "/workspace/envs/vllm/bin/python",
+        "/workspace/gpu_adaptive_tracing_step025/revision/scripts/profile_http_command.py",
+        "http://127.0.0.1:8012/stop_profile"
+      ],
+      "pid": 5721
+    },
+    {
+      "event": "command_exited",
+      "capture_id": "trace-job-1",
+      "timestamp_ns": 174050945459161,
+      "clock_domain": "process-monotonic-900bccaf-6fb7-4426-a27f-1426414b7896",
+      "stage": "stop",
+      "returncode": 0
+    },
+    {
+      "event": "capture_stopped_ack_received",
+      "capture_id": "trace-job-1",
+      "timestamp_ns": 174050946249050,
+      "clock_domain": "process-monotonic-900bccaf-6fb7-4426-a27f-1426414b7896",
+      "worker_ack": [
+        {
+          "capture_id": "trace-job-1",
+          "token": "0ce4bc2f928042cda9787de187421695",
+          "ordinal": 1,
+          "action": "stop",
+          "source": "cuda_worker_api",
+          "pid": 5432,
+          "device_uuid": "GPU-baa93118-dfa3-1258-be9e-b6051b77c1cb",
+          "requested_at_ns": 174049897182041,
+          "returned_at_ns": 174050914669603,
+          "cuda_return_code": 0,
+          "clock_domain": "process-monotonic-900bccaf-6fb7-4426-a27f-1426414b7896"
+        }
+      ]
+    },
+    {
+      "event": "report_detected",
+      "capture_id": "trace-job-1",
+      "timestamp_ns": 174050958114031,
+      "clock_domain": "process-monotonic-900bccaf-6fb7-4426-a27f-1426414b7896",
+      "callback": null,
+      "readiness_basis": "sync_cudaProfilerStop_return_pending_export_validation"
+    },
+    {
+      "event": "command_started",
+      "capture_id": "trace-job-1",
+      "timestamp_ns": 174050960685422,
+      "clock_domain": "process-monotonic-900bccaf-6fb7-4426-a27f-1426414b7896",
+      "stage": "export",
+      "argv": [
+        "nsys",
+        "export",
+        "--type=sqlite",
+        "--output=/workspace/gpu_adaptive_tracing_step025/revision/hardware/l4_20261028/pairs_001/job-1/session-1/attempts/0ce4bc2f928042cda9787de187421695/capture.sqlite",
+        "/workspace/gpu_adaptive_tracing_step025/revision/hardware/l4_20261028/pairs_001/job-1/session-1/capture.1.nsys-rep"
+      ],
+      "pid": 5729
+    },
+    {
+      "event": "command_exited",
+      "capture_id": "trace-job-1",
+      "timestamp_ns": 174051229706672,
+      "clock_domain": "process-monotonic-900bccaf-6fb7-4426-a27f-1426414b7896",
+      "stage": "export",
+      "returncode": 0
+    },
+    {
+      "event": "report_ready",
+      "capture_id": "trace-job-1",
+      "timestamp_ns": 174051229778913,
+      "clock_domain": "process-monotonic-900bccaf-6fb7-4426-a27f-1426414b7896",
+      "readiness_basis": "sync_cudaProfilerStop_ack_and_successful_export"
+    }
+  ],
+  "attempts": {
+    "trace-job-1": {
+      "ordinal": 1,
+      "state": "ready",
+      "error": null,
+      "cleanup_complete": true
+    }
+  }
+}

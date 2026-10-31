@@ -1,0 +1,4826 @@
+{
+  "playback_version": "schedule_playback_v1",
+  "provenance": "live_online",
+  "status": "completed",
+  "failure": null,
+  "schedule_file_sha256": "4f6473273601eedf65010f9ad0c479c4c7194941178c36723aa6087c996ca85c",
+  "schedule_content_sha256": "4f6473273601eedf65010f9ad0c479c4c7194941178c36723aa6087c996ca85c",
+  "config": {
+    "max_inflight": 4,
+    "request_timeout_s": 12,
+    "drain_s": 15,
+    "max_admission_lateness_s": 0.25,
+    "window_s": 2,
+    "grace_s": 0.25,
+    "min_latency_samples": 2,
+    "sample_interval_s": 0.5,
+    "sample_timeout_s": 3,
+    "telemetry_queue_size": 64,
+    "tick_s": 0.001
+  },
+  "start_ns": 174143924073108,
+  "horizon_ns": 174151924073108,
+  "finished_at_ns": 174152189832240,
+  "clock_domain": "process-monotonic-900bccaf-6fb7-4426-a27f-1426414b7896",
+  "offered": 2,
+  "admitted": 2,
+  "counts": {
+    "completed": 2,
+    "failed": 0,
+    "censored": 0,
+    "admitted": 0,
+    "skipped_capacity": 0,
+    "skipped_scheduler": 0,
+    "skipped_horizon": 0,
+    "not_dispatched_run_abort": 0,
+    "offered": 0
+  },
+  "peak_inflight": 1,
+  "observed_horizon": {
+    "observed_at_ns": 174151924562817,
+    "pending_ids": []
+  },
+  "horizon_reached": true,
+  "accounting_checks": {
+    "all_offers_accounted": true,
+    "admitted_conserved": true,
+    "concurrency_respected": true
+  },
+  "pending_at_horizon_reconstructed": [],
+  "post_horizon_terminals": 0,
+  "post_horizon_completed": 0,
+  "post_horizon_failed": 0,
+  "telemetry_overflows": 0,
+  "sampling_skips": {
+    "server": 0,
+    "gpu": 0
+  },
+  "sampling_errors": {
+    "server": 0,
+    "gpu": 0
+  },
+  "sampling_cancelled": {
+    "server": 0,
+    "gpu": 0
+  },
+  "receipt_coverage_clean": true,
+  "interval_records": [],
+  "interval_collection_errors": 0,
+  "live_interval_tasks": 0,
+  "live_request_tasks": 0,
+  "live_sampling_tasks": 0,
+  "ledger": [
+    {
+      "request_id": "r000",
+      "offset_ns": 0,
+      "due_at_ns": 174143924073108,
+      "state": "completed",
+      "admitted_at_ns": 174143924502293,
+      "terminal": {
+        "completion": {
+          "request_id": "r000",
+          "start_ns": 174143924672607,
+          "end_ns": 174145836511148,
+          "available_at_ns": 174145836511148,
+          "clock_domain": "process-monotonic-900bccaf-6fb7-4426-a27f-1426414b7896",
+          "success": true,
+          "error_kind": null
+        },
+        "prompt_tokens": 1072,
+        "output_tokens": 32,
+        "usage_error": null
+      },
+      "dispatch_at_ns": 174143924502293,
+      "lateness_ns": 429185,
+      "terminal_received_at_ns": 174145838074639
+    },
+    {
+      "request_id": "r001",
+      "offset_ns": 4000000000,
+      "due_at_ns": 174147924073108,
+      "state": "completed",
+      "admitted_at_ns": 174147925373180,
+      "terminal": {
+        "completion": {
+          "request_id": "r001",
+          "start_ns": 174147925638529,
+          "end_ns": 174149836866093,
+          "available_at_ns": 174149836866093,
+          "clock_domain": "process-monotonic-900bccaf-6fb7-4426-a27f-1426414b7896",
+          "success": true,
+          "error_kind": null
+        },
+        "prompt_tokens": 1072,
+        "output_tokens": 32,
+        "usage_error": null
+      },
+      "dispatch_at_ns": 174147925373180,
+      "lateness_ns": 1300072,
+      "terminal_received_at_ns": 174149841928898
+    }
+  ],
+  "raw_records": [
+    {
+      "type": "ServerSample",
+      "received_at_ns": 174143956173673,
+      "window_id": "window-0",
+      "accepted": true,
+      "record": {
+        "sample_id": "server-0",
+        "requested_at_ns": 174143925195670,
+        "received_at_ns": 174143941904050,
+        "clock_domain": "process-monotonic-900bccaf-6fb7-4426-a27f-1426414b7896",
+        "queue_depth": 0.0,
+        "error": null
+      }
+    },
+    {
+      "type": "ServerSample",
+      "received_at_ns": 174144456801766,
+      "window_id": "window-0",
+      "accepted": true,
+      "record": {
+        "sample_id": "server-1",
+        "requested_at_ns": 174144425119424,
+        "received_at_ns": 174144442830374,
+        "clock_domain": "process-monotonic-900bccaf-6fb7-4426-a27f-1426414b7896",
+        "queue_depth": 0.0,
+        "error": null
+      }
+    },
+    {
+      "type": "ServerSample",
+      "received_at_ns": 174144952840853,
+      "window_id": "window-0",
+      "accepted": true,
+      "record": {
+        "sample_id": "server-2",
+        "requested_at_ns": 174144924606143,
+        "received_at_ns": 174144938765902,
+        "clock_domain": "process-monotonic-900bccaf-6fb7-4426-a27f-1426414b7896",
+        "queue_depth": 0.0,
+        "error": null
+      }
+    },
+    {
+      "type": "ServerSample",
+      "received_at_ns": 174145454508324,
+      "window_id": "window-0",
+      "accepted": true,
+      "record": {
+        "sample_id": "server-3",
+        "requested_at_ns": 174145425226917,
+        "received_at_ns": 174145440638749,
+        "clock_domain": "process-monotonic-900bccaf-6fb7-4426-a27f-1426414b7896",
+        "queue_depth": 0.0,
+        "error": null
+      }
+    },
+    {
+      "type": "ObservedCompletion",
+      "received_at_ns": 174145838122275,
+      "window_id": "window-0",
+      "accepted": true,
+      "record": {
+        "completion": {
+          "request_id": "r000",
+          "start_ns": 174143924672607,
+          "end_ns": 174145836511148,
+          "available_at_ns": 174145836511148,
+          "clock_domain": "process-monotonic-900bccaf-6fb7-4426-a27f-1426414b7896",
+          "success": true,
+          "error_kind": null
+        },
+        "prompt_tokens": 1072,
+        "output_tokens": 32,
+        "usage_error": null
+      }
+    },
+    {
+      "type": "ServerSample",
+      "received_at_ns": 174145956535563,
+      "window_id": "window-1",
+      "accepted": true,
+      "record": {
+        "sample_id": "server-4",
+        "requested_at_ns": 174145924474856,
+        "received_at_ns": 174145942892938,
+        "clock_domain": "process-monotonic-900bccaf-6fb7-4426-a27f-1426414b7896",
+        "queue_depth": 0.0,
+        "error": null
+      }
+    },
+    {
+      "type": "ServerSample",
+      "received_at_ns": 174146455736750,
+      "window_id": "window-1",
+      "accepted": true,
+      "record": {
+        "sample_id": "server-5",
+        "requested_at_ns": 174146425056800,
+        "received_at_ns": 174146440627391,
+        "clock_domain": "process-monotonic-900bccaf-6fb7-4426-a27f-1426414b7896",
+        "queue_depth": 0.0,
+        "error": null
+      }
+    },
+    {
+      "type": "ServerSample",
+      "received_at_ns": 174146955911826,
+      "window_id": "window-1",
+      "accepted": true,
+      "record": {
+        "sample_id": "server-6",
+        "requested_at_ns": 174146925065327,
+        "received_at_ns": 174146941820329,
+        "clock_domain": "process-monotonic-900bccaf-6fb7-4426-a27f-1426414b7896",
+        "queue_depth": 0.0,
+        "error": null
+      }
+    },
+    {
+      "type": "ServerSample",
+      "received_at_ns": 174147455983977,
+      "window_id": "window-1",
+      "accepted": true,
+      "record": {
+        "sample_id": "server-7",
+        "requested_at_ns": 174147424660378,
+        "received_at_ns": 174147440994120,
+        "clock_domain": "process-monotonic-900bccaf-6fb7-4426-a27f-1426414b7896",
+        "queue_depth": 0.0,
+        "error": null
+      }
+    },
+    {
+      "type": "ServerSample",
+      "received_at_ns": 174147958987989,
+      "window_id": "window-2",
+      "accepted": true,
+      "record": {
+        "sample_id": "server-8",
+        "requested_at_ns": 174147924206579,
+        "received_at_ns": 174147943994645,
+        "clock_domain": "process-monotonic-900bccaf-6fb7-4426-a27f-1426414b7896",
+        "queue_depth": 0.0,
+        "error": null
+      }
+    },
+    {
+      "type": "ServerSample",
+      "received_at_ns": 174148455586984,
+      "window_id": "window-2",
+      "accepted": true,
+      "record": {
+        "sample_id": "server-9",
+        "requested_at_ns": 174148424598402,
+        "received_at_ns": 174148441337505,
+        "clock_domain": "process-monotonic-900bccaf-6fb7-4426-a27f-1426414b7896",
+        "queue_depth": 0.0,
+        "error": null
+      }
+    },
+    {
+      "type": "ServerSample",
+      "received_at_ns": 174148955347560,
+      "window_id": "window-2",
+      "accepted": true,
+      "record": {
+        "sample_id": "server-10",
+        "requested_at_ns": 174148925088537,
+        "received_at_ns": 174148939966082,
+        "clock_domain": "process-monotonic-900bccaf-6fb7-4426-a27f-1426414b7896",
+        "queue_depth": 0.0,
+        "error": null
+      }
+    },
+    {
+      "type": "ServerSample",
+      "received_at_ns": 174149453578128,
+      "window_id": "window-2",
+      "accepted": true,
+      "record": {
+        "sample_id": "server-11",
+        "requested_at_ns": 174149424717369,
+        "received_at_ns": 174149439250283,
+        "clock_domain": "process-monotonic-900bccaf-6fb7-4426-a27f-1426414b7896",
+        "queue_depth": 0.0,
+        "error": null
+      }
+    },
+    {
+      "type": "ObservedCompletion",
+      "received_at_ns": 174149841993302,
+      "window_id": "window-2",
+      "accepted": true,
+      "record": {
+        "completion": {
+          "request_id": "r001",
+          "start_ns": 174147925638529,
+          "end_ns": 174149836866093,
+          "available_at_ns": 174149836866093,
+          "clock_domain": "process-monotonic-900bccaf-6fb7-4426-a27f-1426414b7896",
+          "success": true,
+          "error_kind": null
+        },
+        "prompt_tokens": 1072,
+        "output_tokens": 32,
+        "usage_error": null
+      }
+    },
+    {
+      "type": "ServerSample",
+      "received_at_ns": 174149955323029,
+      "window_id": "window-3",
+      "accepted": true,
+      "record": {
+        "sample_id": "server-12",
+        "requested_at_ns": 174149924610284,
+        "received_at_ns": 174149941611313,
+        "clock_domain": "process-monotonic-900bccaf-6fb7-4426-a27f-1426414b7896",
+        "queue_depth": 0.0,
+        "error": null
+      }
+    },
+    {
+      "type": "ServerSample",
+      "received_at_ns": 174150456778850,
+      "window_id": "window-3",
+      "accepted": true,
+      "record": {
+        "sample_id": "server-13",
+        "requested_at_ns": 174150424975561,
+        "received_at_ns": 174150442628810,
+        "clock_domain": "process-monotonic-900bccaf-6fb7-4426-a27f-1426414b7896",
+        "queue_depth": 0.0,
+        "error": null
+      }
+    },
+    {
+      "type": "ServerSample",
+      "received_at_ns": 174150954268719,
+      "window_id": "window-3",
+      "accepted": true,
+      "record": {
+        "sample_id": "server-14",
+        "requested_at_ns": 174150924460863,
+        "received_at_ns": 174150940032093,
+        "clock_domain": "process-monotonic-900bccaf-6fb7-4426-a27f-1426414b7896",
+        "queue_depth": 0.0,
+        "error": null
+      }
+    },
+    {
+      "type": "ServerSample",
+      "received_at_ns": 174151455345810,
+      "window_id": "window-3",
+      "accepted": true,
+      "record": {
+        "sample_id": "server-15",
+        "requested_at_ns": 174151424610035,
+        "received_at_ns": 174151441749939,
+        "clock_domain": "process-monotonic-900bccaf-6fb7-4426-a27f-1426414b7896",
+        "queue_depth": 0.0,
+        "error": null
+      }
+    }
+  ],
+  "telemetry_drops": [],
+  "events": [
+    {
+      "sequence": 0,
+      "event": "offered_request_decided",
+      "received_at_ns": 174143924527737,
+      "request_id": "r000",
+      "state": "admitted",
+      "due_at_ns": 174143924073108
+    },
+    {
+      "sequence": 1,
+      "event": "window_closed",
+      "received_at_ns": 174146174652465,
+      "window_id": "window-0",
+      "outstanding_admitted_ids": []
+    },
+    {
+      "sequence": 2,
+      "event": "offered_request_decided",
+      "received_at_ns": 174147925420774,
+      "request_id": "r001",
+      "state": "admitted",
+      "due_at_ns": 174147924073108
+    },
+    {
+      "sequence": 3,
+      "event": "window_closed",
+      "received_at_ns": 174148175408754,
+      "window_id": "window-1",
+      "outstanding_admitted_ids": [
+        "r001"
+      ]
+    },
+    {
+      "sequence": 4,
+      "event": "window_closed",
+      "received_at_ns": 174150174802000,
+      "window_id": "window-2",
+      "outstanding_admitted_ids": []
+    },
+    {
+      "sequence": 5,
+      "event": "window_closed",
+      "received_at_ns": 174152175232674,
+      "window_id": "window-3",
+      "outstanding_admitted_ids": []
+    }
+  ],
+  "feature_windows": [
+    {
+      "window_id": "window-0",
+      "metrics": [
+        {
+          "name": "request_p95_ms",
+          "source": "request",
+          "unit": "ms",
+          "value": null,
+          "valid_samples": 0,
+          "attempted_samples": 1,
+          "coverage": "unavailable",
+          "missing_reason": "insufficient_successful_completions",
+          "acquisition": {
+            "start_ns": 174143924073108,
+            "end_ns": 174145924073108,
+            "available_at_ns": 174146174367133,
+            "clock_domain": "process-monotonic-900bccaf-6fb7-4426-a27f-1426414b7896"
+          }
+        },
+        {
+          "name": "completed_rps",
+          "source": "request",
+          "unit": "requests/s",
+          "value": 0.5,
+          "valid_samples": 1,
+          "attempted_samples": 1,
+          "coverage": "complete",
+          "missing_reason": null,
+          "acquisition": {
+            "start_ns": 174143924073108,
+            "end_ns": 174145924073108,
+            "available_at_ns": 174146174367133,
+            "clock_domain": "process-monotonic-900bccaf-6fb7-4426-a27f-1426414b7896"
+          }
+        },
+        {
+          "name": "prompt_tokens_mean",
+          "source": "request",
+          "unit": "tokens",
+          "value": 1072.0,
+          "valid_samples": 1,
+          "attempted_samples": 1,
+          "coverage": "complete",
+          "missing_reason": null,
+          "acquisition": {
+            "start_ns": 174143924073108,
+            "end_ns": 174145924073108,
+            "available_at_ns": 174146174367133,
+            "clock_domain": "process-monotonic-900bccaf-6fb7-4426-a27f-1426414b7896"
+          }
+        },
+        {
+          "name": "output_tokens_mean",
+          "source": "request",
+          "unit": "tokens",
+          "value": 32.0,
+          "valid_samples": 1,
+          "attempted_samples": 1,
+          "coverage": "complete",
+          "missing_reason": null,
+          "acquisition": {
+            "start_ns": 174143924073108,
+            "end_ns": 174145924073108,
+            "available_at_ns": 174146174367133,
+            "clock_domain": "process-monotonic-900bccaf-6fb7-4426-a27f-1426414b7896"
+          }
+        },
+        {
+          "name": "queue_depth_mean",
+          "source": "server",
+          "unit": "requests",
+          "value": 0.0,
+          "valid_samples": 4,
+          "attempted_samples": 4,
+          "coverage": "complete",
+          "missing_reason": null,
+          "acquisition": {
+            "start_ns": 174143924073108,
+            "end_ns": 174145924073108,
+            "available_at_ns": 174146174367133,
+            "clock_domain": "process-monotonic-900bccaf-6fb7-4426-a27f-1426414b7896"
+          }
+        },
+        {
+          "name": "gpu_util_mean",
+          "source": "gpu",
+          "unit": "percent",
+          "value": null,
+          "valid_samples": 0,
+          "attempted_samples": 0,
+          "coverage": "unavailable",
+          "missing_reason": "no_valid_gpu_samples",
+          "acquisition": {
+            "start_ns": 174143924073108,
+            "end_ns": 174145924073108,
+            "available_at_ns": 174146174367133,
+            "clock_domain": "process-monotonic-900bccaf-6fb7-4426-a27f-1426414b7896"
+          }
+        },
+        {
+          "name": "request_wait_p95_ms",
+          "source": "server",
+          "unit": "ms",
+          "value": null,
+          "valid_samples": 0,
+          "attempted_samples": 0,
+          "coverage": "unavailable",
+          "missing_reason": "finished_request_logger_cohort_has_no_admission_window_clock_mapping",
+          "acquisition": {
+            "start_ns": 174143924073108,
+            "end_ns": 174145924073108,
+            "available_at_ns": 174146174367133,
+            "clock_domain": "process-monotonic-900bccaf-6fb7-4426-a27f-1426414b7896"
+          }
+        },
+        {
+          "name": "prefill_service_fraction",
+          "source": "server",
+          "unit": "fraction",
+          "value": null,
+          "valid_samples": 0,
+          "attempted_samples": 0,
+          "coverage": "unavailable",
+          "missing_reason": "request_phase_durations_do_not_partition_exclusive_GPU_service",
+          "acquisition": {
+            "start_ns": 174143924073108,
+            "end_ns": 174145924073108,
+            "available_at_ns": 174146174367133,
+            "clock_domain": "process-monotonic-900bccaf-6fb7-4426-a27f-1426414b7896"
+          }
+        }
+      ],
+      "audit": {
+        "start_ns": 174143924073108,
+        "end_ns": 174145924073108,
+        "deadline_ns": 174146174073108,
+        "closed_at_ns": 174146174367133,
+        "min_latency_samples": 2,
+        "threshold_role": "development_guard_not_calibrated",
+        "completion_count": 1,
+        "successful_completions": 1,
+        "request_errors": 0,
+        "usage_missing": 0,
+        "events": [
+          {
+            "kind": "server",
+            "identity": "server-0",
+            "received_at_ns": 174143956155509,
+            "accepted": true,
+            "reason": "accepted"
+          },
+          {
+            "kind": "server",
+            "identity": "server-1",
+            "received_at_ns": 174144456788037,
+            "accepted": true,
+            "reason": "accepted"
+          },
+          {
+            "kind": "server",
+            "identity": "server-2",
+            "received_at_ns": 174144952823060,
+            "accepted": true,
+            "reason": "accepted"
+          },
+          {
+            "kind": "server",
+            "identity": "server-3",
+            "received_at_ns": 174145454491833,
+            "accepted": true,
+            "reason": "accepted"
+          },
+          {
+            "kind": "request",
+            "identity": "r000",
+            "received_at_ns": 174145838110195,
+            "accepted": true,
+            "reason": "accepted"
+          }
+        ],
+        "note": "Completion-cohort features; pending admissions/censoring are recorded by the workload driver. Gauge means are sample means, not time-weighted means.",
+        "mapping_version": "vllm_finished_cohort_mapping_v1",
+        "binding": {
+          "session_nonce": "fab4667cbda14fb389dfb2f98e464e3c",
+          "generation": 3,
+          "worker_pid": 6439,
+          "device_uuid": "GPU-baa93118-dfa3-1258-be9e-b6051b77c1cb",
+          "model": "Qwen/Qwen2.5-7B-Instruct",
+          "engine": "0",
+          "clock_domain": "process-monotonic-900bccaf-6fb7-4426-a27f-1426414b7896"
+        },
+        "receipt_audits": [
+          {
+            "mapping_version": "vllm_finished_cohort_mapping_v1",
+            "sample_id": "server-0",
+            "binding": {
+              "session_nonce": "fab4667cbda14fb389dfb2f98e464e3c",
+              "generation": 3,
+              "worker_pid": 6439,
+              "device_uuid": "GPU-baa93118-dfa3-1258-be9e-b6051b77c1cb",
+              "model": "Qwen/Qwen2.5-7B-Instruct",
+              "engine": "0",
+              "clock_domain": "process-monotonic-900bccaf-6fb7-4426-a27f-1426414b7896"
+            },
+            "requested_at_ns": 174143925195670,
+            "received_at_ns": 174143941904050,
+            "raw_sha256": "4615a6da850640a6fb24eafa191e430a88b1938f83adfaf4244dc889bef326be",
+            "http_status": 200,
+            "error": null,
+            "inspection": {
+              "profile": "vllm_0_10_2_v1_finished_request_metrics",
+              "selected_labels": {
+                "model_name": "Qwen/Qwen2.5-7B-Instruct",
+                "engine": "0"
+              },
+              "gauges": {
+                "vllm:num_requests_waiting": {
+                  "value": 0.0,
+                  "available": true,
+                  "reason": null
+                },
+                "vllm:num_requests_running": {
+                  "value": 0.0,
+                  "available": true,
+                  "reason": null
+                }
+              },
+              "histograms": {
+                "vllm:request_queue_time_seconds": {
+                  "present": true,
+                  "reason": null,
+                  "snapshot": {
+                    "upper_seconds": [
+                      0.3,
+                      0.5,
+                      0.8,
+                      1.0,
+                      1.5,
+                      2.0,
+                      2.5,
+                      5.0,
+                      10.0,
+                      15.0,
+                      20.0,
+                      30.0,
+                      40.0,
+                      50.0,
+                      60.0,
+                      120.0,
+                      240.0,
+                      480.0,
+                      960.0,
+                      1920.0,
+                      7680.0,
+                      "+Inf"
+                    ],
+                    "cumulative_counts": [
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1
+                    ],
+                    "count": 1,
+                    "sum_seconds": 0.00023204900207929313
+                  },
+                  "cohort": "finished_requests_reported_by_logger",
+                  "source_timestamp_mapping": false
+                },
+                "vllm:request_prefill_time_seconds": {
+                  "present": true,
+                  "reason": null,
+                  "snapshot": {
+                    "upper_seconds": [
+                      0.3,
+                      0.5,
+                      0.8,
+                      1.0,
+                      1.5,
+                      2.0,
+                      2.5,
+                      5.0,
+                      10.0,
+                      15.0,
+                      20.0,
+                      30.0,
+                      40.0,
+                      50.0,
+                      60.0,
+                      120.0,
+                      240.0,
+                      480.0,
+                      960.0,
+                      1920.0,
+                      7680.0,
+                      "+Inf"
+                    ],
+                    "cumulative_counts": [
+                      0,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1
+                    ],
+                    "count": 1,
+                    "sum_seconds": 0.308919508010149
+                  },
+                  "cohort": "finished_requests_reported_by_logger",
+                  "source_timestamp_mapping": false
+                },
+                "vllm:request_decode_time_seconds": {
+                  "present": true,
+                  "reason": null,
+                  "snapshot": {
+                    "upper_seconds": [
+                      0.3,
+                      0.5,
+                      0.8,
+                      1.0,
+                      1.5,
+                      2.0,
+                      2.5,
+                      5.0,
+                      10.0,
+                      15.0,
+                      20.0,
+                      30.0,
+                      40.0,
+                      50.0,
+                      60.0,
+                      120.0,
+                      240.0,
+                      480.0,
+                      960.0,
+                      1920.0,
+                      7680.0,
+                      "+Inf"
+                    ],
+                    "cumulative_counts": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1
+                    ],
+                    "count": 1,
+                    "sum_seconds": 1.816275188990403
+                  },
+                  "cohort": "finished_requests_reported_by_logger",
+                  "source_timestamp_mapping": false
+                }
+              },
+              "other_scope_count": 0,
+              "admission_window_wait_supported": false,
+              "prefill_service_fraction_supported": false,
+              "note": "Presence is not calibration, atomicity, source-clock mapping, admission-cohort coverage or exclusive GPU phase attribution."
+            },
+            "controller_mapping": {
+              "queue_depth_mean": "receipt_assigned_unweighted_gauge_sample",
+              "request_wait_p95_ms": "finished_request_logger_cohort_has_no_admission_window_clock_mapping",
+              "prefill_service_fraction": "request_phase_durations_do_not_partition_exclusive_GPU_service"
+            },
+            "histogram_role": "diagnostic_only_not_controller_features",
+            "source_event_clock_mapping": false,
+            "accepted_into_window": true
+          },
+          {
+            "mapping_version": "vllm_finished_cohort_mapping_v1",
+            "sample_id": "server-1",
+            "binding": {
+              "session_nonce": "fab4667cbda14fb389dfb2f98e464e3c",
+              "generation": 3,
+              "worker_pid": 6439,
+              "device_uuid": "GPU-baa93118-dfa3-1258-be9e-b6051b77c1cb",
+              "model": "Qwen/Qwen2.5-7B-Instruct",
+              "engine": "0",
+              "clock_domain": "process-monotonic-900bccaf-6fb7-4426-a27f-1426414b7896"
+            },
+            "requested_at_ns": 174144425119424,
+            "received_at_ns": 174144442830374,
+            "raw_sha256": "be1c134ad9d7f0900eb7eaca12ad2536a3137865eefeb3ea9c3beea44ed9f694",
+            "http_status": 200,
+            "error": null,
+            "inspection": {
+              "profile": "vllm_0_10_2_v1_finished_request_metrics",
+              "selected_labels": {
+                "model_name": "Qwen/Qwen2.5-7B-Instruct",
+                "engine": "0"
+              },
+              "gauges": {
+                "vllm:num_requests_waiting": {
+                  "value": 0.0,
+                  "available": true,
+                  "reason": null
+                },
+                "vllm:num_requests_running": {
+                  "value": 1.0,
+                  "available": true,
+                  "reason": null
+                }
+              },
+              "histograms": {
+                "vllm:request_queue_time_seconds": {
+                  "present": true,
+                  "reason": null,
+                  "snapshot": {
+                    "upper_seconds": [
+                      0.3,
+                      0.5,
+                      0.8,
+                      1.0,
+                      1.5,
+                      2.0,
+                      2.5,
+                      5.0,
+                      10.0,
+                      15.0,
+                      20.0,
+                      30.0,
+                      40.0,
+                      50.0,
+                      60.0,
+                      120.0,
+                      240.0,
+                      480.0,
+                      960.0,
+                      1920.0,
+                      7680.0,
+                      "+Inf"
+                    ],
+                    "cumulative_counts": [
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1
+                    ],
+                    "count": 1,
+                    "sum_seconds": 0.00023204900207929313
+                  },
+                  "cohort": "finished_requests_reported_by_logger",
+                  "source_timestamp_mapping": false
+                },
+                "vllm:request_prefill_time_seconds": {
+                  "present": true,
+                  "reason": null,
+                  "snapshot": {
+                    "upper_seconds": [
+                      0.3,
+                      0.5,
+                      0.8,
+                      1.0,
+                      1.5,
+                      2.0,
+                      2.5,
+                      5.0,
+                      10.0,
+                      15.0,
+                      20.0,
+                      30.0,
+                      40.0,
+                      50.0,
+                      60.0,
+                      120.0,
+                      240.0,
+                      480.0,
+                      960.0,
+                      1920.0,
+                      7680.0,
+                      "+Inf"
+                    ],
+                    "cumulative_counts": [
+                      0,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1
+                    ],
+                    "count": 1,
+                    "sum_seconds": 0.308919508010149
+                  },
+                  "cohort": "finished_requests_reported_by_logger",
+                  "source_timestamp_mapping": false
+                },
+                "vllm:request_decode_time_seconds": {
+                  "present": true,
+                  "reason": null,
+                  "snapshot": {
+                    "upper_seconds": [
+                      0.3,
+                      0.5,
+                      0.8,
+                      1.0,
+                      1.5,
+                      2.0,
+                      2.5,
+                      5.0,
+                      10.0,
+                      15.0,
+                      20.0,
+                      30.0,
+                      40.0,
+                      50.0,
+                      60.0,
+                      120.0,
+                      240.0,
+                      480.0,
+                      960.0,
+                      1920.0,
+                      7680.0,
+                      "+Inf"
+                    ],
+                    "cumulative_counts": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1
+                    ],
+                    "count": 1,
+                    "sum_seconds": 1.816275188990403
+                  },
+                  "cohort": "finished_requests_reported_by_logger",
+                  "source_timestamp_mapping": false
+                }
+              },
+              "other_scope_count": 0,
+              "admission_window_wait_supported": false,
+              "prefill_service_fraction_supported": false,
+              "note": "Presence is not calibration, atomicity, source-clock mapping, admission-cohort coverage or exclusive GPU phase attribution."
+            },
+            "controller_mapping": {
+              "queue_depth_mean": "receipt_assigned_unweighted_gauge_sample",
+              "request_wait_p95_ms": "finished_request_logger_cohort_has_no_admission_window_clock_mapping",
+              "prefill_service_fraction": "request_phase_durations_do_not_partition_exclusive_GPU_service"
+            },
+            "histogram_role": "diagnostic_only_not_controller_features",
+            "source_event_clock_mapping": false,
+            "accepted_into_window": true
+          },
+          {
+            "mapping_version": "vllm_finished_cohort_mapping_v1",
+            "sample_id": "server-2",
+            "binding": {
+              "session_nonce": "fab4667cbda14fb389dfb2f98e464e3c",
+              "generation": 3,
+              "worker_pid": 6439,
+              "device_uuid": "GPU-baa93118-dfa3-1258-be9e-b6051b77c1cb",
+              "model": "Qwen/Qwen2.5-7B-Instruct",
+              "engine": "0",
+              "clock_domain": "process-monotonic-900bccaf-6fb7-4426-a27f-1426414b7896"
+            },
+            "requested_at_ns": 174144924606143,
+            "received_at_ns": 174144938765902,
+            "raw_sha256": "3fe524512fb61f3455990eb76e4f501266b5c6e78fdb516abba35c2f5ecdb63d",
+            "http_status": 200,
+            "error": null,
+            "inspection": {
+              "profile": "vllm_0_10_2_v1_finished_request_metrics",
+              "selected_labels": {
+                "model_name": "Qwen/Qwen2.5-7B-Instruct",
+                "engine": "0"
+              },
+              "gauges": {
+                "vllm:num_requests_waiting": {
+                  "value": 0.0,
+                  "available": true,
+                  "reason": null
+                },
+                "vllm:num_requests_running": {
+                  "value": 1.0,
+                  "available": true,
+                  "reason": null
+                }
+              },
+              "histograms": {
+                "vllm:request_queue_time_seconds": {
+                  "present": true,
+                  "reason": null,
+                  "snapshot": {
+                    "upper_seconds": [
+                      0.3,
+                      0.5,
+                      0.8,
+                      1.0,
+                      1.5,
+                      2.0,
+                      2.5,
+                      5.0,
+                      10.0,
+                      15.0,
+                      20.0,
+                      30.0,
+                      40.0,
+                      50.0,
+                      60.0,
+                      120.0,
+                      240.0,
+                      480.0,
+                      960.0,
+                      1920.0,
+                      7680.0,
+                      "+Inf"
+                    ],
+                    "cumulative_counts": [
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1
+                    ],
+                    "count": 1,
+                    "sum_seconds": 0.00023204900207929313
+                  },
+                  "cohort": "finished_requests_reported_by_logger",
+                  "source_timestamp_mapping": false
+                },
+                "vllm:request_prefill_time_seconds": {
+                  "present": true,
+                  "reason": null,
+                  "snapshot": {
+                    "upper_seconds": [
+                      0.3,
+                      0.5,
+                      0.8,
+                      1.0,
+                      1.5,
+                      2.0,
+                      2.5,
+                      5.0,
+                      10.0,
+                      15.0,
+                      20.0,
+                      30.0,
+                      40.0,
+                      50.0,
+                      60.0,
+                      120.0,
+                      240.0,
+                      480.0,
+                      960.0,
+                      1920.0,
+                      7680.0,
+                      "+Inf"
+                    ],
+                    "cumulative_counts": [
+                      0,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1
+                    ],
+                    "count": 1,
+                    "sum_seconds": 0.308919508010149
+                  },
+                  "cohort": "finished_requests_reported_by_logger",
+                  "source_timestamp_mapping": false
+                },
+                "vllm:request_decode_time_seconds": {
+                  "present": true,
+                  "reason": null,
+                  "snapshot": {
+                    "upper_seconds": [
+                      0.3,
+                      0.5,
+                      0.8,
+                      1.0,
+                      1.5,
+                      2.0,
+                      2.5,
+                      5.0,
+                      10.0,
+                      15.0,
+                      20.0,
+                      30.0,
+                      40.0,
+                      50.0,
+                      60.0,
+                      120.0,
+                      240.0,
+                      480.0,
+                      960.0,
+                      1920.0,
+                      7680.0,
+                      "+Inf"
+                    ],
+                    "cumulative_counts": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1
+                    ],
+                    "count": 1,
+                    "sum_seconds": 1.816275188990403
+                  },
+                  "cohort": "finished_requests_reported_by_logger",
+                  "source_timestamp_mapping": false
+                }
+              },
+              "other_scope_count": 0,
+              "admission_window_wait_supported": false,
+              "prefill_service_fraction_supported": false,
+              "note": "Presence is not calibration, atomicity, source-clock mapping, admission-cohort coverage or exclusive GPU phase attribution."
+            },
+            "controller_mapping": {
+              "queue_depth_mean": "receipt_assigned_unweighted_gauge_sample",
+              "request_wait_p95_ms": "finished_request_logger_cohort_has_no_admission_window_clock_mapping",
+              "prefill_service_fraction": "request_phase_durations_do_not_partition_exclusive_GPU_service"
+            },
+            "histogram_role": "diagnostic_only_not_controller_features",
+            "source_event_clock_mapping": false,
+            "accepted_into_window": true
+          },
+          {
+            "mapping_version": "vllm_finished_cohort_mapping_v1",
+            "sample_id": "server-3",
+            "binding": {
+              "session_nonce": "fab4667cbda14fb389dfb2f98e464e3c",
+              "generation": 3,
+              "worker_pid": 6439,
+              "device_uuid": "GPU-baa93118-dfa3-1258-be9e-b6051b77c1cb",
+              "model": "Qwen/Qwen2.5-7B-Instruct",
+              "engine": "0",
+              "clock_domain": "process-monotonic-900bccaf-6fb7-4426-a27f-1426414b7896"
+            },
+            "requested_at_ns": 174145425226917,
+            "received_at_ns": 174145440638749,
+            "raw_sha256": "a320ebc10f8ab8e909907908e9f8b52f99e7f7d30e6ac832dc324a69282fce7b",
+            "http_status": 200,
+            "error": null,
+            "inspection": {
+              "profile": "vllm_0_10_2_v1_finished_request_metrics",
+              "selected_labels": {
+                "model_name": "Qwen/Qwen2.5-7B-Instruct",
+                "engine": "0"
+              },
+              "gauges": {
+                "vllm:num_requests_waiting": {
+                  "value": 0.0,
+                  "available": true,
+                  "reason": null
+                },
+                "vllm:num_requests_running": {
+                  "value": 1.0,
+                  "available": true,
+                  "reason": null
+                }
+              },
+              "histograms": {
+                "vllm:request_queue_time_seconds": {
+                  "present": true,
+                  "reason": null,
+                  "snapshot": {
+                    "upper_seconds": [
+                      0.3,
+                      0.5,
+                      0.8,
+                      1.0,
+                      1.5,
+                      2.0,
+                      2.5,
+                      5.0,
+                      10.0,
+                      15.0,
+                      20.0,
+                      30.0,
+                      40.0,
+                      50.0,
+                      60.0,
+                      120.0,
+                      240.0,
+                      480.0,
+                      960.0,
+                      1920.0,
+                      7680.0,
+                      "+Inf"
+                    ],
+                    "cumulative_counts": [
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1
+                    ],
+                    "count": 1,
+                    "sum_seconds": 0.00023204900207929313
+                  },
+                  "cohort": "finished_requests_reported_by_logger",
+                  "source_timestamp_mapping": false
+                },
+                "vllm:request_prefill_time_seconds": {
+                  "present": true,
+                  "reason": null,
+                  "snapshot": {
+                    "upper_seconds": [
+                      0.3,
+                      0.5,
+                      0.8,
+                      1.0,
+                      1.5,
+                      2.0,
+                      2.5,
+                      5.0,
+                      10.0,
+                      15.0,
+                      20.0,
+                      30.0,
+                      40.0,
+                      50.0,
+                      60.0,
+                      120.0,
+                      240.0,
+                      480.0,
+                      960.0,
+                      1920.0,
+                      7680.0,
+                      "+Inf"
+                    ],
+                    "cumulative_counts": [
+                      0,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1
+                    ],
+                    "count": 1,
+                    "sum_seconds": 0.308919508010149
+                  },
+                  "cohort": "finished_requests_reported_by_logger",
+                  "source_timestamp_mapping": false
+                },
+                "vllm:request_decode_time_seconds": {
+                  "present": true,
+                  "reason": null,
+                  "snapshot": {
+                    "upper_seconds": [
+                      0.3,
+                      0.5,
+                      0.8,
+                      1.0,
+                      1.5,
+                      2.0,
+                      2.5,
+                      5.0,
+                      10.0,
+                      15.0,
+                      20.0,
+                      30.0,
+                      40.0,
+                      50.0,
+                      60.0,
+                      120.0,
+                      240.0,
+                      480.0,
+                      960.0,
+                      1920.0,
+                      7680.0,
+                      "+Inf"
+                    ],
+                    "cumulative_counts": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1
+                    ],
+                    "count": 1,
+                    "sum_seconds": 1.816275188990403
+                  },
+                  "cohort": "finished_requests_reported_by_logger",
+                  "source_timestamp_mapping": false
+                }
+              },
+              "other_scope_count": 0,
+              "admission_window_wait_supported": false,
+              "prefill_service_fraction_supported": false,
+              "note": "Presence is not calibration, atomicity, source-clock mapping, admission-cohort coverage or exclusive GPU phase attribution."
+            },
+            "controller_mapping": {
+              "queue_depth_mean": "receipt_assigned_unweighted_gauge_sample",
+              "request_wait_p95_ms": "finished_request_logger_cohort_has_no_admission_window_clock_mapping",
+              "prefill_service_fraction": "request_phase_durations_do_not_partition_exclusive_GPU_service"
+            },
+            "histogram_role": "diagnostic_only_not_controller_features",
+            "source_event_clock_mapping": false,
+            "accepted_into_window": true
+          }
+        ],
+        "unsupported": {
+          "request_wait_p95_ms": "finished_request_logger_cohort_has_no_admission_window_clock_mapping",
+          "prefill_service_fraction": "request_phase_durations_do_not_partition_exclusive_GPU_service"
+        },
+        "coverage_scope": "accepted_records_only_not_planned_sample_completeness"
+      }
+    },
+    {
+      "window_id": "window-1",
+      "metrics": [
+        {
+          "name": "request_p95_ms",
+          "source": "request",
+          "unit": "ms",
+          "value": null,
+          "valid_samples": 0,
+          "attempted_samples": 0,
+          "coverage": "unavailable",
+          "missing_reason": "insufficient_successful_completions",
+          "acquisition": {
+            "start_ns": 174145924073108,
+            "end_ns": 174147924073108,
+            "available_at_ns": 174148175178208,
+            "clock_domain": "process-monotonic-900bccaf-6fb7-4426-a27f-1426414b7896"
+          }
+        },
+        {
+          "name": "completed_rps",
+          "source": "request",
+          "unit": "requests/s",
+          "value": 0.0,
+          "valid_samples": 1,
+          "attempted_samples": 1,
+          "coverage": "complete",
+          "missing_reason": null,
+          "acquisition": {
+            "start_ns": 174145924073108,
+            "end_ns": 174147924073108,
+            "available_at_ns": 174148175178208,
+            "clock_domain": "process-monotonic-900bccaf-6fb7-4426-a27f-1426414b7896"
+          }
+        },
+        {
+          "name": "prompt_tokens_mean",
+          "source": "request",
+          "unit": "tokens",
+          "value": null,
+          "valid_samples": 0,
+          "attempted_samples": 0,
+          "coverage": "unavailable",
+          "missing_reason": "no_valid_response_usage",
+          "acquisition": {
+            "start_ns": 174145924073108,
+            "end_ns": 174147924073108,
+            "available_at_ns": 174148175178208,
+            "clock_domain": "process-monotonic-900bccaf-6fb7-4426-a27f-1426414b7896"
+          }
+        },
+        {
+          "name": "output_tokens_mean",
+          "source": "request",
+          "unit": "tokens",
+          "value": null,
+          "valid_samples": 0,
+          "attempted_samples": 0,
+          "coverage": "unavailable",
+          "missing_reason": "no_valid_response_usage",
+          "acquisition": {
+            "start_ns": 174145924073108,
+            "end_ns": 174147924073108,
+            "available_at_ns": 174148175178208,
+            "clock_domain": "process-monotonic-900bccaf-6fb7-4426-a27f-1426414b7896"
+          }
+        },
+        {
+          "name": "queue_depth_mean",
+          "source": "server",
+          "unit": "requests",
+          "value": 0.0,
+          "valid_samples": 4,
+          "attempted_samples": 4,
+          "coverage": "complete",
+          "missing_reason": null,
+          "acquisition": {
+            "start_ns": 174145924073108,
+            "end_ns": 174147924073108,
+            "available_at_ns": 174148175178208,
+            "clock_domain": "process-monotonic-900bccaf-6fb7-4426-a27f-1426414b7896"
+          }
+        },
+        {
+          "name": "gpu_util_mean",
+          "source": "gpu",
+          "unit": "percent",
+          "value": null,
+          "valid_samples": 0,
+          "attempted_samples": 0,
+          "coverage": "unavailable",
+          "missing_reason": "no_valid_gpu_samples",
+          "acquisition": {
+            "start_ns": 174145924073108,
+            "end_ns": 174147924073108,
+            "available_at_ns": 174148175178208,
+            "clock_domain": "process-monotonic-900bccaf-6fb7-4426-a27f-1426414b7896"
+          }
+        },
+        {
+          "name": "request_wait_p95_ms",
+          "source": "server",
+          "unit": "ms",
+          "value": null,
+          "valid_samples": 0,
+          "attempted_samples": 0,
+          "coverage": "unavailable",
+          "missing_reason": "finished_request_logger_cohort_has_no_admission_window_clock_mapping",
+          "acquisition": {
+            "start_ns": 174145924073108,
+            "end_ns": 174147924073108,
+            "available_at_ns": 174148175178208,
+            "clock_domain": "process-monotonic-900bccaf-6fb7-4426-a27f-1426414b7896"
+          }
+        },
+        {
+          "name": "prefill_service_fraction",
+          "source": "server",
+          "unit": "fraction",
+          "value": null,
+          "valid_samples": 0,
+          "attempted_samples": 0,
+          "coverage": "unavailable",
+          "missing_reason": "request_phase_durations_do_not_partition_exclusive_GPU_service",
+          "acquisition": {
+            "start_ns": 174145924073108,
+            "end_ns": 174147924073108,
+            "available_at_ns": 174148175178208,
+            "clock_domain": "process-monotonic-900bccaf-6fb7-4426-a27f-1426414b7896"
+          }
+        }
+      ],
+      "audit": {
+        "start_ns": 174145924073108,
+        "end_ns": 174147924073108,
+        "deadline_ns": 174148174073108,
+        "closed_at_ns": 174148175178208,
+        "min_latency_samples": 2,
+        "threshold_role": "development_guard_not_calibrated",
+        "completion_count": 0,
+        "successful_completions": 0,
+        "request_errors": 0,
+        "usage_missing": 0,
+        "events": [
+          {
+            "kind": "server",
+            "identity": "server-4",
+            "received_at_ns": 174145956521151,
+            "accepted": true,
+            "reason": "accepted"
+          },
+          {
+            "kind": "server",
+            "identity": "server-5",
+            "received_at_ns": 174146455727757,
+            "accepted": true,
+            "reason": "accepted"
+          },
+          {
+            "kind": "server",
+            "identity": "server-6",
+            "received_at_ns": 174146955896097,
+            "accepted": true,
+            "reason": "accepted"
+          },
+          {
+            "kind": "server",
+            "identity": "server-7",
+            "received_at_ns": 174147455972241,
+            "accepted": true,
+            "reason": "accepted"
+          }
+        ],
+        "note": "Completion-cohort features; pending admissions/censoring are recorded by the workload driver. Gauge means are sample means, not time-weighted means.",
+        "mapping_version": "vllm_finished_cohort_mapping_v1",
+        "binding": {
+          "session_nonce": "fab4667cbda14fb389dfb2f98e464e3c",
+          "generation": 3,
+          "worker_pid": 6439,
+          "device_uuid": "GPU-baa93118-dfa3-1258-be9e-b6051b77c1cb",
+          "model": "Qwen/Qwen2.5-7B-Instruct",
+          "engine": "0",
+          "clock_domain": "process-monotonic-900bccaf-6fb7-4426-a27f-1426414b7896"
+        },
+        "receipt_audits": [
+          {
+            "mapping_version": "vllm_finished_cohort_mapping_v1",
+            "sample_id": "server-4",
+            "binding": {
+              "session_nonce": "fab4667cbda14fb389dfb2f98e464e3c",
+              "generation": 3,
+              "worker_pid": 6439,
+              "device_uuid": "GPU-baa93118-dfa3-1258-be9e-b6051b77c1cb",
+              "model": "Qwen/Qwen2.5-7B-Instruct",
+              "engine": "0",
+              "clock_domain": "process-monotonic-900bccaf-6fb7-4426-a27f-1426414b7896"
+            },
+            "requested_at_ns": 174145924474856,
+            "received_at_ns": 174145942892938,
+            "raw_sha256": "734230e8623ed87788a86d4b20109f3519054d84faf4ce487e0afaac66915428",
+            "http_status": 200,
+            "error": null,
+            "inspection": {
+              "profile": "vllm_0_10_2_v1_finished_request_metrics",
+              "selected_labels": {
+                "model_name": "Qwen/Qwen2.5-7B-Instruct",
+                "engine": "0"
+              },
+              "gauges": {
+                "vllm:num_requests_waiting": {
+                  "value": 0.0,
+                  "available": true,
+                  "reason": null
+                },
+                "vllm:num_requests_running": {
+                  "value": 0.0,
+                  "available": true,
+                  "reason": null
+                }
+              },
+              "histograms": {
+                "vllm:request_queue_time_seconds": {
+                  "present": true,
+                  "reason": null,
+                  "snapshot": {
+                    "upper_seconds": [
+                      0.3,
+                      0.5,
+                      0.8,
+                      1.0,
+                      1.5,
+                      2.0,
+                      2.5,
+                      5.0,
+                      10.0,
+                      15.0,
+                      20.0,
+                      30.0,
+                      40.0,
+                      50.0,
+                      60.0,
+                      120.0,
+                      240.0,
+                      480.0,
+                      960.0,
+                      1920.0,
+                      7680.0,
+                      "+Inf"
+                    ],
+                    "cumulative_counts": [
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2
+                    ],
+                    "count": 2,
+                    "sum_seconds": 0.00041203098953701556
+                  },
+                  "cohort": "finished_requests_reported_by_logger",
+                  "source_timestamp_mapping": false
+                },
+                "vllm:request_prefill_time_seconds": {
+                  "present": true,
+                  "reason": null,
+                  "snapshot": {
+                    "upper_seconds": [
+                      0.3,
+                      0.5,
+                      0.8,
+                      1.0,
+                      1.5,
+                      2.0,
+                      2.5,
+                      5.0,
+                      10.0,
+                      15.0,
+                      20.0,
+                      30.0,
+                      40.0,
+                      50.0,
+                      60.0,
+                      120.0,
+                      240.0,
+                      480.0,
+                      960.0,
+                      1920.0,
+                      7680.0,
+                      "+Inf"
+                    ],
+                    "cumulative_counts": [
+                      1,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2
+                    ],
+                    "count": 2,
+                    "sum_seconds": 0.373708171013277
+                  },
+                  "cohort": "finished_requests_reported_by_logger",
+                  "source_timestamp_mapping": false
+                },
+                "vllm:request_decode_time_seconds": {
+                  "present": true,
+                  "reason": null,
+                  "snapshot": {
+                    "upper_seconds": [
+                      0.3,
+                      0.5,
+                      0.8,
+                      1.0,
+                      1.5,
+                      2.0,
+                      2.5,
+                      5.0,
+                      10.0,
+                      15.0,
+                      20.0,
+                      30.0,
+                      40.0,
+                      50.0,
+                      60.0,
+                      120.0,
+                      240.0,
+                      480.0,
+                      960.0,
+                      1920.0,
+                      7680.0,
+                      "+Inf"
+                    ],
+                    "cumulative_counts": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2
+                    ],
+                    "count": 2,
+                    "sum_seconds": 3.635884282004554
+                  },
+                  "cohort": "finished_requests_reported_by_logger",
+                  "source_timestamp_mapping": false
+                }
+              },
+              "other_scope_count": 0,
+              "admission_window_wait_supported": false,
+              "prefill_service_fraction_supported": false,
+              "note": "Presence is not calibration, atomicity, source-clock mapping, admission-cohort coverage or exclusive GPU phase attribution."
+            },
+            "controller_mapping": {
+              "queue_depth_mean": "receipt_assigned_unweighted_gauge_sample",
+              "request_wait_p95_ms": "finished_request_logger_cohort_has_no_admission_window_clock_mapping",
+              "prefill_service_fraction": "request_phase_durations_do_not_partition_exclusive_GPU_service"
+            },
+            "histogram_role": "diagnostic_only_not_controller_features",
+            "source_event_clock_mapping": false,
+            "accepted_into_window": true
+          },
+          {
+            "mapping_version": "vllm_finished_cohort_mapping_v1",
+            "sample_id": "server-5",
+            "binding": {
+              "session_nonce": "fab4667cbda14fb389dfb2f98e464e3c",
+              "generation": 3,
+              "worker_pid": 6439,
+              "device_uuid": "GPU-baa93118-dfa3-1258-be9e-b6051b77c1cb",
+              "model": "Qwen/Qwen2.5-7B-Instruct",
+              "engine": "0",
+              "clock_domain": "process-monotonic-900bccaf-6fb7-4426-a27f-1426414b7896"
+            },
+            "requested_at_ns": 174146425056800,
+            "received_at_ns": 174146440627391,
+            "raw_sha256": "439178a49dc2f05ecd74a91e532908d6fea2d0d33d9798cab61bb786a2b4bdbb",
+            "http_status": 200,
+            "error": null,
+            "inspection": {
+              "profile": "vllm_0_10_2_v1_finished_request_metrics",
+              "selected_labels": {
+                "model_name": "Qwen/Qwen2.5-7B-Instruct",
+                "engine": "0"
+              },
+              "gauges": {
+                "vllm:num_requests_waiting": {
+                  "value": 0.0,
+                  "available": true,
+                  "reason": null
+                },
+                "vllm:num_requests_running": {
+                  "value": 0.0,
+                  "available": true,
+                  "reason": null
+                }
+              },
+              "histograms": {
+                "vllm:request_queue_time_seconds": {
+                  "present": true,
+                  "reason": null,
+                  "snapshot": {
+                    "upper_seconds": [
+                      0.3,
+                      0.5,
+                      0.8,
+                      1.0,
+                      1.5,
+                      2.0,
+                      2.5,
+                      5.0,
+                      10.0,
+                      15.0,
+                      20.0,
+                      30.0,
+                      40.0,
+                      50.0,
+                      60.0,
+                      120.0,
+                      240.0,
+                      480.0,
+                      960.0,
+                      1920.0,
+                      7680.0,
+                      "+Inf"
+                    ],
+                    "cumulative_counts": [
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2
+                    ],
+                    "count": 2,
+                    "sum_seconds": 0.00041203098953701556
+                  },
+                  "cohort": "finished_requests_reported_by_logger",
+                  "source_timestamp_mapping": false
+                },
+                "vllm:request_prefill_time_seconds": {
+                  "present": true,
+                  "reason": null,
+                  "snapshot": {
+                    "upper_seconds": [
+                      0.3,
+                      0.5,
+                      0.8,
+                      1.0,
+                      1.5,
+                      2.0,
+                      2.5,
+                      5.0,
+                      10.0,
+                      15.0,
+                      20.0,
+                      30.0,
+                      40.0,
+                      50.0,
+                      60.0,
+                      120.0,
+                      240.0,
+                      480.0,
+                      960.0,
+                      1920.0,
+                      7680.0,
+                      "+Inf"
+                    ],
+                    "cumulative_counts": [
+                      1,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2
+                    ],
+                    "count": 2,
+                    "sum_seconds": 0.373708171013277
+                  },
+                  "cohort": "finished_requests_reported_by_logger",
+                  "source_timestamp_mapping": false
+                },
+                "vllm:request_decode_time_seconds": {
+                  "present": true,
+                  "reason": null,
+                  "snapshot": {
+                    "upper_seconds": [
+                      0.3,
+                      0.5,
+                      0.8,
+                      1.0,
+                      1.5,
+                      2.0,
+                      2.5,
+                      5.0,
+                      10.0,
+                      15.0,
+                      20.0,
+                      30.0,
+                      40.0,
+                      50.0,
+                      60.0,
+                      120.0,
+                      240.0,
+                      480.0,
+                      960.0,
+                      1920.0,
+                      7680.0,
+                      "+Inf"
+                    ],
+                    "cumulative_counts": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2
+                    ],
+                    "count": 2,
+                    "sum_seconds": 3.635884282004554
+                  },
+                  "cohort": "finished_requests_reported_by_logger",
+                  "source_timestamp_mapping": false
+                }
+              },
+              "other_scope_count": 0,
+              "admission_window_wait_supported": false,
+              "prefill_service_fraction_supported": false,
+              "note": "Presence is not calibration, atomicity, source-clock mapping, admission-cohort coverage or exclusive GPU phase attribution."
+            },
+            "controller_mapping": {
+              "queue_depth_mean": "receipt_assigned_unweighted_gauge_sample",
+              "request_wait_p95_ms": "finished_request_logger_cohort_has_no_admission_window_clock_mapping",
+              "prefill_service_fraction": "request_phase_durations_do_not_partition_exclusive_GPU_service"
+            },
+            "histogram_role": "diagnostic_only_not_controller_features",
+            "source_event_clock_mapping": false,
+            "accepted_into_window": true
+          },
+          {
+            "mapping_version": "vllm_finished_cohort_mapping_v1",
+            "sample_id": "server-6",
+            "binding": {
+              "session_nonce": "fab4667cbda14fb389dfb2f98e464e3c",
+              "generation": 3,
+              "worker_pid": 6439,
+              "device_uuid": "GPU-baa93118-dfa3-1258-be9e-b6051b77c1cb",
+              "model": "Qwen/Qwen2.5-7B-Instruct",
+              "engine": "0",
+              "clock_domain": "process-monotonic-900bccaf-6fb7-4426-a27f-1426414b7896"
+            },
+            "requested_at_ns": 174146925065327,
+            "received_at_ns": 174146941820329,
+            "raw_sha256": "6eb881a805a1bca34f91915fedc87d3c696a137f9d936d27b0dd66aa6eca1851",
+            "http_status": 200,
+            "error": null,
+            "inspection": {
+              "profile": "vllm_0_10_2_v1_finished_request_metrics",
+              "selected_labels": {
+                "model_name": "Qwen/Qwen2.5-7B-Instruct",
+                "engine": "0"
+              },
+              "gauges": {
+                "vllm:num_requests_waiting": {
+                  "value": 0.0,
+                  "available": true,
+                  "reason": null
+                },
+                "vllm:num_requests_running": {
+                  "value": 0.0,
+                  "available": true,
+                  "reason": null
+                }
+              },
+              "histograms": {
+                "vllm:request_queue_time_seconds": {
+                  "present": true,
+                  "reason": null,
+                  "snapshot": {
+                    "upper_seconds": [
+                      0.3,
+                      0.5,
+                      0.8,
+                      1.0,
+                      1.5,
+                      2.0,
+                      2.5,
+                      5.0,
+                      10.0,
+                      15.0,
+                      20.0,
+                      30.0,
+                      40.0,
+                      50.0,
+                      60.0,
+                      120.0,
+                      240.0,
+                      480.0,
+                      960.0,
+                      1920.0,
+                      7680.0,
+                      "+Inf"
+                    ],
+                    "cumulative_counts": [
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2
+                    ],
+                    "count": 2,
+                    "sum_seconds": 0.00041203098953701556
+                  },
+                  "cohort": "finished_requests_reported_by_logger",
+                  "source_timestamp_mapping": false
+                },
+                "vllm:request_prefill_time_seconds": {
+                  "present": true,
+                  "reason": null,
+                  "snapshot": {
+                    "upper_seconds": [
+                      0.3,
+                      0.5,
+                      0.8,
+                      1.0,
+                      1.5,
+                      2.0,
+                      2.5,
+                      5.0,
+                      10.0,
+                      15.0,
+                      20.0,
+                      30.0,
+                      40.0,
+                      50.0,
+                      60.0,
+                      120.0,
+                      240.0,
+                      480.0,
+                      960.0,
+                      1920.0,
+                      7680.0,
+                      "+Inf"
+                    ],
+                    "cumulative_counts": [
+                      1,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2
+                    ],
+                    "count": 2,
+                    "sum_seconds": 0.373708171013277
+                  },
+                  "cohort": "finished_requests_reported_by_logger",
+                  "source_timestamp_mapping": false
+                },
+                "vllm:request_decode_time_seconds": {
+                  "present": true,
+                  "reason": null,
+                  "snapshot": {
+                    "upper_seconds": [
+                      0.3,
+                      0.5,
+                      0.8,
+                      1.0,
+                      1.5,
+                      2.0,
+                      2.5,
+                      5.0,
+                      10.0,
+                      15.0,
+                      20.0,
+                      30.0,
+                      40.0,
+                      50.0,
+                      60.0,
+                      120.0,
+                      240.0,
+                      480.0,
+                      960.0,
+                      1920.0,
+                      7680.0,
+                      "+Inf"
+                    ],
+                    "cumulative_counts": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2
+                    ],
+                    "count": 2,
+                    "sum_seconds": 3.635884282004554
+                  },
+                  "cohort": "finished_requests_reported_by_logger",
+                  "source_timestamp_mapping": false
+                }
+              },
+              "other_scope_count": 0,
+              "admission_window_wait_supported": false,
+              "prefill_service_fraction_supported": false,
+              "note": "Presence is not calibration, atomicity, source-clock mapping, admission-cohort coverage or exclusive GPU phase attribution."
+            },
+            "controller_mapping": {
+              "queue_depth_mean": "receipt_assigned_unweighted_gauge_sample",
+              "request_wait_p95_ms": "finished_request_logger_cohort_has_no_admission_window_clock_mapping",
+              "prefill_service_fraction": "request_phase_durations_do_not_partition_exclusive_GPU_service"
+            },
+            "histogram_role": "diagnostic_only_not_controller_features",
+            "source_event_clock_mapping": false,
+            "accepted_into_window": true
+          },
+          {
+            "mapping_version": "vllm_finished_cohort_mapping_v1",
+            "sample_id": "server-7",
+            "binding": {
+              "session_nonce": "fab4667cbda14fb389dfb2f98e464e3c",
+              "generation": 3,
+              "worker_pid": 6439,
+              "device_uuid": "GPU-baa93118-dfa3-1258-be9e-b6051b77c1cb",
+              "model": "Qwen/Qwen2.5-7B-Instruct",
+              "engine": "0",
+              "clock_domain": "process-monotonic-900bccaf-6fb7-4426-a27f-1426414b7896"
+            },
+            "requested_at_ns": 174147424660378,
+            "received_at_ns": 174147440994120,
+            "raw_sha256": "536af09d318cdb6c13a5566b8fdb445d040f260fa5f77d811bd9528a7070f355",
+            "http_status": 200,
+            "error": null,
+            "inspection": {
+              "profile": "vllm_0_10_2_v1_finished_request_metrics",
+              "selected_labels": {
+                "model_name": "Qwen/Qwen2.5-7B-Instruct",
+                "engine": "0"
+              },
+              "gauges": {
+                "vllm:num_requests_waiting": {
+                  "value": 0.0,
+                  "available": true,
+                  "reason": null
+                },
+                "vllm:num_requests_running": {
+                  "value": 0.0,
+                  "available": true,
+                  "reason": null
+                }
+              },
+              "histograms": {
+                "vllm:request_queue_time_seconds": {
+                  "present": true,
+                  "reason": null,
+                  "snapshot": {
+                    "upper_seconds": [
+                      0.3,
+                      0.5,
+                      0.8,
+                      1.0,
+                      1.5,
+                      2.0,
+                      2.5,
+                      5.0,
+                      10.0,
+                      15.0,
+                      20.0,
+                      30.0,
+                      40.0,
+                      50.0,
+                      60.0,
+                      120.0,
+                      240.0,
+                      480.0,
+                      960.0,
+                      1920.0,
+                      7680.0,
+                      "+Inf"
+                    ],
+                    "cumulative_counts": [
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2
+                    ],
+                    "count": 2,
+                    "sum_seconds": 0.00041203098953701556
+                  },
+                  "cohort": "finished_requests_reported_by_logger",
+                  "source_timestamp_mapping": false
+                },
+                "vllm:request_prefill_time_seconds": {
+                  "present": true,
+                  "reason": null,
+                  "snapshot": {
+                    "upper_seconds": [
+                      0.3,
+                      0.5,
+                      0.8,
+                      1.0,
+                      1.5,
+                      2.0,
+                      2.5,
+                      5.0,
+                      10.0,
+                      15.0,
+                      20.0,
+                      30.0,
+                      40.0,
+                      50.0,
+                      60.0,
+                      120.0,
+                      240.0,
+                      480.0,
+                      960.0,
+                      1920.0,
+                      7680.0,
+                      "+Inf"
+                    ],
+                    "cumulative_counts": [
+                      1,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2
+                    ],
+                    "count": 2,
+                    "sum_seconds": 0.373708171013277
+                  },
+                  "cohort": "finished_requests_reported_by_logger",
+                  "source_timestamp_mapping": false
+                },
+                "vllm:request_decode_time_seconds": {
+                  "present": true,
+                  "reason": null,
+                  "snapshot": {
+                    "upper_seconds": [
+                      0.3,
+                      0.5,
+                      0.8,
+                      1.0,
+                      1.5,
+                      2.0,
+                      2.5,
+                      5.0,
+                      10.0,
+                      15.0,
+                      20.0,
+                      30.0,
+                      40.0,
+                      50.0,
+                      60.0,
+                      120.0,
+                      240.0,
+                      480.0,
+                      960.0,
+                      1920.0,
+                      7680.0,
+                      "+Inf"
+                    ],
+                    "cumulative_counts": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2
+                    ],
+                    "count": 2,
+                    "sum_seconds": 3.635884282004554
+                  },
+                  "cohort": "finished_requests_reported_by_logger",
+                  "source_timestamp_mapping": false
+                }
+              },
+              "other_scope_count": 0,
+              "admission_window_wait_supported": false,
+              "prefill_service_fraction_supported": false,
+              "note": "Presence is not calibration, atomicity, source-clock mapping, admission-cohort coverage or exclusive GPU phase attribution."
+            },
+            "controller_mapping": {
+              "queue_depth_mean": "receipt_assigned_unweighted_gauge_sample",
+              "request_wait_p95_ms": "finished_request_logger_cohort_has_no_admission_window_clock_mapping",
+              "prefill_service_fraction": "request_phase_durations_do_not_partition_exclusive_GPU_service"
+            },
+            "histogram_role": "diagnostic_only_not_controller_features",
+            "source_event_clock_mapping": false,
+            "accepted_into_window": true
+          }
+        ],
+        "unsupported": {
+          "request_wait_p95_ms": "finished_request_logger_cohort_has_no_admission_window_clock_mapping",
+          "prefill_service_fraction": "request_phase_durations_do_not_partition_exclusive_GPU_service"
+        },
+        "coverage_scope": "accepted_records_only_not_planned_sample_completeness"
+      }
+    },
+    {
+      "window_id": "window-2",
+      "metrics": [
+        {
+          "name": "request_p95_ms",
+          "source": "request",
+          "unit": "ms",
+          "value": null,
+          "valid_samples": 0,
+          "attempted_samples": 1,
+          "coverage": "unavailable",
+          "missing_reason": "insufficient_successful_completions",
+          "acquisition": {
+            "start_ns": 174147924073108,
+            "end_ns": 174149924073108,
+            "available_at_ns": 174150174558734,
+            "clock_domain": "process-monotonic-900bccaf-6fb7-4426-a27f-1426414b7896"
+          }
+        },
+        {
+          "name": "completed_rps",
+          "source": "request",
+          "unit": "requests/s",
+          "value": 0.5,
+          "valid_samples": 1,
+          "attempted_samples": 1,
+          "coverage": "complete",
+          "missing_reason": null,
+          "acquisition": {
+            "start_ns": 174147924073108,
+            "end_ns": 174149924073108,
+            "available_at_ns": 174150174558734,
+            "clock_domain": "process-monotonic-900bccaf-6fb7-4426-a27f-1426414b7896"
+          }
+        },
+        {
+          "name": "prompt_tokens_mean",
+          "source": "request",
+          "unit": "tokens",
+          "value": 1072.0,
+          "valid_samples": 1,
+          "attempted_samples": 1,
+          "coverage": "complete",
+          "missing_reason": null,
+          "acquisition": {
+            "start_ns": 174147924073108,
+            "end_ns": 174149924073108,
+            "available_at_ns": 174150174558734,
+            "clock_domain": "process-monotonic-900bccaf-6fb7-4426-a27f-1426414b7896"
+          }
+        },
+        {
+          "name": "output_tokens_mean",
+          "source": "request",
+          "unit": "tokens",
+          "value": 32.0,
+          "valid_samples": 1,
+          "attempted_samples": 1,
+          "coverage": "complete",
+          "missing_reason": null,
+          "acquisition": {
+            "start_ns": 174147924073108,
+            "end_ns": 174149924073108,
+            "available_at_ns": 174150174558734,
+            "clock_domain": "process-monotonic-900bccaf-6fb7-4426-a27f-1426414b7896"
+          }
+        },
+        {
+          "name": "queue_depth_mean",
+          "source": "server",
+          "unit": "requests",
+          "value": 0.0,
+          "valid_samples": 4,
+          "attempted_samples": 4,
+          "coverage": "complete",
+          "missing_reason": null,
+          "acquisition": {
+            "start_ns": 174147924073108,
+            "end_ns": 174149924073108,
+            "available_at_ns": 174150174558734,
+            "clock_domain": "process-monotonic-900bccaf-6fb7-4426-a27f-1426414b7896"
+          }
+        },
+        {
+          "name": "gpu_util_mean",
+          "source": "gpu",
+          "unit": "percent",
+          "value": null,
+          "valid_samples": 0,
+          "attempted_samples": 0,
+          "coverage": "unavailable",
+          "missing_reason": "no_valid_gpu_samples",
+          "acquisition": {
+            "start_ns": 174147924073108,
+            "end_ns": 174149924073108,
+            "available_at_ns": 174150174558734,
+            "clock_domain": "process-monotonic-900bccaf-6fb7-4426-a27f-1426414b7896"
+          }
+        },
+        {
+          "name": "request_wait_p95_ms",
+          "source": "server",
+          "unit": "ms",
+          "value": null,
+          "valid_samples": 0,
+          "attempted_samples": 0,
+          "coverage": "unavailable",
+          "missing_reason": "finished_request_logger_cohort_has_no_admission_window_clock_mapping",
+          "acquisition": {
+            "start_ns": 174147924073108,
+            "end_ns": 174149924073108,
+            "available_at_ns": 174150174558734,
+            "clock_domain": "process-monotonic-900bccaf-6fb7-4426-a27f-1426414b7896"
+          }
+        },
+        {
+          "name": "prefill_service_fraction",
+          "source": "server",
+          "unit": "fraction",
+          "value": null,
+          "valid_samples": 0,
+          "attempted_samples": 0,
+          "coverage": "unavailable",
+          "missing_reason": "request_phase_durations_do_not_partition_exclusive_GPU_service",
+          "acquisition": {
+            "start_ns": 174147924073108,
+            "end_ns": 174149924073108,
+            "available_at_ns": 174150174558734,
+            "clock_domain": "process-monotonic-900bccaf-6fb7-4426-a27f-1426414b7896"
+          }
+        }
+      ],
+      "audit": {
+        "start_ns": 174147924073108,
+        "end_ns": 174149924073108,
+        "deadline_ns": 174150174073108,
+        "closed_at_ns": 174150174558734,
+        "min_latency_samples": 2,
+        "threshold_role": "development_guard_not_calibrated",
+        "completion_count": 1,
+        "successful_completions": 1,
+        "request_errors": 0,
+        "usage_missing": 0,
+        "events": [
+          {
+            "kind": "server",
+            "identity": "server-8",
+            "received_at_ns": 174147958967845,
+            "accepted": true,
+            "reason": "accepted"
+          },
+          {
+            "kind": "server",
+            "identity": "server-9",
+            "received_at_ns": 174148455572429,
+            "accepted": true,
+            "reason": "accepted"
+          },
+          {
+            "kind": "server",
+            "identity": "server-10",
+            "received_at_ns": 174148955335969,
+            "accepted": true,
+            "reason": "accepted"
+          },
+          {
+            "kind": "server",
+            "identity": "server-11",
+            "received_at_ns": 174149453554189,
+            "accepted": true,
+            "reason": "accepted"
+          },
+          {
+            "kind": "request",
+            "identity": "r001",
+            "received_at_ns": 174149841979915,
+            "accepted": true,
+            "reason": "accepted"
+          }
+        ],
+        "note": "Completion-cohort features; pending admissions/censoring are recorded by the workload driver. Gauge means are sample means, not time-weighted means.",
+        "mapping_version": "vllm_finished_cohort_mapping_v1",
+        "binding": {
+          "session_nonce": "fab4667cbda14fb389dfb2f98e464e3c",
+          "generation": 3,
+          "worker_pid": 6439,
+          "device_uuid": "GPU-baa93118-dfa3-1258-be9e-b6051b77c1cb",
+          "model": "Qwen/Qwen2.5-7B-Instruct",
+          "engine": "0",
+          "clock_domain": "process-monotonic-900bccaf-6fb7-4426-a27f-1426414b7896"
+        },
+        "receipt_audits": [
+          {
+            "mapping_version": "vllm_finished_cohort_mapping_v1",
+            "sample_id": "server-8",
+            "binding": {
+              "session_nonce": "fab4667cbda14fb389dfb2f98e464e3c",
+              "generation": 3,
+              "worker_pid": 6439,
+              "device_uuid": "GPU-baa93118-dfa3-1258-be9e-b6051b77c1cb",
+              "model": "Qwen/Qwen2.5-7B-Instruct",
+              "engine": "0",
+              "clock_domain": "process-monotonic-900bccaf-6fb7-4426-a27f-1426414b7896"
+            },
+            "requested_at_ns": 174147924206579,
+            "received_at_ns": 174147943994645,
+            "raw_sha256": "b7c98ebd78e71b39326f2ce74b44584b07dbf2db8bd8e73361721d345be2af47",
+            "http_status": 200,
+            "error": null,
+            "inspection": {
+              "profile": "vllm_0_10_2_v1_finished_request_metrics",
+              "selected_labels": {
+                "model_name": "Qwen/Qwen2.5-7B-Instruct",
+                "engine": "0"
+              },
+              "gauges": {
+                "vllm:num_requests_waiting": {
+                  "value": 0.0,
+                  "available": true,
+                  "reason": null
+                },
+                "vllm:num_requests_running": {
+                  "value": 0.0,
+                  "available": true,
+                  "reason": null
+                }
+              },
+              "histograms": {
+                "vllm:request_queue_time_seconds": {
+                  "present": true,
+                  "reason": null,
+                  "snapshot": {
+                    "upper_seconds": [
+                      0.3,
+                      0.5,
+                      0.8,
+                      1.0,
+                      1.5,
+                      2.0,
+                      2.5,
+                      5.0,
+                      10.0,
+                      15.0,
+                      20.0,
+                      30.0,
+                      40.0,
+                      50.0,
+                      60.0,
+                      120.0,
+                      240.0,
+                      480.0,
+                      960.0,
+                      1920.0,
+                      7680.0,
+                      "+Inf"
+                    ],
+                    "cumulative_counts": [
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2
+                    ],
+                    "count": 2,
+                    "sum_seconds": 0.00041203098953701556
+                  },
+                  "cohort": "finished_requests_reported_by_logger",
+                  "source_timestamp_mapping": false
+                },
+                "vllm:request_prefill_time_seconds": {
+                  "present": true,
+                  "reason": null,
+                  "snapshot": {
+                    "upper_seconds": [
+                      0.3,
+                      0.5,
+                      0.8,
+                      1.0,
+                      1.5,
+                      2.0,
+                      2.5,
+                      5.0,
+                      10.0,
+                      15.0,
+                      20.0,
+                      30.0,
+                      40.0,
+                      50.0,
+                      60.0,
+                      120.0,
+                      240.0,
+                      480.0,
+                      960.0,
+                      1920.0,
+                      7680.0,
+                      "+Inf"
+                    ],
+                    "cumulative_counts": [
+                      1,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2
+                    ],
+                    "count": 2,
+                    "sum_seconds": 0.373708171013277
+                  },
+                  "cohort": "finished_requests_reported_by_logger",
+                  "source_timestamp_mapping": false
+                },
+                "vllm:request_decode_time_seconds": {
+                  "present": true,
+                  "reason": null,
+                  "snapshot": {
+                    "upper_seconds": [
+                      0.3,
+                      0.5,
+                      0.8,
+                      1.0,
+                      1.5,
+                      2.0,
+                      2.5,
+                      5.0,
+                      10.0,
+                      15.0,
+                      20.0,
+                      30.0,
+                      40.0,
+                      50.0,
+                      60.0,
+                      120.0,
+                      240.0,
+                      480.0,
+                      960.0,
+                      1920.0,
+                      7680.0,
+                      "+Inf"
+                    ],
+                    "cumulative_counts": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2
+                    ],
+                    "count": 2,
+                    "sum_seconds": 3.635884282004554
+                  },
+                  "cohort": "finished_requests_reported_by_logger",
+                  "source_timestamp_mapping": false
+                }
+              },
+              "other_scope_count": 0,
+              "admission_window_wait_supported": false,
+              "prefill_service_fraction_supported": false,
+              "note": "Presence is not calibration, atomicity, source-clock mapping, admission-cohort coverage or exclusive GPU phase attribution."
+            },
+            "controller_mapping": {
+              "queue_depth_mean": "receipt_assigned_unweighted_gauge_sample",
+              "request_wait_p95_ms": "finished_request_logger_cohort_has_no_admission_window_clock_mapping",
+              "prefill_service_fraction": "request_phase_durations_do_not_partition_exclusive_GPU_service"
+            },
+            "histogram_role": "diagnostic_only_not_controller_features",
+            "source_event_clock_mapping": false,
+            "accepted_into_window": true
+          },
+          {
+            "mapping_version": "vllm_finished_cohort_mapping_v1",
+            "sample_id": "server-9",
+            "binding": {
+              "session_nonce": "fab4667cbda14fb389dfb2f98e464e3c",
+              "generation": 3,
+              "worker_pid": 6439,
+              "device_uuid": "GPU-baa93118-dfa3-1258-be9e-b6051b77c1cb",
+              "model": "Qwen/Qwen2.5-7B-Instruct",
+              "engine": "0",
+              "clock_domain": "process-monotonic-900bccaf-6fb7-4426-a27f-1426414b7896"
+            },
+            "requested_at_ns": 174148424598402,
+            "received_at_ns": 174148441337505,
+            "raw_sha256": "55279c682415ddc50f6de7ebb7808feda966e0dba3ac43cbe3a1a84dd8a5720a",
+            "http_status": 200,
+            "error": null,
+            "inspection": {
+              "profile": "vllm_0_10_2_v1_finished_request_metrics",
+              "selected_labels": {
+                "model_name": "Qwen/Qwen2.5-7B-Instruct",
+                "engine": "0"
+              },
+              "gauges": {
+                "vllm:num_requests_waiting": {
+                  "value": 0.0,
+                  "available": true,
+                  "reason": null
+                },
+                "vllm:num_requests_running": {
+                  "value": 1.0,
+                  "available": true,
+                  "reason": null
+                }
+              },
+              "histograms": {
+                "vllm:request_queue_time_seconds": {
+                  "present": true,
+                  "reason": null,
+                  "snapshot": {
+                    "upper_seconds": [
+                      0.3,
+                      0.5,
+                      0.8,
+                      1.0,
+                      1.5,
+                      2.0,
+                      2.5,
+                      5.0,
+                      10.0,
+                      15.0,
+                      20.0,
+                      30.0,
+                      40.0,
+                      50.0,
+                      60.0,
+                      120.0,
+                      240.0,
+                      480.0,
+                      960.0,
+                      1920.0,
+                      7680.0,
+                      "+Inf"
+                    ],
+                    "cumulative_counts": [
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2
+                    ],
+                    "count": 2,
+                    "sum_seconds": 0.00041203098953701556
+                  },
+                  "cohort": "finished_requests_reported_by_logger",
+                  "source_timestamp_mapping": false
+                },
+                "vllm:request_prefill_time_seconds": {
+                  "present": true,
+                  "reason": null,
+                  "snapshot": {
+                    "upper_seconds": [
+                      0.3,
+                      0.5,
+                      0.8,
+                      1.0,
+                      1.5,
+                      2.0,
+                      2.5,
+                      5.0,
+                      10.0,
+                      15.0,
+                      20.0,
+                      30.0,
+                      40.0,
+                      50.0,
+                      60.0,
+                      120.0,
+                      240.0,
+                      480.0,
+                      960.0,
+                      1920.0,
+                      7680.0,
+                      "+Inf"
+                    ],
+                    "cumulative_counts": [
+                      1,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2
+                    ],
+                    "count": 2,
+                    "sum_seconds": 0.373708171013277
+                  },
+                  "cohort": "finished_requests_reported_by_logger",
+                  "source_timestamp_mapping": false
+                },
+                "vllm:request_decode_time_seconds": {
+                  "present": true,
+                  "reason": null,
+                  "snapshot": {
+                    "upper_seconds": [
+                      0.3,
+                      0.5,
+                      0.8,
+                      1.0,
+                      1.5,
+                      2.0,
+                      2.5,
+                      5.0,
+                      10.0,
+                      15.0,
+                      20.0,
+                      30.0,
+                      40.0,
+                      50.0,
+                      60.0,
+                      120.0,
+                      240.0,
+                      480.0,
+                      960.0,
+                      1920.0,
+                      7680.0,
+                      "+Inf"
+                    ],
+                    "cumulative_counts": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2
+                    ],
+                    "count": 2,
+                    "sum_seconds": 3.635884282004554
+                  },
+                  "cohort": "finished_requests_reported_by_logger",
+                  "source_timestamp_mapping": false
+                }
+              },
+              "other_scope_count": 0,
+              "admission_window_wait_supported": false,
+              "prefill_service_fraction_supported": false,
+              "note": "Presence is not calibration, atomicity, source-clock mapping, admission-cohort coverage or exclusive GPU phase attribution."
+            },
+            "controller_mapping": {
+              "queue_depth_mean": "receipt_assigned_unweighted_gauge_sample",
+              "request_wait_p95_ms": "finished_request_logger_cohort_has_no_admission_window_clock_mapping",
+              "prefill_service_fraction": "request_phase_durations_do_not_partition_exclusive_GPU_service"
+            },
+            "histogram_role": "diagnostic_only_not_controller_features",
+            "source_event_clock_mapping": false,
+            "accepted_into_window": true
+          },
+          {
+            "mapping_version": "vllm_finished_cohort_mapping_v1",
+            "sample_id": "server-10",
+            "binding": {
+              "session_nonce": "fab4667cbda14fb389dfb2f98e464e3c",
+              "generation": 3,
+              "worker_pid": 6439,
+              "device_uuid": "GPU-baa93118-dfa3-1258-be9e-b6051b77c1cb",
+              "model": "Qwen/Qwen2.5-7B-Instruct",
+              "engine": "0",
+              "clock_domain": "process-monotonic-900bccaf-6fb7-4426-a27f-1426414b7896"
+            },
+            "requested_at_ns": 174148925088537,
+            "received_at_ns": 174148939966082,
+            "raw_sha256": "611351966889c7e4b54c6981cd25bc78ef61c2f83bef79680b1cdfdd085c30ca",
+            "http_status": 200,
+            "error": null,
+            "inspection": {
+              "profile": "vllm_0_10_2_v1_finished_request_metrics",
+              "selected_labels": {
+                "model_name": "Qwen/Qwen2.5-7B-Instruct",
+                "engine": "0"
+              },
+              "gauges": {
+                "vllm:num_requests_waiting": {
+                  "value": 0.0,
+                  "available": true,
+                  "reason": null
+                },
+                "vllm:num_requests_running": {
+                  "value": 1.0,
+                  "available": true,
+                  "reason": null
+                }
+              },
+              "histograms": {
+                "vllm:request_queue_time_seconds": {
+                  "present": true,
+                  "reason": null,
+                  "snapshot": {
+                    "upper_seconds": [
+                      0.3,
+                      0.5,
+                      0.8,
+                      1.0,
+                      1.5,
+                      2.0,
+                      2.5,
+                      5.0,
+                      10.0,
+                      15.0,
+                      20.0,
+                      30.0,
+                      40.0,
+                      50.0,
+                      60.0,
+                      120.0,
+                      240.0,
+                      480.0,
+                      960.0,
+                      1920.0,
+                      7680.0,
+                      "+Inf"
+                    ],
+                    "cumulative_counts": [
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2
+                    ],
+                    "count": 2,
+                    "sum_seconds": 0.00041203098953701556
+                  },
+                  "cohort": "finished_requests_reported_by_logger",
+                  "source_timestamp_mapping": false
+                },
+                "vllm:request_prefill_time_seconds": {
+                  "present": true,
+                  "reason": null,
+                  "snapshot": {
+                    "upper_seconds": [
+                      0.3,
+                      0.5,
+                      0.8,
+                      1.0,
+                      1.5,
+                      2.0,
+                      2.5,
+                      5.0,
+                      10.0,
+                      15.0,
+                      20.0,
+                      30.0,
+                      40.0,
+                      50.0,
+                      60.0,
+                      120.0,
+                      240.0,
+                      480.0,
+                      960.0,
+                      1920.0,
+                      7680.0,
+                      "+Inf"
+                    ],
+                    "cumulative_counts": [
+                      1,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2
+                    ],
+                    "count": 2,
+                    "sum_seconds": 0.373708171013277
+                  },
+                  "cohort": "finished_requests_reported_by_logger",
+                  "source_timestamp_mapping": false
+                },
+                "vllm:request_decode_time_seconds": {
+                  "present": true,
+                  "reason": null,
+                  "snapshot": {
+                    "upper_seconds": [
+                      0.3,
+                      0.5,
+                      0.8,
+                      1.0,
+                      1.5,
+                      2.0,
+                      2.5,
+                      5.0,
+                      10.0,
+                      15.0,
+                      20.0,
+                      30.0,
+                      40.0,
+                      50.0,
+                      60.0,
+                      120.0,
+                      240.0,
+                      480.0,
+                      960.0,
+                      1920.0,
+                      7680.0,
+                      "+Inf"
+                    ],
+                    "cumulative_counts": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2
+                    ],
+                    "count": 2,
+                    "sum_seconds": 3.635884282004554
+                  },
+                  "cohort": "finished_requests_reported_by_logger",
+                  "source_timestamp_mapping": false
+                }
+              },
+              "other_scope_count": 0,
+              "admission_window_wait_supported": false,
+              "prefill_service_fraction_supported": false,
+              "note": "Presence is not calibration, atomicity, source-clock mapping, admission-cohort coverage or exclusive GPU phase attribution."
+            },
+            "controller_mapping": {
+              "queue_depth_mean": "receipt_assigned_unweighted_gauge_sample",
+              "request_wait_p95_ms": "finished_request_logger_cohort_has_no_admission_window_clock_mapping",
+              "prefill_service_fraction": "request_phase_durations_do_not_partition_exclusive_GPU_service"
+            },
+            "histogram_role": "diagnostic_only_not_controller_features",
+            "source_event_clock_mapping": false,
+            "accepted_into_window": true
+          },
+          {
+            "mapping_version": "vllm_finished_cohort_mapping_v1",
+            "sample_id": "server-11",
+            "binding": {
+              "session_nonce": "fab4667cbda14fb389dfb2f98e464e3c",
+              "generation": 3,
+              "worker_pid": 6439,
+              "device_uuid": "GPU-baa93118-dfa3-1258-be9e-b6051b77c1cb",
+              "model": "Qwen/Qwen2.5-7B-Instruct",
+              "engine": "0",
+              "clock_domain": "process-monotonic-900bccaf-6fb7-4426-a27f-1426414b7896"
+            },
+            "requested_at_ns": 174149424717369,
+            "received_at_ns": 174149439250283,
+            "raw_sha256": "93d12afb03b01eff63bde264877bccc6e4fa50f50350418824c481c6fe5a81d9",
+            "http_status": 200,
+            "error": null,
+            "inspection": {
+              "profile": "vllm_0_10_2_v1_finished_request_metrics",
+              "selected_labels": {
+                "model_name": "Qwen/Qwen2.5-7B-Instruct",
+                "engine": "0"
+              },
+              "gauges": {
+                "vllm:num_requests_waiting": {
+                  "value": 0.0,
+                  "available": true,
+                  "reason": null
+                },
+                "vllm:num_requests_running": {
+                  "value": 1.0,
+                  "available": true,
+                  "reason": null
+                }
+              },
+              "histograms": {
+                "vllm:request_queue_time_seconds": {
+                  "present": true,
+                  "reason": null,
+                  "snapshot": {
+                    "upper_seconds": [
+                      0.3,
+                      0.5,
+                      0.8,
+                      1.0,
+                      1.5,
+                      2.0,
+                      2.5,
+                      5.0,
+                      10.0,
+                      15.0,
+                      20.0,
+                      30.0,
+                      40.0,
+                      50.0,
+                      60.0,
+                      120.0,
+                      240.0,
+                      480.0,
+                      960.0,
+                      1920.0,
+                      7680.0,
+                      "+Inf"
+                    ],
+                    "cumulative_counts": [
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2
+                    ],
+                    "count": 2,
+                    "sum_seconds": 0.00041203098953701556
+                  },
+                  "cohort": "finished_requests_reported_by_logger",
+                  "source_timestamp_mapping": false
+                },
+                "vllm:request_prefill_time_seconds": {
+                  "present": true,
+                  "reason": null,
+                  "snapshot": {
+                    "upper_seconds": [
+                      0.3,
+                      0.5,
+                      0.8,
+                      1.0,
+                      1.5,
+                      2.0,
+                      2.5,
+                      5.0,
+                      10.0,
+                      15.0,
+                      20.0,
+                      30.0,
+                      40.0,
+                      50.0,
+                      60.0,
+                      120.0,
+                      240.0,
+                      480.0,
+                      960.0,
+                      1920.0,
+                      7680.0,
+                      "+Inf"
+                    ],
+                    "cumulative_counts": [
+                      1,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2
+                    ],
+                    "count": 2,
+                    "sum_seconds": 0.373708171013277
+                  },
+                  "cohort": "finished_requests_reported_by_logger",
+                  "source_timestamp_mapping": false
+                },
+                "vllm:request_decode_time_seconds": {
+                  "present": true,
+                  "reason": null,
+                  "snapshot": {
+                    "upper_seconds": [
+                      0.3,
+                      0.5,
+                      0.8,
+                      1.0,
+                      1.5,
+                      2.0,
+                      2.5,
+                      5.0,
+                      10.0,
+                      15.0,
+                      20.0,
+                      30.0,
+                      40.0,
+                      50.0,
+                      60.0,
+                      120.0,
+                      240.0,
+                      480.0,
+                      960.0,
+                      1920.0,
+                      7680.0,
+                      "+Inf"
+                    ],
+                    "cumulative_counts": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2,
+                      2
+                    ],
+                    "count": 2,
+                    "sum_seconds": 3.635884282004554
+                  },
+                  "cohort": "finished_requests_reported_by_logger",
+                  "source_timestamp_mapping": false
+                }
+              },
+              "other_scope_count": 0,
+              "admission_window_wait_supported": false,
+              "prefill_service_fraction_supported": false,
+              "note": "Presence is not calibration, atomicity, source-clock mapping, admission-cohort coverage or exclusive GPU phase attribution."
+            },
+            "controller_mapping": {
+              "queue_depth_mean": "receipt_assigned_unweighted_gauge_sample",
+              "request_wait_p95_ms": "finished_request_logger_cohort_has_no_admission_window_clock_mapping",
+              "prefill_service_fraction": "request_phase_durations_do_not_partition_exclusive_GPU_service"
+            },
+            "histogram_role": "diagnostic_only_not_controller_features",
+            "source_event_clock_mapping": false,
+            "accepted_into_window": true
+          }
+        ],
+        "unsupported": {
+          "request_wait_p95_ms": "finished_request_logger_cohort_has_no_admission_window_clock_mapping",
+          "prefill_service_fraction": "request_phase_durations_do_not_partition_exclusive_GPU_service"
+        },
+        "coverage_scope": "accepted_records_only_not_planned_sample_completeness"
+      }
+    },
+    {
+      "window_id": "window-3",
+      "metrics": [
+        {
+          "name": "request_p95_ms",
+          "source": "request",
+          "unit": "ms",
+          "value": null,
+          "valid_samples": 0,
+          "attempted_samples": 0,
+          "coverage": "unavailable",
+          "missing_reason": "insufficient_successful_completions",
+          "acquisition": {
+            "start_ns": 174149924073108,
+            "end_ns": 174151924073108,
+            "available_at_ns": 174152174977189,
+            "clock_domain": "process-monotonic-900bccaf-6fb7-4426-a27f-1426414b7896"
+          }
+        },
+        {
+          "name": "completed_rps",
+          "source": "request",
+          "unit": "requests/s",
+          "value": 0.0,
+          "valid_samples": 1,
+          "attempted_samples": 1,
+          "coverage": "complete",
+          "missing_reason": null,
+          "acquisition": {
+            "start_ns": 174149924073108,
+            "end_ns": 174151924073108,
+            "available_at_ns": 174152174977189,
+            "clock_domain": "process-monotonic-900bccaf-6fb7-4426-a27f-1426414b7896"
+          }
+        },
+        {
+          "name": "prompt_tokens_mean",
+          "source": "request",
+          "unit": "tokens",
+          "value": null,
+          "valid_samples": 0,
+          "attempted_samples": 0,
+          "coverage": "unavailable",
+          "missing_reason": "no_valid_response_usage",
+          "acquisition": {
+            "start_ns": 174149924073108,
+            "end_ns": 174151924073108,
+            "available_at_ns": 174152174977189,
+            "clock_domain": "process-monotonic-900bccaf-6fb7-4426-a27f-1426414b7896"
+          }
+        },
+        {
+          "name": "output_tokens_mean",
+          "source": "request",
+          "unit": "tokens",
+          "value": null,
+          "valid_samples": 0,
+          "attempted_samples": 0,
+          "coverage": "unavailable",
+          "missing_reason": "no_valid_response_usage",
+          "acquisition": {
+            "start_ns": 174149924073108,
+            "end_ns": 174151924073108,
+            "available_at_ns": 174152174977189,
+            "clock_domain": "process-monotonic-900bccaf-6fb7-4426-a27f-1426414b7896"
+          }
+        },
+        {
+          "name": "queue_depth_mean",
+          "source": "server",
+          "unit": "requests",
+          "value": 0.0,
+          "valid_samples": 4,
+          "attempted_samples": 4,
+          "coverage": "complete",
+          "missing_reason": null,
+          "acquisition": {
+            "start_ns": 174149924073108,
+            "end_ns": 174151924073108,
+            "available_at_ns": 174152174977189,
+            "clock_domain": "process-monotonic-900bccaf-6fb7-4426-a27f-1426414b7896"
+          }
+        },
+        {
+          "name": "gpu_util_mean",
+          "source": "gpu",
+          "unit": "percent",
+          "value": null,
+          "valid_samples": 0,
+          "attempted_samples": 0,
+          "coverage": "unavailable",
+          "missing_reason": "no_valid_gpu_samples",
+          "acquisition": {
+            "start_ns": 174149924073108,
+            "end_ns": 174151924073108,
+            "available_at_ns": 174152174977189,
+            "clock_domain": "process-monotonic-900bccaf-6fb7-4426-a27f-1426414b7896"
+          }
+        },
+        {
+          "name": "request_wait_p95_ms",
+          "source": "server",
+          "unit": "ms",
+          "value": null,
+          "valid_samples": 0,
+          "attempted_samples": 0,
+          "coverage": "unavailable",
+          "missing_reason": "finished_request_logger_cohort_has_no_admission_window_clock_mapping",
+          "acquisition": {
+            "start_ns": 174149924073108,
+            "end_ns": 174151924073108,
+            "available_at_ns": 174152174977189,
+            "clock_domain": "process-monotonic-900bccaf-6fb7-4426-a27f-1426414b7896"
+          }
+        },
+        {
+          "name": "prefill_service_fraction",
+          "source": "server",
+          "unit": "fraction",
+          "value": null,
+          "valid_samples": 0,
+          "attempted_samples": 0,
+          "coverage": "unavailable",
+          "missing_reason": "request_phase_durations_do_not_partition_exclusive_GPU_service",
+          "acquisition": {
+            "start_ns": 174149924073108,
+            "end_ns": 174151924073108,
+            "available_at_ns": 174152174977189,
+            "clock_domain": "process-monotonic-900bccaf-6fb7-4426-a27f-1426414b7896"
+          }
+        }
+      ],
+      "audit": {
+        "start_ns": 174149924073108,
+        "end_ns": 174151924073108,
+        "deadline_ns": 174152174073108,
+        "closed_at_ns": 174152174977189,
+        "min_latency_samples": 2,
+        "threshold_role": "development_guard_not_calibrated",
+        "completion_count": 0,
+        "successful_completions": 0,
+        "request_errors": 0,
+        "usage_missing": 0,
+        "events": [
+          {
+            "kind": "server",
+            "identity": "server-12",
+            "received_at_ns": 174149955307344,
+            "accepted": true,
+            "reason": "accepted"
+          },
+          {
+            "kind": "server",
+            "identity": "server-13",
+            "received_at_ns": 174150456767254,
+            "accepted": true,
+            "reason": "accepted"
+          },
+          {
+            "kind": "server",
+            "identity": "server-14",
+            "received_at_ns": 174150954250684,
+            "accepted": true,
+            "reason": "accepted"
+          },
+          {
+            "kind": "server",
+            "identity": "server-15",
+            "received_at_ns": 174151455331447,
+            "accepted": true,
+            "reason": "accepted"
+          }
+        ],
+        "note": "Completion-cohort features; pending admissions/censoring are recorded by the workload driver. Gauge means are sample means, not time-weighted means.",
+        "mapping_version": "vllm_finished_cohort_mapping_v1",
+        "binding": {
+          "session_nonce": "fab4667cbda14fb389dfb2f98e464e3c",
+          "generation": 3,
+          "worker_pid": 6439,
+          "device_uuid": "GPU-baa93118-dfa3-1258-be9e-b6051b77c1cb",
+          "model": "Qwen/Qwen2.5-7B-Instruct",
+          "engine": "0",
+          "clock_domain": "process-monotonic-900bccaf-6fb7-4426-a27f-1426414b7896"
+        },
+        "receipt_audits": [
+          {
+            "mapping_version": "vllm_finished_cohort_mapping_v1",
+            "sample_id": "server-12",
+            "binding": {
+              "session_nonce": "fab4667cbda14fb389dfb2f98e464e3c",
+              "generation": 3,
+              "worker_pid": 6439,
+              "device_uuid": "GPU-baa93118-dfa3-1258-be9e-b6051b77c1cb",
+              "model": "Qwen/Qwen2.5-7B-Instruct",
+              "engine": "0",
+              "clock_domain": "process-monotonic-900bccaf-6fb7-4426-a27f-1426414b7896"
+            },
+            "requested_at_ns": 174149924610284,
+            "received_at_ns": 174149941611313,
+            "raw_sha256": "7a8c204e2f7c83f574e03cf1998978ae25ab5fe92c1a693e2f43517a1a0b3b61",
+            "http_status": 200,
+            "error": null,
+            "inspection": {
+              "profile": "vllm_0_10_2_v1_finished_request_metrics",
+              "selected_labels": {
+                "model_name": "Qwen/Qwen2.5-7B-Instruct",
+                "engine": "0"
+              },
+              "gauges": {
+                "vllm:num_requests_waiting": {
+                  "value": 0.0,
+                  "available": true,
+                  "reason": null
+                },
+                "vllm:num_requests_running": {
+                  "value": 0.0,
+                  "available": true,
+                  "reason": null
+                }
+              },
+              "histograms": {
+                "vllm:request_queue_time_seconds": {
+                  "present": true,
+                  "reason": null,
+                  "snapshot": {
+                    "upper_seconds": [
+                      0.3,
+                      0.5,
+                      0.8,
+                      1.0,
+                      1.5,
+                      2.0,
+                      2.5,
+                      5.0,
+                      10.0,
+                      15.0,
+                      20.0,
+                      30.0,
+                      40.0,
+                      50.0,
+                      60.0,
+                      120.0,
+                      240.0,
+                      480.0,
+                      960.0,
+                      1920.0,
+                      7680.0,
+                      "+Inf"
+                    ],
+                    "cumulative_counts": [
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3
+                    ],
+                    "count": 3,
+                    "sum_seconds": 0.0006105999636929482
+                  },
+                  "cohort": "finished_requests_reported_by_logger",
+                  "source_timestamp_mapping": false
+                },
+                "vllm:request_prefill_time_seconds": {
+                  "present": true,
+                  "reason": null,
+                  "snapshot": {
+                    "upper_seconds": [
+                      0.3,
+                      0.5,
+                      0.8,
+                      1.0,
+                      1.5,
+                      2.0,
+                      2.5,
+                      5.0,
+                      10.0,
+                      15.0,
+                      20.0,
+                      30.0,
+                      40.0,
+                      50.0,
+                      60.0,
+                      120.0,
+                      240.0,
+                      480.0,
+                      960.0,
+                      1920.0,
+                      7680.0,
+                      "+Inf"
+                    ],
+                    "cumulative_counts": [
+                      2,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3
+                    ],
+                    "count": 3,
+                    "sum_seconds": 0.43843682802980766
+                  },
+                  "cohort": "finished_requests_reported_by_logger",
+                  "source_timestamp_mapping": false
+                },
+                "vllm:request_decode_time_seconds": {
+                  "present": true,
+                  "reason": null,
+                  "snapshot": {
+                    "upper_seconds": [
+                      0.3,
+                      0.5,
+                      0.8,
+                      1.0,
+                      1.5,
+                      2.0,
+                      2.5,
+                      5.0,
+                      10.0,
+                      15.0,
+                      20.0,
+                      30.0,
+                      40.0,
+                      50.0,
+                      60.0,
+                      120.0,
+                      240.0,
+                      480.0,
+                      960.0,
+                      1920.0,
+                      7680.0,
+                      "+Inf"
+                    ],
+                    "cumulative_counts": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3
+                    ],
+                    "count": 3,
+                    "sum_seconds": 5.455510241998127
+                  },
+                  "cohort": "finished_requests_reported_by_logger",
+                  "source_timestamp_mapping": false
+                }
+              },
+              "other_scope_count": 0,
+              "admission_window_wait_supported": false,
+              "prefill_service_fraction_supported": false,
+              "note": "Presence is not calibration, atomicity, source-clock mapping, admission-cohort coverage or exclusive GPU phase attribution."
+            },
+            "controller_mapping": {
+              "queue_depth_mean": "receipt_assigned_unweighted_gauge_sample",
+              "request_wait_p95_ms": "finished_request_logger_cohort_has_no_admission_window_clock_mapping",
+              "prefill_service_fraction": "request_phase_durations_do_not_partition_exclusive_GPU_service"
+            },
+            "histogram_role": "diagnostic_only_not_controller_features",
+            "source_event_clock_mapping": false,
+            "accepted_into_window": true
+          },
+          {
+            "mapping_version": "vllm_finished_cohort_mapping_v1",
+            "sample_id": "server-13",
+            "binding": {
+              "session_nonce": "fab4667cbda14fb389dfb2f98e464e3c",
+              "generation": 3,
+              "worker_pid": 6439,
+              "device_uuid": "GPU-baa93118-dfa3-1258-be9e-b6051b77c1cb",
+              "model": "Qwen/Qwen2.5-7B-Instruct",
+              "engine": "0",
+              "clock_domain": "process-monotonic-900bccaf-6fb7-4426-a27f-1426414b7896"
+            },
+            "requested_at_ns": 174150424975561,
+            "received_at_ns": 174150442628810,
+            "raw_sha256": "2bb16d21e1dca68dadb952bc11d3def8f2538730c2d75cc894d5c218d80aba17",
+            "http_status": 200,
+            "error": null,
+            "inspection": {
+              "profile": "vllm_0_10_2_v1_finished_request_metrics",
+              "selected_labels": {
+                "model_name": "Qwen/Qwen2.5-7B-Instruct",
+                "engine": "0"
+              },
+              "gauges": {
+                "vllm:num_requests_waiting": {
+                  "value": 0.0,
+                  "available": true,
+                  "reason": null
+                },
+                "vllm:num_requests_running": {
+                  "value": 0.0,
+                  "available": true,
+                  "reason": null
+                }
+              },
+              "histograms": {
+                "vllm:request_queue_time_seconds": {
+                  "present": true,
+                  "reason": null,
+                  "snapshot": {
+                    "upper_seconds": [
+                      0.3,
+                      0.5,
+                      0.8,
+                      1.0,
+                      1.5,
+                      2.0,
+                      2.5,
+                      5.0,
+                      10.0,
+                      15.0,
+                      20.0,
+                      30.0,
+                      40.0,
+                      50.0,
+                      60.0,
+                      120.0,
+                      240.0,
+                      480.0,
+                      960.0,
+                      1920.0,
+                      7680.0,
+                      "+Inf"
+                    ],
+                    "cumulative_counts": [
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3
+                    ],
+                    "count": 3,
+                    "sum_seconds": 0.0006105999636929482
+                  },
+                  "cohort": "finished_requests_reported_by_logger",
+                  "source_timestamp_mapping": false
+                },
+                "vllm:request_prefill_time_seconds": {
+                  "present": true,
+                  "reason": null,
+                  "snapshot": {
+                    "upper_seconds": [
+                      0.3,
+                      0.5,
+                      0.8,
+                      1.0,
+                      1.5,
+                      2.0,
+                      2.5,
+                      5.0,
+                      10.0,
+                      15.0,
+                      20.0,
+                      30.0,
+                      40.0,
+                      50.0,
+                      60.0,
+                      120.0,
+                      240.0,
+                      480.0,
+                      960.0,
+                      1920.0,
+                      7680.0,
+                      "+Inf"
+                    ],
+                    "cumulative_counts": [
+                      2,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3
+                    ],
+                    "count": 3,
+                    "sum_seconds": 0.43843682802980766
+                  },
+                  "cohort": "finished_requests_reported_by_logger",
+                  "source_timestamp_mapping": false
+                },
+                "vllm:request_decode_time_seconds": {
+                  "present": true,
+                  "reason": null,
+                  "snapshot": {
+                    "upper_seconds": [
+                      0.3,
+                      0.5,
+                      0.8,
+                      1.0,
+                      1.5,
+                      2.0,
+                      2.5,
+                      5.0,
+                      10.0,
+                      15.0,
+                      20.0,
+                      30.0,
+                      40.0,
+                      50.0,
+                      60.0,
+                      120.0,
+                      240.0,
+                      480.0,
+                      960.0,
+                      1920.0,
+                      7680.0,
+                      "+Inf"
+                    ],
+                    "cumulative_counts": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3
+                    ],
+                    "count": 3,
+                    "sum_seconds": 5.455510241998127
+                  },
+                  "cohort": "finished_requests_reported_by_logger",
+                  "source_timestamp_mapping": false
+                }
+              },
+              "other_scope_count": 0,
+              "admission_window_wait_supported": false,
+              "prefill_service_fraction_supported": false,
+              "note": "Presence is not calibration, atomicity, source-clock mapping, admission-cohort coverage or exclusive GPU phase attribution."
+            },
+            "controller_mapping": {
+              "queue_depth_mean": "receipt_assigned_unweighted_gauge_sample",
+              "request_wait_p95_ms": "finished_request_logger_cohort_has_no_admission_window_clock_mapping",
+              "prefill_service_fraction": "request_phase_durations_do_not_partition_exclusive_GPU_service"
+            },
+            "histogram_role": "diagnostic_only_not_controller_features",
+            "source_event_clock_mapping": false,
+            "accepted_into_window": true
+          },
+          {
+            "mapping_version": "vllm_finished_cohort_mapping_v1",
+            "sample_id": "server-14",
+            "binding": {
+              "session_nonce": "fab4667cbda14fb389dfb2f98e464e3c",
+              "generation": 3,
+              "worker_pid": 6439,
+              "device_uuid": "GPU-baa93118-dfa3-1258-be9e-b6051b77c1cb",
+              "model": "Qwen/Qwen2.5-7B-Instruct",
+              "engine": "0",
+              "clock_domain": "process-monotonic-900bccaf-6fb7-4426-a27f-1426414b7896"
+            },
+            "requested_at_ns": 174150924460863,
+            "received_at_ns": 174150940032093,
+            "raw_sha256": "b44ad22048294ae3223b650320d0a00f8bc46469102268a1d570996df563e49d",
+            "http_status": 200,
+            "error": null,
+            "inspection": {
+              "profile": "vllm_0_10_2_v1_finished_request_metrics",
+              "selected_labels": {
+                "model_name": "Qwen/Qwen2.5-7B-Instruct",
+                "engine": "0"
+              },
+              "gauges": {
+                "vllm:num_requests_waiting": {
+                  "value": 0.0,
+                  "available": true,
+                  "reason": null
+                },
+                "vllm:num_requests_running": {
+                  "value": 0.0,
+                  "available": true,
+                  "reason": null
+                }
+              },
+              "histograms": {
+                "vllm:request_queue_time_seconds": {
+                  "present": true,
+                  "reason": null,
+                  "snapshot": {
+                    "upper_seconds": [
+                      0.3,
+                      0.5,
+                      0.8,
+                      1.0,
+                      1.5,
+                      2.0,
+                      2.5,
+                      5.0,
+                      10.0,
+                      15.0,
+                      20.0,
+                      30.0,
+                      40.0,
+                      50.0,
+                      60.0,
+                      120.0,
+                      240.0,
+                      480.0,
+                      960.0,
+                      1920.0,
+                      7680.0,
+                      "+Inf"
+                    ],
+                    "cumulative_counts": [
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3
+                    ],
+                    "count": 3,
+                    "sum_seconds": 0.0006105999636929482
+                  },
+                  "cohort": "finished_requests_reported_by_logger",
+                  "source_timestamp_mapping": false
+                },
+                "vllm:request_prefill_time_seconds": {
+                  "present": true,
+                  "reason": null,
+                  "snapshot": {
+                    "upper_seconds": [
+                      0.3,
+                      0.5,
+                      0.8,
+                      1.0,
+                      1.5,
+                      2.0,
+                      2.5,
+                      5.0,
+                      10.0,
+                      15.0,
+                      20.0,
+                      30.0,
+                      40.0,
+                      50.0,
+                      60.0,
+                      120.0,
+                      240.0,
+                      480.0,
+                      960.0,
+                      1920.0,
+                      7680.0,
+                      "+Inf"
+                    ],
+                    "cumulative_counts": [
+                      2,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3
+                    ],
+                    "count": 3,
+                    "sum_seconds": 0.43843682802980766
+                  },
+                  "cohort": "finished_requests_reported_by_logger",
+                  "source_timestamp_mapping": false
+                },
+                "vllm:request_decode_time_seconds": {
+                  "present": true,
+                  "reason": null,
+                  "snapshot": {
+                    "upper_seconds": [
+                      0.3,
+                      0.5,
+                      0.8,
+                      1.0,
+                      1.5,
+                      2.0,
+                      2.5,
+                      5.0,
+                      10.0,
+                      15.0,
+                      20.0,
+                      30.0,
+                      40.0,
+                      50.0,
+                      60.0,
+                      120.0,
+                      240.0,
+                      480.0,
+                      960.0,
+                      1920.0,
+                      7680.0,
+                      "+Inf"
+                    ],
+                    "cumulative_counts": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3
+                    ],
+                    "count": 3,
+                    "sum_seconds": 5.455510241998127
+                  },
+                  "cohort": "finished_requests_reported_by_logger",
+                  "source_timestamp_mapping": false
+                }
+              },
+              "other_scope_count": 0,
+              "admission_window_wait_supported": false,
+              "prefill_service_fraction_supported": false,
+              "note": "Presence is not calibration, atomicity, source-clock mapping, admission-cohort coverage or exclusive GPU phase attribution."
+            },
+            "controller_mapping": {
+              "queue_depth_mean": "receipt_assigned_unweighted_gauge_sample",
+              "request_wait_p95_ms": "finished_request_logger_cohort_has_no_admission_window_clock_mapping",
+              "prefill_service_fraction": "request_phase_durations_do_not_partition_exclusive_GPU_service"
+            },
+            "histogram_role": "diagnostic_only_not_controller_features",
+            "source_event_clock_mapping": false,
+            "accepted_into_window": true
+          },
+          {
+            "mapping_version": "vllm_finished_cohort_mapping_v1",
+            "sample_id": "server-15",
+            "binding": {
+              "session_nonce": "fab4667cbda14fb389dfb2f98e464e3c",
+              "generation": 3,
+              "worker_pid": 6439,
+              "device_uuid": "GPU-baa93118-dfa3-1258-be9e-b6051b77c1cb",
+              "model": "Qwen/Qwen2.5-7B-Instruct",
+              "engine": "0",
+              "clock_domain": "process-monotonic-900bccaf-6fb7-4426-a27f-1426414b7896"
+            },
+            "requested_at_ns": 174151424610035,
+            "received_at_ns": 174151441749939,
+            "raw_sha256": "100f348b1ee4ed0b000e4a88fb18d6e108f26ce641fb28353640bcb5afc2f762",
+            "http_status": 200,
+            "error": null,
+            "inspection": {
+              "profile": "vllm_0_10_2_v1_finished_request_metrics",
+              "selected_labels": {
+                "model_name": "Qwen/Qwen2.5-7B-Instruct",
+                "engine": "0"
+              },
+              "gauges": {
+                "vllm:num_requests_waiting": {
+                  "value": 0.0,
+                  "available": true,
+                  "reason": null
+                },
+                "vllm:num_requests_running": {
+                  "value": 0.0,
+                  "available": true,
+                  "reason": null
+                }
+              },
+              "histograms": {
+                "vllm:request_queue_time_seconds": {
+                  "present": true,
+                  "reason": null,
+                  "snapshot": {
+                    "upper_seconds": [
+                      0.3,
+                      0.5,
+                      0.8,
+                      1.0,
+                      1.5,
+                      2.0,
+                      2.5,
+                      5.0,
+                      10.0,
+                      15.0,
+                      20.0,
+                      30.0,
+                      40.0,
+                      50.0,
+                      60.0,
+                      120.0,
+                      240.0,
+                      480.0,
+                      960.0,
+                      1920.0,
+                      7680.0,
+                      "+Inf"
+                    ],
+                    "cumulative_counts": [
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3
+                    ],
+                    "count": 3,
+                    "sum_seconds": 0.0006105999636929482
+                  },
+                  "cohort": "finished_requests_reported_by_logger",
+                  "source_timestamp_mapping": false
+                },
+                "vllm:request_prefill_time_seconds": {
+                  "present": true,
+                  "reason": null,
+                  "snapshot": {
+                    "upper_seconds": [
+                      0.3,
+                      0.5,
+                      0.8,
+                      1.0,
+                      1.5,
+                      2.0,
+                      2.5,
+                      5.0,
+                      10.0,
+                      15.0,
+                      20.0,
+                      30.0,
+                      40.0,
+                      50.0,
+                      60.0,
+                      120.0,
+                      240.0,
+                      480.0,
+                      960.0,
+                      1920.0,
+                      7680.0,
+                      "+Inf"
+                    ],
+                    "cumulative_counts": [
+                      2,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3
+                    ],
+                    "count": 3,
+                    "sum_seconds": 0.43843682802980766
+                  },
+                  "cohort": "finished_requests_reported_by_logger",
+                  "source_timestamp_mapping": false
+                },
+                "vllm:request_decode_time_seconds": {
+                  "present": true,
+                  "reason": null,
+                  "snapshot": {
+                    "upper_seconds": [
+                      0.3,
+                      0.5,
+                      0.8,
+                      1.0,
+                      1.5,
+                      2.0,
+                      2.5,
+                      5.0,
+                      10.0,
+                      15.0,
+                      20.0,
+                      30.0,
+                      40.0,
+                      50.0,
+                      60.0,
+                      120.0,
+                      240.0,
+                      480.0,
+                      960.0,
+                      1920.0,
+                      7680.0,
+                      "+Inf"
+                    ],
+                    "cumulative_counts": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3,
+                      3
+                    ],
+                    "count": 3,
+                    "sum_seconds": 5.455510241998127
+                  },
+                  "cohort": "finished_requests_reported_by_logger",
+                  "source_timestamp_mapping": false
+                }
+              },
+              "other_scope_count": 0,
+              "admission_window_wait_supported": false,
+              "prefill_service_fraction_supported": false,
+              "note": "Presence is not calibration, atomicity, source-clock mapping, admission-cohort coverage or exclusive GPU phase attribution."
+            },
+            "controller_mapping": {
+              "queue_depth_mean": "receipt_assigned_unweighted_gauge_sample",
+              "request_wait_p95_ms": "finished_request_logger_cohort_has_no_admission_window_clock_mapping",
+              "prefill_service_fraction": "request_phase_durations_do_not_partition_exclusive_GPU_service"
+            },
+            "histogram_role": "diagnostic_only_not_controller_features",
+            "source_event_clock_mapping": false,
+            "accepted_into_window": true
+          }
+        ],
+        "unsupported": {
+          "request_wait_p95_ms": "finished_request_logger_cohort_has_no_admission_window_clock_mapping",
+          "prefill_service_fraction": "request_phase_durations_do_not_partition_exclusive_GPU_service"
+        },
+        "coverage_scope": "accepted_records_only_not_planned_sample_completeness"
+      }
+    }
+  ],
+  "note": "Offered schedule is fixed; admitted/completed work may differ. Reconstructed horizon state uses later receipts and is evaluator-only. No server/profiler lifecycle or calibrated diagnosis implemented."
+}

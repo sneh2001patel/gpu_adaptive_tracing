@@ -1,0 +1,44 @@
+{
+  "activity_001": {
+    "artifact_hash_entries": 46,
+    "source_fingerprints": 64,
+    "fresh_barriers": 4,
+    "passed_gates": [
+      "inventory",
+      "metrics",
+      "quiet_reset",
+      "cleanup"
+    ],
+    "live_feasibility_passed": false,
+    "valid_capture_count": 0,
+    "failure_retained": "relative_callback_path_not_found"
+  },
+  "activity_002": {
+    "artifact_hash_entries": 64,
+    "source_fingerprints": 64,
+    "fresh_barriers": 6,
+    "passed_gates": [
+      "inventory",
+      "metrics",
+      "quiet_reset",
+      "capture",
+      "cleanup"
+    ],
+    "live_feasibility_passed": true,
+    "valid_capture_count": 1,
+    "kernel_count": 5992,
+    "request_statuses": [
+      200,
+      200
+    ],
+    "control_ack_span_s": 1.896336451,
+    "parse_after_stop_s": 0.200605226
+  },
+  "post_cleanup_verified": true,
+  "cpu_tests": {
+    "total": 399,
+    "new": 19,
+    "result": "passed",
+    "scope": "CPU logic and injected worker behavior, separate from hardware evidence"
+  }
+}

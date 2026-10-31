@@ -10,13 +10,13 @@ __pycache__/
 .venv/
 venv/
 env/
-RQ1/.conda/
+archive/icse_2026/RQ1/.conda/
 
 # Local profiler/tool installs and package caches
-RQ1/tools/
+archive/icse_2026/RQ1/tools/
 
 # Raw experiment runs and profiler outputs
-RQ1/runs/
+archive/icse_2026/RQ1/runs/
 *.nsys-rep
 *.sqlite
 *.qdrep
@@ -26,7 +26,7 @@ RQ1/runs/
 .DS_Store
 Thumbs.db
 
-# LaTeX build artifacts (paper/)
+# LaTeX build artifacts
 *.aux
 *.log
 *.out
@@ -36,3 +36,21 @@ Thumbs.db
 *.fdb_latexmk
 *.synctex.gz
 
+
+# Downloaded literature PDFs (publisher/author copies; do not redistribute)
+litterature_review/papers/*.pdf
+
+# Raw Nsight commissioning captures (kept locally, too large for git)
+revision/cases/checks/commissioning/*/burst_*
+revision/cases/checks/episodes_commission/*/burst_*
+revision/cases/checks/episodes_commission_v2/*/burst_*
+revision/cases/checks/symptoms/*/*/burst_*
+revision/cases/checks/calibration/*/*/*/burst_*
+revision/cases/checks/calibration_prerun/*/*/*/burst_*
+revision/cases/checks/evaluation/*/*/*/*/burst_*
+revision/cases/checks/evaluation_hosts/*/evaluation*/**/burst_*
+revision/cases/checks/evaluation_hosts/*/evaluation*/**/*.sqlite
+
+# Paper under double-anonymous review: kept local until decisions are out
+CAIN_paper/
+archive/cain_drafts/

@@ -1,0 +1,29 @@
+{
+  "preflight_version": "preflight_v1",
+  "mode": "passive_inventory",
+  "environment": {
+    "platform": "Darwin",
+    "python": "3.13.7",
+    "pynvml_module_present": false,
+    "nvidia_ml_py_version": null,
+    "nsys_path": null,
+    "cuda_visible_devices": null
+  },
+  "telemetry": {
+    "status": "not_checked",
+    "device_uuid": null
+  },
+  "configuration": {
+    "status": "not_supplied"
+  },
+  "worker_device_mapping": "unverified",
+  "real_profiler_backend": "not_implemented",
+  "capture_coverage": "unverified",
+  "live_experiment_ready": false,
+  "blockers": [
+    "Actual NVML read has not been verified on the target GPU",
+    "Serving worker/device mapping and healthy calibration require verification",
+    "Real profiler attachment, capture acknowledgement, readiness and coverage are unvalidated"
+  ],
+  "note": "Package/binary discovery does not establish GPU or capture readiness. No serving endpoint is contacted."
+}

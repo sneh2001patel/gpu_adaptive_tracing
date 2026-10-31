@@ -1,0 +1,846 @@
+{
+  "version": "live_feasibility_gates_v1",
+  "provenance": "live_online",
+  "clock_domain": "process-monotonic-cb283780-0ed8-46d8-84b7-bb524efc6edc",
+  "gates": {
+    "inventory": {
+      "status": "passed",
+      "reason": null
+    },
+    "metrics": {
+      "status": "passed",
+      "reason": null
+    },
+    "quiet_reset": {
+      "status": "passed",
+      "reason": null
+    },
+    "capture": {
+      "status": "passed",
+      "reason": null
+    },
+    "cleanup": {
+      "status": "passed",
+      "reason": null
+    }
+  },
+  "discovery_passed": true,
+  "gate_mechanics_passed": true,
+  "live_feasibility_passed": true,
+  "study_ready": false,
+  "diagnosis_ready": false,
+  "protocol_frozen": false,
+  "context": {
+    "worker_pid": 3215,
+    "metric_capabilities": {
+      "snapshots": [
+        {
+          "ok": true,
+          "inspection": {
+            "profile": "vllm_0_10_2_v1_finished_request_metrics",
+            "selected_labels": {
+              "model_name": "Qwen/Qwen2.5-7B-Instruct",
+              "engine": "0"
+            },
+            "gauges": {
+              "vllm:num_requests_waiting": {
+                "value": 0.0,
+                "available": true,
+                "reason": null
+              },
+              "vllm:num_requests_running": {
+                "value": 0.0,
+                "available": true,
+                "reason": null
+              }
+            },
+            "histograms": {
+              "vllm:request_queue_time_seconds": {
+                "present": true,
+                "reason": null,
+                "snapshot": {
+                  "upper_seconds": [
+                    0.3,
+                    0.5,
+                    0.8,
+                    1.0,
+                    1.5,
+                    2.0,
+                    2.5,
+                    5.0,
+                    10.0,
+                    15.0,
+                    20.0,
+                    30.0,
+                    40.0,
+                    50.0,
+                    60.0,
+                    120.0,
+                    240.0,
+                    480.0,
+                    960.0,
+                    1920.0,
+                    7680.0,
+                    "+Inf"
+                  ],
+                  "cumulative_counts": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  "count": 0,
+                  "sum_seconds": 0.0
+                },
+                "cohort": "finished_requests_reported_by_logger",
+                "source_timestamp_mapping": false
+              },
+              "vllm:request_prefill_time_seconds": {
+                "present": true,
+                "reason": null,
+                "snapshot": {
+                  "upper_seconds": [
+                    0.3,
+                    0.5,
+                    0.8,
+                    1.0,
+                    1.5,
+                    2.0,
+                    2.5,
+                    5.0,
+                    10.0,
+                    15.0,
+                    20.0,
+                    30.0,
+                    40.0,
+                    50.0,
+                    60.0,
+                    120.0,
+                    240.0,
+                    480.0,
+                    960.0,
+                    1920.0,
+                    7680.0,
+                    "+Inf"
+                  ],
+                  "cumulative_counts": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  "count": 0,
+                  "sum_seconds": 0.0
+                },
+                "cohort": "finished_requests_reported_by_logger",
+                "source_timestamp_mapping": false
+              },
+              "vllm:request_decode_time_seconds": {
+                "present": true,
+                "reason": null,
+                "snapshot": {
+                  "upper_seconds": [
+                    0.3,
+                    0.5,
+                    0.8,
+                    1.0,
+                    1.5,
+                    2.0,
+                    2.5,
+                    5.0,
+                    10.0,
+                    15.0,
+                    20.0,
+                    30.0,
+                    40.0,
+                    50.0,
+                    60.0,
+                    120.0,
+                    240.0,
+                    480.0,
+                    960.0,
+                    1920.0,
+                    7680.0,
+                    "+Inf"
+                  ],
+                  "cumulative_counts": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  "count": 0,
+                  "sum_seconds": 0.0
+                },
+                "cohort": "finished_requests_reported_by_logger",
+                "source_timestamp_mapping": false
+              }
+            },
+            "other_scope_count": 0,
+            "admission_window_wait_supported": false,
+            "prefill_service_fraction_supported": false,
+            "note": "Presence is not calibration, atomicity, source-clock mapping, admission-cohort coverage or exclusive GPU phase attribution."
+          },
+          "error": null
+        },
+        {
+          "ok": true,
+          "inspection": {
+            "profile": "vllm_0_10_2_v1_finished_request_metrics",
+            "selected_labels": {
+              "model_name": "Qwen/Qwen2.5-7B-Instruct",
+              "engine": "0"
+            },
+            "gauges": {
+              "vllm:num_requests_waiting": {
+                "value": 0.0,
+                "available": true,
+                "reason": null
+              },
+              "vllm:num_requests_running": {
+                "value": 0.0,
+                "available": true,
+                "reason": null
+              }
+            },
+            "histograms": {
+              "vllm:request_queue_time_seconds": {
+                "present": true,
+                "reason": null,
+                "snapshot": {
+                  "upper_seconds": [
+                    0.3,
+                    0.5,
+                    0.8,
+                    1.0,
+                    1.5,
+                    2.0,
+                    2.5,
+                    5.0,
+                    10.0,
+                    15.0,
+                    20.0,
+                    30.0,
+                    40.0,
+                    50.0,
+                    60.0,
+                    120.0,
+                    240.0,
+                    480.0,
+                    960.0,
+                    1920.0,
+                    7680.0,
+                    "+Inf"
+                  ],
+                  "cumulative_counts": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  "count": 0,
+                  "sum_seconds": 0.0
+                },
+                "cohort": "finished_requests_reported_by_logger",
+                "source_timestamp_mapping": false
+              },
+              "vllm:request_prefill_time_seconds": {
+                "present": true,
+                "reason": null,
+                "snapshot": {
+                  "upper_seconds": [
+                    0.3,
+                    0.5,
+                    0.8,
+                    1.0,
+                    1.5,
+                    2.0,
+                    2.5,
+                    5.0,
+                    10.0,
+                    15.0,
+                    20.0,
+                    30.0,
+                    40.0,
+                    50.0,
+                    60.0,
+                    120.0,
+                    240.0,
+                    480.0,
+                    960.0,
+                    1920.0,
+                    7680.0,
+                    "+Inf"
+                  ],
+                  "cumulative_counts": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  "count": 0,
+                  "sum_seconds": 0.0
+                },
+                "cohort": "finished_requests_reported_by_logger",
+                "source_timestamp_mapping": false
+              },
+              "vllm:request_decode_time_seconds": {
+                "present": true,
+                "reason": null,
+                "snapshot": {
+                  "upper_seconds": [
+                    0.3,
+                    0.5,
+                    0.8,
+                    1.0,
+                    1.5,
+                    2.0,
+                    2.5,
+                    5.0,
+                    10.0,
+                    15.0,
+                    20.0,
+                    30.0,
+                    40.0,
+                    50.0,
+                    60.0,
+                    120.0,
+                    240.0,
+                    480.0,
+                    960.0,
+                    1920.0,
+                    7680.0,
+                    "+Inf"
+                  ],
+                  "cumulative_counts": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  "count": 0,
+                  "sum_seconds": 0.0
+                },
+                "cohort": "finished_requests_reported_by_logger",
+                "source_timestamp_mapping": false
+              }
+            },
+            "other_scope_count": 0,
+            "admission_window_wait_supported": false,
+            "prefill_service_fraction_supported": false,
+            "note": "Presence is not calibration, atomicity, source-clock mapping, admission-cohort coverage or exclusive GPU phase attribution."
+          },
+          "error": null
+        },
+        {
+          "ok": true,
+          "inspection": {
+            "profile": "vllm_0_10_2_v1_finished_request_metrics",
+            "selected_labels": {
+              "model_name": "Qwen/Qwen2.5-7B-Instruct",
+              "engine": "0"
+            },
+            "gauges": {
+              "vllm:num_requests_waiting": {
+                "value": 0.0,
+                "available": true,
+                "reason": null
+              },
+              "vllm:num_requests_running": {
+                "value": 0.0,
+                "available": true,
+                "reason": null
+              }
+            },
+            "histograms": {
+              "vllm:request_queue_time_seconds": {
+                "present": true,
+                "reason": null,
+                "snapshot": {
+                  "upper_seconds": [
+                    0.3,
+                    0.5,
+                    0.8,
+                    1.0,
+                    1.5,
+                    2.0,
+                    2.5,
+                    5.0,
+                    10.0,
+                    15.0,
+                    20.0,
+                    30.0,
+                    40.0,
+                    50.0,
+                    60.0,
+                    120.0,
+                    240.0,
+                    480.0,
+                    960.0,
+                    1920.0,
+                    7680.0,
+                    "+Inf"
+                  ],
+                  "cumulative_counts": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  "count": 0,
+                  "sum_seconds": 0.0
+                },
+                "cohort": "finished_requests_reported_by_logger",
+                "source_timestamp_mapping": false
+              },
+              "vllm:request_prefill_time_seconds": {
+                "present": true,
+                "reason": null,
+                "snapshot": {
+                  "upper_seconds": [
+                    0.3,
+                    0.5,
+                    0.8,
+                    1.0,
+                    1.5,
+                    2.0,
+                    2.5,
+                    5.0,
+                    10.0,
+                    15.0,
+                    20.0,
+                    30.0,
+                    40.0,
+                    50.0,
+                    60.0,
+                    120.0,
+                    240.0,
+                    480.0,
+                    960.0,
+                    1920.0,
+                    7680.0,
+                    "+Inf"
+                  ],
+                  "cumulative_counts": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  "count": 0,
+                  "sum_seconds": 0.0
+                },
+                "cohort": "finished_requests_reported_by_logger",
+                "source_timestamp_mapping": false
+              },
+              "vllm:request_decode_time_seconds": {
+                "present": true,
+                "reason": null,
+                "snapshot": {
+                  "upper_seconds": [
+                    0.3,
+                    0.5,
+                    0.8,
+                    1.0,
+                    1.5,
+                    2.0,
+                    2.5,
+                    5.0,
+                    10.0,
+                    15.0,
+                    20.0,
+                    30.0,
+                    40.0,
+                    50.0,
+                    60.0,
+                    120.0,
+                    240.0,
+                    480.0,
+                    960.0,
+                    1920.0,
+                    7680.0,
+                    "+Inf"
+                  ],
+                  "cumulative_counts": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  "count": 0,
+                  "sum_seconds": 0.0
+                },
+                "cohort": "finished_requests_reported_by_logger",
+                "source_timestamp_mapping": false
+              }
+            },
+            "other_scope_count": 0,
+            "admission_window_wait_supported": false,
+            "prefill_service_fraction_supported": false,
+            "note": "Presence is not calibration, atomicity, source-clock mapping, admission-cohort coverage or exclusive GPU phase attribution."
+          },
+          "error": null
+        }
+      ],
+      "transitions": [
+        {
+          "from_snapshot": 0,
+          "to_snapshot": 1,
+          "family": "vllm:request_queue_time_seconds",
+          "reason": null,
+          "newly_reported_finished_requests": 0,
+          "usable_as_controller_feature": false
+        },
+        {
+          "from_snapshot": 0,
+          "to_snapshot": 1,
+          "family": "vllm:request_prefill_time_seconds",
+          "reason": null,
+          "newly_reported_finished_requests": 0,
+          "usable_as_controller_feature": false
+        },
+        {
+          "from_snapshot": 0,
+          "to_snapshot": 1,
+          "family": "vllm:request_decode_time_seconds",
+          "reason": null,
+          "newly_reported_finished_requests": 0,
+          "usable_as_controller_feature": false
+        },
+        {
+          "from_snapshot": 1,
+          "to_snapshot": 2,
+          "family": "vllm:request_queue_time_seconds",
+          "reason": null,
+          "newly_reported_finished_requests": 0,
+          "usable_as_controller_feature": false
+        },
+        {
+          "from_snapshot": 1,
+          "to_snapshot": 2,
+          "family": "vllm:request_prefill_time_seconds",
+          "reason": null,
+          "newly_reported_finished_requests": 0,
+          "usable_as_controller_feature": false
+        },
+        {
+          "from_snapshot": 1,
+          "to_snapshot": 2,
+          "family": "vllm:request_decode_time_seconds",
+          "reason": null,
+          "newly_reported_finished_requests": 0,
+          "usable_as_controller_feature": false
+        }
+      ],
+      "admission_wait_mapping": "unsupported_cohort_and_clock",
+      "prefill_fraction_mapping": "unsupported_exclusive_service_attribution"
+    },
+    "reset_completed_ns": 168726050615629,
+    "kernel_evidence": {
+      "kernels": [
+        {
+          "name": "std::enable_if<!T7, void>::type internal::gemvx::kernel<int, int, __half, __half, __half, float, (bool)0, (bool)1, (bool)1, (bool)0, (int)6, (bool)0, cublasGemvParamsEx<int, cublasGemvTensorStridedBatched<const __half>, cublasGemvTensorStridedBatched<const __half>, cublasGemvTensorStridedBatched<__half>, float>>(T13)",
+          "count": 1428,
+          "total_ns": 622767718
+        },
+        {
+          "name": "std::enable_if<!T7, void>::type internal::gemvx::kernel<int, int, __half, __half, __half, float, (bool)0, (bool)1, (bool)1, (bool)0, (int)7, (bool)0, cublasGemvParamsEx<int, cublasGemvTensorStridedBatched<const __half>, cublasGemvTensorStridedBatched<const __half>, cublasGemvTensorStridedBatched<__half>, float>>(T13)",
+          "count": 494,
+          "total_ns": 326393372
+        },
+        {
+          "name": "void cutlass::Kernel2<cutlass_80_wmma_tensorop_f16_s161616gemm_f16_16x16_128x2_tn_align8>(T1::Params)",
+          "count": 112,
+          "total_ns": 52748117
+        },
+        {
+          "name": "void vllm::act_and_mul_kernel<c10::Half, &vllm::silu_kernel<c10::Half>, (bool)1>(T1 *, const T1 *, int)",
+          "count": 504,
+          "total_ns": 3877806
+        },
+        {
+          "name": "void flash::flash_fwd_splitkv_kernel<Flash_fwd_kernel_traits<(int)128, (int)64, (int)128, (int)4, (bool)0, (bool)0, cutlass::half_t, Flash_kernel_traits<(int)128, (int)64, (int)128, (int)4, cutlass::half_t>>, (bool)0, (bool)0, (bool)0, (bool)0, (bool)1, (bool)0, (bool)0, (bool)0>(flash::Flash_fwd_params)",
+          "count": 476,
+          "total_ns": 3229392
+        },
+        {
+          "name": "std::enable_if<T2>(int)0&&vllm::_typeConvert<T1>::exists, void>::type vllm::fused_add_rms_norm_kernel<c10::Half, (int)8>(T1 *, long, T1 *, const T1 *, float, int, int)",
+          "count": 1008,
+          "total_ns": 2688409
+        },
+        {
+          "name": "void vllm::rotary_embedding_kernel<c10::Half, (bool)1>(const long *, T1 *, T1 *, const T1 *, int, long, long, long, int, int, int)",
+          "count": 504,
+          "total_ns": 1480989
+        },
+        {
+          "name": "void vllm::reshape_and_cache_flash_kernel<unsigned short, unsigned short, (vllm::Fp8KVCacheDataType)0>(const T1 *, const T1 *, T2 *, T2 *, const long *, long, long, long, long, long, int, int, int, const float *, const float *)",
+          "count": 504,
+          "total_ns": 1180542
+        },
+        {
+          "name": "void at::native::vectorized_elementwise_kernel<(int)4, at::native::FillFunctor<c10::Half>, std::array<char *, (unsigned long)1>>(int, T2, T3)",
+          "count": 504,
+          "total_ns": 668031
+        },
+        {
+          "name": "void flash::flash_fwd_splitkv_kernel<Flash_fwd_kernel_traits<(int)128, (int)64, (int)128, (int)4, (bool)0, (bool)0, cutlass::half_t, Flash_kernel_traits<(int)128, (int)64, (int)128, (int)4, cutlass::half_t>>, (bool)1, (bool)0, (bool)0, (bool)0, (bool)1, (bool)0, (bool)0, (bool)0>(flash::Flash_fwd_params)",
+          "count": 28,
+          "total_ns": 201920
+        },
+        {
+          "name": "void at::native::elementwise_kernel<(int)128, (int)4, void at::native::gpu_kernel_impl<at::native::BinaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float>>>(at::TensorIteratorBase &, const T1 &)::[lambda(int) (instance 1)]>(int, T3)",
+          "count": 36,
+          "total_ns": 150783
+        },
+        {
+          "name": "void at::native::reduce_kernel<(int)512, (int)1, at::native::ReduceOp<float, at::native::ArgMaxOps<float>, unsigned int, long, (int)4, (int)4>>(T3)",
+          "count": 18,
+          "total_ns": 147903
+        },
+        {
+          "name": "void at::native::vectorized_elementwise_kernel<(int)2, at::native::FillFunctor<long>, std::array<char *, (unsigned long)1>>(int, T2, T3)",
+          "count": 72,
+          "total_ns": 117856
+        },
+        {
+          "name": "void at::native::unrolled_elementwise_kernel<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase &)::[lambda() (instance 3)]::operator ()() const::[lambda() (instance 4)]::operator ()() const::[lambda(long) (instance 1)], std::array<char *, (unsigned long)2>, (int)4, TrivialOffsetCalculator<(int)1, unsigned int>, TrivialOffsetCalculator<(int)1, unsigned int>, at::native::memory::LoadWithCast<(int)1>, at::native::memory::StoreWithCast<(int)1>>(int, T1, T2, T4, T5, T6, T7)",
+          "count": 54,
+          "total_ns": 93375
+        },
+        {
+          "name": "void at::native::vectorized_elementwise_kernel<(int)4, void at::native::compare_scalar_kernel<long>(at::TensorIteratorBase &, at::native::<unnamed>::OpType, T1)::[lambda(long) (instance 1)], std::array<char *, (unsigned long)2>>(int, T2, T3)",
+          "count": 36,
+          "total_ns": 82174
+        },
+        {
+          "name": "void at::native::index_elementwise_kernel<(int)128, (int)4, void at::native::gpu_index_kernel<void at::native::index_kernel_impl<at::native::OpaqueType<(int)2>>(at::TensorIteratorBase &, c10::ArrayRef<long>, c10::ArrayRef<long>)::[lambda(char *, const char *, long) (instance 1)]>(at::TensorIteratorBase &, c10::ArrayRef<long>, c10::ArrayRef<long>, const T1 &, bool)::[lambda(int) (instance 1)]>(long, T3)",
+          "count": 18,
+          "total_ns": 80638
+        },
+        {
+          "name": "void at::native::vectorized_elementwise_kernel<(int)4, at::native::CUDAFunctor_add<float>, std::array<char *, (unsigned long)3>>(int, T2, T3)",
+          "count": 36,
+          "total_ns": 80448
+        },
+        {
+          "name": "void at::native::_scatter_gather_elementwise_kernel<(int)128, (int)8, void at::native::_cuda_scatter_gather_internal_kernel<(bool)1, long, long>::operator ()<at::native::ReduceAdd>(at::TensorIterator &, long, long, long, const T1 &)::[lambda(int) (instance 1)]>(int, T3)",
+          "count": 35,
+          "total_ns": 73887
+        },
+        {
+          "name": "void vllm::rms_norm_kernel<c10::Half>(T1 *, const T1 *, long, const T1 *, float, int, int)",
+          "count": 18,
+          "total_ns": 63264
+        },
+        {
+          "name": "void at::native::unrolled_elementwise_kernel<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase &)::[lambda() (instance 3)]::operator ()() const::[lambda() (instance 7)]::operator ()() const::[lambda(float) (instance 1)], std::array<char *, (unsigned long)2>, (int)4, TrivialOffsetCalculator<(int)1, unsigned int>, TrivialOffsetCalculator<(int)1, unsigned int>, at::native::memory::LoadWithCast<(int)1>, at::native::memory::StoreWithCast<(int)1>>(int, T1, T2, T4, T5, T6, T7)",
+          "count": 18,
+          "total_ns": 56192
+        },
+        {
+          "name": "void at::native::<unnamed>::indexSelectSmallIndex<c10::Half, long, unsigned int, (int)2, (int)2, (int)-2>(at::cuda::detail::TensorInfo<T1, T3>, at::cuda::detail::TensorInfo<const T1, T3>, at::cuda::detail::TensorInfo<const T2, T3>, int, int, T3, long)",
+          "count": 18,
+          "total_ns": 51520
+        },
+        {
+          "name": "void vllm::apply_repetition_penalties_kernel<float>(T1 *, const bool *, const bool *, const T1 *, int, int, int)",
+          "count": 18,
+          "total_ns": 48224
+        },
+        {
+          "name": "void at::native::unrolled_elementwise_kernel<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase &)::[lambda() (instance 3)]::operator ()() const::[lambda() (instance 3)]::operator ()() const::[lambda(int) (instance 1)], std::array<char *, (unsigned long)2>, (int)4, TrivialOffsetCalculator<(int)1, unsigned int>, TrivialOffsetCalculator<(int)1, unsigned int>, at::native::memory::LoadWithCast<(int)1>, at::native::memory::StoreWithCast<(int)1>>(int, T1, T2, T4, T5, T6, T7)",
+          "count": 18,
+          "total_ns": 31136
+        },
+        {
+          "name": "void at::native::unrolled_elementwise_kernel<at::native::CUDAFunctorOnSelf_add<int>, std::array<char *, (unsigned long)2>, (int)4, TrivialOffsetCalculator<(int)1, unsigned int>, TrivialOffsetCalculator<(int)1, unsigned int>, at::native::memory::LoadWithoutCast, at::native::memory::StoreWithoutCast>(int, T1, T2, T4, T5, T6, T7)",
+          "count": 18,
+          "total_ns": 23360
+        },
+        {
+          "name": "void at::native::unrolled_elementwise_kernel<at::native::FillFunctor<long>, std::array<char *, (unsigned long)1>, (int)4, TrivialOffsetCalculator<(int)0, unsigned int>, TrivialOffsetCalculator<(int)1, unsigned int>, at::native::memory::LoadWithoutCast, at::native::memory::StoreWithoutCast>(int, T1, T2, T4, T5, T6, T7)",
+          "count": 17,
+          "total_ns": 20800
+        }
+      ],
+      "kernel_count": 5992,
+      "kernel_time_sum_s": 1.016357856,
+      "kernel_envelope_s": 1.115275741,
+      "top_kernel_name": "std::enable_if<!T7, void>::type internal::gemvx::kernel<int, int, __half, __half, __half, float, (bool)0, (bool)1, (bool)1, (bool)0, (int)6, (bool)0, cublasGemvParamsEx<int, cublasGemvTensorStridedBatched<const __half>, cublasGemvTensorStridedBatched<const __half>, cublasGemvTensorStridedBatched<__half>, float>>(T13)",
+      "device_uuid": "GPU-baa93118-dfa3-1258-be9e-b6051b77c1cb",
+      "captured_worker_pids": [
+        3215
+      ],
+      "coverage": "single_configured_worker_and_device_verified",
+      "source": "nsys_sqlite",
+      "note": "Kernel sum/envelope are not capture-active time; no calibrated root-cause classifier."
+    },
+    "capture_completed_ns": 168730039483453,
+    "owned_cleanup_verified": true
+  },
+  "capture_active_s": null,
+  "note": "Receipt validation is conditional on adapter observations, not proof against fabricated evidence. Discovery never supplies worker quiet/reset, phase attribution, calibrated diagnosis or main-study readiness."
+}

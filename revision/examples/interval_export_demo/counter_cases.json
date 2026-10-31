@@ -1,0 +1,182 @@
+{
+  "input_snapshots": {
+    "previous_histogram": {
+      "stamp": {
+        "sample_id": "a",
+        "instance_id": "fixture-server",
+        "generation": "generation-0",
+        "series": "fixture_wait_admission",
+        "sampled_at_ns": 0,
+        "available_at_ns": 0,
+        "clock_domain": "fixture-clock"
+      },
+      "upper_seconds": [
+        0.01,
+        0.1,
+        1.0,
+        "+Inf"
+      ],
+      "cumulative_counts": [
+        10,
+        20,
+        30,
+        30
+      ],
+      "count": 30,
+      "semantics": "queue_wait_seconds_observed_at_service_admission"
+    },
+    "current_histogram": {
+      "stamp": {
+        "sample_id": "b",
+        "instance_id": "fixture-server",
+        "generation": "generation-0",
+        "series": "fixture_wait_admission",
+        "sampled_at_ns": 100,
+        "available_at_ns": 110,
+        "clock_domain": "fixture-clock"
+      },
+      "upper_seconds": [
+        0.01,
+        0.1,
+        1.0,
+        "+Inf"
+      ],
+      "cumulative_counts": [
+        12,
+        30,
+        50,
+        50
+      ],
+      "count": 50,
+      "semantics": "queue_wait_seconds_observed_at_service_admission"
+    },
+    "previous_phases": {
+      "stamp": {
+        "sample_id": "a",
+        "instance_id": "fixture-server",
+        "generation": "generation-0",
+        "series": "fixture_wait_admission",
+        "sampled_at_ns": 0,
+        "available_at_ns": 0,
+        "clock_domain": "fixture-clock"
+      },
+      "prefill_ns": 0,
+      "decode_ns": 0,
+      "other_ns": 0,
+      "total_ns": 0,
+      "semantics": "exclusive_attributed_service_time_ns"
+    },
+    "current_phases": {
+      "stamp": {
+        "sample_id": "b",
+        "instance_id": "fixture-server",
+        "generation": "generation-0",
+        "series": "fixture_wait_admission",
+        "sampled_at_ns": 100,
+        "available_at_ns": 110,
+        "clock_domain": "fixture-clock"
+      },
+      "prefill_ns": 60,
+      "decode_ns": 30,
+      "other_ns": 10,
+      "total_ns": 100,
+      "semantics": "exclusive_attributed_service_time_ns"
+    }
+  },
+  "valid_wait": {
+    "name": "request_wait_p95_ms",
+    "source": "server",
+    "unit": "ms",
+    "value": 909.9999999999999,
+    "valid_samples": 20,
+    "attempted_samples": 20,
+    "coverage": "complete",
+    "missing_reason": null,
+    "acquisition": {
+      "start_ns": 0,
+      "end_ns": 100,
+      "available_at_ns": 110,
+      "clock_domain": "fixture-clock"
+    }
+  },
+  "reset": {
+    "name": "request_wait_p95_ms",
+    "source": "server",
+    "unit": "ms",
+    "value": null,
+    "valid_samples": 0,
+    "attempted_samples": 1,
+    "coverage": "unavailable",
+    "missing_reason": "counter_reset_or_decrease",
+    "acquisition": {
+      "start_ns": 0,
+      "end_ns": 100,
+      "available_at_ns": 110,
+      "clock_domain": "fixture-clock"
+    }
+  },
+  "generation_change": {
+    "name": "request_wait_p95_ms",
+    "source": "server",
+    "unit": "ms",
+    "value": null,
+    "valid_samples": 0,
+    "attempted_samples": 1,
+    "coverage": "unavailable",
+    "missing_reason": "counter_identity_or_generation_changed",
+    "acquisition": {
+      "start_ns": 0,
+      "end_ns": 100,
+      "available_at_ns": 110,
+      "clock_domain": "fixture-clock"
+    }
+  },
+  "no_observations": {
+    "name": "request_wait_p95_ms",
+    "source": "server",
+    "unit": "ms",
+    "value": null,
+    "valid_samples": 0,
+    "attempted_samples": 0,
+    "coverage": "unavailable",
+    "missing_reason": "insufficient_interval_observations",
+    "acquisition": {
+      "start_ns": 0,
+      "end_ns": 100,
+      "available_at_ns": 110,
+      "clock_domain": "fixture-clock"
+    }
+  },
+  "phase_not_instrumented": {
+    "name": "prefill_service_fraction",
+    "source": "server",
+    "unit": "fraction",
+    "value": null,
+    "valid_samples": 0,
+    "attempted_samples": 1,
+    "coverage": "unavailable",
+    "missing_reason": "phase_attribution_not_instrumented",
+    "acquisition": {
+      "start_ns": 0,
+      "end_ns": 100,
+      "available_at_ns": 110,
+      "clock_domain": "fixture-clock"
+    }
+  },
+  "explicit_phase_fixture": {
+    "name": "prefill_service_fraction",
+    "source": "server",
+    "unit": "fraction",
+    "value": 0.6,
+    "valid_samples": 1,
+    "attempted_samples": 1,
+    "coverage": "complete",
+    "missing_reason": null,
+    "acquisition": {
+      "start_ns": 0,
+      "end_ns": 100,
+      "available_at_ns": 110,
+      "clock_domain": "fixture-clock"
+    }
+  }
+}

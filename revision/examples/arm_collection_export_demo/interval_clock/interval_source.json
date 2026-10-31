@@ -1,0 +1,95 @@
+{
+  "binding": {
+    "requested_at_ns": 185645728542011,
+    "received_at_ns": 185645730918815,
+    "source": {
+      "protocol": "cpu_arm_target_v1",
+      "source": "cpu_fake_target",
+      "nonce": "e64996af85d248819a642ed6f95fe121",
+      "instance": "a00115858b99419faa6fca7445b8ca45",
+      "pid": 96412,
+      "generation": 2,
+      "capture_mode": "bounded",
+      "interval_recording": true,
+      "running": 0,
+      "queued": 0,
+      "inflight": 0,
+      "capture_active": false,
+      "report_pending": 0,
+      "completed": 0,
+      "capture_starts": 0,
+      "capture_stops": 0,
+      "clock_name": "time.monotonic_ns",
+      "clock_domain": "process-monotonic-f4072ea4-364e-47e9-8f03-2576f5afe50e",
+      "probe_ns": 185645730558219
+    },
+    "scope": "owned_same_host_CPU_process_only_not_remote_or_GPU_clock_mapping"
+  },
+  "receipts": [
+    {
+      "window_id": "window-0",
+      "requested_at_ns": 185645789706031,
+      "received_at_ns": 185645791807367,
+      "error": "ValueError: Interval schema/clock mismatch",
+      "raw": "{\"protocol\": \"cpu_arm_target_v1\", \"source\": \"cpu_fake_target\", \"nonce\": \"e64996af85d248819a642ed6f95fe121\", \"instance\": \"a00115858b99419faa6fca7445b8ca45\", \"pid\": 96412, \"generation\": 2, \"capture_mode\": \"bounded\", \"interval_recording\": true, \"running\": 2, \"queued\": 1, \"inflight\": 3, \"capture_active\": false, \"report_pending\": 0, \"completed\": 0, \"capture_starts\": 0, \"capture_stops\": 0, \"interval_schema\": \"cpu_admission_history_v1\", \"clock_domain\": \"foreign-clock\", \"clock_name\": \"time.monotonic_ns\", \"collected_at_ns\": 185645791423375, \"epoch_ns\": 185645711776555, \"history_complete\": true, \"semantics\": \"queue_wait_seconds_observed_at_service_admission\", \"upper_seconds\": [0.0, 0.001, 0.005, 0.01, 0.05, 0.1, 1.0, \"+Inf\"], \"previous\": {\"sampled_at_ns\": 185645739453232, \"generation\": \"2\", \"cumulative_counts\": [0, 0, 0, 0, 0, 0, 0, 0], \"count\": 0}, \"current\": {\"sampled_at_ns\": 185645789453232, \"generation\": \"2\", \"cumulative_counts\": [0, 2, 2, 2, 2, 2, 2, 2], \"count\": 2}, \"phase_attribution\": \"not_instrumented\"}",
+      "raw_sha256": "9bbb1890238275f17da5603ae6db58fd98ee11f100d1fe9d77d68837b79a668a"
+    },
+    {
+      "window_id": "window-1",
+      "requested_at_ns": 185645840005639,
+      "received_at_ns": 185645841428068,
+      "error": "ValueError: Interval schema/clock mismatch",
+      "raw": "{\"protocol\": \"cpu_arm_target_v1\", \"source\": \"cpu_fake_target\", \"nonce\": \"e64996af85d248819a642ed6f95fe121\", \"instance\": \"a00115858b99419faa6fca7445b8ca45\", \"pid\": 96412, \"generation\": 2, \"capture_mode\": \"bounded\", \"interval_recording\": true, \"running\": 2, \"queued\": 1, \"inflight\": 3, \"capture_active\": false, \"report_pending\": 0, \"completed\": 2, \"capture_starts\": 0, \"capture_stops\": 0, \"interval_schema\": \"cpu_admission_history_v1\", \"clock_domain\": \"foreign-clock\", \"clock_name\": \"time.monotonic_ns\", \"collected_at_ns\": 185645841030733, \"epoch_ns\": 185645711776555, \"history_complete\": true, \"semantics\": \"queue_wait_seconds_observed_at_service_admission\", \"upper_seconds\": [0.0, 0.001, 0.005, 0.01, 0.05, 0.1, 1.0, \"+Inf\"], \"previous\": {\"sampled_at_ns\": 185645789453232, \"generation\": \"2\", \"cumulative_counts\": [0, 2, 2, 2, 2, 2, 2, 2], \"count\": 2}, \"current\": {\"sampled_at_ns\": 185645839453232, \"generation\": \"2\", \"cumulative_counts\": [0, 2, 2, 2, 4, 4, 4, 4], \"count\": 4}, \"phase_attribution\": \"not_instrumented\"}",
+      "raw_sha256": "5a4e84b1afb7c4384a24a5c09f19abbbc743df4bb3bff990bd6d8abdcf65768a"
+    },
+    {
+      "window_id": "window-2",
+      "requested_at_ns": 185645890381125,
+      "received_at_ns": 185645892407474,
+      "error": "ValueError: Interval schema/clock mismatch",
+      "raw": "{\"protocol\": \"cpu_arm_target_v1\", \"source\": \"cpu_fake_target\", \"nonce\": \"e64996af85d248819a642ed6f95fe121\", \"instance\": \"a00115858b99419faa6fca7445b8ca45\", \"pid\": 96412, \"generation\": 2, \"capture_mode\": \"bounded\", \"interval_recording\": true, \"running\": 2, \"queued\": 2, \"inflight\": 4, \"capture_active\": false, \"report_pending\": 0, \"completed\": 4, \"capture_starts\": 1, \"capture_stops\": 1, \"interval_schema\": \"cpu_admission_history_v1\", \"clock_domain\": \"foreign-clock\", \"clock_name\": \"time.monotonic_ns\", \"collected_at_ns\": 185645891869143, \"epoch_ns\": 185645711776555, \"history_complete\": true, \"semantics\": \"queue_wait_seconds_observed_at_service_admission\", \"upper_seconds\": [0.0, 0.001, 0.005, 0.01, 0.05, 0.1, 1.0, \"+Inf\"], \"previous\": {\"sampled_at_ns\": 185645839453232, \"generation\": \"2\", \"cumulative_counts\": [0, 2, 2, 2, 4, 4, 4, 4], \"count\": 4}, \"current\": {\"sampled_at_ns\": 185645889453232, \"generation\": \"2\", \"cumulative_counts\": [0, 2, 2, 2, 6, 6, 6, 6], \"count\": 6}, \"phase_attribution\": \"not_instrumented\"}",
+      "raw_sha256": "f35cb52df411ea26bdd427dc918eca9c902c6fa86a91a7e81b4ad8ba70846cb6"
+    },
+    {
+      "window_id": "window-3",
+      "requested_at_ns": 185645940477114,
+      "received_at_ns": 185645942112449,
+      "error": "ValueError: Interval schema/clock mismatch",
+      "raw": "{\"protocol\": \"cpu_arm_target_v1\", \"source\": \"cpu_fake_target\", \"nonce\": \"e64996af85d248819a642ed6f95fe121\", \"instance\": \"a00115858b99419faa6fca7445b8ca45\", \"pid\": 96412, \"generation\": 2, \"capture_mode\": \"bounded\", \"interval_recording\": true, \"running\": 2, \"queued\": 3, \"inflight\": 5, \"capture_active\": false, \"report_pending\": 0, \"completed\": 6, \"capture_starts\": 1, \"capture_stops\": 1, \"interval_schema\": \"cpu_admission_history_v1\", \"clock_domain\": \"foreign-clock\", \"clock_name\": \"time.monotonic_ns\", \"collected_at_ns\": 185645941759198, \"epoch_ns\": 185645711776555, \"history_complete\": true, \"semantics\": \"queue_wait_seconds_observed_at_service_admission\", \"upper_seconds\": [0.0, 0.001, 0.005, 0.01, 0.05, 0.1, 1.0, \"+Inf\"], \"previous\": {\"sampled_at_ns\": 185645889453232, \"generation\": \"2\", \"cumulative_counts\": [0, 2, 2, 2, 6, 6, 6, 6], \"count\": 6}, \"current\": {\"sampled_at_ns\": 185645939453232, \"generation\": \"2\", \"cumulative_counts\": [0, 2, 2, 2, 7, 8, 8, 8], \"count\": 8}, \"phase_attribution\": \"not_instrumented\"}",
+      "raw_sha256": "2c71710f518009f5a7f78a6f81433eb39da957fc03518ef0123b77d48d5130b2"
+    },
+    {
+      "window_id": "window-4",
+      "requested_at_ns": 185645989975596,
+      "received_at_ns": 185645991772054,
+      "error": "ValueError: Interval schema/clock mismatch",
+      "raw": "{\"protocol\": \"cpu_arm_target_v1\", \"source\": \"cpu_fake_target\", \"nonce\": \"e64996af85d248819a642ed6f95fe121\", \"instance\": \"a00115858b99419faa6fca7445b8ca45\", \"pid\": 96412, \"generation\": 2, \"capture_mode\": \"bounded\", \"interval_recording\": true, \"running\": 2, \"queued\": 3, \"inflight\": 5, \"capture_active\": false, \"report_pending\": 0, \"completed\": 8, \"capture_starts\": 1, \"capture_stops\": 1, \"interval_schema\": \"cpu_admission_history_v1\", \"clock_domain\": \"foreign-clock\", \"clock_name\": \"time.monotonic_ns\", \"collected_at_ns\": 185645991368695, \"epoch_ns\": 185645711776555, \"history_complete\": true, \"semantics\": \"queue_wait_seconds_observed_at_service_admission\", \"upper_seconds\": [0.0, 0.001, 0.005, 0.01, 0.05, 0.1, 1.0, \"+Inf\"], \"previous\": {\"sampled_at_ns\": 185645939453232, \"generation\": \"2\", \"cumulative_counts\": [0, 2, 2, 2, 7, 8, 8, 8], \"count\": 8}, \"current\": {\"sampled_at_ns\": 185645989453232, \"generation\": \"2\", \"cumulative_counts\": [0, 2, 2, 2, 8, 10, 10, 10], \"count\": 10}, \"phase_attribution\": \"not_instrumented\"}",
+      "raw_sha256": "8fc60b8522779cb7d1aea55d97733e0bac4f31dc8df93e6b5c1bea960338d6ed"
+    },
+    {
+      "window_id": "window-5",
+      "requested_at_ns": 185646039786673,
+      "received_at_ns": 185646041355147,
+      "error": "ValueError: Interval schema/clock mismatch",
+      "raw": "{\"protocol\": \"cpu_arm_target_v1\", \"source\": \"cpu_fake_target\", \"nonce\": \"e64996af85d248819a642ed6f95fe121\", \"instance\": \"a00115858b99419faa6fca7445b8ca45\", \"pid\": 96412, \"generation\": 2, \"capture_mode\": \"bounded\", \"interval_recording\": true, \"running\": 2, \"queued\": 3, \"inflight\": 5, \"capture_active\": false, \"report_pending\": 0, \"completed\": 10, \"capture_starts\": 1, \"capture_stops\": 1, \"interval_schema\": \"cpu_admission_history_v1\", \"clock_domain\": \"foreign-clock\", \"clock_name\": \"time.monotonic_ns\", \"collected_at_ns\": 185646040983052, \"epoch_ns\": 185645711776555, \"history_complete\": true, \"semantics\": \"queue_wait_seconds_observed_at_service_admission\", \"upper_seconds\": [0.0, 0.001, 0.005, 0.01, 0.05, 0.1, 1.0, \"+Inf\"], \"previous\": {\"sampled_at_ns\": 185645989453232, \"generation\": \"2\", \"cumulative_counts\": [0, 2, 2, 2, 8, 10, 10, 10], \"count\": 10}, \"current\": {\"sampled_at_ns\": 185646039453232, \"generation\": \"2\", \"cumulative_counts\": [0, 2, 2, 2, 8, 12, 12, 12], \"count\": 12}, \"phase_attribution\": \"not_instrumented\"}",
+      "raw_sha256": "f15b9b643f2cedbbd782284c40716cbb0c46b6783a8e10e14f6b31d9ea22a035"
+    },
+    {
+      "window_id": "window-6",
+      "requested_at_ns": 185646089672258,
+      "received_at_ns": 185646091366019,
+      "error": "ValueError: Interval schema/clock mismatch",
+      "raw": "{\"protocol\": \"cpu_arm_target_v1\", \"source\": \"cpu_fake_target\", \"nonce\": \"e64996af85d248819a642ed6f95fe121\", \"instance\": \"a00115858b99419faa6fca7445b8ca45\", \"pid\": 96412, \"generation\": 2, \"capture_mode\": \"bounded\", \"interval_recording\": true, \"running\": 2, \"queued\": 4, \"inflight\": 6, \"capture_active\": false, \"report_pending\": 0, \"completed\": 12, \"capture_starts\": 1, \"capture_stops\": 1, \"interval_schema\": \"cpu_admission_history_v1\", \"clock_domain\": \"foreign-clock\", \"clock_name\": \"time.monotonic_ns\", \"collected_at_ns\": 185646090945215, \"epoch_ns\": 185645711776555, \"history_complete\": true, \"semantics\": \"queue_wait_seconds_observed_at_service_admission\", \"upper_seconds\": [0.0, 0.001, 0.005, 0.01, 0.05, 0.1, 1.0, \"+Inf\"], \"previous\": {\"sampled_at_ns\": 185646039453232, \"generation\": \"2\", \"cumulative_counts\": [0, 2, 2, 2, 8, 12, 12, 12], \"count\": 12}, \"current\": {\"sampled_at_ns\": 185646089453232, \"generation\": \"2\", \"cumulative_counts\": [0, 2, 2, 2, 8, 14, 14, 14], \"count\": 14}, \"phase_attribution\": \"not_instrumented\"}",
+      "raw_sha256": "4240002e306ce0de3a6f6f26d7404475dd82f9ca56b606d19b4b0ebc40f4efcb"
+    },
+    {
+      "window_id": "window-7",
+      "requested_at_ns": 185646139879995,
+      "received_at_ns": 185646141737848,
+      "error": "ValueError: Interval schema/clock mismatch",
+      "raw": "{\"protocol\": \"cpu_arm_target_v1\", \"source\": \"cpu_fake_target\", \"nonce\": \"e64996af85d248819a642ed6f95fe121\", \"instance\": \"a00115858b99419faa6fca7445b8ca45\", \"pid\": 96412, \"generation\": 2, \"capture_mode\": \"bounded\", \"interval_recording\": true, \"running\": 2, \"queued\": 2, \"inflight\": 4, \"capture_active\": false, \"report_pending\": 0, \"completed\": 14, \"capture_starts\": 1, \"capture_stops\": 1, \"interval_schema\": \"cpu_admission_history_v1\", \"clock_domain\": \"foreign-clock\", \"clock_name\": \"time.monotonic_ns\", \"collected_at_ns\": 185646141292007, \"epoch_ns\": 185645711776555, \"history_complete\": true, \"semantics\": \"queue_wait_seconds_observed_at_service_admission\", \"upper_seconds\": [0.0, 0.001, 0.005, 0.01, 0.05, 0.1, 1.0, \"+Inf\"], \"previous\": {\"sampled_at_ns\": 185646089453232, \"generation\": \"2\", \"cumulative_counts\": [0, 2, 2, 2, 8, 14, 14, 14], \"count\": 14}, \"current\": {\"sampled_at_ns\": 185646139453232, \"generation\": \"2\", \"cumulative_counts\": [0, 2, 2, 2, 8, 16, 16, 16], \"count\": 16}, \"phase_attribution\": \"not_instrumented\"}",
+      "raw_sha256": "694c118ba453f04ac07d5a8fcc5c2c760a647bacb7a13b74bb9b0cda8a4302c1"
+    }
+  ],
+  "source": "cpu_admission_history_v1"
+}

@@ -1,0 +1,23 @@
+{
+ "case": "7619",
+ "side": "fixed",
+ "config": {
+  "title": "Block manager v2 recomputes a shared prefix on warm-up",
+  "reference": "vocabulary_gap:redundant_prefill",
+  "model": "neuralmagic/Meta-Llama-3-8B-Instruct-FP8",
+  "env": "v055",
+  "version": "0.5.5",
+  "server_args": "--max-model-len 8192 --enable-prefix-caching --enforce-eager --trust-remote-code --disable-log-requests",
+  "group_size": 32,
+  "healthy_rate": 0.03,
+  "incident_rate": 0.1
+ },
+ "installed": {
+  "vllm": "0.5.5",
+  "torch": "2.4.0",
+  "transformers": "4.44.2",
+  "xgrammar": null,
+  "outlines": "0.0.46"
+ },
+ "served_from": "/dev/shm/hf-cache/hub/models--neuralmagic--Meta-Llama-3-8B-Instruct-FP8/snapshots/c5c6b5700a4178ef1fdae2ae37827382b90eb400"
+}

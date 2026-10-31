@@ -1,0 +1,41 @@
+{
+ "p95_base_s": 33.02971029281616,
+ "p95_base_measure": "median over steady windows of p95 in-flight age",
+ "n_windows": 186,
+ "completed_p95_s": 36.54850625991821,
+ "n_completed": 38,
+ "baseline_ns_per_token": {
+  "gemm": 6357647.956363636,
+  "attention": 223573.4690909091,
+  "other": 69649.01454545454,
+  "norm": 19916.741818181818
+ },
+ "baseline_tokens": 275.0,
+ "baseline_shares": {
+  "Kernel<cutlass_80_wmma_tensorop_bf16_s161616gemm_bf16_16x16_128x2_tn_align8>": 0.881800101579943,
+  "Kernel<cutlass_80_wmma_tensorop_bf16_s161616gemm_bf16_16x16_128x1_tn_align8>": 0.07125802830493264,
+  "flash_fwd_splitkv_kernel": 0.030659370321826133,
+  "act_and_mul_kernel<c10::BFloat16>": 0.005606245270849117,
+  "fused_add_rms_norm_kernel<c10::BFloat16>": 0.002915873401284153,
+  "flash_fwd_splitkv_combine_kernel": 0.001966546158877065,
+  "rotary_embedding_kernel<c10::BFloat16>": 0.0015197383206471517,
+  "cunn_SoftMaxForward": 0.001450677914405604,
+  "reshape_and_cache_flash_kernel<__nv_bfloat16>": 0.0008893888344293673,
+  "elementwise_kernel": 0.0003588193128468047,
+  "index_elementwise_kernel": 0.0002850496354805285,
+  "unrolled_elementwise_kernel": 0.00028286807476271813,
+  "reduce_kernel": 0.00024199897139030573,
+  "indexSelectSmallIndex<c10::BFloat16>": 0.00022985702150811994,
+  "vectorized_elementwise_kernel": 0.0001996967537932248,
+  "distribution_elementwise_grid_stride_kernel<float>": 0.00015273759636299703,
+  "DeviceScanKernel": 7.462442179544328e-05,
+  "rms_norm_kernel<c10::BFloat16>": 6.979249920607025e-05,
+  "DeviceScanInitKernel": 3.8585605659541966e-05
+ },
+ "baseline_busy_fraction": 0.8505204110804127,
+ "env": "v060",
+ "version": "0.6.0",
+ "model": "/dev/shm/hf-cache/hub/models--Qwen--Qwen2.5-7B-Instruct/snapshots/a09a35458c702b33eeacc393d103063234e8bc28",
+ "schedule": "symptoms/7592/healthy.jsonl",
+ "server_args": "--max-model-len 10000 --gpu-memory-utilization 0.9 --enforce-eager --seed 0 --enable-chunked-prefill --max-num-seqs 256 --max-num-batched-tokens 256 --disable-log-requests --served-model-name Qwen/Qwen2.5-7B-Instruct"
+}

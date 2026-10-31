@@ -1,0 +1,22 @@
+# TYPE vllm:num_requests_waiting gauge
+vllm:num_requests_waiting{model_name="Qwen/Qwen2.5-7B-Instruct",engine="0"} 0
+# TYPE vllm:num_requests_running gauge
+vllm:num_requests_running{model_name="Qwen/Qwen2.5-7B-Instruct",engine="0"} 0
+# TYPE vllm:request_queue_time_seconds histogram
+vllm:request_queue_time_seconds_bucket{model_name="Qwen/Qwen2.5-7B-Instruct",engine="0",le="0.1"} 3
+vllm:request_queue_time_seconds_bucket{model_name="Qwen/Qwen2.5-7B-Instruct",engine="0",le="1"} 3
+vllm:request_queue_time_seconds_bucket{model_name="Qwen/Qwen2.5-7B-Instruct",engine="0",le="+Inf"} 3
+vllm:request_queue_time_seconds_count{model_name="Qwen/Qwen2.5-7B-Instruct",engine="0"} 3
+vllm:request_queue_time_seconds_sum{model_name="Qwen/Qwen2.5-7B-Instruct",engine="0"} 0.03
+# TYPE vllm:request_prefill_time_seconds histogram
+vllm:request_prefill_time_seconds_bucket{model_name="Qwen/Qwen2.5-7B-Instruct",engine="0",le="0.1"} 3
+vllm:request_prefill_time_seconds_bucket{model_name="Qwen/Qwen2.5-7B-Instruct",engine="0",le="1"} 3
+vllm:request_prefill_time_seconds_bucket{model_name="Qwen/Qwen2.5-7B-Instruct",engine="0",le="+Inf"} 3
+vllm:request_prefill_time_seconds_count{model_name="Qwen/Qwen2.5-7B-Instruct",engine="0"} 3
+vllm:request_prefill_time_seconds_sum{model_name="Qwen/Qwen2.5-7B-Instruct",engine="0"} 0.03
+# TYPE vllm:request_decode_time_seconds histogram
+vllm:request_decode_time_seconds_bucket{model_name="Qwen/Qwen2.5-7B-Instruct",engine="0",le="0.1"} 3
+vllm:request_decode_time_seconds_bucket{model_name="Qwen/Qwen2.5-7B-Instruct",engine="0",le="1"} 3
+vllm:request_decode_time_seconds_bucket{model_name="Qwen/Qwen2.5-7B-Instruct",engine="0",le="+Inf"} 3
+vllm:request_decode_time_seconds_count{model_name="Qwen/Qwen2.5-7B-Instruct",engine="0"} 3
+vllm:request_decode_time_seconds_sum{model_name="Qwen/Qwen2.5-7B-Instruct",engine="0"} 0.03

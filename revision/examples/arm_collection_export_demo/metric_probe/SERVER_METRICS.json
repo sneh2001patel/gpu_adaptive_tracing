@@ -1,0 +1,39 @@
+{
+  "version": "passive_server_metric_snapshot_v1",
+  "endpoint": "http://127.0.0.1:64325/metrics",
+  "clock_domain": "process-monotonic-8d122a3d-fd84-4073-9bcc-7b18980f8e45",
+  "gpu_validation": false,
+  "server_clock_mapping": false,
+  "interval_features_validated": false,
+  "snapshots": [
+    {
+      "requested_at_ns": 185648314576485,
+      "received_at_ns": 185648316857309,
+      "http_status": 200,
+      "error": null,
+      "path": "metrics-000.txt",
+      "sha256": "a52f163a0c0ed966969af8294736bcb6de4011dcefd226b628c8105d79a4a2c7",
+      "declared_type_lines": [
+        {
+          "name": "fixture_queue",
+          "declared_type": "gauge"
+        }
+      ]
+    },
+    {
+      "requested_at_ns": 185648317542714,
+      "received_at_ns": 185648318587145,
+      "http_status": 200,
+      "error": null,
+      "path": "metrics-001.txt",
+      "sha256": "a52f163a0c0ed966969af8294736bcb6de4011dcefd226b628c8105d79a4a2c7",
+      "declared_type_lines": [
+        {
+          "name": "fixture_queue",
+          "declared_type": "gauge"
+        }
+      ]
+    }
+  ],
+  "note": "TYPE declarations are inventory hints only; raw histogram/generation/cohort/phase semantics need validation on the pinned server."
+}

@@ -1,0 +1,42 @@
+{
+ "p95_base_s": 6.895574569702148,
+ "p95_base_measure": "median over steady windows of p95 in-flight age",
+ "n_windows": 55,
+ "completed_p95_s": 16.335164308547974,
+ "n_completed": 128,
+ "baseline_ns_per_token": {
+  "gemm": 1188915.940257353,
+  "attention": 141320.85386029413,
+  "other": 35956.482536764706,
+  "norm": 7803.410845588235
+ },
+ "baseline_tokens": 1088.0,
+ "baseline_shares": {
+  "sm89_xmma_gemm_e4m3bf16_e4m3f3_1...": 0.6068361716526208,
+  "Kernel<cutlass_80_tensorop_bf16_s16816gemm_bf16_256x128_32x3_tn_align8>": 0.11064622584406168,
+  "flash_fwd_splitkv_kernel": 0.10121917998780174,
+  "sm89_xmma_gemm_e4m3bf16_e4m3f3_2...": 0.08847124503005334,
+  "sm89_xmma_gemm_e4m3bf16_e4m3f3_3...": 0.05934388771738493,
+  "scaled_fp8_quant_kernel<c10::BFloat16>": 0.009075200217150964,
+  "act_and_mul_kernel<c10::BFloat16>": 0.007180635300947229,
+  "fused_add_rms_norm_kernel<c10::BFloat16>": 0.0055645938053852494,
+  "cunn_SoftMaxForward": 0.0025830699796270326,
+  "rotary_embedding_kernel<c10::BFloat16>": 0.002556657658908486,
+  "reshape_and_cache_flash_kernel<__nv_bfloat16>": 0.001634673406436604,
+  "elementwise_kernel": 0.001363159110921202,
+  "index_elementwise_kernel": 0.0012061916334303604,
+  "unrolled_elementwise_kernel": 0.0009379905844076883,
+  "reduce_kernel": 0.0008508902641817793,
+  "indexSelectLargeIndex<c10::BFloat16>": 0.00020676116397970917,
+  "rms_norm_kernel<c10::BFloat16>": 0.0001147582022142847,
+  "DeviceScanKernel": 0.00010080082525672028,
+  "DeviceScanInitKernel": 5.398591660595637e-05,
+  "vectorized_elementwise_kernel": 5.392169862426808e-05
+ },
+ "baseline_busy_fraction": 0.7081219173741822,
+ "env": "v055",
+ "version": "0.5.5",
+ "model": "/workspace/.hf_home/hub/models--neuralmagic--Meta-Llama-3-8B-Instruct-FP8/snapshots/c5c6b5700a4178ef1fdae2ae37827382b90eb400",
+ "schedule": "evaluation/202/7619/healthy.jsonl",
+ "server_args": "--max-model-len 8192 --enable-prefix-caching --enforce-eager --trust-remote-code --disable-log-requests --served-model-name neuralmagic/Meta-Llama-3-8B-Instruct-FP8"
+}

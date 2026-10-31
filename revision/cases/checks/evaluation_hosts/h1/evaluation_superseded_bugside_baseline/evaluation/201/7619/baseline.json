@@ -1,0 +1,35 @@
+{
+ "p95_base_s": 7.3412322998046875,
+ "p95_base_measure": "median over steady windows of p95 in-flight age",
+ "n_windows": 73,
+ "completed_p95_s": 17.021445989608765,
+ "n_completed": 128,
+ "baseline_ns_per_token": {
+  "gemm": 126234.67257112185,
+  "other": 22881.527241009124,
+  "norm": 7219.2942834138485,
+  "attention": 5864.249865807837
+ },
+ "baseline_tokens": 7452.0,
+ "baseline_shares": {
+  "sm89_xmma_gemm_e4m3bf16_e4m3f3_1...": 0.7782667807490484,
+  "act_and_mul_kernel<c10::BFloat16>": 0.06419402092189182,
+  "scaled_fp8_quant_kernel<c10::BFloat16>": 0.06150797025104296,
+  "fused_add_rms_norm_kernel<c10::BFloat16>": 0.04401997443739499,
+  "flash_fwd_kernel": 0.03162895664025288,
+  "rotary_embedding_kernel<c10::BFloat16>": 0.014907570757529657,
+  "reshape_and_cache_flash_kernel<__nv_bfloat16>": 0.004525538567859858,
+  "rms_norm_kernel<c10::BFloat16>": 0.000488691896467965,
+  "indexSelectLargeIndex<c10::BFloat16>": 0.00044921766225942175,
+  "DeviceScanKernel": 4.500656720274882e-06,
+  "vectorized_elementwise_kernel": 2.594496226981991e-06,
+  "DeviceScanInitKernel": 2.2768028114331757e-06,
+  "unrolled_elementwise_kernel": 1.9061604932928913e-06
+ },
+ "baseline_busy_fraction": 0.5736657714627037,
+ "env": "v055",
+ "version": "0.5.5",
+ "model": "/workspace/.hf_home/hub/models--neuralmagic--Meta-Llama-3-8B-Instruct-FP8/snapshots/c5c6b5700a4178ef1fdae2ae37827382b90eb400",
+ "schedule": "evaluation/201/7619/healthy.jsonl",
+ "server_args": "--max-model-len 8192 --enable-prefix-caching --enforce-eager --trust-remote-code --use-v2-block-manager --disable-log-requests --served-model-name neuralmagic/Meta-Llama-3-8B-Instruct-FP8"
+}

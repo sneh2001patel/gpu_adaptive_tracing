@@ -1,0 +1,58 @@
+{
+  "clock_domain": "fixture-feasibility-clock",
+  "before": [
+    {
+      "observed_at_ns": 1000,
+      "barrier_completed_at_ns": 1000,
+      "queued": 0,
+      "running": 0,
+      "worker_pid": 42,
+      "generation": 0,
+      "barrier_source": "synthetic_worker_barrier",
+      "barrier_token": "barrier-1000"
+    },
+    {
+      "observed_at_ns": 10001000,
+      "barrier_completed_at_ns": 10001000,
+      "queued": 0,
+      "running": 0,
+      "worker_pid": 42,
+      "generation": 0,
+      "barrier_source": "synthetic_worker_barrier",
+      "barrier_token": "barrier-10001000"
+    }
+  ],
+  "reset": {
+    "method": "fresh_owned_worker_restart",
+    "requested_at_ns": 10002000,
+    "completed_at_ns": 10003000,
+    "generation_before": 0,
+    "generation_after": 1,
+    "old_worker_pid": 42,
+    "new_worker_pid": 43,
+    "request_token": "reset-token",
+    "ack_token": "stale"
+  },
+  "after": [
+    {
+      "observed_at_ns": 10004000,
+      "barrier_completed_at_ns": 10004000,
+      "queued": 0,
+      "running": 0,
+      "worker_pid": 43,
+      "generation": 1,
+      "barrier_source": "synthetic_worker_barrier",
+      "barrier_token": "barrier-10004000"
+    },
+    {
+      "observed_at_ns": 20004000,
+      "barrier_completed_at_ns": 20004000,
+      "queued": 0,
+      "running": 0,
+      "worker_pid": 43,
+      "generation": 1,
+      "barrier_source": "synthetic_worker_barrier",
+      "barrier_token": "barrier-20004000"
+    }
+  ]
+}

@@ -1,0 +1,909 @@
+{
+  "playback_version": "schedule_playback_v1",
+  "provenance": "synthetic_simulation",
+  "status": "completed",
+  "failure": null,
+  "schedule_file_sha256": "8fcd1806ed56faf9f84d62cfc450f831ba8394a402f5f1158139522ac0414b1a",
+  "schedule_content_sha256": "8fcd1806ed56faf9f84d62cfc450f831ba8394a402f5f1158139522ac0414b1a",
+  "config": {
+    "max_inflight": 2,
+    "request_timeout_s": 0.2,
+    "drain_s": 0.05,
+    "max_admission_lateness_s": 0.05,
+    "window_s": 0.04,
+    "grace_s": 0.02,
+    "min_latency_samples": 20,
+    "sample_interval_s": 0.02,
+    "sample_timeout_s": 2,
+    "telemetry_queue_size": 64,
+    "tick_s": 0.001
+  },
+  "start_ns": 227847940907534,
+  "horizon_ns": 227848060907534,
+  "finished_at_ns": 227848082584251,
+  "clock_domain": "process-monotonic-b3a0046e-4d98-460e-ab26-22ac25a67508",
+  "offered": 4,
+  "admitted": 4,
+  "counts": {
+    "completed": 0,
+    "failed": 4,
+    "censored": 0,
+    "admitted": 0,
+    "skipped_capacity": 0,
+    "skipped_scheduler": 0,
+    "skipped_horizon": 0,
+    "not_dispatched_run_abort": 0,
+    "offered": 0
+  },
+  "peak_inflight": 1,
+  "observed_horizon": {
+    "observed_at_ns": 227848062303918,
+    "pending_ids": []
+  },
+  "horizon_reached": true,
+  "accounting_checks": {
+    "all_offers_accounted": true,
+    "admitted_conserved": true,
+    "concurrency_respected": true
+  },
+  "pending_at_horizon_reconstructed": [],
+  "post_horizon_terminals": 0,
+  "post_horizon_completed": 0,
+  "post_horizon_failed": 0,
+  "telemetry_overflows": 0,
+  "sampling_skips": {
+    "server": 0,
+    "gpu": 0
+  },
+  "sampling_errors": {
+    "server": 0,
+    "gpu": 0
+  },
+  "sampling_cancelled": {
+    "server": 0,
+    "gpu": 0
+  },
+  "receipt_coverage_clean": true,
+  "interval_records": [],
+  "interval_collection_errors": 0,
+  "live_interval_tasks": 0,
+  "live_request_tasks": 0,
+  "live_sampling_tasks": 0,
+  "ledger": [
+    {
+      "request_id": "r0",
+      "offset_ns": 0,
+      "due_at_ns": 227847940907534,
+      "state": "failed",
+      "admitted_at_ns": 227847941002321,
+      "terminal": {
+        "completion": {
+          "request_id": "r0",
+          "start_ns": 227847948903077,
+          "end_ns": 227847971185447,
+          "available_at_ns": 227847971185447,
+          "clock_domain": "process-monotonic-b3a0046e-4d98-460e-ab26-22ac25a67508",
+          "success": false,
+          "error_kind": "ValueError: Actual response ID/model/token/terminal mismatch"
+        },
+        "prompt_tokens": null,
+        "output_tokens": null,
+        "usage_error": "ValueError: Actual response ID/model/token/terminal mismatch"
+      },
+      "dispatch_at_ns": 227847941002321,
+      "lateness_ns": 94787,
+      "terminal_received_at_ns": 227847973115506
+    },
+    {
+      "request_id": "r1",
+      "offset_ns": 30000000,
+      "due_at_ns": 227847970907534,
+      "state": "failed",
+      "admitted_at_ns": 227847973205024,
+      "terminal": {
+        "completion": {
+          "request_id": "r1",
+          "start_ns": 227847975038523,
+          "end_ns": 227847979534554,
+          "available_at_ns": 227847979534554,
+          "clock_domain": "process-monotonic-b3a0046e-4d98-460e-ab26-22ac25a67508",
+          "success": false,
+          "error_kind": "ValueError: Actual response ID/model/token/terminal mismatch"
+        },
+        "prompt_tokens": null,
+        "output_tokens": null,
+        "usage_error": "ValueError: Actual response ID/model/token/terminal mismatch"
+      },
+      "dispatch_at_ns": 227847973205024,
+      "lateness_ns": 2297490,
+      "terminal_received_at_ns": 227847980597750
+    },
+    {
+      "request_id": "r2",
+      "offset_ns": 60000000,
+      "due_at_ns": 227848000907534,
+      "state": "failed",
+      "admitted_at_ns": 227848004606235,
+      "terminal": {
+        "completion": {
+          "request_id": "r2",
+          "start_ns": 227848006446348,
+          "end_ns": 227848011047734,
+          "available_at_ns": 227848011047734,
+          "clock_domain": "process-monotonic-b3a0046e-4d98-460e-ab26-22ac25a67508",
+          "success": false,
+          "error_kind": "ValueError: Actual response ID/model/token/terminal mismatch"
+        },
+        "prompt_tokens": null,
+        "output_tokens": null,
+        "usage_error": "ValueError: Actual response ID/model/token/terminal mismatch"
+      },
+      "dispatch_at_ns": 227848004606235,
+      "lateness_ns": 3698701,
+      "terminal_received_at_ns": 227848013020259
+    },
+    {
+      "request_id": "r3",
+      "offset_ns": 90000000,
+      "due_at_ns": 227848030907534,
+      "state": "failed",
+      "admitted_at_ns": 227848031371871,
+      "terminal": {
+        "completion": {
+          "request_id": "r3",
+          "start_ns": 227848032263447,
+          "end_ns": 227848037084247,
+          "available_at_ns": 227848037084247,
+          "clock_domain": "process-monotonic-b3a0046e-4d98-460e-ab26-22ac25a67508",
+          "success": false,
+          "error_kind": "ValueError: Actual response ID/model/token/terminal mismatch"
+        },
+        "prompt_tokens": null,
+        "output_tokens": null,
+        "usage_error": "ValueError: Actual response ID/model/token/terminal mismatch"
+      },
+      "dispatch_at_ns": 227848031371871,
+      "lateness_ns": 464337,
+      "terminal_received_at_ns": 227848038554432
+    }
+  ],
+  "raw_records": [
+    {
+      "type": "ServerSample",
+      "received_at_ns": 227847964574655,
+      "window_id": "window-0",
+      "accepted": true,
+      "record": {
+        "sample_id": "server-0",
+        "requested_at_ns": 227847959582883,
+        "received_at_ns": 227847959583765,
+        "clock_domain": "process-monotonic-b3a0046e-4d98-460e-ab26-22ac25a67508",
+        "queue_depth": 0.0,
+        "error": null
+      }
+    },
+    {
+      "type": "ObservedCompletion",
+      "received_at_ns": 227847973152385,
+      "window_id": "window-0",
+      "accepted": true,
+      "record": {
+        "completion": {
+          "request_id": "r0",
+          "start_ns": 227847948903077,
+          "end_ns": 227847971185447,
+          "available_at_ns": 227847971185447,
+          "clock_domain": "process-monotonic-b3a0046e-4d98-460e-ab26-22ac25a67508",
+          "success": false,
+          "error_kind": "ValueError: Actual response ID/model/token/terminal mismatch"
+        },
+        "prompt_tokens": null,
+        "output_tokens": null,
+        "usage_error": "ValueError: Actual response ID/model/token/terminal mismatch"
+      }
+    },
+    {
+      "type": "ServerSample",
+      "received_at_ns": 227847973178533,
+      "window_id": "window-0",
+      "accepted": true,
+      "record": {
+        "sample_id": "server-1",
+        "requested_at_ns": 227847966562105,
+        "received_at_ns": 227847966562800,
+        "clock_domain": "process-monotonic-b3a0046e-4d98-460e-ab26-22ac25a67508",
+        "queue_depth": 0.0,
+        "error": null
+      }
+    },
+    {
+      "type": "ObservedCompletion",
+      "received_at_ns": 227847980628319,
+      "window_id": "window-0",
+      "accepted": true,
+      "record": {
+        "completion": {
+          "request_id": "r1",
+          "start_ns": 227847975038523,
+          "end_ns": 227847979534554,
+          "available_at_ns": 227847979534554,
+          "clock_domain": "process-monotonic-b3a0046e-4d98-460e-ab26-22ac25a67508",
+          "success": false,
+          "error_kind": "ValueError: Actual response ID/model/token/terminal mismatch"
+        },
+        "prompt_tokens": null,
+        "output_tokens": null,
+        "usage_error": "ValueError: Actual response ID/model/token/terminal mismatch"
+      }
+    },
+    {
+      "type": "ServerSample",
+      "received_at_ns": 227847983710147,
+      "window_id": "window-1",
+      "accepted": true,
+      "record": {
+        "sample_id": "server-2",
+        "requested_at_ns": 227847981058856,
+        "received_at_ns": 227847981059455,
+        "clock_domain": "process-monotonic-b3a0046e-4d98-460e-ab26-22ac25a67508",
+        "queue_depth": 0.0,
+        "error": null
+      }
+    },
+    {
+      "type": "ServerSample",
+      "received_at_ns": 227848003810492,
+      "window_id": "window-1",
+      "accepted": true,
+      "record": {
+        "sample_id": "server-3",
+        "requested_at_ns": 227848001257171,
+        "received_at_ns": 227848001257966,
+        "clock_domain": "process-monotonic-b3a0046e-4d98-460e-ab26-22ac25a67508",
+        "queue_depth": 0.0,
+        "error": null
+      }
+    },
+    {
+      "type": "ObservedCompletion",
+      "received_at_ns": 227848013054891,
+      "window_id": "window-1",
+      "accepted": true,
+      "record": {
+        "completion": {
+          "request_id": "r2",
+          "start_ns": 227848006446348,
+          "end_ns": 227848011047734,
+          "available_at_ns": 227848011047734,
+          "clock_domain": "process-monotonic-b3a0046e-4d98-460e-ab26-22ac25a67508",
+          "success": false,
+          "error_kind": "ValueError: Actual response ID/model/token/terminal mismatch"
+        },
+        "prompt_tokens": null,
+        "output_tokens": null,
+        "usage_error": "ValueError: Actual response ID/model/token/terminal mismatch"
+      }
+    },
+    {
+      "type": "ServerSample",
+      "received_at_ns": 227848023024254,
+      "window_id": "window-2",
+      "accepted": true,
+      "record": {
+        "sample_id": "server-4",
+        "requested_at_ns": 227848021085571,
+        "received_at_ns": 227848021086124,
+        "clock_domain": "process-monotonic-b3a0046e-4d98-460e-ab26-22ac25a67508",
+        "queue_depth": 0.0,
+        "error": null
+      }
+    },
+    {
+      "type": "ObservedCompletion",
+      "received_at_ns": 227848038581590,
+      "window_id": "window-2",
+      "accepted": true,
+      "record": {
+        "completion": {
+          "request_id": "r3",
+          "start_ns": 227848032263447,
+          "end_ns": 227848037084247,
+          "available_at_ns": 227848037084247,
+          "clock_domain": "process-monotonic-b3a0046e-4d98-460e-ab26-22ac25a67508",
+          "success": false,
+          "error_kind": "ValueError: Actual response ID/model/token/terminal mismatch"
+        },
+        "prompt_tokens": null,
+        "output_tokens": null,
+        "usage_error": "ValueError: Actual response ID/model/token/terminal mismatch"
+      }
+    },
+    {
+      "type": "ServerSample",
+      "received_at_ns": 227848043437548,
+      "window_id": "window-2",
+      "accepted": true,
+      "record": {
+        "sample_id": "server-5",
+        "requested_at_ns": 227848041323081,
+        "received_at_ns": 227848041323649,
+        "clock_domain": "process-monotonic-b3a0046e-4d98-460e-ab26-22ac25a67508",
+        "queue_depth": 0.0,
+        "error": null
+      }
+    }
+  ],
+  "telemetry_drops": [],
+  "events": [
+    {
+      "sequence": 0,
+      "event": "offered_request_decided",
+      "received_at_ns": 227847941021460,
+      "request_id": "r0",
+      "state": "admitted",
+      "due_at_ns": 227847940907534
+    },
+    {
+      "sequence": 1,
+      "event": "offered_request_decided",
+      "received_at_ns": 227847973238473,
+      "request_id": "r1",
+      "state": "admitted",
+      "due_at_ns": 227847970907534
+    },
+    {
+      "sequence": 2,
+      "event": "window_closed",
+      "received_at_ns": 227848003929684,
+      "window_id": "window-0",
+      "outstanding_admitted_ids": []
+    },
+    {
+      "sequence": 3,
+      "event": "offered_request_decided",
+      "received_at_ns": 227848004774605,
+      "request_id": "r2",
+      "state": "admitted",
+      "due_at_ns": 227848000907534
+    },
+    {
+      "sequence": 4,
+      "event": "offered_request_decided",
+      "received_at_ns": 227848031400056,
+      "request_id": "r3",
+      "state": "admitted",
+      "due_at_ns": 227848030907534
+    },
+    {
+      "sequence": 5,
+      "event": "window_closed",
+      "received_at_ns": 227848043536471,
+      "window_id": "window-1",
+      "outstanding_admitted_ids": []
+    },
+    {
+      "sequence": 6,
+      "event": "window_closed",
+      "received_at_ns": 227848081915937,
+      "window_id": "window-2",
+      "outstanding_admitted_ids": []
+    }
+  ],
+  "feature_windows": [
+    {
+      "window_id": "window-0",
+      "metrics": [
+        {
+          "name": "request_p95_ms",
+          "source": "request",
+          "unit": "ms",
+          "value": null,
+          "valid_samples": 0,
+          "attempted_samples": 2,
+          "coverage": "unavailable",
+          "missing_reason": "insufficient_successful_completions",
+          "acquisition": {
+            "start_ns": 227847940907534,
+            "end_ns": 227847980907534,
+            "available_at_ns": 227848003839092,
+            "clock_domain": "process-monotonic-b3a0046e-4d98-460e-ab26-22ac25a67508"
+          }
+        },
+        {
+          "name": "completed_rps",
+          "source": "request",
+          "unit": "requests/s",
+          "value": 0.0,
+          "valid_samples": 1,
+          "attempted_samples": 1,
+          "coverage": "complete",
+          "missing_reason": null,
+          "acquisition": {
+            "start_ns": 227847940907534,
+            "end_ns": 227847980907534,
+            "available_at_ns": 227848003839092,
+            "clock_domain": "process-monotonic-b3a0046e-4d98-460e-ab26-22ac25a67508"
+          }
+        },
+        {
+          "name": "prompt_tokens_mean",
+          "source": "request",
+          "unit": "tokens",
+          "value": null,
+          "valid_samples": 0,
+          "attempted_samples": 0,
+          "coverage": "unavailable",
+          "missing_reason": "no_valid_response_usage",
+          "acquisition": {
+            "start_ns": 227847940907534,
+            "end_ns": 227847980907534,
+            "available_at_ns": 227848003839092,
+            "clock_domain": "process-monotonic-b3a0046e-4d98-460e-ab26-22ac25a67508"
+          }
+        },
+        {
+          "name": "output_tokens_mean",
+          "source": "request",
+          "unit": "tokens",
+          "value": null,
+          "valid_samples": 0,
+          "attempted_samples": 0,
+          "coverage": "unavailable",
+          "missing_reason": "no_valid_response_usage",
+          "acquisition": {
+            "start_ns": 227847940907534,
+            "end_ns": 227847980907534,
+            "available_at_ns": 227848003839092,
+            "clock_domain": "process-monotonic-b3a0046e-4d98-460e-ab26-22ac25a67508"
+          }
+        },
+        {
+          "name": "queue_depth_mean",
+          "source": "server",
+          "unit": "requests",
+          "value": 0.0,
+          "valid_samples": 2,
+          "attempted_samples": 2,
+          "coverage": "complete",
+          "missing_reason": null,
+          "acquisition": {
+            "start_ns": 227847940907534,
+            "end_ns": 227847980907534,
+            "available_at_ns": 227848003839092,
+            "clock_domain": "process-monotonic-b3a0046e-4d98-460e-ab26-22ac25a67508"
+          }
+        },
+        {
+          "name": "gpu_util_mean",
+          "source": "gpu",
+          "unit": "percent",
+          "value": null,
+          "valid_samples": 0,
+          "attempted_samples": 0,
+          "coverage": "unavailable",
+          "missing_reason": "no_valid_gpu_samples",
+          "acquisition": {
+            "start_ns": 227847940907534,
+            "end_ns": 227847980907534,
+            "available_at_ns": 227848003839092,
+            "clock_domain": "process-monotonic-b3a0046e-4d98-460e-ab26-22ac25a67508"
+          }
+        },
+        {
+          "name": "request_wait_p95_ms",
+          "source": "server",
+          "unit": "ms",
+          "value": null,
+          "valid_samples": 0,
+          "attempted_samples": 0,
+          "coverage": "unavailable",
+          "missing_reason": "unsupported_interval_statistic_by_queue_gauge_collector",
+          "acquisition": {
+            "start_ns": 227847940907534,
+            "end_ns": 227847980907534,
+            "available_at_ns": 227848003839092,
+            "clock_domain": "process-monotonic-b3a0046e-4d98-460e-ab26-22ac25a67508"
+          }
+        },
+        {
+          "name": "prefill_service_fraction",
+          "source": "server",
+          "unit": "fraction",
+          "value": null,
+          "valid_samples": 0,
+          "attempted_samples": 0,
+          "coverage": "unavailable",
+          "missing_reason": "unsupported_interval_statistic_by_queue_gauge_collector",
+          "acquisition": {
+            "start_ns": 227847940907534,
+            "end_ns": 227847980907534,
+            "available_at_ns": 227848003839092,
+            "clock_domain": "process-monotonic-b3a0046e-4d98-460e-ab26-22ac25a67508"
+          }
+        }
+      ],
+      "audit": {
+        "start_ns": 227847940907534,
+        "end_ns": 227847980907534,
+        "deadline_ns": 227848000907534,
+        "closed_at_ns": 227848003839092,
+        "min_latency_samples": 20,
+        "threshold_role": "development_guard_not_calibrated",
+        "completion_count": 2,
+        "successful_completions": 0,
+        "request_errors": 2,
+        "usage_missing": 2,
+        "events": [
+          {
+            "kind": "server",
+            "identity": "server-0",
+            "received_at_ns": 227847964567879,
+            "accepted": true,
+            "reason": "accepted"
+          },
+          {
+            "kind": "request",
+            "identity": "r0",
+            "received_at_ns": 227847973144659,
+            "accepted": true,
+            "reason": "accepted"
+          },
+          {
+            "kind": "server",
+            "identity": "server-1",
+            "received_at_ns": 227847973174793,
+            "accepted": true,
+            "reason": "accepted"
+          },
+          {
+            "kind": "request",
+            "identity": "r1",
+            "received_at_ns": 227847980622150,
+            "accepted": true,
+            "reason": "accepted"
+          }
+        ],
+        "note": "Completion-cohort features; pending admissions/censoring are recorded by the workload driver. Gauge means are sample means, not time-weighted means."
+      }
+    },
+    {
+      "window_id": "window-1",
+      "metrics": [
+        {
+          "name": "request_p95_ms",
+          "source": "request",
+          "unit": "ms",
+          "value": null,
+          "valid_samples": 0,
+          "attempted_samples": 1,
+          "coverage": "unavailable",
+          "missing_reason": "insufficient_successful_completions",
+          "acquisition": {
+            "start_ns": 227847980907534,
+            "end_ns": 227848020907534,
+            "available_at_ns": 227848043458673,
+            "clock_domain": "process-monotonic-b3a0046e-4d98-460e-ab26-22ac25a67508"
+          }
+        },
+        {
+          "name": "completed_rps",
+          "source": "request",
+          "unit": "requests/s",
+          "value": 0.0,
+          "valid_samples": 1,
+          "attempted_samples": 1,
+          "coverage": "complete",
+          "missing_reason": null,
+          "acquisition": {
+            "start_ns": 227847980907534,
+            "end_ns": 227848020907534,
+            "available_at_ns": 227848043458673,
+            "clock_domain": "process-monotonic-b3a0046e-4d98-460e-ab26-22ac25a67508"
+          }
+        },
+        {
+          "name": "prompt_tokens_mean",
+          "source": "request",
+          "unit": "tokens",
+          "value": null,
+          "valid_samples": 0,
+          "attempted_samples": 0,
+          "coverage": "unavailable",
+          "missing_reason": "no_valid_response_usage",
+          "acquisition": {
+            "start_ns": 227847980907534,
+            "end_ns": 227848020907534,
+            "available_at_ns": 227848043458673,
+            "clock_domain": "process-monotonic-b3a0046e-4d98-460e-ab26-22ac25a67508"
+          }
+        },
+        {
+          "name": "output_tokens_mean",
+          "source": "request",
+          "unit": "tokens",
+          "value": null,
+          "valid_samples": 0,
+          "attempted_samples": 0,
+          "coverage": "unavailable",
+          "missing_reason": "no_valid_response_usage",
+          "acquisition": {
+            "start_ns": 227847980907534,
+            "end_ns": 227848020907534,
+            "available_at_ns": 227848043458673,
+            "clock_domain": "process-monotonic-b3a0046e-4d98-460e-ab26-22ac25a67508"
+          }
+        },
+        {
+          "name": "queue_depth_mean",
+          "source": "server",
+          "unit": "requests",
+          "value": 0.0,
+          "valid_samples": 2,
+          "attempted_samples": 2,
+          "coverage": "complete",
+          "missing_reason": null,
+          "acquisition": {
+            "start_ns": 227847980907534,
+            "end_ns": 227848020907534,
+            "available_at_ns": 227848043458673,
+            "clock_domain": "process-monotonic-b3a0046e-4d98-460e-ab26-22ac25a67508"
+          }
+        },
+        {
+          "name": "gpu_util_mean",
+          "source": "gpu",
+          "unit": "percent",
+          "value": null,
+          "valid_samples": 0,
+          "attempted_samples": 0,
+          "coverage": "unavailable",
+          "missing_reason": "no_valid_gpu_samples",
+          "acquisition": {
+            "start_ns": 227847980907534,
+            "end_ns": 227848020907534,
+            "available_at_ns": 227848043458673,
+            "clock_domain": "process-monotonic-b3a0046e-4d98-460e-ab26-22ac25a67508"
+          }
+        },
+        {
+          "name": "request_wait_p95_ms",
+          "source": "server",
+          "unit": "ms",
+          "value": null,
+          "valid_samples": 0,
+          "attempted_samples": 0,
+          "coverage": "unavailable",
+          "missing_reason": "unsupported_interval_statistic_by_queue_gauge_collector",
+          "acquisition": {
+            "start_ns": 227847980907534,
+            "end_ns": 227848020907534,
+            "available_at_ns": 227848043458673,
+            "clock_domain": "process-monotonic-b3a0046e-4d98-460e-ab26-22ac25a67508"
+          }
+        },
+        {
+          "name": "prefill_service_fraction",
+          "source": "server",
+          "unit": "fraction",
+          "value": null,
+          "valid_samples": 0,
+          "attempted_samples": 0,
+          "coverage": "unavailable",
+          "missing_reason": "unsupported_interval_statistic_by_queue_gauge_collector",
+          "acquisition": {
+            "start_ns": 227847980907534,
+            "end_ns": 227848020907534,
+            "available_at_ns": 227848043458673,
+            "clock_domain": "process-monotonic-b3a0046e-4d98-460e-ab26-22ac25a67508"
+          }
+        }
+      ],
+      "audit": {
+        "start_ns": 227847980907534,
+        "end_ns": 227848020907534,
+        "deadline_ns": 227848040907534,
+        "closed_at_ns": 227848043458673,
+        "min_latency_samples": 20,
+        "threshold_role": "development_guard_not_calibrated",
+        "completion_count": 1,
+        "successful_completions": 0,
+        "request_errors": 1,
+        "usage_missing": 1,
+        "events": [
+          {
+            "kind": "server",
+            "identity": "server-2",
+            "received_at_ns": 227847983700925,
+            "accepted": true,
+            "reason": "accepted"
+          },
+          {
+            "kind": "server",
+            "identity": "server-3",
+            "received_at_ns": 227848003801933,
+            "accepted": true,
+            "reason": "accepted"
+          },
+          {
+            "kind": "request",
+            "identity": "r2",
+            "received_at_ns": 227848013047563,
+            "accepted": true,
+            "reason": "accepted"
+          }
+        ],
+        "note": "Completion-cohort features; pending admissions/censoring are recorded by the workload driver. Gauge means are sample means, not time-weighted means."
+      }
+    },
+    {
+      "window_id": "window-2",
+      "metrics": [
+        {
+          "name": "request_p95_ms",
+          "source": "request",
+          "unit": "ms",
+          "value": null,
+          "valid_samples": 0,
+          "attempted_samples": 1,
+          "coverage": "unavailable",
+          "missing_reason": "insufficient_successful_completions",
+          "acquisition": {
+            "start_ns": 227848020907534,
+            "end_ns": 227848060907534,
+            "available_at_ns": 227848081846141,
+            "clock_domain": "process-monotonic-b3a0046e-4d98-460e-ab26-22ac25a67508"
+          }
+        },
+        {
+          "name": "completed_rps",
+          "source": "request",
+          "unit": "requests/s",
+          "value": 0.0,
+          "valid_samples": 1,
+          "attempted_samples": 1,
+          "coverage": "complete",
+          "missing_reason": null,
+          "acquisition": {
+            "start_ns": 227848020907534,
+            "end_ns": 227848060907534,
+            "available_at_ns": 227848081846141,
+            "clock_domain": "process-monotonic-b3a0046e-4d98-460e-ab26-22ac25a67508"
+          }
+        },
+        {
+          "name": "prompt_tokens_mean",
+          "source": "request",
+          "unit": "tokens",
+          "value": null,
+          "valid_samples": 0,
+          "attempted_samples": 0,
+          "coverage": "unavailable",
+          "missing_reason": "no_valid_response_usage",
+          "acquisition": {
+            "start_ns": 227848020907534,
+            "end_ns": 227848060907534,
+            "available_at_ns": 227848081846141,
+            "clock_domain": "process-monotonic-b3a0046e-4d98-460e-ab26-22ac25a67508"
+          }
+        },
+        {
+          "name": "output_tokens_mean",
+          "source": "request",
+          "unit": "tokens",
+          "value": null,
+          "valid_samples": 0,
+          "attempted_samples": 0,
+          "coverage": "unavailable",
+          "missing_reason": "no_valid_response_usage",
+          "acquisition": {
+            "start_ns": 227848020907534,
+            "end_ns": 227848060907534,
+            "available_at_ns": 227848081846141,
+            "clock_domain": "process-monotonic-b3a0046e-4d98-460e-ab26-22ac25a67508"
+          }
+        },
+        {
+          "name": "queue_depth_mean",
+          "source": "server",
+          "unit": "requests",
+          "value": 0.0,
+          "valid_samples": 2,
+          "attempted_samples": 2,
+          "coverage": "complete",
+          "missing_reason": null,
+          "acquisition": {
+            "start_ns": 227848020907534,
+            "end_ns": 227848060907534,
+            "available_at_ns": 227848081846141,
+            "clock_domain": "process-monotonic-b3a0046e-4d98-460e-ab26-22ac25a67508"
+          }
+        },
+        {
+          "name": "gpu_util_mean",
+          "source": "gpu",
+          "unit": "percent",
+          "value": null,
+          "valid_samples": 0,
+          "attempted_samples": 0,
+          "coverage": "unavailable",
+          "missing_reason": "no_valid_gpu_samples",
+          "acquisition": {
+            "start_ns": 227848020907534,
+            "end_ns": 227848060907534,
+            "available_at_ns": 227848081846141,
+            "clock_domain": "process-monotonic-b3a0046e-4d98-460e-ab26-22ac25a67508"
+          }
+        },
+        {
+          "name": "request_wait_p95_ms",
+          "source": "server",
+          "unit": "ms",
+          "value": null,
+          "valid_samples": 0,
+          "attempted_samples": 0,
+          "coverage": "unavailable",
+          "missing_reason": "unsupported_interval_statistic_by_queue_gauge_collector",
+          "acquisition": {
+            "start_ns": 227848020907534,
+            "end_ns": 227848060907534,
+            "available_at_ns": 227848081846141,
+            "clock_domain": "process-monotonic-b3a0046e-4d98-460e-ab26-22ac25a67508"
+          }
+        },
+        {
+          "name": "prefill_service_fraction",
+          "source": "server",
+          "unit": "fraction",
+          "value": null,
+          "valid_samples": 0,
+          "attempted_samples": 0,
+          "coverage": "unavailable",
+          "missing_reason": "unsupported_interval_statistic_by_queue_gauge_collector",
+          "acquisition": {
+            "start_ns": 227848020907534,
+            "end_ns": 227848060907534,
+            "available_at_ns": 227848081846141,
+            "clock_domain": "process-monotonic-b3a0046e-4d98-460e-ab26-22ac25a67508"
+          }
+        }
+      ],
+      "audit": {
+        "start_ns": 227848020907534,
+        "end_ns": 227848060907534,
+        "deadline_ns": 227848080907534,
+        "closed_at_ns": 227848081846141,
+        "min_latency_samples": 20,
+        "threshold_role": "development_guard_not_calibrated",
+        "completion_count": 1,
+        "successful_completions": 0,
+        "request_errors": 1,
+        "usage_missing": 1,
+        "events": [
+          {
+            "kind": "server",
+            "identity": "server-4",
+            "received_at_ns": 227848023017733,
+            "accepted": true,
+            "reason": "accepted"
+          },
+          {
+            "kind": "request",
+            "identity": "r3",
+            "received_at_ns": 227848038576174,
+            "accepted": true,
+            "reason": "accepted"
+          },
+          {
+            "kind": "server",
+            "identity": "server-5",
+            "received_at_ns": 227848043430676,
+            "accepted": true,
+            "reason": "accepted"
+          }
+        ],
+        "note": "Completion-cohort features; pending admissions/censoring are recorded by the workload driver. Gauge means are sample means, not time-weighted means."
+      }
+    }
+  ],
+  "note": "Offered schedule is fixed; admitted/completed work may differ. Reconstructed horizon state uses later receipts and is evaluator-only. No server/profiler lifecycle or calibrated diagnosis implemented."
+}

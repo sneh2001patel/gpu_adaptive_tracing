@@ -1,0 +1,35 @@
+{
+  "provenance": "synthetic_simulation",
+  "GPU_used": false,
+  "live_validation": false,
+  "scaled_horizon_s": 0.12,
+  "cases": [
+    {
+      "case": "collector_on",
+      "expected_failure": false,
+      "error": null,
+      "owned_target_closed": true,
+      "active_requests_after_cleanup": 0,
+      "event_probes": 5
+    },
+    {
+      "case": "collector_off",
+      "expected_failure": false,
+      "error": null,
+      "owned_target_closed": true,
+      "active_requests_after_cleanup": 0,
+      "event_probes": 0
+    },
+    {
+      "case": "bad_response_ID",
+      "expected_failure": true,
+      "error": "Incomplete offered work; retain skips/errors/censors, no retry",
+      "owned_target_closed": true,
+      "active_requests_after_cleanup": 0,
+      "event_probes": 4
+    }
+  ],
+  "classifier_run": false,
+  "references_created": 0,
+  "protocol_frozen": false
+}

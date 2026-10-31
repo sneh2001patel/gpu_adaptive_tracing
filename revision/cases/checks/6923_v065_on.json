@@ -1,0 +1,17 @@
+INFO 10-29 00:04:13 config.py:478] This model supports multiple tasks: {'reward', 'classify', 'generate', 'score', 'embed'}. Defaulting to 'generate'.
+WARNING 10-29 00:04:14 fp8.py:47] Detected fp8 checkpoint. Please note that the format is experimental and subject to change.
+INFO 10-29 00:04:14 llm_engine.py:249] Initializing an LLM engine (v0.6.5) with config: model='neuralmagic/Meta-Llama-3-8B-Instruct-FP8', speculative_config=None, tokenizer='neuralmagic/Meta-Llama-3-8B-Instruct-FP8', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, override_neuron_config=None, tokenizer_revision=None, trust_remote_code=False, dtype=torch.bfloat16, max_seq_len=4096, download_dir=None, load_format=auto, tensor_parallel_size=1, pipeline_parallel_size=1, disable_custom_all_reduce=False, quantization=fp8, enforce_eager=False, kv_cache_dtype=auto, quantization_param_path=None, device_config=cuda, decoding_config=DecodingConfig(guided_decoding_backend='xgrammar'), observability_config=ObservabilityConfig(otlp_traces_endpoint=None, collect_model_forward_time=False, collect_model_execute_time=False), seed=0, served_model_name=neuralmagic/Meta-Llama-3-8B-Instruct-FP8, num_scheduler_steps=1, multi_step_stream_outputs=True, enable_prefix_caching=True, chunked_prefill_enabled=False, use_async_output_proc=True, mm_cache_preprocessor=False, mm_processor_kwargs=None, pooler_config=None, compilation_config={"splitting_ops":["vllm.unified_attention","vllm.unified_attention_with_output"],"candidate_compile_sizes":[],"compile_sizes":[],"capture_sizes":[256,248,240,232,224,216,208,200,192,184,176,168,160,152,144,136,128,120,112,104,96,88,80,72,64,56,48,40,32,24,16,8,4,2,1],"max_capture_size":256}, use_cached_outputs=False, 
+INFO 10-29 00:04:15 selector.py:120] Using Flash Attention backend.
+INFO 10-29 00:04:16 model_runner.py:1092] Starting to load model neuralmagic/Meta-Llama-3-8B-Instruct-FP8...
+INFO 10-29 00:04:17 weight_utils.py:243] Using model weights format ['*.safetensors']
+INFO 10-29 00:04:21 model_runner.py:1097] Loading model weights took 8.4596 GB
+INFO 10-29 00:04:22 worker.py:241] Memory profiling takes 1.26 seconds
+INFO 10-29 00:04:22 worker.py:241] the current vLLM instance can use total_gpu_memory (22.11GiB) x gpu_memory_utilization (0.90) = 19.90GiB
+INFO 10-29 00:04:22 worker.py:241] model weights take 8.46GiB; non_torch_memory takes 0.06GiB; PyTorch activation peak memory takes 1.20GiB; the rest of the memory reserved for KV Cache is 10.18GiB.
+INFO 10-29 00:04:23 gpu_executor.py:76] # GPU blocks: 5211, # CPU blocks: 2048
+INFO 10-29 00:04:23 gpu_executor.py:80] Maximum concurrency for 4096 tokens per request: 20.36x
+INFO 10-29 00:04:25 model_runner.py:1413] Capturing cudagraphs for decoding. This may lead to unexpected consequences if the model is not static. To run the model in eager mode, set 'enforce_eager=True' or use '--enforce-eager' in the CLI.
+INFO 10-29 00:04:25 model_runner.py:1417] If out-of-memory error occurs during cudagraph capture, consider decreasing `gpu_memory_utilization` or switching to eager mode. You can also reduce the `max_num_seqs` as needed to decrease memory usage.
+INFO 10-29 00:04:43 model_runner.py:1527] Graph capturing finished in 18 secs, took 0.24 GiB
+INFO 10-29 00:04:43 llm_engine.py:446] init engine (profile, create kv cache, warmup model) took 21.79 seconds
+{"model": "neuralmagic/Meta-Llama-3-8B-Instruct-FP8", "prefix_caching": "on", "clients": 32, "requests": 256, "elapsed_s": 316.1, "ttft_mean_ms": 3442.9, "ttft_p50_ms": 3400.7, "ttft_p95_ms": 6027.5}

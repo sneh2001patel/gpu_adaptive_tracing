@@ -1,0 +1,36 @@
+{
+  "version": "l4_live_discovery_summary_v1",
+  "date": "2026-10-28",
+  "provenance": "live_online",
+  "hardware": "single NVIDIA L4",
+  "device_uuid": "GPU-baa93118-dfa3-1258-be9e-b6051b77c1cb",
+  "vllm": "0.10.2",
+  "nsys": "2026.3.1",
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "model_revision": "a09a35458c702b33eeacc393d103063234e8bc28",
+  "discovery_passed": true,
+  "live_activity_feasibility_passed": false,
+  "study_ready": false,
+  "successful_bounded_requests": 2,
+  "prompt_tokens_per_request": 12,
+  "output_tokens_per_request": 16,
+  "queue_prefill_decode_histogram_counts": [
+    0,
+    1,
+    2
+  ],
+  "new_captures": 0,
+  "worker_quiet_reset_verified": false,
+  "owned_serving_process_absent": true,
+  "owned_worker_absent": true,
+  "gpu_memory_after_cleanup_mib": 0,
+  "rental_instance_stopped": false,
+  "artifact_hash_entries_verified": 34,
+  "cpu_tests": 380,
+  "source_archive_sha256": "9a08e987ced70f38eb4fba95a792e4e35759991bb7ccf83f421f5bf731a1e295",
+  "limitations": [
+    "Two short sequential requests are feasibility probes, not a calibration/overhead cohort.",
+    "Finished-request histograms cannot automatically become admission-window wait or exclusive GPU phase measurements.",
+    "Worker barrier/restart/capture adapter remains pending; no new active-capture or diagnostic-effectiveness result."
+  ]
+}

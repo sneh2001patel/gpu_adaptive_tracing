@@ -1,0 +1,38 @@
+{
+  "version": "live_feasibility_gates_v1",
+  "provenance": "synthetic_simulation",
+  "clock_domain": "fixture-feasibility-clock",
+  "gates": {
+    "inventory": {
+      "status": "failed",
+      "reason": "ValueError: Pinned vllm_version mismatch"
+    },
+    "metrics": {
+      "status": "skipped",
+      "reason": "prior_gate_not_passed"
+    },
+    "quiet_reset": {
+      "status": "skipped",
+      "reason": "prior_gate_not_passed"
+    },
+    "capture": {
+      "status": "skipped",
+      "reason": "prior_gate_not_passed"
+    },
+    "cleanup": {
+      "status": "passed",
+      "reason": null
+    }
+  },
+  "discovery_passed": false,
+  "gate_mechanics_passed": false,
+  "live_feasibility_passed": false,
+  "study_ready": false,
+  "diagnosis_ready": false,
+  "protocol_frozen": false,
+  "context": {
+    "owned_cleanup_verified": true
+  },
+  "capture_active_s": null,
+  "note": "Receipt validation is conditional on adapter observations, not proof against fabricated evidence. Discovery never supplies worker quiet/reset, phase attribution, calibrated diagnosis or main-study readiness."
+}

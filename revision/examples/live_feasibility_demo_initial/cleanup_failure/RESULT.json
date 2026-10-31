@@ -1,0 +1,383 @@
+{
+  "version": "live_feasibility_gates_v1",
+  "provenance": "synthetic_simulation",
+  "clock_domain": "fixture-feasibility-clock",
+  "gates": {
+    "inventory": {
+      "status": "passed",
+      "reason": null
+    },
+    "metrics": {
+      "status": "passed",
+      "reason": null
+    },
+    "quiet_reset": {
+      "status": "passed",
+      "reason": null
+    },
+    "capture": {
+      "status": "passed",
+      "reason": null
+    },
+    "cleanup": {
+      "status": "failed",
+      "reason": "ValueError: Owned cleanup not confirmed"
+    }
+  },
+  "discovery_passed": true,
+  "gate_mechanics_passed": false,
+  "live_feasibility_passed": false,
+  "study_ready": false,
+  "diagnosis_ready": false,
+  "protocol_frozen": false,
+  "context": {
+    "worker_pid": 43,
+    "metric_capabilities": {
+      "snapshots": [
+        {
+          "ok": true,
+          "inspection": {
+            "profile": "vllm_0_10_2_v1_finished_request_metrics",
+            "selected_labels": {
+              "model_name": "Qwen/Qwen2.5-7B-Instruct",
+              "engine": "0"
+            },
+            "gauges": {
+              "vllm:num_requests_waiting": {
+                "value": 0.0,
+                "available": true,
+                "reason": null
+              },
+              "vllm:num_requests_running": {
+                "value": 0.0,
+                "available": true,
+                "reason": null
+              }
+            },
+            "histograms": {
+              "vllm:request_queue_time_seconds": {
+                "present": true,
+                "reason": null,
+                "snapshot": {
+                  "upper_seconds": [
+                    0.1,
+                    1.0,
+                    "+Inf"
+                  ],
+                  "cumulative_counts": [
+                    1,
+                    1,
+                    1
+                  ],
+                  "count": 1,
+                  "sum_seconds": 0.01
+                },
+                "cohort": "finished_requests_reported_by_logger",
+                "source_timestamp_mapping": false
+              },
+              "vllm:request_prefill_time_seconds": {
+                "present": true,
+                "reason": null,
+                "snapshot": {
+                  "upper_seconds": [
+                    0.1,
+                    1.0,
+                    "+Inf"
+                  ],
+                  "cumulative_counts": [
+                    1,
+                    1,
+                    1
+                  ],
+                  "count": 1,
+                  "sum_seconds": 0.01
+                },
+                "cohort": "finished_requests_reported_by_logger",
+                "source_timestamp_mapping": false
+              },
+              "vllm:request_decode_time_seconds": {
+                "present": true,
+                "reason": null,
+                "snapshot": {
+                  "upper_seconds": [
+                    0.1,
+                    1.0,
+                    "+Inf"
+                  ],
+                  "cumulative_counts": [
+                    1,
+                    1,
+                    1
+                  ],
+                  "count": 1,
+                  "sum_seconds": 0.01
+                },
+                "cohort": "finished_requests_reported_by_logger",
+                "source_timestamp_mapping": false
+              }
+            },
+            "other_scope_count": 0,
+            "admission_window_wait_supported": false,
+            "prefill_service_fraction_supported": false,
+            "note": "Presence is not calibration, atomicity, source-clock mapping, admission-cohort coverage or exclusive GPU phase attribution."
+          },
+          "error": null
+        },
+        {
+          "ok": true,
+          "inspection": {
+            "profile": "vllm_0_10_2_v1_finished_request_metrics",
+            "selected_labels": {
+              "model_name": "Qwen/Qwen2.5-7B-Instruct",
+              "engine": "0"
+            },
+            "gauges": {
+              "vllm:num_requests_waiting": {
+                "value": 0.0,
+                "available": true,
+                "reason": null
+              },
+              "vllm:num_requests_running": {
+                "value": 0.0,
+                "available": true,
+                "reason": null
+              }
+            },
+            "histograms": {
+              "vllm:request_queue_time_seconds": {
+                "present": true,
+                "reason": null,
+                "snapshot": {
+                  "upper_seconds": [
+                    0.1,
+                    1.0,
+                    "+Inf"
+                  ],
+                  "cumulative_counts": [
+                    2,
+                    2,
+                    2
+                  ],
+                  "count": 2,
+                  "sum_seconds": 0.02
+                },
+                "cohort": "finished_requests_reported_by_logger",
+                "source_timestamp_mapping": false
+              },
+              "vllm:request_prefill_time_seconds": {
+                "present": true,
+                "reason": null,
+                "snapshot": {
+                  "upper_seconds": [
+                    0.1,
+                    1.0,
+                    "+Inf"
+                  ],
+                  "cumulative_counts": [
+                    2,
+                    2,
+                    2
+                  ],
+                  "count": 2,
+                  "sum_seconds": 0.02
+                },
+                "cohort": "finished_requests_reported_by_logger",
+                "source_timestamp_mapping": false
+              },
+              "vllm:request_decode_time_seconds": {
+                "present": true,
+                "reason": null,
+                "snapshot": {
+                  "upper_seconds": [
+                    0.1,
+                    1.0,
+                    "+Inf"
+                  ],
+                  "cumulative_counts": [
+                    2,
+                    2,
+                    2
+                  ],
+                  "count": 2,
+                  "sum_seconds": 0.02
+                },
+                "cohort": "finished_requests_reported_by_logger",
+                "source_timestamp_mapping": false
+              }
+            },
+            "other_scope_count": 0,
+            "admission_window_wait_supported": false,
+            "prefill_service_fraction_supported": false,
+            "note": "Presence is not calibration, atomicity, source-clock mapping, admission-cohort coverage or exclusive GPU phase attribution."
+          },
+          "error": null
+        },
+        {
+          "ok": true,
+          "inspection": {
+            "profile": "vllm_0_10_2_v1_finished_request_metrics",
+            "selected_labels": {
+              "model_name": "Qwen/Qwen2.5-7B-Instruct",
+              "engine": "0"
+            },
+            "gauges": {
+              "vllm:num_requests_waiting": {
+                "value": 0.0,
+                "available": true,
+                "reason": null
+              },
+              "vllm:num_requests_running": {
+                "value": 0.0,
+                "available": true,
+                "reason": null
+              }
+            },
+            "histograms": {
+              "vllm:request_queue_time_seconds": {
+                "present": true,
+                "reason": null,
+                "snapshot": {
+                  "upper_seconds": [
+                    0.1,
+                    1.0,
+                    "+Inf"
+                  ],
+                  "cumulative_counts": [
+                    3,
+                    3,
+                    3
+                  ],
+                  "count": 3,
+                  "sum_seconds": 0.03
+                },
+                "cohort": "finished_requests_reported_by_logger",
+                "source_timestamp_mapping": false
+              },
+              "vllm:request_prefill_time_seconds": {
+                "present": true,
+                "reason": null,
+                "snapshot": {
+                  "upper_seconds": [
+                    0.1,
+                    1.0,
+                    "+Inf"
+                  ],
+                  "cumulative_counts": [
+                    3,
+                    3,
+                    3
+                  ],
+                  "count": 3,
+                  "sum_seconds": 0.03
+                },
+                "cohort": "finished_requests_reported_by_logger",
+                "source_timestamp_mapping": false
+              },
+              "vllm:request_decode_time_seconds": {
+                "present": true,
+                "reason": null,
+                "snapshot": {
+                  "upper_seconds": [
+                    0.1,
+                    1.0,
+                    "+Inf"
+                  ],
+                  "cumulative_counts": [
+                    3,
+                    3,
+                    3
+                  ],
+                  "count": 3,
+                  "sum_seconds": 0.03
+                },
+                "cohort": "finished_requests_reported_by_logger",
+                "source_timestamp_mapping": false
+              }
+            },
+            "other_scope_count": 0,
+            "admission_window_wait_supported": false,
+            "prefill_service_fraction_supported": false,
+            "note": "Presence is not calibration, atomicity, source-clock mapping, admission-cohort coverage or exclusive GPU phase attribution."
+          },
+          "error": null
+        }
+      ],
+      "transitions": [
+        {
+          "from_snapshot": 0,
+          "to_snapshot": 1,
+          "family": "vllm:request_queue_time_seconds",
+          "reason": null,
+          "newly_reported_finished_requests": 1,
+          "usable_as_controller_feature": false
+        },
+        {
+          "from_snapshot": 0,
+          "to_snapshot": 1,
+          "family": "vllm:request_prefill_time_seconds",
+          "reason": null,
+          "newly_reported_finished_requests": 1,
+          "usable_as_controller_feature": false
+        },
+        {
+          "from_snapshot": 0,
+          "to_snapshot": 1,
+          "family": "vllm:request_decode_time_seconds",
+          "reason": null,
+          "newly_reported_finished_requests": 1,
+          "usable_as_controller_feature": false
+        },
+        {
+          "from_snapshot": 1,
+          "to_snapshot": 2,
+          "family": "vllm:request_queue_time_seconds",
+          "reason": null,
+          "newly_reported_finished_requests": 1,
+          "usable_as_controller_feature": false
+        },
+        {
+          "from_snapshot": 1,
+          "to_snapshot": 2,
+          "family": "vllm:request_prefill_time_seconds",
+          "reason": null,
+          "newly_reported_finished_requests": 1,
+          "usable_as_controller_feature": false
+        },
+        {
+          "from_snapshot": 1,
+          "to_snapshot": 2,
+          "family": "vllm:request_decode_time_seconds",
+          "reason": null,
+          "newly_reported_finished_requests": 1,
+          "usable_as_controller_feature": false
+        }
+      ],
+      "admission_wait_mapping": "unsupported_cohort_and_clock",
+      "prefill_fraction_mapping": "unsupported_exclusive_service_attribution"
+    },
+    "reset_completed_ns": 20004000,
+    "kernel_evidence": {
+      "kernels": [
+        {
+          "name": "synthetic_kernel",
+          "count": 1,
+          "total_ns": 9
+        }
+      ],
+      "kernel_count": 1,
+      "kernel_time_sum_s": 9e-09,
+      "kernel_envelope_s": 9e-09,
+      "top_kernel_name": "synthetic_kernel",
+      "device_uuid": "GPU-fixture",
+      "captured_worker_pids": [
+        43
+      ],
+      "coverage": "single_configured_worker_and_device_verified",
+      "source": "nsys_sqlite",
+      "note": "Kernel sum/envelope are not capture-active time; no calibrated root-cause classifier."
+    },
+    "capture_completed_ns": 26000000
+  },
+  "capture_active_s": null,
+  "note": "Receipt validation is conditional on adapter observations, not proof against fabricated evidence. Discovery never supplies worker quiet/reset, phase attribution, calibrated diagnosis or main-study readiness."
+}

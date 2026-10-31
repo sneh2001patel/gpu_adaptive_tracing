@@ -1,0 +1,323 @@
+[
+  {
+    "record_role": "adjudicated_reference",
+    "run_id": "synthetic-run",
+    "reference_version": "synthetic-rubric-v1",
+    "provenance": "synthetic_simulation",
+    "interval": {
+      "start_ns": 0,
+      "end_ns": 100,
+      "available_at_ns": 650,
+      "clock_domain": "synthetic-reference-demo-clock"
+    },
+    "status": "supported",
+    "supported_causes": [
+      "queue_pressure"
+    ],
+    "contradicted_causes": [],
+    "cause_set_complete": true,
+    "criteria": [
+      {
+        "criterion_id": "fixture-queue_pressure",
+        "cause": "queue_pressure",
+        "passed": true,
+        "artifact_ids": [
+          "server",
+          "requests"
+        ],
+        "rationale": "Hand-authored contract fixture, not independent incident evidence"
+      }
+    ],
+    "artifacts": [
+      {
+        "artifact_id": "server",
+        "path": "server.json",
+        "sha256": "bba99d04ee3bbcde2944047c0cb8b5c0b771af60349f7e253f264b65603b28d9",
+        "channel": "server_diagnostics",
+        "acquisition": {
+          "start_ns": 0,
+          "end_ns": 500,
+          "available_at_ns": 650,
+          "clock_domain": "synthetic-reference-demo-clock"
+        }
+      },
+      {
+        "artifact_id": "requests",
+        "path": "requests.json",
+        "sha256": "bdb7795d884929ff7aeaab3418e92cba72992e587703248f0fa40c760d8005c5",
+        "channel": "request_diagnostics",
+        "acquisition": {
+          "start_ns": 0,
+          "end_ns": 500,
+          "available_at_ns": 650,
+          "clock_domain": "synthetic-reference-demo-clock"
+        }
+      }
+    ],
+    "alternatives": [
+      "Fixture alternative"
+    ],
+    "matched_reference_run_id": null,
+    "reference_run_mismatch": null,
+    "assessor_ids": [
+      "synthetic-author"
+    ],
+    "blinded_to_predictions_and_policy": false,
+    "adjudicated_at_ns": 700,
+    "locked_at_ns": null,
+    "limitations": [
+      "Synthetic unblinded single-author fixture; not ground truth or human adjudication evidence"
+    ]
+  },
+  {
+    "record_role": "adjudicated_reference",
+    "run_id": "synthetic-run",
+    "reference_version": "synthetic-rubric-v1",
+    "provenance": "synthetic_simulation",
+    "interval": {
+      "start_ns": 100,
+      "end_ns": 200,
+      "available_at_ns": 650,
+      "clock_domain": "synthetic-reference-demo-clock"
+    },
+    "status": "supported",
+    "supported_causes": [
+      "queue_pressure",
+      "prefill_dominated_service"
+    ],
+    "contradicted_causes": [],
+    "cause_set_complete": true,
+    "criteria": [
+      {
+        "criterion_id": "fixture-queue_pressure",
+        "cause": "queue_pressure",
+        "passed": true,
+        "artifact_ids": [
+          "server",
+          "requests"
+        ],
+        "rationale": "Hand-authored contract fixture, not independent incident evidence"
+      },
+      {
+        "criterion_id": "fixture-prefill_dominated_service",
+        "cause": "prefill_dominated_service",
+        "passed": true,
+        "artifact_ids": [
+          "server",
+          "requests"
+        ],
+        "rationale": "Hand-authored contract fixture, not independent incident evidence"
+      }
+    ],
+    "artifacts": [
+      {
+        "artifact_id": "server",
+        "path": "server.json",
+        "sha256": "bba99d04ee3bbcde2944047c0cb8b5c0b771af60349f7e253f264b65603b28d9",
+        "channel": "server_diagnostics",
+        "acquisition": {
+          "start_ns": 0,
+          "end_ns": 500,
+          "available_at_ns": 650,
+          "clock_domain": "synthetic-reference-demo-clock"
+        }
+      },
+      {
+        "artifact_id": "requests",
+        "path": "requests.json",
+        "sha256": "bdb7795d884929ff7aeaab3418e92cba72992e587703248f0fa40c760d8005c5",
+        "channel": "request_diagnostics",
+        "acquisition": {
+          "start_ns": 0,
+          "end_ns": 500,
+          "available_at_ns": 650,
+          "clock_domain": "synthetic-reference-demo-clock"
+        }
+      }
+    ],
+    "alternatives": [
+      "Fixture alternative"
+    ],
+    "matched_reference_run_id": null,
+    "reference_run_mismatch": null,
+    "assessor_ids": [
+      "synthetic-author"
+    ],
+    "blinded_to_predictions_and_policy": false,
+    "adjudicated_at_ns": 700,
+    "locked_at_ns": null,
+    "limitations": [
+      "Synthetic unblinded single-author fixture; not ground truth or human adjudication evidence"
+    ]
+  },
+  {
+    "record_role": "adjudicated_reference",
+    "run_id": "synthetic-run",
+    "reference_version": "synthetic-rubric-v1",
+    "provenance": "synthetic_simulation",
+    "interval": {
+      "start_ns": 200,
+      "end_ns": 300,
+      "available_at_ns": 650,
+      "clock_domain": "synthetic-reference-demo-clock"
+    },
+    "status": "supported",
+    "supported_causes": [
+      "queue_pressure"
+    ],
+    "contradicted_causes": [],
+    "cause_set_complete": false,
+    "criteria": [
+      {
+        "criterion_id": "fixture-queue_pressure",
+        "cause": "queue_pressure",
+        "passed": true,
+        "artifact_ids": [
+          "server",
+          "requests"
+        ],
+        "rationale": "Hand-authored contract fixture, not independent incident evidence"
+      }
+    ],
+    "artifacts": [
+      {
+        "artifact_id": "server",
+        "path": "server.json",
+        "sha256": "bba99d04ee3bbcde2944047c0cb8b5c0b771af60349f7e253f264b65603b28d9",
+        "channel": "server_diagnostics",
+        "acquisition": {
+          "start_ns": 0,
+          "end_ns": 500,
+          "available_at_ns": 650,
+          "clock_domain": "synthetic-reference-demo-clock"
+        }
+      },
+      {
+        "artifact_id": "requests",
+        "path": "requests.json",
+        "sha256": "bdb7795d884929ff7aeaab3418e92cba72992e587703248f0fa40c760d8005c5",
+        "channel": "request_diagnostics",
+        "acquisition": {
+          "start_ns": 0,
+          "end_ns": 500,
+          "available_at_ns": 650,
+          "clock_domain": "synthetic-reference-demo-clock"
+        }
+      }
+    ],
+    "alternatives": [
+      "Fixture alternative"
+    ],
+    "matched_reference_run_id": null,
+    "reference_run_mismatch": null,
+    "assessor_ids": [
+      "synthetic-author"
+    ],
+    "blinded_to_predictions_and_policy": false,
+    "adjudicated_at_ns": 700,
+    "locked_at_ns": null,
+    "limitations": [
+      "Synthetic unblinded single-author fixture; not ground truth or human adjudication evidence"
+    ]
+  },
+  {
+    "record_role": "adjudicated_reference",
+    "run_id": "synthetic-run",
+    "reference_version": "synthetic-rubric-v1",
+    "provenance": "synthetic_simulation",
+    "interval": {
+      "start_ns": 300,
+      "end_ns": 400,
+      "available_at_ns": 650,
+      "clock_domain": "synthetic-reference-demo-clock"
+    },
+    "status": "unresolved",
+    "supported_causes": [],
+    "contradicted_causes": [],
+    "cause_set_complete": false,
+    "criteria": [],
+    "artifacts": [],
+    "alternatives": [
+      "Fixture alternative"
+    ],
+    "matched_reference_run_id": null,
+    "reference_run_mismatch": null,
+    "assessor_ids": [
+      "synthetic-author"
+    ],
+    "blinded_to_predictions_and_policy": false,
+    "adjudicated_at_ns": 700,
+    "locked_at_ns": null,
+    "limitations": [
+      "Synthetic unblinded single-author fixture; not ground truth or human adjudication evidence"
+    ]
+  },
+  {
+    "record_role": "adjudicated_reference",
+    "run_id": "synthetic-run",
+    "reference_version": "synthetic-rubric-v1",
+    "provenance": "synthetic_simulation",
+    "interval": {
+      "start_ns": 400,
+      "end_ns": 500,
+      "available_at_ns": 650,
+      "clock_domain": "synthetic-reference-demo-clock"
+    },
+    "status": "healthy",
+    "supported_causes": [],
+    "contradicted_causes": [],
+    "cause_set_complete": true,
+    "criteria": [
+      {
+        "criterion_id": "fixture-healthy",
+        "cause": null,
+        "passed": true,
+        "artifact_ids": [
+          "server",
+          "requests"
+        ],
+        "rationale": "Hand-authored contract fixture, not independent incident evidence"
+      }
+    ],
+    "artifacts": [
+      {
+        "artifact_id": "server",
+        "path": "server.json",
+        "sha256": "bba99d04ee3bbcde2944047c0cb8b5c0b771af60349f7e253f264b65603b28d9",
+        "channel": "server_diagnostics",
+        "acquisition": {
+          "start_ns": 0,
+          "end_ns": 500,
+          "available_at_ns": 650,
+          "clock_domain": "synthetic-reference-demo-clock"
+        }
+      },
+      {
+        "artifact_id": "requests",
+        "path": "requests.json",
+        "sha256": "bdb7795d884929ff7aeaab3418e92cba72992e587703248f0fa40c760d8005c5",
+        "channel": "request_diagnostics",
+        "acquisition": {
+          "start_ns": 0,
+          "end_ns": 500,
+          "available_at_ns": 650,
+          "clock_domain": "synthetic-reference-demo-clock"
+        }
+      }
+    ],
+    "alternatives": [
+      "Fixture alternative"
+    ],
+    "matched_reference_run_id": null,
+    "reference_run_mismatch": null,
+    "assessor_ids": [
+      "synthetic-author"
+    ],
+    "blinded_to_predictions_and_policy": false,
+    "adjudicated_at_ns": 700,
+    "locked_at_ns": null,
+    "limitations": [
+      "Synthetic unblinded single-author fixture; not ground truth or human adjudication evidence"
+    ]
+  }
+]

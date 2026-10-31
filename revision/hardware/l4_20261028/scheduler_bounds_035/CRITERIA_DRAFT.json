@@ -1,0 +1,41 @@
+{
+  "version": "scheduler_bound_acceptance_draft_v1",
+  "status": "blocked_scientific_criteria_unset",
+  "proposed_measurand": "host_engine_admission_to_first_positive_CPU_schedule_decision_interval",
+  "cohort": "schedule_bracket_wholly_inside_half_open_window",
+  "existing_wait_metric_mapping": "unsupported",
+  "scientific_limits": {
+    "max_hook_bracket_width_ms": null,
+    "max_wait_interval_width_ms": null,
+    "relative_uncertainty_normalizer": null,
+    "max_relative_wait_uncertainty": null,
+    "max_boundary_ambiguous_fraction": null,
+    "min_scheduler_requests_per_window": null,
+    "target_percentile_precision": null,
+    "target_confidence_level": null,
+    "max_evidence_readiness_latency_ms": null,
+    "max_source_probe_gap_ms": null,
+    "max_pair_work_mismatch": null,
+    "max_pair_latency_mismatch": null,
+    "min_independent_repetitions": null,
+    "reference_agreement_requirement": null
+  },
+  "assessor_identity": null,
+  "actual_blinding_statement": null,
+  "adjudication_rationale": null,
+  "requirements": [
+    "justify_and_lock_criteria_before_new_confirmation_collection",
+    "keep_development_data_separate_from_held_out_confirmation",
+    "retain_boundary_and_censor_denominators_not_only_successful_waits",
+    "do_not_use_same_proxy_as_both_classifier_input_and_independent_causal_reference",
+    "require_separate_evidence_for_healthy_recovery_and_alternative_causes",
+    "record_actual_work_clock_scope_and_observer_mismatch_for_separate_trace_evidence",
+    "no_exclusive_GPU_phase_or_GPU_execution_start_claim_from_host_hooks"
+  ],
+  "calibration_enabled": false,
+  "classifier_feature_profile_created": false,
+  "references_created": 0,
+  "numerical_acceptance_established": false,
+  "study_ready": false,
+  "protocol_frozen": false
+}

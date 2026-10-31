@@ -1,0 +1,59 @@
+{
+  "version": "paired_evidence_gap_assessment_v1",
+  "status": "draft_not_frozen_not_fitted",
+  "record_role": "assessment_rubric_not_reference",
+  "cause_scope_proposal": "queue_pressure_only_candidate_prefill_claim_deferred",
+  "candidate_features": [
+    "request_p95_ms",
+    "completed_rps",
+    "queue_depth_mean"
+  ],
+  "context_only": [
+    "prompt_tokens_mean",
+    "output_tokens_mean"
+  ],
+  "unsupported_or_optional": [
+    "request_wait_p95_ms",
+    "prefill_service_fraction",
+    "gpu_util_mean"
+  ],
+  "prospective_limits_required": {
+    "max_queue_receipt_gap_ms": null,
+    "min_latency_completions_per_window": null,
+    "matched_work_token_tolerance": null,
+    "matched_latency_ratio_tolerance": null,
+    "min_independent_repetitions": null
+  },
+  "criteria": [
+    {
+      "id": "queue_support",
+      "required_evidence": "Same-run independently clock-bound server admission/wait evidence, sustained realized backlog and symptom/reversal evidence; intended rate is not a cause label."
+    },
+    {
+      "id": "negative_or_healthy",
+      "required_evidence": "Explicit supported-cause scope, adequate observation coverage and alternatives; zero queue samples or HTTP success alone are insufficient."
+    },
+    {
+      "id": "matched_trace",
+      "required_evidence": "Exact offered bytes plus actual work and prospective mismatch limits; separate executions remain distinct and trace loss/correlation limits must be recorded."
+    },
+    {
+      "id": "phase_claim",
+      "required_evidence": "Defer prefill diagnosis until exclusive GPU phase attribution and a validated clock/cohort mapping exist."
+    },
+    {
+      "id": "adjudication",
+      "required_evidence": "Assessor identity, actual blinding statement, criterion-linked artifacts, rationale and unresolved outcomes; lock through the existing reference store before scoring."
+    }
+  ],
+  "threshold_fitting_enabled": false,
+  "reference_export_enabled": false,
+  "next_collection_requirements": [
+    "clock-bound server admission/first-service/completion event collector",
+    "enough actual completions for proposed latency windows",
+    "bounded offered-rate ramp and removal/recovery",
+    "temporary lull then recurrence and an ambiguous/unresolved control",
+    "pinned disjoint calibration/development/confirmation corpora and seeds",
+    "explicit prefix-cache policy and paired-run mismatch/repetition design"
+  ]
+}

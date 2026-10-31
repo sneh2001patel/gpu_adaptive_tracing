@@ -1,0 +1,22 @@
+{
+ "case": "7592",
+ "side": "bug",
+ "config": {
+  "title": "Chunked-prefill scheduler regression (preemption thrash)",
+  "reference": "kv_pressure",
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "server_args": "--max-model-len 10000 --gpu-memory-utilization 0.9 --enforce-eager --seed 0 --enable-chunked-prefill --max-num-seqs 256 --max-num-batched-tokens 256 --disable-log-requests",
+  "healthy_rate": 0.3,
+  "incident_rate": 1.45,
+  "env": "v055",
+  "version": "0.5.5"
+ },
+ "installed": {
+  "vllm": "0.5.5",
+  "torch": "2.4.0",
+  "transformers": "4.44.2",
+  "xgrammar": null,
+  "outlines": "0.0.46"
+ },
+ "served_from": "/dev/shm/hf-cache/hub/models--Qwen--Qwen2.5-7B-Instruct/snapshots/a09a35458c702b33eeacc393d103063234e8bc28"
+}

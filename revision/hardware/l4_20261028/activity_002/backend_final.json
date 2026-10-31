@@ -1,0 +1,150 @@
+{
+  "backend_version": "nsys_serving_pilot_v1",
+  "capture_range_end_mode": "repeat_sync",
+  "nsys_contract": "2026.3.1",
+  "vllm_contract": "0.10.2",
+  "ordinal": 1,
+  "events": [
+    {
+      "event": "command_started",
+      "capture_id": "feasibility-capture-1",
+      "timestamp_ns": 168726073472585,
+      "clock_domain": "process-monotonic-cb283780-0ed8-46d8-84b7-bb524efc6edc",
+      "stage": "start",
+      "argv": [
+        "/workspace/envs/vllm/bin/python",
+        "/workspace/gpu_adaptive_tracing_step022/revision/scripts/profile_http_command.py",
+        "http://127.0.0.1:8012/start_profile"
+      ],
+      "pid": 3439
+    },
+    {
+      "event": "command_exited",
+      "capture_id": "feasibility-capture-1",
+      "timestamp_ns": 168726404296942,
+      "clock_domain": "process-monotonic-cb283780-0ed8-46d8-84b7-bb524efc6edc",
+      "stage": "start",
+      "returncode": 0
+    },
+    {
+      "event": "capture_started_ack_received",
+      "capture_id": "feasibility-capture-1",
+      "timestamp_ns": 168726406020674,
+      "clock_domain": "process-monotonic-cb283780-0ed8-46d8-84b7-bb524efc6edc",
+      "worker_ack": [
+        {
+          "capture_id": "feasibility-capture-1",
+          "token": "3da92b213a784461aa733c71393e6550",
+          "ordinal": 1,
+          "action": "start",
+          "source": "cuda_worker_api",
+          "pid": 3215,
+          "device_uuid": "GPU-baa93118-dfa3-1258-be9e-b6051b77c1cb",
+          "requested_at_ns": 168726159925076,
+          "returned_at_ns": 168726376206895,
+          "cuda_return_code": 0,
+          "clock_domain": "process-monotonic-cb283780-0ed8-46d8-84b7-bb524efc6edc"
+        }
+      ],
+      "nsys_callback": {
+        "source": "nsys_callback",
+        "action": "start",
+        "timestamp_ns": 168726381796032,
+        "clock_domain": "process-monotonic-cb283780-0ed8-46d8-84b7-bb524efc6edc",
+        "session_name": "profile-2963",
+        "callback_name": "after-collection-start",
+        "capture_id": "feasibility-capture-1",
+        "token": "3da92b213a784461aa733c71393e6550",
+        "ordinal": 1
+      }
+    },
+    {
+      "event": "command_started",
+      "capture_id": "feasibility-capture-1",
+      "timestamp_ns": 168727409979342,
+      "clock_domain": "process-monotonic-cb283780-0ed8-46d8-84b7-bb524efc6edc",
+      "stage": "stop",
+      "argv": [
+        "/workspace/envs/vllm/bin/python",
+        "/workspace/gpu_adaptive_tracing_step022/revision/scripts/profile_http_command.py",
+        "http://127.0.0.1:8012/stop_profile"
+      ],
+      "pid": 3471
+    },
+    {
+      "event": "command_exited",
+      "capture_id": "feasibility-capture-1",
+      "timestamp_ns": 168728308643352,
+      "clock_domain": "process-monotonic-cb283780-0ed8-46d8-84b7-bb524efc6edc",
+      "stage": "stop",
+      "returncode": 0
+    },
+    {
+      "event": "capture_stopped_ack_received",
+      "capture_id": "feasibility-capture-1",
+      "timestamp_ns": 168728309327846,
+      "clock_domain": "process-monotonic-cb283780-0ed8-46d8-84b7-bb524efc6edc",
+      "worker_ack": [
+        {
+          "capture_id": "feasibility-capture-1",
+          "token": "3da92b213a784461aa733c71393e6550",
+          "ordinal": 1,
+          "action": "stop",
+          "source": "cuda_worker_api",
+          "pid": 3215,
+          "device_uuid": "GPU-baa93118-dfa3-1258-be9e-b6051b77c1cb",
+          "requested_at_ns": 168727538933938,
+          "returned_at_ns": 168728272543346,
+          "cuda_return_code": 0,
+          "clock_domain": "process-monotonic-cb283780-0ed8-46d8-84b7-bb524efc6edc"
+        }
+      ]
+    },
+    {
+      "event": "report_detected",
+      "capture_id": "feasibility-capture-1",
+      "timestamp_ns": 168728320588154,
+      "clock_domain": "process-monotonic-cb283780-0ed8-46d8-84b7-bb524efc6edc",
+      "callback": null,
+      "readiness_basis": "sync_cudaProfilerStop_return_pending_export_validation"
+    },
+    {
+      "event": "command_started",
+      "capture_id": "feasibility-capture-1",
+      "timestamp_ns": 168728322627539,
+      "clock_domain": "process-monotonic-cb283780-0ed8-46d8-84b7-bb524efc6edc",
+      "stage": "export",
+      "argv": [
+        "nsys",
+        "export",
+        "--type=sqlite",
+        "--output=/workspace/gpu_adaptive_tracing_step022/revision/hardware/l4_20261028/activity_002/session-1/attempts/3da92b213a784461aa733c71393e6550/capture.sqlite",
+        "/workspace/gpu_adaptive_tracing_step022/revision/hardware/l4_20261028/activity_002/session-1/capture.1.nsys-rep"
+      ],
+      "pid": 3479
+    },
+    {
+      "event": "command_exited",
+      "capture_id": "feasibility-capture-1",
+      "timestamp_ns": 168728436215136,
+      "clock_domain": "process-monotonic-cb283780-0ed8-46d8-84b7-bb524efc6edc",
+      "stage": "export",
+      "returncode": 0
+    },
+    {
+      "event": "report_ready",
+      "capture_id": "feasibility-capture-1",
+      "timestamp_ns": 168728436281448,
+      "clock_domain": "process-monotonic-cb283780-0ed8-46d8-84b7-bb524efc6edc",
+      "readiness_basis": "sync_cudaProfilerStop_ack_and_successful_export"
+    }
+  ],
+  "attempts": {
+    "feasibility-capture-1": {
+      "ordinal": 1,
+      "state": "ready",
+      "error": null,
+      "cleanup_complete": true
+    }
+  }
+}
