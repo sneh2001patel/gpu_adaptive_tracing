@@ -1,0 +1,153 @@
+{
+ "vllm": "0.5.1",
+ "torch": "2.3.0+cu121",
+ "gpu": "NVIDIA L4",
+ "capability": 89,
+ "cutlass_scaled_mm_supports_fp8": true,
+ "rows": [
+  {
+   "layer": "qkv",
+   "M": 1,
+   "N": 6144,
+   "K": 4096,
+   "cutlass_us": 146.28,
+   "torch_scaled_mm_us": 41.8,
+   "ratio": 3.5
+  },
+  {
+   "layer": "qkv",
+   "M": 16,
+   "N": 6144,
+   "K": 4096,
+   "cutlass_us": 147.46,
+   "torch_scaled_mm_us": 39.3,
+   "ratio": 3.75
+  },
+  {
+   "layer": "qkv",
+   "M": 64,
+   "N": 6144,
+   "K": 4096,
+   "cutlass_us": 165.06,
+   "torch_scaled_mm_us": 31.86,
+   "ratio": 5.18
+  },
+  {
+   "layer": "qkv",
+   "M": 256,
+   "N": 6144,
+   "K": 4096,
+   "cutlass_us": 356.45,
+   "torch_scaled_mm_us": 95.23,
+   "ratio": 3.74
+  },
+  {
+   "layer": "o",
+   "M": 1,
+   "N": 4096,
+   "K": 4096,
+   "cutlass_us": 176.12,
+   "torch_scaled_mm_us": 46.0,
+   "ratio": 3.83
+  },
+  {
+   "layer": "o",
+   "M": 16,
+   "N": 4096,
+   "K": 4096,
+   "cutlass_us": 146.53,
+   "torch_scaled_mm_us": 40.12,
+   "ratio": 3.65
+  },
+  {
+   "layer": "o",
+   "M": 64,
+   "N": 4096,
+   "K": 4096,
+   "cutlass_us": 139.4,
+   "torch_scaled_mm_us": 30.68,
+   "ratio": 4.54
+  },
+  {
+   "layer": "o",
+   "M": 256,
+   "N": 4096,
+   "K": 4096,
+   "cutlass_us": 307.04,
+   "torch_scaled_mm_us": 73.86,
+   "ratio": 4.16
+  },
+  {
+   "layer": "gate_up",
+   "M": 1,
+   "N": 28672,
+   "K": 4096,
+   "cutlass_us": 923.36,
+   "torch_scaled_mm_us": 515.28,
+   "ratio": 1.79
+  },
+  {
+   "layer": "gate_up",
+   "M": 16,
+   "N": 28672,
+   "K": 4096,
+   "cutlass_us": 907.34,
+   "torch_scaled_mm_us": 525.17,
+   "ratio": 1.73
+  },
+  {
+   "layer": "gate_up",
+   "M": 64,
+   "N": 28672,
+   "K": 4096,
+   "cutlass_us": 992.31,
+   "torch_scaled_mm_us": 534.71,
+   "ratio": 1.86
+  },
+  {
+   "layer": "gate_up",
+   "M": 256,
+   "N": 28672,
+   "K": 4096,
+   "cutlass_us": 1866.25,
+   "torch_scaled_mm_us": 974.94,
+   "ratio": 1.91
+  },
+  {
+   "layer": "down",
+   "M": 1,
+   "N": 4096,
+   "K": 14336,
+   "cutlass_us": 639.49,
+   "torch_scaled_mm_us": 264.16,
+   "ratio": 2.42
+  },
+  {
+   "layer": "down",
+   "M": 16,
+   "N": 4096,
+   "K": 14336,
+   "cutlass_us": 575.96,
+   "torch_scaled_mm_us": 267.05,
+   "ratio": 2.16
+  },
+  {
+   "layer": "down",
+   "M": 64,
+   "N": 4096,
+   "K": 14336,
+   "cutlass_us": 602.7,
+   "torch_scaled_mm_us": 266.58,
+   "ratio": 2.26
+  },
+  {
+   "layer": "down",
+   "M": 256,
+   "N": 4096,
+   "K": 14336,
+   "cutlass_us": 1181.06,
+   "torch_scaled_mm_us": 418.43,
+   "ratio": 2.82
+  }
+ ]
+}

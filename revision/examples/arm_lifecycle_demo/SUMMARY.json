@@ -1,0 +1,60 @@
+{
+  "validation": "cpu_fixture_only",
+  "gpu_used": false,
+  "completed_arms": 8,
+  "same_workload_contract": true,
+  "distinct_target_instances": 8,
+  "distinct_sampler_instances": 7,
+  "reset_quiescence_passed": 8,
+  "retained_failures": [
+    {
+      "fault": "missing_metric",
+      "error": "ValueError",
+      "result": "retained",
+      "cleanup": {
+        "started_at_ns": 181509067168534,
+        "finished_at_ns": 181509100640173,
+        "escalated": false,
+        "returncode": 0,
+        "group_alive": false
+      }
+    },
+    {
+      "fault": "stuck_busy",
+      "error": "TimeoutError",
+      "result": "retained",
+      "cleanup": {
+        "started_at_ns": 181509555734495,
+        "finished_at_ns": 181509617964951,
+        "escalated": false,
+        "returncode": 0,
+        "group_alive": false
+      }
+    },
+    {
+      "fault": "stale_reset",
+      "error": "ValueError",
+      "result": "retained",
+      "cleanup": {
+        "started_at_ns": 181509919826214,
+        "finished_at_ns": 181509975706591,
+        "escalated": false,
+        "returncode": 0,
+        "group_alive": false
+      }
+    },
+    {
+      "fault": "startup_fail",
+      "error": "RuntimeError",
+      "result": "retained",
+      "cleanup": {
+        "started_at_ns": 181510322354751,
+        "finished_at_ns": 181510322374748,
+        "escalated": false,
+        "returncode": 1,
+        "group_alive": false
+      }
+    }
+  ],
+  "note": "No GPU, profiler perturbation, diagnosis accuracy, or experimental hardware baseline validated."
+}

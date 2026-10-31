@@ -1,0 +1,81 @@
+{
+ "config": {
+  "env": "v033",
+  "version": "0.3.3",
+  "model": "/dev/shm/hf-cache/hub/models--TinyLlama--TinyLlama-1.1B-Chat-v1.0/snapshots/fe8a4ea1ffedaf415f4da2f062534de366a451e6",
+  "schedule": "calibration/101/3087/incident.jsonl",
+  "out": "calibration/101/3087/incident",
+  "arm": "NT",
+  "fixed_bursts": 3,
+  "thresholds": "calibration/thresholds_provisional.json",
+  "baseline": "calibration/101/3087/baseline.json",
+  "baseline_out": null,
+  "policy": "{}",
+  "trigger_latency_ratio": 1.5,
+  "trigger_windows": 2,
+  "burst_seconds": 2.0,
+  "window_seconds": 1.0,
+  "latency_window_seconds": 5.0,
+  "min_latency_samples": 1,
+  "drain_seconds": 60.0,
+  "unprofiled": false,
+  "graph_trace": "node",
+  "server_args": "--max-model-len 2048 --gpu-memory-utilization 0.9 --disable-log-requests --served-model-name TinyLlama/TinyLlama-1.1B-Chat-v1.0",
+  "port": 8123,
+  "calibration_bursts": "75,105,135,165",
+  "scrape_timeout": 5.0,
+  "withhold": "",
+  "case_patch": "3087_json_processor"
+ },
+ "launch": [
+  "nsys",
+  "launch",
+  "--session-new=ep_1793305825",
+  "--trace=cuda,nvtx,osrt",
+  "--cuda-graph-trace=node",
+  "v033/bin/python",
+  "/workspace/cases/case_server.py",
+  "3087_json_processor",
+  "--model",
+  "/dev/shm/hf-cache/hub/models--TinyLlama--TinyLlama-1.1B-Chat-v1.0/snapshots/fe8a4ea1ffedaf415f4da2f062534de366a451e6",
+  "--port",
+  "8123",
+  "--max-model-len",
+  "2048",
+  "--gpu-memory-utilization",
+  "0.9",
+  "--disable-log-requests",
+  "--served-model-name",
+  "TinyLlama/TinyLlama-1.1B-Chat-v1.0"
+ ],
+ "thresholds": {
+  "latency_ratio": 1.5,
+  "waiting_requests": 4,
+  "kv_usage": 0.9,
+  "preemptions_per_s": 0.5,
+  "gpu_util": 0.6,
+  "busy_fraction": 0.5,
+  "kernel_time_ratio": 1.3,
+  "version": "commissioning_provisional_not_calibrated_v2"
+ },
+ "thresholds_digest": "702216dafb2f306e4bef6e4392dc2f6f685cd253850c7277c7fd96912af22c37",
+ "thresholds_frozen": true,
+ "p95_base_s": 0.37549328804016113,
+ "requests": {
+  "scheduled": 191,
+  "completed": 191,
+  "ok": 191,
+  "censored_at_horizon": 0
+ },
+ "episode": {
+  "started_window": "w00041",
+  "stopped_window": null,
+  "decision": {
+   "stop": true,
+   "reason": "horizon_ended",
+   "policy": "NT"
+  },
+  "bursts": 0,
+  "final_state": "done"
+ }
+}

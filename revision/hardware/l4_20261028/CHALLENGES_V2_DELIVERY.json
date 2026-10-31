@@ -1,0 +1,994 @@
+{
+  "scope": "descriptive_development_phase_audit_not_diagnosis_or_capacity_estimate",
+  "jobs": [
+    {
+      "job_id": "lull_then_recurrence-b0-off",
+      "passed": true,
+      "phases": [
+        {
+          "name": "baseline",
+          "start_s": 0.0,
+          "end_s": 10.0,
+          "offered_rate_rps": 0.5,
+          "offered": 5,
+          "states": {
+            "completed": 5
+          },
+          "queue_receipts": 20,
+          "positive_queue_receipts": 0,
+          "max_sampled_queue": 0.0
+        },
+        {
+          "name": "pressure",
+          "start_s": 10.0,
+          "end_s": 25.0,
+          "offered_rate_rps": 3,
+          "offered": 45,
+          "states": {
+            "completed": 45
+          },
+          "queue_receipts": 30,
+          "positive_queue_receipts": 19,
+          "max_sampled_queue": 4.0
+        },
+        {
+          "name": "lull",
+          "start_s": 25.0,
+          "end_s": 30.0,
+          "offered_rate_rps": 0,
+          "offered": 0,
+          "states": {},
+          "queue_receipts": 10,
+          "positive_queue_receipts": 3,
+          "max_sampled_queue": 3.0
+        },
+        {
+          "name": "recurrence",
+          "start_s": 30.0,
+          "end_s": 50.0,
+          "offered_rate_rps": 3,
+          "offered": 60,
+          "states": {
+            "completed": 60
+          },
+          "queue_receipts": 40,
+          "positive_queue_receipts": 29,
+          "max_sampled_queue": 7.0
+        },
+        {
+          "name": "removal",
+          "start_s": 50.0,
+          "end_s": 60.0,
+          "offered_rate_rps": 0,
+          "offered": 0,
+          "states": {},
+          "queue_receipts": 20,
+          "positive_queue_receipts": 5,
+          "max_sampled_queue": 7.0
+        }
+      ],
+      "pending_at_horizon": [],
+      "post_horizon_completions": 0,
+      "peak_inflight": 23
+    },
+    {
+      "job_id": "lull_then_recurrence-b0-on",
+      "passed": true,
+      "phases": [
+        {
+          "name": "baseline",
+          "start_s": 0.0,
+          "end_s": 10.0,
+          "offered_rate_rps": 0.5,
+          "offered": 5,
+          "states": {
+            "completed": 5
+          },
+          "queue_receipts": 20,
+          "positive_queue_receipts": 0,
+          "max_sampled_queue": 0.0
+        },
+        {
+          "name": "pressure",
+          "start_s": 10.0,
+          "end_s": 25.0,
+          "offered_rate_rps": 3,
+          "offered": 45,
+          "states": {
+            "completed": 45
+          },
+          "queue_receipts": 30,
+          "positive_queue_receipts": 19,
+          "max_sampled_queue": 4.0
+        },
+        {
+          "name": "lull",
+          "start_s": 25.0,
+          "end_s": 30.0,
+          "offered_rate_rps": 0,
+          "offered": 0,
+          "states": {},
+          "queue_receipts": 10,
+          "positive_queue_receipts": 3,
+          "max_sampled_queue": 3.0
+        },
+        {
+          "name": "recurrence",
+          "start_s": 30.0,
+          "end_s": 50.0,
+          "offered_rate_rps": 3,
+          "offered": 60,
+          "states": {
+            "completed": 60
+          },
+          "queue_receipts": 40,
+          "positive_queue_receipts": 29,
+          "max_sampled_queue": 7.0
+        },
+        {
+          "name": "removal",
+          "start_s": 50.0,
+          "end_s": 60.0,
+          "offered_rate_rps": 0,
+          "offered": 0,
+          "states": {},
+          "queue_receipts": 20,
+          "positive_queue_receipts": 5,
+          "max_sampled_queue": 6.0
+        }
+      ],
+      "pending_at_horizon": [],
+      "post_horizon_completions": 0,
+      "peak_inflight": 23
+    },
+    {
+      "job_id": "lull_then_recurrence-b1-off",
+      "passed": true,
+      "phases": [
+        {
+          "name": "baseline",
+          "start_s": 0.0,
+          "end_s": 10.0,
+          "offered_rate_rps": 0.5,
+          "offered": 5,
+          "states": {
+            "completed": 5
+          },
+          "queue_receipts": 20,
+          "positive_queue_receipts": 0,
+          "max_sampled_queue": 0.0
+        },
+        {
+          "name": "pressure",
+          "start_s": 10.0,
+          "end_s": 25.0,
+          "offered_rate_rps": 3,
+          "offered": 45,
+          "states": {
+            "completed": 45
+          },
+          "queue_receipts": 30,
+          "positive_queue_receipts": 19,
+          "max_sampled_queue": 4.0
+        },
+        {
+          "name": "lull",
+          "start_s": 25.0,
+          "end_s": 30.0,
+          "offered_rate_rps": 0,
+          "offered": 0,
+          "states": {},
+          "queue_receipts": 10,
+          "positive_queue_receipts": 3,
+          "max_sampled_queue": 3.0
+        },
+        {
+          "name": "recurrence",
+          "start_s": 30.0,
+          "end_s": 50.0,
+          "offered_rate_rps": 3,
+          "offered": 60,
+          "states": {
+            "completed": 60
+          },
+          "queue_receipts": 40,
+          "positive_queue_receipts": 29,
+          "max_sampled_queue": 7.0
+        },
+        {
+          "name": "removal",
+          "start_s": 50.0,
+          "end_s": 60.0,
+          "offered_rate_rps": 0,
+          "offered": 0,
+          "states": {},
+          "queue_receipts": 20,
+          "positive_queue_receipts": 5,
+          "max_sampled_queue": 6.0
+        }
+      ],
+      "pending_at_horizon": [],
+      "post_horizon_completions": 0,
+      "peak_inflight": 23
+    },
+    {
+      "job_id": "lull_then_recurrence-b1-on",
+      "passed": true,
+      "phases": [
+        {
+          "name": "baseline",
+          "start_s": 0.0,
+          "end_s": 10.0,
+          "offered_rate_rps": 0.5,
+          "offered": 5,
+          "states": {
+            "completed": 5
+          },
+          "queue_receipts": 20,
+          "positive_queue_receipts": 0,
+          "max_sampled_queue": 0.0
+        },
+        {
+          "name": "pressure",
+          "start_s": 10.0,
+          "end_s": 25.0,
+          "offered_rate_rps": 3,
+          "offered": 45,
+          "states": {
+            "completed": 45
+          },
+          "queue_receipts": 30,
+          "positive_queue_receipts": 19,
+          "max_sampled_queue": 4.0
+        },
+        {
+          "name": "lull",
+          "start_s": 25.0,
+          "end_s": 30.0,
+          "offered_rate_rps": 0,
+          "offered": 0,
+          "states": {},
+          "queue_receipts": 10,
+          "positive_queue_receipts": 3,
+          "max_sampled_queue": 4.0
+        },
+        {
+          "name": "recurrence",
+          "start_s": 30.0,
+          "end_s": 50.0,
+          "offered_rate_rps": 3,
+          "offered": 60,
+          "states": {
+            "completed": 60
+          },
+          "queue_receipts": 40,
+          "positive_queue_receipts": 29,
+          "max_sampled_queue": 6.0
+        },
+        {
+          "name": "removal",
+          "start_s": 50.0,
+          "end_s": 60.0,
+          "offered_rate_rps": 0,
+          "offered": 0,
+          "states": {},
+          "queue_receipts": 20,
+          "positive_queue_receipts": 5,
+          "max_sampled_queue": 7.0
+        }
+      ],
+      "pending_at_horizon": [],
+      "post_horizon_completions": 0,
+      "peak_inflight": 23
+    },
+    {
+      "job_id": "pressure_then_removal-b0-off",
+      "passed": true,
+      "phases": [
+        {
+          "name": "baseline",
+          "start_s": 0.0,
+          "end_s": 10.0,
+          "offered_rate_rps": 0.5,
+          "offered": 5,
+          "states": {
+            "completed": 5
+          },
+          "queue_receipts": 20,
+          "positive_queue_receipts": 0,
+          "max_sampled_queue": 0.0
+        },
+        {
+          "name": "pressure",
+          "start_s": 10.0,
+          "end_s": 40.0,
+          "offered_rate_rps": 3,
+          "offered": 90,
+          "states": {
+            "completed": 90
+          },
+          "queue_receipts": 60,
+          "positive_queue_receipts": 49,
+          "max_sampled_queue": 9.0
+        },
+        {
+          "name": "removal",
+          "start_s": 40.0,
+          "end_s": 60.0,
+          "offered_rate_rps": 0,
+          "offered": 0,
+          "states": {},
+          "queue_receipts": 40,
+          "positive_queue_receipts": 7,
+          "max_sampled_queue": 10.0
+        }
+      ],
+      "pending_at_horizon": [],
+      "post_horizon_completions": 0,
+      "peak_inflight": 26
+    },
+    {
+      "job_id": "pressure_then_removal-b0-on",
+      "passed": true,
+      "phases": [
+        {
+          "name": "baseline",
+          "start_s": 0.0,
+          "end_s": 10.0,
+          "offered_rate_rps": 0.5,
+          "offered": 5,
+          "states": {
+            "completed": 5
+          },
+          "queue_receipts": 20,
+          "positive_queue_receipts": 0,
+          "max_sampled_queue": 0.0
+        },
+        {
+          "name": "pressure",
+          "start_s": 10.0,
+          "end_s": 40.0,
+          "offered_rate_rps": 3,
+          "offered": 90,
+          "states": {
+            "completed": 90
+          },
+          "queue_receipts": 60,
+          "positive_queue_receipts": 49,
+          "max_sampled_queue": 9.0
+        },
+        {
+          "name": "removal",
+          "start_s": 40.0,
+          "end_s": 60.0,
+          "offered_rate_rps": 0,
+          "offered": 0,
+          "states": {},
+          "queue_receipts": 40,
+          "positive_queue_receipts": 7,
+          "max_sampled_queue": 10.0
+        }
+      ],
+      "pending_at_horizon": [],
+      "post_horizon_completions": 0,
+      "peak_inflight": 26
+    },
+    {
+      "job_id": "pressure_then_removal-b1-off",
+      "passed": true,
+      "phases": [
+        {
+          "name": "baseline",
+          "start_s": 0.0,
+          "end_s": 10.0,
+          "offered_rate_rps": 0.5,
+          "offered": 5,
+          "states": {
+            "completed": 5
+          },
+          "queue_receipts": 20,
+          "positive_queue_receipts": 0,
+          "max_sampled_queue": 0.0
+        },
+        {
+          "name": "pressure",
+          "start_s": 10.0,
+          "end_s": 40.0,
+          "offered_rate_rps": 3,
+          "offered": 90,
+          "states": {
+            "completed": 90
+          },
+          "queue_receipts": 60,
+          "positive_queue_receipts": 49,
+          "max_sampled_queue": 9.0
+        },
+        {
+          "name": "removal",
+          "start_s": 40.0,
+          "end_s": 60.0,
+          "offered_rate_rps": 0,
+          "offered": 0,
+          "states": {},
+          "queue_receipts": 40,
+          "positive_queue_receipts": 8,
+          "max_sampled_queue": 10.0
+        }
+      ],
+      "pending_at_horizon": [],
+      "post_horizon_completions": 0,
+      "peak_inflight": 26
+    },
+    {
+      "job_id": "pressure_then_removal-b1-on",
+      "passed": true,
+      "phases": [
+        {
+          "name": "baseline",
+          "start_s": 0.0,
+          "end_s": 10.0,
+          "offered_rate_rps": 0.5,
+          "offered": 5,
+          "states": {
+            "completed": 5
+          },
+          "queue_receipts": 20,
+          "positive_queue_receipts": 0,
+          "max_sampled_queue": 0.0
+        },
+        {
+          "name": "pressure",
+          "start_s": 10.0,
+          "end_s": 40.0,
+          "offered_rate_rps": 3,
+          "offered": 90,
+          "states": {
+            "completed": 90
+          },
+          "queue_receipts": 60,
+          "positive_queue_receipts": 49,
+          "max_sampled_queue": 9.0
+        },
+        {
+          "name": "removal",
+          "start_s": 40.0,
+          "end_s": 60.0,
+          "offered_rate_rps": 0,
+          "offered": 0,
+          "states": {},
+          "queue_receipts": 40,
+          "positive_queue_receipts": 8,
+          "max_sampled_queue": 10.0
+        }
+      ],
+      "pending_at_horizon": [],
+      "post_horizon_completions": 0,
+      "peak_inflight": 26
+    },
+    {
+      "job_id": "rate_ladder-b0-off",
+      "passed": true,
+      "phases": [
+        {
+          "name": "level-0",
+          "start_s": 0.0,
+          "end_s": 8.0,
+          "offered_rate_rps": 0.5,
+          "offered": 4,
+          "states": {
+            "completed": 4
+          },
+          "queue_receipts": 16,
+          "positive_queue_receipts": 0,
+          "max_sampled_queue": 0.0
+        },
+        {
+          "name": "level-1",
+          "start_s": 8.0,
+          "end_s": 16.0,
+          "offered_rate_rps": 1,
+          "offered": 8,
+          "states": {
+            "completed": 8
+          },
+          "queue_receipts": 16,
+          "positive_queue_receipts": 0,
+          "max_sampled_queue": 0.0
+        },
+        {
+          "name": "level-2",
+          "start_s": 16.0,
+          "end_s": 24.0,
+          "offered_rate_rps": 2,
+          "offered": 16,
+          "states": {
+            "completed": 16
+          },
+          "queue_receipts": 16,
+          "positive_queue_receipts": 0,
+          "max_sampled_queue": 0.0
+        },
+        {
+          "name": "level-3",
+          "start_s": 24.0,
+          "end_s": 32.0,
+          "offered_rate_rps": 3,
+          "offered": 24,
+          "states": {
+            "completed": 24
+          },
+          "queue_receipts": 16,
+          "positive_queue_receipts": 4,
+          "max_sampled_queue": 2.0
+        },
+        {
+          "name": "level-4",
+          "start_s": 32.0,
+          "end_s": 40.0,
+          "offered_rate_rps": 4,
+          "offered": 32,
+          "states": {
+            "completed": 32
+          },
+          "queue_receipts": 16,
+          "positive_queue_receipts": 16,
+          "max_sampled_queue": 10.0
+        },
+        {
+          "name": "removal",
+          "start_s": 40.0,
+          "end_s": 60.0,
+          "offered_rate_rps": 0,
+          "offered": 0,
+          "states": {},
+          "queue_receipts": 40,
+          "positive_queue_receipts": 8,
+          "max_sampled_queue": 11.0
+        }
+      ],
+      "pending_at_horizon": [],
+      "post_horizon_completions": 0,
+      "peak_inflight": 27
+    },
+    {
+      "job_id": "rate_ladder-b0-on",
+      "passed": true,
+      "phases": [
+        {
+          "name": "level-0",
+          "start_s": 0.0,
+          "end_s": 8.0,
+          "offered_rate_rps": 0.5,
+          "offered": 4,
+          "states": {
+            "completed": 4
+          },
+          "queue_receipts": 16,
+          "positive_queue_receipts": 0,
+          "max_sampled_queue": 0.0
+        },
+        {
+          "name": "level-1",
+          "start_s": 8.0,
+          "end_s": 16.0,
+          "offered_rate_rps": 1,
+          "offered": 8,
+          "states": {
+            "completed": 8
+          },
+          "queue_receipts": 16,
+          "positive_queue_receipts": 0,
+          "max_sampled_queue": 0.0
+        },
+        {
+          "name": "level-2",
+          "start_s": 16.0,
+          "end_s": 24.0,
+          "offered_rate_rps": 2,
+          "offered": 16,
+          "states": {
+            "completed": 16
+          },
+          "queue_receipts": 16,
+          "positive_queue_receipts": 0,
+          "max_sampled_queue": 0.0
+        },
+        {
+          "name": "level-3",
+          "start_s": 24.0,
+          "end_s": 32.0,
+          "offered_rate_rps": 3,
+          "offered": 24,
+          "states": {
+            "completed": 24
+          },
+          "queue_receipts": 16,
+          "positive_queue_receipts": 6,
+          "max_sampled_queue": 2.0
+        },
+        {
+          "name": "level-4",
+          "start_s": 32.0,
+          "end_s": 40.0,
+          "offered_rate_rps": 4,
+          "offered": 32,
+          "states": {
+            "completed": 32
+          },
+          "queue_receipts": 16,
+          "positive_queue_receipts": 16,
+          "max_sampled_queue": 10.0
+        },
+        {
+          "name": "removal",
+          "start_s": 40.0,
+          "end_s": 60.0,
+          "offered_rate_rps": 0,
+          "offered": 0,
+          "states": {},
+          "queue_receipts": 40,
+          "positive_queue_receipts": 9,
+          "max_sampled_queue": 12.0
+        }
+      ],
+      "pending_at_horizon": [],
+      "post_horizon_completions": 0,
+      "peak_inflight": 28
+    },
+    {
+      "job_id": "rate_ladder-b1-off",
+      "passed": true,
+      "phases": [
+        {
+          "name": "level-0",
+          "start_s": 0.0,
+          "end_s": 8.0,
+          "offered_rate_rps": 0.5,
+          "offered": 4,
+          "states": {
+            "completed": 4
+          },
+          "queue_receipts": 16,
+          "positive_queue_receipts": 0,
+          "max_sampled_queue": 0.0
+        },
+        {
+          "name": "level-1",
+          "start_s": 8.0,
+          "end_s": 16.0,
+          "offered_rate_rps": 1,
+          "offered": 8,
+          "states": {
+            "completed": 8
+          },
+          "queue_receipts": 16,
+          "positive_queue_receipts": 0,
+          "max_sampled_queue": 0.0
+        },
+        {
+          "name": "level-2",
+          "start_s": 16.0,
+          "end_s": 24.0,
+          "offered_rate_rps": 2,
+          "offered": 16,
+          "states": {
+            "completed": 16
+          },
+          "queue_receipts": 16,
+          "positive_queue_receipts": 0,
+          "max_sampled_queue": 0.0
+        },
+        {
+          "name": "level-3",
+          "start_s": 24.0,
+          "end_s": 32.0,
+          "offered_rate_rps": 3,
+          "offered": 24,
+          "states": {
+            "completed": 24
+          },
+          "queue_receipts": 16,
+          "positive_queue_receipts": 6,
+          "max_sampled_queue": 2.0
+        },
+        {
+          "name": "level-4",
+          "start_s": 32.0,
+          "end_s": 40.0,
+          "offered_rate_rps": 4,
+          "offered": 32,
+          "states": {
+            "completed": 32
+          },
+          "queue_receipts": 16,
+          "positive_queue_receipts": 16,
+          "max_sampled_queue": 12.0
+        },
+        {
+          "name": "removal",
+          "start_s": 40.0,
+          "end_s": 60.0,
+          "offered_rate_rps": 0,
+          "offered": 0,
+          "states": {},
+          "queue_receipts": 40,
+          "positive_queue_receipts": 10,
+          "max_sampled_queue": 11.0
+        }
+      ],
+      "pending_at_horizon": [],
+      "post_horizon_completions": 0,
+      "peak_inflight": 28
+    },
+    {
+      "job_id": "rate_ladder-b1-on",
+      "passed": true,
+      "phases": [
+        {
+          "name": "level-0",
+          "start_s": 0.0,
+          "end_s": 8.0,
+          "offered_rate_rps": 0.5,
+          "offered": 4,
+          "states": {
+            "completed": 4
+          },
+          "queue_receipts": 16,
+          "positive_queue_receipts": 0,
+          "max_sampled_queue": 0.0
+        },
+        {
+          "name": "level-1",
+          "start_s": 8.0,
+          "end_s": 16.0,
+          "offered_rate_rps": 1,
+          "offered": 8,
+          "states": {
+            "completed": 8
+          },
+          "queue_receipts": 16,
+          "positive_queue_receipts": 0,
+          "max_sampled_queue": 0.0
+        },
+        {
+          "name": "level-2",
+          "start_s": 16.0,
+          "end_s": 24.0,
+          "offered_rate_rps": 2,
+          "offered": 16,
+          "states": {
+            "completed": 16
+          },
+          "queue_receipts": 16,
+          "positive_queue_receipts": 0,
+          "max_sampled_queue": 0.0
+        },
+        {
+          "name": "level-3",
+          "start_s": 24.0,
+          "end_s": 32.0,
+          "offered_rate_rps": 3,
+          "offered": 24,
+          "states": {
+            "completed": 24
+          },
+          "queue_receipts": 16,
+          "positive_queue_receipts": 6,
+          "max_sampled_queue": 2.0
+        },
+        {
+          "name": "level-4",
+          "start_s": 32.0,
+          "end_s": 40.0,
+          "offered_rate_rps": 4,
+          "offered": 32,
+          "states": {
+            "completed": 32
+          },
+          "queue_receipts": 16,
+          "positive_queue_receipts": 16,
+          "max_sampled_queue": 11.0
+        },
+        {
+          "name": "removal",
+          "start_s": 40.0,
+          "end_s": 60.0,
+          "offered_rate_rps": 0,
+          "offered": 0,
+          "states": {},
+          "queue_receipts": 40,
+          "positive_queue_receipts": 10,
+          "max_sampled_queue": 11.0
+        }
+      ],
+      "pending_at_horizon": [],
+      "post_horizon_completions": 0,
+      "peak_inflight": 28
+    },
+    {
+      "job_id": "unresolved_source_gap_control-b0-complete",
+      "passed": true,
+      "phases": [
+        {
+          "name": "baseline",
+          "start_s": 0.0,
+          "end_s": 10.0,
+          "offered_rate_rps": 0.5,
+          "offered": 5,
+          "states": {
+            "completed": 5
+          },
+          "queue_receipts": 20,
+          "positive_queue_receipts": 0,
+          "max_sampled_queue": 0.0
+        },
+        {
+          "name": "pressure",
+          "start_s": 10.0,
+          "end_s": 40.0,
+          "offered_rate_rps": 3,
+          "offered": 90,
+          "states": {
+            "completed": 90
+          },
+          "queue_receipts": 60,
+          "positive_queue_receipts": 49,
+          "max_sampled_queue": 9.0
+        },
+        {
+          "name": "removal",
+          "start_s": 40.0,
+          "end_s": 60.0,
+          "offered_rate_rps": 0,
+          "offered": 0,
+          "states": {},
+          "queue_receipts": 40,
+          "positive_queue_receipts": 8,
+          "max_sampled_queue": 10.0
+        }
+      ],
+      "pending_at_horizon": [],
+      "post_horizon_completions": 0,
+      "peak_inflight": 26
+    },
+    {
+      "job_id": "unresolved_source_gap_control-b0-withheld",
+      "passed": true,
+      "phases": [
+        {
+          "name": "baseline",
+          "start_s": 0.0,
+          "end_s": 10.0,
+          "offered_rate_rps": 0.5,
+          "offered": 5,
+          "states": {
+            "completed": 5
+          },
+          "queue_receipts": 20,
+          "positive_queue_receipts": 0,
+          "max_sampled_queue": 0.0
+        },
+        {
+          "name": "pressure",
+          "start_s": 10.0,
+          "end_s": 40.0,
+          "offered_rate_rps": 3,
+          "offered": 90,
+          "states": {
+            "completed": 90
+          },
+          "queue_receipts": 60,
+          "positive_queue_receipts": 49,
+          "max_sampled_queue": 9.0
+        },
+        {
+          "name": "removal",
+          "start_s": 40.0,
+          "end_s": 60.0,
+          "offered_rate_rps": 0,
+          "offered": 0,
+          "states": {},
+          "queue_receipts": 40,
+          "positive_queue_receipts": 8,
+          "max_sampled_queue": 10.0
+        }
+      ],
+      "pending_at_horizon": [],
+      "post_horizon_completions": 0,
+      "peak_inflight": 26
+    },
+    {
+      "job_id": "unresolved_source_gap_control-b1-complete",
+      "passed": true,
+      "phases": [
+        {
+          "name": "baseline",
+          "start_s": 0.0,
+          "end_s": 10.0,
+          "offered_rate_rps": 0.5,
+          "offered": 5,
+          "states": {
+            "completed": 5
+          },
+          "queue_receipts": 20,
+          "positive_queue_receipts": 0,
+          "max_sampled_queue": 0.0
+        },
+        {
+          "name": "pressure",
+          "start_s": 10.0,
+          "end_s": 40.0,
+          "offered_rate_rps": 3,
+          "offered": 90,
+          "states": {
+            "completed": 90
+          },
+          "queue_receipts": 60,
+          "positive_queue_receipts": 49,
+          "max_sampled_queue": 9.0
+        },
+        {
+          "name": "removal",
+          "start_s": 40.0,
+          "end_s": 60.0,
+          "offered_rate_rps": 0,
+          "offered": 0,
+          "states": {},
+          "queue_receipts": 40,
+          "positive_queue_receipts": 7,
+          "max_sampled_queue": 10.0
+        }
+      ],
+      "pending_at_horizon": [],
+      "post_horizon_completions": 0,
+      "peak_inflight": 26
+    },
+    {
+      "job_id": "unresolved_source_gap_control-b1-withheld",
+      "passed": true,
+      "phases": [
+        {
+          "name": "baseline",
+          "start_s": 0.0,
+          "end_s": 10.0,
+          "offered_rate_rps": 0.5,
+          "offered": 5,
+          "states": {
+            "completed": 5
+          },
+          "queue_receipts": 20,
+          "positive_queue_receipts": 0,
+          "max_sampled_queue": 0.0
+        },
+        {
+          "name": "pressure",
+          "start_s": 10.0,
+          "end_s": 40.0,
+          "offered_rate_rps": 3,
+          "offered": 90,
+          "states": {
+            "completed": 90
+          },
+          "queue_receipts": 60,
+          "positive_queue_receipts": 49,
+          "max_sampled_queue": 9.0
+        },
+        {
+          "name": "removal",
+          "start_s": 40.0,
+          "end_s": 60.0,
+          "offered_rate_rps": 0,
+          "offered": 0,
+          "states": {},
+          "queue_receipts": 40,
+          "positive_queue_receipts": 7,
+          "max_sampled_queue": 10.0
+        }
+      ],
+      "pending_at_horizon": [],
+      "post_horizon_completions": 0,
+      "peak_inflight": 26
+    }
+  ],
+  "caution": "Queue receipts are point observations. No continuous pressure, healthy recovery, exclusive GPU phases, diagnostic accuracy or sustained capacity is established."
+}

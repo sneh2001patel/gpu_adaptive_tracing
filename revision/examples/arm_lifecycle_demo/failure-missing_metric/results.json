@@ -1,0 +1,148 @@
+{
+  "version": "cpu_arm_lifecycle_v1",
+  "validation": "cpu_fixture_only",
+  "gpu_used": false,
+  "valid_for_paper": false,
+  "status": "failed",
+  "arm": {
+    "name": "cheap_only",
+    "capture_mode": "disabled",
+    "cheap_sampling": true,
+    "controller_mode": "monitor_only"
+  },
+  "comparison_contract": {
+    "schedule_file_sha256": "e762785e3913108cacdeae4a058538ce4508317a473d9129b7caa5535a2009ea",
+    "schedule_content_sha256": "41b92b3e63690c4b9982cc1f344951593591ccd5f5083795963d405a51a0a338",
+    "duration_ns": 400000000,
+    "playback_config": {
+      "max_inflight": 8,
+      "request_timeout_s": 1,
+      "drain_s": 0.05,
+      "max_admission_lateness_s": 0.05,
+      "window_s": 0.05,
+      "grace_s": 0.005,
+      "min_latency_samples": 1,
+      "sample_interval_s": 0.01,
+      "sample_timeout_s": 0.2,
+      "telemetry_queue_size": 64,
+      "tick_s": 0.001
+    },
+    "target_work_s": 0.05,
+    "target_report_s": 0.005,
+    "shared_policy_config": {
+      "stability_windows": 2,
+      "repeated_bursts": 3,
+      "max_bursts": 3,
+      "recovery_windows": 2,
+      "recovery_latency_ratio": 1.1,
+      "recovery_gpu_util": 60.0
+    },
+    "requested_burst_s": 0.01,
+    "warmup_count": 2,
+    "warmup_request": {
+      "model": "fixture",
+      "prompt": "Common warmup fixture",
+      "max_tokens": 1,
+      "stream": false,
+      "temperature": 0
+    }
+  },
+  "comparison_contract_sha256": "12f810b003089fed11af74dafe84d4562ff7e590bd0fb49584ba12974055e474",
+  "policy_config": {
+    "stability_windows": 2,
+    "repeated_bursts": 3,
+    "max_bursts": 3,
+    "recovery_windows": 2,
+    "recovery_latency_ratio": 1.1,
+    "recovery_gpu_util": 60.0
+  },
+  "session_config": {
+    "startup_s": 3,
+    "quiescence_s": 0.1,
+    "quiet_hold_s": 0.01,
+    "quiet_observations": 2,
+    "poll_s": 0.005,
+    "command_timeout_s": 0.5,
+    "cleanup_grace_s": 0.15,
+    "cleanup_timeout_s": 2,
+    "work_s": 0.05,
+    "report_s": 0.005
+  },
+  "errors": [
+    {
+      "phase": "arm_body",
+      "error": "ValueError",
+      "detail": "running must be an integer >= 0"
+    }
+  ],
+  "session": {
+    "validation": "cpu_fixture_only",
+    "nonce": "29c6dc91da9349cdab20f94cd927b06e",
+    "instance": "0ed00402d2fd40b28fd78e89f79b74c4",
+    "generation": 0,
+    "capture_mode": "disabled",
+    "pid": 70954,
+    "endpoint": null,
+    "events": [
+      {
+        "event": "target_started",
+        "at_ns": 181508842223012,
+        "clock_domain": "process-monotonic-7d92c949-cbd3-4cea-8e07-964aa7f15d0f",
+        "pid": 70954,
+        "command": [
+          "/usr/local/bin/python3",
+          "/Users/snehpatel/Documents/University/research/gpu_adaptive_tracing/revision/scripts/fake_serving_target.py",
+          "--ready",
+          "/Users/snehpatel/Documents/University/research/gpu_adaptive_tracing/revision/examples/arm_lifecycle_demo/failure-missing_metric/target/ready.json",
+          "--nonce",
+          "29c6dc91da9349cdab20f94cd927b06e",
+          "--capture-mode",
+          "disabled",
+          "--work-s",
+          "0.05",
+          "--report-s",
+          "0.005",
+          "--fault",
+          "missing_metric"
+        ]
+      },
+      {
+        "event": "owned_term_sent",
+        "at_ns": 181509067215469,
+        "clock_domain": "process-monotonic-7d92c949-cbd3-4cea-8e07-964aa7f15d0f"
+      },
+      {
+        "event": "owned_cleanup_complete",
+        "at_ns": 181509100653500,
+        "clock_domain": "process-monotonic-7d92c949-cbd3-4cea-8e07-964aa7f15d0f",
+        "started_at_ns": 181509067168534,
+        "finished_at_ns": 181509100640173,
+        "escalated": false,
+        "returncode": 0,
+        "group_alive": false
+      }
+    ],
+    "quiescence_checks": [],
+    "cleanup": {
+      "started_at_ns": 181509067168534,
+      "finished_at_ns": 181509100640173,
+      "escalated": false,
+      "returncode": 0,
+      "group_alive": false
+    }
+  },
+  "sampler": null,
+  "controller": null,
+  "capture_backend": null,
+  "monitor_windows": 0,
+  "post_playback_status": null,
+  "post_workload_quiescent": null,
+  "playback": null,
+  "phase_seconds": {
+    "target_startup": 0.228353415,
+    "owned_target_cleanup": 0.033746876
+  },
+  "capture_active_s": null,
+  "persisted_lifecycle_total_s": null,
+  "note": "Fresh CPU target per arm; repeated server-side quiet observations/reset acknowledgements are separate from client cleanup. Kernel report payloads are synthetic. Policy classifier abstains; richer calibrated T2 diagnosis is not integrated."
+}

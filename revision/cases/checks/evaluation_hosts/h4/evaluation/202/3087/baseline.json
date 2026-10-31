@@ -1,0 +1,36 @@
+{
+ "p95_base_s": 19.33353877067566,
+ "p95_base_measure": "median over steady windows of p95 in-flight age",
+ "n_windows": 95,
+ "completed_p95_s": 0.8427131175994873,
+ "n_completed": 90,
+ "baseline_ns_per_token": {
+  "other": 6398776.25,
+  "attention": 141040.75,
+  "norm": 79072.75
+ },
+ "baseline_tokens": 4.0,
+ "baseline_shares": {
+  "kernel<int>": 0.9425482196617643,
+  "paged_attention_v2_kernel<__nv_bfloat16>": 0.014116075887198454,
+  "fused_add_rms_norm_kernel<c10::BFloat16>": 0.011599641767714896,
+  "act_and_mul_kernel<c10::BFloat16>": 0.007447850298458287,
+  "cunn_SoftMaxForward": 0.005486116459335193,
+  "rotary_embedding_kernel<c10::BFloat16>": 0.00501118786575951,
+  "reshape_and_cache_kernel<__nv_bfloat16>": 0.0040695646879448325,
+  "paged_attention_v2_reduce_kernel<__nv_bfloat16>": 0.0031231824038162894,
+  "unrolled_elementwise_kernel": 0.0019266071020445686,
+  "reduce_kernel": 0.001503575429701031,
+  "index_elementwise_kernel": 0.001415343109469379,
+  "indexSelectSmallIndex<c10::BFloat16>": 0.0005874474642820573,
+  "elementwise_kernel": 0.0004508686672111437,
+  "vectorized_elementwise_kernel": 0.000367433223978387,
+  "rms_norm_kernel<c10::BFloat16>": 0.00034688597132170087
+ },
+ "baseline_busy_fraction": 0.012614894613973214,
+ "env": "v033",
+ "version": "0.3.3",
+ "model": "/workspace/hf-cache/hub/models--TinyLlama--TinyLlama-1.1B-Chat-v1.0/snapshots/fe8a4ea1ffedaf415f4da2f062534de366a451e6",
+ "schedule": "evaluation/202/3087/healthy.jsonl",
+ "server_args": "--max-model-len 2048 --gpu-memory-utilization 0.9 --disable-log-requests --served-model-name TinyLlama/TinyLlama-1.1B-Chat-v1.0"
+}

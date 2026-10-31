@@ -1,0 +1,71 @@
+{
+  "command": {
+    "token": "1b578e988ce344eeab0a444969101cf8",
+    "binding": {
+      "session_nonce": "97591742398c43a0b78d0f6bfd10395c",
+      "generation": 13,
+      "worker_pid": 14193,
+      "device_uuid": "GPU-baa93118-dfa3-1258-be9e-b6051b77c1cb",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "engine": "0",
+      "clock_domain": "process-monotonic-e0fc0afa-076f-474f-8ed0-0c6fbf58465f"
+    },
+    "requested_at_ns": 182950793215090
+  },
+  "received_at_ns": 182950802378924,
+  "raw_sha256": "f88d06d05dee1723fe564cade9766dd67761e63d6ae33511ca271375bbf90360",
+  "data": {
+    "version": "scheduler_hook_events_v1",
+    "binding": {
+      "session_nonce": "97591742398c43a0b78d0f6bfd10395c",
+      "generation": 13,
+      "worker_pid": 14193,
+      "device_uuid": "GPU-baa93118-dfa3-1258-be9e-b6051b77c1cb",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "engine": "0",
+      "clock_domain": "process-monotonic-e0fc0afa-076f-474f-8ed0-0c6fbf58465f"
+    },
+    "token": "1b578e988ce344eeab0a444969101cf8",
+    "requested_at_ns": 182950793215090,
+    "source_probe_ns": 182950798987764,
+    "epoch_ns": 182947561500198,
+    "clock_name": "time.monotonic_ns",
+    "attempted": 3,
+    "dropped": 0,
+    "faults": [],
+    "events": [
+      {
+        "sequence": 1,
+        "kind": "engine_admitted",
+        "request_id": "cmpl-challenge-warmup-0",
+        "hook_enter_ns": 182948498306983,
+        "hook_return_ns": 182948498343039,
+        "observed_at_ns": 182948498374432,
+        "terminal_status": null
+      },
+      {
+        "sequence": 2,
+        "kind": "first_positive_schedule",
+        "request_id": "cmpl-challenge-warmup-0",
+        "hook_enter_ns": 182948498742595,
+        "hook_return_ns": 182948499195733,
+        "observed_at_ns": 182948499222959,
+        "terminal_status": null
+      },
+      {
+        "sequence": 3,
+        "kind": "scheduler_finished",
+        "request_id": "cmpl-challenge-warmup-0",
+        "hook_enter_ns": 182950633357908,
+        "hook_return_ns": 182950633415686,
+        "observed_at_ns": 182950633428705,
+        "terminal_status": "FINISHED_LENGTH_CAPPED"
+      }
+    ],
+    "history_complete": true,
+    "semantics": "engine_admission_to_first_positive_CPU_schedule_decision_not_GPU_execution",
+    "phase_attribution": "not_instrumented",
+    "client_request_ID_mapping": "not_validated",
+    "scope": "single_owned_scheduler_host_process_no_GPU_clock_mapping"
+  }
+}

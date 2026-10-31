@@ -1,0 +1,31 @@
+{
+  "protocol_version": "l4_protocol_draft_v1",
+  "status": "draft_not_frozen",
+  "hardware": "single NVIDIA L4, pinned step-011 stack",
+  "horizon_s": 120,
+  "window_s": 2,
+  "drain_s": 45,
+  "requested_burst_s": 1,
+  "max_bursts": 6,
+  "stability_windows": 2,
+  "repeated_bursts": 3,
+  "recovery_windows": 2,
+  "reactivation_enabled": true,
+  "repetitions": 3,
+  "schedule_seed": 20261027,
+  "arms": ["no_profiler", "cheap_only", "fixed_burst", "repeated_fixed_burst", "stability_stop", "counter_recovery_stop", "hybrid_stop", "full_horizon_reference"],
+  "splits": {
+    "calibration": {"request_corpus": "calibration_prompts_v1", "workload_family": "capacity_and_single_interventions", "seeds": [2101, 2102, 2103]},
+    "development": {"request_corpus": "development_prompts_v1", "workload_family": "transition_lull_overlap_pilot", "seeds": [3101, 3102, 3103]},
+    "confirmation": {"request_corpus": "heldout_prompts_v1", "workload_family": "heldout_shapes_and_onsets", "seeds": [4101, 4102, 4103]}
+  },
+  "cases": [
+    {"id": "healthy", "phases": [{"start_s": 0, "end_s": 120, "arrival_capacity_ratio": 0.35, "prompt_band": "short", "output_tokens": 32}]},
+    {"id": "persistent", "phases": [{"start_s": 0, "end_s": 20, "arrival_capacity_ratio": 0.35, "prompt_band": "short", "output_tokens": 32}, {"start_s": 20, "end_s": 100, "arrival_capacity_ratio": 1.25, "prompt_band": "short", "output_tokens": 32}, {"start_s": 100, "end_s": 120, "arrival_capacity_ratio": 0.35, "prompt_band": "short", "output_tokens": 32}]},
+    {"id": "prefill_only", "phases": [{"start_s": 0, "end_s": 20, "arrival_capacity_ratio": 0.35, "prompt_band": "short", "output_tokens": 32}, {"start_s": 20, "end_s": 100, "arrival_capacity_ratio": 0.35, "prompt_band": "long", "output_tokens": 32}, {"start_s": 100, "end_s": 120, "arrival_capacity_ratio": 0.35, "prompt_band": "short", "output_tokens": 32}]},
+    {"id": "changing", "phases": [{"start_s": 0, "end_s": 20, "arrival_capacity_ratio": 0.35, "prompt_band": "short", "output_tokens": 32}, {"start_s": 20, "end_s": 60, "arrival_capacity_ratio": 1.25, "prompt_band": "short", "output_tokens": 32}, {"start_s": 60, "end_s": 100, "arrival_capacity_ratio": 0.35, "prompt_band": "long", "output_tokens": 32}, {"start_s": 100, "end_s": 120, "arrival_capacity_ratio": 0.35, "prompt_band": "short", "output_tokens": 32}]},
+    {"id": "temporary_lull", "phases": [{"start_s": 0, "end_s": 20, "arrival_capacity_ratio": 0.35, "prompt_band": "short", "output_tokens": 32}, {"start_s": 20, "end_s": 55, "arrival_capacity_ratio": 1.25, "prompt_band": "short", "output_tokens": 32}, {"start_s": 55, "end_s": 65, "arrival_capacity_ratio": 0.1, "prompt_band": "short", "output_tokens": 32}, {"start_s": 65, "end_s": 100, "arrival_capacity_ratio": 1.25, "prompt_band": "short", "output_tokens": 32}, {"start_s": 100, "end_s": 120, "arrival_capacity_ratio": 0.35, "prompt_band": "short", "output_tokens": 32}]},
+    {"id": "overlap", "phases": [{"start_s": 0, "end_s": 20, "arrival_capacity_ratio": 0.35, "prompt_band": "short", "output_tokens": 32}, {"start_s": 20, "end_s": 100, "arrival_capacity_ratio": 1.25, "prompt_band": "long", "output_tokens": 32}, {"start_s": 100, "end_s": 120, "arrival_capacity_ratio": 0.35, "prompt_band": "short", "output_tokens": 32}]}
+  ],
+  "unresolved_before_freeze": ["measured_capacity_and_admission_semantics", "prompt_corpus_hashes_and_token_bands", "metrics_endpoint_names_and_availability", "classifier_features_and_thresholds", "reference_rubric_pilot", "phase_lengths_and_drain_feasibility", "server_reset_and_randomization_unit", "confirmation_repetitions_and_precision", "capture_active_clock_validation"]
+}

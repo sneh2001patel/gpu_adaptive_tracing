@@ -1,0 +1,70 @@
+{
+  "command": {
+    "token": "fd8095c1f6d94d0e8d364b559e20e743",
+    "binding": {
+      "session_nonce": "9272354666c540fc942793843969d988",
+      "generation": 0,
+      "worker_pid": 43,
+      "device_uuid": "GPU-fixture",
+      "model": "fixture-model",
+      "engine": "0",
+      "clock_domain": "process-monotonic-c0e98338-a6fe-462b-9186-bdd1cb708ae3"
+    },
+    "requested_at_ns": 227847491142406
+  },
+  "data": {
+    "version": "scheduler_hook_events_v1",
+    "binding": {
+      "session_nonce": "9272354666c540fc942793843969d988",
+      "generation": 0,
+      "worker_pid": 43,
+      "device_uuid": "GPU-fixture",
+      "model": "fixture-model",
+      "engine": "0",
+      "clock_domain": "process-monotonic-c0e98338-a6fe-462b-9186-bdd1cb708ae3"
+    },
+    "token": "fd8095c1f6d94d0e8d364b559e20e743",
+    "requested_at_ns": 227847491142406,
+    "source_probe_ns": 227847491253972,
+    "epoch_ns": 227847484674076,
+    "clock_name": "time.monotonic_ns",
+    "attempted": 3,
+    "dropped": 0,
+    "faults": [],
+    "events": [
+      {
+        "sequence": 1,
+        "kind": "engine_admitted",
+        "request_id": "cmpl-challenge-warmup-0",
+        "hook_enter_ns": 227847487036204,
+        "hook_return_ns": 227847487040032,
+        "observed_at_ns": 227847487063354,
+        "terminal_status": null
+      },
+      {
+        "sequence": 2,
+        "kind": "first_positive_schedule",
+        "request_id": "cmpl-challenge-warmup-0",
+        "hook_enter_ns": 227847487066858,
+        "hook_return_ns": 227847487068016,
+        "observed_at_ns": 227847487117672,
+        "terminal_status": null
+      },
+      {
+        "sequence": 3,
+        "kind": "scheduler_finished",
+        "request_id": "cmpl-challenge-warmup-0",
+        "hook_enter_ns": 227847488952177,
+        "hook_return_ns": 227847488953824,
+        "observed_at_ns": 227847488967236,
+        "terminal_status": "FINISHED_LENGTH_CAPPED"
+      }
+    ],
+    "history_complete": true,
+    "semantics": "engine_admission_to_first_positive_CPU_schedule_decision_not_GPU_execution",
+    "phase_attribution": "not_instrumented",
+    "client_request_ID_mapping": "not_validated",
+    "scope": "single_owned_scheduler_host_process_no_GPU_clock_mapping"
+  },
+  "received_at_ns": 227847491284544
+}

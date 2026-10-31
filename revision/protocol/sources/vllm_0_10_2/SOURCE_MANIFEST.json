@@ -1,0 +1,16 @@
+{
+  "version": "primary_source_review_v1",
+  "review_date": "2026-10-28",
+  "files": {
+    "loggers.py": {
+      "url": "https://raw.githubusercontent.com/vllm-project/vllm/v0.10.2/vllm/v1/metrics/loggers.py",
+      "sha256": "2644509c5eb6efe22ed5a72cf0bee86005998648ede4cb49964c1b88d6df73d8"
+    },
+    "stats.py": {
+      "url": "https://raw.githubusercontent.com/vllm-project/vllm/v0.10.2/vllm/v1/metrics/stats.py",
+      "sha256": "423b579e9736a3a2f6dd25abf9a879dd892f32ce32314d23452f1da658e2564c"
+    }
+  },
+  "license": "Apache-2.0; original headers and LICENSE.txt retained",
+  "finding": "Queue/prefill/decode histogram observations occur in finished_requests loop; stats distinguish frontend wall-clock and engine-core monotonic timestamps. No admission-cohort or exclusive GPU-service mapping established."
+}

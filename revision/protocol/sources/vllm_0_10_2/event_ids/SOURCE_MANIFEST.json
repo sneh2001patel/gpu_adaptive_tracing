@@ -1,0 +1,17 @@
+{
+  "origin": "read_only_installed_vllm_0.10.2_on_authorized_L4",
+  "files": {
+    "vllm/entrypoints/openai/serving_completion.py": "2888b73119f04d1bca187581abc1bf727e49276bbfb66b60b5ff2b50b79985e9",
+    "vllm/entrypoints/openai/serving_engine.py": "afe442cbd5140060a05b719404e02ef161eaff3c5663bd0187771d9bdc37cf0e",
+    "vllm/entrypoints/openai/protocol.py": "2aeb7b0f48ada6f30babc056bdcaafe190d63f221b6ca29aa7df925abc90cd97",
+    "vllm/v1/engine/async_llm.py": "7624d6df78cf225256000d989869944403b9cef252926ef29f33a604c2a58ccb",
+    "vllm/v1/engine/processor.py": "36e614b74beaeaf93335096c2fbe5cfafcfe4c8102b843869daa96798f434b9d",
+    "vllm/v1/engine/parallel_sampling.py": "b95885687e4d1713107d6073f2b39d459e5e21bfd91cc949bb7682ba1ab64c83",
+    "vllm/utils/__init__.py": "797f69de8105db3a5fefe6fb4dfd89b337758b0a28654afea2df9e0dcf096d86",
+    "vllm/engine/arg_utils.py": "a2fb6e4befee73c2e92258cfa325a68b36a471c7f86d29a825f35f49045123ad"
+  },
+  "mapping_scope": "nonstreaming_single_string_prompt_n1_no_beam_no_best_of_no_X_Request_Id_header",
+  "rule": "submitted request_id -> response cmpl-{request_id} -> engine cmpl-{request_id}-0",
+  "review": "serving_engine._base_request_id; serving_completion.create_completion/request_output_to_completion_response; AsyncLLM.add_request/_add_request; Processor.process_inputs forwards ID unchanged for n=1",
+  "license": "../LICENSE.txt"
+}

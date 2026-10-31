@@ -1,0 +1,282 @@
+[
+  {
+    "record_kind": "initial_episode_stop",
+    "prediction_id": "complete",
+    "run_id": "synthetic-run",
+    "episode_id": "episode-0",
+    "policy": "stability_stop",
+    "provenance": "synthetic_simulation",
+    "evidence_interval": {
+      "start_ns": 10,
+      "end_ns": 20,
+      "available_at_ns": 21,
+      "clock_domain": "synthetic-reference-demo-clock"
+    },
+    "decision_at_ns": 22,
+    "evidence_id": "fixture-0",
+    "policy_label": "vllm_queue_pressure",
+    "cause_set": [
+      "queue_pressure"
+    ],
+    "classifier_version": "hand_authored_fixture_not_deployed_model",
+    "mapping_version": "synthetic_explicit_assertions_not_validated_policy_mapping",
+    "terminal_reason": "diagnosis_stable",
+    "decision_status": "ok"
+  },
+  {
+    "record_kind": "initial_episode_stop",
+    "prediction_id": "partial",
+    "run_id": "synthetic-run",
+    "episode_id": "episode-1",
+    "policy": "stability_stop",
+    "provenance": "synthetic_simulation",
+    "evidence_interval": {
+      "start_ns": 120,
+      "end_ns": 130,
+      "available_at_ns": 131,
+      "clock_domain": "synthetic-reference-demo-clock"
+    },
+    "decision_at_ns": 132,
+    "evidence_id": "fixture-1",
+    "policy_label": "vllm_queue_pressure",
+    "cause_set": [
+      "queue_pressure"
+    ],
+    "classifier_version": "hand_authored_fixture_not_deployed_model",
+    "mapping_version": "synthetic_explicit_assertions_not_validated_policy_mapping",
+    "terminal_reason": "diagnosis_stable",
+    "decision_status": "ok"
+  },
+  {
+    "record_kind": "initial_episode_stop",
+    "prediction_id": "wrong_stable",
+    "run_id": "synthetic-run",
+    "episode_id": "episode-2",
+    "policy": "stability_stop",
+    "provenance": "synthetic_simulation",
+    "evidence_interval": {
+      "start_ns": 30,
+      "end_ns": 40,
+      "available_at_ns": 41,
+      "clock_domain": "synthetic-reference-demo-clock"
+    },
+    "decision_at_ns": 42,
+    "evidence_id": "fixture-2",
+    "policy_label": "vllm_long_prompt",
+    "cause_set": [
+      "prefill_dominated_service"
+    ],
+    "classifier_version": "hand_authored_fixture_not_deployed_model",
+    "mapping_version": "synthetic_explicit_assertions_not_validated_policy_mapping",
+    "terminal_reason": "diagnosis_stable",
+    "decision_status": "ok"
+  },
+  {
+    "record_kind": "initial_episode_stop",
+    "prediction_id": "unknown_budget",
+    "run_id": "synthetic-run",
+    "episode_id": "episode-3",
+    "policy": "fixed_burst",
+    "provenance": "synthetic_simulation",
+    "evidence_interval": {
+      "start_ns": 40,
+      "end_ns": 50,
+      "available_at_ns": 51,
+      "clock_domain": "synthetic-reference-demo-clock"
+    },
+    "decision_at_ns": 52,
+    "evidence_id": "fixture-3",
+    "policy_label": null,
+    "cause_set": [],
+    "classifier_version": "hand_authored_fixture_not_deployed_model",
+    "mapping_version": "synthetic_explicit_assertions_not_validated_policy_mapping",
+    "terminal_reason": "budget_exhausted",
+    "decision_status": "ok"
+  },
+  {
+    "record_kind": "initial_episode_stop",
+    "prediction_id": "generic_mixed",
+    "run_id": "synthetic-run",
+    "episode_id": "episode-4",
+    "policy": "fixed_burst",
+    "provenance": "synthetic_simulation",
+    "evidence_interval": {
+      "start_ns": 150,
+      "end_ns": 160,
+      "available_at_ns": 161,
+      "clock_domain": "synthetic-reference-demo-clock"
+    },
+    "decision_at_ns": 162,
+    "evidence_id": "fixture-4",
+    "policy_label": "mixed",
+    "cause_set": [],
+    "classifier_version": "hand_authored_fixture_not_deployed_model",
+    "mapping_version": "synthetic_explicit_assertions_not_validated_policy_mapping",
+    "terminal_reason": "fixed_burst_complete",
+    "decision_status": "ok"
+  },
+  {
+    "record_kind": "initial_episode_stop",
+    "prediction_id": "transition",
+    "run_id": "synthetic-run",
+    "episode_id": "episode-5",
+    "policy": "stability_stop",
+    "provenance": "synthetic_simulation",
+    "evidence_interval": {
+      "start_ns": 90,
+      "end_ns": 110,
+      "available_at_ns": 111,
+      "clock_domain": "synthetic-reference-demo-clock"
+    },
+    "decision_at_ns": 112,
+    "evidence_id": "fixture-5",
+    "policy_label": "vllm_queue_pressure",
+    "cause_set": [
+      "queue_pressure"
+    ],
+    "classifier_version": "hand_authored_fixture_not_deployed_model",
+    "mapping_version": "synthetic_explicit_assertions_not_validated_policy_mapping",
+    "terminal_reason": "diagnosis_stable",
+    "decision_status": "ok"
+  },
+  {
+    "record_kind": "initial_episode_stop",
+    "prediction_id": "unresolved_reference",
+    "run_id": "synthetic-run",
+    "episode_id": "episode-6",
+    "policy": "stability_stop",
+    "provenance": "synthetic_simulation",
+    "evidence_interval": {
+      "start_ns": 320,
+      "end_ns": 330,
+      "available_at_ns": 331,
+      "clock_domain": "synthetic-reference-demo-clock"
+    },
+    "decision_at_ns": 332,
+    "evidence_id": "fixture-6",
+    "policy_label": "vllm_queue_pressure",
+    "cause_set": [
+      "queue_pressure"
+    ],
+    "classifier_version": "hand_authored_fixture_not_deployed_model",
+    "mapping_version": "synthetic_explicit_assertions_not_validated_policy_mapping",
+    "terminal_reason": "diagnosis_stable",
+    "decision_status": "ok"
+  },
+  {
+    "record_kind": "initial_episode_stop",
+    "prediction_id": "gap",
+    "run_id": "synthetic-run",
+    "episode_id": "episode-7",
+    "policy": "fixed_burst",
+    "provenance": "synthetic_simulation",
+    "evidence_interval": {
+      "start_ns": 520,
+      "end_ns": 530,
+      "available_at_ns": 531,
+      "clock_domain": "synthetic-reference-demo-clock"
+    },
+    "decision_at_ns": 532,
+    "evidence_id": "fixture-7",
+    "policy_label": "vllm_queue_pressure",
+    "cause_set": [
+      "queue_pressure"
+    ],
+    "classifier_version": "hand_authored_fixture_not_deployed_model",
+    "mapping_version": "synthetic_explicit_assertions_not_validated_policy_mapping",
+    "terminal_reason": "budget_exhausted",
+    "decision_status": "ok"
+  },
+  {
+    "record_kind": "initial_episode_stop",
+    "prediction_id": "incomplete_reference",
+    "run_id": "synthetic-run",
+    "episode_id": "episode-8",
+    "policy": "stability_stop",
+    "provenance": "synthetic_simulation",
+    "evidence_interval": {
+      "start_ns": 220,
+      "end_ns": 230,
+      "available_at_ns": 231,
+      "clock_domain": "synthetic-reference-demo-clock"
+    },
+    "decision_at_ns": 232,
+    "evidence_id": "fixture-8",
+    "policy_label": "vllm_long_prompt",
+    "cause_set": [
+      "prefill_dominated_service"
+    ],
+    "classifier_version": "hand_authored_fixture_not_deployed_model",
+    "mapping_version": "synthetic_explicit_assertions_not_validated_policy_mapping",
+    "terminal_reason": "diagnosis_stable",
+    "decision_status": "ok"
+  },
+  {
+    "record_kind": "initial_episode_stop",
+    "prediction_id": "healthy_wrong",
+    "run_id": "synthetic-run",
+    "episode_id": "episode-9",
+    "policy": "stability_stop",
+    "provenance": "synthetic_simulation",
+    "evidence_interval": {
+      "start_ns": 420,
+      "end_ns": 430,
+      "available_at_ns": 431,
+      "clock_domain": "synthetic-reference-demo-clock"
+    },
+    "decision_at_ns": 432,
+    "evidence_id": "fixture-9",
+    "policy_label": "vllm_queue_pressure",
+    "cause_set": [
+      "queue_pressure"
+    ],
+    "classifier_version": "hand_authored_fixture_not_deployed_model",
+    "mapping_version": "synthetic_explicit_assertions_not_validated_policy_mapping",
+    "terminal_reason": "diagnosis_stable",
+    "decision_status": "ok"
+  },
+  {
+    "record_kind": "initial_episode_stop",
+    "prediction_id": "capture_failure",
+    "run_id": "synthetic-run",
+    "episode_id": "episode-10",
+    "policy": "fixed_burst",
+    "provenance": "synthetic_simulation",
+    "evidence_interval": {
+      "start_ns": 40,
+      "end_ns": 50,
+      "available_at_ns": 51,
+      "clock_domain": "synthetic-reference-demo-clock"
+    },
+    "decision_at_ns": 52,
+    "evidence_id": null,
+    "policy_label": null,
+    "cause_set": [],
+    "classifier_version": "hand_authored_fixture_not_deployed_model",
+    "mapping_version": "synthetic_explicit_assertions_not_validated_policy_mapping",
+    "terminal_reason": "capture_failed",
+    "decision_status": "capture_failed"
+  },
+  {
+    "record_kind": "initial_episode_stop",
+    "prediction_id": "horizon_censor",
+    "run_id": "synthetic-run",
+    "episode_id": "episode-11",
+    "policy": "fixed_burst",
+    "provenance": "synthetic_simulation",
+    "evidence_interval": {
+      "start_ns": 350,
+      "end_ns": 360,
+      "available_at_ns": 361,
+      "clock_domain": "synthetic-reference-demo-clock"
+    },
+    "decision_at_ns": 362,
+    "evidence_id": null,
+    "policy_label": null,
+    "cause_set": [],
+    "classifier_version": "hand_authored_fixture_not_deployed_model",
+    "mapping_version": "synthetic_explicit_assertions_not_validated_policy_mapping",
+    "terminal_reason": "horizon_ended",
+    "decision_status": "horizon_censored"
+  }
+]

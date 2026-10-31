@@ -1,0 +1,76 @@
+{
+  "run_id": "fixture-healthy",
+  "controller": {
+    "controller_version": "streaming_v4",
+    "policy_version": "stopping_v3",
+    "evidence_mode": "synthetic_simulation",
+    "clock_domain": "simulation-monotonic-c85ce703-b9a3-46f0-8c48-4591c9b33635",
+    "state": "idle",
+    "finished": true,
+    "baseline": {
+      "p95_latency_ms": 100,
+      "source_id": "fixture-calibration",
+      "throughput_rps": null
+    },
+    "config": {
+      "policy": "fixed_burst",
+      "policy_config": {
+        "stability_windows": 2,
+        "repeated_bursts": 3,
+        "max_bursts": 2,
+        "recovery_windows": 2,
+        "recovery_latency_ratio": 1.1,
+        "recovery_gpu_util": 60.0
+      },
+      "latency_trigger_ratio": 1.5,
+      "gpu_trigger_percent": 85.0,
+      "gpu_trigger_windows": 2,
+      "burst_s": 0.2,
+      "startup_timeout_s": 0.5,
+      "evidence_timeout_s": 30.0,
+      "cooldown_s": 0,
+      "change_ratio_factor": 1.5,
+      "change_gpu_points": 20.0,
+      "retry_unresolved": false,
+      "reactivation_enabled": true
+    },
+    "episodes": [],
+    "capture_timings": {},
+    "events": [
+      {
+        "sequence": 0,
+        "event": "cheap_window_available",
+        "timestamp_ns": 1000000000,
+        "clock_domain": "simulation-monotonic-c85ce703-b9a3-46f0-8c48-4591c9b33635",
+        "provenance": "synthetic_simulation",
+        "state": "idle",
+        "episode_id": null,
+        "window_id": "window-1000000000",
+        "window_start_ns": 0,
+        "window_end_ns": 1000000000,
+        "available_at_ns": 1000000000,
+        "sample_count": 1,
+        "request_count": null,
+        "request_error_count": null,
+        "gpu_sample_count": null,
+        "outstanding_request_count": null,
+        "oldest_pending_ms": null,
+        "p95_latency_ms": 100,
+        "gpu_util": 95,
+        "throughput_rps": 1,
+        "latency_ratio": 1.0,
+        "suspicious": false,
+        "suspicion_reasons": []
+      },
+      {
+        "sequence": 1,
+        "event": "stream_finished",
+        "timestamp_ns": 5000000000,
+        "clock_domain": "simulation-monotonic-c85ce703-b9a3-46f0-8c48-4591c9b33635",
+        "provenance": "synthetic_simulation",
+        "state": "idle",
+        "episode_id": null
+      }
+    ]
+  }
+}

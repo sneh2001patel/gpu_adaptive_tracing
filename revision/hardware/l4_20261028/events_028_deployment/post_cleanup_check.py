@@ -1,0 +1,28 @@
+"""Read-only owned PID/group and GPU check, persisted before off-host backup."""
+import os,json,subprocess,time
+from pathlib import Path
+base=Path('/workspace/gpu_adaptive_tracing_step028/revision/hardware/l4_20261028')
+root=base/'events_001';processes=[]
+for path in root.glob('session-*/launch.json'):
+ launch=json.loads(path.read_text());row=dict(parent_pid=launch['pid'])
+ workers=list(path.parent.glob('worker-*.json'))
+ targets=[('parent',launch['pid'])]
+ if workers:
+  row['worker_pid']=json.loads(workers[0].read_text())['pid'];targets.append(('worker',row['worker_pid']))
+ for label,pid in targets:
+  try:os.kill(pid,0);row[label+'_absent']=False
+  except ProcessLookupError:row[label+'_absent']=True
+ try:os.killpg(launch['pid'],0);row['group_absent']=False
+ except ProcessLookupError:row['group_absent']=True
+ processes.append(row)
+result=dict(checked_at_utc=time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime()),processes=processes,rental_stopped=False)
+for name,args in dict(gpu=['nvidia-smi','--query-gpu=uuid,name,memory.used','--format=csv,noheader,nounits'],
+ compute=['nvidia-smi','--query-compute-apps=pid,gpu_uuid,used_gpu_memory','--format=csv,noheader,nounits'],
+ supervisor=['supervisorctl','status','revision-l4-events-028']).items():
+ p=subprocess.run(args,capture_output=True,text=True);result[name]=dict(returncode=p.returncode,stdout=p.stdout,stderr=p.stderr)
+(base/'events_post_cleanup_checks.json').write_text(json.dumps(result,indent=2)+'\n')
+assert processes and all(all(row[k] for k in row if k.endswith('_absent')) for row in processes)
+assert result['compute']['returncode']==result['gpu']['returncode']==0
+assert not result['compute']['stdout'].strip() and result['gpu']['stdout'].strip().endswith(', 0')
+assert 'EXITED' in result['supervisor']['stdout']
+print(json.dumps(result,indent=2))

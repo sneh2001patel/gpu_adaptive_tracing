@@ -1,0 +1,9 @@
+# CPU challenge preparation and fixtures — step 029
+
+[Prepared plan](prepared_001/PLAN.json): sixteen exact schedule files and sixteen prospective fresh-session jobs. The corpus and step-027 specification are hash-bound to passing step-028 commissioning/audit inputs. Maximum total work is 3,612 requests including warmups; all jobs have `executed=false`, and launch/study/reference/calibration/freeze flags remain false.
+
+[Fixture results](fixture_001/RESULT.json): six hand-authored queue/work cases produce no candidate for zero queues or an isolated spike, a lowest 2 requests/s engineering candidate for the positive fixture, incomplete evidence for a missing scrape, incomplete work for a missing request, and rejection for foreign scope. These are `synthetic_simulation` with `live_validation=false`, not measured GPU workloads or diagnostic labels.
+
+[Consumer windows](fixture_001/consumer_windows.json) preserve the [raw synthetic source receipt](fixture_001/raw_event_receipt.json) while withholding three ten-second consumer windows. The gate returns unresolved and null bounds/diagnosis for the withheld windows. Other windows expose host scheduling bounds only. This fixture evaluates offline at 62 seconds; separate tests reject a receipt that was not ready at a fixed earlier decision time.
+
+All **511 CPU tests pass** (17 new); [full log](validation/cpu_suite.log), [focused log](validation/focused.log), [validation fingerprints](validation/CHECKS.json). Both twenty-one-entry artifact manifests verify. Saved schedules are regenerated/checked against phase boundaries and exact wire transformations. Full [protocol](../../protocol/EVENT_CHALLENGE_PROTOCOL.md) and [step report](../../progress/029_exact_challenges_and_observer_controls.md) record the remaining owned-runner/live/scientific limitations.

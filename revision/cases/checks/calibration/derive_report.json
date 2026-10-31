@@ -1,0 +1,528 @@
+{
+ "thresholds": {
+  "latency_ratio": 1.9500000000000002,
+  "waiting_requests": 1.0,
+  "kv_usage": 0.576828151536846,
+  "preemptions_per_s": 0.5,
+  "gpu_util": 0.7689999999999999,
+  "busy_fraction": 0.7372817457702135,
+  "kernel_time_ratio": {
+   "gemm": 46.332769415742575,
+   "attention": 19.697685708350065,
+   "other": 114.47340381010423,
+   "norm": 22.94827913355471
+  }
+ },
+ "inputs": {
+  "healthy_p99": {
+   "latency_ratio": 1.926995263339359,
+   "waiting_requests": 0.0,
+   "kv_usage": 0.19343059429306994,
+   "preemptions_per_s": 0.0
+  },
+  "overload_median": {
+   "latency_ratio": 4.2390764037851785,
+   "waiting_requests": 252.0,
+   "gpu_util": 0.9359999999999999,
+   "busy_fraction": 0.9017188492643047
+  },
+  "kv_median": {
+   "kv_usage": 0.9602257087806221,
+   "preemptions_per_s": 0.0
+  },
+  "host_stall_median": {
+   "gpu_util": 0.602,
+   "busy_fraction": 0.5728446422761224
+  }
+ },
+ "margins": {
+  "latency_ratio": 2.1738853352744503,
+  "waiting_requests": 252.0,
+  "kv_usage": 1.3293302562376268,
+  "preemptions_per_s": 0.0,
+  "gpu_util": 0.33399999999999996,
+  "busy_fraction": 0.32887420698818226
+ },
+ "kernel": {
+  "chain": [
+   {
+    "option": "healthy_load_baseline",
+    "theta": 110.92093173056256,
+    "max_ratio": 88.73674538445005,
+    "n_ratios": 424,
+    "qualifies": false
+   },
+   {
+    "option": "load_matched_baseline",
+    "theta": 114.47340381010423,
+    "max_ratio": 91.57872304808339,
+    "n_ratios": 424,
+    "qualifies": false
+   },
+   {
+    "option": "per_family_load_matched",
+    "theta": {
+     "gemm": 46.332769415742575,
+     "attention": 19.697685708350065,
+     "other": 114.47340381010423,
+     "norm": 22.94827913355471
+    },
+    "qualifies": false
+   }
+  ],
+  "chosen": "not_separable",
+  "theta": {
+   "gemm": 46.332769415742575,
+   "attention": 19.697685708350065,
+   "other": 114.47340381010423,
+   "norm": 22.94827913355471
+  }
+ },
+ "sessions": [
+  [
+   "101",
+   "25418",
+   "25418:incident"
+  ],
+  [
+   "101",
+   "25418",
+   "healthy"
+  ],
+  [
+   "101",
+   "3087",
+   "3087:incident"
+  ],
+  [
+   "101",
+   "3087",
+   "healthy"
+  ],
+  [
+   "101",
+   "6240",
+   "6240:incident"
+  ],
+  [
+   "101",
+   "6240",
+   "healthy"
+  ],
+  [
+   "101",
+   "7592",
+   "7592:incident"
+  ],
+  [
+   "101",
+   "7592",
+   "healthy"
+  ],
+  [
+   "101",
+   "7619",
+   "7619:incident"
+  ],
+  [
+   "101",
+   "7619",
+   "healthy"
+  ],
+  [
+   "101",
+   "controlled",
+   "ctl_engine_stall"
+  ],
+  [
+   "101",
+   "controlled",
+   "ctl_kv"
+  ],
+  [
+   "101",
+   "controlled",
+   "ctl_lull"
+  ],
+  [
+   "101",
+   "controlled",
+   "ctl_overlap"
+  ],
+  [
+   "101",
+   "controlled",
+   "ctl_overload"
+  ],
+  [
+   "101",
+   "controlled",
+   "ctl_shift"
+  ],
+  [
+   "101",
+   "controlled",
+   "healthy"
+  ],
+  [
+   "102",
+   "25418",
+   "25418:incident"
+  ],
+  [
+   "102",
+   "25418",
+   "healthy"
+  ],
+  [
+   "102",
+   "3087",
+   "3087:incident"
+  ],
+  [
+   "102",
+   "3087",
+   "healthy"
+  ],
+  [
+   "102",
+   "6240",
+   "6240:incident"
+  ],
+  [
+   "102",
+   "6240",
+   "healthy"
+  ],
+  [
+   "102",
+   "7592",
+   "7592:incident"
+  ],
+  [
+   "102",
+   "7592",
+   "healthy"
+  ],
+  [
+   "102",
+   "7619",
+   "7619:incident"
+  ],
+  [
+   "102",
+   "7619",
+   "healthy"
+  ],
+  [
+   "102",
+   "controlled",
+   "ctl_engine_stall"
+  ],
+  [
+   "102",
+   "controlled",
+   "ctl_kv"
+  ],
+  [
+   "102",
+   "controlled",
+   "ctl_lull"
+  ],
+  [
+   "102",
+   "controlled",
+   "ctl_overlap"
+  ],
+  [
+   "102",
+   "controlled",
+   "ctl_overload"
+  ],
+  [
+   "102",
+   "controlled",
+   "ctl_shift"
+  ],
+  [
+   "102",
+   "controlled",
+   "healthy"
+  ],
+  [
+   "103",
+   "25418",
+   "25418:incident"
+  ],
+  [
+   "103",
+   "25418",
+   "healthy"
+  ],
+  [
+   "103",
+   "3087",
+   "3087:incident"
+  ],
+  [
+   "103",
+   "3087",
+   "healthy"
+  ],
+  [
+   "103",
+   "6240",
+   "6240:incident"
+  ],
+  [
+   "103",
+   "6240",
+   "healthy"
+  ],
+  [
+   "103",
+   "7592",
+   "7592:incident"
+  ],
+  [
+   "103",
+   "7592",
+   "healthy"
+  ],
+  [
+   "103",
+   "7619",
+   "7619:incident"
+  ],
+  [
+   "103",
+   "7619",
+   "healthy"
+  ],
+  [
+   "103",
+   "controlled",
+   "ctl_engine_stall"
+  ],
+  [
+   "103",
+   "controlled",
+   "ctl_kv"
+  ],
+  [
+   "103",
+   "controlled",
+   "ctl_lull"
+  ],
+  [
+   "103",
+   "controlled",
+   "ctl_overlap"
+  ],
+  [
+   "103",
+   "controlled",
+   "ctl_overload"
+  ],
+  [
+   "103",
+   "controlled",
+   "ctl_shift"
+  ],
+  [
+   "103",
+   "controlled",
+   "healthy"
+  ]
+ ],
+ "leave_one_out": {
+  "ranges": {
+   "latency_ratio": [
+    1.7000000000000002,
+    2.0
+   ],
+   "waiting_requests": [
+    1.0,
+    1.0
+   ],
+   "kv_usage": [
+    0.49115056427195153,
+    0.5807843841049646
+   ],
+   "preemptions_per_s": [
+    0.5,
+    0.5
+   ],
+   "gpu_util": [
+    0.7689999999999999,
+    0.7689999999999999
+   ],
+   "busy_fraction": [
+    0.7372817457702135,
+    0.7372817457702135
+   ],
+   "kernel_time_ratio": null
+  },
+  "runs": {
+   "without_case_25418": {
+    "latency_ratio": 2.0,
+    "waiting_requests": 1.0,
+    "kv_usage": 0.5807822386426174,
+    "preemptions_per_s": 0.5,
+    "gpu_util": 0.7689999999999999,
+    "busy_fraction": 0.7372817457702135,
+    "kernel_time_ratio": {
+     "other": 114.47340381010423,
+     "gemm": 46.332769415742575,
+     "attention": 19.697685708350065,
+     "norm": 22.94827913355471
+    }
+   },
+   "without_case_3087": {
+    "latency_ratio": 1.75,
+    "waiting_requests": 1.0,
+    "kv_usage": 0.5807843841049646,
+    "preemptions_per_s": 0.5,
+    "gpu_util": 0.7689999999999999,
+    "busy_fraction": 0.7372817457702135,
+    "kernel_time_ratio": {
+     "gemm": 22.559236690185532,
+     "attention": 19.697685708350065,
+     "other": 114.47340381010423,
+     "norm": 22.94827913355471
+    }
+   },
+   "without_case_6240": {
+    "latency_ratio": 2.0,
+    "waiting_requests": 1.0,
+    "kv_usage": 0.5807800931802702,
+    "preemptions_per_s": 0.5,
+    "gpu_util": 0.7689999999999999,
+    "busy_fraction": 0.7372817457702135,
+    "kernel_time_ratio": {
+     "gemm": 46.332769415742575,
+     "attention": 19.697685708350065,
+     "other": 114.47340381010423,
+     "norm": 22.94827913355471
+    }
+   },
+   "without_case_7592": {
+    "latency_ratio": 2.0,
+    "waiting_requests": 1.0,
+    "kv_usage": 0.49115056427195153,
+    "preemptions_per_s": 0.5,
+    "gpu_util": 0.7689999999999999,
+    "busy_fraction": 0.7372817457702135,
+    "kernel_time_ratio": {
+     "gemm": 46.332769415742575,
+     "attention": 19.697685708350065,
+     "other": 114.47340381010423,
+     "norm": 22.94827913355471
+    }
+   },
+   "without_case_7619": {
+    "latency_ratio": 1.7000000000000002,
+    "waiting_requests": 1.0,
+    "kv_usage": 0.5807393293956746,
+    "preemptions_per_s": 0.5,
+    "gpu_util": 0.7689999999999999,
+    "busy_fraction": 0.7372817457702135,
+    "kernel_time_ratio": {
+     "gemm": 46.332769415742575,
+     "attention": 12.583725225257101,
+     "other": 14.119313031192588,
+     "norm": 2.3356325006962613
+    }
+   },
+   "without_ctl_engine_stall": {
+    "latency_ratio": 1.9500000000000002,
+    "waiting_requests": 1.0,
+    "kv_usage": 0.576828151536846,
+    "preemptions_per_s": 0.5,
+    "gpu_util": null,
+    "busy_fraction": null,
+    "kernel_time_ratio": {
+     "gemm": 46.332769415742575,
+     "attention": 19.697685708350065,
+     "other": 114.47340381010423,
+     "norm": 22.94827913355471
+    }
+   },
+   "without_ctl_kv": {
+    "latency_ratio": 1.9500000000000002,
+    "waiting_requests": 1.0,
+    "kv_usage": null,
+    "preemptions_per_s": 0.5,
+    "gpu_util": 0.7689999999999999,
+    "busy_fraction": 0.7372817457702135,
+    "kernel_time_ratio": {
+     "gemm": 46.332769415742575,
+     "attention": 19.697685708350065,
+     "other": 114.47340381010423,
+     "norm": 22.94827913355471
+    }
+   },
+   "without_ctl_lull": {
+    "latency_ratio": 1.9500000000000002,
+    "waiting_requests": 1.0,
+    "kv_usage": 0.576828151536846,
+    "preemptions_per_s": 0.5,
+    "gpu_util": 0.7689999999999999,
+    "busy_fraction": 0.7372817457702135,
+    "kernel_time_ratio": {
+     "gemm": 46.332769415742575,
+     "attention": 19.697685708350065,
+     "other": 114.47340381010423,
+     "norm": 22.94827913355471
+    }
+   },
+   "without_ctl_overlap": {
+    "latency_ratio": 1.9500000000000002,
+    "waiting_requests": 1.0,
+    "kv_usage": 0.576828151536846,
+    "preemptions_per_s": 0.5,
+    "gpu_util": 0.7689999999999999,
+    "busy_fraction": 0.7372817457702135,
+    "kernel_time_ratio": {
+     "gemm": 46.332769415742575,
+     "attention": 19.697685708350065,
+     "other": 114.47340381010423,
+     "norm": 22.94827913355471
+    }
+   },
+   "without_ctl_overload": {
+    "latency_ratio": 1.9500000000000002,
+    "waiting_requests": 1.0,
+    "kv_usage": 0.576828151536846,
+    "preemptions_per_s": 0.5,
+    "gpu_util": null,
+    "busy_fraction": null,
+    "kernel_time_ratio": {
+     "gemm": 46.332769415742575,
+     "attention": 19.697685708350065,
+     "other": 114.47340381010423,
+     "norm": 22.94827913355471
+    }
+   },
+   "without_ctl_shift": {
+    "latency_ratio": 1.9500000000000002,
+    "waiting_requests": 1.0,
+    "kv_usage": 0.576828151536846,
+    "preemptions_per_s": 0.5,
+    "gpu_util": 0.7689999999999999,
+    "busy_fraction": 0.7372817457702135,
+    "kernel_time_ratio": {
+     "gemm": 46.332769415742575,
+     "attention": 19.697685708350065,
+     "other": 114.47340381010423,
+     "norm": 22.94827913355471
+    }
+   }
+  }
+ },
+ "frozen": {
+  "file": "thresholds_study_rule_v2_calibrated_2026-10-29.json",
+  "digest": "6cd8becf0bc9f45330875cd5dc523252d0794edb1613f90263d3d01f443f961a",
+  "kernel_hotspot_not_separable": true
+ }
+}

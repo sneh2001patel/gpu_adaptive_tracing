@@ -1,0 +1,65 @@
+{
+  "validation": "cpu_fixture_only",
+  "nonce": "32ffa07891f54f6592e9c702858a245e",
+  "instance": "8f9c758665424b59ba2bd835f4b55e1c",
+  "generation": 0,
+  "capture_mode": "disabled",
+  "pid": 96435,
+  "endpoint": "http://127.0.0.1:64325",
+  "events": [
+    {
+      "event": "target_started",
+      "at_ns": 185648113063837,
+      "clock_domain": "process-monotonic-bc220122-c308-424c-9c28-152ccf57f760",
+      "pid": 96435,
+      "command": [
+        "/usr/local/bin/python3",
+        "/Users/snehpatel/Documents/University/research/gpu_adaptive_tracing/revision/scripts/fake_serving_target.py",
+        "--ready",
+        "/Users/snehpatel/Documents/University/research/gpu_adaptive_tracing/revision/examples/arm_collection_export_demo/metric-probe-target/ready.json",
+        "--nonce",
+        "32ffa07891f54f6592e9c702858a245e",
+        "--clock-domain",
+        "process-monotonic-bc220122-c308-424c-9c28-152ccf57f760",
+        "--capture-mode",
+        "disabled",
+        "--work-s",
+        "0.03",
+        "--report-s",
+        "0.005",
+        "--fault",
+        "normal"
+      ]
+    },
+    {
+      "event": "target_ready",
+      "at_ns": 185648301533443,
+      "clock_domain": "process-monotonic-bc220122-c308-424c-9c28-152ccf57f760",
+      "pid": 96435,
+      "instance": "8f9c758665424b59ba2bd835f4b55e1c"
+    },
+    {
+      "event": "owned_term_sent",
+      "at_ns": 185648319934659,
+      "clock_domain": "process-monotonic-bc220122-c308-424c-9c28-152ccf57f760"
+    },
+    {
+      "event": "owned_cleanup_complete",
+      "at_ns": 185648348422415,
+      "clock_domain": "process-monotonic-bc220122-c308-424c-9c28-152ccf57f760",
+      "started_at_ns": 185648319878576,
+      "finished_at_ns": 185648348409142,
+      "escalated": false,
+      "returncode": 0,
+      "group_alive": false
+    }
+  ],
+  "quiescence_checks": [],
+  "cleanup": {
+    "started_at_ns": 185648319878576,
+    "finished_at_ns": 185648348409142,
+    "escalated": false,
+    "returncode": 0,
+    "group_alive": false
+  }
+}

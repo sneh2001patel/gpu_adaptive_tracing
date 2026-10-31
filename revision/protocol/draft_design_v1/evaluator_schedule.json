@@ -1,0 +1,4493 @@
+{
+  "status": "evaluator_only_not_reference_truth",
+  "runs": [
+    {
+      "run_id": "dev-b001-counter_recovery_stop",
+      "block": 1,
+      "case_id": "healthy",
+      "seed": 3103,
+      "arm": "counter_recovery_stop",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b001-no_profiler",
+      "block": 1,
+      "case_id": "healthy",
+      "seed": 3103,
+      "arm": "no_profiler",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b001-stability_stop",
+      "block": 1,
+      "case_id": "healthy",
+      "seed": 3103,
+      "arm": "stability_stop",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b001-fixed_burst",
+      "block": 1,
+      "case_id": "healthy",
+      "seed": 3103,
+      "arm": "fixed_burst",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b001-cheap_only",
+      "block": 1,
+      "case_id": "healthy",
+      "seed": 3103,
+      "arm": "cheap_only",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b001-full_horizon_reference",
+      "block": 1,
+      "case_id": "healthy",
+      "seed": 3103,
+      "arm": "full_horizon_reference",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b001-hybrid_stop",
+      "block": 1,
+      "case_id": "healthy",
+      "seed": 3103,
+      "arm": "hybrid_stop",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b001-repeated_fixed_burst",
+      "block": 1,
+      "case_id": "healthy",
+      "seed": 3103,
+      "arm": "repeated_fixed_burst",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b002-no_profiler",
+      "block": 2,
+      "case_id": "changing",
+      "seed": 3102,
+      "arm": "no_profiler",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 60,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 60,
+          "end_s": 100,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "long",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b002-counter_recovery_stop",
+      "block": 2,
+      "case_id": "changing",
+      "seed": 3102,
+      "arm": "counter_recovery_stop",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 60,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 60,
+          "end_s": 100,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "long",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b002-stability_stop",
+      "block": 2,
+      "case_id": "changing",
+      "seed": 3102,
+      "arm": "stability_stop",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 60,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 60,
+          "end_s": 100,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "long",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b002-cheap_only",
+      "block": 2,
+      "case_id": "changing",
+      "seed": 3102,
+      "arm": "cheap_only",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 60,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 60,
+          "end_s": 100,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "long",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b002-hybrid_stop",
+      "block": 2,
+      "case_id": "changing",
+      "seed": 3102,
+      "arm": "hybrid_stop",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 60,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 60,
+          "end_s": 100,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "long",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b002-fixed_burst",
+      "block": 2,
+      "case_id": "changing",
+      "seed": 3102,
+      "arm": "fixed_burst",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 60,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 60,
+          "end_s": 100,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "long",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b002-full_horizon_reference",
+      "block": 2,
+      "case_id": "changing",
+      "seed": 3102,
+      "arm": "full_horizon_reference",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 60,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 60,
+          "end_s": 100,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "long",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b002-repeated_fixed_burst",
+      "block": 2,
+      "case_id": "changing",
+      "seed": 3102,
+      "arm": "repeated_fixed_burst",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 60,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 60,
+          "end_s": 100,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "long",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b003-stability_stop",
+      "block": 3,
+      "case_id": "overlap",
+      "seed": 3101,
+      "arm": "stability_stop",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 100,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "long",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b003-fixed_burst",
+      "block": 3,
+      "case_id": "overlap",
+      "seed": 3101,
+      "arm": "fixed_burst",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 100,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "long",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b003-repeated_fixed_burst",
+      "block": 3,
+      "case_id": "overlap",
+      "seed": 3101,
+      "arm": "repeated_fixed_burst",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 100,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "long",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b003-cheap_only",
+      "block": 3,
+      "case_id": "overlap",
+      "seed": 3101,
+      "arm": "cheap_only",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 100,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "long",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b003-full_horizon_reference",
+      "block": 3,
+      "case_id": "overlap",
+      "seed": 3101,
+      "arm": "full_horizon_reference",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 100,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "long",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b003-hybrid_stop",
+      "block": 3,
+      "case_id": "overlap",
+      "seed": 3101,
+      "arm": "hybrid_stop",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 100,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "long",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b003-no_profiler",
+      "block": 3,
+      "case_id": "overlap",
+      "seed": 3101,
+      "arm": "no_profiler",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 100,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "long",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b003-counter_recovery_stop",
+      "block": 3,
+      "case_id": "overlap",
+      "seed": 3101,
+      "arm": "counter_recovery_stop",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 100,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "long",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b004-counter_recovery_stop",
+      "block": 4,
+      "case_id": "prefill_only",
+      "seed": 3102,
+      "arm": "counter_recovery_stop",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 100,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "long",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b004-full_horizon_reference",
+      "block": 4,
+      "case_id": "prefill_only",
+      "seed": 3102,
+      "arm": "full_horizon_reference",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 100,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "long",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b004-stability_stop",
+      "block": 4,
+      "case_id": "prefill_only",
+      "seed": 3102,
+      "arm": "stability_stop",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 100,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "long",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b004-cheap_only",
+      "block": 4,
+      "case_id": "prefill_only",
+      "seed": 3102,
+      "arm": "cheap_only",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 100,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "long",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b004-hybrid_stop",
+      "block": 4,
+      "case_id": "prefill_only",
+      "seed": 3102,
+      "arm": "hybrid_stop",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 100,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "long",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b004-no_profiler",
+      "block": 4,
+      "case_id": "prefill_only",
+      "seed": 3102,
+      "arm": "no_profiler",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 100,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "long",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b004-fixed_burst",
+      "block": 4,
+      "case_id": "prefill_only",
+      "seed": 3102,
+      "arm": "fixed_burst",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 100,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "long",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b004-repeated_fixed_burst",
+      "block": 4,
+      "case_id": "prefill_only",
+      "seed": 3102,
+      "arm": "repeated_fixed_burst",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 100,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "long",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b005-repeated_fixed_burst",
+      "block": 5,
+      "case_id": "persistent",
+      "seed": 3103,
+      "arm": "repeated_fixed_burst",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 100,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b005-full_horizon_reference",
+      "block": 5,
+      "case_id": "persistent",
+      "seed": 3103,
+      "arm": "full_horizon_reference",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 100,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b005-cheap_only",
+      "block": 5,
+      "case_id": "persistent",
+      "seed": 3103,
+      "arm": "cheap_only",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 100,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b005-no_profiler",
+      "block": 5,
+      "case_id": "persistent",
+      "seed": 3103,
+      "arm": "no_profiler",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 100,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b005-hybrid_stop",
+      "block": 5,
+      "case_id": "persistent",
+      "seed": 3103,
+      "arm": "hybrid_stop",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 100,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b005-fixed_burst",
+      "block": 5,
+      "case_id": "persistent",
+      "seed": 3103,
+      "arm": "fixed_burst",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 100,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b005-stability_stop",
+      "block": 5,
+      "case_id": "persistent",
+      "seed": 3103,
+      "arm": "stability_stop",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 100,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b005-counter_recovery_stop",
+      "block": 5,
+      "case_id": "persistent",
+      "seed": 3103,
+      "arm": "counter_recovery_stop",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 100,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b006-cheap_only",
+      "block": 6,
+      "case_id": "changing",
+      "seed": 3103,
+      "arm": "cheap_only",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 60,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 60,
+          "end_s": 100,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "long",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b006-no_profiler",
+      "block": 6,
+      "case_id": "changing",
+      "seed": 3103,
+      "arm": "no_profiler",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 60,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 60,
+          "end_s": 100,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "long",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b006-stability_stop",
+      "block": 6,
+      "case_id": "changing",
+      "seed": 3103,
+      "arm": "stability_stop",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 60,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 60,
+          "end_s": 100,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "long",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b006-full_horizon_reference",
+      "block": 6,
+      "case_id": "changing",
+      "seed": 3103,
+      "arm": "full_horizon_reference",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 60,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 60,
+          "end_s": 100,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "long",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b006-repeated_fixed_burst",
+      "block": 6,
+      "case_id": "changing",
+      "seed": 3103,
+      "arm": "repeated_fixed_burst",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 60,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 60,
+          "end_s": 100,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "long",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b006-fixed_burst",
+      "block": 6,
+      "case_id": "changing",
+      "seed": 3103,
+      "arm": "fixed_burst",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 60,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 60,
+          "end_s": 100,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "long",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b006-hybrid_stop",
+      "block": 6,
+      "case_id": "changing",
+      "seed": 3103,
+      "arm": "hybrid_stop",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 60,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 60,
+          "end_s": 100,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "long",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b006-counter_recovery_stop",
+      "block": 6,
+      "case_id": "changing",
+      "seed": 3103,
+      "arm": "counter_recovery_stop",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 60,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 60,
+          "end_s": 100,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "long",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b007-counter_recovery_stop",
+      "block": 7,
+      "case_id": "temporary_lull",
+      "seed": 3102,
+      "arm": "counter_recovery_stop",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 55,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 55,
+          "end_s": 65,
+          "arrival_capacity_ratio": 0.1,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 65,
+          "end_s": 100,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b007-full_horizon_reference",
+      "block": 7,
+      "case_id": "temporary_lull",
+      "seed": 3102,
+      "arm": "full_horizon_reference",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 55,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 55,
+          "end_s": 65,
+          "arrival_capacity_ratio": 0.1,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 65,
+          "end_s": 100,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b007-hybrid_stop",
+      "block": 7,
+      "case_id": "temporary_lull",
+      "seed": 3102,
+      "arm": "hybrid_stop",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 55,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 55,
+          "end_s": 65,
+          "arrival_capacity_ratio": 0.1,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 65,
+          "end_s": 100,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b007-fixed_burst",
+      "block": 7,
+      "case_id": "temporary_lull",
+      "seed": 3102,
+      "arm": "fixed_burst",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 55,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 55,
+          "end_s": 65,
+          "arrival_capacity_ratio": 0.1,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 65,
+          "end_s": 100,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b007-stability_stop",
+      "block": 7,
+      "case_id": "temporary_lull",
+      "seed": 3102,
+      "arm": "stability_stop",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 55,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 55,
+          "end_s": 65,
+          "arrival_capacity_ratio": 0.1,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 65,
+          "end_s": 100,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b007-repeated_fixed_burst",
+      "block": 7,
+      "case_id": "temporary_lull",
+      "seed": 3102,
+      "arm": "repeated_fixed_burst",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 55,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 55,
+          "end_s": 65,
+          "arrival_capacity_ratio": 0.1,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 65,
+          "end_s": 100,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b007-cheap_only",
+      "block": 7,
+      "case_id": "temporary_lull",
+      "seed": 3102,
+      "arm": "cheap_only",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 55,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 55,
+          "end_s": 65,
+          "arrival_capacity_ratio": 0.1,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 65,
+          "end_s": 100,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b007-no_profiler",
+      "block": 7,
+      "case_id": "temporary_lull",
+      "seed": 3102,
+      "arm": "no_profiler",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 55,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 55,
+          "end_s": 65,
+          "arrival_capacity_ratio": 0.1,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 65,
+          "end_s": 100,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b008-cheap_only",
+      "block": 8,
+      "case_id": "prefill_only",
+      "seed": 3103,
+      "arm": "cheap_only",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 100,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "long",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b008-fixed_burst",
+      "block": 8,
+      "case_id": "prefill_only",
+      "seed": 3103,
+      "arm": "fixed_burst",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 100,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "long",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b008-repeated_fixed_burst",
+      "block": 8,
+      "case_id": "prefill_only",
+      "seed": 3103,
+      "arm": "repeated_fixed_burst",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 100,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "long",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b008-full_horizon_reference",
+      "block": 8,
+      "case_id": "prefill_only",
+      "seed": 3103,
+      "arm": "full_horizon_reference",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 100,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "long",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b008-hybrid_stop",
+      "block": 8,
+      "case_id": "prefill_only",
+      "seed": 3103,
+      "arm": "hybrid_stop",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 100,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "long",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b008-counter_recovery_stop",
+      "block": 8,
+      "case_id": "prefill_only",
+      "seed": 3103,
+      "arm": "counter_recovery_stop",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 100,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "long",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b008-stability_stop",
+      "block": 8,
+      "case_id": "prefill_only",
+      "seed": 3103,
+      "arm": "stability_stop",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 100,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "long",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b008-no_profiler",
+      "block": 8,
+      "case_id": "prefill_only",
+      "seed": 3103,
+      "arm": "no_profiler",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 100,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "long",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b009-fixed_burst",
+      "block": 9,
+      "case_id": "healthy",
+      "seed": 3101,
+      "arm": "fixed_burst",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b009-no_profiler",
+      "block": 9,
+      "case_id": "healthy",
+      "seed": 3101,
+      "arm": "no_profiler",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b009-repeated_fixed_burst",
+      "block": 9,
+      "case_id": "healthy",
+      "seed": 3101,
+      "arm": "repeated_fixed_burst",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b009-counter_recovery_stop",
+      "block": 9,
+      "case_id": "healthy",
+      "seed": 3101,
+      "arm": "counter_recovery_stop",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b009-hybrid_stop",
+      "block": 9,
+      "case_id": "healthy",
+      "seed": 3101,
+      "arm": "hybrid_stop",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b009-stability_stop",
+      "block": 9,
+      "case_id": "healthy",
+      "seed": 3101,
+      "arm": "stability_stop",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b009-cheap_only",
+      "block": 9,
+      "case_id": "healthy",
+      "seed": 3101,
+      "arm": "cheap_only",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b009-full_horizon_reference",
+      "block": 9,
+      "case_id": "healthy",
+      "seed": 3101,
+      "arm": "full_horizon_reference",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b010-hybrid_stop",
+      "block": 10,
+      "case_id": "temporary_lull",
+      "seed": 3101,
+      "arm": "hybrid_stop",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 55,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 55,
+          "end_s": 65,
+          "arrival_capacity_ratio": 0.1,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 65,
+          "end_s": 100,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b010-no_profiler",
+      "block": 10,
+      "case_id": "temporary_lull",
+      "seed": 3101,
+      "arm": "no_profiler",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 55,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 55,
+          "end_s": 65,
+          "arrival_capacity_ratio": 0.1,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 65,
+          "end_s": 100,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b010-fixed_burst",
+      "block": 10,
+      "case_id": "temporary_lull",
+      "seed": 3101,
+      "arm": "fixed_burst",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 55,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 55,
+          "end_s": 65,
+          "arrival_capacity_ratio": 0.1,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 65,
+          "end_s": 100,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b010-repeated_fixed_burst",
+      "block": 10,
+      "case_id": "temporary_lull",
+      "seed": 3101,
+      "arm": "repeated_fixed_burst",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 55,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 55,
+          "end_s": 65,
+          "arrival_capacity_ratio": 0.1,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 65,
+          "end_s": 100,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b010-cheap_only",
+      "block": 10,
+      "case_id": "temporary_lull",
+      "seed": 3101,
+      "arm": "cheap_only",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 55,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 55,
+          "end_s": 65,
+          "arrival_capacity_ratio": 0.1,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 65,
+          "end_s": 100,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b010-counter_recovery_stop",
+      "block": 10,
+      "case_id": "temporary_lull",
+      "seed": 3101,
+      "arm": "counter_recovery_stop",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 55,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 55,
+          "end_s": 65,
+          "arrival_capacity_ratio": 0.1,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 65,
+          "end_s": 100,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b010-full_horizon_reference",
+      "block": 10,
+      "case_id": "temporary_lull",
+      "seed": 3101,
+      "arm": "full_horizon_reference",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 55,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 55,
+          "end_s": 65,
+          "arrival_capacity_ratio": 0.1,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 65,
+          "end_s": 100,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b010-stability_stop",
+      "block": 10,
+      "case_id": "temporary_lull",
+      "seed": 3101,
+      "arm": "stability_stop",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 55,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 55,
+          "end_s": 65,
+          "arrival_capacity_ratio": 0.1,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 65,
+          "end_s": 100,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b011-no_profiler",
+      "block": 11,
+      "case_id": "overlap",
+      "seed": 3102,
+      "arm": "no_profiler",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 100,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "long",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b011-full_horizon_reference",
+      "block": 11,
+      "case_id": "overlap",
+      "seed": 3102,
+      "arm": "full_horizon_reference",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 100,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "long",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b011-cheap_only",
+      "block": 11,
+      "case_id": "overlap",
+      "seed": 3102,
+      "arm": "cheap_only",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 100,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "long",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b011-repeated_fixed_burst",
+      "block": 11,
+      "case_id": "overlap",
+      "seed": 3102,
+      "arm": "repeated_fixed_burst",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 100,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "long",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b011-fixed_burst",
+      "block": 11,
+      "case_id": "overlap",
+      "seed": 3102,
+      "arm": "fixed_burst",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 100,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "long",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b011-stability_stop",
+      "block": 11,
+      "case_id": "overlap",
+      "seed": 3102,
+      "arm": "stability_stop",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 100,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "long",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b011-hybrid_stop",
+      "block": 11,
+      "case_id": "overlap",
+      "seed": 3102,
+      "arm": "hybrid_stop",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 100,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "long",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b011-counter_recovery_stop",
+      "block": 11,
+      "case_id": "overlap",
+      "seed": 3102,
+      "arm": "counter_recovery_stop",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 100,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "long",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b012-hybrid_stop",
+      "block": 12,
+      "case_id": "prefill_only",
+      "seed": 3101,
+      "arm": "hybrid_stop",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 100,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "long",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b012-stability_stop",
+      "block": 12,
+      "case_id": "prefill_only",
+      "seed": 3101,
+      "arm": "stability_stop",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 100,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "long",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b012-cheap_only",
+      "block": 12,
+      "case_id": "prefill_only",
+      "seed": 3101,
+      "arm": "cheap_only",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 100,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "long",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b012-fixed_burst",
+      "block": 12,
+      "case_id": "prefill_only",
+      "seed": 3101,
+      "arm": "fixed_burst",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 100,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "long",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b012-repeated_fixed_burst",
+      "block": 12,
+      "case_id": "prefill_only",
+      "seed": 3101,
+      "arm": "repeated_fixed_burst",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 100,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "long",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b012-no_profiler",
+      "block": 12,
+      "case_id": "prefill_only",
+      "seed": 3101,
+      "arm": "no_profiler",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 100,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "long",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b012-full_horizon_reference",
+      "block": 12,
+      "case_id": "prefill_only",
+      "seed": 3101,
+      "arm": "full_horizon_reference",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 100,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "long",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b012-counter_recovery_stop",
+      "block": 12,
+      "case_id": "prefill_only",
+      "seed": 3101,
+      "arm": "counter_recovery_stop",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 100,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "long",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b013-counter_recovery_stop",
+      "block": 13,
+      "case_id": "temporary_lull",
+      "seed": 3103,
+      "arm": "counter_recovery_stop",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 55,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 55,
+          "end_s": 65,
+          "arrival_capacity_ratio": 0.1,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 65,
+          "end_s": 100,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b013-repeated_fixed_burst",
+      "block": 13,
+      "case_id": "temporary_lull",
+      "seed": 3103,
+      "arm": "repeated_fixed_burst",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 55,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 55,
+          "end_s": 65,
+          "arrival_capacity_ratio": 0.1,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 65,
+          "end_s": 100,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b013-fixed_burst",
+      "block": 13,
+      "case_id": "temporary_lull",
+      "seed": 3103,
+      "arm": "fixed_burst",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 55,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 55,
+          "end_s": 65,
+          "arrival_capacity_ratio": 0.1,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 65,
+          "end_s": 100,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b013-cheap_only",
+      "block": 13,
+      "case_id": "temporary_lull",
+      "seed": 3103,
+      "arm": "cheap_only",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 55,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 55,
+          "end_s": 65,
+          "arrival_capacity_ratio": 0.1,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 65,
+          "end_s": 100,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b013-stability_stop",
+      "block": 13,
+      "case_id": "temporary_lull",
+      "seed": 3103,
+      "arm": "stability_stop",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 55,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 55,
+          "end_s": 65,
+          "arrival_capacity_ratio": 0.1,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 65,
+          "end_s": 100,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b013-hybrid_stop",
+      "block": 13,
+      "case_id": "temporary_lull",
+      "seed": 3103,
+      "arm": "hybrid_stop",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 55,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 55,
+          "end_s": 65,
+          "arrival_capacity_ratio": 0.1,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 65,
+          "end_s": 100,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b013-full_horizon_reference",
+      "block": 13,
+      "case_id": "temporary_lull",
+      "seed": 3103,
+      "arm": "full_horizon_reference",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 55,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 55,
+          "end_s": 65,
+          "arrival_capacity_ratio": 0.1,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 65,
+          "end_s": 100,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b013-no_profiler",
+      "block": 13,
+      "case_id": "temporary_lull",
+      "seed": 3103,
+      "arm": "no_profiler",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 55,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 55,
+          "end_s": 65,
+          "arrival_capacity_ratio": 0.1,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 65,
+          "end_s": 100,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b014-fixed_burst",
+      "block": 14,
+      "case_id": "changing",
+      "seed": 3101,
+      "arm": "fixed_burst",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 60,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 60,
+          "end_s": 100,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "long",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b014-full_horizon_reference",
+      "block": 14,
+      "case_id": "changing",
+      "seed": 3101,
+      "arm": "full_horizon_reference",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 60,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 60,
+          "end_s": 100,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "long",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b014-hybrid_stop",
+      "block": 14,
+      "case_id": "changing",
+      "seed": 3101,
+      "arm": "hybrid_stop",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 60,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 60,
+          "end_s": 100,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "long",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b014-cheap_only",
+      "block": 14,
+      "case_id": "changing",
+      "seed": 3101,
+      "arm": "cheap_only",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 60,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 60,
+          "end_s": 100,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "long",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b014-stability_stop",
+      "block": 14,
+      "case_id": "changing",
+      "seed": 3101,
+      "arm": "stability_stop",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 60,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 60,
+          "end_s": 100,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "long",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b014-no_profiler",
+      "block": 14,
+      "case_id": "changing",
+      "seed": 3101,
+      "arm": "no_profiler",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 60,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 60,
+          "end_s": 100,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "long",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b014-repeated_fixed_burst",
+      "block": 14,
+      "case_id": "changing",
+      "seed": 3101,
+      "arm": "repeated_fixed_burst",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 60,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 60,
+          "end_s": 100,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "long",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b014-counter_recovery_stop",
+      "block": 14,
+      "case_id": "changing",
+      "seed": 3101,
+      "arm": "counter_recovery_stop",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 60,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 60,
+          "end_s": 100,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "long",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b015-repeated_fixed_burst",
+      "block": 15,
+      "case_id": "persistent",
+      "seed": 3101,
+      "arm": "repeated_fixed_burst",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 100,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b015-fixed_burst",
+      "block": 15,
+      "case_id": "persistent",
+      "seed": 3101,
+      "arm": "fixed_burst",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 100,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b015-stability_stop",
+      "block": 15,
+      "case_id": "persistent",
+      "seed": 3101,
+      "arm": "stability_stop",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 100,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b015-full_horizon_reference",
+      "block": 15,
+      "case_id": "persistent",
+      "seed": 3101,
+      "arm": "full_horizon_reference",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 100,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b015-no_profiler",
+      "block": 15,
+      "case_id": "persistent",
+      "seed": 3101,
+      "arm": "no_profiler",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 100,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b015-hybrid_stop",
+      "block": 15,
+      "case_id": "persistent",
+      "seed": 3101,
+      "arm": "hybrid_stop",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 100,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b015-cheap_only",
+      "block": 15,
+      "case_id": "persistent",
+      "seed": 3101,
+      "arm": "cheap_only",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 100,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b015-counter_recovery_stop",
+      "block": 15,
+      "case_id": "persistent",
+      "seed": 3101,
+      "arm": "counter_recovery_stop",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 100,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b016-no_profiler",
+      "block": 16,
+      "case_id": "overlap",
+      "seed": 3103,
+      "arm": "no_profiler",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 100,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "long",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b016-repeated_fixed_burst",
+      "block": 16,
+      "case_id": "overlap",
+      "seed": 3103,
+      "arm": "repeated_fixed_burst",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 100,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "long",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b016-stability_stop",
+      "block": 16,
+      "case_id": "overlap",
+      "seed": 3103,
+      "arm": "stability_stop",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 100,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "long",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b016-cheap_only",
+      "block": 16,
+      "case_id": "overlap",
+      "seed": 3103,
+      "arm": "cheap_only",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 100,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "long",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b016-fixed_burst",
+      "block": 16,
+      "case_id": "overlap",
+      "seed": 3103,
+      "arm": "fixed_burst",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 100,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "long",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b016-counter_recovery_stop",
+      "block": 16,
+      "case_id": "overlap",
+      "seed": 3103,
+      "arm": "counter_recovery_stop",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 100,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "long",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b016-hybrid_stop",
+      "block": 16,
+      "case_id": "overlap",
+      "seed": 3103,
+      "arm": "hybrid_stop",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 100,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "long",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b016-full_horizon_reference",
+      "block": 16,
+      "case_id": "overlap",
+      "seed": 3103,
+      "arm": "full_horizon_reference",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 100,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "long",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b017-repeated_fixed_burst",
+      "block": 17,
+      "case_id": "healthy",
+      "seed": 3102,
+      "arm": "repeated_fixed_burst",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b017-stability_stop",
+      "block": 17,
+      "case_id": "healthy",
+      "seed": 3102,
+      "arm": "stability_stop",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b017-fixed_burst",
+      "block": 17,
+      "case_id": "healthy",
+      "seed": 3102,
+      "arm": "fixed_burst",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b017-no_profiler",
+      "block": 17,
+      "case_id": "healthy",
+      "seed": 3102,
+      "arm": "no_profiler",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b017-cheap_only",
+      "block": 17,
+      "case_id": "healthy",
+      "seed": 3102,
+      "arm": "cheap_only",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b017-full_horizon_reference",
+      "block": 17,
+      "case_id": "healthy",
+      "seed": 3102,
+      "arm": "full_horizon_reference",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b017-hybrid_stop",
+      "block": 17,
+      "case_id": "healthy",
+      "seed": 3102,
+      "arm": "hybrid_stop",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b017-counter_recovery_stop",
+      "block": 17,
+      "case_id": "healthy",
+      "seed": 3102,
+      "arm": "counter_recovery_stop",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b018-cheap_only",
+      "block": 18,
+      "case_id": "persistent",
+      "seed": 3102,
+      "arm": "cheap_only",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 100,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b018-hybrid_stop",
+      "block": 18,
+      "case_id": "persistent",
+      "seed": 3102,
+      "arm": "hybrid_stop",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 100,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b018-no_profiler",
+      "block": 18,
+      "case_id": "persistent",
+      "seed": 3102,
+      "arm": "no_profiler",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 100,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b018-repeated_fixed_burst",
+      "block": 18,
+      "case_id": "persistent",
+      "seed": 3102,
+      "arm": "repeated_fixed_burst",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 100,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b018-stability_stop",
+      "block": 18,
+      "case_id": "persistent",
+      "seed": 3102,
+      "arm": "stability_stop",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 100,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b018-full_horizon_reference",
+      "block": 18,
+      "case_id": "persistent",
+      "seed": 3102,
+      "arm": "full_horizon_reference",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 100,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b018-counter_recovery_stop",
+      "block": 18,
+      "case_id": "persistent",
+      "seed": 3102,
+      "arm": "counter_recovery_stop",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 100,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    },
+    {
+      "run_id": "dev-b018-fixed_burst",
+      "block": 18,
+      "case_id": "persistent",
+      "seed": 3102,
+      "arm": "fixed_burst",
+      "phases": [
+        {
+          "start_s": 0,
+          "end_s": 20,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 20,
+          "end_s": 100,
+          "arrival_capacity_ratio": 1.25,
+          "prompt_band": "short",
+          "output_tokens": 32
+        },
+        {
+          "start_s": 100,
+          "end_s": 120,
+          "arrival_capacity_ratio": 0.35,
+          "prompt_band": "short",
+          "output_tokens": 32
+        }
+      ]
+    }
+  ]
+}

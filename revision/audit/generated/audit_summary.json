@@ -1,0 +1,202 @@
+{
+  "source_pdf_sha256": "a20f9000ba22ef3467ac49a29bdbe91057f140971d1b92c404b1546b9daee59a",
+  "claim_groups": 40,
+  "timing_records": 405,
+  "profiler_files": 817,
+  "profiler_lfs_pointers": 817,
+  "missing_registry_patterns": [],
+  "reconciliation": {
+    "canonical_comparison_files": 18,
+    "canonical_window_csvs": 36,
+    "canonical_window_records": 201,
+    "all_window_csv_records": 402,
+    "unique_window_identities": 201,
+    "old_analysis_records": 402,
+    "deduplicated_analysis_records": 201,
+    "multiclass_totals": {
+      "automatic": {
+        "wall_s": 1858.4821102619171,
+        "kernels": 1460211
+      },
+      "fixed_window": {
+        "wall_s": 2437.7306439876556,
+        "kernels": 2759441
+      }
+    },
+    "multiclass_by_scenario": {
+      "compute_saturation": {
+        "automatic_wall_s": 336.7708144187927,
+        "automatic_kernels": 264744,
+        "fixed_window_wall_s": 415.0717284679413,
+        "fixed_window_kernels": 463302
+      },
+      "healthy": {
+        "automatic_wall_s": 301.25469303131104,
+        "automatic_kernels": 189945,
+        "fixed_window_wall_s": 391.8649091720581,
+        "fixed_window_kernels": 344715
+      },
+      "kv_cache_pressure": {
+        "automatic_wall_s": 329.3830096721649,
+        "automatic_kernels": 247290,
+        "fixed_window_wall_s": 449.33665347099304,
+        "fixed_window_kernels": 494580
+      },
+      "long_output": {
+        "automatic_wall_s": 291.00464701652527,
+        "automatic_kernels": 293334,
+        "fixed_window_wall_s": 397.136522769928,
+        "fixed_window_kernels": 586477
+      },
+      "long_prompt": {
+        "automatic_wall_s": 290.3664925098419,
+        "automatic_kernels": 172668,
+        "fixed_window_wall_s": 380.96512174606323,
+        "fixed_window_kernels": 345336
+      },
+      "queue_pressure": {
+        "automatic_wall_s": 309.70245361328125,
+        "automatic_kernels": 292230,
+        "fixed_window_wall_s": 403.355708360672,
+        "fixed_window_kernels": 525031
+      }
+    },
+    "wall_time_saved_percent": 23.761793992883483,
+    "kernel_instances_saved_percent": 47.08308675561463,
+    "l4_microbenchmark_manifests": [
+      {
+        "path": "RQ1/runs/rq1_l4_compare_rep1/experiment_manifest.json",
+        "settings": {
+          "mode": "compare",
+          "workload": "all",
+          "duration_seconds": 20.0,
+          "window_seconds": 5.0,
+          "enable_nsys_bursts": true,
+          "nsys_burst_seconds": 2.0,
+          "fixed_window_nsys_seconds": 8.0,
+          "max_nsys_bursts_per_workload": 1,
+          "fixed_window_bursts_per_workload": 1,
+          "stability_stop_windows": 2
+        }
+      },
+      {
+        "path": "RQ1/runs/rq1_l4_compare_rep2/experiment_manifest.json",
+        "settings": {
+          "mode": "compare",
+          "workload": "all",
+          "duration_seconds": 20.0,
+          "window_seconds": 5.0,
+          "enable_nsys_bursts": true,
+          "nsys_burst_seconds": 2.0,
+          "fixed_window_nsys_seconds": 8.0,
+          "max_nsys_bursts_per_workload": 1,
+          "fixed_window_bursts_per_workload": 1,
+          "stability_stop_windows": 2
+        }
+      },
+      {
+        "path": "RQ1/runs/rq1_l4_compare_rep3/experiment_manifest.json",
+        "settings": {
+          "mode": "compare",
+          "workload": "all",
+          "duration_seconds": 20.0,
+          "window_seconds": 5.0,
+          "enable_nsys_bursts": true,
+          "nsys_burst_seconds": 2.0,
+          "fixed_window_nsys_seconds": 8.0,
+          "max_nsys_bursts_per_workload": 1,
+          "fixed_window_bursts_per_workload": 1,
+          "stability_stop_windows": 2
+        }
+      },
+      {
+        "path": "RQ1/runs/rq1_l4_compare_rep4/experiment_manifest.json",
+        "settings": {
+          "mode": "compare",
+          "workload": "all",
+          "duration_seconds": 20.0,
+          "window_seconds": 5.0,
+          "enable_nsys_bursts": true,
+          "nsys_burst_seconds": 2.0,
+          "fixed_window_nsys_seconds": 8.0,
+          "max_nsys_bursts_per_workload": 1,
+          "fixed_window_bursts_per_workload": 1,
+          "stability_stop_windows": 2
+        }
+      },
+      {
+        "path": "RQ1/runs/rq1_l4_compare_rep5/experiment_manifest.json",
+        "settings": {
+          "mode": "compare",
+          "workload": "all",
+          "duration_seconds": 20.0,
+          "window_seconds": 5.0,
+          "enable_nsys_bursts": true,
+          "nsys_burst_seconds": 2.0,
+          "fixed_window_nsys_seconds": 8.0,
+          "max_nsys_bursts_per_workload": 1,
+          "fixed_window_bursts_per_workload": 1,
+          "stability_stop_windows": 2
+        }
+      }
+    ],
+    "enriched_signal_checks": {
+      "diagnosis_stable_2": {
+        "signal": "diagnosis_stable_2",
+        "correct_stop_precision": 1.0,
+        "correct_stop_recall": 0.86,
+        "correct_stop_f1": 0.925,
+        "ambiguous_stop_precision": 0.0,
+        "ambiguous_stop_recall": 0.0,
+        "ambiguous_stop_f1": 0.0,
+        "predicted_positive": 111,
+        "support_correct": 129,
+        "support_ambiguous": 0,
+        "rank": 3
+      },
+      "diagnosis_confident": {
+        "signal": "diagnosis_confident",
+        "correct_stop_precision": 1.0,
+        "correct_stop_recall": 0.465,
+        "correct_stop_f1": 0.635,
+        "ambiguous_stop_precision": 0.0,
+        "ambiguous_stop_recall": 0.0,
+        "ambiguous_stop_f1": 0.0,
+        "predicted_positive": 60,
+        "support_correct": 129,
+        "support_ambiguous": 0,
+        "rank": 6
+      },
+      "diagnosis_changed_from_previous": {
+        "signal": "diagnosis_changed_from_previous",
+        "correct_stop_precision": 0.0,
+        "correct_stop_recall": 0.0,
+        "correct_stop_f1": 0.0,
+        "ambiguous_stop_precision": 0.0,
+        "ambiguous_stop_recall": 0.0,
+        "ambiguous_stop_f1": 0.0,
+        "predicted_positive": 0,
+        "support_correct": 129,
+        "support_ambiguous": 0,
+        "rank": 8
+      }
+    },
+    "raw_request_overhead_checks": {
+      "RQ3/runs/vllm_runtime_overhead_healthy_randomized/runtime_overhead_summary_1781728906.json": {
+        "repetitions": 3,
+        "p95_mean": 0.6459367540989894,
+        "historical_normal_ci_half_width": 1.9386396403704749,
+        "max_raw_vs_saved_difference": 9.103828801926284e-15
+      },
+      "RQ3/runs/vllm_runtime_overhead_queue_pressure_randomized_5rep/runtime_overhead_summary_1781728923.json": {
+        "repetitions": 5,
+        "p95_mean": -3.5559264581635075,
+        "historical_normal_ci_half_width": 6.267169586282644,
+        "max_raw_vs_saved_difference": 8.43769498715119e-15
+      }
+    }
+  },
+  "limits": "Local artifact audit; no GPU runs, LFS download, raw profiler export, or independent production diagnosis validation.",
+  "repository_head_at_audit": "3ee0a1dfcef1fb6498e303decb42e39a1b1a24bb",
+  "code_provenance_limit": "Per-run source commits are absent; repository code supports reconstruction, not proof of exact historical executable identity."
+}

@@ -1,0 +1,5565 @@
+{
+  "version": "cpu_arm_lifecycle_v1",
+  "validation": "cpu_fixture_only",
+  "gpu_used": false,
+  "valid_for_paper": false,
+  "status": "completed",
+  "arm": {
+    "name": "hybrid_stop",
+    "capture_mode": "bounded",
+    "cheap_sampling": true,
+    "controller_mode": "policy"
+  },
+  "comparison_contract": {
+    "schedule_file_sha256": "e762785e3913108cacdeae4a058538ce4508317a473d9129b7caa5535a2009ea",
+    "schedule_content_sha256": "41b92b3e63690c4b9982cc1f344951593591ccd5f5083795963d405a51a0a338",
+    "duration_ns": 400000000,
+    "playback_config": {
+      "max_inflight": 8,
+      "request_timeout_s": 1,
+      "drain_s": 0.05,
+      "max_admission_lateness_s": 0.05,
+      "window_s": 0.05,
+      "grace_s": 0.005,
+      "min_latency_samples": 1,
+      "sample_interval_s": 0.01,
+      "sample_timeout_s": 0.2,
+      "telemetry_queue_size": 64,
+      "tick_s": 0.001
+    },
+    "target_work_s": 0.05,
+    "target_report_s": 0.005,
+    "shared_policy_config": {
+      "stability_windows": 2,
+      "repeated_bursts": 3,
+      "max_bursts": 3,
+      "recovery_windows": 2,
+      "recovery_latency_ratio": 1.1,
+      "recovery_gpu_util": 60.0
+    },
+    "requested_burst_s": 0.01,
+    "warmup_count": 2,
+    "warmup_request": {
+      "model": "fixture",
+      "prompt": "Common warmup fixture",
+      "max_tokens": 1,
+      "stream": false,
+      "temperature": 0
+    }
+  },
+  "comparison_contract_sha256": "12f810b003089fed11af74dafe84d4562ff7e590bd0fb49584ba12974055e474",
+  "policy_config": {
+    "stability_windows": 2,
+    "repeated_bursts": 3,
+    "max_bursts": 3,
+    "recovery_windows": 2,
+    "recovery_latency_ratio": 1.1,
+    "recovery_gpu_util": 60.0
+  },
+  "session_config": {
+    "startup_s": 3,
+    "quiescence_s": 1,
+    "quiet_hold_s": 0.01,
+    "quiet_observations": 2,
+    "poll_s": 0.005,
+    "command_timeout_s": 0.5,
+    "cleanup_grace_s": 0.15,
+    "cleanup_timeout_s": 2,
+    "work_s": 0.05,
+    "report_s": 0.005
+  },
+  "errors": [],
+  "session": {
+    "validation": "cpu_fixture_only",
+    "nonce": "e018084bc01944b4b99f45be0828827e",
+    "instance": "fab80ff6cab04d92a15d4798be73a3a4",
+    "generation": 3,
+    "capture_mode": "bounded",
+    "pid": 70883,
+    "endpoint": "http://127.0.0.1:64093",
+    "events": [
+      {
+        "event": "target_started",
+        "at_ns": 181502069543894,
+        "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+        "pid": 70883,
+        "command": [
+          "/usr/local/bin/python3",
+          "/Users/snehpatel/Documents/University/research/gpu_adaptive_tracing/revision/scripts/fake_serving_target.py",
+          "--ready",
+          "/Users/snehpatel/Documents/University/research/gpu_adaptive_tracing/revision/examples/arm_lifecycle_demo/hybrid_stop/target/ready.json",
+          "--nonce",
+          "e018084bc01944b4b99f45be0828827e",
+          "--capture-mode",
+          "bounded",
+          "--work-s",
+          "0.05",
+          "--report-s",
+          "0.005",
+          "--fault",
+          "normal"
+        ]
+      },
+      {
+        "event": "target_ready",
+        "at_ns": 181502406923441,
+        "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+        "pid": 70883,
+        "instance": "fab80ff6cab04d92a15d4798be73a3a4"
+      },
+      {
+        "event": "quiescence_confirmed",
+        "at_ns": 181502422982653,
+        "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+        "phase": "before_reset",
+        "observations": 3
+      },
+      {
+        "event": "reset_acknowledged",
+        "at_ns": 181502424408490,
+        "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+        "reset_token": "276e429e6159437b83bfa83c1e97fecd",
+        "generation": 1
+      },
+      {
+        "event": "quiescence_confirmed",
+        "at_ns": 181502439500018,
+        "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+        "phase": "after_reset",
+        "observations": 3
+      },
+      {
+        "event": "quiescence_confirmed",
+        "at_ns": 181502471165051,
+        "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+        "phase": "before_reset",
+        "observations": 3
+      },
+      {
+        "event": "reset_acknowledged",
+        "at_ns": 181502478727649,
+        "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+        "reset_token": "ebf7c92f2c9f4628acfb6fc48d9a7112",
+        "generation": 2
+      },
+      {
+        "event": "quiescence_confirmed",
+        "at_ns": 181502494194988,
+        "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+        "phase": "after_reset",
+        "observations": 2
+      },
+      {
+        "event": "quiescence_confirmed",
+        "at_ns": 181503000905328,
+        "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+        "phase": "post_workload",
+        "observations": 3
+      },
+      {
+        "event": "quiescence_confirmed",
+        "at_ns": 181503017651331,
+        "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+        "phase": "before_reset",
+        "observations": 3
+      },
+      {
+        "event": "reset_acknowledged",
+        "at_ns": 181503019875055,
+        "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+        "reset_token": "80238d8996974103927f5fbaa8b468d4",
+        "generation": 3
+      },
+      {
+        "event": "quiescence_confirmed",
+        "at_ns": 181503037729807,
+        "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+        "phase": "after_reset",
+        "observations": 3
+      },
+      {
+        "event": "owned_term_sent",
+        "at_ns": 181503038119179,
+        "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a"
+      },
+      {
+        "event": "group_visibility_unknown",
+        "at_ns": 181503072973975,
+        "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+        "pid": 70883
+      },
+      {
+        "event": "owned_cleanup_complete",
+        "at_ns": 181503078469039,
+        "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+        "started_at_ns": 181503038049184,
+        "finished_at_ns": 181503078460846,
+        "escalated": false,
+        "returncode": 0,
+        "group_alive": false
+      }
+    ],
+    "quiescence_checks": [
+      {
+        "phase": "before_reset",
+        "checks": [
+          {
+            "received_at_ns": 181502408632800,
+            "quiet": true,
+            "status": {
+              "protocol": "cpu_arm_target_v1",
+              "source": "cpu_fake_target",
+              "nonce": "e018084bc01944b4b99f45be0828827e",
+              "instance": "fab80ff6cab04d92a15d4798be73a3a4",
+              "pid": 70883,
+              "generation": 0,
+              "capture_mode": "bounded",
+              "running": 0,
+              "queued": 0,
+              "inflight": 0,
+              "capture_active": false,
+              "report_pending": 0,
+              "completed": 0,
+              "capture_starts": 0,
+              "capture_stops": 0
+            }
+          },
+          {
+            "received_at_ns": 181502415926153,
+            "quiet": true,
+            "status": {
+              "protocol": "cpu_arm_target_v1",
+              "source": "cpu_fake_target",
+              "nonce": "e018084bc01944b4b99f45be0828827e",
+              "instance": "fab80ff6cab04d92a15d4798be73a3a4",
+              "pid": 70883,
+              "generation": 0,
+              "capture_mode": "bounded",
+              "running": 0,
+              "queued": 0,
+              "inflight": 0,
+              "capture_active": false,
+              "report_pending": 0,
+              "completed": 0,
+              "capture_starts": 0,
+              "capture_stops": 0
+            }
+          },
+          {
+            "received_at_ns": 181502422971462,
+            "quiet": true,
+            "status": {
+              "protocol": "cpu_arm_target_v1",
+              "source": "cpu_fake_target",
+              "nonce": "e018084bc01944b4b99f45be0828827e",
+              "instance": "fab80ff6cab04d92a15d4798be73a3a4",
+              "pid": 70883,
+              "generation": 0,
+              "capture_mode": "bounded",
+              "running": 0,
+              "queued": 0,
+              "inflight": 0,
+              "capture_active": false,
+              "report_pending": 0,
+              "completed": 0,
+              "capture_starts": 0,
+              "capture_stops": 0
+            }
+          }
+        ]
+      },
+      {
+        "phase": "after_reset",
+        "checks": [
+          {
+            "received_at_ns": 181502425624554,
+            "quiet": true,
+            "status": {
+              "protocol": "cpu_arm_target_v1",
+              "source": "cpu_fake_target",
+              "nonce": "e018084bc01944b4b99f45be0828827e",
+              "instance": "fab80ff6cab04d92a15d4798be73a3a4",
+              "pid": 70883,
+              "generation": 1,
+              "capture_mode": "bounded",
+              "running": 0,
+              "queued": 0,
+              "inflight": 0,
+              "capture_active": false,
+              "report_pending": 0,
+              "completed": 0,
+              "capture_starts": 0,
+              "capture_stops": 0
+            }
+          },
+          {
+            "received_at_ns": 181502432545014,
+            "quiet": true,
+            "status": {
+              "protocol": "cpu_arm_target_v1",
+              "source": "cpu_fake_target",
+              "nonce": "e018084bc01944b4b99f45be0828827e",
+              "instance": "fab80ff6cab04d92a15d4798be73a3a4",
+              "pid": 70883,
+              "generation": 1,
+              "capture_mode": "bounded",
+              "running": 0,
+              "queued": 0,
+              "inflight": 0,
+              "capture_active": false,
+              "report_pending": 0,
+              "completed": 0,
+              "capture_starts": 0,
+              "capture_stops": 0
+            }
+          },
+          {
+            "received_at_ns": 181502439490644,
+            "quiet": true,
+            "status": {
+              "protocol": "cpu_arm_target_v1",
+              "source": "cpu_fake_target",
+              "nonce": "e018084bc01944b4b99f45be0828827e",
+              "instance": "fab80ff6cab04d92a15d4798be73a3a4",
+              "pid": 70883,
+              "generation": 1,
+              "capture_mode": "bounded",
+              "running": 0,
+              "queued": 0,
+              "inflight": 0,
+              "capture_active": false,
+              "report_pending": 0,
+              "completed": 0,
+              "capture_starts": 0,
+              "capture_stops": 0
+            }
+          }
+        ]
+      },
+      {
+        "phase": "before_reset",
+        "checks": [
+          {
+            "received_at_ns": 181502455689077,
+            "quiet": true,
+            "status": {
+              "protocol": "cpu_arm_target_v1",
+              "source": "cpu_fake_target",
+              "nonce": "e018084bc01944b4b99f45be0828827e",
+              "instance": "fab80ff6cab04d92a15d4798be73a3a4",
+              "pid": 70883,
+              "generation": 1,
+              "capture_mode": "bounded",
+              "running": 0,
+              "queued": 0,
+              "inflight": 0,
+              "capture_active": false,
+              "report_pending": 0,
+              "completed": 2,
+              "capture_starts": 0,
+              "capture_stops": 0
+            }
+          },
+          {
+            "received_at_ns": 181502462501829,
+            "quiet": true,
+            "status": {
+              "protocol": "cpu_arm_target_v1",
+              "source": "cpu_fake_target",
+              "nonce": "e018084bc01944b4b99f45be0828827e",
+              "instance": "fab80ff6cab04d92a15d4798be73a3a4",
+              "pid": 70883,
+              "generation": 1,
+              "capture_mode": "bounded",
+              "running": 0,
+              "queued": 0,
+              "inflight": 0,
+              "capture_active": false,
+              "report_pending": 0,
+              "completed": 2,
+              "capture_starts": 0,
+              "capture_stops": 0
+            }
+          },
+          {
+            "received_at_ns": 181502471152708,
+            "quiet": true,
+            "status": {
+              "protocol": "cpu_arm_target_v1",
+              "source": "cpu_fake_target",
+              "nonce": "e018084bc01944b4b99f45be0828827e",
+              "instance": "fab80ff6cab04d92a15d4798be73a3a4",
+              "pid": 70883,
+              "generation": 1,
+              "capture_mode": "bounded",
+              "running": 0,
+              "queued": 0,
+              "inflight": 0,
+              "capture_active": false,
+              "report_pending": 0,
+              "completed": 2,
+              "capture_starts": 0,
+              "capture_stops": 0
+            }
+          }
+        ]
+      },
+      {
+        "phase": "after_reset",
+        "checks": [
+          {
+            "received_at_ns": 181502482898521,
+            "quiet": true,
+            "status": {
+              "protocol": "cpu_arm_target_v1",
+              "source": "cpu_fake_target",
+              "nonce": "e018084bc01944b4b99f45be0828827e",
+              "instance": "fab80ff6cab04d92a15d4798be73a3a4",
+              "pid": 70883,
+              "generation": 2,
+              "capture_mode": "bounded",
+              "running": 0,
+              "queued": 0,
+              "inflight": 0,
+              "capture_active": false,
+              "report_pending": 0,
+              "completed": 0,
+              "capture_starts": 0,
+              "capture_stops": 0
+            }
+          },
+          {
+            "received_at_ns": 181502494178406,
+            "quiet": true,
+            "status": {
+              "protocol": "cpu_arm_target_v1",
+              "source": "cpu_fake_target",
+              "nonce": "e018084bc01944b4b99f45be0828827e",
+              "instance": "fab80ff6cab04d92a15d4798be73a3a4",
+              "pid": 70883,
+              "generation": 2,
+              "capture_mode": "bounded",
+              "running": 0,
+              "queued": 0,
+              "inflight": 0,
+              "capture_active": false,
+              "report_pending": 0,
+              "completed": 0,
+              "capture_starts": 0,
+              "capture_stops": 0
+            }
+          }
+        ]
+      },
+      {
+        "phase": "post_workload",
+        "checks": [
+          {
+            "received_at_ns": 181502953628272,
+            "quiet": false,
+            "status": {
+              "protocol": "cpu_arm_target_v1",
+              "source": "cpu_fake_target",
+              "nonce": "e018084bc01944b4b99f45be0828827e",
+              "instance": "fab80ff6cab04d92a15d4798be73a3a4",
+              "pid": 70883,
+              "generation": 2,
+              "capture_mode": "bounded",
+              "running": 2,
+              "queued": 0,
+              "inflight": 2,
+              "capture_active": false,
+              "report_pending": 0,
+              "completed": 16,
+              "capture_starts": 3,
+              "capture_stops": 3
+            }
+          },
+          {
+            "received_at_ns": 181502961674606,
+            "quiet": false,
+            "status": {
+              "protocol": "cpu_arm_target_v1",
+              "source": "cpu_fake_target",
+              "nonce": "e018084bc01944b4b99f45be0828827e",
+              "instance": "fab80ff6cab04d92a15d4798be73a3a4",
+              "pid": 70883,
+              "generation": 2,
+              "capture_mode": "bounded",
+              "running": 2,
+              "queued": 0,
+              "inflight": 2,
+              "capture_active": false,
+              "report_pending": 0,
+              "completed": 16,
+              "capture_starts": 3,
+              "capture_stops": 3
+            }
+          },
+          {
+            "received_at_ns": 181502969319200,
+            "quiet": false,
+            "status": {
+              "protocol": "cpu_arm_target_v1",
+              "source": "cpu_fake_target",
+              "nonce": "e018084bc01944b4b99f45be0828827e",
+              "instance": "fab80ff6cab04d92a15d4798be73a3a4",
+              "pid": 70883,
+              "generation": 2,
+              "capture_mode": "bounded",
+              "running": 1,
+              "queued": 0,
+              "inflight": 1,
+              "capture_active": false,
+              "report_pending": 0,
+              "completed": 17,
+              "capture_starts": 3,
+              "capture_stops": 3
+            }
+          },
+          {
+            "received_at_ns": 181502979011658,
+            "quiet": false,
+            "status": {
+              "protocol": "cpu_arm_target_v1",
+              "source": "cpu_fake_target",
+              "nonce": "e018084bc01944b4b99f45be0828827e",
+              "instance": "fab80ff6cab04d92a15d4798be73a3a4",
+              "pid": 70883,
+              "generation": 2,
+              "capture_mode": "bounded",
+              "running": 1,
+              "queued": 0,
+              "inflight": 1,
+              "capture_active": false,
+              "report_pending": 0,
+              "completed": 17,
+              "capture_starts": 3,
+              "capture_stops": 3
+            }
+          },
+          {
+            "received_at_ns": 181502985803954,
+            "quiet": true,
+            "status": {
+              "protocol": "cpu_arm_target_v1",
+              "source": "cpu_fake_target",
+              "nonce": "e018084bc01944b4b99f45be0828827e",
+              "instance": "fab80ff6cab04d92a15d4798be73a3a4",
+              "pid": 70883,
+              "generation": 2,
+              "capture_mode": "bounded",
+              "running": 0,
+              "queued": 0,
+              "inflight": 0,
+              "capture_active": false,
+              "report_pending": 0,
+              "completed": 18,
+              "capture_starts": 3,
+              "capture_stops": 3
+            }
+          },
+          {
+            "received_at_ns": 181502993760638,
+            "quiet": true,
+            "status": {
+              "protocol": "cpu_arm_target_v1",
+              "source": "cpu_fake_target",
+              "nonce": "e018084bc01944b4b99f45be0828827e",
+              "instance": "fab80ff6cab04d92a15d4798be73a3a4",
+              "pid": 70883,
+              "generation": 2,
+              "capture_mode": "bounded",
+              "running": 0,
+              "queued": 0,
+              "inflight": 0,
+              "capture_active": false,
+              "report_pending": 0,
+              "completed": 18,
+              "capture_starts": 3,
+              "capture_stops": 3
+            }
+          },
+          {
+            "received_at_ns": 181503000892188,
+            "quiet": true,
+            "status": {
+              "protocol": "cpu_arm_target_v1",
+              "source": "cpu_fake_target",
+              "nonce": "e018084bc01944b4b99f45be0828827e",
+              "instance": "fab80ff6cab04d92a15d4798be73a3a4",
+              "pid": 70883,
+              "generation": 2,
+              "capture_mode": "bounded",
+              "running": 0,
+              "queued": 0,
+              "inflight": 0,
+              "capture_active": false,
+              "report_pending": 0,
+              "completed": 18,
+              "capture_starts": 3,
+              "capture_stops": 3
+            }
+          }
+        ]
+      },
+      {
+        "phase": "before_reset",
+        "checks": [
+          {
+            "received_at_ns": 181503003424533,
+            "quiet": true,
+            "status": {
+              "protocol": "cpu_arm_target_v1",
+              "source": "cpu_fake_target",
+              "nonce": "e018084bc01944b4b99f45be0828827e",
+              "instance": "fab80ff6cab04d92a15d4798be73a3a4",
+              "pid": 70883,
+              "generation": 2,
+              "capture_mode": "bounded",
+              "running": 0,
+              "queued": 0,
+              "inflight": 0,
+              "capture_active": false,
+              "report_pending": 0,
+              "completed": 18,
+              "capture_starts": 3,
+              "capture_stops": 3
+            }
+          },
+          {
+            "received_at_ns": 181503010732668,
+            "quiet": true,
+            "status": {
+              "protocol": "cpu_arm_target_v1",
+              "source": "cpu_fake_target",
+              "nonce": "e018084bc01944b4b99f45be0828827e",
+              "instance": "fab80ff6cab04d92a15d4798be73a3a4",
+              "pid": 70883,
+              "generation": 2,
+              "capture_mode": "bounded",
+              "running": 0,
+              "queued": 0,
+              "inflight": 0,
+              "capture_active": false,
+              "report_pending": 0,
+              "completed": 18,
+              "capture_starts": 3,
+              "capture_stops": 3
+            }
+          },
+          {
+            "received_at_ns": 181503017641066,
+            "quiet": true,
+            "status": {
+              "protocol": "cpu_arm_target_v1",
+              "source": "cpu_fake_target",
+              "nonce": "e018084bc01944b4b99f45be0828827e",
+              "instance": "fab80ff6cab04d92a15d4798be73a3a4",
+              "pid": 70883,
+              "generation": 2,
+              "capture_mode": "bounded",
+              "running": 0,
+              "queued": 0,
+              "inflight": 0,
+              "capture_active": false,
+              "report_pending": 0,
+              "completed": 18,
+              "capture_starts": 3,
+              "capture_stops": 3
+            }
+          }
+        ]
+      },
+      {
+        "phase": "after_reset",
+        "checks": [
+          {
+            "received_at_ns": 181503021328273,
+            "quiet": true,
+            "status": {
+              "protocol": "cpu_arm_target_v1",
+              "source": "cpu_fake_target",
+              "nonce": "e018084bc01944b4b99f45be0828827e",
+              "instance": "fab80ff6cab04d92a15d4798be73a3a4",
+              "pid": 70883,
+              "generation": 3,
+              "capture_mode": "bounded",
+              "running": 0,
+              "queued": 0,
+              "inflight": 0,
+              "capture_active": false,
+              "report_pending": 0,
+              "completed": 0,
+              "capture_starts": 0,
+              "capture_stops": 0
+            }
+          },
+          {
+            "received_at_ns": 181503029741675,
+            "quiet": true,
+            "status": {
+              "protocol": "cpu_arm_target_v1",
+              "source": "cpu_fake_target",
+              "nonce": "e018084bc01944b4b99f45be0828827e",
+              "instance": "fab80ff6cab04d92a15d4798be73a3a4",
+              "pid": 70883,
+              "generation": 3,
+              "capture_mode": "bounded",
+              "running": 0,
+              "queued": 0,
+              "inflight": 0,
+              "capture_active": false,
+              "report_pending": 0,
+              "completed": 0,
+              "capture_starts": 0,
+              "capture_stops": 0
+            }
+          },
+          {
+            "received_at_ns": 181503037716549,
+            "quiet": true,
+            "status": {
+              "protocol": "cpu_arm_target_v1",
+              "source": "cpu_fake_target",
+              "nonce": "e018084bc01944b4b99f45be0828827e",
+              "instance": "fab80ff6cab04d92a15d4798be73a3a4",
+              "pid": 70883,
+              "generation": 3,
+              "capture_mode": "bounded",
+              "running": 0,
+              "queued": 0,
+              "inflight": 0,
+              "capture_active": false,
+              "report_pending": 0,
+              "completed": 0,
+              "capture_starts": 0,
+              "capture_stops": 0
+            }
+          }
+        ]
+      }
+    ],
+    "cleanup": {
+      "started_at_ns": 181503038049184,
+      "finished_at_ns": 181503078460846,
+      "escalated": false,
+      "returncode": 0,
+      "group_alive": false
+    }
+  },
+  "sampler": {
+    "source": "cpu_fixture",
+    "instance": "1856c3e27f834f9ca0fbbea0b21f938f",
+    "closed": true,
+    "reads": 40
+  },
+  "controller": {
+    "controller_version": "streaming_v4",
+    "policy_version": "stopping_v3",
+    "evidence_mode": "synthetic_simulation",
+    "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+    "state": "idle",
+    "finished": true,
+    "baseline": {
+      "p95_latency_ms": 6.9935965499999995,
+      "source_id": "/Users/snehpatel/Documents/University/research/gpu_adaptive_tracing/revision/examples/arm_lifecycle_demo/hybrid_stop/warmup_requests.json",
+      "throughput_rps": null
+    },
+    "config": {
+      "policy": "hybrid_stop",
+      "policy_config": {
+        "stability_windows": 2,
+        "repeated_bursts": 3,
+        "max_bursts": 3,
+        "recovery_windows": 2,
+        "recovery_latency_ratio": 1.1,
+        "recovery_gpu_util": 60.0
+      },
+      "latency_trigger_ratio": 1.5,
+      "gpu_trigger_percent": 85.0,
+      "gpu_trigger_windows": 2,
+      "burst_s": 0.01,
+      "startup_timeout_s": 1,
+      "evidence_timeout_s": 1,
+      "cooldown_s": 0.02,
+      "change_ratio_factor": 1.5,
+      "change_gpu_points": 20.0,
+      "retry_unresolved": false,
+      "reactivation_enabled": false
+    },
+    "episodes": [
+      {
+        "episode_id": "episode-1",
+        "started_at_ns": 181502601351215,
+        "attempts": [
+          "episode-1:capture-1",
+          "episode-1:capture-2",
+          "episode-1:capture-3"
+        ],
+        "decisions": [
+          {
+            "decision": {
+              "stop": false,
+              "reason": "continue",
+              "policy": "hybrid_stop",
+              "bursts": 1,
+              "diagnosis_streak": 0,
+              "recovery_streak": 0,
+              "diagnosis_label": null,
+              "policy_condition_met": false
+            },
+            "capture_id": "episode-1:capture-1",
+            "evidence_id": "da955ee738f15b602e182956273f5251ba669b38c81a5b5762cd168fd9dc6764",
+            "evidence_ready_at_ns": 181502630043635,
+            "decision_ready_at_ns": 181502630335115,
+            "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+            "status": "ok",
+            "error": null,
+            "provenance": "synthetic_simulation"
+          },
+          {
+            "decision": {
+              "stop": false,
+              "reason": "continue",
+              "policy": "hybrid_stop",
+              "bursts": 2,
+              "diagnosis_streak": 0,
+              "recovery_streak": 0,
+              "diagnosis_label": null,
+              "policy_condition_met": false
+            },
+            "capture_id": "episode-1:capture-2",
+            "evidence_id": "3a558aa938451d613c759d455f7534e96703836f6985d113690b44d023bb22c3",
+            "evidence_ready_at_ns": 181502660892991,
+            "decision_ready_at_ns": 181502661132022,
+            "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+            "status": "ok",
+            "error": null,
+            "provenance": "synthetic_simulation"
+          },
+          {
+            "decision": {
+              "stop": true,
+              "reason": "budget_exhausted",
+              "policy": "hybrid_stop",
+              "bursts": 3,
+              "diagnosis_streak": 0,
+              "recovery_streak": 0,
+              "diagnosis_label": null,
+              "policy_condition_met": false
+            },
+            "capture_id": "episode-1:capture-3",
+            "evidence_id": "1b5ccd2bea9b963d6bb3f5b3157151251522fa8a83b2908d0fa4fe9ab62c733d",
+            "evidence_ready_at_ns": 181502683041406,
+            "decision_ready_at_ns": 181502683163048,
+            "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+            "status": "ok",
+            "error": null,
+            "provenance": "synthetic_simulation"
+          }
+        ],
+        "round_number": 1,
+        "reactivation_attempts": 0,
+        "recovery_streak": 0,
+        "last_diagnosis": null,
+        "stop_reason": "budget_exhausted",
+        "stopped_at_ns": 181502683180831,
+        "stop_signature": [
+          9.7248864034057,
+          90.0,
+          40.0
+        ],
+        "ended_at_ns": 181502895824945,
+        "end_reason": "horizon_ended"
+      }
+    ],
+    "capture_timings": {
+      "episode-1:capture-1": {
+        "server_startup_s": null,
+        "target_initialization_s": null,
+        "workload_span_s": null,
+        "shutdown_s": null,
+        "capture_control_window_s": 0.022570346,
+        "profile_process_wall_s": null,
+        "report_finalization_s": null,
+        "stats_command_s": null,
+        "summary_parse_s": 0.000152174,
+        "diagnosis_compute_s": 3.0416e-05,
+        "lifecycle_total_s": null,
+        "evidence_collection_s": 0.028456949,
+        "capture_active_s": null,
+        "capture_active_status": "unavailable",
+        "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+        "timing_provenance": "synthetic_simulation",
+        "timing_schema_version": "timing_v1",
+        "phase_status": {
+          "server_startup": null,
+          "target_initialization": null,
+          "workload_span": null,
+          "shutdown": null,
+          "capture_control_window": "ok",
+          "profile_process_wall": null,
+          "report_finalization": null,
+          "stats_command": null,
+          "summary_parse": "ok",
+          "diagnosis_compute": "ok",
+          "lifecycle_total": null,
+          "evidence_collection": "ok"
+        },
+        "evidence_ready_at_ns": 181502630043635,
+        "decision_ready_at_ns": 181502630335115
+      },
+      "episode-1:capture-2": {
+        "server_startup_s": null,
+        "target_initialization_s": null,
+        "workload_span_s": null,
+        "shutdown_s": null,
+        "capture_control_window_s": 0.027147758,
+        "profile_process_wall_s": null,
+        "report_finalization_s": null,
+        "stats_command_s": null,
+        "summary_parse_s": 8.8537e-05,
+        "diagnosis_compute_s": 3.235e-05,
+        "lifecycle_total_s": null,
+        "evidence_collection_s": 0.030480476,
+        "capture_active_s": null,
+        "capture_active_status": "unavailable",
+        "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+        "timing_provenance": "synthetic_simulation",
+        "timing_schema_version": "timing_v1",
+        "phase_status": {
+          "server_startup": null,
+          "target_initialization": null,
+          "workload_span": null,
+          "shutdown": null,
+          "capture_control_window": "ok",
+          "profile_process_wall": null,
+          "report_finalization": null,
+          "stats_command": null,
+          "summary_parse": "ok",
+          "diagnosis_compute": "ok",
+          "lifecycle_total": null,
+          "evidence_collection": "ok"
+        },
+        "evidence_ready_at_ns": 181502660892991,
+        "decision_ready_at_ns": 181502661132022
+      },
+      "episode-1:capture-3": {
+        "server_startup_s": null,
+        "target_initialization_s": null,
+        "workload_span_s": null,
+        "shutdown_s": null,
+        "capture_control_window_s": 0.018687878,
+        "profile_process_wall_s": null,
+        "report_finalization_s": null,
+        "stats_command_s": null,
+        "summary_parse_s": 6.3596e-05,
+        "diagnosis_compute_s": 1.6924e-05,
+        "lifecycle_total_s": null,
+        "evidence_collection_s": 0.02183973,
+        "capture_active_s": null,
+        "capture_active_status": "unavailable",
+        "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+        "timing_provenance": "synthetic_simulation",
+        "timing_schema_version": "timing_v1",
+        "phase_status": {
+          "server_startup": null,
+          "target_initialization": null,
+          "workload_span": null,
+          "shutdown": null,
+          "capture_control_window": "ok",
+          "profile_process_wall": null,
+          "report_finalization": null,
+          "stats_command": null,
+          "summary_parse": "ok",
+          "diagnosis_compute": "ok",
+          "lifecycle_total": null,
+          "evidence_collection": "ok"
+        },
+        "evidence_ready_at_ns": 181502683041406,
+        "decision_ready_at_ns": 181502683163048
+      }
+    },
+    "events": [
+      {
+        "sequence": 0,
+        "event": "cheap_window_available",
+        "timestamp_ns": 181502551324315,
+        "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+        "provenance": "synthetic_simulation",
+        "state": "idle",
+        "episode_id": null,
+        "window_id": "window-0",
+        "window_start_ns": 181502495005388,
+        "window_end_ns": 181502545005388,
+        "available_at_ns": 181502551088583,
+        "sample_count": 0,
+        "request_count": null,
+        "request_error_count": null,
+        "gpu_sample_count": 5,
+        "outstanding_request_count": null,
+        "oldest_pending_ms": null,
+        "p95_latency_ms": null,
+        "gpu_util": 90.0,
+        "throughput_rps": 0.0,
+        "latency_ratio": null,
+        "suspicious": null,
+        "suspicion_reasons": []
+      },
+      {
+        "sequence": 1,
+        "event": "cheap_window_available",
+        "timestamp_ns": 181502601318678,
+        "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+        "provenance": "synthetic_simulation",
+        "state": "idle",
+        "episode_id": null,
+        "window_id": "window-1",
+        "window_start_ns": 181502545005388,
+        "window_end_ns": 181502595005388,
+        "available_at_ns": 181502601088895,
+        "sample_count": 2,
+        "request_count": null,
+        "request_error_count": null,
+        "gpu_sample_count": 5,
+        "outstanding_request_count": null,
+        "oldest_pending_ms": null,
+        "p95_latency_ms": 54.6635538,
+        "gpu_util": 90.0,
+        "throughput_rps": 40.0,
+        "latency_ratio": 7.81622923329771,
+        "suspicious": true,
+        "suspicion_reasons": [
+          "latency_regression",
+          "sustained_gpu_saturation_with_elevated_latency"
+        ]
+      },
+      {
+        "sequence": 2,
+        "event": "episode_started",
+        "timestamp_ns": 181502601365411,
+        "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+        "provenance": "synthetic_simulation",
+        "state": "idle",
+        "episode_id": "episode-1",
+        "window_id": "window-1"
+      },
+      {
+        "sequence": 3,
+        "event": "state_changed",
+        "timestamp_ns": 181502601448038,
+        "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+        "provenance": "synthetic_simulation",
+        "state": "suspicious",
+        "episode_id": "episode-1",
+        "previous_state": "idle"
+      },
+      {
+        "sequence": 4,
+        "event": "state_changed",
+        "timestamp_ns": 181502601570047,
+        "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+        "provenance": "synthetic_simulation",
+        "state": "starting",
+        "episode_id": "episode-1",
+        "previous_state": "suspicious"
+      },
+      {
+        "sequence": 5,
+        "event": "capture_requested",
+        "timestamp_ns": 181502601579657,
+        "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+        "provenance": "synthetic_simulation",
+        "state": "starting",
+        "episode_id": "episode-1",
+        "capture_id": "episode-1:capture-1",
+        "window_id": "window-1",
+        "round_number": 1
+      },
+      {
+        "sequence": 6,
+        "event": "state_changed",
+        "timestamp_ns": 181502606607973,
+        "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+        "provenance": "synthetic_simulation",
+        "state": "tracing",
+        "episode_id": "episode-1",
+        "previous_state": "starting"
+      },
+      {
+        "sequence": 7,
+        "event": "state_changed",
+        "timestamp_ns": 181502617426340,
+        "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+        "provenance": "synthetic_simulation",
+        "state": "evaluating",
+        "episode_id": "episode-1",
+        "previous_state": "tracing"
+      },
+      {
+        "sequence": 8,
+        "event": "policy_decision",
+        "timestamp_ns": 181502630354867,
+        "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+        "provenance": "synthetic_simulation",
+        "state": "evaluating",
+        "episode_id": "episode-1",
+        "capture_id": "episode-1:capture-1",
+        "reason": "continue",
+        "decision_status": "ok",
+        "evidence_ready_at_ns": 181502630043635,
+        "diagnosis_label": null
+      },
+      {
+        "sequence": 9,
+        "event": "state_changed",
+        "timestamp_ns": 181502630369142,
+        "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+        "provenance": "synthetic_simulation",
+        "state": "suspicious",
+        "episode_id": "episode-1",
+        "previous_state": "evaluating"
+      },
+      {
+        "sequence": 10,
+        "event": "state_changed",
+        "timestamp_ns": 181502630394571,
+        "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+        "provenance": "synthetic_simulation",
+        "state": "starting",
+        "episode_id": "episode-1",
+        "previous_state": "suspicious"
+      },
+      {
+        "sequence": 11,
+        "event": "capture_requested",
+        "timestamp_ns": 181502630407184,
+        "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+        "provenance": "synthetic_simulation",
+        "state": "starting",
+        "episode_id": "episode-1",
+        "capture_id": "episode-1:capture-2",
+        "window_id": "window-1",
+        "round_number": 1
+      },
+      {
+        "sequence": 12,
+        "event": "state_changed",
+        "timestamp_ns": 181502633044858,
+        "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+        "provenance": "synthetic_simulation",
+        "state": "tracing",
+        "episode_id": "episode-1",
+        "previous_state": "starting"
+      },
+      {
+        "sequence": 13,
+        "event": "state_changed",
+        "timestamp_ns": 181502645440724,
+        "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+        "provenance": "synthetic_simulation",
+        "state": "evaluating",
+        "episode_id": "episode-1",
+        "previous_state": "tracing"
+      },
+      {
+        "sequence": 14,
+        "event": "cheap_window_available",
+        "timestamp_ns": 181502651699439,
+        "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+        "provenance": "synthetic_simulation",
+        "state": "evaluating",
+        "episode_id": "episode-1",
+        "window_id": "window-2",
+        "window_start_ns": 181502595005388,
+        "window_end_ns": 181502645005388,
+        "available_at_ns": 181502651528616,
+        "sample_count": 2,
+        "request_count": null,
+        "request_error_count": null,
+        "gpu_sample_count": 5,
+        "outstanding_request_count": null,
+        "oldest_pending_ms": null,
+        "p95_latency_ms": 68.011932,
+        "gpu_util": 90.0,
+        "throughput_rps": 40.0,
+        "latency_ratio": 9.7248864034057,
+        "suspicious": true,
+        "suspicion_reasons": [
+          "latency_regression",
+          "sustained_gpu_saturation_with_elevated_latency"
+        ]
+      },
+      {
+        "sequence": 15,
+        "event": "policy_decision",
+        "timestamp_ns": 181502661152693,
+        "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+        "provenance": "synthetic_simulation",
+        "state": "evaluating",
+        "episode_id": "episode-1",
+        "capture_id": "episode-1:capture-2",
+        "reason": "continue",
+        "decision_status": "ok",
+        "evidence_ready_at_ns": 181502660892991,
+        "diagnosis_label": null
+      },
+      {
+        "sequence": 16,
+        "event": "state_changed",
+        "timestamp_ns": 181502661168690,
+        "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+        "provenance": "synthetic_simulation",
+        "state": "suspicious",
+        "episode_id": "episode-1",
+        "previous_state": "evaluating"
+      },
+      {
+        "sequence": 17,
+        "event": "state_changed",
+        "timestamp_ns": 181502661191236,
+        "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+        "provenance": "synthetic_simulation",
+        "state": "starting",
+        "episode_id": "episode-1",
+        "previous_state": "suspicious"
+      },
+      {
+        "sequence": 18,
+        "event": "capture_requested",
+        "timestamp_ns": 181502661198175,
+        "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+        "provenance": "synthetic_simulation",
+        "state": "starting",
+        "episode_id": "episode-1",
+        "capture_id": "episode-1:capture-3",
+        "window_id": "window-2",
+        "round_number": 1
+      },
+      {
+        "sequence": 19,
+        "event": "state_changed",
+        "timestamp_ns": 181502663754185,
+        "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+        "provenance": "synthetic_simulation",
+        "state": "tracing",
+        "episode_id": "episode-1",
+        "previous_state": "starting"
+      },
+      {
+        "sequence": 20,
+        "event": "state_changed",
+        "timestamp_ns": 181502674508798,
+        "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+        "provenance": "synthetic_simulation",
+        "state": "evaluating",
+        "episode_id": "episode-1",
+        "previous_state": "tracing"
+      },
+      {
+        "sequence": 21,
+        "event": "policy_decision",
+        "timestamp_ns": 181502683172638,
+        "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+        "provenance": "synthetic_simulation",
+        "state": "evaluating",
+        "episode_id": "episode-1",
+        "capture_id": "episode-1:capture-3",
+        "reason": "budget_exhausted",
+        "decision_status": "ok",
+        "evidence_ready_at_ns": 181502683041406,
+        "diagnosis_label": null
+      },
+      {
+        "sequence": 22,
+        "event": "state_changed",
+        "timestamp_ns": 181502683184228,
+        "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+        "provenance": "synthetic_simulation",
+        "state": "monitoring",
+        "episode_id": "episode-1",
+        "previous_state": "evaluating"
+      },
+      {
+        "sequence": 23,
+        "event": "heavy_tracing_stopped",
+        "timestamp_ns": 181502683188410,
+        "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+        "provenance": "synthetic_simulation",
+        "state": "monitoring",
+        "episode_id": "episode-1",
+        "reason": "budget_exhausted"
+      },
+      {
+        "sequence": 24,
+        "event": "cheap_window_available",
+        "timestamp_ns": 181502701150801,
+        "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+        "provenance": "synthetic_simulation",
+        "state": "monitoring",
+        "episode_id": "episode-1",
+        "window_id": "window-3",
+        "window_start_ns": 181502645005388,
+        "window_end_ns": 181502695005388,
+        "available_at_ns": 181502700205746,
+        "sample_count": 2,
+        "request_count": null,
+        "request_error_count": null,
+        "gpu_sample_count": 5,
+        "outstanding_request_count": null,
+        "oldest_pending_ms": null,
+        "p95_latency_ms": 81.73336205,
+        "gpu_util": 90.0,
+        "throughput_rps": 40.0,
+        "latency_ratio": 11.686885490985322,
+        "suspicious": true,
+        "suspicion_reasons": [
+          "latency_regression",
+          "sustained_gpu_saturation_with_elevated_latency"
+        ]
+      },
+      {
+        "sequence": 25,
+        "event": "cheap_window_available",
+        "timestamp_ns": 181502751300568,
+        "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+        "provenance": "synthetic_simulation",
+        "state": "monitoring",
+        "episode_id": "episode-1",
+        "window_id": "window-4",
+        "window_start_ns": 181502695005388,
+        "window_end_ns": 181502745005388,
+        "available_at_ns": 181502751127760,
+        "sample_count": 2,
+        "request_count": null,
+        "request_error_count": null,
+        "gpu_sample_count": 5,
+        "outstanding_request_count": null,
+        "oldest_pending_ms": null,
+        "p95_latency_ms": 91.8645776,
+        "gpu_util": 90.0,
+        "throughput_rps": 40.0,
+        "latency_ratio": 13.135527184507092,
+        "suspicious": true,
+        "suspicion_reasons": [
+          "latency_regression",
+          "sustained_gpu_saturation_with_elevated_latency"
+        ]
+      },
+      {
+        "sequence": 26,
+        "event": "cheap_window_available",
+        "timestamp_ns": 181502801226032,
+        "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+        "provenance": "synthetic_simulation",
+        "state": "monitoring",
+        "episode_id": "episode-1",
+        "window_id": "window-5",
+        "window_start_ns": 181502745005388,
+        "window_end_ns": 181502795005388,
+        "available_at_ns": 181502800988162,
+        "sample_count": 2,
+        "request_count": null,
+        "request_error_count": null,
+        "gpu_sample_count": 5,
+        "outstanding_request_count": null,
+        "oldest_pending_ms": null,
+        "p95_latency_ms": 102.3668946,
+        "gpu_util": 90.0,
+        "throughput_rps": 40.0,
+        "latency_ratio": 14.637231911812242,
+        "suspicious": true,
+        "suspicion_reasons": [
+          "latency_regression",
+          "sustained_gpu_saturation_with_elevated_latency"
+        ]
+      },
+      {
+        "sequence": 27,
+        "event": "cheap_window_available",
+        "timestamp_ns": 181502851394048,
+        "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+        "provenance": "synthetic_simulation",
+        "state": "monitoring",
+        "episode_id": "episode-1",
+        "window_id": "window-6",
+        "window_start_ns": 181502795005388,
+        "window_end_ns": 181502845005388,
+        "available_at_ns": 181502851071985,
+        "sample_count": 2,
+        "request_count": null,
+        "request_error_count": null,
+        "gpu_sample_count": 5,
+        "outstanding_request_count": null,
+        "oldest_pending_ms": null,
+        "p95_latency_ms": 117.55195905000001,
+        "gpu_util": 90.0,
+        "throughput_rps": 40.0,
+        "latency_ratio": 16.80851307472119,
+        "suspicious": true,
+        "suspicion_reasons": [
+          "latency_regression",
+          "sustained_gpu_saturation_with_elevated_latency"
+        ]
+      },
+      {
+        "sequence": 28,
+        "event": "episode_ended",
+        "timestamp_ns": 181502895827925,
+        "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+        "provenance": "synthetic_simulation",
+        "state": "monitoring",
+        "episode_id": "episode-1",
+        "reason": "horizon_ended",
+        "stop_reason": "budget_exhausted"
+      },
+      {
+        "sequence": 29,
+        "event": "state_changed",
+        "timestamp_ns": 181502895853465,
+        "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+        "provenance": "synthetic_simulation",
+        "state": "idle",
+        "episode_id": null,
+        "previous_state": "monitoring"
+      },
+      {
+        "sequence": 30,
+        "event": "stream_finished",
+        "timestamp_ns": 181502895858811,
+        "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+        "provenance": "synthetic_simulation",
+        "state": "idle",
+        "episode_id": null
+      }
+    ]
+  },
+  "capture_backend": {
+    "validation": "cpu_target_control_only",
+    "poisoned": false,
+    "cleanup_done": true,
+    "attempts": {
+      "episode-1:capture-1": {
+        "state": "ready",
+        "error": null,
+        "artifact_hashes": {
+          "/Users/snehpatel/Documents/University/research/gpu_adaptive_tracing/revision/examples/arm_lifecycle_demo/hybrid_stop/target/report-da955ee738f15b602e182956273f5251ba669b38c81a5b5762cd168fd9dc6764.json": "da955ee738f15b602e182956273f5251ba669b38c81a5b5762cd168fd9dc6764"
+        }
+      },
+      "episode-1:capture-2": {
+        "state": "ready",
+        "error": null,
+        "artifact_hashes": {
+          "/Users/snehpatel/Documents/University/research/gpu_adaptive_tracing/revision/examples/arm_lifecycle_demo/hybrid_stop/target/report-3a558aa938451d613c759d455f7534e96703836f6985d113690b44d023bb22c3.json": "3a558aa938451d613c759d455f7534e96703836f6985d113690b44d023bb22c3"
+        }
+      },
+      "episode-1:capture-3": {
+        "state": "ready",
+        "error": null,
+        "artifact_hashes": {
+          "/Users/snehpatel/Documents/University/research/gpu_adaptive_tracing/revision/examples/arm_lifecycle_demo/hybrid_stop/target/report-1b5ccd2bea9b963d6bb3f5b3157151251522fa8a83b2908d0fa4fe9ab62c733d.json": "1b5ccd2bea9b963d6bb3f5b3157151251522fa8a83b2908d0fa4fe9ab62c733d"
+        }
+      }
+    }
+  },
+  "monitor_windows": 0,
+  "post_playback_status": {
+    "received_at_ns": 181502949677070,
+    "status": {
+      "protocol": "cpu_arm_target_v1",
+      "source": "cpu_fake_target",
+      "nonce": "e018084bc01944b4b99f45be0828827e",
+      "instance": "fab80ff6cab04d92a15d4798be73a3a4",
+      "pid": 70883,
+      "generation": 2,
+      "capture_mode": "bounded",
+      "running": 2,
+      "queued": 0,
+      "inflight": 2,
+      "capture_active": false,
+      "report_pending": 0,
+      "completed": 16,
+      "capture_starts": 3,
+      "capture_stops": 3
+    }
+  },
+  "post_workload_quiescent": {
+    "protocol": "cpu_arm_target_v1",
+    "source": "cpu_fake_target",
+    "nonce": "e018084bc01944b4b99f45be0828827e",
+    "instance": "fab80ff6cab04d92a15d4798be73a3a4",
+    "pid": 70883,
+    "generation": 2,
+    "capture_mode": "bounded",
+    "running": 0,
+    "queued": 0,
+    "inflight": 0,
+    "capture_active": false,
+    "report_pending": 0,
+    "completed": 18,
+    "capture_starts": 3,
+    "capture_stops": 3
+  },
+  "playback": {
+    "playback_version": "schedule_playback_v1",
+    "provenance": "synthetic_simulation",
+    "status": "completed",
+    "failure": null,
+    "schedule_file_sha256": "e762785e3913108cacdeae4a058538ce4508317a473d9129b7caa5535a2009ea",
+    "schedule_content_sha256": "41b92b3e63690c4b9982cc1f344951593591ccd5f5083795963d405a51a0a338",
+    "config": {
+      "max_inflight": 8,
+      "request_timeout_s": 1,
+      "drain_s": 0.05,
+      "max_admission_lateness_s": 0.05,
+      "window_s": 0.05,
+      "grace_s": 0.005,
+      "min_latency_samples": 1,
+      "sample_interval_s": 0.01,
+      "sample_timeout_s": 0.2,
+      "telemetry_queue_size": 64,
+      "tick_s": 0.001
+    },
+    "start_ns": 181502495005388,
+    "horizon_ns": 181502895005388,
+    "finished_at_ns": 181502946686757,
+    "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+    "offered": 18,
+    "admitted": 18,
+    "counts": {
+      "completed": 16,
+      "failed": 0,
+      "censored": 2,
+      "admitted": 0,
+      "skipped_capacity": 0,
+      "skipped_scheduler": 0,
+      "skipped_horizon": 0,
+      "not_dispatched_run_abort": 0,
+      "offered": 0
+    },
+    "peak_inflight": 6,
+    "observed_horizon": {
+      "observed_at_ns": 181502895870832,
+      "pending_ids": [
+        "opaque-14",
+        "opaque-15",
+        "opaque-16",
+        "opaque-17"
+      ]
+    },
+    "horizon_reached": true,
+    "accounting_checks": {
+      "all_offers_accounted": true,
+      "admitted_conserved": true,
+      "concurrency_respected": true
+    },
+    "pending_at_horizon_reconstructed": [
+      "opaque-14",
+      "opaque-15",
+      "opaque-16",
+      "opaque-17"
+    ],
+    "post_horizon_terminals": 4,
+    "post_horizon_completed": 2,
+    "post_horizon_failed": 0,
+    "telemetry_overflows": 0,
+    "sampling_skips": {
+      "server": 0,
+      "gpu": 0
+    },
+    "sampling_errors": {
+      "server": 0,
+      "gpu": 0
+    },
+    "sampling_cancelled": {
+      "server": 0,
+      "gpu": 0
+    },
+    "receipt_coverage_clean": true,
+    "live_request_tasks": 0,
+    "live_sampling_tasks": 0,
+    "ledger": [
+      {
+        "request_id": "opaque-0",
+        "offset_ns": 0,
+        "due_at_ns": 181502495005388,
+        "state": "completed",
+        "admitted_at_ns": 181502495303216,
+        "terminal": {
+          "completion": {
+            "request_id": "opaque-0",
+            "start_ns": 181502495635695,
+            "end_ns": 181502548772348,
+            "available_at_ns": 181502548772348,
+            "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+            "success": true,
+            "error_kind": null
+          },
+          "prompt_tokens": 7,
+          "output_tokens": 3,
+          "usage_error": null
+        },
+        "dispatch_at_ns": 181502495303216,
+        "lateness_ns": 297828,
+        "terminal_received_at_ns": 181502548849557
+      },
+      {
+        "request_id": "opaque-1",
+        "offset_ns": 20000000,
+        "due_at_ns": 181502515005388,
+        "state": "completed",
+        "admitted_at_ns": 181502516222844,
+        "terminal": {
+          "completion": {
+            "request_id": "opaque-1",
+            "start_ns": 181502516349028,
+            "end_ns": 181502571092945,
+            "available_at_ns": 181502571092945,
+            "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+            "success": true,
+            "error_kind": null
+          },
+          "prompt_tokens": 7,
+          "output_tokens": 3,
+          "usage_error": null
+        },
+        "dispatch_at_ns": 181502516222844,
+        "lateness_ns": 1217456,
+        "terminal_received_at_ns": 181502572145288
+      },
+      {
+        "request_id": "opaque-2",
+        "offset_ns": 40000000,
+        "due_at_ns": 181502535005388,
+        "state": "completed",
+        "admitted_at_ns": 181502536888955,
+        "terminal": {
+          "completion": {
+            "request_id": "opaque-2",
+            "start_ns": 181502537435688,
+            "end_ns": 181502599583897,
+            "available_at_ns": 181502599583897,
+            "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+            "success": true,
+            "error_kind": null
+          },
+          "prompt_tokens": 7,
+          "output_tokens": 3,
+          "usage_error": null
+        },
+        "dispatch_at_ns": 181502536888955,
+        "lateness_ns": 1883567,
+        "terminal_received_at_ns": 181502599850432
+      },
+      {
+        "request_id": "opaque-3",
+        "offset_ns": 60000000,
+        "due_at_ns": 181502555005388,
+        "state": "completed",
+        "admitted_at_ns": 181502556338432,
+        "terminal": {
+          "completion": {
+            "request_id": "opaque-3",
+            "start_ns": 181502556554757,
+            "end_ns": 181502624875306,
+            "available_at_ns": 181502624875306,
+            "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+            "success": true,
+            "error_kind": null
+          },
+          "prompt_tokens": 7,
+          "output_tokens": 3,
+          "usage_error": null
+        },
+        "dispatch_at_ns": 181502556338432,
+        "lateness_ns": 1333044,
+        "terminal_received_at_ns": 181502626098591
+      },
+      {
+        "request_id": "opaque-4",
+        "offset_ns": 80000000,
+        "due_at_ns": 181502575005388,
+        "state": "completed",
+        "admitted_at_ns": 181502575425216,
+        "terminal": {
+          "completion": {
+            "request_id": "opaque-4",
+            "start_ns": 181502575689199,
+            "end_ns": 181502652438520,
+            "available_at_ns": 181502652438520,
+            "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+            "success": true,
+            "error_kind": null
+          },
+          "prompt_tokens": 7,
+          "output_tokens": 3,
+          "usage_error": null
+        },
+        "dispatch_at_ns": 181502575425216,
+        "lateness_ns": 419828,
+        "terminal_received_at_ns": 181502654640465
+      },
+      {
+        "request_id": "opaque-5",
+        "offset_ns": 100000000,
+        "due_at_ns": 181502595005388,
+        "state": "completed",
+        "admitted_at_ns": 181502595873876,
+        "terminal": {
+          "completion": {
+            "request_id": "opaque-5",
+            "start_ns": 181502596030187,
+            "end_ns": 181502678025867,
+            "available_at_ns": 181502678025867,
+            "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+            "success": true,
+            "error_kind": null
+          },
+          "prompt_tokens": 7,
+          "output_tokens": 3,
+          "usage_error": null
+        },
+        "dispatch_at_ns": 181502595873876,
+        "lateness_ns": 868488,
+        "terminal_received_at_ns": 181502680822760
+      },
+      {
+        "request_id": "opaque-6",
+        "offset_ns": 120000000,
+        "due_at_ns": 181502615005388,
+        "state": "completed",
+        "admitted_at_ns": 181502616069418,
+        "terminal": {
+          "completion": {
+            "request_id": "opaque-6",
+            "start_ns": 181502616312716,
+            "end_ns": 181502708184304,
+            "available_at_ns": 181502708184304,
+            "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+            "success": true,
+            "error_kind": null
+          },
+          "prompt_tokens": 7,
+          "output_tokens": 3,
+          "usage_error": null
+        },
+        "dispatch_at_ns": 181502616069418,
+        "lateness_ns": 1064030,
+        "terminal_received_at_ns": 181502708802011
+      },
+      {
+        "request_id": "opaque-7",
+        "offset_ns": 140000000,
+        "due_at_ns": 181502635005388,
+        "state": "completed",
+        "admitted_at_ns": 181502636315519,
+        "terminal": {
+          "completion": {
+            "request_id": "opaque-7",
+            "start_ns": 181502636440455,
+            "end_ns": 181502728171835,
+            "available_at_ns": 181502728171835,
+            "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+            "success": true,
+            "error_kind": null
+          },
+          "prompt_tokens": 7,
+          "output_tokens": 3,
+          "usage_error": null
+        },
+        "dispatch_at_ns": 181502636315519,
+        "lateness_ns": 1310131,
+        "terminal_received_at_ns": 181502728566824
+      },
+      {
+        "request_id": "opaque-8",
+        "offset_ns": 160000000,
+        "due_at_ns": 181502655005388,
+        "state": "completed",
+        "admitted_at_ns": 181502656242498,
+        "terminal": {
+          "completion": {
+            "request_id": "opaque-8",
+            "start_ns": 181502656393994,
+            "end_ns": 181502758376074,
+            "available_at_ns": 181502758376074,
+            "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+            "success": true,
+            "error_kind": null
+          },
+          "prompt_tokens": 7,
+          "output_tokens": 3,
+          "usage_error": null
+        },
+        "dispatch_at_ns": 181502656242498,
+        "lateness_ns": 1237110,
+        "terminal_received_at_ns": 181502758667111
+      },
+      {
+        "request_id": "opaque-9",
+        "offset_ns": 180000000,
+        "due_at_ns": 181502675005388,
+        "state": "completed",
+        "admitted_at_ns": 181502676001436,
+        "terminal": {
+          "completion": {
+            "request_id": "opaque-9",
+            "start_ns": 181502676175859,
+            "end_ns": 181502778563007,
+            "available_at_ns": 181502778563007,
+            "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+            "success": true,
+            "error_kind": null
+          },
+          "prompt_tokens": 7,
+          "output_tokens": 3,
+          "usage_error": null
+        },
+        "dispatch_at_ns": 181502676001436,
+        "lateness_ns": 996048,
+        "terminal_received_at_ns": 181502778937557
+      },
+      {
+        "request_id": "opaque-10",
+        "offset_ns": 200000000,
+        "due_at_ns": 181502695005388,
+        "state": "completed",
+        "admitted_at_ns": 181502696243923,
+        "terminal": {
+          "completion": {
+            "request_id": "opaque-10",
+            "start_ns": 181502696379284,
+            "end_ns": 181502808850530,
+            "available_at_ns": 181502808850530,
+            "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+            "success": true,
+            "error_kind": null
+          },
+          "prompt_tokens": 7,
+          "output_tokens": 3,
+          "usage_error": null
+        },
+        "dispatch_at_ns": 181502696243923,
+        "lateness_ns": 1238535,
+        "terminal_received_at_ns": 181502809748846
+      },
+      {
+        "request_id": "opaque-11",
+        "offset_ns": 220000000,
+        "due_at_ns": 181502715005388,
+        "state": "completed",
+        "admitted_at_ns": 181502715632515,
+        "terminal": {
+          "completion": {
+            "request_id": "opaque-11",
+            "start_ns": 181502715705659,
+            "end_ns": 181502833525024,
+            "available_at_ns": 181502833525024,
+            "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+            "success": true,
+            "error_kind": null
+          },
+          "prompt_tokens": 7,
+          "output_tokens": 3,
+          "usage_error": null
+        },
+        "dispatch_at_ns": 181502715632515,
+        "lateness_ns": 627127,
+        "terminal_received_at_ns": 181502833841558
+      },
+      {
+        "request_id": "opaque-12",
+        "offset_ns": 240000000,
+        "due_at_ns": 181502735005388,
+        "state": "completed",
+        "admitted_at_ns": 181502736092607,
+        "terminal": {
+          "completion": {
+            "request_id": "opaque-12",
+            "start_ns": 181502736291093,
+            "end_ns": 181502860648601,
+            "available_at_ns": 181502860648601,
+            "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+            "success": true,
+            "error_kind": null
+          },
+          "prompt_tokens": 7,
+          "output_tokens": 3,
+          "usage_error": null
+        },
+        "dispatch_at_ns": 181502736092607,
+        "lateness_ns": 1087219,
+        "terminal_received_at_ns": 181502862163704
+      },
+      {
+        "request_id": "opaque-13",
+        "offset_ns": 260000000,
+        "due_at_ns": 181502755005388,
+        "state": "completed",
+        "admitted_at_ns": 181502756007446,
+        "terminal": {
+          "completion": {
+            "request_id": "opaque-13",
+            "start_ns": 181502756149601,
+            "end_ns": 181502883505411,
+            "available_at_ns": 181502883505411,
+            "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+            "success": true,
+            "error_kind": null
+          },
+          "prompt_tokens": 7,
+          "output_tokens": 3,
+          "usage_error": null
+        },
+        "dispatch_at_ns": 181502756007446,
+        "lateness_ns": 1002058,
+        "terminal_received_at_ns": 181502883601839
+      },
+      {
+        "request_id": "opaque-14",
+        "offset_ns": 280000000,
+        "due_at_ns": 181502775005388,
+        "state": "completed",
+        "admitted_at_ns": 181502775222093,
+        "terminal": {
+          "completion": {
+            "request_id": "opaque-14",
+            "start_ns": 181502775805043,
+            "end_ns": 181502914209267,
+            "available_at_ns": 181502914209267,
+            "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+            "success": true,
+            "error_kind": null
+          },
+          "prompt_tokens": 7,
+          "output_tokens": 3,
+          "usage_error": null
+        },
+        "dispatch_at_ns": 181502775222093,
+        "lateness_ns": 216705,
+        "terminal_received_at_ns": 181502914796969
+      },
+      {
+        "request_id": "opaque-15",
+        "offset_ns": 300000000,
+        "due_at_ns": 181502795005388,
+        "state": "completed",
+        "admitted_at_ns": 181502796041450,
+        "terminal": {
+          "completion": {
+            "request_id": "opaque-15",
+            "start_ns": 181502796193516,
+            "end_ns": 181502934627284,
+            "available_at_ns": 181502934627284,
+            "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+            "success": true,
+            "error_kind": null
+          },
+          "prompt_tokens": 7,
+          "output_tokens": 3,
+          "usage_error": null
+        },
+        "dispatch_at_ns": 181502796041450,
+        "lateness_ns": 1036062,
+        "terminal_received_at_ns": 181502934939147
+      },
+      {
+        "request_id": "opaque-16",
+        "offset_ns": 320000000,
+        "due_at_ns": 181502815005388,
+        "state": "censored",
+        "admitted_at_ns": 181502815534564,
+        "terminal": {
+          "completion": {
+            "request_id": "opaque-16",
+            "start_ns": 181502815534564,
+            "end_ns": 181502945335564,
+            "available_at_ns": 181502945335564,
+            "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+            "success": false,
+            "error_kind": "drain_cancelled"
+          },
+          "prompt_tokens": null,
+          "output_tokens": null,
+          "usage_error": "drain_cancelled"
+        },
+        "dispatch_at_ns": 181502815534564,
+        "lateness_ns": 529176,
+        "terminal_received_at_ns": 181502946532324
+      },
+      {
+        "request_id": "opaque-17",
+        "offset_ns": 340000000,
+        "due_at_ns": 181502835005388,
+        "state": "censored",
+        "admitted_at_ns": 181502839069522,
+        "terminal": {
+          "completion": {
+            "request_id": "opaque-17",
+            "start_ns": 181502839069522,
+            "end_ns": 181502945419949,
+            "available_at_ns": 181502945419949,
+            "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+            "success": false,
+            "error_kind": "drain_cancelled"
+          },
+          "prompt_tokens": null,
+          "output_tokens": null,
+          "usage_error": "drain_cancelled"
+        },
+        "dispatch_at_ns": 181502839069522,
+        "lateness_ns": 4064134,
+        "terminal_received_at_ns": 181502946571387
+      }
+    ],
+    "raw_records": [
+      {
+        "type": "GpuSample",
+        "received_at_ns": 181502497152693,
+        "window_id": "window-0",
+        "accepted": true,
+        "record": {
+          "sample_id": "gpu-0",
+          "timestamp_ns": 181502496598057,
+          "available_at_ns": 181502496598057,
+          "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+          "gpu_util": 90
+        }
+      },
+      {
+        "type": "ServerSample",
+        "received_at_ns": 181502498956367,
+        "window_id": "window-0",
+        "accepted": true,
+        "record": {
+          "sample_id": "server-0",
+          "requested_at_ns": 181502496176730,
+          "received_at_ns": 181502498732670,
+          "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+          "queue_depth": 0.0,
+          "error": null
+        }
+      },
+      {
+        "type": "GpuSample",
+        "received_at_ns": 181502506285718,
+        "window_id": "window-0",
+        "accepted": true,
+        "record": {
+          "sample_id": "gpu-1",
+          "timestamp_ns": 181502505470010,
+          "available_at_ns": 181502505470010,
+          "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+          "gpu_util": 90
+        }
+      },
+      {
+        "type": "ServerSample",
+        "received_at_ns": 181502510035324,
+        "window_id": "window-0",
+        "accepted": true,
+        "record": {
+          "sample_id": "server-1",
+          "requested_at_ns": 181502505637093,
+          "received_at_ns": 181502509786900,
+          "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+          "queue_depth": 0.0,
+          "error": null
+        }
+      },
+      {
+        "type": "GpuSample",
+        "received_at_ns": 181502516189154,
+        "window_id": "window-0",
+        "accepted": true,
+        "record": {
+          "sample_id": "gpu-2",
+          "timestamp_ns": 181502516098988,
+          "available_at_ns": 181502516098988,
+          "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+          "gpu_util": 90
+        }
+      },
+      {
+        "type": "ServerSample",
+        "received_at_ns": 181502520695254,
+        "window_id": "window-0",
+        "accepted": true,
+        "record": {
+          "sample_id": "server-2",
+          "requested_at_ns": 181502515586592,
+          "received_at_ns": 181502520447694,
+          "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+          "queue_depth": 0.0,
+          "error": null
+        }
+      },
+      {
+        "type": "GpuSample",
+        "received_at_ns": 181502526698741,
+        "window_id": "window-0",
+        "accepted": true,
+        "record": {
+          "sample_id": "gpu-3",
+          "timestamp_ns": 181502525250988,
+          "available_at_ns": 181502525250988,
+          "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+          "gpu_util": 90
+        }
+      },
+      {
+        "type": "ServerSample",
+        "received_at_ns": 181502529232961,
+        "window_id": "window-0",
+        "accepted": true,
+        "record": {
+          "sample_id": "server-3",
+          "requested_at_ns": 181502525315441,
+          "received_at_ns": 181502528343425,
+          "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+          "queue_depth": 0.0,
+          "error": null
+        }
+      },
+      {
+        "type": "GpuSample",
+        "received_at_ns": 181502538480729,
+        "window_id": "window-0",
+        "accepted": true,
+        "record": {
+          "sample_id": "gpu-4",
+          "timestamp_ns": 181502537031700,
+          "available_at_ns": 181502537031700,
+          "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+          "gpu_util": 90
+        }
+      },
+      {
+        "type": "ServerSample",
+        "received_at_ns": 181502539914275,
+        "window_id": "window-0",
+        "accepted": true,
+        "record": {
+          "sample_id": "server-4",
+          "requested_at_ns": 181502537100818,
+          "received_at_ns": 181502539711972,
+          "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+          "queue_depth": 0.0,
+          "error": null
+        }
+      },
+      {
+        "type": "GpuSample",
+        "received_at_ns": 181502546115955,
+        "window_id": "window-1",
+        "accepted": true,
+        "record": {
+          "sample_id": "gpu-5",
+          "timestamp_ns": 181502545305273,
+          "available_at_ns": 181502545305273,
+          "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+          "gpu_util": 90
+        }
+      },
+      {
+        "type": "ServerSample",
+        "received_at_ns": 181502547373762,
+        "window_id": "window-1",
+        "accepted": true,
+        "record": {
+          "sample_id": "server-5",
+          "requested_at_ns": 181502545379425,
+          "received_at_ns": 181502547040070,
+          "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+          "queue_depth": 1.0,
+          "error": null
+        }
+      },
+      {
+        "type": "ObservedCompletion",
+        "received_at_ns": 181502548888648,
+        "window_id": "window-1",
+        "accepted": true,
+        "record": {
+          "completion": {
+            "request_id": "opaque-0",
+            "start_ns": 181502495635695,
+            "end_ns": 181502548772348,
+            "available_at_ns": 181502548772348,
+            "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+            "success": true,
+            "error_kind": null
+          },
+          "prompt_tokens": 7,
+          "output_tokens": 3,
+          "usage_error": null
+        }
+      },
+      {
+        "type": "GpuSample",
+        "received_at_ns": 181502556310875,
+        "window_id": "window-1",
+        "accepted": true,
+        "record": {
+          "sample_id": "gpu-6",
+          "timestamp_ns": 181502555394054,
+          "available_at_ns": 181502555394054,
+          "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+          "gpu_util": 90
+        }
+      },
+      {
+        "type": "ServerSample",
+        "received_at_ns": 181502559042466,
+        "window_id": "window-1",
+        "accepted": true,
+        "record": {
+          "sample_id": "server-6",
+          "requested_at_ns": 181502555484405,
+          "received_at_ns": 181502558145772,
+          "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+          "queue_depth": 0.0,
+          "error": null
+        }
+      },
+      {
+        "type": "GpuSample",
+        "received_at_ns": 181502566628111,
+        "window_id": "window-1",
+        "accepted": true,
+        "record": {
+          "sample_id": "gpu-7",
+          "timestamp_ns": 181502566091767,
+          "available_at_ns": 181502566091767,
+          "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+          "gpu_util": 90
+        }
+      },
+      {
+        "type": "ObservedCompletion",
+        "received_at_ns": 181502572179958,
+        "window_id": "window-1",
+        "accepted": true,
+        "record": {
+          "completion": {
+            "request_id": "opaque-1",
+            "start_ns": 181502516349028,
+            "end_ns": 181502571092945,
+            "available_at_ns": 181502571092945,
+            "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+            "success": true,
+            "error_kind": null
+          },
+          "prompt_tokens": 7,
+          "output_tokens": 3,
+          "usage_error": null
+        }
+      },
+      {
+        "type": "ServerSample",
+        "received_at_ns": 181502572206644,
+        "window_id": "window-1",
+        "accepted": true,
+        "record": {
+          "sample_id": "server-7",
+          "requested_at_ns": 181502565334044,
+          "received_at_ns": 181502571830127,
+          "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+          "queue_depth": 0.0,
+          "error": null
+        }
+      },
+      {
+        "type": "GpuSample",
+        "received_at_ns": 181502577016202,
+        "window_id": "window-1",
+        "accepted": true,
+        "record": {
+          "sample_id": "gpu-8",
+          "timestamp_ns": 181502576401772,
+          "available_at_ns": 181502576401772,
+          "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+          "gpu_util": 90
+        }
+      },
+      {
+        "type": "ServerSample",
+        "received_at_ns": 181502580589930,
+        "window_id": "window-1",
+        "accepted": true,
+        "record": {
+          "sample_id": "server-8",
+          "requested_at_ns": 181502576485097,
+          "received_at_ns": 181502579840922,
+          "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+          "queue_depth": 1.0,
+          "error": null
+        }
+      },
+      {
+        "type": "GpuSample",
+        "received_at_ns": 181502586250727,
+        "window_id": "window-1",
+        "accepted": true,
+        "record": {
+          "sample_id": "gpu-9",
+          "timestamp_ns": 181502585675109,
+          "available_at_ns": 181502585675109,
+          "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+          "gpu_util": 90
+        }
+      },
+      {
+        "type": "ServerSample",
+        "received_at_ns": 181502588847153,
+        "window_id": "window-1",
+        "accepted": true,
+        "record": {
+          "sample_id": "server-9",
+          "requested_at_ns": 181502585226264,
+          "received_at_ns": 181502588753912,
+          "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+          "queue_depth": 1.0,
+          "error": null
+        }
+      },
+      {
+        "type": "GpuSample",
+        "received_at_ns": 181502595839629,
+        "window_id": "window-2",
+        "accepted": true,
+        "record": {
+          "sample_id": "gpu-10",
+          "timestamp_ns": 181502595346230,
+          "available_at_ns": 181502595346230,
+          "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+          "gpu_util": 90
+        }
+      },
+      {
+        "type": "ObservedCompletion",
+        "received_at_ns": 181502599891817,
+        "window_id": "window-2",
+        "accepted": true,
+        "record": {
+          "completion": {
+            "request_id": "opaque-2",
+            "start_ns": 181502537435688,
+            "end_ns": 181502599583897,
+            "available_at_ns": 181502599583897,
+            "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+            "success": true,
+            "error_kind": null
+          },
+          "prompt_tokens": 7,
+          "output_tokens": 3,
+          "usage_error": null
+        }
+      },
+      {
+        "type": "ServerSample",
+        "received_at_ns": 181502601063126,
+        "window_id": "window-2",
+        "accepted": true,
+        "record": {
+          "sample_id": "server-10",
+          "requested_at_ns": 181502595415008,
+          "received_at_ns": 181502600285572,
+          "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+          "queue_depth": 0.0,
+          "error": null
+        }
+      },
+      {
+        "type": "GpuSample",
+        "received_at_ns": 181502606533657,
+        "window_id": "window-2",
+        "accepted": true,
+        "record": {
+          "sample_id": "gpu-11",
+          "timestamp_ns": 181502605610057,
+          "available_at_ns": 181502605610057,
+          "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+          "gpu_util": 90
+        }
+      },
+      {
+        "type": "ServerSample",
+        "received_at_ns": 181502610718441,
+        "window_id": "window-2",
+        "accepted": true,
+        "record": {
+          "sample_id": "server-11",
+          "requested_at_ns": 181502605216049,
+          "received_at_ns": 181502610441529,
+          "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+          "queue_depth": 1.0,
+          "error": null
+        }
+      },
+      {
+        "type": "GpuSample",
+        "received_at_ns": 181502615988337,
+        "window_id": "window-2",
+        "accepted": true,
+        "record": {
+          "sample_id": "gpu-12",
+          "timestamp_ns": 181502615267884,
+          "available_at_ns": 181502615267884,
+          "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+          "gpu_util": 90
+        }
+      },
+      {
+        "type": "ServerSample",
+        "received_at_ns": 181502618806054,
+        "window_id": "window-2",
+        "accepted": true,
+        "record": {
+          "sample_id": "server-12",
+          "requested_at_ns": 181502615343835,
+          "received_at_ns": 181502618619363,
+          "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+          "queue_depth": 1.0,
+          "error": null
+        }
+      },
+      {
+        "type": "ObservedCompletion",
+        "received_at_ns": 181502626136592,
+        "window_id": "window-2",
+        "accepted": true,
+        "record": {
+          "completion": {
+            "request_id": "opaque-3",
+            "start_ns": 181502556554757,
+            "end_ns": 181502624875306,
+            "available_at_ns": 181502624875306,
+            "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+            "success": true,
+            "error_kind": null
+          },
+          "prompt_tokens": 7,
+          "output_tokens": 3,
+          "usage_error": null
+        }
+      },
+      {
+        "type": "GpuSample",
+        "received_at_ns": 181502626171696,
+        "window_id": "window-2",
+        "accepted": true,
+        "record": {
+          "sample_id": "gpu-13",
+          "timestamp_ns": 181502625725704,
+          "available_at_ns": 181502625725704,
+          "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+          "gpu_util": 90
+        }
+      },
+      {
+        "type": "ServerSample",
+        "received_at_ns": 181502631804896,
+        "window_id": "window-2",
+        "accepted": true,
+        "record": {
+          "sample_id": "server-13",
+          "requested_at_ns": 181502625225697,
+          "received_at_ns": 181502631460859,
+          "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+          "queue_depth": 1.0,
+          "error": null
+        }
+      },
+      {
+        "type": "GpuSample",
+        "received_at_ns": 181502636179044,
+        "window_id": "window-2",
+        "accepted": true,
+        "record": {
+          "sample_id": "gpu-14",
+          "timestamp_ns": 181502635680227,
+          "available_at_ns": 181502635680227,
+          "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+          "gpu_util": 90
+        }
+      },
+      {
+        "type": "ServerSample",
+        "received_at_ns": 181502642823504,
+        "window_id": "window-2",
+        "accepted": true,
+        "record": {
+          "sample_id": "server-14",
+          "requested_at_ns": 181502635747793,
+          "received_at_ns": 181502642740710,
+          "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+          "queue_depth": 1.0,
+          "error": null
+        }
+      },
+      {
+        "type": "GpuSample",
+        "received_at_ns": 181502649450901,
+        "window_id": "window-3",
+        "accepted": true,
+        "record": {
+          "sample_id": "gpu-15",
+          "timestamp_ns": 181502649062214,
+          "available_at_ns": 181502649062214,
+          "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+          "gpu_util": 90
+        }
+      },
+      {
+        "type": "ObservedCompletion",
+        "received_at_ns": 181502654698025,
+        "window_id": "window-3",
+        "accepted": true,
+        "record": {
+          "completion": {
+            "request_id": "opaque-4",
+            "start_ns": 181502575689199,
+            "end_ns": 181502652438520,
+            "available_at_ns": 181502652438520,
+            "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+            "success": true,
+            "error_kind": null
+          },
+          "prompt_tokens": 7,
+          "output_tokens": 3,
+          "usage_error": null
+        }
+      },
+      {
+        "type": "ServerSample",
+        "received_at_ns": 181502656131420,
+        "window_id": "window-3",
+        "accepted": true,
+        "record": {
+          "sample_id": "server-15",
+          "requested_at_ns": 181502649125532,
+          "received_at_ns": 181502655015393,
+          "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+          "queue_depth": 1.0,
+          "error": null
+        }
+      },
+      {
+        "type": "GpuSample",
+        "received_at_ns": 181502656209000,
+        "window_id": "window-3",
+        "accepted": true,
+        "record": {
+          "sample_id": "gpu-16",
+          "timestamp_ns": 181502655651705,
+          "available_at_ns": 181502655651705,
+          "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+          "gpu_util": 90
+        }
+      },
+      {
+        "type": "ServerSample",
+        "received_at_ns": 181502658650199,
+        "window_id": "window-3",
+        "accepted": true,
+        "record": {
+          "sample_id": "server-16",
+          "requested_at_ns": 181502655252674,
+          "received_at_ns": 181502657335425,
+          "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+          "queue_depth": 1.0,
+          "error": null
+        }
+      },
+      {
+        "type": "GpuSample",
+        "received_at_ns": 181502666531742,
+        "window_id": "window-3",
+        "accepted": true,
+        "record": {
+          "sample_id": "gpu-17",
+          "timestamp_ns": 181502665334893,
+          "available_at_ns": 181502665334893,
+          "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+          "gpu_util": 90
+        }
+      },
+      {
+        "type": "ServerSample",
+        "received_at_ns": 181502667847706,
+        "window_id": "window-3",
+        "accepted": true,
+        "record": {
+          "sample_id": "server-17",
+          "requested_at_ns": 181502665472306,
+          "received_at_ns": 181502667070528,
+          "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+          "queue_depth": 2.0,
+          "error": null
+        }
+      },
+      {
+        "type": "GpuSample",
+        "received_at_ns": 181502675972268,
+        "window_id": "window-3",
+        "accepted": true,
+        "record": {
+          "sample_id": "gpu-18",
+          "timestamp_ns": 181502675725648,
+          "available_at_ns": 181502675725648,
+          "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+          "gpu_util": 90
+        }
+      },
+      {
+        "type": "ServerSample",
+        "received_at_ns": 181502677189258,
+        "window_id": "window-3",
+        "accepted": true,
+        "record": {
+          "sample_id": "server-18",
+          "requested_at_ns": 181502675240338,
+          "received_at_ns": 181502677023438,
+          "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+          "queue_depth": 2.0,
+          "error": null
+        }
+      },
+      {
+        "type": "ObservedCompletion",
+        "received_at_ns": 181502680861944,
+        "window_id": "window-3",
+        "accepted": true,
+        "record": {
+          "completion": {
+            "request_id": "opaque-5",
+            "start_ns": 181502596030187,
+            "end_ns": 181502678025867,
+            "available_at_ns": 181502678025867,
+            "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+            "success": true,
+            "error_kind": null
+          },
+          "prompt_tokens": 7,
+          "output_tokens": 3,
+          "usage_error": null
+        }
+      },
+      {
+        "type": "GpuSample",
+        "received_at_ns": 181502685627528,
+        "window_id": "window-3",
+        "accepted": true,
+        "record": {
+          "sample_id": "gpu-19",
+          "timestamp_ns": 181502685182900,
+          "available_at_ns": 181502685182900,
+          "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+          "gpu_util": 90
+        }
+      },
+      {
+        "type": "ServerSample",
+        "received_at_ns": 181502686768825,
+        "window_id": "window-3",
+        "accepted": true,
+        "record": {
+          "sample_id": "server-19",
+          "requested_at_ns": 181502685225512,
+          "received_at_ns": 181502686389452,
+          "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+          "queue_depth": 2.0,
+          "error": null
+        }
+      },
+      {
+        "type": "GpuSample",
+        "received_at_ns": 181502696212429,
+        "window_id": "window-4",
+        "accepted": true,
+        "record": {
+          "sample_id": "gpu-20",
+          "timestamp_ns": 181502695226213,
+          "available_at_ns": 181502695226213,
+          "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+          "gpu_util": 90
+        }
+      },
+      {
+        "type": "ServerSample",
+        "received_at_ns": 181502697522437,
+        "window_id": "window-4",
+        "accepted": true,
+        "record": {
+          "sample_id": "server-20",
+          "requested_at_ns": 181502695287297,
+          "received_at_ns": 181502696872154,
+          "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+          "queue_depth": 2.0,
+          "error": null
+        }
+      },
+      {
+        "type": "ObservedCompletion",
+        "received_at_ns": 181502708896148,
+        "window_id": "window-4",
+        "accepted": true,
+        "record": {
+          "completion": {
+            "request_id": "opaque-6",
+            "start_ns": 181502616312716,
+            "end_ns": 181502708184304,
+            "available_at_ns": 181502708184304,
+            "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+            "success": true,
+            "error_kind": null
+          },
+          "prompt_tokens": 7,
+          "output_tokens": 3,
+          "usage_error": null
+        }
+      },
+      {
+        "type": "GpuSample",
+        "received_at_ns": 181502708935658,
+        "window_id": "window-4",
+        "accepted": true,
+        "record": {
+          "sample_id": "gpu-21",
+          "timestamp_ns": 181502707465698,
+          "available_at_ns": 181502707465698,
+          "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+          "gpu_util": 90
+        }
+      },
+      {
+        "type": "ServerSample",
+        "received_at_ns": 181502710241991,
+        "window_id": "window-4",
+        "accepted": true,
+        "record": {
+          "sample_id": "server-21",
+          "requested_at_ns": 181502707535517,
+          "received_at_ns": 181502709659529,
+          "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+          "queue_depth": 2.0,
+          "error": null
+        }
+      },
+      {
+        "type": "GpuSample",
+        "received_at_ns": 181502715607865,
+        "window_id": "window-4",
+        "accepted": true,
+        "record": {
+          "sample_id": "gpu-22",
+          "timestamp_ns": 181502715279456,
+          "available_at_ns": 181502715279456,
+          "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+          "gpu_util": 90
+        }
+      },
+      {
+        "type": "ServerSample",
+        "received_at_ns": 181502718188640,
+        "window_id": "window-4",
+        "accepted": true,
+        "record": {
+          "sample_id": "server-22",
+          "requested_at_ns": 181502715320857,
+          "received_at_ns": 181502717177046,
+          "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+          "queue_depth": 2.0,
+          "error": null
+        }
+      },
+      {
+        "type": "GpuSample",
+        "received_at_ns": 181502726179514,
+        "window_id": "window-4",
+        "accepted": true,
+        "record": {
+          "sample_id": "gpu-23",
+          "timestamp_ns": 181502725191790,
+          "available_at_ns": 181502725191790,
+          "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+          "gpu_util": 90
+        }
+      },
+      {
+        "type": "ServerSample",
+        "received_at_ns": 181502727419312,
+        "window_id": "window-4",
+        "accepted": true,
+        "record": {
+          "sample_id": "server-23",
+          "requested_at_ns": 181502725250025,
+          "received_at_ns": 181502727014022,
+          "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+          "queue_depth": 3.0,
+          "error": null
+        }
+      },
+      {
+        "type": "ObservedCompletion",
+        "received_at_ns": 181502728585701,
+        "window_id": "window-4",
+        "accepted": true,
+        "record": {
+          "completion": {
+            "request_id": "opaque-7",
+            "start_ns": 181502636440455,
+            "end_ns": 181502728171835,
+            "available_at_ns": 181502728171835,
+            "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+            "success": true,
+            "error_kind": null
+          },
+          "prompt_tokens": 7,
+          "output_tokens": 3,
+          "usage_error": null
+        }
+      },
+      {
+        "type": "GpuSample",
+        "received_at_ns": 181502736060823,
+        "window_id": "window-4",
+        "accepted": true,
+        "record": {
+          "sample_id": "gpu-24",
+          "timestamp_ns": 181502735219685,
+          "available_at_ns": 181502735219685,
+          "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+          "gpu_util": 90
+        }
+      },
+      {
+        "type": "ServerSample",
+        "received_at_ns": 181502737670637,
+        "window_id": "window-4",
+        "accepted": true,
+        "record": {
+          "sample_id": "server-24",
+          "requested_at_ns": 181502735323303,
+          "received_at_ns": 181502737330677,
+          "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+          "queue_depth": 2.0,
+          "error": null
+        }
+      },
+      {
+        "type": "GpuSample",
+        "received_at_ns": 181502747092342,
+        "window_id": "window-5",
+        "accepted": true,
+        "record": {
+          "sample_id": "gpu-25",
+          "timestamp_ns": 181502746986048,
+          "available_at_ns": 181502746986048,
+          "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+          "gpu_util": 90
+        }
+      },
+      {
+        "type": "ServerSample",
+        "received_at_ns": 181502748560161,
+        "window_id": "window-5",
+        "accepted": true,
+        "record": {
+          "sample_id": "server-25",
+          "requested_at_ns": 181502745755215,
+          "received_at_ns": 181502748264475,
+          "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+          "queue_depth": 3.0,
+          "error": null
+        }
+      },
+      {
+        "type": "GpuSample",
+        "received_at_ns": 181502755975690,
+        "window_id": "window-5",
+        "accepted": true,
+        "record": {
+          "sample_id": "gpu-26",
+          "timestamp_ns": 181502755402041,
+          "available_at_ns": 181502755402041,
+          "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+          "gpu_util": 90
+        }
+      },
+      {
+        "type": "ObservedCompletion",
+        "received_at_ns": 181502758695782,
+        "window_id": "window-5",
+        "accepted": true,
+        "record": {
+          "completion": {
+            "request_id": "opaque-8",
+            "start_ns": 181502656393994,
+            "end_ns": 181502758376074,
+            "available_at_ns": 181502758376074,
+            "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+            "success": true,
+            "error_kind": null
+          },
+          "prompt_tokens": 7,
+          "output_tokens": 3,
+          "usage_error": null
+        }
+      },
+      {
+        "type": "ServerSample",
+        "received_at_ns": 181502758720605,
+        "window_id": "window-5",
+        "accepted": true,
+        "record": {
+          "sample_id": "server-26",
+          "requested_at_ns": 181502755486136,
+          "received_at_ns": 181502757626409,
+          "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+          "queue_depth": 3.0,
+          "error": null
+        }
+      },
+      {
+        "type": "GpuSample",
+        "received_at_ns": 181502765964408,
+        "window_id": "window-5",
+        "accepted": true,
+        "record": {
+          "sample_id": "gpu-27",
+          "timestamp_ns": 181502765784847,
+          "available_at_ns": 181502765784847,
+          "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+          "gpu_util": 90
+        }
+      },
+      {
+        "type": "ServerSample",
+        "received_at_ns": 181502767203291,
+        "window_id": "window-5",
+        "accepted": true,
+        "record": {
+          "sample_id": "server-27",
+          "requested_at_ns": 181502765465751,
+          "received_at_ns": 181502766523786,
+          "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+          "queue_depth": 3.0,
+          "error": null
+        }
+      },
+      {
+        "type": "GpuSample",
+        "received_at_ns": 181502776605404,
+        "window_id": "window-5",
+        "accepted": true,
+        "record": {
+          "sample_id": "gpu-28",
+          "timestamp_ns": 181502775393809,
+          "available_at_ns": 181502775393809,
+          "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+          "gpu_util": 90
+        }
+      },
+      {
+        "type": "ServerSample",
+        "received_at_ns": 181502777792382,
+        "window_id": "window-5",
+        "accepted": true,
+        "record": {
+          "sample_id": "server-28",
+          "requested_at_ns": 181502775444737,
+          "received_at_ns": 181502777016944,
+          "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+          "queue_depth": 3.0,
+          "error": null
+        }
+      },
+      {
+        "type": "ObservedCompletion",
+        "received_at_ns": 181502778957113,
+        "window_id": "window-5",
+        "accepted": true,
+        "record": {
+          "completion": {
+            "request_id": "opaque-9",
+            "start_ns": 181502676175859,
+            "end_ns": 181502778563007,
+            "available_at_ns": 181502778563007,
+            "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+            "success": true,
+            "error_kind": null
+          },
+          "prompt_tokens": 7,
+          "output_tokens": 3,
+          "usage_error": null
+        }
+      },
+      {
+        "type": "GpuSample",
+        "received_at_ns": 181502785557223,
+        "window_id": "window-5",
+        "accepted": true,
+        "record": {
+          "sample_id": "gpu-29",
+          "timestamp_ns": 181502785389451,
+          "available_at_ns": 181502785389451,
+          "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+          "gpu_util": 90
+        }
+      },
+      {
+        "type": "ServerSample",
+        "received_at_ns": 181502786749402,
+        "window_id": "window-5",
+        "accepted": true,
+        "record": {
+          "sample_id": "server-29",
+          "requested_at_ns": 181502785109225,
+          "received_at_ns": 181502785985528,
+          "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+          "queue_depth": 3.0,
+          "error": null
+        }
+      },
+      {
+        "type": "GpuSample",
+        "received_at_ns": 181502796010667,
+        "window_id": "window-6",
+        "accepted": true,
+        "record": {
+          "sample_id": "gpu-30",
+          "timestamp_ns": 181502795892129,
+          "available_at_ns": 181502795892129,
+          "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+          "gpu_util": 90
+        }
+      },
+      {
+        "type": "ServerSample",
+        "received_at_ns": 181502799015691,
+        "window_id": "window-6",
+        "accepted": true,
+        "record": {
+          "sample_id": "server-30",
+          "requested_at_ns": 181502795412217,
+          "received_at_ns": 181502797951838,
+          "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+          "queue_depth": 3.0,
+          "error": null
+        }
+      },
+      {
+        "type": "GpuSample",
+        "received_at_ns": 181502806768307,
+        "window_id": "window-6",
+        "accepted": true,
+        "record": {
+          "sample_id": "gpu-31",
+          "timestamp_ns": 181502806668119,
+          "available_at_ns": 181502806668119,
+          "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+          "gpu_util": 90
+        }
+      },
+      {
+        "type": "ServerSample",
+        "received_at_ns": 181502808173953,
+        "window_id": "window-6",
+        "accepted": true,
+        "record": {
+          "sample_id": "server-31",
+          "requested_at_ns": 181502806060361,
+          "received_at_ns": 181502807858083,
+          "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+          "queue_depth": 4.0,
+          "error": null
+        }
+      },
+      {
+        "type": "ObservedCompletion",
+        "received_at_ns": 181502809784808,
+        "window_id": "window-6",
+        "accepted": true,
+        "record": {
+          "completion": {
+            "request_id": "opaque-10",
+            "start_ns": 181502696379284,
+            "end_ns": 181502808850530,
+            "available_at_ns": 181502808850530,
+            "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+            "success": true,
+            "error_kind": null
+          },
+          "prompt_tokens": 7,
+          "output_tokens": 3,
+          "usage_error": null
+        }
+      },
+      {
+        "type": "GpuSample",
+        "received_at_ns": 181502817036314,
+        "window_id": "window-6",
+        "accepted": true,
+        "record": {
+          "sample_id": "gpu-32",
+          "timestamp_ns": 181502816248022,
+          "available_at_ns": 181502816248022,
+          "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+          "gpu_util": 90
+        }
+      },
+      {
+        "type": "ServerSample",
+        "received_at_ns": 181502819385513,
+        "window_id": "window-6",
+        "accepted": true,
+        "record": {
+          "sample_id": "server-32",
+          "requested_at_ns": 181502816297632,
+          "received_at_ns": 181502817617093,
+          "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+          "queue_depth": 4.0,
+          "error": null
+        }
+      },
+      {
+        "type": "ObservedCompletion",
+        "received_at_ns": 181502833871614,
+        "window_id": "window-6",
+        "accepted": true,
+        "record": {
+          "completion": {
+            "request_id": "opaque-11",
+            "start_ns": 181502715705659,
+            "end_ns": 181502833525024,
+            "available_at_ns": 181502833525024,
+            "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+            "success": true,
+            "error_kind": null
+          },
+          "prompt_tokens": 7,
+          "output_tokens": 3,
+          "usage_error": null
+        }
+      },
+      {
+        "type": "GpuSample",
+        "received_at_ns": 181502833900043,
+        "window_id": "window-6",
+        "accepted": true,
+        "record": {
+          "sample_id": "gpu-33",
+          "timestamp_ns": 181502826714483,
+          "available_at_ns": 181502826714483,
+          "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+          "gpu_util": 90
+        }
+      },
+      {
+        "type": "ServerSample",
+        "received_at_ns": 181502839000494,
+        "window_id": "window-6",
+        "accepted": true,
+        "record": {
+          "sample_id": "server-33",
+          "requested_at_ns": 181502830740393,
+          "received_at_ns": 181502837978899,
+          "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+          "queue_depth": 3.0,
+          "error": null
+        }
+      },
+      {
+        "type": "GpuSample",
+        "received_at_ns": 181502841142952,
+        "window_id": "window-6",
+        "accepted": true,
+        "record": {
+          "sample_id": "gpu-34",
+          "timestamp_ns": 181502839331639,
+          "available_at_ns": 181502839331639,
+          "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+          "gpu_util": 90
+        }
+      },
+      {
+        "type": "ServerSample",
+        "received_at_ns": 181502851039669,
+        "window_id": "window-6",
+        "accepted": false,
+        "record": {
+          "sample_id": "server-34",
+          "requested_at_ns": 181502838348715,
+          "received_at_ns": 181502841607940,
+          "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+          "queue_depth": 3.0,
+          "error": null
+        }
+      },
+      {
+        "type": "GpuSample",
+        "received_at_ns": 181502852837988,
+        "window_id": "window-7",
+        "accepted": true,
+        "record": {
+          "sample_id": "gpu-35",
+          "timestamp_ns": 181502852076004,
+          "available_at_ns": 181502852076004,
+          "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+          "gpu_util": 90
+        }
+      },
+      {
+        "type": "ServerSample",
+        "received_at_ns": 181502854101588,
+        "window_id": "window-7",
+        "accepted": true,
+        "record": {
+          "sample_id": "server-35",
+          "requested_at_ns": 181502851531146,
+          "received_at_ns": 181502853487489,
+          "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+          "queue_depth": 4.0,
+          "error": null
+        }
+      },
+      {
+        "type": "GpuSample",
+        "received_at_ns": 181502855763352,
+        "window_id": "window-7",
+        "accepted": true,
+        "record": {
+          "sample_id": "gpu-36",
+          "timestamp_ns": 181502855341586,
+          "available_at_ns": 181502855341586,
+          "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+          "gpu_util": 90
+        }
+      },
+      {
+        "type": "ServerSample",
+        "received_at_ns": 181502858170576,
+        "window_id": "window-7",
+        "accepted": true,
+        "record": {
+          "sample_id": "server-36",
+          "requested_at_ns": 181502855403915,
+          "received_at_ns": 181502857835622,
+          "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+          "queue_depth": 4.0,
+          "error": null
+        }
+      },
+      {
+        "type": "ObservedCompletion",
+        "received_at_ns": 181502862222778,
+        "window_id": "window-7",
+        "accepted": true,
+        "record": {
+          "completion": {
+            "request_id": "opaque-12",
+            "start_ns": 181502736291093,
+            "end_ns": 181502860648601,
+            "available_at_ns": 181502860648601,
+            "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+            "success": true,
+            "error_kind": null
+          },
+          "prompt_tokens": 7,
+          "output_tokens": 3,
+          "usage_error": null
+        }
+      },
+      {
+        "type": "GpuSample",
+        "received_at_ns": 181502871796973,
+        "window_id": "window-7",
+        "accepted": true,
+        "record": {
+          "sample_id": "gpu-37",
+          "timestamp_ns": 181502865571231,
+          "available_at_ns": 181502865571231,
+          "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+          "gpu_util": 90
+        }
+      },
+      {
+        "type": "ServerSample",
+        "received_at_ns": 181502874551253,
+        "window_id": "window-7",
+        "accepted": true,
+        "record": {
+          "sample_id": "server-37",
+          "requested_at_ns": 181502871195084,
+          "received_at_ns": 181502873905053,
+          "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+          "queue_depth": 3.0,
+          "error": null
+        }
+      },
+      {
+        "type": "GpuSample",
+        "received_at_ns": 181502876845926,
+        "window_id": "window-7",
+        "accepted": true,
+        "record": {
+          "sample_id": "gpu-38",
+          "timestamp_ns": 181502875752087,
+          "available_at_ns": 181502875752087,
+          "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+          "gpu_util": 90
+        }
+      },
+      {
+        "type": "ServerSample",
+        "received_at_ns": 181502879678231,
+        "window_id": "window-7",
+        "accepted": true,
+        "record": {
+          "sample_id": "server-38",
+          "requested_at_ns": 181502875393469,
+          "received_at_ns": 181502878698791,
+          "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+          "queue_depth": 3.0,
+          "error": null
+        }
+      },
+      {
+        "type": "ObservedCompletion",
+        "received_at_ns": 181502883630512,
+        "window_id": "window-7",
+        "accepted": true,
+        "record": {
+          "completion": {
+            "request_id": "opaque-13",
+            "start_ns": 181502756149601,
+            "end_ns": 181502883505411,
+            "available_at_ns": 181502883505411,
+            "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+            "success": true,
+            "error_kind": null
+          },
+          "prompt_tokens": 7,
+          "output_tokens": 3,
+          "usage_error": null
+        }
+      },
+      {
+        "type": "GpuSample",
+        "received_at_ns": 181502886074361,
+        "window_id": "window-7",
+        "accepted": true,
+        "record": {
+          "sample_id": "gpu-39",
+          "timestamp_ns": 181502885107737,
+          "available_at_ns": 181502885107737,
+          "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+          "gpu_util": 90
+        }
+      },
+      {
+        "type": "ServerSample",
+        "received_at_ns": 181502887288995,
+        "window_id": "window-7",
+        "accepted": true,
+        "record": {
+          "sample_id": "server-39",
+          "requested_at_ns": 181502885138653,
+          "received_at_ns": 181502886422275,
+          "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+          "queue_depth": 2.0,
+          "error": null
+        }
+      },
+      {
+        "type": "ObservedCompletion",
+        "received_at_ns": 181502914805072,
+        "window_id": null,
+        "accepted": false,
+        "record": {
+          "completion": {
+            "request_id": "opaque-14",
+            "start_ns": 181502775805043,
+            "end_ns": 181502914209267,
+            "available_at_ns": 181502914209267,
+            "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+            "success": true,
+            "error_kind": null
+          },
+          "prompt_tokens": 7,
+          "output_tokens": 3,
+          "usage_error": null
+        }
+      },
+      {
+        "type": "ObservedCompletion",
+        "received_at_ns": 181502934951351,
+        "window_id": null,
+        "accepted": false,
+        "record": {
+          "completion": {
+            "request_id": "opaque-15",
+            "start_ns": 181502796193516,
+            "end_ns": 181502934627284,
+            "available_at_ns": 181502934627284,
+            "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+            "success": true,
+            "error_kind": null
+          },
+          "prompt_tokens": 7,
+          "output_tokens": 3,
+          "usage_error": null
+        }
+      },
+      {
+        "type": "ObservedCompletion",
+        "received_at_ns": 181502946543456,
+        "window_id": null,
+        "accepted": false,
+        "record": {
+          "completion": {
+            "request_id": "opaque-16",
+            "start_ns": 181502815534564,
+            "end_ns": 181502945335564,
+            "available_at_ns": 181502945335564,
+            "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+            "success": false,
+            "error_kind": "drain_cancelled"
+          },
+          "prompt_tokens": null,
+          "output_tokens": null,
+          "usage_error": "drain_cancelled"
+        }
+      },
+      {
+        "type": "ObservedCompletion",
+        "received_at_ns": 181502946575660,
+        "window_id": null,
+        "accepted": false,
+        "record": {
+          "completion": {
+            "request_id": "opaque-17",
+            "start_ns": 181502839069522,
+            "end_ns": 181502945419949,
+            "available_at_ns": 181502945419949,
+            "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a",
+            "success": false,
+            "error_kind": "drain_cancelled"
+          },
+          "prompt_tokens": null,
+          "output_tokens": null,
+          "usage_error": "drain_cancelled"
+        }
+      }
+    ],
+    "telemetry_drops": [],
+    "events": [
+      {
+        "sequence": 0,
+        "event": "offered_request_decided",
+        "received_at_ns": 181502495327291,
+        "request_id": "opaque-0",
+        "state": "admitted",
+        "due_at_ns": 181502495005388
+      },
+      {
+        "sequence": 1,
+        "event": "offered_request_decided",
+        "received_at_ns": 181502516253398,
+        "request_id": "opaque-1",
+        "state": "admitted",
+        "due_at_ns": 181502515005388
+      },
+      {
+        "sequence": 2,
+        "event": "offered_request_decided",
+        "received_at_ns": 181502536931329,
+        "request_id": "opaque-2",
+        "state": "admitted",
+        "due_at_ns": 181502535005388
+      },
+      {
+        "sequence": 3,
+        "event": "window_closed",
+        "received_at_ns": 181502551223818,
+        "window_id": "window-0",
+        "outstanding_admitted_ids": [
+          "opaque-1",
+          "opaque-2"
+        ]
+      },
+      {
+        "sequence": 4,
+        "event": "offered_request_decided",
+        "received_at_ns": 181502556369332,
+        "request_id": "opaque-3",
+        "state": "admitted",
+        "due_at_ns": 181502555005388
+      },
+      {
+        "sequence": 5,
+        "event": "offered_request_decided",
+        "received_at_ns": 181502575469696,
+        "request_id": "opaque-4",
+        "state": "admitted",
+        "due_at_ns": 181502575005388
+      },
+      {
+        "sequence": 6,
+        "event": "offered_request_decided",
+        "received_at_ns": 181502595908055,
+        "request_id": "opaque-5",
+        "state": "admitted",
+        "due_at_ns": 181502595005388
+      },
+      {
+        "sequence": 7,
+        "event": "window_closed",
+        "received_at_ns": 181502601246360,
+        "window_id": "window-1",
+        "outstanding_admitted_ids": [
+          "opaque-3",
+          "opaque-4",
+          "opaque-5"
+        ]
+      },
+      {
+        "sequence": 8,
+        "event": "offered_request_decided",
+        "received_at_ns": 181502616118444,
+        "request_id": "opaque-6",
+        "state": "admitted",
+        "due_at_ns": 181502615005388
+      },
+      {
+        "sequence": 9,
+        "event": "offered_request_decided",
+        "received_at_ns": 181502636349311,
+        "request_id": "opaque-7",
+        "state": "admitted",
+        "due_at_ns": 181502635005388
+      },
+      {
+        "sequence": 10,
+        "event": "window_closed",
+        "received_at_ns": 181502651644700,
+        "window_id": "window-2",
+        "outstanding_admitted_ids": [
+          "opaque-4",
+          "opaque-5",
+          "opaque-6",
+          "opaque-7"
+        ]
+      },
+      {
+        "sequence": 11,
+        "event": "offered_request_decided",
+        "received_at_ns": 181502656276241,
+        "request_id": "opaque-8",
+        "state": "admitted",
+        "due_at_ns": 181502655005388
+      },
+      {
+        "sequence": 12,
+        "event": "offered_request_decided",
+        "received_at_ns": 181502676019736,
+        "request_id": "opaque-9",
+        "state": "admitted",
+        "due_at_ns": 181502675005388
+      },
+      {
+        "sequence": 13,
+        "event": "offered_request_decided",
+        "received_at_ns": 181502696271435,
+        "request_id": "opaque-10",
+        "state": "admitted",
+        "due_at_ns": 181502695005388
+      },
+      {
+        "sequence": 14,
+        "event": "window_closed",
+        "received_at_ns": 181502701091605,
+        "window_id": "window-3",
+        "outstanding_admitted_ids": [
+          "opaque-6",
+          "opaque-7",
+          "opaque-8",
+          "opaque-9",
+          "opaque-10"
+        ]
+      },
+      {
+        "sequence": 15,
+        "event": "offered_request_decided",
+        "received_at_ns": 181502715651989,
+        "request_id": "opaque-11",
+        "state": "admitted",
+        "due_at_ns": 181502715005388
+      },
+      {
+        "sequence": 16,
+        "event": "offered_request_decided",
+        "received_at_ns": 181502736153381,
+        "request_id": "opaque-12",
+        "state": "admitted",
+        "due_at_ns": 181502735005388
+      },
+      {
+        "sequence": 17,
+        "event": "window_closed",
+        "received_at_ns": 181502751247067,
+        "window_id": "window-4",
+        "outstanding_admitted_ids": [
+          "opaque-8",
+          "opaque-9",
+          "opaque-10",
+          "opaque-11",
+          "opaque-12"
+        ]
+      },
+      {
+        "sequence": 18,
+        "event": "offered_request_decided",
+        "received_at_ns": 181502756034569,
+        "request_id": "opaque-13",
+        "state": "admitted",
+        "due_at_ns": 181502755005388
+      },
+      {
+        "sequence": 19,
+        "event": "offered_request_decided",
+        "received_at_ns": 181502775251166,
+        "request_id": "opaque-14",
+        "state": "admitted",
+        "due_at_ns": 181502775005388
+      },
+      {
+        "sequence": 20,
+        "event": "offered_request_decided",
+        "received_at_ns": 181502796071193,
+        "request_id": "opaque-15",
+        "state": "admitted",
+        "due_at_ns": 181502795005388
+      },
+      {
+        "sequence": 21,
+        "event": "window_closed",
+        "received_at_ns": 181502801158719,
+        "window_id": "window-5",
+        "outstanding_admitted_ids": [
+          "opaque-10",
+          "opaque-11",
+          "opaque-12",
+          "opaque-13",
+          "opaque-14",
+          "opaque-15"
+        ]
+      },
+      {
+        "sequence": 22,
+        "event": "offered_request_decided",
+        "received_at_ns": 181502815607746,
+        "request_id": "opaque-16",
+        "state": "admitted",
+        "due_at_ns": 181502815005388
+      },
+      {
+        "sequence": 23,
+        "event": "offered_request_decided",
+        "received_at_ns": 181502839102000,
+        "request_id": "opaque-17",
+        "state": "admitted",
+        "due_at_ns": 181502835005388
+      },
+      {
+        "sequence": 24,
+        "event": "window_closed",
+        "received_at_ns": 181502851339444,
+        "window_id": "window-6",
+        "outstanding_admitted_ids": [
+          "opaque-12",
+          "opaque-13",
+          "opaque-14",
+          "opaque-15",
+          "opaque-16",
+          "opaque-17"
+        ]
+      },
+      {
+        "sequence": 25,
+        "event": "window_closed",
+        "received_at_ns": 181502901810410,
+        "window_id": "window-7",
+        "outstanding_admitted_ids": [
+          "opaque-14",
+          "opaque-15",
+          "opaque-16",
+          "opaque-17"
+        ]
+      }
+    ],
+    "feature_windows": [
+      {
+        "window_id": "window-0",
+        "metrics": [
+          {
+            "name": "request_p95_ms",
+            "source": "request",
+            "unit": "ms",
+            "value": null,
+            "valid_samples": 0,
+            "attempted_samples": 0,
+            "coverage": "unavailable",
+            "missing_reason": "insufficient_successful_completions",
+            "acquisition": {
+              "start_ns": 181502495005388,
+              "end_ns": 181502545005388,
+              "available_at_ns": 181502551088583,
+              "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a"
+            }
+          },
+          {
+            "name": "completed_rps",
+            "source": "request",
+            "unit": "requests/s",
+            "value": 0.0,
+            "valid_samples": 1,
+            "attempted_samples": 1,
+            "coverage": "complete",
+            "missing_reason": null,
+            "acquisition": {
+              "start_ns": 181502495005388,
+              "end_ns": 181502545005388,
+              "available_at_ns": 181502551088583,
+              "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a"
+            }
+          },
+          {
+            "name": "prompt_tokens_mean",
+            "source": "request",
+            "unit": "tokens",
+            "value": null,
+            "valid_samples": 0,
+            "attempted_samples": 0,
+            "coverage": "unavailable",
+            "missing_reason": "no_valid_response_usage",
+            "acquisition": {
+              "start_ns": 181502495005388,
+              "end_ns": 181502545005388,
+              "available_at_ns": 181502551088583,
+              "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a"
+            }
+          },
+          {
+            "name": "output_tokens_mean",
+            "source": "request",
+            "unit": "tokens",
+            "value": null,
+            "valid_samples": 0,
+            "attempted_samples": 0,
+            "coverage": "unavailable",
+            "missing_reason": "no_valid_response_usage",
+            "acquisition": {
+              "start_ns": 181502495005388,
+              "end_ns": 181502545005388,
+              "available_at_ns": 181502551088583,
+              "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a"
+            }
+          },
+          {
+            "name": "queue_depth_mean",
+            "source": "server",
+            "unit": "requests",
+            "value": 0.0,
+            "valid_samples": 5,
+            "attempted_samples": 5,
+            "coverage": "complete",
+            "missing_reason": null,
+            "acquisition": {
+              "start_ns": 181502495005388,
+              "end_ns": 181502545005388,
+              "available_at_ns": 181502551088583,
+              "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a"
+            }
+          },
+          {
+            "name": "gpu_util_mean",
+            "source": "gpu",
+            "unit": "percent",
+            "value": 90.0,
+            "valid_samples": 5,
+            "attempted_samples": 5,
+            "coverage": "complete",
+            "missing_reason": null,
+            "acquisition": {
+              "start_ns": 181502495005388,
+              "end_ns": 181502545005388,
+              "available_at_ns": 181502551088583,
+              "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a"
+            }
+          },
+          {
+            "name": "request_wait_p95_ms",
+            "source": "server",
+            "unit": "ms",
+            "value": null,
+            "valid_samples": 0,
+            "attempted_samples": 0,
+            "coverage": "unavailable",
+            "missing_reason": "unsupported_interval_statistic_by_queue_gauge_collector",
+            "acquisition": {
+              "start_ns": 181502495005388,
+              "end_ns": 181502545005388,
+              "available_at_ns": 181502551088583,
+              "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a"
+            }
+          },
+          {
+            "name": "prefill_service_fraction",
+            "source": "server",
+            "unit": "fraction",
+            "value": null,
+            "valid_samples": 0,
+            "attempted_samples": 0,
+            "coverage": "unavailable",
+            "missing_reason": "unsupported_interval_statistic_by_queue_gauge_collector",
+            "acquisition": {
+              "start_ns": 181502495005388,
+              "end_ns": 181502545005388,
+              "available_at_ns": 181502551088583,
+              "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a"
+            }
+          }
+        ],
+        "audit": {
+          "start_ns": 181502495005388,
+          "end_ns": 181502545005388,
+          "deadline_ns": 181502550005388,
+          "closed_at_ns": 181502551088583,
+          "min_latency_samples": 1,
+          "threshold_role": "development_guard_not_calibrated",
+          "completion_count": 0,
+          "successful_completions": 0,
+          "request_errors": 0,
+          "usage_missing": 0,
+          "events": [
+            {
+              "kind": "gpu",
+              "identity": "gpu-0",
+              "received_at_ns": 181502497144554,
+              "accepted": true,
+              "reason": "accepted"
+            },
+            {
+              "kind": "server",
+              "identity": "server-0",
+              "received_at_ns": 181502498946900,
+              "accepted": true,
+              "reason": "accepted"
+            },
+            {
+              "kind": "gpu",
+              "identity": "gpu-1",
+              "received_at_ns": 181502506277456,
+              "accepted": true,
+              "reason": "accepted"
+            },
+            {
+              "kind": "server",
+              "identity": "server-1",
+              "received_at_ns": 181502510025708,
+              "accepted": true,
+              "reason": "accepted"
+            },
+            {
+              "kind": "gpu",
+              "identity": "gpu-2",
+              "received_at_ns": 181502516172939,
+              "accepted": true,
+              "reason": "accepted"
+            },
+            {
+              "kind": "server",
+              "identity": "server-2",
+              "received_at_ns": 181502520686789,
+              "accepted": true,
+              "reason": "accepted"
+            },
+            {
+              "kind": "gpu",
+              "identity": "gpu-3",
+              "received_at_ns": 181502526690014,
+              "accepted": true,
+              "reason": "accepted"
+            },
+            {
+              "kind": "server",
+              "identity": "server-3",
+              "received_at_ns": 181502529223269,
+              "accepted": true,
+              "reason": "accepted"
+            },
+            {
+              "kind": "gpu",
+              "identity": "gpu-4",
+              "received_at_ns": 181502538472615,
+              "accepted": true,
+              "reason": "accepted"
+            },
+            {
+              "kind": "server",
+              "identity": "server-4",
+              "received_at_ns": 181502539907292,
+              "accepted": true,
+              "reason": "accepted"
+            }
+          ],
+          "note": "Completion-cohort features; pending admissions/censoring are recorded by the workload driver. Gauge means are sample means, not time-weighted means."
+        }
+      },
+      {
+        "window_id": "window-1",
+        "metrics": [
+          {
+            "name": "request_p95_ms",
+            "source": "request",
+            "unit": "ms",
+            "value": 54.6635538,
+            "valid_samples": 2,
+            "attempted_samples": 2,
+            "coverage": "complete",
+            "missing_reason": null,
+            "acquisition": {
+              "start_ns": 181502545005388,
+              "end_ns": 181502595005388,
+              "available_at_ns": 181502601088895,
+              "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a"
+            }
+          },
+          {
+            "name": "completed_rps",
+            "source": "request",
+            "unit": "requests/s",
+            "value": 40.0,
+            "valid_samples": 1,
+            "attempted_samples": 1,
+            "coverage": "complete",
+            "missing_reason": null,
+            "acquisition": {
+              "start_ns": 181502545005388,
+              "end_ns": 181502595005388,
+              "available_at_ns": 181502601088895,
+              "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a"
+            }
+          },
+          {
+            "name": "prompt_tokens_mean",
+            "source": "request",
+            "unit": "tokens",
+            "value": 7.0,
+            "valid_samples": 2,
+            "attempted_samples": 2,
+            "coverage": "complete",
+            "missing_reason": null,
+            "acquisition": {
+              "start_ns": 181502545005388,
+              "end_ns": 181502595005388,
+              "available_at_ns": 181502601088895,
+              "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a"
+            }
+          },
+          {
+            "name": "output_tokens_mean",
+            "source": "request",
+            "unit": "tokens",
+            "value": 3.0,
+            "valid_samples": 2,
+            "attempted_samples": 2,
+            "coverage": "complete",
+            "missing_reason": null,
+            "acquisition": {
+              "start_ns": 181502545005388,
+              "end_ns": 181502595005388,
+              "available_at_ns": 181502601088895,
+              "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a"
+            }
+          },
+          {
+            "name": "queue_depth_mean",
+            "source": "server",
+            "unit": "requests",
+            "value": 0.6,
+            "valid_samples": 5,
+            "attempted_samples": 5,
+            "coverage": "complete",
+            "missing_reason": null,
+            "acquisition": {
+              "start_ns": 181502545005388,
+              "end_ns": 181502595005388,
+              "available_at_ns": 181502601088895,
+              "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a"
+            }
+          },
+          {
+            "name": "gpu_util_mean",
+            "source": "gpu",
+            "unit": "percent",
+            "value": 90.0,
+            "valid_samples": 5,
+            "attempted_samples": 5,
+            "coverage": "complete",
+            "missing_reason": null,
+            "acquisition": {
+              "start_ns": 181502545005388,
+              "end_ns": 181502595005388,
+              "available_at_ns": 181502601088895,
+              "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a"
+            }
+          },
+          {
+            "name": "request_wait_p95_ms",
+            "source": "server",
+            "unit": "ms",
+            "value": null,
+            "valid_samples": 0,
+            "attempted_samples": 0,
+            "coverage": "unavailable",
+            "missing_reason": "unsupported_interval_statistic_by_queue_gauge_collector",
+            "acquisition": {
+              "start_ns": 181502545005388,
+              "end_ns": 181502595005388,
+              "available_at_ns": 181502601088895,
+              "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a"
+            }
+          },
+          {
+            "name": "prefill_service_fraction",
+            "source": "server",
+            "unit": "fraction",
+            "value": null,
+            "valid_samples": 0,
+            "attempted_samples": 0,
+            "coverage": "unavailable",
+            "missing_reason": "unsupported_interval_statistic_by_queue_gauge_collector",
+            "acquisition": {
+              "start_ns": 181502545005388,
+              "end_ns": 181502595005388,
+              "available_at_ns": 181502601088895,
+              "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a"
+            }
+          }
+        ],
+        "audit": {
+          "start_ns": 181502545005388,
+          "end_ns": 181502595005388,
+          "deadline_ns": 181502600005388,
+          "closed_at_ns": 181502601088895,
+          "min_latency_samples": 1,
+          "threshold_role": "development_guard_not_calibrated",
+          "completion_count": 2,
+          "successful_completions": 2,
+          "request_errors": 0,
+          "usage_missing": 0,
+          "events": [
+            {
+              "kind": "gpu",
+              "identity": "gpu-5",
+              "received_at_ns": 181502546108045,
+              "accepted": true,
+              "reason": "accepted"
+            },
+            {
+              "kind": "server",
+              "identity": "server-5",
+              "received_at_ns": 181502547365388,
+              "accepted": true,
+              "reason": "accepted"
+            },
+            {
+              "kind": "request",
+              "identity": "opaque-0",
+              "received_at_ns": 181502548881550,
+              "accepted": true,
+              "reason": "accepted"
+            },
+            {
+              "kind": "gpu",
+              "identity": "gpu-6",
+              "received_at_ns": 181502556304174,
+              "accepted": true,
+              "reason": "accepted"
+            },
+            {
+              "kind": "server",
+              "identity": "server-6",
+              "received_at_ns": 181502559030068,
+              "accepted": true,
+              "reason": "accepted"
+            },
+            {
+              "kind": "gpu",
+              "identity": "gpu-7",
+              "received_at_ns": 181502566619652,
+              "accepted": true,
+              "reason": "accepted"
+            },
+            {
+              "kind": "request",
+              "identity": "opaque-1",
+              "received_at_ns": 181502572172426,
+              "accepted": true,
+              "reason": "accepted"
+            },
+            {
+              "kind": "server",
+              "identity": "server-7",
+              "received_at_ns": 181502572202587,
+              "accepted": true,
+              "reason": "accepted"
+            },
+            {
+              "kind": "gpu",
+              "identity": "gpu-8",
+              "received_at_ns": 181502577007481,
+              "accepted": true,
+              "reason": "accepted"
+            },
+            {
+              "kind": "server",
+              "identity": "server-8",
+              "received_at_ns": 181502580579819,
+              "accepted": true,
+              "reason": "accepted"
+            },
+            {
+              "kind": "gpu",
+              "identity": "gpu-9",
+              "received_at_ns": 181502586241820,
+              "accepted": true,
+              "reason": "accepted"
+            },
+            {
+              "kind": "server",
+              "identity": "server-9",
+              "received_at_ns": 181502588839018,
+              "accepted": true,
+              "reason": "accepted"
+            }
+          ],
+          "note": "Completion-cohort features; pending admissions/censoring are recorded by the workload driver. Gauge means are sample means, not time-weighted means."
+        }
+      },
+      {
+        "window_id": "window-2",
+        "metrics": [
+          {
+            "name": "request_p95_ms",
+            "source": "request",
+            "unit": "ms",
+            "value": 68.011932,
+            "valid_samples": 2,
+            "attempted_samples": 2,
+            "coverage": "complete",
+            "missing_reason": null,
+            "acquisition": {
+              "start_ns": 181502595005388,
+              "end_ns": 181502645005388,
+              "available_at_ns": 181502651528616,
+              "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a"
+            }
+          },
+          {
+            "name": "completed_rps",
+            "source": "request",
+            "unit": "requests/s",
+            "value": 40.0,
+            "valid_samples": 1,
+            "attempted_samples": 1,
+            "coverage": "complete",
+            "missing_reason": null,
+            "acquisition": {
+              "start_ns": 181502595005388,
+              "end_ns": 181502645005388,
+              "available_at_ns": 181502651528616,
+              "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a"
+            }
+          },
+          {
+            "name": "prompt_tokens_mean",
+            "source": "request",
+            "unit": "tokens",
+            "value": 7.0,
+            "valid_samples": 2,
+            "attempted_samples": 2,
+            "coverage": "complete",
+            "missing_reason": null,
+            "acquisition": {
+              "start_ns": 181502595005388,
+              "end_ns": 181502645005388,
+              "available_at_ns": 181502651528616,
+              "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a"
+            }
+          },
+          {
+            "name": "output_tokens_mean",
+            "source": "request",
+            "unit": "tokens",
+            "value": 3.0,
+            "valid_samples": 2,
+            "attempted_samples": 2,
+            "coverage": "complete",
+            "missing_reason": null,
+            "acquisition": {
+              "start_ns": 181502595005388,
+              "end_ns": 181502645005388,
+              "available_at_ns": 181502651528616,
+              "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a"
+            }
+          },
+          {
+            "name": "queue_depth_mean",
+            "source": "server",
+            "unit": "requests",
+            "value": 0.8,
+            "valid_samples": 5,
+            "attempted_samples": 5,
+            "coverage": "complete",
+            "missing_reason": null,
+            "acquisition": {
+              "start_ns": 181502595005388,
+              "end_ns": 181502645005388,
+              "available_at_ns": 181502651528616,
+              "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a"
+            }
+          },
+          {
+            "name": "gpu_util_mean",
+            "source": "gpu",
+            "unit": "percent",
+            "value": 90.0,
+            "valid_samples": 5,
+            "attempted_samples": 5,
+            "coverage": "complete",
+            "missing_reason": null,
+            "acquisition": {
+              "start_ns": 181502595005388,
+              "end_ns": 181502645005388,
+              "available_at_ns": 181502651528616,
+              "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a"
+            }
+          },
+          {
+            "name": "request_wait_p95_ms",
+            "source": "server",
+            "unit": "ms",
+            "value": null,
+            "valid_samples": 0,
+            "attempted_samples": 0,
+            "coverage": "unavailable",
+            "missing_reason": "unsupported_interval_statistic_by_queue_gauge_collector",
+            "acquisition": {
+              "start_ns": 181502595005388,
+              "end_ns": 181502645005388,
+              "available_at_ns": 181502651528616,
+              "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a"
+            }
+          },
+          {
+            "name": "prefill_service_fraction",
+            "source": "server",
+            "unit": "fraction",
+            "value": null,
+            "valid_samples": 0,
+            "attempted_samples": 0,
+            "coverage": "unavailable",
+            "missing_reason": "unsupported_interval_statistic_by_queue_gauge_collector",
+            "acquisition": {
+              "start_ns": 181502595005388,
+              "end_ns": 181502645005388,
+              "available_at_ns": 181502651528616,
+              "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a"
+            }
+          }
+        ],
+        "audit": {
+          "start_ns": 181502595005388,
+          "end_ns": 181502645005388,
+          "deadline_ns": 181502650005388,
+          "closed_at_ns": 181502651528616,
+          "min_latency_samples": 1,
+          "threshold_role": "development_guard_not_calibrated",
+          "completion_count": 2,
+          "successful_completions": 2,
+          "request_errors": 0,
+          "usage_missing": 0,
+          "events": [
+            {
+              "kind": "gpu",
+              "identity": "gpu-10",
+              "received_at_ns": 181502595830989,
+              "accepted": true,
+              "reason": "accepted"
+            },
+            {
+              "kind": "request",
+              "identity": "opaque-2",
+              "received_at_ns": 181502599884580,
+              "accepted": true,
+              "reason": "accepted"
+            },
+            {
+              "kind": "server",
+              "identity": "server-10",
+              "received_at_ns": 181502601053878,
+              "accepted": true,
+              "reason": "accepted"
+            },
+            {
+              "kind": "gpu",
+              "identity": "gpu-11",
+              "received_at_ns": 181502606524363,
+              "accepted": true,
+              "reason": "accepted"
+            },
+            {
+              "kind": "server",
+              "identity": "server-11",
+              "received_at_ns": 181502610709063,
+              "accepted": true,
+              "reason": "accepted"
+            },
+            {
+              "kind": "gpu",
+              "identity": "gpu-12",
+              "received_at_ns": 181502615978817,
+              "accepted": true,
+              "reason": "accepted"
+            },
+            {
+              "kind": "server",
+              "identity": "server-12",
+              "received_at_ns": 181502618797740,
+              "accepted": true,
+              "reason": "accepted"
+            },
+            {
+              "kind": "request",
+              "identity": "opaque-3",
+              "received_at_ns": 181502626128250,
+              "accepted": true,
+              "reason": "accepted"
+            },
+            {
+              "kind": "gpu",
+              "identity": "gpu-13",
+              "received_at_ns": 181502626165786,
+              "accepted": true,
+              "reason": "accepted"
+            },
+            {
+              "kind": "server",
+              "identity": "server-13",
+              "received_at_ns": 181502631796727,
+              "accepted": true,
+              "reason": "accepted"
+            },
+            {
+              "kind": "gpu",
+              "identity": "gpu-14",
+              "received_at_ns": 181502636167693,
+              "accepted": true,
+              "reason": "accepted"
+            },
+            {
+              "kind": "server",
+              "identity": "server-14",
+              "received_at_ns": 181502642816303,
+              "accepted": true,
+              "reason": "accepted"
+            }
+          ],
+          "note": "Completion-cohort features; pending admissions/censoring are recorded by the workload driver. Gauge means are sample means, not time-weighted means."
+        }
+      },
+      {
+        "window_id": "window-3",
+        "metrics": [
+          {
+            "name": "request_p95_ms",
+            "source": "request",
+            "unit": "ms",
+            "value": 81.73336205,
+            "valid_samples": 2,
+            "attempted_samples": 2,
+            "coverage": "complete",
+            "missing_reason": null,
+            "acquisition": {
+              "start_ns": 181502645005388,
+              "end_ns": 181502695005388,
+              "available_at_ns": 181502700205746,
+              "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a"
+            }
+          },
+          {
+            "name": "completed_rps",
+            "source": "request",
+            "unit": "requests/s",
+            "value": 40.0,
+            "valid_samples": 1,
+            "attempted_samples": 1,
+            "coverage": "complete",
+            "missing_reason": null,
+            "acquisition": {
+              "start_ns": 181502645005388,
+              "end_ns": 181502695005388,
+              "available_at_ns": 181502700205746,
+              "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a"
+            }
+          },
+          {
+            "name": "prompt_tokens_mean",
+            "source": "request",
+            "unit": "tokens",
+            "value": 7.0,
+            "valid_samples": 2,
+            "attempted_samples": 2,
+            "coverage": "complete",
+            "missing_reason": null,
+            "acquisition": {
+              "start_ns": 181502645005388,
+              "end_ns": 181502695005388,
+              "available_at_ns": 181502700205746,
+              "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a"
+            }
+          },
+          {
+            "name": "output_tokens_mean",
+            "source": "request",
+            "unit": "tokens",
+            "value": 3.0,
+            "valid_samples": 2,
+            "attempted_samples": 2,
+            "coverage": "complete",
+            "missing_reason": null,
+            "acquisition": {
+              "start_ns": 181502645005388,
+              "end_ns": 181502695005388,
+              "available_at_ns": 181502700205746,
+              "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a"
+            }
+          },
+          {
+            "name": "queue_depth_mean",
+            "source": "server",
+            "unit": "requests",
+            "value": 1.6,
+            "valid_samples": 5,
+            "attempted_samples": 5,
+            "coverage": "complete",
+            "missing_reason": null,
+            "acquisition": {
+              "start_ns": 181502645005388,
+              "end_ns": 181502695005388,
+              "available_at_ns": 181502700205746,
+              "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a"
+            }
+          },
+          {
+            "name": "gpu_util_mean",
+            "source": "gpu",
+            "unit": "percent",
+            "value": 90.0,
+            "valid_samples": 5,
+            "attempted_samples": 5,
+            "coverage": "complete",
+            "missing_reason": null,
+            "acquisition": {
+              "start_ns": 181502645005388,
+              "end_ns": 181502695005388,
+              "available_at_ns": 181502700205746,
+              "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a"
+            }
+          },
+          {
+            "name": "request_wait_p95_ms",
+            "source": "server",
+            "unit": "ms",
+            "value": null,
+            "valid_samples": 0,
+            "attempted_samples": 0,
+            "coverage": "unavailable",
+            "missing_reason": "unsupported_interval_statistic_by_queue_gauge_collector",
+            "acquisition": {
+              "start_ns": 181502645005388,
+              "end_ns": 181502695005388,
+              "available_at_ns": 181502700205746,
+              "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a"
+            }
+          },
+          {
+            "name": "prefill_service_fraction",
+            "source": "server",
+            "unit": "fraction",
+            "value": null,
+            "valid_samples": 0,
+            "attempted_samples": 0,
+            "coverage": "unavailable",
+            "missing_reason": "unsupported_interval_statistic_by_queue_gauge_collector",
+            "acquisition": {
+              "start_ns": 181502645005388,
+              "end_ns": 181502695005388,
+              "available_at_ns": 181502700205746,
+              "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a"
+            }
+          }
+        ],
+        "audit": {
+          "start_ns": 181502645005388,
+          "end_ns": 181502695005388,
+          "deadline_ns": 181502700005388,
+          "closed_at_ns": 181502700205746,
+          "min_latency_samples": 1,
+          "threshold_role": "development_guard_not_calibrated",
+          "completion_count": 2,
+          "successful_completions": 2,
+          "request_errors": 0,
+          "usage_missing": 0,
+          "events": [
+            {
+              "kind": "gpu",
+              "identity": "gpu-15",
+              "received_at_ns": 181502649443023,
+              "accepted": true,
+              "reason": "accepted"
+            },
+            {
+              "kind": "request",
+              "identity": "opaque-4",
+              "received_at_ns": 181502654672042,
+              "accepted": true,
+              "reason": "accepted"
+            },
+            {
+              "kind": "server",
+              "identity": "server-15",
+              "received_at_ns": 181502656123638,
+              "accepted": true,
+              "reason": "accepted"
+            },
+            {
+              "kind": "gpu",
+              "identity": "gpu-16",
+              "received_at_ns": 181502656203591,
+              "accepted": true,
+              "reason": "accepted"
+            },
+            {
+              "kind": "server",
+              "identity": "server-16",
+              "received_at_ns": 181502658640900,
+              "accepted": true,
+              "reason": "accepted"
+            },
+            {
+              "kind": "gpu",
+              "identity": "gpu-17",
+              "received_at_ns": 181502666523932,
+              "accepted": true,
+              "reason": "accepted"
+            },
+            {
+              "kind": "server",
+              "identity": "server-17",
+              "received_at_ns": 181502667839426,
+              "accepted": true,
+              "reason": "accepted"
+            },
+            {
+              "kind": "gpu",
+              "identity": "gpu-18",
+              "received_at_ns": 181502675966535,
+              "accepted": true,
+              "reason": "accepted"
+            },
+            {
+              "kind": "server",
+              "identity": "server-18",
+              "received_at_ns": 181502677183558,
+              "accepted": true,
+              "reason": "accepted"
+            },
+            {
+              "kind": "request",
+              "identity": "opaque-5",
+              "received_at_ns": 181502680854641,
+              "accepted": true,
+              "reason": "accepted"
+            },
+            {
+              "kind": "gpu",
+              "identity": "gpu-19",
+              "received_at_ns": 181502685621210,
+              "accepted": true,
+              "reason": "accepted"
+            },
+            {
+              "kind": "server",
+              "identity": "server-19",
+              "received_at_ns": 181502686761731,
+              "accepted": true,
+              "reason": "accepted"
+            }
+          ],
+          "note": "Completion-cohort features; pending admissions/censoring are recorded by the workload driver. Gauge means are sample means, not time-weighted means."
+        }
+      },
+      {
+        "window_id": "window-4",
+        "metrics": [
+          {
+            "name": "request_p95_ms",
+            "source": "request",
+            "unit": "ms",
+            "value": 91.8645776,
+            "valid_samples": 2,
+            "attempted_samples": 2,
+            "coverage": "complete",
+            "missing_reason": null,
+            "acquisition": {
+              "start_ns": 181502695005388,
+              "end_ns": 181502745005388,
+              "available_at_ns": 181502751127760,
+              "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a"
+            }
+          },
+          {
+            "name": "completed_rps",
+            "source": "request",
+            "unit": "requests/s",
+            "value": 40.0,
+            "valid_samples": 1,
+            "attempted_samples": 1,
+            "coverage": "complete",
+            "missing_reason": null,
+            "acquisition": {
+              "start_ns": 181502695005388,
+              "end_ns": 181502745005388,
+              "available_at_ns": 181502751127760,
+              "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a"
+            }
+          },
+          {
+            "name": "prompt_tokens_mean",
+            "source": "request",
+            "unit": "tokens",
+            "value": 7.0,
+            "valid_samples": 2,
+            "attempted_samples": 2,
+            "coverage": "complete",
+            "missing_reason": null,
+            "acquisition": {
+              "start_ns": 181502695005388,
+              "end_ns": 181502745005388,
+              "available_at_ns": 181502751127760,
+              "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a"
+            }
+          },
+          {
+            "name": "output_tokens_mean",
+            "source": "request",
+            "unit": "tokens",
+            "value": 3.0,
+            "valid_samples": 2,
+            "attempted_samples": 2,
+            "coverage": "complete",
+            "missing_reason": null,
+            "acquisition": {
+              "start_ns": 181502695005388,
+              "end_ns": 181502745005388,
+              "available_at_ns": 181502751127760,
+              "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a"
+            }
+          },
+          {
+            "name": "queue_depth_mean",
+            "source": "server",
+            "unit": "requests",
+            "value": 2.2,
+            "valid_samples": 5,
+            "attempted_samples": 5,
+            "coverage": "complete",
+            "missing_reason": null,
+            "acquisition": {
+              "start_ns": 181502695005388,
+              "end_ns": 181502745005388,
+              "available_at_ns": 181502751127760,
+              "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a"
+            }
+          },
+          {
+            "name": "gpu_util_mean",
+            "source": "gpu",
+            "unit": "percent",
+            "value": 90.0,
+            "valid_samples": 5,
+            "attempted_samples": 5,
+            "coverage": "complete",
+            "missing_reason": null,
+            "acquisition": {
+              "start_ns": 181502695005388,
+              "end_ns": 181502745005388,
+              "available_at_ns": 181502751127760,
+              "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a"
+            }
+          },
+          {
+            "name": "request_wait_p95_ms",
+            "source": "server",
+            "unit": "ms",
+            "value": null,
+            "valid_samples": 0,
+            "attempted_samples": 0,
+            "coverage": "unavailable",
+            "missing_reason": "unsupported_interval_statistic_by_queue_gauge_collector",
+            "acquisition": {
+              "start_ns": 181502695005388,
+              "end_ns": 181502745005388,
+              "available_at_ns": 181502751127760,
+              "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a"
+            }
+          },
+          {
+            "name": "prefill_service_fraction",
+            "source": "server",
+            "unit": "fraction",
+            "value": null,
+            "valid_samples": 0,
+            "attempted_samples": 0,
+            "coverage": "unavailable",
+            "missing_reason": "unsupported_interval_statistic_by_queue_gauge_collector",
+            "acquisition": {
+              "start_ns": 181502695005388,
+              "end_ns": 181502745005388,
+              "available_at_ns": 181502751127760,
+              "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a"
+            }
+          }
+        ],
+        "audit": {
+          "start_ns": 181502695005388,
+          "end_ns": 181502745005388,
+          "deadline_ns": 181502750005388,
+          "closed_at_ns": 181502751127760,
+          "min_latency_samples": 1,
+          "threshold_role": "development_guard_not_calibrated",
+          "completion_count": 2,
+          "successful_completions": 2,
+          "request_errors": 0,
+          "usage_missing": 0,
+          "events": [
+            {
+              "kind": "gpu",
+              "identity": "gpu-20",
+              "received_at_ns": 181502696204651,
+              "accepted": true,
+              "reason": "accepted"
+            },
+            {
+              "kind": "server",
+              "identity": "server-20",
+              "received_at_ns": 181502697516015,
+              "accepted": true,
+              "reason": "accepted"
+            },
+            {
+              "kind": "request",
+              "identity": "opaque-6",
+              "received_at_ns": 181502708888052,
+              "accepted": true,
+              "reason": "accepted"
+            },
+            {
+              "kind": "gpu",
+              "identity": "gpu-21",
+              "received_at_ns": 181502708931786,
+              "accepted": true,
+              "reason": "accepted"
+            },
+            {
+              "kind": "server",
+              "identity": "server-21",
+              "received_at_ns": 181502710231588,
+              "accepted": true,
+              "reason": "accepted"
+            },
+            {
+              "kind": "gpu",
+              "identity": "gpu-22",
+              "received_at_ns": 181502715602029,
+              "accepted": true,
+              "reason": "accepted"
+            },
+            {
+              "kind": "server",
+              "identity": "server-22",
+              "received_at_ns": 181502718182271,
+              "accepted": true,
+              "reason": "accepted"
+            },
+            {
+              "kind": "gpu",
+              "identity": "gpu-23",
+              "received_at_ns": 181502726172846,
+              "accepted": true,
+              "reason": "accepted"
+            },
+            {
+              "kind": "server",
+              "identity": "server-23",
+              "received_at_ns": 181502727412421,
+              "accepted": true,
+              "reason": "accepted"
+            },
+            {
+              "kind": "request",
+              "identity": "opaque-7",
+              "received_at_ns": 181502728581171,
+              "accepted": true,
+              "reason": "accepted"
+            },
+            {
+              "kind": "gpu",
+              "identity": "gpu-24",
+              "received_at_ns": 181502736052607,
+              "accepted": true,
+              "reason": "accepted"
+            },
+            {
+              "kind": "server",
+              "identity": "server-24",
+              "received_at_ns": 181502737655458,
+              "accepted": true,
+              "reason": "accepted"
+            }
+          ],
+          "note": "Completion-cohort features; pending admissions/censoring are recorded by the workload driver. Gauge means are sample means, not time-weighted means."
+        }
+      },
+      {
+        "window_id": "window-5",
+        "metrics": [
+          {
+            "name": "request_p95_ms",
+            "source": "request",
+            "unit": "ms",
+            "value": 102.3668946,
+            "valid_samples": 2,
+            "attempted_samples": 2,
+            "coverage": "complete",
+            "missing_reason": null,
+            "acquisition": {
+              "start_ns": 181502745005388,
+              "end_ns": 181502795005388,
+              "available_at_ns": 181502800988162,
+              "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a"
+            }
+          },
+          {
+            "name": "completed_rps",
+            "source": "request",
+            "unit": "requests/s",
+            "value": 40.0,
+            "valid_samples": 1,
+            "attempted_samples": 1,
+            "coverage": "complete",
+            "missing_reason": null,
+            "acquisition": {
+              "start_ns": 181502745005388,
+              "end_ns": 181502795005388,
+              "available_at_ns": 181502800988162,
+              "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a"
+            }
+          },
+          {
+            "name": "prompt_tokens_mean",
+            "source": "request",
+            "unit": "tokens",
+            "value": 7.0,
+            "valid_samples": 2,
+            "attempted_samples": 2,
+            "coverage": "complete",
+            "missing_reason": null,
+            "acquisition": {
+              "start_ns": 181502745005388,
+              "end_ns": 181502795005388,
+              "available_at_ns": 181502800988162,
+              "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a"
+            }
+          },
+          {
+            "name": "output_tokens_mean",
+            "source": "request",
+            "unit": "tokens",
+            "value": 3.0,
+            "valid_samples": 2,
+            "attempted_samples": 2,
+            "coverage": "complete",
+            "missing_reason": null,
+            "acquisition": {
+              "start_ns": 181502745005388,
+              "end_ns": 181502795005388,
+              "available_at_ns": 181502800988162,
+              "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a"
+            }
+          },
+          {
+            "name": "queue_depth_mean",
+            "source": "server",
+            "unit": "requests",
+            "value": 3.0,
+            "valid_samples": 5,
+            "attempted_samples": 5,
+            "coverage": "complete",
+            "missing_reason": null,
+            "acquisition": {
+              "start_ns": 181502745005388,
+              "end_ns": 181502795005388,
+              "available_at_ns": 181502800988162,
+              "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a"
+            }
+          },
+          {
+            "name": "gpu_util_mean",
+            "source": "gpu",
+            "unit": "percent",
+            "value": 90.0,
+            "valid_samples": 5,
+            "attempted_samples": 5,
+            "coverage": "complete",
+            "missing_reason": null,
+            "acquisition": {
+              "start_ns": 181502745005388,
+              "end_ns": 181502795005388,
+              "available_at_ns": 181502800988162,
+              "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a"
+            }
+          },
+          {
+            "name": "request_wait_p95_ms",
+            "source": "server",
+            "unit": "ms",
+            "value": null,
+            "valid_samples": 0,
+            "attempted_samples": 0,
+            "coverage": "unavailable",
+            "missing_reason": "unsupported_interval_statistic_by_queue_gauge_collector",
+            "acquisition": {
+              "start_ns": 181502745005388,
+              "end_ns": 181502795005388,
+              "available_at_ns": 181502800988162,
+              "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a"
+            }
+          },
+          {
+            "name": "prefill_service_fraction",
+            "source": "server",
+            "unit": "fraction",
+            "value": null,
+            "valid_samples": 0,
+            "attempted_samples": 0,
+            "coverage": "unavailable",
+            "missing_reason": "unsupported_interval_statistic_by_queue_gauge_collector",
+            "acquisition": {
+              "start_ns": 181502745005388,
+              "end_ns": 181502795005388,
+              "available_at_ns": 181502800988162,
+              "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a"
+            }
+          }
+        ],
+        "audit": {
+          "start_ns": 181502745005388,
+          "end_ns": 181502795005388,
+          "deadline_ns": 181502800005388,
+          "closed_at_ns": 181502800988162,
+          "min_latency_samples": 1,
+          "threshold_role": "development_guard_not_calibrated",
+          "completion_count": 2,
+          "successful_completions": 2,
+          "request_errors": 0,
+          "usage_missing": 0,
+          "events": [
+            {
+              "kind": "gpu",
+              "identity": "gpu-25",
+              "received_at_ns": 181502747085057,
+              "accepted": true,
+              "reason": "accepted"
+            },
+            {
+              "kind": "server",
+              "identity": "server-25",
+              "received_at_ns": 181502748551956,
+              "accepted": true,
+              "reason": "accepted"
+            },
+            {
+              "kind": "gpu",
+              "identity": "gpu-26",
+              "received_at_ns": 181502755968620,
+              "accepted": true,
+              "reason": "accepted"
+            },
+            {
+              "kind": "request",
+              "identity": "opaque-8",
+              "received_at_ns": 181502758689330,
+              "accepted": true,
+              "reason": "accepted"
+            },
+            {
+              "kind": "server",
+              "identity": "server-26",
+              "received_at_ns": 181502758716513,
+              "accepted": true,
+              "reason": "accepted"
+            },
+            {
+              "kind": "gpu",
+              "identity": "gpu-27",
+              "received_at_ns": 181502765958935,
+              "accepted": true,
+              "reason": "accepted"
+            },
+            {
+              "kind": "server",
+              "identity": "server-27",
+              "received_at_ns": 181502767197143,
+              "accepted": true,
+              "reason": "accepted"
+            },
+            {
+              "kind": "gpu",
+              "identity": "gpu-28",
+              "received_at_ns": 181502776599459,
+              "accepted": true,
+              "reason": "accepted"
+            },
+            {
+              "kind": "server",
+              "identity": "server-28",
+              "received_at_ns": 181502777786926,
+              "accepted": true,
+              "reason": "accepted"
+            },
+            {
+              "kind": "request",
+              "identity": "opaque-9",
+              "received_at_ns": 181502778952454,
+              "accepted": true,
+              "reason": "accepted"
+            },
+            {
+              "kind": "gpu",
+              "identity": "gpu-29",
+              "received_at_ns": 181502785552035,
+              "accepted": true,
+              "reason": "accepted"
+            },
+            {
+              "kind": "server",
+              "identity": "server-29",
+              "received_at_ns": 181502786742610,
+              "accepted": true,
+              "reason": "accepted"
+            }
+          ],
+          "note": "Completion-cohort features; pending admissions/censoring are recorded by the workload driver. Gauge means are sample means, not time-weighted means."
+        }
+      },
+      {
+        "window_id": "window-6",
+        "metrics": [
+          {
+            "name": "request_p95_ms",
+            "source": "request",
+            "unit": "ms",
+            "value": 117.55195905000001,
+            "valid_samples": 2,
+            "attempted_samples": 2,
+            "coverage": "complete",
+            "missing_reason": null,
+            "acquisition": {
+              "start_ns": 181502795005388,
+              "end_ns": 181502845005388,
+              "available_at_ns": 181502851071985,
+              "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a"
+            }
+          },
+          {
+            "name": "completed_rps",
+            "source": "request",
+            "unit": "requests/s",
+            "value": 40.0,
+            "valid_samples": 1,
+            "attempted_samples": 1,
+            "coverage": "complete",
+            "missing_reason": null,
+            "acquisition": {
+              "start_ns": 181502795005388,
+              "end_ns": 181502845005388,
+              "available_at_ns": 181502851071985,
+              "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a"
+            }
+          },
+          {
+            "name": "prompt_tokens_mean",
+            "source": "request",
+            "unit": "tokens",
+            "value": 7.0,
+            "valid_samples": 2,
+            "attempted_samples": 2,
+            "coverage": "complete",
+            "missing_reason": null,
+            "acquisition": {
+              "start_ns": 181502795005388,
+              "end_ns": 181502845005388,
+              "available_at_ns": 181502851071985,
+              "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a"
+            }
+          },
+          {
+            "name": "output_tokens_mean",
+            "source": "request",
+            "unit": "tokens",
+            "value": 3.0,
+            "valid_samples": 2,
+            "attempted_samples": 2,
+            "coverage": "complete",
+            "missing_reason": null,
+            "acquisition": {
+              "start_ns": 181502795005388,
+              "end_ns": 181502845005388,
+              "available_at_ns": 181502851071985,
+              "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a"
+            }
+          },
+          {
+            "name": "queue_depth_mean",
+            "source": "server",
+            "unit": "requests",
+            "value": 3.5,
+            "valid_samples": 4,
+            "attempted_samples": 4,
+            "coverage": "complete",
+            "missing_reason": null,
+            "acquisition": {
+              "start_ns": 181502795005388,
+              "end_ns": 181502845005388,
+              "available_at_ns": 181502851071985,
+              "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a"
+            }
+          },
+          {
+            "name": "gpu_util_mean",
+            "source": "gpu",
+            "unit": "percent",
+            "value": 90.0,
+            "valid_samples": 5,
+            "attempted_samples": 5,
+            "coverage": "complete",
+            "missing_reason": null,
+            "acquisition": {
+              "start_ns": 181502795005388,
+              "end_ns": 181502845005388,
+              "available_at_ns": 181502851071985,
+              "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a"
+            }
+          },
+          {
+            "name": "request_wait_p95_ms",
+            "source": "server",
+            "unit": "ms",
+            "value": null,
+            "valid_samples": 0,
+            "attempted_samples": 0,
+            "coverage": "unavailable",
+            "missing_reason": "unsupported_interval_statistic_by_queue_gauge_collector",
+            "acquisition": {
+              "start_ns": 181502795005388,
+              "end_ns": 181502845005388,
+              "available_at_ns": 181502851071985,
+              "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a"
+            }
+          },
+          {
+            "name": "prefill_service_fraction",
+            "source": "server",
+            "unit": "fraction",
+            "value": null,
+            "valid_samples": 0,
+            "attempted_samples": 0,
+            "coverage": "unavailable",
+            "missing_reason": "unsupported_interval_statistic_by_queue_gauge_collector",
+            "acquisition": {
+              "start_ns": 181502795005388,
+              "end_ns": 181502845005388,
+              "available_at_ns": 181502851071985,
+              "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a"
+            }
+          }
+        ],
+        "audit": {
+          "start_ns": 181502795005388,
+          "end_ns": 181502845005388,
+          "deadline_ns": 181502850005388,
+          "closed_at_ns": 181502851071985,
+          "min_latency_samples": 1,
+          "threshold_role": "development_guard_not_calibrated",
+          "completion_count": 2,
+          "successful_completions": 2,
+          "request_errors": 0,
+          "usage_missing": 0,
+          "events": [
+            {
+              "kind": "gpu",
+              "identity": "gpu-30",
+              "received_at_ns": 181502796003009,
+              "accepted": true,
+              "reason": "accepted"
+            },
+            {
+              "kind": "server",
+              "identity": "server-30",
+              "received_at_ns": 181502798995700,
+              "accepted": true,
+              "reason": "accepted"
+            },
+            {
+              "kind": "gpu",
+              "identity": "gpu-31",
+              "received_at_ns": 181502806761702,
+              "accepted": true,
+              "reason": "accepted"
+            },
+            {
+              "kind": "server",
+              "identity": "server-31",
+              "received_at_ns": 181502808165971,
+              "accepted": true,
+              "reason": "accepted"
+            },
+            {
+              "kind": "request",
+              "identity": "opaque-10",
+              "received_at_ns": 181502809777604,
+              "accepted": true,
+              "reason": "accepted"
+            },
+            {
+              "kind": "gpu",
+              "identity": "gpu-32",
+              "received_at_ns": 181502817030748,
+              "accepted": true,
+              "reason": "accepted"
+            },
+            {
+              "kind": "server",
+              "identity": "server-32",
+              "received_at_ns": 181502819379287,
+              "accepted": true,
+              "reason": "accepted"
+            },
+            {
+              "kind": "request",
+              "identity": "opaque-11",
+              "received_at_ns": 181502833864419,
+              "accepted": true,
+              "reason": "accepted"
+            },
+            {
+              "kind": "gpu",
+              "identity": "gpu-33",
+              "received_at_ns": 181502833896497,
+              "accepted": true,
+              "reason": "accepted"
+            },
+            {
+              "kind": "server",
+              "identity": "server-33",
+              "received_at_ns": 181502838992292,
+              "accepted": true,
+              "reason": "accepted"
+            },
+            {
+              "kind": "gpu",
+              "identity": "gpu-34",
+              "received_at_ns": 181502841135295,
+              "accepted": true,
+              "reason": "accepted"
+            },
+            {
+              "kind": "server",
+              "identity": "server-34",
+              "received_at_ns": 181502851029071,
+              "accepted": false,
+              "reason": "late_receipt"
+            }
+          ],
+          "note": "Completion-cohort features; pending admissions/censoring are recorded by the workload driver. Gauge means are sample means, not time-weighted means."
+        }
+      },
+      {
+        "window_id": "window-7",
+        "metrics": [
+          {
+            "name": "request_p95_ms",
+            "source": "request",
+            "unit": "ms",
+            "value": 127.2058949,
+            "valid_samples": 2,
+            "attempted_samples": 2,
+            "coverage": "complete",
+            "missing_reason": null,
+            "acquisition": {
+              "start_ns": 181502845005388,
+              "end_ns": 181502895005388,
+              "available_at_ns": 181502901329550,
+              "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a"
+            }
+          },
+          {
+            "name": "completed_rps",
+            "source": "request",
+            "unit": "requests/s",
+            "value": 40.0,
+            "valid_samples": 1,
+            "attempted_samples": 1,
+            "coverage": "complete",
+            "missing_reason": null,
+            "acquisition": {
+              "start_ns": 181502845005388,
+              "end_ns": 181502895005388,
+              "available_at_ns": 181502901329550,
+              "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a"
+            }
+          },
+          {
+            "name": "prompt_tokens_mean",
+            "source": "request",
+            "unit": "tokens",
+            "value": 7.0,
+            "valid_samples": 2,
+            "attempted_samples": 2,
+            "coverage": "complete",
+            "missing_reason": null,
+            "acquisition": {
+              "start_ns": 181502845005388,
+              "end_ns": 181502895005388,
+              "available_at_ns": 181502901329550,
+              "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a"
+            }
+          },
+          {
+            "name": "output_tokens_mean",
+            "source": "request",
+            "unit": "tokens",
+            "value": 3.0,
+            "valid_samples": 2,
+            "attempted_samples": 2,
+            "coverage": "complete",
+            "missing_reason": null,
+            "acquisition": {
+              "start_ns": 181502845005388,
+              "end_ns": 181502895005388,
+              "available_at_ns": 181502901329550,
+              "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a"
+            }
+          },
+          {
+            "name": "queue_depth_mean",
+            "source": "server",
+            "unit": "requests",
+            "value": 3.2,
+            "valid_samples": 5,
+            "attempted_samples": 5,
+            "coverage": "complete",
+            "missing_reason": null,
+            "acquisition": {
+              "start_ns": 181502845005388,
+              "end_ns": 181502895005388,
+              "available_at_ns": 181502901329550,
+              "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a"
+            }
+          },
+          {
+            "name": "gpu_util_mean",
+            "source": "gpu",
+            "unit": "percent",
+            "value": 90.0,
+            "valid_samples": 5,
+            "attempted_samples": 5,
+            "coverage": "complete",
+            "missing_reason": null,
+            "acquisition": {
+              "start_ns": 181502845005388,
+              "end_ns": 181502895005388,
+              "available_at_ns": 181502901329550,
+              "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a"
+            }
+          },
+          {
+            "name": "request_wait_p95_ms",
+            "source": "server",
+            "unit": "ms",
+            "value": null,
+            "valid_samples": 0,
+            "attempted_samples": 0,
+            "coverage": "unavailable",
+            "missing_reason": "unsupported_interval_statistic_by_queue_gauge_collector",
+            "acquisition": {
+              "start_ns": 181502845005388,
+              "end_ns": 181502895005388,
+              "available_at_ns": 181502901329550,
+              "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a"
+            }
+          },
+          {
+            "name": "prefill_service_fraction",
+            "source": "server",
+            "unit": "fraction",
+            "value": null,
+            "valid_samples": 0,
+            "attempted_samples": 0,
+            "coverage": "unavailable",
+            "missing_reason": "unsupported_interval_statistic_by_queue_gauge_collector",
+            "acquisition": {
+              "start_ns": 181502845005388,
+              "end_ns": 181502895005388,
+              "available_at_ns": 181502901329550,
+              "clock_domain": "process-monotonic-38e823e7-8eb9-4b3a-bbf7-66d59e1bc67a"
+            }
+          }
+        ],
+        "audit": {
+          "start_ns": 181502845005388,
+          "end_ns": 181502895005388,
+          "deadline_ns": 181502900005388,
+          "closed_at_ns": 181502901329550,
+          "min_latency_samples": 1,
+          "threshold_role": "development_guard_not_calibrated",
+          "completion_count": 2,
+          "successful_completions": 2,
+          "request_errors": 0,
+          "usage_missing": 0,
+          "events": [
+            {
+              "kind": "gpu",
+              "identity": "gpu-35",
+              "received_at_ns": 181502852830241,
+              "accepted": true,
+              "reason": "accepted"
+            },
+            {
+              "kind": "server",
+              "identity": "server-35",
+              "received_at_ns": 181502854092575,
+              "accepted": true,
+              "reason": "accepted"
+            },
+            {
+              "kind": "gpu",
+              "identity": "gpu-36",
+              "received_at_ns": 181502855756153,
+              "accepted": true,
+              "reason": "accepted"
+            },
+            {
+              "kind": "server",
+              "identity": "server-36",
+              "received_at_ns": 181502858163463,
+              "accepted": true,
+              "reason": "accepted"
+            },
+            {
+              "kind": "request",
+              "identity": "opaque-12",
+              "received_at_ns": 181502862201381,
+              "accepted": true,
+              "reason": "accepted"
+            },
+            {
+              "kind": "gpu",
+              "identity": "gpu-37",
+              "received_at_ns": 181502871790266,
+              "accepted": true,
+              "reason": "accepted"
+            },
+            {
+              "kind": "server",
+              "identity": "server-37",
+              "received_at_ns": 181502874544592,
+              "accepted": true,
+              "reason": "accepted"
+            },
+            {
+              "kind": "gpu",
+              "identity": "gpu-38",
+              "received_at_ns": 181502876796226,
+              "accepted": true,
+              "reason": "accepted"
+            },
+            {
+              "kind": "server",
+              "identity": "server-38",
+              "received_at_ns": 181502879669923,
+              "accepted": true,
+              "reason": "accepted"
+            },
+            {
+              "kind": "request",
+              "identity": "opaque-13",
+              "received_at_ns": 181502883624323,
+              "accepted": true,
+              "reason": "accepted"
+            },
+            {
+              "kind": "gpu",
+              "identity": "gpu-39",
+              "received_at_ns": 181502886065834,
+              "accepted": true,
+              "reason": "accepted"
+            },
+            {
+              "kind": "server",
+              "identity": "server-39",
+              "received_at_ns": 181502887283527,
+              "accepted": true,
+              "reason": "accepted"
+            }
+          ],
+          "note": "Completion-cohort features; pending admissions/censoring are recorded by the workload driver. Gauge means are sample means, not time-weighted means."
+        }
+      }
+    ],
+    "note": "Offered schedule is fixed; admitted/completed work may differ. Reconstructed horizon state uses later receipts and is evaluator-only. No server/profiler lifecycle or calibrated diagnosis implemented."
+  },
+  "phase_seconds": {
+    "target_startup": 0.345236776,
+    "initial_reset": 0.032416553,
+    "warmup": 0.0141272,
+    "post_warmup_reset": 0.040524412,
+    "workload_and_drain": 0.452817157,
+    "capture_cleanup": 0.001828821,
+    "sampler_cleanup": 5.082e-05,
+    "post_workload_quiescence": 0.048844947,
+    "final_reset": 0.036761784,
+    "owned_target_cleanup": 0.040759222
+  },
+  "capture_active_s": null,
+  "persisted_lifecycle_total_s": null,
+  "note": "Fresh CPU target per arm; repeated server-side quiet observations/reset acknowledgements are separate from client cleanup. Kernel report payloads are synthetic. Policy classifier abstains; richer calibrated T2 diagnosis is not integrated."
+}

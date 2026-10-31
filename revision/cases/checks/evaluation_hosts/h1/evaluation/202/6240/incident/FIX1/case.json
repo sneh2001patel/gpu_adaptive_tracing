@@ -1,0 +1,22 @@
+{
+ "case": "6240",
+ "side": "bug",
+ "config": {
+  "title": "FP8 CUTLASS GEMM slower than torch._scaled_mm on Ada",
+  "reference": "kernel_hotspot:gemm",
+  "model": "neuralmagic/Meta-Llama-3-8B-Instruct-FP8",
+  "env": "v051",
+  "version": "0.5.1",
+  "server_args": "--max-model-len 4096 --gpu-memory-utilization 0.85 --disable-log-requests",
+  "healthy_rate": 0.3,
+  "incident_rate": 1.0
+ },
+ "installed": {
+  "vllm": "0.5.1",
+  "torch": "2.3.0",
+  "transformers": "4.42.3",
+  "xgrammar": null,
+  "outlines": "0.0.46"
+ },
+ "served_from": "/dev/shm/hf-cache/hub/models--neuralmagic--Meta-Llama-3-8B-Instruct-FP8/snapshots/c5c6b5700a4178ef1fdae2ae37827382b90eb400"
+}

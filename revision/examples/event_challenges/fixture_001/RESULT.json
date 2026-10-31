@@ -1,0 +1,183 @@
+{
+  "provenance": "synthetic_simulation",
+  "GPU_used": false,
+  "live_validation": false,
+  "classifier_run": false,
+  "references_created": 0,
+  "cases": [
+    {
+      "case": "all_zero",
+      "result": {
+        "status": "no_sampled_pressure_candidate",
+        "selected_rate_rps": null,
+        "levels": [
+          {
+            "rate_rps": 0.5,
+            "receipt_count": 16,
+            "covered": true,
+            "sampled_pressure_streak": false
+          },
+          {
+            "rate_rps": 1,
+            "receipt_count": 16,
+            "covered": true,
+            "sampled_pressure_streak": false
+          },
+          {
+            "rate_rps": 2,
+            "receipt_count": 16,
+            "covered": true,
+            "sampled_pressure_streak": false
+          },
+          {
+            "rate_rps": 4,
+            "receipt_count": 16,
+            "covered": true,
+            "sampled_pressure_streak": false
+          },
+          {
+            "rate_rps": 8,
+            "receipt_count": 16,
+            "covered": true,
+            "sampled_pressure_streak": false
+          }
+        ]
+      }
+    },
+    {
+      "case": "isolated_spike",
+      "result": {
+        "status": "no_sampled_pressure_candidate",
+        "selected_rate_rps": null,
+        "levels": [
+          {
+            "rate_rps": 0.5,
+            "receipt_count": 16,
+            "covered": true,
+            "sampled_pressure_streak": false
+          },
+          {
+            "rate_rps": 1,
+            "receipt_count": 16,
+            "covered": true,
+            "sampled_pressure_streak": false
+          },
+          {
+            "rate_rps": 2,
+            "receipt_count": 16,
+            "covered": true,
+            "sampled_pressure_streak": false
+          },
+          {
+            "rate_rps": 4,
+            "receipt_count": 16,
+            "covered": true,
+            "sampled_pressure_streak": false
+          },
+          {
+            "rate_rps": 8,
+            "receipt_count": 16,
+            "covered": true,
+            "sampled_pressure_streak": false
+          }
+        ]
+      }
+    },
+    {
+      "case": "lowest_candidate_2rps",
+      "result": {
+        "status": "engineering_candidate",
+        "selected_rate_rps": 2,
+        "levels": [
+          {
+            "rate_rps": 0.5,
+            "receipt_count": 16,
+            "covered": true,
+            "sampled_pressure_streak": false
+          },
+          {
+            "rate_rps": 1,
+            "receipt_count": 16,
+            "covered": true,
+            "sampled_pressure_streak": false
+          },
+          {
+            "rate_rps": 2,
+            "receipt_count": 16,
+            "covered": true,
+            "sampled_pressure_streak": true
+          },
+          {
+            "rate_rps": 4,
+            "receipt_count": 16,
+            "covered": true,
+            "sampled_pressure_streak": false
+          },
+          {
+            "rate_rps": 8,
+            "receipt_count": 16,
+            "covered": true,
+            "sampled_pressure_streak": true
+          }
+        ]
+      }
+    },
+    {
+      "case": "metric_gap",
+      "result": {
+        "status": "incomplete_evidence",
+        "selected_rate_rps": null,
+        "levels": [
+          {
+            "rate_rps": 0.5,
+            "receipt_count": 16,
+            "covered": true,
+            "sampled_pressure_streak": false
+          },
+          {
+            "rate_rps": 1,
+            "receipt_count": 16,
+            "covered": true,
+            "sampled_pressure_streak": false
+          },
+          {
+            "rate_rps": 2,
+            "receipt_count": 16,
+            "covered": true,
+            "sampled_pressure_streak": true
+          },
+          {
+            "rate_rps": 4,
+            "receipt_count": 15,
+            "covered": false,
+            "sampled_pressure_streak": false
+          },
+          {
+            "rate_rps": 8,
+            "receipt_count": 16,
+            "covered": true,
+            "sampled_pressure_streak": true
+          }
+        ]
+      }
+    },
+    {
+      "case": "work_missing",
+      "result": {
+        "status": "incomplete_work",
+        "selected_rate_rps": null,
+        "levels": []
+      }
+    },
+    {
+      "case": "foreign_scope",
+      "result": {
+        "status": "rejected_foreign_input",
+        "error": "Foreign/untyped queue receipt",
+        "selected_rate_rps": null
+      }
+    }
+  ],
+  "consumer_withheld_windows": 3,
+  "note": "Hand-authored queue/work receipts; event windows are evaluated offline at 62s, not claimed online decisions."
+}

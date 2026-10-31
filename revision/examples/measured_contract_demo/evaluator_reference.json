@@ -1,0 +1,70 @@
+{
+  "record_role": "adjudicated_reference",
+  "run_id": "synthetic-run",
+  "reference_version": "synthetic-rubric-v1",
+  "provenance": "synthetic_simulation",
+  "interval": {
+    "start_ns": 0,
+    "end_ns": 2000000000,
+    "available_at_ns": 3000000000,
+    "clock_domain": "synthetic-demo-clock"
+  },
+  "status": "supported",
+  "supported_causes": [
+    "queue_pressure"
+  ],
+  "contradicted_causes": [],
+  "cause_set_complete": true,
+  "criteria": [
+    {
+      "criterion_id": "fixture-criterion",
+      "cause": "queue_pressure",
+      "passed": true,
+      "artifact_ids": [
+        "server",
+        "requests"
+      ],
+      "rationale": "Fixture assertion for contract testing only"
+    }
+  ],
+  "artifacts": [
+    {
+      "artifact_id": "server",
+      "path": "server.json",
+      "sha256": "bc8b460c11aba74cd7baabb3f373d602b514bcca9ec0924069598e426c6c301f",
+      "channel": "server_diagnostics",
+      "acquisition": {
+        "start_ns": 0,
+        "end_ns": 2000000000,
+        "available_at_ns": 3000000000,
+        "clock_domain": "synthetic-demo-clock"
+      }
+    },
+    {
+      "artifact_id": "requests",
+      "path": "requests.json",
+      "sha256": "8ad3105d9415219255886b6530d4857514b9b974e6c2c8f342825607f4bda32d",
+      "channel": "request_diagnostics",
+      "acquisition": {
+        "start_ns": 0,
+        "end_ns": 2000000000,
+        "available_at_ns": 3000000000,
+        "clock_domain": "synthetic-demo-clock"
+      }
+    }
+  ],
+  "alternatives": [
+    "Synthetic alternative mechanism"
+  ],
+  "matched_reference_run_id": null,
+  "reference_run_mismatch": null,
+  "assessor_ids": [
+    "synthetic-assessor"
+  ],
+  "blinded_to_predictions_and_policy": true,
+  "adjudicated_at_ns": 4000000000,
+  "locked_at_ns": 5000000000,
+  "limitations": [
+    "Synthetic single-assessor fixture, not experimental ground truth"
+  ]
+}

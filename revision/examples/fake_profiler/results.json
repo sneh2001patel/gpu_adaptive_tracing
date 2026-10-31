@@ -1,0 +1,119 @@
+{
+  "evidence_mode": "synthetic_simulation",
+  "gpu_used": false,
+  "note": "Virtual-clock mechanics demo. No real GPU timing or diagnostic validation. lifecycle_total_s is unknown; evidence_collection_s ends at parsed-evidence readiness.",
+  "decisions": [
+    {
+      "decision": {
+        "stop": false,
+        "reason": "continue",
+        "policy": "stability_stop",
+        "bursts": 1,
+        "diagnosis_streak": 1,
+        "recovery_streak": 0,
+        "diagnosis_label": "compute_bound",
+        "policy_condition_met": false
+      },
+      "capture_id": "synthetic-capture-0",
+      "evidence_id": "synthetic-capture-0:parsed-summary",
+      "evidence_ready_at_ns": 16500000000,
+      "decision_ready_at_ns": 16500000000,
+      "clock_domain": "simulation-monotonic-2534379c-13ba-4ecf-a569-3c5cb7f5b7ed",
+      "status": "ok",
+      "error": null,
+      "provenance": "synthetic_simulation"
+    },
+    {
+      "decision": {
+        "stop": true,
+        "reason": "diagnosis_stable",
+        "policy": "stability_stop",
+        "bursts": 2,
+        "diagnosis_streak": 2,
+        "recovery_streak": 0,
+        "diagnosis_label": "compute_bound",
+        "policy_condition_met": true
+      },
+      "capture_id": "synthetic-capture-1",
+      "evidence_id": "synthetic-capture-1:parsed-summary",
+      "evidence_ready_at_ns": 33000000000,
+      "decision_ready_at_ns": 33000000000,
+      "clock_domain": "simulation-monotonic-2534379c-13ba-4ecf-a569-3c5cb7f5b7ed",
+      "status": "ok",
+      "error": null,
+      "provenance": "synthetic_simulation"
+    }
+  ],
+  "timings": {
+    "synthetic-capture-0": {
+      "server_startup_s": 1.0,
+      "target_initialization_s": null,
+      "workload_span_s": null,
+      "shutdown_s": null,
+      "capture_control_window_s": 10.0,
+      "profile_process_wall_s": 13.0,
+      "report_finalization_s": 2.0,
+      "stats_command_s": 3.0,
+      "summary_parse_s": 0.5,
+      "diagnosis_compute_s": 0.0,
+      "lifecycle_total_s": null,
+      "evidence_collection_s": 16.5,
+      "capture_active_s": null,
+      "capture_active_status": "unavailable",
+      "clock_domain": "simulation-monotonic-2534379c-13ba-4ecf-a569-3c5cb7f5b7ed",
+      "timing_provenance": "synthetic_simulation",
+      "timing_schema_version": "timing_v1",
+      "phase_status": {
+        "server_startup": "ok",
+        "target_initialization": null,
+        "workload_span": null,
+        "shutdown": null,
+        "capture_control_window": "ok",
+        "profile_process_wall": "ok",
+        "report_finalization": "ok",
+        "stats_command": "ok",
+        "summary_parse": "ok",
+        "diagnosis_compute": "ok",
+        "lifecycle_total": null,
+        "evidence_collection": "ok"
+      },
+      "evidence_ready_at_ns": 16500000000,
+      "decision_ready_at_ns": 16500000000
+    },
+    "synthetic-capture-1": {
+      "server_startup_s": 1.0,
+      "target_initialization_s": null,
+      "workload_span_s": null,
+      "shutdown_s": null,
+      "capture_control_window_s": 10.0,
+      "profile_process_wall_s": 13.0,
+      "report_finalization_s": 2.0,
+      "stats_command_s": 3.0,
+      "summary_parse_s": 0.5,
+      "diagnosis_compute_s": 0.0,
+      "lifecycle_total_s": null,
+      "evidence_collection_s": 16.5,
+      "capture_active_s": null,
+      "capture_active_status": "unavailable",
+      "clock_domain": "simulation-monotonic-2534379c-13ba-4ecf-a569-3c5cb7f5b7ed",
+      "timing_provenance": "synthetic_simulation",
+      "timing_schema_version": "timing_v1",
+      "phase_status": {
+        "server_startup": "ok",
+        "target_initialization": null,
+        "workload_span": null,
+        "shutdown": null,
+        "capture_control_window": "ok",
+        "profile_process_wall": "ok",
+        "report_finalization": "ok",
+        "stats_command": "ok",
+        "summary_parse": "ok",
+        "diagnosis_compute": "ok",
+        "lifecycle_total": null,
+        "evidence_collection": "ok"
+      },
+      "evidence_ready_at_ns": 33000000000,
+      "decision_ready_at_ns": 33000000000
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+ "case": "19732",
+ "side": "fixed",
+ "config": {
+  "title": "xgrammar slow on nested length-constrained lists",
+  "reference": "host_bound",
+  "model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "env": "v092",
+  "version": "0.9.2",
+  "server_args": "--max-model-len 4096 --gpu-memory-utilization 0.6 --guided-decoding-backend xgrammar --disable-log-requests",
+  "healthy_rate": 0.5,
+  "incident_rate": 1.5,
+  "xgrammar": "0.1.21"
+ },
+ "installed": {
+  "vllm": "0.9.2",
+  "torch": "2.7.0",
+  "transformers": "4.53.1",
+  "xgrammar": "0.1.21",
+  "outlines": "0.1.11"
+ }
+}

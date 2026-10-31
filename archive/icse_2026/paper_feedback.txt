@@ -1,0 +1,285 @@
+## Reviews and Meta-Review ##
+
+Review #6257A
+===========================================================================
+
+Overall merit
+-------------
+2. Weak reject
+
+Novelty
+-------
+3. Substantial - presents a clearly new idea, method, result, artifact,
+   dataset, use case, workflow, or perspective
+
+Rigor
+-----
+2. Fair - some weaknesses, but the main claims are at least partially
+   supported
+
+Relevance
+---------
+2. Moderate - relevant and useful, but the expected impact is limited or
+   narrowly scoped
+
+Verifiability and Transparency
+------------------------------
+3. Good - Sufficient information is provided to understand the work and
+   support verification of the main claims
+
+Presentation
+------------
+3. Good - clear, well organized, and easy to follow
+
+Paper summary
+-------------
+The paper proposes a rule-based finite-state controller for GPU profiling. The controller continuously collects cheap signals, uses these signals to classify observation windows as suspicious, activates profiler bursts in suspicious cases to obtain more signals, uses these additional signals to diagnose a bottleneck, and decides when to stop activating bursts because sufficient evidence has been collected to diagnose the bottleneck. Six stopping policies are defined and evaluated. Evaluation is performed on two single-GPU cloud platforms running vLLM. Experiments show a reduction in efficiency while keeping the same quality when running the controlled profiler compared to a fixed-window baseline representing manual debugging. Two-window diagnosis stability is evaluated as the safest standalone stopping signal.
+
+Strengths
+---------
+- An appealing solution to treat GPU profiling as a control problem
+- Rule-based finite-state controller that supports transparency of control decisions
+- Comprehensive evaluation
+
+Weaknesses
+----------
+- Unclear optimality of control given hand-tuned thresholds
+- Weak connection to the debugging process of LLM-based systems
+- No formal definition of the signal and evidence patterns and of the stopping policies
+- Unclear validity of the data set (RQ4), success criteria, and requirements
+- No statistical tests on the experimental results
+
+Detailed comments for authors
+-----------------------------
+The paper addresses a relevant problem to improve the efficiency of GPU profiling and proposes an appealing controller solution. The controller is simple, using rules and thresholds, which supports transparent control decisions. The solution is comprehensively evaluated considering efficiency, accuracy, overhead, stopping policies, and signal effectiveness. However, several aspects of rigor, relevance, and verifiability require clarification.
+
+**Novelty**
+
+The work is novel in terms of the controller solution to GPU profiling, which covers starting, extending, and stopping costly GPU tracing based on runtime observations.
+
+**Rigor**
+
+While rule-based controllers with "hand-tuned thresholds" support transparent control decisions, it remains unclear whether the solution is optimal, for instance, with respect to efficiency. This should be discussed at least, even if optimality is not a major concern. In this context, how were the thresholds hand-tuned?
+
+The anomaly detection rules used to label a window as suspicious are not evaluated, and whether they impact the subsequent diagnosis. The diagnosis is based on patterns (Table III) but it is unclear how these patterns relate to a "top-down GPU performance analysis". The diagnosis mechanism should be discussed in more detail, as well as its impact on the stopping policies and the effectiveness of these policies.
+
+Concerning the experiments, the authors define thresholds to define requirements (RQ5) or success criteria (RQ1-4), which are not motivated. For instance, "we predefine success as trace-time savings of at least 25%". Why 25%? Is this threshold motivated by practice, or is it rather a guess? The validity of such requirements and criteria can be challenged. Why not report all results, analyze the statistical difference, and discuss the magnitude of difference concerning its practical impact?
+Likewise, for RQ4, the use of the score as a weighted utility function should be motivated and the reason why the given weights are meaningful. Why does a multi-objective comparison with priorities over the individual objectives not work here?
+Thus, a more open comparison that does not rely on the authors' criteria but on pure metrics would strengthen the evaluation.
+
+For RQ4, the validity of the data set is unclear. It seems that existing traces generated from profiler runs are used to evaluate the stopping policies. However, these traces also contain the effect of profiler bursts, and then again a profiler with different stopping policies is run. In general, the paper should discuss why the given experimental setup with the workloads is realistic and represents real-world settings.
+
+The experiments are comprehensive but they lack statistical tests to investigate the statistical significance of the work. For statistical power, more than 5 repetitions are required.
+
+
+**Relevance**
+
+The relevance of the work should be elaborated by better connecting the work to the operation or debugging process of LLM-based systems, for instance, how engineers or operators will use the solution in practice. This would also better connect the work to software engineering.
+
+**Verifiability & transparency**
+
+Verifiability and transparency can be improved by formalizing the signal and evidence patterns (Table III) as well as the stopping policies. The formalization could be parameterized by the thresholds, making it explicit where tuning can be done. On the positive side, the authors provide a replication package.
+
+**Presentation**
+
+The paper is well-written but would benefit from formalizations of the patterns and policies. Besides that, the following points should be clarified:
+
+- The difference between Stability Stop (SS) and Marginal Utility Stop (MU) should be clarified. It looks like MU is the same as SS with K=2. However, SS is configured with K=2 by default.
+- The description of the Offline Equal-Budget Replay should be revised. It is hard to follow and understand the individual aspects such as duration and repetition, etc and how they are composed into a baseline.
+- Introduction: Add a citation/reference for NVIDIA Nsight Systems
+- Explain abbreviations such as NVML
+- Page 5: What are "tier-visible fields"?
+- Table III: The relation between class and assigned label should be clarified.
+
+Questions for authors’ response
+-------------------------------
+- What kind of hand-tuning of the controller has been done and how optimal is the controller?
+- What is the motivation for the predefined success criteria in the evaluation? Why does a pure metric/measurement-based comparison is not sufficient?
+- How realistic is the dataset?
+
+
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+
+Review #6257B
+===========================================================================
+
+Overall merit
+-------------
+2. Weak reject
+
+Novelty
+-------
+1. Limited - largely known or only minor variation over prior work
+
+Rigor
+-----
+1. Weak - major flaws undermine the claims
+
+Relevance
+---------
+1. Limited - addresses a narrow or weakly motivated problem with limited
+   expected impact
+
+Verifiability and Transparency
+------------------------------
+2. Fair - Some information is provided, but not enough to support
+   independent scrutiny, verification, or replication where appropriate
+
+Presentation
+------------
+3. Good - clear, well organized, and easy to follow
+
+Paper summary
+-------------
+The paper proposes and evaluates strategies for automatically starting and stopping heavy GPU profiling  (NVIDIA Nsight Systems), with the goal of reducing profiling overhead while maintaining diagnostic capabilities. The authors evaluate these strategies using vLLM with Qwen2.5-7B-Instruct across three workloads with known performance issues and two GPUs (L4 and A100). The results show that the adaptive strategies reduce profiling duration while preserving the ability to detect performance issues.
+
+Strengths
+---------
+- Relevant topic
+
+Weaknesses
+----------
+- Significant limitations in the evaluation methodology
+- Limited novelty of the contribution
+
+Detailed comments for authors
+-----------------------------
+#### Novelty
+Although I am not an expert in this specific topic, I found the methodological novelty of the proposed techniques to be relatively modest. Most of the adaptation policies considered are simple and do not appear to introduce substantial innovations.
+In this regard, I would suggest reframing the paper as an empirical study comparing these adaptation strategies. With this framing, the novelty of the overall contribution may be more convincingly justified.
+I would also encourage the authors to identify existing profiling adaptation strategies in the literature and include them in the study.
+I did a brief search on this topic and identified two relevant works that the authors may wish to consider:
+
+- Keren Zhou, Jonathon Anderson, Xiaozhu Meng, and John Mellor-Crummey. 2022. Low overhead and context sensitive profiling of GPU-accelerated applications. In Proceedings of the 36th ACM International Conference on Supercomputing (ICS '22).
+-  H. Wu, Y. Chen, K. Qian, X. Li, J. Xu, E. Xu, E. Zhai, W. Yu, G. Xue, and J. Zhou. 2026. StriaTrace: efficient tracing and diagnosis for online LLM inference (operational systems). In 20Th usenix symposium on operating systems design and implementation (OSDI 26).
+
+#### Rigor
+The main weakness of the paper concerns its experimental methodology. The performance issues used in the evaluation appear highly artificial, and the authors do not sufficiently motivate why they should be considered representative of real-world conditions. Furthermore, the evaluation is too limited in scope: six scenarios provide insufficient evidence to support the findings. This narrow scope also raises the risk that the adaptive strategies (and particularly the hand-tuned parameter values) are tailored to the specific experimental setting. The paper does not explain how these parameters were selected, whether they were calibrated independently, or how sensitive the results are to alternative values. Consequently, it does not provide sufficient evidence that this potential overfitting threat has been adequately mitigated.
+
+
+#### Relevance
+The overall goal of the study is relevant. However, the significant weaknesses in the experimental methodology limit the relevance of the contribution. I am also not fully convinced that the topic addressed in the submission is appropriate for a software engineering venue such as ICSE. In my opinion, a systems venue such as OSDI may be more suitable for this work.
+
+
+#### Verifiability and Transparency
+The paper does not adequately explain several key aspects of the experimental setup, such as the workloads used in the experiments and how the issues were induced.
+
+ 
+
+#### Presentation
+The paper presentation is reasonably good.
+
+Artifact assessment
+-------------------
+3. Satisfactory, i.e., the artifacts are in line with what is declared in
+   the submission form or the paper [OR] the authors explained why the
+   artifacts are not provided and I find the explanation to be reasonable.
+
+Comments on artifact assessment
+-------------------------------
+After a lightweight assessment, the artifact appears to provide the code needed to reproduce the experiments. The raw traces are not included, presumably due to storage constraints.
+
+Questions for authors’ response
+-------------------------------
+- To what extent does your experimental setting reflect real-world performance diagnosis scenarios?
+- What are the core novelties of your work compared with existing GPU-profiling adaptation strategies?
+
+
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+
+Review #6257C
+===========================================================================
+
+Overall merit
+-------------
+2. Weak reject
+
+Novelty
+-------
+1. Limited - largely known or only minor variation over prior work
+
+Rigor
+-----
+2. Fair - some weaknesses, but the main claims are at least partially
+   supported
+
+Relevance
+---------
+3. High - addresses an important SE problem and is likely to influence
+   research or practice under clear assumptions
+
+Verifiability and Transparency
+------------------------------
+3. Good - Sufficient information is provided to understand the work and
+   support verification of the main claims
+
+Presentation
+------------
+4. Excellent - highly clear, well structured, and effective in
+   communicating the contribution
+
+Paper summary
+-------------
+The paper proposes an adaptive controller that decides when GPU profiling should start and stop during LLM serving. Rather than continuously running Nsight Systems, the controller monitors inexpensive runtime metrics and triggers bounded profiling bursts only when anomalies occur. Heavy profiling stops once a stopping policy concludes that the bottleneck diagnosis has stabilized. Six stopping policies are evaluated on L4 and A100 GPUs using vLLM and Qwen2.5-7B. The reported benefits include 19–49% shorter profiling duration while maintaining agreement with expected bottleneck labels.
+
+Strengths
+---------
+- The problem is practically relevant since continuous GPU profiling is expensive.
+- The finite-state controller is simple.
+- The implementation appears complete and reproducible.
+- The discussion of stopping policies is systematic.
+
+Weaknesses
+----------
+My main concern is novelty.
+
+The proposed controller is fundamentally a threshold-based finite-state machine using hand-crafted heuristics. The stopping policies (fixed burst, stability, recovery, hybrid) are intuitive engineering heuristics rather than new algorithms. The paper explicitly states that no learning or optimization is performed and that all thresholds are manually selected.
+
+The "accuracy" metric is not true diagnosis accuracy but agreement with expected labels generated from workloads intentionally designed by the authors. The bottleneck labels are predefined and deterministic, making the evaluation somewhat circular. As the paper itself acknowledges, the results should not be interpreted as root-cause accuracy.
+
+Similarly, many experiments are built around synthetic ambiguity replay rather than naturally occurring ambiguous failures. The ambiguity stress experiment is useful for illustrating policy behavior, but it cannot replace evaluation on real production incidents.
+
+Another concern is that nearly every reported result reaches perfect accuracy (1.0), zero ambiguity, and zero variance. Such uniformly perfect results make it difficult to understand the true limitations of the approach and suggest that the workloads are relatively easy for the proposed classifier.
+
+Finally, the contribution is closer to an engineering automation of existing profiling practice than a new debugging methodology. Prior adaptive tracing literature already studies budget-aware evidence collection; this paper mainly applies similar ideas to GPU profiling rather than introducing fundamentally new concepts.
+
+Detailed comments for authors
+-----------------------------
+I appreciate the clarity of the paper and the effort invested in making the implementation reproducible.
+
+However, I struggled to identify a strong research contribution beyond engineering integration. The controller consists of manually designed thresholds operating over inexpensive runtime metrics and profiler outputs. While practical, the stopping logic itself is relatively straightforward and does not appear substantially different from existing adaptive tracing approaches in distributed systems.
+
+My biggest concern is the evaluation methodology. Expected-label agreement is based on labels defined by the workload construction rather than independently validated diagnoses. Consequently, achieving perfect agreement primarily demonstrates that the controller reproduces the intended experimental scenarios rather than accurately diagnosing realistic failures. The paper acknowledges this limitation, but it remains central to the evaluation.
+
+I also found the ambiguity replay less convincing than real production traces. Artificially replacing the first diagnosis with an "unknown" label evaluates robustness to one specific failure mode, but does not demonstrate that the controller behaves correctly under naturally evolving performance anomalies.
+
+Finally, nearly all reported experiments achieve perfect accuracy, zero ambiguity, and deterministic behavior. While this simplifies interpretation, it also raises questions about how challenging the evaluated workloads actually are. Including real production traces or more complex multi-cause performance regressions would significantly strengthen the paper.
+
+Questions for authors’ response
+-------------------------------
+1. How sensitive are the results to the manually selected thresholds (e.g., latency ratio, GPU utilization, K=2)?
+2. Have you evaluated the controller on real production traces with independently verified root causes?
+3. Why were learned or adaptive stopping policies not considered, given the extensive prior work on adaptive tracing?
+4. Would the controller remain effective when multiple bottlenecks occur simultaneously?
+5. How does the controller scale to distributed multi-GPU serving environments?
+
+
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+
+Review #6257D
+===========================================================================
+
+Metareview
+----------
+Thank you for submitting to ICSE 2027.
+
+After considering the rebuttal and discussion, all reviewers recommend rejecting the paper. On the positive side, the research problem is timely and the finite-state controller is simple and supports transparent control. However, weaknesses such as limited novelty and weak evaluation (e.g., accuracy as agreement with expected labels rather than diagnosing realistic and independently validated failures, limited number of scenarios, and unclear how representative the experiments are concerning real-world settings). The reviewers think that the planned changes, especially to the evaluation, outlined in the rebuttal response will significantly change the paper, which is not within the scope of a revision.
+
+We hope the reviews will be helpful in improving the presented work for a future submission.
+
+Recommendation
+--------------
+1. Reject

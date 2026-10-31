@@ -1,0 +1,40 @@
+{
+ "p95_base_s": 33.36736559867859,
+ "p95_base_measure": "median over steady windows of p95 in-flight age",
+ "n_windows": 181,
+ "completed_p95_s": 37.35225796699524,
+ "n_completed": 48,
+ "baseline_ns_per_token": {
+  "gemm": 5089599.818965517,
+  "attention": 218724.22988505746,
+  "other": 61611.96264367816,
+  "norm": 17314.798850574713
+ },
+ "baseline_tokens": 348.0,
+ "baseline_shares": {
+  "Kernel<cutlass_80_wmma_tensorop_bf16_s161616gemm_bf16_16x16_128x2_tn_align8>": 0.944749000583424,
+  "flash_fwd_splitkv_kernel": 0.037829383944591254,
+  "act_and_mul_kernel<c10::BFloat16>": 0.0058985334874933825,
+  "fused_add_rms_norm_kernel<c10::BFloat16>": 0.0031410120181775566,
+  "flash_fwd_splitkv_combine_kernel": 0.0018169797929720709,
+  "rotary_embedding_kernel<c10::BFloat16>": 0.0016268661912058932,
+  "cunn_SoftMaxForward": 0.0015591712447459807,
+  "reshape_and_cache_flash_kernel<__nv_bfloat16>": 0.0009539791061472261,
+  "elementwise_kernel": 0.0004655019694374407,
+  "index_elementwise_kernel": 0.0003694722457232337,
+  "unrolled_elementwise_kernel": 0.00034687365932740727,
+  "reduce_kernel": 0.00030727292641738436,
+  "indexSelectSmallIndex<c10::BFloat16>": 0.00028342884944553763,
+  "vectorized_elementwise_kernel": 0.00023894643355832482,
+  "distribution_elementwise_grid_stride_kernel<float>": 0.00021959038986555103,
+  "DeviceScanKernel": 7.960898393571162e-05,
+  "rms_norm_kernel<c10::BFloat16>": 7.302041879866517e-05,
+  "DeviceScanInitKernel": 4.135775473332531e-05
+ },
+ "baseline_busy_fraction": 0.8871353434362691,
+ "env": "v060",
+ "version": "0.6.0",
+ "model": "/dev/shm/hf-cache/hub/models--Qwen--Qwen2.5-7B-Instruct/snapshots/a09a35458c702b33eeacc393d103063234e8bc28",
+ "schedule": "evaluation/203/7592/healthy.jsonl",
+ "server_args": "--max-model-len 10000 --gpu-memory-utilization 0.9 --enforce-eager --seed 0 --enable-chunked-prefill --max-num-seqs 256 --max-num-batched-tokens 256 --disable-log-requests --served-model-name Qwen/Qwen2.5-7B-Instruct"
+}

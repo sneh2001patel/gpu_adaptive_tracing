@@ -1,0 +1,46 @@
+{
+  "backend_version": "nsys_serving_pilot_v1",
+  "capture_range_end_mode": "repeat_sync",
+  "nsys_contract": "2026.3.1",
+  "vllm_contract": "0.10.2",
+  "ordinal": 1,
+  "events": [
+    {
+      "event": "command_started",
+      "capture_id": "feasibility-capture-1",
+      "timestamp_ns": 168294326666579,
+      "clock_domain": "process-monotonic-2312ce90-a8b5-4577-8f3e-17eb76223e9a",
+      "stage": "start",
+      "argv": [
+        "/workspace/envs/vllm/bin/python",
+        "/workspace/gpu_adaptive_tracing_step022/revision/scripts/profile_http_command.py",
+        "http://127.0.0.1:8012/start_profile"
+      ],
+      "pid": 2447
+    },
+    {
+      "event": "command_exited",
+      "capture_id": "feasibility-capture-1",
+      "timestamp_ns": 168294667204003,
+      "clock_domain": "process-monotonic-2312ce90-a8b5-4577-8f3e-17eb76223e9a",
+      "stage": "start",
+      "returncode": 0
+    },
+    {
+      "event": "capture_failed",
+      "capture_id": "feasibility-capture-1",
+      "timestamp_ns": 168324334997840,
+      "clock_domain": "process-monotonic-2312ce90-a8b5-4577-8f3e-17eb76223e9a",
+      "reason": "starting_timeout"
+    }
+  ],
+  "attempts": {
+    "feasibility-capture-1": {
+      "ordinal": 1,
+      "state": "failed",
+      "error": "starting_timeout",
+      "cleanup_complete": true,
+      "poisoned": true
+    }
+  }
+}

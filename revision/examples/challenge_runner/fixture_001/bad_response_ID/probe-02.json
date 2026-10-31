@@ -1,0 +1,151 @@
+{
+  "command": {
+    "token": "529bd1360d9b4d979e8356defcec136c",
+    "binding": {
+      "session_nonce": "d9dc63b477634ba084a16b2c9d4a677b",
+      "generation": 2,
+      "worker_pid": 43,
+      "device_uuid": "GPU-fixture",
+      "model": "fixture-model",
+      "engine": "0",
+      "clock_domain": "process-monotonic-b3a0046e-4d98-460e-ab26-22ac25a67508"
+    },
+    "requested_at_ns": 227848023201386
+  },
+  "data": {
+    "version": "scheduler_hook_events_v1",
+    "binding": {
+      "session_nonce": "d9dc63b477634ba084a16b2c9d4a677b",
+      "generation": 2,
+      "worker_pid": 43,
+      "device_uuid": "GPU-fixture",
+      "model": "fixture-model",
+      "engine": "0",
+      "clock_domain": "process-monotonic-b3a0046e-4d98-460e-ab26-22ac25a67508"
+    },
+    "token": "529bd1360d9b4d979e8356defcec136c",
+    "requested_at_ns": 227848023201386,
+    "source_probe_ns": 227848023219937,
+    "epoch_ns": 227847929308961,
+    "clock_name": "time.monotonic_ns",
+    "attempted": 12,
+    "dropped": 0,
+    "faults": [],
+    "events": [
+      {
+        "sequence": 1,
+        "kind": "engine_admitted",
+        "request_id": "cmpl-challenge-warmup-0",
+        "hook_enter_ns": 227847935133859,
+        "hook_return_ns": 227847935134891,
+        "observed_at_ns": 227847935148062,
+        "terminal_status": null
+      },
+      {
+        "sequence": 2,
+        "kind": "first_positive_schedule",
+        "request_id": "cmpl-challenge-warmup-0",
+        "hook_enter_ns": 227847935151210,
+        "hook_return_ns": 227847935151960,
+        "observed_at_ns": 227847935156627,
+        "terminal_status": null
+      },
+      {
+        "sequence": 3,
+        "kind": "scheduler_finished",
+        "request_id": "cmpl-challenge-warmup-0",
+        "hook_enter_ns": 227847936859771,
+        "hook_return_ns": 227847936861008,
+        "observed_at_ns": 227847936872508,
+        "terminal_status": "FINISHED_LENGTH_CAPPED"
+      },
+      {
+        "sequence": 4,
+        "kind": "engine_admitted",
+        "request_id": "cmpl-r0-0",
+        "hook_enter_ns": 227847948948966,
+        "hook_return_ns": 227847948949734,
+        "observed_at_ns": 227847948963315,
+        "terminal_status": null
+      },
+      {
+        "sequence": 5,
+        "kind": "first_positive_schedule",
+        "request_id": "cmpl-r0-0",
+        "hook_enter_ns": 227847948966031,
+        "hook_return_ns": 227847948966810,
+        "observed_at_ns": 227847948971712,
+        "terminal_status": null
+      },
+      {
+        "sequence": 6,
+        "kind": "scheduler_finished",
+        "request_id": "cmpl-r0-0",
+        "hook_enter_ns": 227847971121654,
+        "hook_return_ns": 227847971122645,
+        "observed_at_ns": 227847971131803,
+        "terminal_status": "FINISHED_LENGTH_CAPPED"
+      },
+      {
+        "sequence": 7,
+        "kind": "engine_admitted",
+        "request_id": "cmpl-r1-0",
+        "hook_enter_ns": 227847975083804,
+        "hook_return_ns": 227847975084532,
+        "observed_at_ns": 227847975096691,
+        "terminal_status": null
+      },
+      {
+        "sequence": 8,
+        "kind": "first_positive_schedule",
+        "request_id": "cmpl-r1-0",
+        "hook_enter_ns": 227847975099427,
+        "hook_return_ns": 227847975100268,
+        "observed_at_ns": 227847975105313,
+        "terminal_status": null
+      },
+      {
+        "sequence": 9,
+        "kind": "scheduler_finished",
+        "request_id": "cmpl-r1-0",
+        "hook_enter_ns": 227847979464502,
+        "hook_return_ns": 227847979465516,
+        "observed_at_ns": 227847979475739,
+        "terminal_status": "FINISHED_LENGTH_CAPPED"
+      },
+      {
+        "sequence": 10,
+        "kind": "engine_admitted",
+        "request_id": "cmpl-r2-0",
+        "hook_enter_ns": 227848006490496,
+        "hook_return_ns": 227848006491051,
+        "observed_at_ns": 227848006503621,
+        "terminal_status": null
+      },
+      {
+        "sequence": 11,
+        "kind": "first_positive_schedule",
+        "request_id": "cmpl-r2-0",
+        "hook_enter_ns": 227848006506189,
+        "hook_return_ns": 227848006506854,
+        "observed_at_ns": 227848006511766,
+        "terminal_status": null
+      },
+      {
+        "sequence": 12,
+        "kind": "scheduler_finished",
+        "request_id": "cmpl-r2-0",
+        "hook_enter_ns": 227848010972822,
+        "hook_return_ns": 227848010973740,
+        "observed_at_ns": 227848010984390,
+        "terminal_status": "FINISHED_LENGTH_CAPPED"
+      }
+    ],
+    "history_complete": true,
+    "semantics": "engine_admission_to_first_positive_CPU_schedule_decision_not_GPU_execution",
+    "phase_attribution": "not_instrumented",
+    "client_request_ID_mapping": "not_validated",
+    "scope": "single_owned_scheduler_host_process_no_GPU_clock_mapping"
+  },
+  "received_at_ns": 227848023231518
+}

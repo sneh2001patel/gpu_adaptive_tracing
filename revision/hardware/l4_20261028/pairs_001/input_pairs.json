@@ -1,0 +1,65 @@
+{
+  "version": "bounded_capacity_corpus_probe_v1",
+  "status": "candidate_schedules_materialized_not_executed",
+  "seed": 2101,
+  "jobs": [
+    {
+      "pair_id": "short",
+      "role": "feature_collection",
+      "order_in_pair": 0,
+      "schedule_path": "short_offered.json",
+      "file_sha256": "22164fc17a61164461782863cbbbeac275edc992384dc506901438c80d8ba2c5",
+      "fresh_owned_restart_required": true,
+      "executed": false
+    },
+    {
+      "pair_id": "short",
+      "role": "matched_full_trace",
+      "order_in_pair": 1,
+      "schedule_path": "short_offered.json",
+      "file_sha256": "22164fc17a61164461782863cbbbeac275edc992384dc506901438c80d8ba2c5",
+      "fresh_owned_restart_required": true,
+      "executed": false
+    },
+    {
+      "pair_id": "long",
+      "role": "matched_full_trace",
+      "order_in_pair": 0,
+      "schedule_path": "long_offered.json",
+      "file_sha256": "4f6473273601eedf65010f9ad0c479c4c7194941178c36723aa6087c996ca85c",
+      "fresh_owned_restart_required": true,
+      "executed": false
+    },
+    {
+      "pair_id": "long",
+      "role": "feature_collection",
+      "order_in_pair": 1,
+      "schedule_path": "long_offered.json",
+      "file_sha256": "4f6473273601eedf65010f9ad0c479c4c7194941178c36723aa6087c996ca85c",
+      "fresh_owned_restart_required": true,
+      "executed": false
+    }
+  ],
+  "schedules": [
+    {
+      "band": "short",
+      "offered_count": 2,
+      "realized_offered_rps": 0.25,
+      "file_sha256": "22164fc17a61164461782863cbbbeac275edc992384dc506901438c80d8ba2c5",
+      "content_sha256": "22164fc17a61164461782863cbbbeac275edc992384dc506901438c80d8ba2c5"
+    },
+    {
+      "band": "long",
+      "offered_count": 2,
+      "realized_offered_rps": 0.25,
+      "file_sha256": "4f6473273601eedf65010f9ad0c479c4c7194941178c36723aa6087c996ca85c",
+      "content_sha256": "4f6473273601eedf65010f9ad0c479c4c7194941178c36723aa6087c996ca85c"
+    }
+  ],
+  "rate_rule": "half_minimum_positive_observed_probe_completion_rate_capped_at_1_5_rps_then_integer_request_count",
+  "candidate_rate_rps": 0.25,
+  "saturation_capacity_established": false,
+  "calibration_enabled": false,
+  "study_ready": false,
+  "protocol_frozen": false
+}

@@ -1,0 +1,83 @@
+{
+ "config": {
+  "env": "v055",
+  "version": "0.5.5",
+  "model": "/dev/shm/hf-cache/hub/models--neuralmagic--Meta-Llama-3-8B-Instruct-FP8/snapshots/c5c6b5700a4178ef1fdae2ae37827382b90eb400",
+  "schedule": "evaluation/203/7619/incident.jsonl",
+  "out": "evaluation/203/7619/incident/NT",
+  "arm": "NT",
+  "fixed_bursts": 3,
+  "thresholds": "evaluation/thresholds_study_rule_v2_calibrated_2026-10-29.json",
+  "baseline": "evaluation/203/7619/incident/../baseline.json",
+  "baseline_out": null,
+  "policy": "{}",
+  "trigger_latency_ratio": 1.5,
+  "trigger_windows": 2,
+  "burst_seconds": 2.0,
+  "window_seconds": 1.0,
+  "latency_window_seconds": 5.0,
+  "min_latency_samples": 3,
+  "drain_seconds": 60.0,
+  "unprofiled": false,
+  "graph_trace": "node",
+  "server_args": "--max-model-len 8192 --enable-prefix-caching --enforce-eager --trust-remote-code --use-v2-block-manager --disable-log-requests --served-model-name neuralmagic/Meta-Llama-3-8B-Instruct-FP8",
+  "port": 8123,
+  "calibration_bursts": "",
+  "scrape_timeout": 5.0,
+  "withhold": "",
+  "case_patch": null
+ },
+ "launch": [
+  "nsys",
+  "launch",
+  "--session-new=ep_1793341565",
+  "--trace=cuda,nvtx,osrt",
+  "--cuda-graph-trace=node",
+  "v055/bin/python",
+  "-m",
+  "vllm.entrypoints.openai.api_server",
+  "--model",
+  "/dev/shm/hf-cache/hub/models--neuralmagic--Meta-Llama-3-8B-Instruct-FP8/snapshots/c5c6b5700a4178ef1fdae2ae37827382b90eb400",
+  "--port",
+  "8123",
+  "--max-model-len",
+  "8192",
+  "--enable-prefix-caching",
+  "--enforce-eager",
+  "--trust-remote-code",
+  "--use-v2-block-manager",
+  "--disable-log-requests",
+  "--served-model-name",
+  "neuralmagic/Meta-Llama-3-8B-Instruct-FP8"
+ ],
+ "thresholds": {
+  "latency_ratio": 1.95,
+  "waiting_requests": 1.0,
+  "kv_usage": 0.5768,
+  "preemptions_per_s": 0.5,
+  "gpu_util": 0.769,
+  "busy_fraction": 0.7373,
+  "kernel_time_ratio": Infinity,
+  "version": "study_rule_v2_calibrated_2026-10-29"
+ },
+ "thresholds_digest": "6cd8becf0bc9f45330875cd5dc523252d0794edb1613f90263d3d01f443f961a",
+ "thresholds_frozen": true,
+ "p95_base_s": 6.771979570388794,
+ "requests": {
+  "scheduled": 416,
+  "completed": 416,
+  "ok": 416,
+  "censored_at_horizon": 0
+ },
+ "episode": {
+  "started_window": "w00015",
+  "stopped_window": null,
+  "decision": {
+   "stop": true,
+   "reason": "horizon_ended",
+   "policy": "NT"
+  },
+  "bursts": 0,
+  "final_state": "done"
+ }
+}

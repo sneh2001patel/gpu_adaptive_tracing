@@ -1,0 +1,115 @@
+{
+ "case": "7592",
+ "phase": [
+  60,
+  180
+ ],
+ "baseline": {
+  "p95_base_s": 32.911194801330566,
+  "p95_base_measure": "median over steady windows of p95 in-flight age",
+  "n_windows": 185,
+  "completed_p95_s": 36.58006978034973,
+  "n_completed": 38,
+  "baseline_ns_per_token": {
+   "gemm": 6259925.482142857,
+   "attention": 222635.82857142857,
+   "other": 68562.18571428572,
+   "norm": 19628.064285714285
+  },
+  "baseline_tokens": 280.0,
+  "baseline_shares": {
+   "Kernel<cutlass_80_wmma_tensorop_bf16_s161616gemm_bf16_16x16_128x2_tn_align8>": 0.8816327173602179,
+   "Kernel<cutlass_80_wmma_tensorop_bf16_s161616gemm_bf16_16x16_128x1_tn_align8>": 0.0710627885192283,
+   "flash_fwd_splitkv_kernel": 0.030963554643646148,
+   "act_and_mul_kernel<c10::BFloat16>": 0.005585448257787006,
+   "fused_add_rms_norm_kernel<c10::BFloat16>": 0.00291780549345802,
+   "flash_fwd_splitkv_combine_kernel": 0.002030807590206099,
+   "rotary_embedding_kernel<c10::BFloat16>": 0.0015194663231492473,
+   "cunn_SoftMaxForward": 0.001446570226191189,
+   "reshape_and_cache_flash_kernel<__nv_bfloat16>": 0.0008884937095288367,
+   "elementwise_kernel": 0.00036236831066525796,
+   "index_elementwise_kernel": 0.0002880486974865444,
+   "unrolled_elementwise_kernel": 0.00028609958363878986,
+   "reduce_kernel": 0.00024827014284406956,
+   "indexSelectSmallIndex<c10::BFloat16>": 0.00022734679159774763,
+   "vectorized_elementwise_kernel": 0.00020205559905735006,
+   "distribution_elementwise_grid_stride_kernel<float>": 0.00015627751327948358,
+   "DeviceScanKernel": 7.404295424159505e-05,
+   "rms_norm_kernel<c10::BFloat16>": 6.938160444841525e-05,
+   "DeviceScanInitKernel": 3.845667932799101e-05
+  },
+  "baseline_busy_fraction": 0.8580872244922317,
+  "env": "v060",
+  "version": "0.6.0",
+  "model": "/dev/shm/hf-cache/hub/models--Qwen--Qwen2.5-7B-Instruct/snapshots/a09a35458c702b33eeacc393d103063234e8bc28",
+  "schedule": "symptoms/7592/healthy.jsonl",
+  "server_args": "--max-model-len 10000 --gpu-memory-utilization 0.9 --enforce-eager --seed 0 --enable-chunked-prefill --max-num-seqs 256 --max-num-batched-tokens 256 --disable-log-requests --served-model-name Qwen/Qwen2.5-7B-Instruct"
+ },
+ "fixed": {
+  "error": null,
+  "scheduled": 164,
+  "completed": 164,
+  "ok": 164,
+  "failed": 0,
+  "errors": [],
+  "p50_latency_s": 57.58619928359985,
+  "p95_latency_s": 61.13405394554138,
+  "mean_lateness_s": 0.001,
+  "gen_tokens_per_s": 506.2,
+  "latency_ratio_median": 1.4533267696108787,
+  "latency_ratio_max": 1.6902025460006551,
+  "elevated_window_share": 0.45,
+  "waiting_mean": 0.142,
+  "kv_usage_mean": 0.555,
+  "preemptions_per_s_mean": 0.0,
+  "gpu_util_mean": 0.792,
+  "cheap_diagnoses": [
+   [
+    "healthy",
+    66
+   ],
+   [
+    null,
+    52
+   ],
+   [
+    "queue_pressure",
+    1
+   ],
+   [
+    "host_bound",
+    1
+   ]
+  ],
+  "episode": {
+   "started_window": "w00126",
+   "stopped_window": null,
+   "decision": {
+    "stop": true,
+    "reason": "horizon_ended",
+    "policy": "NT"
+   },
+   "bursts": 0,
+   "final_state": "done"
+  }
+ },
+ "bug": {
+  "error": null,
+  "scheduled": 164,
+  "completed": 164,
+  "ok": 164,
+  "failed": 0,
+  "errors": [],
+  "p50_latency_s": 61.36055874824524,
+  "p95_latency_s": 66.04941773414612,
+  "mean_lateness_s": 0.001,
+  "gen_tokens_per_s": 491.8
+ },
+ "bug_over_fixed": {
+  "p50_latency": 1.066,
+  "p95_latency": 1.08,
+  "gen_tokens_per_s": 0.972,
+  "completed": 1.0
+ },
+ "symptom_shown": false
+}

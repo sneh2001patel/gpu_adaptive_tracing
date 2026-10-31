@@ -1,0 +1,215 @@
+{
+  "provenance": "synthetic_simulation",
+  "GPU_used": false,
+  "live_validation": false,
+  "role": "hand_authored_evidence_gate_cases_not_model_outputs",
+  "protocol_version": "event_challenge_preparation_v2",
+  "cases": [
+    {
+      "case": "zero_queue",
+      "result": {
+        "status": "no_sampled_pressure_candidate",
+        "selected_rate_rps": null,
+        "levels": [
+          {
+            "rate_rps": 0.5,
+            "receipt_count": 16,
+            "covered": true,
+            "sampled_pressure_streak": false
+          },
+          {
+            "rate_rps": 1,
+            "receipt_count": 16,
+            "covered": true,
+            "sampled_pressure_streak": false
+          },
+          {
+            "rate_rps": 2,
+            "receipt_count": 16,
+            "covered": true,
+            "sampled_pressure_streak": false
+          },
+          {
+            "rate_rps": 3,
+            "receipt_count": 16,
+            "covered": true,
+            "sampled_pressure_streak": false
+          },
+          {
+            "rate_rps": 4,
+            "receipt_count": 16,
+            "covered": true,
+            "sampled_pressure_streak": false
+          }
+        ]
+      }
+    },
+    {
+      "case": "isolated_spike",
+      "result": {
+        "status": "no_sampled_pressure_candidate",
+        "selected_rate_rps": null,
+        "levels": [
+          {
+            "rate_rps": 0.5,
+            "receipt_count": 16,
+            "covered": true,
+            "sampled_pressure_streak": false
+          },
+          {
+            "rate_rps": 1,
+            "receipt_count": 16,
+            "covered": true,
+            "sampled_pressure_streak": false
+          },
+          {
+            "rate_rps": 2,
+            "receipt_count": 16,
+            "covered": true,
+            "sampled_pressure_streak": false
+          },
+          {
+            "rate_rps": 3,
+            "receipt_count": 16,
+            "covered": true,
+            "sampled_pressure_streak": false
+          },
+          {
+            "rate_rps": 4,
+            "receipt_count": 16,
+            "covered": true,
+            "sampled_pressure_streak": false
+          }
+        ]
+      }
+    },
+    {
+      "case": "candidate_3rps",
+      "result": {
+        "status": "engineering_candidate",
+        "selected_rate_rps": 3,
+        "levels": [
+          {
+            "rate_rps": 0.5,
+            "receipt_count": 16,
+            "covered": true,
+            "sampled_pressure_streak": false
+          },
+          {
+            "rate_rps": 1,
+            "receipt_count": 16,
+            "covered": true,
+            "sampled_pressure_streak": false
+          },
+          {
+            "rate_rps": 2,
+            "receipt_count": 16,
+            "covered": true,
+            "sampled_pressure_streak": false
+          },
+          {
+            "rate_rps": 3,
+            "receipt_count": 16,
+            "covered": true,
+            "sampled_pressure_streak": true
+          },
+          {
+            "rate_rps": 4,
+            "receipt_count": 16,
+            "covered": true,
+            "sampled_pressure_streak": true
+          }
+        ]
+      }
+    },
+    {
+      "case": "candidate_4rps",
+      "result": {
+        "status": "engineering_candidate",
+        "selected_rate_rps": 4,
+        "levels": [
+          {
+            "rate_rps": 0.5,
+            "receipt_count": 16,
+            "covered": true,
+            "sampled_pressure_streak": false
+          },
+          {
+            "rate_rps": 1,
+            "receipt_count": 16,
+            "covered": true,
+            "sampled_pressure_streak": false
+          },
+          {
+            "rate_rps": 2,
+            "receipt_count": 16,
+            "covered": true,
+            "sampled_pressure_streak": false
+          },
+          {
+            "rate_rps": 3,
+            "receipt_count": 16,
+            "covered": true,
+            "sampled_pressure_streak": false
+          },
+          {
+            "rate_rps": 4,
+            "receipt_count": 16,
+            "covered": true,
+            "sampled_pressure_streak": true
+          }
+        ]
+      }
+    },
+    {
+      "case": "metric_gap",
+      "result": {
+        "status": "incomplete_evidence",
+        "selected_rate_rps": null,
+        "levels": [
+          {
+            "rate_rps": 0.5,
+            "receipt_count": 16,
+            "covered": true,
+            "sampled_pressure_streak": false
+          },
+          {
+            "rate_rps": 1,
+            "receipt_count": 16,
+            "covered": true,
+            "sampled_pressure_streak": false
+          },
+          {
+            "rate_rps": 2,
+            "receipt_count": 16,
+            "covered": true,
+            "sampled_pressure_streak": false
+          },
+          {
+            "rate_rps": 3,
+            "receipt_count": 15,
+            "covered": false,
+            "sampled_pressure_streak": true
+          },
+          {
+            "rate_rps": 4,
+            "receipt_count": 16,
+            "covered": true,
+            "sampled_pressure_streak": true
+          }
+        ]
+      }
+    },
+    {
+      "case": "missing_work",
+      "result": {
+        "status": "incomplete_work",
+        "selected_rate_rps": null,
+        "levels": []
+      }
+    }
+  ],
+  "references_created": 0,
+  "calibration_enabled": false,
+  "protocol_frozen": false
+}

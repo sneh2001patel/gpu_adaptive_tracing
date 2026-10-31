@@ -1,0 +1,1374 @@
+{
+  "evidence_mode": "live_online",
+  "experiment_role": "engineering_pilot",
+  "case": "persistent_load",
+  "seed": 1001,
+  "policy": "fixed_burst",
+  "gpu_uuid": "GPU-baa93118-dfa3-1258-be9e-b6051b77c1cb",
+  "diagnosis_status": "unresolved_classifier_abstains",
+  "note": "Laboratory workload intervention; no independent bottleneck reference or calibrated T2 classifier. No diagnosis accuracy or capture-active savings claim.",
+  "workload": {
+    "rate_rps": 8,
+    "max_tokens": 128,
+    "observation_horizon_s": 24,
+    "window_s": 2
+  },
+  "producer": {
+    "producer_version": "producer_v1",
+    "config": {
+      "endpoint": "http://127.0.0.1:8010/v1/completions",
+      "rate_rps": 8,
+      "max_inflight": 16,
+      "request_timeout_s": 45,
+      "drain_s": 20,
+      "sample_interval_s": 0.2,
+      "max_response_bytes": 1048576
+    },
+    "admitted": 48,
+    "skipped_capacity": 144,
+    "skipped_scheduler": 0,
+    "completed": 48,
+    "errors": 0,
+    "drain_cancelled": 0,
+    "sampler_errors": 0,
+    "peak_inflight": 16,
+    "observation_start_ns": 108248783236225,
+    "observation_horizon_ns": 108272783236225,
+    "finished_at_ns": 108277383226434,
+    "queue_records": 212,
+    "clock_domain": "process-monotonic-3d2a277a-150b-4380-a0e3-0c04d596631b",
+    "baseline": {
+      "p95_latency_ms": 1879.2591590499999,
+      "source_id": "/workspace/gpu_adaptive_tracing/revision/hardware/l4_20261027/smoke_005/calibration_requests.json",
+      "throughput_rps": null
+    }
+  },
+  "aggregation": {
+    "adapter_version": "aggregation_v1",
+    "config": {
+      "start_ns": 108248783236225,
+      "horizon_ns": 108272783236225,
+      "window_s": 2,
+      "allowed_lateness_s": 0.1,
+      "window_prefix": "raw-window",
+      "require_request_starts": true
+    },
+    "clock_domain": "process-monotonic-3d2a277a-150b-4380-a0e3-0c04d596631b",
+    "provenance": "live_online",
+    "finished": true,
+    "delivery_failed": false,
+    "emitted_windows": 12,
+    "completed_records_seen": 48,
+    "gpu_records_seen": 116,
+    "tracked_admissions": 48,
+    "untracked_completions": 0,
+    "late_completions": 0,
+    "late_gpu_samples": 0,
+    "drain_completions": 16,
+    "outside_completions": 0,
+    "outstanding_tracked_requests": [],
+    "censoring_scope": "observed_starts_only; unregistered requests cannot be counted",
+    "control_latency_scope": "observed_completion_windows; not a censoring-corrected SLO estimate"
+  },
+  "controller": {
+    "controller_version": "streaming_v3",
+    "policy_version": "stopping_v3",
+    "evidence_mode": "live_online",
+    "clock_domain": "process-monotonic-3d2a277a-150b-4380-a0e3-0c04d596631b",
+    "state": "idle",
+    "finished": true,
+    "baseline": {
+      "p95_latency_ms": 1879.2591590499999,
+      "source_id": "/workspace/gpu_adaptive_tracing/revision/hardware/l4_20261027/smoke_005/calibration_requests.json",
+      "throughput_rps": null
+    },
+    "config": {
+      "policy": "fixed_burst",
+      "policy_config": {
+        "stability_windows": 2,
+        "repeated_bursts": 3,
+        "max_bursts": 3,
+        "recovery_windows": 2,
+        "recovery_latency_ratio": 1.1,
+        "recovery_gpu_util": 60.0
+      },
+      "latency_trigger_ratio": 1.5,
+      "gpu_trigger_percent": 85.0,
+      "gpu_trigger_windows": 2,
+      "burst_s": 1,
+      "startup_timeout_s": 25,
+      "evidence_timeout_s": 60,
+      "cooldown_s": 2,
+      "change_ratio_factor": 1.5,
+      "change_gpu_points": 20.0,
+      "retry_unresolved": false
+    },
+    "episodes": [
+      {
+        "episode_id": "episode-1",
+        "started_at_ns": 108252884445818,
+        "attempts": [
+          "episode-1:capture-1",
+          "episode-1:capture-2",
+          "episode-1:capture-3"
+        ],
+        "decisions": [
+          {
+            "decision": {
+              "stop": true,
+              "reason": "fixed_burst_complete",
+              "policy": "fixed_burst",
+              "bursts": 1,
+              "diagnosis_streak": 0,
+              "recovery_streak": 0,
+              "diagnosis_label": null,
+              "policy_condition_met": true
+            },
+            "capture_id": "episode-1:capture-1",
+            "evidence_id": "episode-1:capture-1:0c12b14ba700739628d1e92bf59dd3df971f8a1b86e36169bf819176d701f94e",
+            "evidence_ready_at_ns": 108255416512357,
+            "decision_ready_at_ns": 108255416799742,
+            "clock_domain": "process-monotonic-3d2a277a-150b-4380-a0e3-0c04d596631b",
+            "status": "ok",
+            "error": null,
+            "provenance": "live_online"
+          },
+          {
+            "decision": {
+              "stop": true,
+              "reason": "fixed_burst_complete",
+              "policy": "fixed_burst",
+              "bursts": 1,
+              "diagnosis_streak": 0,
+              "recovery_streak": 0,
+              "diagnosis_label": null,
+              "policy_condition_met": true
+            },
+            "capture_id": "episode-1:capture-2",
+            "evidence_id": "episode-1:capture-2:ce22e39b422cc2f7cf9e8a5e6fe587bdd55c5e3b0f2544b0e01c39f9cb7f8981",
+            "evidence_ready_at_ns": 108261225945980,
+            "decision_ready_at_ns": 108261226524148,
+            "clock_domain": "process-monotonic-3d2a277a-150b-4380-a0e3-0c04d596631b",
+            "status": "ok",
+            "error": null,
+            "provenance": "live_online"
+          },
+          {
+            "decision": {
+              "stop": true,
+              "reason": "fixed_burst_complete",
+              "policy": "fixed_burst",
+              "bursts": 1,
+              "diagnosis_streak": 0,
+              "recovery_streak": 0,
+              "diagnosis_label": null,
+              "policy_condition_met": true
+            },
+            "capture_id": "episode-1:capture-3",
+            "evidence_id": "episode-1:capture-3:8a1718f06367028a8ee57672033d88d0bf8494db4dca3a42361429b410a7efd7",
+            "evidence_ready_at_ns": 108267230770183,
+            "decision_ready_at_ns": 108267231040940,
+            "clock_domain": "process-monotonic-3d2a277a-150b-4380-a0e3-0c04d596631b",
+            "status": "ok",
+            "error": null,
+            "provenance": "live_online"
+          }
+        ],
+        "round_number": 3,
+        "reactivation_attempts": 2,
+        "recovery_streak": 0,
+        "last_diagnosis": null,
+        "stop_reason": "fixed_burst_complete",
+        "stopped_at_ns": 108267231059108,
+        "stop_signature": [
+          null,
+          71.44444444444444,
+          0.0
+        ],
+        "ended_at_ns": 108272884365861,
+        "end_reason": "horizon_ended"
+      }
+    ],
+    "capture_timings": {
+      "episode-1:capture-1": {
+        "server_startup_s": null,
+        "target_initialization_s": null,
+        "workload_span_s": null,
+        "shutdown_s": null,
+        "capture_control_window_s": 1.960291957,
+        "profile_process_wall_s": null,
+        "report_finalization_s": null,
+        "stats_command_s": 0.125316734,
+        "summary_parse_s": 0.034512326,
+        "diagnosis_compute_s": 7.9061e-05,
+        "lifecycle_total_s": null,
+        "evidence_collection_s": 2.530313044,
+        "capture_active_s": null,
+        "capture_active_status": "unavailable",
+        "clock_domain": "process-monotonic-3d2a277a-150b-4380-a0e3-0c04d596631b",
+        "timing_provenance": "live_online",
+        "timing_schema_version": "timing_v1",
+        "phase_status": {
+          "server_startup": null,
+          "target_initialization": null,
+          "workload_span": null,
+          "shutdown": null,
+          "capture_control_window": "ok",
+          "profile_process_wall": null,
+          "report_finalization": null,
+          "stats_command": "ok",
+          "summary_parse": "ok",
+          "diagnosis_compute": "ok",
+          "lifecycle_total": null,
+          "evidence_collection": "ok"
+        },
+        "evidence_ready_at_ns": 108255416512357,
+        "decision_ready_at_ns": 108255416799742
+      },
+      "episode-1:capture-2": {
+        "server_startup_s": null,
+        "target_initialization_s": null,
+        "workload_span_s": null,
+        "shutdown_s": null,
+        "capture_control_window_s": 1.952041601,
+        "profile_process_wall_s": null,
+        "report_finalization_s": null,
+        "stats_command_s": 0.125661132,
+        "summary_parse_s": 0.034623673,
+        "diagnosis_compute_s": 0.000107662,
+        "lifecycle_total_s": null,
+        "evidence_collection_s": 2.339816122,
+        "capture_active_s": null,
+        "capture_active_status": "unavailable",
+        "clock_domain": "process-monotonic-3d2a277a-150b-4380-a0e3-0c04d596631b",
+        "timing_provenance": "live_online",
+        "timing_schema_version": "timing_v1",
+        "phase_status": {
+          "server_startup": null,
+          "target_initialization": null,
+          "workload_span": null,
+          "shutdown": null,
+          "capture_control_window": "ok",
+          "profile_process_wall": null,
+          "report_finalization": null,
+          "stats_command": "ok",
+          "summary_parse": "ok",
+          "diagnosis_compute": "ok",
+          "lifecycle_total": null,
+          "evidence_collection": "ok"
+        },
+        "evidence_ready_at_ns": 108261225945980,
+        "decision_ready_at_ns": 108261226524148
+      },
+      "episode-1:capture-3": {
+        "server_startup_s": null,
+        "target_initialization_s": null,
+        "workload_span_s": null,
+        "shutdown_s": null,
+        "capture_control_window_s": 1.947885231,
+        "profile_process_wall_s": null,
+        "report_finalization_s": null,
+        "stats_command_s": 0.131789216,
+        "summary_parse_s": 0.034135937,
+        "diagnosis_compute_s": 9.2055e-05,
+        "lifecycle_total_s": null,
+        "evidence_collection_s": 2.345212643,
+        "capture_active_s": null,
+        "capture_active_status": "unavailable",
+        "clock_domain": "process-monotonic-3d2a277a-150b-4380-a0e3-0c04d596631b",
+        "timing_provenance": "live_online",
+        "timing_schema_version": "timing_v1",
+        "phase_status": {
+          "server_startup": null,
+          "target_initialization": null,
+          "workload_span": null,
+          "shutdown": null,
+          "capture_control_window": "ok",
+          "profile_process_wall": null,
+          "report_finalization": null,
+          "stats_command": "ok",
+          "summary_parse": "ok",
+          "diagnosis_compute": "ok",
+          "lifecycle_total": null,
+          "evidence_collection": "ok"
+        },
+        "evidence_ready_at_ns": 108267230770183,
+        "decision_ready_at_ns": 108267231040940
+      }
+    },
+    "events": [
+      {
+        "sequence": 0,
+        "event": "cheap_window_available",
+        "timestamp_ns": 108250884229534,
+        "clock_domain": "process-monotonic-3d2a277a-150b-4380-a0e3-0c04d596631b",
+        "provenance": "live_online",
+        "state": "idle",
+        "episode_id": null,
+        "window_id": "raw-window-0",
+        "window_start_ns": 108248783236225,
+        "window_end_ns": 108250783236225,
+        "available_at_ns": 108250884048454,
+        "sample_count": 0,
+        "request_count": 0,
+        "request_error_count": 0,
+        "gpu_sample_count": 10,
+        "outstanding_request_count": 16,
+        "oldest_pending_ms": 1999.178404,
+        "p95_latency_ms": null,
+        "gpu_util": 92.3,
+        "throughput_rps": 0.0,
+        "latency_ratio": null,
+        "suspicious": null,
+        "suspicion_reasons": []
+      },
+      {
+        "sequence": 1,
+        "event": "cheap_window_available",
+        "timestamp_ns": 108252884396875,
+        "clock_domain": "process-monotonic-3d2a277a-150b-4380-a0e3-0c04d596631b",
+        "provenance": "live_online",
+        "state": "idle",
+        "episode_id": null,
+        "window_id": "raw-window-1",
+        "window_start_ns": 108250783236225,
+        "window_end_ns": 108252783236225,
+        "available_at_ns": 108252884190332,
+        "sample_count": 0,
+        "request_count": 0,
+        "request_error_count": 0,
+        "gpu_sample_count": 10,
+        "outstanding_request_count": 16,
+        "oldest_pending_ms": 3999.178404,
+        "p95_latency_ms": null,
+        "gpu_util": 97.5,
+        "throughput_rps": 0.0,
+        "latency_ratio": null,
+        "suspicious": true,
+        "suspicion_reasons": [
+          "long_pending_request"
+        ]
+      },
+      {
+        "sequence": 2,
+        "event": "episode_started",
+        "timestamp_ns": 108252884468139,
+        "clock_domain": "process-monotonic-3d2a277a-150b-4380-a0e3-0c04d596631b",
+        "provenance": "live_online",
+        "state": "idle",
+        "episode_id": "episode-1",
+        "window_id": "raw-window-1"
+      },
+      {
+        "sequence": 3,
+        "event": "state_changed",
+        "timestamp_ns": 108252884580180,
+        "clock_domain": "process-monotonic-3d2a277a-150b-4380-a0e3-0c04d596631b",
+        "provenance": "live_online",
+        "state": "suspicious",
+        "episode_id": "episode-1",
+        "previous_state": "idle"
+      },
+      {
+        "sequence": 4,
+        "event": "state_changed",
+        "timestamp_ns": 108252884664173,
+        "clock_domain": "process-monotonic-3d2a277a-150b-4380-a0e3-0c04d596631b",
+        "provenance": "live_online",
+        "state": "starting",
+        "episode_id": "episode-1",
+        "previous_state": "suspicious"
+      },
+      {
+        "sequence": 5,
+        "event": "capture_requested",
+        "timestamp_ns": 108252884682273,
+        "clock_domain": "process-monotonic-3d2a277a-150b-4380-a0e3-0c04d596631b",
+        "provenance": "live_online",
+        "state": "starting",
+        "episode_id": "episode-1",
+        "capture_id": "episode-1:capture-1",
+        "window_id": "raw-window-1",
+        "round_number": 1
+      },
+      {
+        "sequence": 6,
+        "event": "state_changed",
+        "timestamp_ns": 108253289929752,
+        "clock_domain": "process-monotonic-3d2a277a-150b-4380-a0e3-0c04d596631b",
+        "provenance": "live_online",
+        "state": "tracing",
+        "episode_id": "episode-1",
+        "previous_state": "starting"
+      },
+      {
+        "sequence": 7,
+        "event": "state_changed",
+        "timestamp_ns": 108254293549586,
+        "clock_domain": "process-monotonic-3d2a277a-150b-4380-a0e3-0c04d596631b",
+        "provenance": "live_online",
+        "state": "evaluating",
+        "episode_id": "episode-1",
+        "previous_state": "tracing"
+      },
+      {
+        "sequence": 8,
+        "event": "cheap_window_available",
+        "timestamp_ns": 108254884626251,
+        "clock_domain": "process-monotonic-3d2a277a-150b-4380-a0e3-0c04d596631b",
+        "provenance": "live_online",
+        "state": "evaluating",
+        "episode_id": "episode-1",
+        "window_id": "raw-window-2",
+        "window_start_ns": 108252783236225,
+        "window_end_ns": 108254783236225,
+        "available_at_ns": 108254884457120,
+        "sample_count": 0,
+        "request_count": 0,
+        "request_error_count": 0,
+        "gpu_sample_count": 10,
+        "outstanding_request_count": 16,
+        "oldest_pending_ms": 5999.178404,
+        "p95_latency_ms": null,
+        "gpu_util": 73.4,
+        "throughput_rps": 0.0,
+        "latency_ratio": null,
+        "suspicious": true,
+        "suspicion_reasons": [
+          "long_pending_request"
+        ]
+      },
+      {
+        "sequence": 9,
+        "event": "policy_decision",
+        "timestamp_ns": 108255416818821,
+        "clock_domain": "process-monotonic-3d2a277a-150b-4380-a0e3-0c04d596631b",
+        "provenance": "live_online",
+        "state": "evaluating",
+        "episode_id": "episode-1",
+        "capture_id": "episode-1:capture-1",
+        "reason": "fixed_burst_complete",
+        "decision_status": "ok",
+        "evidence_ready_at_ns": 108255416512357,
+        "diagnosis_label": null
+      },
+      {
+        "sequence": 10,
+        "event": "state_changed",
+        "timestamp_ns": 108255416830516,
+        "clock_domain": "process-monotonic-3d2a277a-150b-4380-a0e3-0c04d596631b",
+        "provenance": "live_online",
+        "state": "monitoring",
+        "episode_id": "episode-1",
+        "previous_state": "evaluating"
+      },
+      {
+        "sequence": 11,
+        "event": "heavy_tracing_stopped",
+        "timestamp_ns": 108255416834691,
+        "clock_domain": "process-monotonic-3d2a277a-150b-4380-a0e3-0c04d596631b",
+        "provenance": "live_online",
+        "state": "monitoring",
+        "episode_id": "episode-1",
+        "reason": "fixed_burst_complete"
+      },
+      {
+        "sequence": 12,
+        "event": "cheap_window_available",
+        "timestamp_ns": 108256884076301,
+        "clock_domain": "process-monotonic-3d2a277a-150b-4380-a0e3-0c04d596631b",
+        "provenance": "live_online",
+        "state": "monitoring",
+        "episode_id": "episode-1",
+        "window_id": "raw-window-3",
+        "window_start_ns": 108254783236225,
+        "window_end_ns": 108256783236225,
+        "available_at_ns": 108256883898224,
+        "sample_count": 0,
+        "request_count": 0,
+        "request_error_count": 0,
+        "gpu_sample_count": 9,
+        "outstanding_request_count": 16,
+        "oldest_pending_ms": 7999.178404,
+        "p95_latency_ms": null,
+        "gpu_util": 75.77777777777777,
+        "throughput_rps": 0.0,
+        "latency_ratio": null,
+        "suspicious": true,
+        "suspicion_reasons": [
+          "long_pending_request"
+        ]
+      },
+      {
+        "sequence": 13,
+        "event": "cheap_window_available",
+        "timestamp_ns": 108258884582072,
+        "clock_domain": "process-monotonic-3d2a277a-150b-4380-a0e3-0c04d596631b",
+        "provenance": "live_online",
+        "state": "monitoring",
+        "episode_id": "episode-1",
+        "window_id": "raw-window-4",
+        "window_start_ns": 108256783236225,
+        "window_end_ns": 108258783236225,
+        "available_at_ns": 108258884416615,
+        "sample_count": 9,
+        "request_count": 9,
+        "request_error_count": 0,
+        "gpu_sample_count": 10,
+        "outstanding_request_count": 14,
+        "oldest_pending_ms": 8749.201467,
+        "p95_latency_ms": 8966.857146600001,
+        "gpu_util": 97.5,
+        "throughput_rps": 4.5,
+        "latency_ratio": 4.771485137330879,
+        "suspicious": true,
+        "suspicion_reasons": [
+          "long_pending_request",
+          "latency_regression"
+        ]
+      },
+      {
+        "sequence": 14,
+        "event": "tracing_reactivation_requested",
+        "timestamp_ns": 108258884673067,
+        "clock_domain": "process-monotonic-3d2a277a-150b-4380-a0e3-0c04d596631b",
+        "provenance": "live_online",
+        "state": "monitoring",
+        "episode_id": "episode-1",
+        "reason": "changed_cheap_evidence"
+      },
+      {
+        "sequence": 15,
+        "event": "state_changed",
+        "timestamp_ns": 108258884774915,
+        "clock_domain": "process-monotonic-3d2a277a-150b-4380-a0e3-0c04d596631b",
+        "provenance": "live_online",
+        "state": "suspicious",
+        "episode_id": "episode-1",
+        "previous_state": "monitoring"
+      },
+      {
+        "sequence": 16,
+        "event": "state_changed",
+        "timestamp_ns": 108258884820278,
+        "clock_domain": "process-monotonic-3d2a277a-150b-4380-a0e3-0c04d596631b",
+        "provenance": "live_online",
+        "state": "starting",
+        "episode_id": "episode-1",
+        "previous_state": "suspicious"
+      },
+      {
+        "sequence": 17,
+        "event": "capture_requested",
+        "timestamp_ns": 108258884835478,
+        "clock_domain": "process-monotonic-3d2a277a-150b-4380-a0e3-0c04d596631b",
+        "provenance": "live_online",
+        "state": "starting",
+        "episode_id": "episode-1",
+        "capture_id": "episode-1:capture-2",
+        "window_id": "raw-window-4",
+        "round_number": 2
+      },
+      {
+        "sequence": 18,
+        "event": "state_changed",
+        "timestamp_ns": 108259107651016,
+        "clock_domain": "process-monotonic-3d2a277a-150b-4380-a0e3-0c04d596631b",
+        "provenance": "live_online",
+        "state": "tracing",
+        "episode_id": "episode-1",
+        "previous_state": "starting"
+      },
+      {
+        "sequence": 19,
+        "event": "state_changed",
+        "timestamp_ns": 108260111305910,
+        "clock_domain": "process-monotonic-3d2a277a-150b-4380-a0e3-0c04d596631b",
+        "provenance": "live_online",
+        "state": "evaluating",
+        "episode_id": "episode-1",
+        "previous_state": "tracing"
+      },
+      {
+        "sequence": 20,
+        "event": "cheap_window_available",
+        "timestamp_ns": 108260883911662,
+        "clock_domain": "process-monotonic-3d2a277a-150b-4380-a0e3-0c04d596631b",
+        "provenance": "live_online",
+        "state": "evaluating",
+        "episode_id": "episode-1",
+        "window_id": "raw-window-5",
+        "window_start_ns": 108258783236225,
+        "window_end_ns": 108260783236225,
+        "available_at_ns": 108260883718283,
+        "sample_count": 7,
+        "request_count": 7,
+        "request_error_count": 0,
+        "gpu_sample_count": 9,
+        "outstanding_request_count": 16,
+        "oldest_pending_ms": 2998.455929,
+        "p95_latency_ms": 9055.155557,
+        "gpu_util": 75.33333333333333,
+        "throughput_rps": 3.5,
+        "latency_ratio": 4.818470892315644,
+        "suspicious": true,
+        "suspicion_reasons": [
+          "long_pending_request",
+          "latency_regression"
+        ]
+      },
+      {
+        "sequence": 21,
+        "event": "policy_decision",
+        "timestamp_ns": 108261226553769,
+        "clock_domain": "process-monotonic-3d2a277a-150b-4380-a0e3-0c04d596631b",
+        "provenance": "live_online",
+        "state": "evaluating",
+        "episode_id": "episode-1",
+        "capture_id": "episode-1:capture-2",
+        "reason": "fixed_burst_complete",
+        "decision_status": "ok",
+        "evidence_ready_at_ns": 108261225945980,
+        "diagnosis_label": null
+      },
+      {
+        "sequence": 22,
+        "event": "state_changed",
+        "timestamp_ns": 108261226584240,
+        "clock_domain": "process-monotonic-3d2a277a-150b-4380-a0e3-0c04d596631b",
+        "provenance": "live_online",
+        "state": "monitoring",
+        "episode_id": "episode-1",
+        "previous_state": "evaluating"
+      },
+      {
+        "sequence": 23,
+        "event": "heavy_tracing_stopped",
+        "timestamp_ns": 108261226588816,
+        "clock_domain": "process-monotonic-3d2a277a-150b-4380-a0e3-0c04d596631b",
+        "provenance": "live_online",
+        "state": "monitoring",
+        "episode_id": "episode-1",
+        "reason": "fixed_burst_complete"
+      },
+      {
+        "sequence": 24,
+        "event": "cheap_window_available",
+        "timestamp_ns": 108262884060394,
+        "clock_domain": "process-monotonic-3d2a277a-150b-4380-a0e3-0c04d596631b",
+        "provenance": "live_online",
+        "state": "monitoring",
+        "episode_id": "episode-1",
+        "window_id": "raw-window-6",
+        "window_start_ns": 108260783236225,
+        "window_end_ns": 108262783236225,
+        "available_at_ns": 108262883793011,
+        "sample_count": 0,
+        "request_count": 0,
+        "request_error_count": 0,
+        "gpu_sample_count": 10,
+        "outstanding_request_count": 16,
+        "oldest_pending_ms": 4998.455929,
+        "p95_latency_ms": null,
+        "gpu_util": 77.9,
+        "throughput_rps": 0.0,
+        "latency_ratio": null,
+        "suspicious": true,
+        "suspicion_reasons": [
+          "long_pending_request"
+        ]
+      },
+      {
+        "sequence": 25,
+        "event": "cheap_window_available",
+        "timestamp_ns": 108264884479860,
+        "clock_domain": "process-monotonic-3d2a277a-150b-4380-a0e3-0c04d596631b",
+        "provenance": "live_online",
+        "state": "monitoring",
+        "episode_id": "episode-1",
+        "window_id": "raw-window-7",
+        "window_start_ns": 108262783236225,
+        "window_end_ns": 108264783236225,
+        "available_at_ns": 108264884395736,
+        "sample_count": 0,
+        "request_count": 0,
+        "request_error_count": 0,
+        "gpu_sample_count": 10,
+        "outstanding_request_count": 16,
+        "oldest_pending_ms": 6998.455929,
+        "p95_latency_ms": null,
+        "gpu_util": 97.4,
+        "throughput_rps": 0.0,
+        "latency_ratio": null,
+        "suspicious": true,
+        "suspicion_reasons": [
+          "long_pending_request"
+        ]
+      },
+      {
+        "sequence": 26,
+        "event": "tracing_reactivation_requested",
+        "timestamp_ns": 108264884524646,
+        "clock_domain": "process-monotonic-3d2a277a-150b-4380-a0e3-0c04d596631b",
+        "provenance": "live_online",
+        "state": "monitoring",
+        "episode_id": "episode-1",
+        "reason": "changed_cheap_evidence"
+      },
+      {
+        "sequence": 27,
+        "event": "state_changed",
+        "timestamp_ns": 108264884589672,
+        "clock_domain": "process-monotonic-3d2a277a-150b-4380-a0e3-0c04d596631b",
+        "provenance": "live_online",
+        "state": "suspicious",
+        "episode_id": "episode-1",
+        "previous_state": "monitoring"
+      },
+      {
+        "sequence": 28,
+        "event": "state_changed",
+        "timestamp_ns": 108264884618615,
+        "clock_domain": "process-monotonic-3d2a277a-150b-4380-a0e3-0c04d596631b",
+        "provenance": "live_online",
+        "state": "starting",
+        "episode_id": "episode-1",
+        "previous_state": "suspicious"
+      },
+      {
+        "sequence": 29,
+        "event": "capture_requested",
+        "timestamp_ns": 108264884625497,
+        "clock_domain": "process-monotonic-3d2a277a-150b-4380-a0e3-0c04d596631b",
+        "provenance": "live_online",
+        "state": "starting",
+        "episode_id": "episode-1",
+        "capture_id": "episode-1:capture-3",
+        "window_id": "raw-window-7",
+        "round_number": 3
+      },
+      {
+        "sequence": 30,
+        "event": "state_changed",
+        "timestamp_ns": 108265111202363,
+        "clock_domain": "process-monotonic-3d2a277a-150b-4380-a0e3-0c04d596631b",
+        "provenance": "live_online",
+        "state": "tracing",
+        "episode_id": "episode-1",
+        "previous_state": "starting"
+      },
+      {
+        "sequence": 31,
+        "event": "state_changed",
+        "timestamp_ns": 108266113909763,
+        "clock_domain": "process-monotonic-3d2a277a-150b-4380-a0e3-0c04d596631b",
+        "provenance": "live_online",
+        "state": "evaluating",
+        "episode_id": "episode-1",
+        "previous_state": "tracing"
+      },
+      {
+        "sequence": 32,
+        "event": "cheap_window_available",
+        "timestamp_ns": 108266884435891,
+        "clock_domain": "process-monotonic-3d2a277a-150b-4380-a0e3-0c04d596631b",
+        "provenance": "live_online",
+        "state": "evaluating",
+        "episode_id": "episode-1",
+        "window_id": "raw-window-8",
+        "window_start_ns": 108264783236225,
+        "window_end_ns": 108266783236225,
+        "available_at_ns": 108266884285977,
+        "sample_count": 0,
+        "request_count": 0,
+        "request_error_count": 0,
+        "gpu_sample_count": 9,
+        "outstanding_request_count": 16,
+        "oldest_pending_ms": 8998.455929,
+        "p95_latency_ms": null,
+        "gpu_util": 71.44444444444444,
+        "throughput_rps": 0.0,
+        "latency_ratio": null,
+        "suspicious": true,
+        "suspicion_reasons": [
+          "long_pending_request"
+        ]
+      },
+      {
+        "sequence": 33,
+        "event": "policy_decision",
+        "timestamp_ns": 108267231052600,
+        "clock_domain": "process-monotonic-3d2a277a-150b-4380-a0e3-0c04d596631b",
+        "provenance": "live_online",
+        "state": "evaluating",
+        "episode_id": "episode-1",
+        "capture_id": "episode-1:capture-3",
+        "reason": "fixed_burst_complete",
+        "decision_status": "ok",
+        "evidence_ready_at_ns": 108267230770183,
+        "diagnosis_label": null
+      },
+      {
+        "sequence": 34,
+        "event": "state_changed",
+        "timestamp_ns": 108267231062483,
+        "clock_domain": "process-monotonic-3d2a277a-150b-4380-a0e3-0c04d596631b",
+        "provenance": "live_online",
+        "state": "monitoring",
+        "episode_id": "episode-1",
+        "previous_state": "evaluating"
+      },
+      {
+        "sequence": 35,
+        "event": "heavy_tracing_stopped",
+        "timestamp_ns": 108267231066447,
+        "clock_domain": "process-monotonic-3d2a277a-150b-4380-a0e3-0c04d596631b",
+        "provenance": "live_online",
+        "state": "monitoring",
+        "episode_id": "episode-1",
+        "reason": "fixed_burst_complete"
+      },
+      {
+        "sequence": 36,
+        "event": "cheap_window_available",
+        "timestamp_ns": 108268884552999,
+        "clock_domain": "process-monotonic-3d2a277a-150b-4380-a0e3-0c04d596631b",
+        "provenance": "live_online",
+        "state": "monitoring",
+        "episode_id": "episode-1",
+        "window_id": "raw-window-9",
+        "window_start_ns": 108266783236225,
+        "window_end_ns": 108268783236225,
+        "available_at_ns": 108268884399840,
+        "sample_count": 11,
+        "request_count": 11,
+        "request_error_count": 0,
+        "gpu_sample_count": 10,
+        "outstanding_request_count": 14,
+        "oldest_pending_ms": 9499.096821,
+        "p95_latency_ms": 9748.789636000001,
+        "gpu_util": 77.5,
+        "throughput_rps": 5.5,
+        "latency_ratio": 5.187570638702218,
+        "suspicious": true,
+        "suspicion_reasons": [
+          "long_pending_request",
+          "latency_regression"
+        ]
+      },
+      {
+        "sequence": 37,
+        "event": "cheap_window_available",
+        "timestamp_ns": 108270883986551,
+        "clock_domain": "process-monotonic-3d2a277a-150b-4380-a0e3-0c04d596631b",
+        "provenance": "live_online",
+        "state": "monitoring",
+        "episode_id": "episode-1",
+        "window_id": "raw-window-10",
+        "window_start_ns": 108268783236225,
+        "window_end_ns": 108270783236225,
+        "available_at_ns": 108270883814435,
+        "sample_count": 5,
+        "request_count": 5,
+        "request_error_count": 0,
+        "gpu_sample_count": 10,
+        "outstanding_request_count": 16,
+        "oldest_pending_ms": 3248.849475,
+        "p95_latency_ms": 9660.606646799999,
+        "gpu_util": 97.1,
+        "throughput_rps": 2.5,
+        "latency_ratio": 5.140646302175594,
+        "suspicious": true,
+        "suspicion_reasons": [
+          "long_pending_request",
+          "latency_regression"
+        ]
+      },
+      {
+        "sequence": 38,
+        "event": "cheap_window_available",
+        "timestamp_ns": 108272884266469,
+        "clock_domain": "process-monotonic-3d2a277a-150b-4380-a0e3-0c04d596631b",
+        "provenance": "live_online",
+        "state": "monitoring",
+        "episode_id": "episode-1",
+        "window_id": "raw-window-11",
+        "window_start_ns": 108270783236225,
+        "window_end_ns": 108272783236225,
+        "available_at_ns": 108272884115956,
+        "sample_count": 0,
+        "request_count": 0,
+        "request_error_count": 0,
+        "gpu_sample_count": 9,
+        "outstanding_request_count": 16,
+        "oldest_pending_ms": 5248.849475,
+        "p95_latency_ms": null,
+        "gpu_util": 97.44444444444444,
+        "throughput_rps": 0.0,
+        "latency_ratio": null,
+        "suspicious": true,
+        "suspicion_reasons": [
+          "long_pending_request"
+        ]
+      },
+      {
+        "sequence": 39,
+        "event": "episode_ended",
+        "timestamp_ns": 108272884370583,
+        "clock_domain": "process-monotonic-3d2a277a-150b-4380-a0e3-0c04d596631b",
+        "provenance": "live_online",
+        "state": "monitoring",
+        "episode_id": "episode-1",
+        "reason": "horizon_ended",
+        "stop_reason": "fixed_burst_complete"
+      },
+      {
+        "sequence": 40,
+        "event": "state_changed",
+        "timestamp_ns": 108272884404439,
+        "clock_domain": "process-monotonic-3d2a277a-150b-4380-a0e3-0c04d596631b",
+        "provenance": "live_online",
+        "state": "idle",
+        "episode_id": null,
+        "previous_state": "monitoring"
+      },
+      {
+        "sequence": 41,
+        "event": "stream_finished",
+        "timestamp_ns": 108272884420622,
+        "clock_domain": "process-monotonic-3d2a277a-150b-4380-a0e3-0c04d596631b",
+        "provenance": "live_online",
+        "state": "idle",
+        "episode_id": null
+      }
+    ]
+  },
+  "backend": {
+    "backend_version": "nsys_serving_pilot_v1",
+    "capture_range_end_mode": "repeat_sync",
+    "nsys_contract": "2026.3.1",
+    "vllm_contract": "0.10.2",
+    "ordinal": 3,
+    "events": [
+      {
+        "event": "command_started",
+        "capture_id": "episode-1:capture-1",
+        "timestamp_ns": 108252888589337,
+        "clock_domain": "process-monotonic-3d2a277a-150b-4380-a0e3-0c04d596631b",
+        "stage": "start",
+        "argv": [
+          "/workspace/envs/vllm/bin/python",
+          "/workspace/gpu_adaptive_tracing/revision/scripts/profile_http_command.py",
+          "http://127.0.0.1:8010/start_profile"
+        ],
+        "pid": 4233
+      },
+      {
+        "event": "command_exited",
+        "capture_id": "episode-1:capture-1",
+        "timestamp_ns": 108253288154692,
+        "clock_domain": "process-monotonic-3d2a277a-150b-4380-a0e3-0c04d596631b",
+        "stage": "start",
+        "returncode": 0
+      },
+      {
+        "event": "capture_started_ack_received",
+        "capture_id": "episode-1:capture-1",
+        "timestamp_ns": 108253289902590,
+        "clock_domain": "process-monotonic-3d2a277a-150b-4380-a0e3-0c04d596631b",
+        "worker_ack": [
+          {
+            "capture_id": "episode-1:capture-1",
+            "token": "12e6221d50d441d0806070f2e910bba1",
+            "ordinal": 1,
+            "action": "start",
+            "source": "cuda_worker_api",
+            "pid": 3984,
+            "device_uuid": "GPU-baa93118-dfa3-1258-be9e-b6051b77c1cb",
+            "requested_at_ns": 108253026045885,
+            "returned_at_ns": 108253261045864,
+            "cuda_return_code": 0,
+            "clock_domain": "process-monotonic-3d2a277a-150b-4380-a0e3-0c04d596631b"
+          }
+        ],
+        "nsys_callback": {
+          "source": "nsys_callback",
+          "action": "start",
+          "timestamp_ns": 108253268154490,
+          "clock_domain": "process-monotonic-3d2a277a-150b-4380-a0e3-0c04d596631b",
+          "session_name": "profile-3744",
+          "callback_name": "after-collection-start",
+          "capture_id": "episode-1:capture-1",
+          "token": "12e6221d50d441d0806070f2e910bba1",
+          "ordinal": 1
+        }
+      },
+      {
+        "event": "command_started",
+        "capture_id": "episode-1:capture-1",
+        "timestamp_ns": 108254293502661,
+        "clock_domain": "process-monotonic-3d2a277a-150b-4380-a0e3-0c04d596631b",
+        "stage": "stop",
+        "argv": [
+          "/workspace/envs/vllm/bin/python",
+          "/workspace/gpu_adaptive_tracing/revision/scripts/profile_http_command.py",
+          "http://127.0.0.1:8010/stop_profile"
+        ],
+        "pid": 4245
+      },
+      {
+        "event": "command_exited",
+        "capture_id": "episode-1:capture-1",
+        "timestamp_ns": 108255249452142,
+        "clock_domain": "process-monotonic-3d2a277a-150b-4380-a0e3-0c04d596631b",
+        "stage": "stop",
+        "returncode": 0
+      },
+      {
+        "event": "capture_stopped_ack_received",
+        "capture_id": "episode-1:capture-1",
+        "timestamp_ns": 108255250202687,
+        "clock_domain": "process-monotonic-3d2a277a-150b-4380-a0e3-0c04d596631b",
+        "worker_ack": [
+          {
+            "capture_id": "episode-1:capture-1",
+            "token": "12e6221d50d441d0806070f2e910bba1",
+            "ordinal": 1,
+            "action": "stop",
+            "source": "cuda_worker_api",
+            "pid": 3984,
+            "device_uuid": "GPU-baa93118-dfa3-1258-be9e-b6051b77c1cb",
+            "requested_at_ns": 108254431616236,
+            "returned_at_ns": 108255217428924,
+            "cuda_return_code": 0,
+            "clock_domain": "process-monotonic-3d2a277a-150b-4380-a0e3-0c04d596631b"
+          }
+        ]
+      },
+      {
+        "event": "report_detected",
+        "capture_id": "episode-1:capture-1",
+        "timestamp_ns": 108255256570682,
+        "clock_domain": "process-monotonic-3d2a277a-150b-4380-a0e3-0c04d596631b",
+        "callback": null,
+        "readiness_basis": "sync_cudaProfilerStop_return_pending_export_validation"
+      },
+      {
+        "event": "command_started",
+        "capture_id": "episode-1:capture-1",
+        "timestamp_ns": 108255258482837,
+        "clock_domain": "process-monotonic-3d2a277a-150b-4380-a0e3-0c04d596631b",
+        "stage": "export",
+        "argv": [
+          "nsys",
+          "export",
+          "--type=sqlite",
+          "--output=/workspace/gpu_adaptive_tracing/revision/hardware/l4_20261027/smoke_005/session/attempts/12e6221d50d441d0806070f2e910bba1/capture.sqlite",
+          "/workspace/gpu_adaptive_tracing/revision/hardware/l4_20261027/smoke_005/session/capture.1.nsys-rep"
+        ],
+        "pid": 4253
+      },
+      {
+        "event": "command_exited",
+        "capture_id": "episode-1:capture-1",
+        "timestamp_ns": 108255381891980,
+        "clock_domain": "process-monotonic-3d2a277a-150b-4380-a0e3-0c04d596631b",
+        "stage": "export",
+        "returncode": 0
+      },
+      {
+        "event": "report_ready",
+        "capture_id": "episode-1:capture-1",
+        "timestamp_ns": 108255381968599,
+        "clock_domain": "process-monotonic-3d2a277a-150b-4380-a0e3-0c04d596631b",
+        "readiness_basis": "sync_cudaProfilerStop_ack_and_successful_export"
+      },
+      {
+        "event": "command_started",
+        "capture_id": "episode-1:capture-2",
+        "timestamp_ns": 108258888402390,
+        "clock_domain": "process-monotonic-3d2a277a-150b-4380-a0e3-0c04d596631b",
+        "stage": "start",
+        "argv": [
+          "/workspace/envs/vllm/bin/python",
+          "/workspace/gpu_adaptive_tracing/revision/scripts/profile_http_command.py",
+          "http://127.0.0.1:8010/start_profile"
+        ],
+        "pid": 4254
+      },
+      {
+        "event": "command_exited",
+        "capture_id": "episode-1:capture-2",
+        "timestamp_ns": 108259106274024,
+        "clock_domain": "process-monotonic-3d2a277a-150b-4380-a0e3-0c04d596631b",
+        "stage": "start",
+        "returncode": 0
+      },
+      {
+        "event": "capture_started_ack_received",
+        "capture_id": "episode-1:capture-2",
+        "timestamp_ns": 108259107623344,
+        "clock_domain": "process-monotonic-3d2a277a-150b-4380-a0e3-0c04d596631b",
+        "worker_ack": [
+          {
+            "capture_id": "episode-1:capture-2",
+            "token": "433b13dea8df4487a3cf48d41c766d1e",
+            "ordinal": 2,
+            "action": "start",
+            "source": "cuda_worker_api",
+            "pid": 3984,
+            "device_uuid": "GPU-baa93118-dfa3-1258-be9e-b6051b77c1cb",
+            "requested_at_ns": 108259006230806,
+            "returned_at_ns": 108259074921846,
+            "cuda_return_code": 0,
+            "clock_domain": "process-monotonic-3d2a277a-150b-4380-a0e3-0c04d596631b"
+          }
+        ],
+        "nsys_callback": {
+          "source": "nsys_callback",
+          "action": "start",
+          "timestamp_ns": 108259084831068,
+          "clock_domain": "process-monotonic-3d2a277a-150b-4380-a0e3-0c04d596631b",
+          "session_name": "profile-3744",
+          "callback_name": "after-collection-start",
+          "capture_id": "episode-1:capture-2",
+          "token": "433b13dea8df4487a3cf48d41c766d1e",
+          "ordinal": 2
+        }
+      },
+      {
+        "event": "command_started",
+        "capture_id": "episode-1:capture-2",
+        "timestamp_ns": 108260111266600,
+        "clock_domain": "process-monotonic-3d2a277a-150b-4380-a0e3-0c04d596631b",
+        "stage": "stop",
+        "argv": [
+          "/workspace/envs/vllm/bin/python",
+          "/workspace/gpu_adaptive_tracing/revision/scripts/profile_http_command.py",
+          "http://127.0.0.1:8010/stop_profile"
+        ],
+        "pid": 4260
+      },
+      {
+        "event": "command_exited",
+        "capture_id": "episode-1:capture-2",
+        "timestamp_ns": 108261058986542,
+        "clock_domain": "process-monotonic-3d2a277a-150b-4380-a0e3-0c04d596631b",
+        "stage": "stop",
+        "returncode": 0
+      },
+      {
+        "event": "capture_stopped_ack_received",
+        "capture_id": "episode-1:capture-2",
+        "timestamp_ns": 108261059676554,
+        "clock_domain": "process-monotonic-3d2a277a-150b-4380-a0e3-0c04d596631b",
+        "worker_ack": [
+          {
+            "capture_id": "episode-1:capture-2",
+            "token": "433b13dea8df4487a3cf48d41c766d1e",
+            "ordinal": 2,
+            "action": "stop",
+            "source": "cuda_worker_api",
+            "pid": 3984,
+            "device_uuid": "GPU-baa93118-dfa3-1258-be9e-b6051b77c1cb",
+            "requested_at_ns": 108260213067692,
+            "returned_at_ns": 108261028790829,
+            "cuda_return_code": 0,
+            "clock_domain": "process-monotonic-3d2a277a-150b-4380-a0e3-0c04d596631b"
+          }
+        ]
+      },
+      {
+        "event": "report_detected",
+        "capture_id": "episode-1:capture-2",
+        "timestamp_ns": 108261065530040,
+        "clock_domain": "process-monotonic-3d2a277a-150b-4380-a0e3-0c04d596631b",
+        "callback": null,
+        "readiness_basis": "sync_cudaProfilerStop_return_pending_export_validation"
+      },
+      {
+        "event": "command_started",
+        "capture_id": "episode-1:capture-2",
+        "timestamp_ns": 108261067792192,
+        "clock_domain": "process-monotonic-3d2a277a-150b-4380-a0e3-0c04d596631b",
+        "stage": "export",
+        "argv": [
+          "nsys",
+          "export",
+          "--type=sqlite",
+          "--output=/workspace/gpu_adaptive_tracing/revision/hardware/l4_20261027/smoke_005/session/attempts/433b13dea8df4487a3cf48d41c766d1e/capture.sqlite",
+          "/workspace/gpu_adaptive_tracing/revision/hardware/l4_20261027/smoke_005/session/capture.2.nsys-rep"
+        ],
+        "pid": 4268
+      },
+      {
+        "event": "command_exited",
+        "capture_id": "episode-1:capture-2",
+        "timestamp_ns": 108261191195395,
+        "clock_domain": "process-monotonic-3d2a277a-150b-4380-a0e3-0c04d596631b",
+        "stage": "export",
+        "returncode": 0
+      },
+      {
+        "event": "report_ready",
+        "capture_id": "episode-1:capture-2",
+        "timestamp_ns": 108261191259357,
+        "clock_domain": "process-monotonic-3d2a277a-150b-4380-a0e3-0c04d596631b",
+        "readiness_basis": "sync_cudaProfilerStop_ack_and_successful_export"
+      },
+      {
+        "event": "command_started",
+        "capture_id": "episode-1:capture-3",
+        "timestamp_ns": 108264887808079,
+        "clock_domain": "process-monotonic-3d2a277a-150b-4380-a0e3-0c04d596631b",
+        "stage": "start",
+        "argv": [
+          "/workspace/envs/vllm/bin/python",
+          "/workspace/gpu_adaptive_tracing/revision/scripts/profile_http_command.py",
+          "http://127.0.0.1:8010/start_profile"
+        ],
+        "pid": 4269
+      },
+      {
+        "event": "command_exited",
+        "capture_id": "episode-1:capture-3",
+        "timestamp_ns": 108265109349689,
+        "clock_domain": "process-monotonic-3d2a277a-150b-4380-a0e3-0c04d596631b",
+        "stage": "start",
+        "returncode": 0
+      },
+      {
+        "event": "capture_started_ack_received",
+        "capture_id": "episode-1:capture-3",
+        "timestamp_ns": 108265111172773,
+        "clock_domain": "process-monotonic-3d2a277a-150b-4380-a0e3-0c04d596631b",
+        "worker_ack": [
+          {
+            "capture_id": "episode-1:capture-3",
+            "token": "940ca3ba39af4a1bbe7a12a19837bcd1",
+            "ordinal": 3,
+            "action": "start",
+            "source": "cuda_worker_api",
+            "pid": 3984,
+            "device_uuid": "GPU-baa93118-dfa3-1258-be9e-b6051b77c1cb",
+            "requested_at_ns": 108265002617520,
+            "returned_at_ns": 108265078693603,
+            "cuda_return_code": 0,
+            "clock_domain": "process-monotonic-3d2a277a-150b-4380-a0e3-0c04d596631b"
+          }
+        ],
+        "nsys_callback": {
+          "source": "nsys_callback",
+          "action": "start",
+          "timestamp_ns": 108265090028403,
+          "clock_domain": "process-monotonic-3d2a277a-150b-4380-a0e3-0c04d596631b",
+          "session_name": "profile-3744",
+          "callback_name": "after-collection-start",
+          "capture_id": "episode-1:capture-3",
+          "token": "940ca3ba39af4a1bbe7a12a19837bcd1",
+          "ordinal": 3
+        }
+      },
+      {
+        "event": "command_started",
+        "capture_id": "episode-1:capture-3",
+        "timestamp_ns": 108266113872914,
+        "clock_domain": "process-monotonic-3d2a277a-150b-4380-a0e3-0c04d596631b",
+        "stage": "stop",
+        "argv": [
+          "/workspace/envs/vllm/bin/python",
+          "/workspace/gpu_adaptive_tracing/revision/scripts/profile_http_command.py",
+          "http://127.0.0.1:8010/stop_profile"
+        ],
+        "pid": 4275
+      },
+      {
+        "event": "command_exited",
+        "capture_id": "episode-1:capture-3",
+        "timestamp_ns": 108267058597541,
+        "clock_domain": "process-monotonic-3d2a277a-150b-4380-a0e3-0c04d596631b",
+        "stage": "stop",
+        "returncode": 0
+      },
+      {
+        "event": "capture_stopped_ack_received",
+        "capture_id": "episode-1:capture-3",
+        "timestamp_ns": 108267059058721,
+        "clock_domain": "process-monotonic-3d2a277a-150b-4380-a0e3-0c04d596631b",
+        "worker_ack": [
+          {
+            "capture_id": "episode-1:capture-3",
+            "token": "940ca3ba39af4a1bbe7a12a19837bcd1",
+            "ordinal": 3,
+            "action": "stop",
+            "source": "cuda_worker_api",
+            "pid": 3984,
+            "device_uuid": "GPU-baa93118-dfa3-1258-be9e-b6051b77c1cb",
+            "requested_at_ns": 108266251323172,
+            "returned_at_ns": 108267029463262,
+            "cuda_return_code": 0,
+            "clock_domain": "process-monotonic-3d2a277a-150b-4380-a0e3-0c04d596631b"
+          }
+        ]
+      },
+      {
+        "event": "report_detected",
+        "capture_id": "episode-1:capture-3",
+        "timestamp_ns": 108267064752894,
+        "clock_domain": "process-monotonic-3d2a277a-150b-4380-a0e3-0c04d596631b",
+        "callback": null,
+        "readiness_basis": "sync_cudaProfilerStop_return_pending_export_validation"
+      },
+      {
+        "event": "command_started",
+        "capture_id": "episode-1:capture-3",
+        "timestamp_ns": 108267067289109,
+        "clock_domain": "process-monotonic-3d2a277a-150b-4380-a0e3-0c04d596631b",
+        "stage": "export",
+        "argv": [
+          "nsys",
+          "export",
+          "--type=sqlite",
+          "--output=/workspace/gpu_adaptive_tracing/revision/hardware/l4_20261027/smoke_005/session/attempts/940ca3ba39af4a1bbe7a12a19837bcd1/capture.sqlite",
+          "/workspace/gpu_adaptive_tracing/revision/hardware/l4_20261027/smoke_005/session/capture.3.nsys-rep"
+        ],
+        "pid": 4283
+      },
+      {
+        "event": "command_exited",
+        "capture_id": "episode-1:capture-3",
+        "timestamp_ns": 108267196547048,
+        "clock_domain": "process-monotonic-3d2a277a-150b-4380-a0e3-0c04d596631b",
+        "stage": "export",
+        "returncode": 0
+      },
+      {
+        "event": "report_ready",
+        "capture_id": "episode-1:capture-3",
+        "timestamp_ns": 108267196609236,
+        "clock_domain": "process-monotonic-3d2a277a-150b-4380-a0e3-0c04d596631b",
+        "readiness_basis": "sync_cudaProfilerStop_ack_and_successful_export"
+      }
+    ],
+    "attempts": {
+      "episode-1:capture-1": {
+        "ordinal": 1,
+        "state": "ready",
+        "error": null,
+        "cleanup_complete": true
+      },
+      "episode-1:capture-2": {
+        "ordinal": 2,
+        "state": "ready",
+        "error": null,
+        "cleanup_complete": true
+      },
+      "episode-1:capture-3": {
+        "ordinal": 3,
+        "state": "ready",
+        "error": null,
+        "cleanup_complete": true
+      }
+    }
+  }
+}

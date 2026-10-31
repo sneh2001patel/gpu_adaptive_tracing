@@ -1,0 +1,1946 @@
+{
+  "provenance": "synthetic_simulation",
+  "gpu_used": false,
+  "note": "Actual CPU subprocesses with fake acknowledgements/reports; no Nsight or CUDA capture validated.",
+  "cpu_role": "development_execution_not_experimental_baseline",
+  "backend": {
+    "backend_version": "command_backend_v1",
+    "validation": "cpu_contract_only",
+    "protocol": "capture_command_v1",
+    "evidence_mode": "synthetic_simulation",
+    "events": [
+      {
+        "event": "capture_attempted",
+        "capture_id": "episode-1:capture-1",
+        "timestamp_ns": 173644148456095,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6"
+      },
+      {
+        "event": "command_started",
+        "capture_id": "episode-1:capture-1",
+        "timestamp_ns": 173644160561693,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "stage": "collect",
+        "argv": [
+          "/usr/local/bin/python3",
+          "/Users/snehpatel/Documents/University/research/gpu_adaptive_tracing/revision/scripts/fake_profiler_command.py",
+          "collect",
+          "/Users/snehpatel/Documents/University/research/gpu_adaptive_tracing/revision/examples/command_profiler/ok/captures/30be77b60f8a4449b4e11d151a6756a3",
+          "--mode",
+          "ok"
+        ],
+        "pid": 18145
+      },
+      {
+        "event": "capture_started_ack_received",
+        "capture_id": "episode-1:capture-1",
+        "timestamp_ns": 173644279520542,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "ack_basis": "synthetic_fixture"
+      },
+      {
+        "event": "capture_stop_requested",
+        "capture_id": "episode-1:capture-1",
+        "timestamp_ns": 173644310522541,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6"
+      },
+      {
+        "event": "command_started",
+        "capture_id": "episode-1:capture-1",
+        "timestamp_ns": 173644328752379,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "stage": "stop",
+        "argv": [
+          "/usr/local/bin/python3",
+          "/Users/snehpatel/Documents/University/research/gpu_adaptive_tracing/revision/scripts/fake_profiler_command.py",
+          "stop",
+          "/Users/snehpatel/Documents/University/research/gpu_adaptive_tracing/revision/examples/command_profiler/ok/captures/30be77b60f8a4449b4e11d151a6756a3",
+          "--mode",
+          "ok"
+        ],
+        "pid": 18146
+      },
+      {
+        "event": "capture_stopped_ack_received",
+        "capture_id": "episode-1:capture-1",
+        "timestamp_ns": 173644440048917,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "ack_basis": "synthetic_fixture"
+      },
+      {
+        "event": "command_exited",
+        "capture_id": "episode-1:capture-1",
+        "timestamp_ns": 173644446569129,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "stage": "stop",
+        "returncode": 0
+      },
+      {
+        "event": "command_exited",
+        "capture_id": "episode-1:capture-1",
+        "timestamp_ns": 173644458393305,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "stage": "collect",
+        "returncode": 0
+      },
+      {
+        "event": "report_ready",
+        "capture_id": "episode-1:capture-1",
+        "timestamp_ns": 173644458734758,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6"
+      },
+      {
+        "event": "command_started",
+        "capture_id": "episode-1:capture-1",
+        "timestamp_ns": 173644464761256,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "stage": "export",
+        "argv": [
+          "/usr/local/bin/python3",
+          "/Users/snehpatel/Documents/University/research/gpu_adaptive_tracing/revision/scripts/fake_profiler_command.py",
+          "export",
+          "/Users/snehpatel/Documents/University/research/gpu_adaptive_tracing/revision/examples/command_profiler/ok/captures/30be77b60f8a4449b4e11d151a6756a3",
+          "--mode",
+          "ok"
+        ],
+        "pid": 18147
+      },
+      {
+        "event": "command_exited",
+        "capture_id": "episode-1:capture-1",
+        "timestamp_ns": 173644621782144,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "stage": "export",
+        "returncode": 0
+      },
+      {
+        "event": "command_started",
+        "capture_id": "episode-1:capture-1",
+        "timestamp_ns": 173644627487749,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "stage": "parse",
+        "argv": [
+          "/usr/local/bin/python3",
+          "/Users/snehpatel/Documents/University/research/gpu_adaptive_tracing/revision/scripts/fake_profiler_command.py",
+          "parse",
+          "/Users/snehpatel/Documents/University/research/gpu_adaptive_tracing/revision/examples/command_profiler/ok/captures/30be77b60f8a4449b4e11d151a6756a3",
+          "--mode",
+          "ok"
+        ],
+        "pid": 18148
+      },
+      {
+        "event": "command_exited",
+        "capture_id": "episode-1:capture-1",
+        "timestamp_ns": 173644767591043,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "stage": "parse",
+        "returncode": 0
+      },
+      {
+        "event": "owned_cleanup_requested",
+        "capture_id": "episode-1:capture-1",
+        "timestamp_ns": 173644769545475,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6"
+      },
+      {
+        "event": "owned_cleanup_complete",
+        "capture_id": "episode-1:capture-1",
+        "timestamp_ns": 173644769576598,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6"
+      },
+      {
+        "event": "capture_attempted",
+        "capture_id": "episode-1:capture-2",
+        "timestamp_ns": 173644771006189,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6"
+      },
+      {
+        "event": "command_started",
+        "capture_id": "episode-1:capture-2",
+        "timestamp_ns": 173644776293647,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "stage": "collect",
+        "argv": [
+          "/usr/local/bin/python3",
+          "/Users/snehpatel/Documents/University/research/gpu_adaptive_tracing/revision/scripts/fake_profiler_command.py",
+          "collect",
+          "/Users/snehpatel/Documents/University/research/gpu_adaptive_tracing/revision/examples/command_profiler/ok/captures/c1a095cfef434742952d1ce642dd6201",
+          "--mode",
+          "ok"
+        ],
+        "pid": 18153
+      },
+      {
+        "event": "capture_started_ack_received",
+        "capture_id": "episode-1:capture-2",
+        "timestamp_ns": 173644942067571,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "ack_basis": "synthetic_fixture"
+      },
+      {
+        "event": "capture_stop_requested",
+        "capture_id": "episode-1:capture-2",
+        "timestamp_ns": 173644977339480,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6"
+      },
+      {
+        "event": "command_started",
+        "capture_id": "episode-1:capture-2",
+        "timestamp_ns": 173644982460538,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "stage": "stop",
+        "argv": [
+          "/usr/local/bin/python3",
+          "/Users/snehpatel/Documents/University/research/gpu_adaptive_tracing/revision/scripts/fake_profiler_command.py",
+          "stop",
+          "/Users/snehpatel/Documents/University/research/gpu_adaptive_tracing/revision/examples/command_profiler/ok/captures/c1a095cfef434742952d1ce642dd6201",
+          "--mode",
+          "ok"
+        ],
+        "pid": 18158
+      },
+      {
+        "event": "capture_stopped_ack_received",
+        "capture_id": "episode-1:capture-2",
+        "timestamp_ns": 173645119997173,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "ack_basis": "synthetic_fixture"
+      },
+      {
+        "event": "command_exited",
+        "capture_id": "episode-1:capture-2",
+        "timestamp_ns": 173645132034713,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "stage": "stop",
+        "returncode": 0
+      },
+      {
+        "event": "command_exited",
+        "capture_id": "episode-1:capture-2",
+        "timestamp_ns": 173645148263965,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "stage": "collect",
+        "returncode": 0
+      },
+      {
+        "event": "report_ready",
+        "capture_id": "episode-1:capture-2",
+        "timestamp_ns": 173645148691059,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6"
+      },
+      {
+        "event": "command_started",
+        "capture_id": "episode-1:capture-2",
+        "timestamp_ns": 173645159514312,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "stage": "export",
+        "argv": [
+          "/usr/local/bin/python3",
+          "/Users/snehpatel/Documents/University/research/gpu_adaptive_tracing/revision/scripts/fake_profiler_command.py",
+          "export",
+          "/Users/snehpatel/Documents/University/research/gpu_adaptive_tracing/revision/examples/command_profiler/ok/captures/c1a095cfef434742952d1ce642dd6201",
+          "--mode",
+          "ok"
+        ],
+        "pid": 18159
+      },
+      {
+        "event": "command_exited",
+        "capture_id": "episode-1:capture-2",
+        "timestamp_ns": 173645302459475,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "stage": "export",
+        "returncode": 0
+      },
+      {
+        "event": "command_started",
+        "capture_id": "episode-1:capture-2",
+        "timestamp_ns": 173645308016469,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "stage": "parse",
+        "argv": [
+          "/usr/local/bin/python3",
+          "/Users/snehpatel/Documents/University/research/gpu_adaptive_tracing/revision/scripts/fake_profiler_command.py",
+          "parse",
+          "/Users/snehpatel/Documents/University/research/gpu_adaptive_tracing/revision/examples/command_profiler/ok/captures/c1a095cfef434742952d1ce642dd6201",
+          "--mode",
+          "ok"
+        ],
+        "pid": 18160
+      },
+      {
+        "event": "command_exited",
+        "capture_id": "episode-1:capture-2",
+        "timestamp_ns": 173645438262689,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "stage": "parse",
+        "returncode": 0
+      },
+      {
+        "event": "owned_cleanup_requested",
+        "capture_id": "episode-1:capture-2",
+        "timestamp_ns": 173645440713495,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6"
+      },
+      {
+        "event": "owned_cleanup_complete",
+        "capture_id": "episode-1:capture-2",
+        "timestamp_ns": 173645440736603,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6"
+      },
+      {
+        "event": "capture_attempted",
+        "capture_id": "episode-1:capture-3",
+        "timestamp_ns": 173645442093688,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6"
+      },
+      {
+        "event": "command_started",
+        "capture_id": "episode-1:capture-3",
+        "timestamp_ns": 173645448802544,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "stage": "collect",
+        "argv": [
+          "/usr/local/bin/python3",
+          "/Users/snehpatel/Documents/University/research/gpu_adaptive_tracing/revision/scripts/fake_profiler_command.py",
+          "collect",
+          "/Users/snehpatel/Documents/University/research/gpu_adaptive_tracing/revision/examples/command_profiler/ok/captures/f2720a28ad5546629335fe235496f1fc",
+          "--mode",
+          "ok"
+        ],
+        "pid": 18161
+      },
+      {
+        "event": "capture_started_ack_received",
+        "capture_id": "episode-1:capture-3",
+        "timestamp_ns": 173645569397639,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "ack_basis": "synthetic_fixture"
+      },
+      {
+        "event": "capture_stop_requested",
+        "capture_id": "episode-1:capture-3",
+        "timestamp_ns": 173645684493928,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6"
+      },
+      {
+        "event": "command_started",
+        "capture_id": "episode-1:capture-3",
+        "timestamp_ns": 173645734113090,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "stage": "stop",
+        "argv": [
+          "/usr/local/bin/python3",
+          "/Users/snehpatel/Documents/University/research/gpu_adaptive_tracing/revision/scripts/fake_profiler_command.py",
+          "stop",
+          "/Users/snehpatel/Documents/University/research/gpu_adaptive_tracing/revision/examples/command_profiler/ok/captures/f2720a28ad5546629335fe235496f1fc",
+          "--mode",
+          "ok"
+        ],
+        "pid": 18163
+      },
+      {
+        "event": "capture_stopped_ack_received",
+        "capture_id": "episode-1:capture-3",
+        "timestamp_ns": 173645887677874,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "ack_basis": "synthetic_fixture"
+      },
+      {
+        "event": "command_exited",
+        "capture_id": "episode-1:capture-3",
+        "timestamp_ns": 173645893696306,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "stage": "stop",
+        "returncode": 0
+      },
+      {
+        "event": "command_exited",
+        "capture_id": "episode-1:capture-3",
+        "timestamp_ns": 173645911067929,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "stage": "collect",
+        "returncode": 0
+      },
+      {
+        "event": "report_ready",
+        "capture_id": "episode-1:capture-3",
+        "timestamp_ns": 173645911463085,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6"
+      },
+      {
+        "event": "command_started",
+        "capture_id": "episode-1:capture-3",
+        "timestamp_ns": 173645915949045,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "stage": "export",
+        "argv": [
+          "/usr/local/bin/python3",
+          "/Users/snehpatel/Documents/University/research/gpu_adaptive_tracing/revision/scripts/fake_profiler_command.py",
+          "export",
+          "/Users/snehpatel/Documents/University/research/gpu_adaptive_tracing/revision/examples/command_profiler/ok/captures/f2720a28ad5546629335fe235496f1fc",
+          "--mode",
+          "ok"
+        ],
+        "pid": 18169
+      },
+      {
+        "event": "command_exited",
+        "capture_id": "episode-1:capture-3",
+        "timestamp_ns": 173646076079162,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "stage": "export",
+        "returncode": 0
+      },
+      {
+        "event": "command_started",
+        "capture_id": "episode-1:capture-3",
+        "timestamp_ns": 173646087892001,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "stage": "parse",
+        "argv": [
+          "/usr/local/bin/python3",
+          "/Users/snehpatel/Documents/University/research/gpu_adaptive_tracing/revision/scripts/fake_profiler_command.py",
+          "parse",
+          "/Users/snehpatel/Documents/University/research/gpu_adaptive_tracing/revision/examples/command_profiler/ok/captures/f2720a28ad5546629335fe235496f1fc",
+          "--mode",
+          "ok"
+        ],
+        "pid": 18173
+      },
+      {
+        "event": "command_exited",
+        "capture_id": "episode-1:capture-3",
+        "timestamp_ns": 173646244319466,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "stage": "parse",
+        "returncode": 0
+      },
+      {
+        "event": "owned_cleanup_requested",
+        "capture_id": "episode-1:capture-3",
+        "timestamp_ns": 173646247865821,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6"
+      },
+      {
+        "event": "owned_cleanup_complete",
+        "capture_id": "episode-1:capture-3",
+        "timestamp_ns": 173646247893049,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6"
+      },
+      {
+        "event": "capture_attempted",
+        "capture_id": "episode-1:capture-4",
+        "timestamp_ns": 173646249884357,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6"
+      },
+      {
+        "event": "command_started",
+        "capture_id": "episode-1:capture-4",
+        "timestamp_ns": 173646255524094,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "stage": "collect",
+        "argv": [
+          "/usr/local/bin/python3",
+          "/Users/snehpatel/Documents/University/research/gpu_adaptive_tracing/revision/scripts/fake_profiler_command.py",
+          "collect",
+          "/Users/snehpatel/Documents/University/research/gpu_adaptive_tracing/revision/examples/command_profiler/ok/captures/7aa21a18ebbb47aca9a0c94fe9f12197",
+          "--mode",
+          "ok"
+        ],
+        "pid": 18174
+      },
+      {
+        "event": "capture_started_ack_received",
+        "capture_id": "episode-1:capture-4",
+        "timestamp_ns": 173646389132401,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "ack_basis": "synthetic_fixture"
+      },
+      {
+        "event": "capture_stop_requested",
+        "capture_id": "episode-1:capture-4",
+        "timestamp_ns": 173646421220508,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6"
+      },
+      {
+        "event": "command_started",
+        "capture_id": "episode-1:capture-4",
+        "timestamp_ns": 173646425744258,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "stage": "stop",
+        "argv": [
+          "/usr/local/bin/python3",
+          "/Users/snehpatel/Documents/University/research/gpu_adaptive_tracing/revision/scripts/fake_profiler_command.py",
+          "stop",
+          "/Users/snehpatel/Documents/University/research/gpu_adaptive_tracing/revision/examples/command_profiler/ok/captures/7aa21a18ebbb47aca9a0c94fe9f12197",
+          "--mode",
+          "ok"
+        ],
+        "pid": 18175
+      },
+      {
+        "event": "capture_stopped_ack_received",
+        "capture_id": "episode-1:capture-4",
+        "timestamp_ns": 173646555111964,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "ack_basis": "synthetic_fixture"
+      },
+      {
+        "event": "command_exited",
+        "capture_id": "episode-1:capture-4",
+        "timestamp_ns": 173646562023555,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "stage": "stop",
+        "returncode": 0
+      },
+      {
+        "event": "command_exited",
+        "capture_id": "episode-1:capture-4",
+        "timestamp_ns": 173646581026494,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "stage": "collect",
+        "returncode": 0
+      },
+      {
+        "event": "report_ready",
+        "capture_id": "episode-1:capture-4",
+        "timestamp_ns": 173646581570075,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6"
+      },
+      {
+        "event": "command_started",
+        "capture_id": "episode-1:capture-4",
+        "timestamp_ns": 173646585504750,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "stage": "export",
+        "argv": [
+          "/usr/local/bin/python3",
+          "/Users/snehpatel/Documents/University/research/gpu_adaptive_tracing/revision/scripts/fake_profiler_command.py",
+          "export",
+          "/Users/snehpatel/Documents/University/research/gpu_adaptive_tracing/revision/examples/command_profiler/ok/captures/7aa21a18ebbb47aca9a0c94fe9f12197",
+          "--mode",
+          "ok"
+        ],
+        "pid": 18176
+      },
+      {
+        "event": "command_exited",
+        "capture_id": "episode-1:capture-4",
+        "timestamp_ns": 173646734606717,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "stage": "export",
+        "returncode": 0
+      },
+      {
+        "event": "command_started",
+        "capture_id": "episode-1:capture-4",
+        "timestamp_ns": 173646743485636,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "stage": "parse",
+        "argv": [
+          "/usr/local/bin/python3",
+          "/Users/snehpatel/Documents/University/research/gpu_adaptive_tracing/revision/scripts/fake_profiler_command.py",
+          "parse",
+          "/Users/snehpatel/Documents/University/research/gpu_adaptive_tracing/revision/examples/command_profiler/ok/captures/7aa21a18ebbb47aca9a0c94fe9f12197",
+          "--mode",
+          "ok"
+        ],
+        "pid": 18177
+      },
+      {
+        "event": "command_exited",
+        "capture_id": "episode-1:capture-4",
+        "timestamp_ns": 173646913699737,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "stage": "parse",
+        "returncode": 0
+      },
+      {
+        "event": "owned_cleanup_requested",
+        "capture_id": "episode-1:capture-4",
+        "timestamp_ns": 173646915202329,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6"
+      },
+      {
+        "event": "owned_cleanup_complete",
+        "capture_id": "episode-1:capture-4",
+        "timestamp_ns": 173646915222195,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6"
+      },
+      {
+        "event": "capture_attempted",
+        "capture_id": "episode-1:capture-5",
+        "timestamp_ns": 173646916230408,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6"
+      },
+      {
+        "event": "command_started",
+        "capture_id": "episode-1:capture-5",
+        "timestamp_ns": 173646920417313,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "stage": "collect",
+        "argv": [
+          "/usr/local/bin/python3",
+          "/Users/snehpatel/Documents/University/research/gpu_adaptive_tracing/revision/scripts/fake_profiler_command.py",
+          "collect",
+          "/Users/snehpatel/Documents/University/research/gpu_adaptive_tracing/revision/examples/command_profiler/ok/captures/97d7db2d1a4f4575b4a0f1a5fc4d00b5",
+          "--mode",
+          "ok"
+        ],
+        "pid": 18182
+      },
+      {
+        "event": "capture_started_ack_received",
+        "capture_id": "episode-1:capture-5",
+        "timestamp_ns": 173647056062605,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "ack_basis": "synthetic_fixture"
+      },
+      {
+        "event": "capture_stop_requested",
+        "capture_id": "episode-1:capture-5",
+        "timestamp_ns": 173647090295788,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6"
+      },
+      {
+        "event": "command_started",
+        "capture_id": "episode-1:capture-5",
+        "timestamp_ns": 173647097910189,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "stage": "stop",
+        "argv": [
+          "/usr/local/bin/python3",
+          "/Users/snehpatel/Documents/University/research/gpu_adaptive_tracing/revision/scripts/fake_profiler_command.py",
+          "stop",
+          "/Users/snehpatel/Documents/University/research/gpu_adaptive_tracing/revision/examples/command_profiler/ok/captures/97d7db2d1a4f4575b4a0f1a5fc4d00b5",
+          "--mode",
+          "ok"
+        ],
+        "pid": 18184
+      },
+      {
+        "event": "capture_stopped_ack_received",
+        "capture_id": "episode-1:capture-5",
+        "timestamp_ns": 173647276228722,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "ack_basis": "synthetic_fixture"
+      },
+      {
+        "event": "command_exited",
+        "capture_id": "episode-1:capture-5",
+        "timestamp_ns": 173647282162620,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "stage": "stop",
+        "returncode": 0
+      },
+      {
+        "event": "command_exited",
+        "capture_id": "episode-1:capture-5",
+        "timestamp_ns": 173647298410440,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "stage": "collect",
+        "returncode": 0
+      },
+      {
+        "event": "report_ready",
+        "capture_id": "episode-1:capture-5",
+        "timestamp_ns": 173647299331077,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6"
+      },
+      {
+        "event": "command_started",
+        "capture_id": "episode-1:capture-5",
+        "timestamp_ns": 173647304572619,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "stage": "export",
+        "argv": [
+          "/usr/local/bin/python3",
+          "/Users/snehpatel/Documents/University/research/gpu_adaptive_tracing/revision/scripts/fake_profiler_command.py",
+          "export",
+          "/Users/snehpatel/Documents/University/research/gpu_adaptive_tracing/revision/examples/command_profiler/ok/captures/97d7db2d1a4f4575b4a0f1a5fc4d00b5",
+          "--mode",
+          "ok"
+        ],
+        "pid": 18188
+      },
+      {
+        "event": "command_exited",
+        "capture_id": "episode-1:capture-5",
+        "timestamp_ns": 173647463295104,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "stage": "export",
+        "returncode": 0
+      },
+      {
+        "event": "command_started",
+        "capture_id": "episode-1:capture-5",
+        "timestamp_ns": 173647468059995,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "stage": "parse",
+        "argv": [
+          "/usr/local/bin/python3",
+          "/Users/snehpatel/Documents/University/research/gpu_adaptive_tracing/revision/scripts/fake_profiler_command.py",
+          "parse",
+          "/Users/snehpatel/Documents/University/research/gpu_adaptive_tracing/revision/examples/command_profiler/ok/captures/97d7db2d1a4f4575b4a0f1a5fc4d00b5",
+          "--mode",
+          "ok"
+        ],
+        "pid": 18189
+      },
+      {
+        "event": "command_exited",
+        "capture_id": "episode-1:capture-5",
+        "timestamp_ns": 173647624769810,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "stage": "parse",
+        "returncode": 0
+      },
+      {
+        "event": "owned_cleanup_requested",
+        "capture_id": "episode-1:capture-5",
+        "timestamp_ns": 173647627147244,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6"
+      },
+      {
+        "event": "owned_cleanup_complete",
+        "capture_id": "episode-1:capture-5",
+        "timestamp_ns": 173647627199673,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6"
+      },
+      {
+        "event": "capture_attempted",
+        "capture_id": "episode-1:capture-6",
+        "timestamp_ns": 173647629319814,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6"
+      },
+      {
+        "event": "command_started",
+        "capture_id": "episode-1:capture-6",
+        "timestamp_ns": 173647634400527,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "stage": "collect",
+        "argv": [
+          "/usr/local/bin/python3",
+          "/Users/snehpatel/Documents/University/research/gpu_adaptive_tracing/revision/scripts/fake_profiler_command.py",
+          "collect",
+          "/Users/snehpatel/Documents/University/research/gpu_adaptive_tracing/revision/examples/command_profiler/ok/captures/8e365f4ca10d45bdabfa3121bd0234df",
+          "--mode",
+          "ok"
+        ],
+        "pid": 18190
+      },
+      {
+        "event": "capture_started_ack_received",
+        "capture_id": "episode-1:capture-6",
+        "timestamp_ns": 173647766605480,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "ack_basis": "synthetic_fixture"
+      },
+      {
+        "event": "capture_stop_requested",
+        "capture_id": "episode-1:capture-6",
+        "timestamp_ns": 173647798913678,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6"
+      },
+      {
+        "event": "command_started",
+        "capture_id": "episode-1:capture-6",
+        "timestamp_ns": 173647805307164,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "stage": "stop",
+        "argv": [
+          "/usr/local/bin/python3",
+          "/Users/snehpatel/Documents/University/research/gpu_adaptive_tracing/revision/scripts/fake_profiler_command.py",
+          "stop",
+          "/Users/snehpatel/Documents/University/research/gpu_adaptive_tracing/revision/examples/command_profiler/ok/captures/8e365f4ca10d45bdabfa3121bd0234df",
+          "--mode",
+          "ok"
+        ],
+        "pid": 18191
+      },
+      {
+        "event": "command_exited",
+        "capture_id": "episode-1:capture-6",
+        "timestamp_ns": 173647961959106,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "stage": "stop",
+        "returncode": 0
+      },
+      {
+        "event": "capture_stopped_ack_received",
+        "capture_id": "episode-1:capture-6",
+        "timestamp_ns": 173647962821398,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "ack_basis": "synthetic_fixture"
+      },
+      {
+        "event": "command_exited",
+        "capture_id": "episode-1:capture-6",
+        "timestamp_ns": 173647985208365,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "stage": "collect",
+        "returncode": 0
+      },
+      {
+        "event": "report_ready",
+        "capture_id": "episode-1:capture-6",
+        "timestamp_ns": 173647985544384,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6"
+      },
+      {
+        "event": "command_started",
+        "capture_id": "episode-1:capture-6",
+        "timestamp_ns": 173647992177902,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "stage": "export",
+        "argv": [
+          "/usr/local/bin/python3",
+          "/Users/snehpatel/Documents/University/research/gpu_adaptive_tracing/revision/scripts/fake_profiler_command.py",
+          "export",
+          "/Users/snehpatel/Documents/University/research/gpu_adaptive_tracing/revision/examples/command_profiler/ok/captures/8e365f4ca10d45bdabfa3121bd0234df",
+          "--mode",
+          "ok"
+        ],
+        "pid": 18197
+      },
+      {
+        "event": "command_exited",
+        "capture_id": "episode-1:capture-6",
+        "timestamp_ns": 173648140876876,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "stage": "export",
+        "returncode": 0
+      },
+      {
+        "event": "command_started",
+        "capture_id": "episode-1:capture-6",
+        "timestamp_ns": 173648150283431,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "stage": "parse",
+        "argv": [
+          "/usr/local/bin/python3",
+          "/Users/snehpatel/Documents/University/research/gpu_adaptive_tracing/revision/scripts/fake_profiler_command.py",
+          "parse",
+          "/Users/snehpatel/Documents/University/research/gpu_adaptive_tracing/revision/examples/command_profiler/ok/captures/8e365f4ca10d45bdabfa3121bd0234df",
+          "--mode",
+          "ok"
+        ],
+        "pid": 18198
+      },
+      {
+        "event": "command_exited",
+        "capture_id": "episode-1:capture-6",
+        "timestamp_ns": 173648342772653,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "stage": "parse",
+        "returncode": 0
+      },
+      {
+        "event": "owned_cleanup_requested",
+        "capture_id": "episode-1:capture-6",
+        "timestamp_ns": 173648345837293,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6"
+      },
+      {
+        "event": "owned_cleanup_complete",
+        "capture_id": "episode-1:capture-6",
+        "timestamp_ns": 173648345867757,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6"
+      }
+    ],
+    "attempts": {
+      "episode-1:capture-1": {
+        "state": "ready",
+        "failure": null,
+        "directory": "/Users/snehpatel/Documents/University/research/gpu_adaptive_tracing/revision/examples/command_profiler/ok/captures/30be77b60f8a4449b4e11d151a6756a3",
+        "cleanup_complete": true,
+        "groups_alive": [],
+        "artifact_hashes": {
+          "report.bin": "d21ea38a2b3a2490897118a1f6d711a314056ecc0c6088cea16c99a2e2b282e5",
+          "export.json": "c0cceb6dbc33a345e36abdd61a0a2f91951417893b98c4375e31a67b4fab75ca",
+          "summary.json": "95ff420a75293f6f9a669af3406f742ba372c32868d203766083445a3cca363f"
+        },
+        "commands": {
+          "collect": {
+            "pid": 18145,
+            "returncode": 0
+          },
+          "stop": {
+            "pid": 18146,
+            "returncode": 0
+          },
+          "export": {
+            "pid": 18147,
+            "returncode": 0
+          },
+          "parse": {
+            "pid": 18148,
+            "returncode": 0
+          }
+        },
+        "command_timings": {
+          "capture_startup": 0.131097662,
+          "stop_command": 0.136238253,
+          "owned_process_cleanup": 0.000175625
+        }
+      },
+      "episode-1:capture-2": {
+        "state": "ready",
+        "failure": null,
+        "directory": "/Users/snehpatel/Documents/University/research/gpu_adaptive_tracing/revision/examples/command_profiler/ok/captures/c1a095cfef434742952d1ce642dd6201",
+        "cleanup_complete": true,
+        "groups_alive": [],
+        "artifact_hashes": {
+          "report.bin": "d21ea38a2b3a2490897118a1f6d711a314056ecc0c6088cea16c99a2e2b282e5",
+          "export.json": "7d1735a6d774c89a032b4b9d90f4c499b390ad7d0a0e5bc6aeb0baff78c3f946",
+          "summary.json": "1189865ede4b83dae2b819c146a5eb0212af7c0d7f9b30b839264021c086f4ae"
+        },
+        "commands": {
+          "collect": {
+            "pid": 18153,
+            "returncode": 0
+          },
+          "stop": {
+            "pid": 18158,
+            "returncode": 0
+          },
+          "export": {
+            "pid": 18159,
+            "returncode": 0
+          },
+          "parse": {
+            "pid": 18160,
+            "returncode": 0
+          }
+        },
+        "command_timings": {
+          "capture_startup": 0.171088204,
+          "stop_command": 0.154739302,
+          "owned_process_cleanup": 5.5872e-05
+        }
+      },
+      "episode-1:capture-3": {
+        "state": "ready",
+        "failure": null,
+        "directory": "/Users/snehpatel/Documents/University/research/gpu_adaptive_tracing/revision/examples/command_profiler/ok/captures/f2720a28ad5546629335fe235496f1fc",
+        "cleanup_complete": true,
+        "groups_alive": [],
+        "artifact_hashes": {
+          "report.bin": "d21ea38a2b3a2490897118a1f6d711a314056ecc0c6088cea16c99a2e2b282e5",
+          "export.json": "f65f68e2c1b87fd93cc0261720aa14ee26d02fe2f8e2b1f5ac85d87856408366",
+          "summary.json": "0003b5bbb47884dc6d849f1168351b59fea377051da7252325cc24bf01b0dcfc"
+        },
+        "commands": {
+          "collect": {
+            "pid": 18161,
+            "returncode": 0
+          },
+          "stop": {
+            "pid": 18163,
+            "returncode": 0
+          },
+          "export": {
+            "pid": 18169,
+            "returncode": 0
+          },
+          "parse": {
+            "pid": 18173,
+            "returncode": 0
+          }
+        },
+        "command_timings": {
+          "capture_startup": 0.127327406,
+          "stop_command": 0.209266536,
+          "owned_process_cleanup": 6.7032e-05
+        }
+      },
+      "episode-1:capture-4": {
+        "state": "ready",
+        "failure": null,
+        "directory": "/Users/snehpatel/Documents/University/research/gpu_adaptive_tracing/revision/examples/command_profiler/ok/captures/7aa21a18ebbb47aca9a0c94fe9f12197",
+        "cleanup_complete": true,
+        "groups_alive": [],
+        "artifact_hashes": {
+          "report.bin": "d21ea38a2b3a2490897118a1f6d711a314056ecc0c6088cea16c99a2e2b282e5",
+          "export.json": "d40b1914b51edfe60ecb294c6c3cc68daf9aeaa70e87ec10f149e8bebe4d1222",
+          "summary.json": "bef9105f4992300684f68844c842f395674cbea484786bc1f48cb8e85b0bb212"
+        },
+        "commands": {
+          "collect": {
+            "pid": 18174,
+            "returncode": 0
+          },
+          "stop": {
+            "pid": 18175,
+            "returncode": 0
+          },
+          "export": {
+            "pid": 18176,
+            "returncode": 0
+          },
+          "parse": {
+            "pid": 18177,
+            "returncode": 0
+          }
+        },
+        "command_timings": {
+          "capture_startup": 0.13927212,
+          "stop_command": 0.140843277,
+          "owned_process_cleanup": 4.9747e-05
+        }
+      },
+      "episode-1:capture-5": {
+        "state": "ready",
+        "failure": null,
+        "directory": "/Users/snehpatel/Documents/University/research/gpu_adaptive_tracing/revision/examples/command_profiler/ok/captures/97d7db2d1a4f4575b4a0f1a5fc4d00b5",
+        "cleanup_complete": true,
+        "groups_alive": [],
+        "artifact_hashes": {
+          "report.bin": "d21ea38a2b3a2490897118a1f6d711a314056ecc0c6088cea16c99a2e2b282e5",
+          "export.json": "cda9810bb97f865e61117ae0c94ae7721868361dcb6883c8c66fe8aa340eef66",
+          "summary.json": "e2bbd1d1facb023c2321a8d5c88d8e086ca55d7139c37c0ea2f0ecbf0e654bcc"
+        },
+        "commands": {
+          "collect": {
+            "pid": 18182,
+            "returncode": 0
+          },
+          "stop": {
+            "pid": 18184,
+            "returncode": 0
+          },
+          "export": {
+            "pid": 18188,
+            "returncode": 0
+          },
+          "parse": {
+            "pid": 18189,
+            "returncode": 0
+          }
+        },
+        "command_timings": {
+          "capture_startup": 0.139875264,
+          "stop_command": 0.191902616,
+          "owned_process_cleanup": 0.000218503
+        }
+      },
+      "episode-1:capture-6": {
+        "state": "ready",
+        "failure": null,
+        "directory": "/Users/snehpatel/Documents/University/research/gpu_adaptive_tracing/revision/examples/command_profiler/ok/captures/8e365f4ca10d45bdabfa3121bd0234df",
+        "cleanup_complete": true,
+        "groups_alive": [],
+        "artifact_hashes": {
+          "report.bin": "d21ea38a2b3a2490897118a1f6d711a314056ecc0c6088cea16c99a2e2b282e5",
+          "export.json": "c4c9f9d0b3c26ea997999cd3bc895b931a569f1959095c5c04b18605f5e2ec76",
+          "summary.json": "c342a20b231beca418bad1e6fb1937e4fefdbe268ba48115376065a190777121"
+        },
+        "commands": {
+          "collect": {
+            "pid": 18190,
+            "returncode": 0
+          },
+          "stop": {
+            "pid": 18191,
+            "returncode": 0
+          },
+          "export": {
+            "pid": 18197,
+            "returncode": 0
+          },
+          "parse": {
+            "pid": 18198,
+            "returncode": 0
+          }
+        },
+        "command_timings": {
+          "capture_startup": 0.137309146,
+          "stop_command": 0.163994391,
+          "owned_process_cleanup": 7.3116e-05
+        }
+      }
+    }
+  },
+  "controller": {
+    "controller_version": "streaming_v3",
+    "policy_version": "stopping_v3",
+    "evidence_mode": "synthetic_simulation",
+    "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+    "state": "idle",
+    "finished": true,
+    "baseline": {
+      "p95_latency_ms": 100,
+      "source_id": "separate-fixture-calibration",
+      "throughput_rps": null
+    },
+    "config": {
+      "policy": "stability_stop",
+      "policy_config": {
+        "stability_windows": 2,
+        "repeated_bursts": 3,
+        "max_bursts": 6,
+        "recovery_windows": 2,
+        "recovery_latency_ratio": 1.1,
+        "recovery_gpu_util": 60.0
+      },
+      "latency_trigger_ratio": 1.5,
+      "gpu_trigger_percent": 85.0,
+      "gpu_trigger_windows": 2,
+      "burst_s": 0.03,
+      "startup_timeout_s": 3,
+      "evidence_timeout_s": 12,
+      "cooldown_s": 5.0,
+      "change_ratio_factor": 1.5,
+      "change_gpu_points": 20.0,
+      "retry_unresolved": false
+    },
+    "episodes": [
+      {
+        "episode_id": "episode-1",
+        "started_at_ns": 173644144635828,
+        "attempts": [
+          "episode-1:capture-1",
+          "episode-1:capture-2",
+          "episode-1:capture-3",
+          "episode-1:capture-4",
+          "episode-1:capture-5",
+          "episode-1:capture-6"
+        ],
+        "decisions": [
+          {
+            "decision": {
+              "stop": false,
+              "reason": "continue",
+              "policy": "stability_stop",
+              "bursts": 1,
+              "diagnosis_streak": 0,
+              "recovery_streak": 0,
+              "diagnosis_label": null,
+              "policy_condition_met": false
+            },
+            "capture_id": "episode-1:capture-1",
+            "evidence_id": "episode-1:capture-1:95ff420a75293f6f9a669af3406f742ba372c32868d203766083445a3cca363f",
+            "evidence_ready_at_ns": 173644769339743,
+            "decision_ready_at_ns": 173644769962364,
+            "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+            "status": "ok",
+            "error": null,
+            "provenance": "synthetic_simulation"
+          },
+          {
+            "decision": {
+              "stop": false,
+              "reason": "continue",
+              "policy": "stability_stop",
+              "bursts": 2,
+              "diagnosis_streak": 0,
+              "recovery_streak": 0,
+              "diagnosis_label": null,
+              "policy_condition_met": false
+            },
+            "capture_id": "episode-1:capture-2",
+            "evidence_id": "episode-1:capture-2:1189865ede4b83dae2b819c146a5eb0212af7c0d7f9b30b839264021c086f4ae",
+            "evidence_ready_at_ns": 173645440642804,
+            "decision_ready_at_ns": 173645440967491,
+            "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+            "status": "ok",
+            "error": null,
+            "provenance": "synthetic_simulation"
+          },
+          {
+            "decision": {
+              "stop": false,
+              "reason": "continue",
+              "policy": "stability_stop",
+              "bursts": 3,
+              "diagnosis_streak": 0,
+              "recovery_streak": 0,
+              "diagnosis_label": null,
+              "policy_condition_met": false
+            },
+            "capture_id": "episode-1:capture-3",
+            "evidence_id": "episode-1:capture-3:0003b5bbb47884dc6d849f1168351b59fea377051da7252325cc24bf01b0dcfc",
+            "evidence_ready_at_ns": 173646247790206,
+            "decision_ready_at_ns": 173646248460169,
+            "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+            "status": "ok",
+            "error": null,
+            "provenance": "synthetic_simulation"
+          },
+          {
+            "decision": {
+              "stop": false,
+              "reason": "continue",
+              "policy": "stability_stop",
+              "bursts": 4,
+              "diagnosis_streak": 0,
+              "recovery_streak": 0,
+              "diagnosis_label": null,
+              "policy_condition_met": false
+            },
+            "capture_id": "episode-1:capture-4",
+            "evidence_id": "episode-1:capture-4:bef9105f4992300684f68844c842f395674cbea484786bc1f48cb8e85b0bb212",
+            "evidence_ready_at_ns": 173646915148254,
+            "decision_ready_at_ns": 173646915386144,
+            "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+            "status": "ok",
+            "error": null,
+            "provenance": "synthetic_simulation"
+          },
+          {
+            "decision": {
+              "stop": false,
+              "reason": "continue",
+              "policy": "stability_stop",
+              "bursts": 5,
+              "diagnosis_streak": 0,
+              "recovery_streak": 0,
+              "diagnosis_label": null,
+              "policy_condition_met": false
+            },
+            "capture_id": "episode-1:capture-5",
+            "evidence_id": "episode-1:capture-5:e2bbd1d1facb023c2321a8d5c88d8e086ca55d7139c37c0ea2f0ecbf0e654bcc",
+            "evidence_ready_at_ns": 173647626949122,
+            "decision_ready_at_ns": 173647627560011,
+            "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+            "status": "ok",
+            "error": null,
+            "provenance": "synthetic_simulation"
+          },
+          {
+            "decision": {
+              "stop": true,
+              "reason": "budget_exhausted",
+              "policy": "stability_stop",
+              "bursts": 6,
+              "diagnosis_streak": 0,
+              "recovery_streak": 0,
+              "diagnosis_label": null,
+              "policy_condition_met": false
+            },
+            "capture_id": "episode-1:capture-6",
+            "evidence_id": "episode-1:capture-6:c342a20b231beca418bad1e6fb1937e4fefdbe268ba48115376065a190777121",
+            "evidence_ready_at_ns": 173648345758306,
+            "decision_ready_at_ns": 173648346119131,
+            "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+            "status": "ok",
+            "error": null,
+            "provenance": "synthetic_simulation"
+          }
+        ],
+        "round_number": 1,
+        "reactivation_attempts": 0,
+        "recovery_streak": 0,
+        "last_diagnosis": null,
+        "stop_reason": "budget_exhausted",
+        "stopped_at_ns": 173648346164996,
+        "stop_signature": [
+          2.0,
+          95,
+          null
+        ],
+        "ended_at_ns": 173648351909464,
+        "end_reason": "horizon_ended"
+      }
+    ],
+    "capture_timings": {
+      "episode-1:capture-1": {
+        "server_startup_s": null,
+        "target_initialization_s": null,
+        "workload_span_s": null,
+        "shutdown_s": null,
+        "capture_control_window_s": 0.160516042,
+        "profile_process_wall_s": 0.309976637,
+        "report_finalization_s": 0.018638018,
+        "stats_command_s": 0.163061734,
+        "summary_parse_s": 0.146337756,
+        "diagnosis_compute_s": 3.4623e-05,
+        "lifecycle_total_s": null,
+        "evidence_collection_s": 0.620961281,
+        "capture_active_s": null,
+        "capture_active_status": "unavailable",
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "timing_provenance": "synthetic_simulation",
+        "timing_schema_version": "timing_v1",
+        "phase_status": {
+          "server_startup": null,
+          "target_initialization": null,
+          "workload_span": null,
+          "shutdown": null,
+          "capture_control_window": "ok",
+          "profile_process_wall": "ok",
+          "report_finalization": "ok",
+          "stats_command": "ok",
+          "summary_parse": "ok",
+          "diagnosis_compute": "ok",
+          "lifecycle_total": null,
+          "evidence_collection": "ok"
+        },
+        "evidence_ready_at_ns": 173644769339743,
+        "decision_ready_at_ns": 173644769962364
+      },
+      "episode-1:capture-2": {
+        "server_startup_s": null,
+        "target_initialization_s": null,
+        "workload_span_s": null,
+        "shutdown_s": null,
+        "capture_control_window_s": 0.177920844,
+        "profile_process_wall_s": 0.377298512,
+        "report_finalization_s": 0.028647194,
+        "stats_command_s": 0.153803101,
+        "summary_parse_s": 0.137055523,
+        "diagnosis_compute_s": 2.6907e-05,
+        "lifecycle_total_s": null,
+        "evidence_collection_s": 0.669682792,
+        "capture_active_s": null,
+        "capture_active_status": "unavailable",
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "timing_provenance": "synthetic_simulation",
+        "timing_schema_version": "timing_v1",
+        "phase_status": {
+          "server_startup": null,
+          "target_initialization": null,
+          "workload_span": null,
+          "shutdown": null,
+          "capture_control_window": "ok",
+          "profile_process_wall": "ok",
+          "report_finalization": "ok",
+          "stats_command": "ok",
+          "summary_parse": "ok",
+          "diagnosis_compute": "ok",
+          "lifecycle_total": null,
+          "evidence_collection": "ok"
+        },
+        "evidence_ready_at_ns": 173645440642804,
+        "decision_ready_at_ns": 173645440967491
+      },
+      "episode-1:capture-3": {
+        "server_startup_s": null,
+        "target_initialization_s": null,
+        "workload_span_s": null,
+        "shutdown_s": null,
+        "capture_control_window_s": 0.318276571,
+        "profile_process_wall_s": 0.469015557,
+        "report_finalization_s": 0.023721244,
+        "stats_command_s": 0.164634336,
+        "summary_parse_s": 0.166014846,
+        "diagnosis_compute_s": 0.000296388,
+        "lifecycle_total_s": null,
+        "evidence_collection_s": 0.805737044,
+        "capture_active_s": null,
+        "capture_active_status": "unavailable",
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "timing_provenance": "synthetic_simulation",
+        "timing_schema_version": "timing_v1",
+        "phase_status": {
+          "server_startup": null,
+          "target_initialization": null,
+          "workload_span": null,
+          "shutdown": null,
+          "capture_control_window": "ok",
+          "profile_process_wall": "ok",
+          "report_finalization": "ok",
+          "stats_command": "ok",
+          "summary_parse": "ok",
+          "diagnosis_compute": "ok",
+          "lifecycle_total": null,
+          "evidence_collection": "ok"
+        },
+        "evidence_ready_at_ns": 173646247790206,
+        "decision_ready_at_ns": 173646248460169
+      },
+      "episode-1:capture-4": {
+        "server_startup_s": null,
+        "target_initialization_s": null,
+        "workload_span_s": null,
+        "shutdown_s": null,
+        "capture_control_window_s": 0.165979726,
+        "profile_process_wall_s": 0.331189613,
+        "report_finalization_s": 0.026389228,
+        "stats_command_s": 0.153056863,
+        "summary_parse_s": 0.178367035,
+        "diagnosis_compute_s": 2.5609e-05,
+        "lifecycle_total_s": null,
+        "evidence_collection_s": 0.665373229,
+        "capture_active_s": null,
+        "capture_active_status": "unavailable",
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "timing_provenance": "synthetic_simulation",
+        "timing_schema_version": "timing_v1",
+        "phase_status": {
+          "server_startup": null,
+          "target_initialization": null,
+          "workload_span": null,
+          "shutdown": null,
+          "capture_control_window": "ok",
+          "profile_process_wall": "ok",
+          "report_finalization": "ok",
+          "stats_command": "ok",
+          "summary_parse": "ok",
+          "diagnosis_compute": "ok",
+          "lifecycle_total": null,
+          "evidence_collection": "ok"
+        },
+        "evidence_ready_at_ns": 173646915148254,
+        "decision_ready_at_ns": 173646915386144
+      },
+      "episode-1:capture-5": {
+        "server_startup_s": null,
+        "target_initialization_s": null,
+        "workload_span_s": null,
+        "shutdown_s": null,
+        "capture_control_window_s": 0.220170038,
+        "profile_process_wall_s": 0.382221747,
+        "report_finalization_s": 0.023011607,
+        "stats_command_s": 0.16397373,
+        "summary_parse_s": 0.162861491,
+        "diagnosis_compute_s": 5.9521e-05,
+        "lifecycle_total_s": null,
+        "evidence_collection_s": 0.710753289,
+        "capture_active_s": null,
+        "capture_active_status": "unavailable",
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "timing_provenance": "synthetic_simulation",
+        "timing_schema_version": "timing_v1",
+        "phase_status": {
+          "server_startup": null,
+          "target_initialization": null,
+          "workload_span": null,
+          "shutdown": null,
+          "capture_control_window": "ok",
+          "profile_process_wall": "ok",
+          "report_finalization": "ok",
+          "stats_command": "ok",
+          "summary_parse": "ok",
+          "diagnosis_compute": "ok",
+          "lifecycle_total": null,
+          "evidence_collection": "ok"
+        },
+        "evidence_ready_at_ns": 173647626949122,
+        "decision_ready_at_ns": 173647627560011
+      },
+      "episode-1:capture-6": {
+        "server_startup_s": null,
+        "target_initialization_s": null,
+        "workload_span_s": null,
+        "shutdown_s": null,
+        "capture_control_window_s": 0.196214947,
+        "profile_process_wall_s": 0.355916343,
+        "report_finalization_s": 0.02266421,
+        "stats_command_s": 0.155358075,
+        "summary_parse_s": 0.202984351,
+        "diagnosis_compute_s": 4.1082e-05,
+        "lifecycle_total_s": null,
+        "evidence_collection_s": 0.71651546,
+        "capture_active_s": null,
+        "capture_active_status": "unavailable",
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "timing_provenance": "synthetic_simulation",
+        "timing_schema_version": "timing_v1",
+        "phase_status": {
+          "server_startup": null,
+          "target_initialization": null,
+          "workload_span": null,
+          "shutdown": null,
+          "capture_control_window": "ok",
+          "profile_process_wall": "ok",
+          "report_finalization": "ok",
+          "stats_command": "ok",
+          "summary_parse": "ok",
+          "diagnosis_compute": "ok",
+          "lifecycle_total": null,
+          "evidence_collection": "ok"
+        },
+        "evidence_ready_at_ns": 173648345758306,
+        "decision_ready_at_ns": 173648346119131
+      }
+    },
+    "events": [
+      {
+        "sequence": 0,
+        "event": "cheap_window_available",
+        "timestamp_ns": 173644144601739,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "provenance": "synthetic_simulation",
+        "state": "idle",
+        "episode_id": null,
+        "window_id": "fixture-window",
+        "window_start_ns": 173644133496499,
+        "window_end_ns": 173644144470108,
+        "available_at_ns": 173644144470108,
+        "sample_count": 2,
+        "request_count": null,
+        "request_error_count": null,
+        "gpu_sample_count": null,
+        "outstanding_request_count": null,
+        "oldest_pending_ms": null,
+        "p95_latency_ms": 200,
+        "gpu_util": 95,
+        "throughput_rps": null,
+        "latency_ratio": 2.0,
+        "suspicious": true,
+        "suspicion_reasons": [
+          "latency_regression"
+        ]
+      },
+      {
+        "sequence": 1,
+        "event": "episode_started",
+        "timestamp_ns": 173644144646832,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "provenance": "synthetic_simulation",
+        "state": "idle",
+        "episode_id": "episode-1",
+        "window_id": "fixture-window"
+      },
+      {
+        "sequence": 2,
+        "event": "state_changed",
+        "timestamp_ns": 173644144772357,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "provenance": "synthetic_simulation",
+        "state": "suspicious",
+        "episode_id": "episode-1",
+        "previous_state": "idle"
+      },
+      {
+        "sequence": 3,
+        "event": "state_changed",
+        "timestamp_ns": 173644144920558,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "provenance": "synthetic_simulation",
+        "state": "starting",
+        "episode_id": "episode-1",
+        "previous_state": "suspicious"
+      },
+      {
+        "sequence": 4,
+        "event": "capture_requested",
+        "timestamp_ns": 173644144936425,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "provenance": "synthetic_simulation",
+        "state": "starting",
+        "episode_id": "episode-1",
+        "capture_id": "episode-1:capture-1",
+        "window_id": "fixture-window",
+        "round_number": 1
+      },
+      {
+        "sequence": 5,
+        "event": "state_changed",
+        "timestamp_ns": 173644279578433,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "provenance": "synthetic_simulation",
+        "state": "tracing",
+        "episode_id": "episode-1",
+        "previous_state": "starting"
+      },
+      {
+        "sequence": 6,
+        "event": "state_changed",
+        "timestamp_ns": 173644328944333,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "provenance": "synthetic_simulation",
+        "state": "evaluating",
+        "episode_id": "episode-1",
+        "previous_state": "tracing"
+      },
+      {
+        "sequence": 7,
+        "event": "policy_decision",
+        "timestamp_ns": 173644769988243,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "provenance": "synthetic_simulation",
+        "state": "evaluating",
+        "episode_id": "episode-1",
+        "capture_id": "episode-1:capture-1",
+        "reason": "continue",
+        "decision_status": "ok",
+        "evidence_ready_at_ns": 173644769339743,
+        "diagnosis_label": null
+      },
+      {
+        "sequence": 8,
+        "event": "state_changed",
+        "timestamp_ns": 173644770002862,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "provenance": "synthetic_simulation",
+        "state": "suspicious",
+        "episode_id": "episode-1",
+        "previous_state": "evaluating"
+      },
+      {
+        "sequence": 9,
+        "event": "state_changed",
+        "timestamp_ns": 173644770038242,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "provenance": "synthetic_simulation",
+        "state": "starting",
+        "episode_id": "episode-1",
+        "previous_state": "suspicious"
+      },
+      {
+        "sequence": 10,
+        "event": "capture_requested",
+        "timestamp_ns": 173644770042720,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "provenance": "synthetic_simulation",
+        "state": "starting",
+        "episode_id": "episode-1",
+        "capture_id": "episode-1:capture-2",
+        "window_id": "fixture-window",
+        "round_number": 1
+      },
+      {
+        "sequence": 11,
+        "event": "state_changed",
+        "timestamp_ns": 173644942124160,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "provenance": "synthetic_simulation",
+        "state": "tracing",
+        "episode_id": "episode-1",
+        "previous_state": "starting"
+      },
+      {
+        "sequence": 12,
+        "event": "state_changed",
+        "timestamp_ns": 173644982557188,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "provenance": "synthetic_simulation",
+        "state": "evaluating",
+        "episode_id": "episode-1",
+        "previous_state": "tracing"
+      },
+      {
+        "sequence": 13,
+        "event": "policy_decision",
+        "timestamp_ns": 173645440992761,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "provenance": "synthetic_simulation",
+        "state": "evaluating",
+        "episode_id": "episode-1",
+        "capture_id": "episode-1:capture-2",
+        "reason": "continue",
+        "decision_status": "ok",
+        "evidence_ready_at_ns": 173645440642804,
+        "diagnosis_label": null
+      },
+      {
+        "sequence": 14,
+        "event": "state_changed",
+        "timestamp_ns": 173645441009778,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "provenance": "synthetic_simulation",
+        "state": "suspicious",
+        "episode_id": "episode-1",
+        "previous_state": "evaluating"
+      },
+      {
+        "sequence": 15,
+        "event": "state_changed",
+        "timestamp_ns": 173645441040663,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "provenance": "synthetic_simulation",
+        "state": "starting",
+        "episode_id": "episode-1",
+        "previous_state": "suspicious"
+      },
+      {
+        "sequence": 16,
+        "event": "capture_requested",
+        "timestamp_ns": 173645441047216,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "provenance": "synthetic_simulation",
+        "state": "starting",
+        "episode_id": "episode-1",
+        "capture_id": "episode-1:capture-3",
+        "window_id": "fixture-window",
+        "round_number": 1
+      },
+      {
+        "sequence": 17,
+        "event": "state_changed",
+        "timestamp_ns": 173645569446121,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "provenance": "synthetic_simulation",
+        "state": "tracing",
+        "episode_id": "episode-1",
+        "previous_state": "starting"
+      },
+      {
+        "sequence": 18,
+        "event": "state_changed",
+        "timestamp_ns": 173645734218694,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "provenance": "synthetic_simulation",
+        "state": "evaluating",
+        "episode_id": "episode-1",
+        "previous_state": "tracing"
+      },
+      {
+        "sequence": 19,
+        "event": "policy_decision",
+        "timestamp_ns": 173646248517689,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "provenance": "synthetic_simulation",
+        "state": "evaluating",
+        "episode_id": "episode-1",
+        "capture_id": "episode-1:capture-3",
+        "reason": "continue",
+        "decision_status": "ok",
+        "evidence_ready_at_ns": 173646247790206,
+        "diagnosis_label": null
+      },
+      {
+        "sequence": 20,
+        "event": "state_changed",
+        "timestamp_ns": 173646248537100,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "provenance": "synthetic_simulation",
+        "state": "suspicious",
+        "episode_id": "episode-1",
+        "previous_state": "evaluating"
+      },
+      {
+        "sequence": 21,
+        "event": "state_changed",
+        "timestamp_ns": 173646248578940,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "provenance": "synthetic_simulation",
+        "state": "starting",
+        "episode_id": "episode-1",
+        "previous_state": "suspicious"
+      },
+      {
+        "sequence": 22,
+        "event": "capture_requested",
+        "timestamp_ns": 173646248586575,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "provenance": "synthetic_simulation",
+        "state": "starting",
+        "episode_id": "episode-1",
+        "capture_id": "episode-1:capture-4",
+        "window_id": "fixture-window",
+        "round_number": 1
+      },
+      {
+        "sequence": 23,
+        "event": "state_changed",
+        "timestamp_ns": 173646389180913,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "provenance": "synthetic_simulation",
+        "state": "tracing",
+        "episode_id": "episode-1",
+        "previous_state": "starting"
+      },
+      {
+        "sequence": 24,
+        "event": "state_changed",
+        "timestamp_ns": 173646425829192,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "provenance": "synthetic_simulation",
+        "state": "evaluating",
+        "episode_id": "episode-1",
+        "previous_state": "tracing"
+      },
+      {
+        "sequence": 25,
+        "event": "policy_decision",
+        "timestamp_ns": 173646915412498,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "provenance": "synthetic_simulation",
+        "state": "evaluating",
+        "episode_id": "episode-1",
+        "capture_id": "episode-1:capture-4",
+        "reason": "continue",
+        "decision_status": "ok",
+        "evidence_ready_at_ns": 173646915148254,
+        "diagnosis_label": null
+      },
+      {
+        "sequence": 26,
+        "event": "state_changed",
+        "timestamp_ns": 173646915423695,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "provenance": "synthetic_simulation",
+        "state": "suspicious",
+        "episode_id": "episode-1",
+        "previous_state": "evaluating"
+      },
+      {
+        "sequence": 27,
+        "event": "state_changed",
+        "timestamp_ns": 173646915446843,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "provenance": "synthetic_simulation",
+        "state": "starting",
+        "episode_id": "episode-1",
+        "previous_state": "suspicious"
+      },
+      {
+        "sequence": 28,
+        "event": "capture_requested",
+        "timestamp_ns": 173646915451005,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "provenance": "synthetic_simulation",
+        "state": "starting",
+        "episode_id": "episode-1",
+        "capture_id": "episode-1:capture-5",
+        "window_id": "fixture-window",
+        "round_number": 1
+      },
+      {
+        "sequence": 29,
+        "event": "state_changed",
+        "timestamp_ns": 173647056126031,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "provenance": "synthetic_simulation",
+        "state": "tracing",
+        "episode_id": "episode-1",
+        "previous_state": "starting"
+      },
+      {
+        "sequence": 30,
+        "event": "state_changed",
+        "timestamp_ns": 173647097995033,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "provenance": "synthetic_simulation",
+        "state": "evaluating",
+        "episode_id": "episode-1",
+        "previous_state": "tracing"
+      },
+      {
+        "sequence": 31,
+        "event": "policy_decision",
+        "timestamp_ns": 173647627578657,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "provenance": "synthetic_simulation",
+        "state": "evaluating",
+        "episode_id": "episode-1",
+        "capture_id": "episode-1:capture-5",
+        "reason": "continue",
+        "decision_status": "ok",
+        "evidence_ready_at_ns": 173647626949122,
+        "diagnosis_label": null
+      },
+      {
+        "sequence": 32,
+        "event": "state_changed",
+        "timestamp_ns": 173647627591699,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "provenance": "synthetic_simulation",
+        "state": "suspicious",
+        "episode_id": "episode-1",
+        "previous_state": "evaluating"
+      },
+      {
+        "sequence": 33,
+        "event": "state_changed",
+        "timestamp_ns": 173647627620298,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "provenance": "synthetic_simulation",
+        "state": "starting",
+        "episode_id": "episode-1",
+        "previous_state": "suspicious"
+      },
+      {
+        "sequence": 34,
+        "event": "capture_requested",
+        "timestamp_ns": 173647627624917,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "provenance": "synthetic_simulation",
+        "state": "starting",
+        "episode_id": "episode-1",
+        "capture_id": "episode-1:capture-6",
+        "window_id": "fixture-window",
+        "round_number": 1
+      },
+      {
+        "sequence": 35,
+        "event": "state_changed",
+        "timestamp_ns": 173647766654354,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "provenance": "synthetic_simulation",
+        "state": "tracing",
+        "episode_id": "episode-1",
+        "previous_state": "starting"
+      },
+      {
+        "sequence": 36,
+        "event": "state_changed",
+        "timestamp_ns": 173647805393003,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "provenance": "synthetic_simulation",
+        "state": "evaluating",
+        "episode_id": "episode-1",
+        "previous_state": "tracing"
+      },
+      {
+        "sequence": 37,
+        "event": "policy_decision",
+        "timestamp_ns": 173648346147080,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "provenance": "synthetic_simulation",
+        "state": "evaluating",
+        "episode_id": "episode-1",
+        "capture_id": "episode-1:capture-6",
+        "reason": "budget_exhausted",
+        "decision_status": "ok",
+        "evidence_ready_at_ns": 173648345758306,
+        "diagnosis_label": null
+      },
+      {
+        "sequence": 38,
+        "event": "state_changed",
+        "timestamp_ns": 173648346179554,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "provenance": "synthetic_simulation",
+        "state": "monitoring",
+        "episode_id": "episode-1",
+        "previous_state": "evaluating"
+      },
+      {
+        "sequence": 39,
+        "event": "heavy_tracing_stopped",
+        "timestamp_ns": 173648346187464,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "provenance": "synthetic_simulation",
+        "state": "monitoring",
+        "episode_id": "episode-1",
+        "reason": "budget_exhausted"
+      },
+      {
+        "sequence": 40,
+        "event": "episode_ended",
+        "timestamp_ns": 173648351915949,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "provenance": "synthetic_simulation",
+        "state": "monitoring",
+        "episode_id": "episode-1",
+        "reason": "horizon_ended",
+        "stop_reason": "budget_exhausted"
+      },
+      {
+        "sequence": 41,
+        "event": "state_changed",
+        "timestamp_ns": 173648351988970,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "provenance": "synthetic_simulation",
+        "state": "idle",
+        "episode_id": null,
+        "previous_state": "monitoring"
+      },
+      {
+        "sequence": 42,
+        "event": "stream_finished",
+        "timestamp_ns": 173648351998959,
+        "clock_domain": "process-monotonic-41f19941-ce49-483e-a5ab-6b3b3435ead6",
+        "provenance": "synthetic_simulation",
+        "state": "idle",
+        "episode_id": null
+      }
+    ]
+  }
+}

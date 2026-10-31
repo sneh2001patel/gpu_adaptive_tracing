@@ -1,0 +1,22 @@
+{
+ "case": "3087",
+ "side": "fixed",
+ "config": {
+  "title": "Logits processors deep-copied per request",
+  "reference": "host_bound",
+  "model": "TinyLlama/TinyLlama-1.1B-Chat-v1.0",
+  "server_args": "--max-model-len 2048 --gpu-memory-utilization 0.9 --disable-log-requests",
+  "healthy_rate": 0.5,
+  "incident_rate": 1.0,
+  "env": "v033",
+  "version": "0.3.3",
+  "patch": "3087_json_processor"
+ },
+ "installed": {
+  "vllm": "0.3.3",
+  "torch": "2.1.2",
+  "transformers": "4.38.1",
+  "xgrammar": null,
+  "outlines": "0.0.33"
+ }
+}

@@ -1,0 +1,969 @@
+{
+  "provenance": "synthetic_simulation",
+  "gpu_used": false,
+  "scenario": "transition",
+  "note": "Loopback HTTP measurements; server values, token usage and profiler kernels are fixtures. No diagnosis accuracy or GPU cost evidence.",
+  "pending_evidence_checks": 2,
+  "observations": [
+    {
+      "observation_id": "window-0:capture-0:parsed-summary",
+      "provenance": "synthetic_simulation",
+      "acquisition": {
+        "start_ns": 179636651034433,
+        "end_ns": 179636851034433,
+        "available_at_ns": 179636968674001,
+        "clock_domain": "process-monotonic-d6d8387b-8629-4a67-bdff-381e46dc9181"
+      },
+      "metrics": [
+        {
+          "name": "request_p95_ms",
+          "source": "request",
+          "unit": "ms",
+          "value": 2.3599655,
+          "valid_samples": 3,
+          "attempted_samples": 3,
+          "coverage": "complete",
+          "missing_reason": null,
+          "acquisition": {
+            "start_ns": 179636651034433,
+            "end_ns": 179636851034433,
+            "available_at_ns": 179636857424203,
+            "clock_domain": "process-monotonic-d6d8387b-8629-4a67-bdff-381e46dc9181"
+          }
+        },
+        {
+          "name": "completed_rps",
+          "source": "request",
+          "unit": "requests/s",
+          "value": 15.0,
+          "valid_samples": 1,
+          "attempted_samples": 1,
+          "coverage": "complete",
+          "missing_reason": null,
+          "acquisition": {
+            "start_ns": 179636651034433,
+            "end_ns": 179636851034433,
+            "available_at_ns": 179636857424203,
+            "clock_domain": "process-monotonic-d6d8387b-8629-4a67-bdff-381e46dc9181"
+          }
+        },
+        {
+          "name": "prompt_tokens_mean",
+          "source": "request",
+          "unit": "tokens",
+          "value": 7.0,
+          "valid_samples": 3,
+          "attempted_samples": 3,
+          "coverage": "complete",
+          "missing_reason": null,
+          "acquisition": {
+            "start_ns": 179636651034433,
+            "end_ns": 179636851034433,
+            "available_at_ns": 179636857424203,
+            "clock_domain": "process-monotonic-d6d8387b-8629-4a67-bdff-381e46dc9181"
+          }
+        },
+        {
+          "name": "output_tokens_mean",
+          "source": "request",
+          "unit": "tokens",
+          "value": 3.0,
+          "valid_samples": 3,
+          "attempted_samples": 3,
+          "coverage": "complete",
+          "missing_reason": null,
+          "acquisition": {
+            "start_ns": 179636651034433,
+            "end_ns": 179636851034433,
+            "available_at_ns": 179636857424203,
+            "clock_domain": "process-monotonic-d6d8387b-8629-4a67-bdff-381e46dc9181"
+          }
+        },
+        {
+          "name": "queue_depth_mean",
+          "source": "server",
+          "unit": "requests",
+          "value": 8.0,
+          "valid_samples": 3,
+          "attempted_samples": 3,
+          "coverage": "complete",
+          "missing_reason": null,
+          "acquisition": {
+            "start_ns": 179636651034433,
+            "end_ns": 179636851034433,
+            "available_at_ns": 179636857424203,
+            "clock_domain": "process-monotonic-d6d8387b-8629-4a67-bdff-381e46dc9181"
+          }
+        },
+        {
+          "name": "gpu_util_mean",
+          "source": "gpu",
+          "unit": "percent",
+          "value": 90.0,
+          "valid_samples": 3,
+          "attempted_samples": 3,
+          "coverage": "complete",
+          "missing_reason": null,
+          "acquisition": {
+            "start_ns": 179636651034433,
+            "end_ns": 179636851034433,
+            "available_at_ns": 179636857424203,
+            "clock_domain": "process-monotonic-d6d8387b-8629-4a67-bdff-381e46dc9181"
+          }
+        },
+        {
+          "name": "request_wait_p95_ms",
+          "source": "server",
+          "unit": "ms",
+          "value": null,
+          "valid_samples": 0,
+          "attempted_samples": 0,
+          "coverage": "unavailable",
+          "missing_reason": "unsupported_interval_statistic_by_queue_gauge_collector",
+          "acquisition": {
+            "start_ns": 179636651034433,
+            "end_ns": 179636851034433,
+            "available_at_ns": 179636857424203,
+            "clock_domain": "process-monotonic-d6d8387b-8629-4a67-bdff-381e46dc9181"
+          }
+        },
+        {
+          "name": "prefill_service_fraction",
+          "source": "server",
+          "unit": "fraction",
+          "value": null,
+          "valid_samples": 0,
+          "attempted_samples": 0,
+          "coverage": "unavailable",
+          "missing_reason": "unsupported_interval_statistic_by_queue_gauge_collector",
+          "acquisition": {
+            "start_ns": 179636651034433,
+            "end_ns": 179636851034433,
+            "available_at_ns": 179636857424203,
+            "clock_domain": "process-monotonic-d6d8387b-8629-4a67-bdff-381e46dc9181"
+          }
+        }
+      ],
+      "kernel": {
+        "capture_id": "capture-0",
+        "evidence_id": "capture-0:parsed-summary",
+        "device_uuid": "GPU-synthetic",
+        "worker_pids": [
+          123
+        ],
+        "kernel_count": 20,
+        "kernel_time_sum_s": 0.01,
+        "coverage": "single_configured_worker_and_device_verified",
+        "acquisition": {
+          "start_ns": 179636651226431,
+          "end_ns": 179636664727293,
+          "available_at_ns": 179636968674001,
+          "clock_domain": "process-monotonic-d6d8387b-8629-4a67-bdff-381e46dc9181"
+        }
+      }
+    },
+    {
+      "observation_id": "window-1:capture-1:parsed-summary",
+      "provenance": "synthetic_simulation",
+      "acquisition": {
+        "start_ns": 179636968958220,
+        "end_ns": 179637168958220,
+        "available_at_ns": 179637283108313,
+        "clock_domain": "process-monotonic-d6d8387b-8629-4a67-bdff-381e46dc9181"
+      },
+      "metrics": [
+        {
+          "name": "request_p95_ms",
+          "source": "request",
+          "unit": "ms",
+          "value": 2.1616237000000003,
+          "valid_samples": 3,
+          "attempted_samples": 3,
+          "coverage": "complete",
+          "missing_reason": null,
+          "acquisition": {
+            "start_ns": 179636968958220,
+            "end_ns": 179637168958220,
+            "available_at_ns": 179637175228298,
+            "clock_domain": "process-monotonic-d6d8387b-8629-4a67-bdff-381e46dc9181"
+          }
+        },
+        {
+          "name": "completed_rps",
+          "source": "request",
+          "unit": "requests/s",
+          "value": 15.0,
+          "valid_samples": 1,
+          "attempted_samples": 1,
+          "coverage": "complete",
+          "missing_reason": null,
+          "acquisition": {
+            "start_ns": 179636968958220,
+            "end_ns": 179637168958220,
+            "available_at_ns": 179637175228298,
+            "clock_domain": "process-monotonic-d6d8387b-8629-4a67-bdff-381e46dc9181"
+          }
+        },
+        {
+          "name": "prompt_tokens_mean",
+          "source": "request",
+          "unit": "tokens",
+          "value": 7.0,
+          "valid_samples": 3,
+          "attempted_samples": 3,
+          "coverage": "complete",
+          "missing_reason": null,
+          "acquisition": {
+            "start_ns": 179636968958220,
+            "end_ns": 179637168958220,
+            "available_at_ns": 179637175228298,
+            "clock_domain": "process-monotonic-d6d8387b-8629-4a67-bdff-381e46dc9181"
+          }
+        },
+        {
+          "name": "output_tokens_mean",
+          "source": "request",
+          "unit": "tokens",
+          "value": 3.0,
+          "valid_samples": 3,
+          "attempted_samples": 3,
+          "coverage": "complete",
+          "missing_reason": null,
+          "acquisition": {
+            "start_ns": 179636968958220,
+            "end_ns": 179637168958220,
+            "available_at_ns": 179637175228298,
+            "clock_domain": "process-monotonic-d6d8387b-8629-4a67-bdff-381e46dc9181"
+          }
+        },
+        {
+          "name": "queue_depth_mean",
+          "source": "server",
+          "unit": "requests",
+          "value": 0.0,
+          "valid_samples": 3,
+          "attempted_samples": 3,
+          "coverage": "complete",
+          "missing_reason": null,
+          "acquisition": {
+            "start_ns": 179636968958220,
+            "end_ns": 179637168958220,
+            "available_at_ns": 179637175228298,
+            "clock_domain": "process-monotonic-d6d8387b-8629-4a67-bdff-381e46dc9181"
+          }
+        },
+        {
+          "name": "gpu_util_mean",
+          "source": "gpu",
+          "unit": "percent",
+          "value": 90.0,
+          "valid_samples": 3,
+          "attempted_samples": 3,
+          "coverage": "complete",
+          "missing_reason": null,
+          "acquisition": {
+            "start_ns": 179636968958220,
+            "end_ns": 179637168958220,
+            "available_at_ns": 179637175228298,
+            "clock_domain": "process-monotonic-d6d8387b-8629-4a67-bdff-381e46dc9181"
+          }
+        },
+        {
+          "name": "request_wait_p95_ms",
+          "source": "server",
+          "unit": "ms",
+          "value": null,
+          "valid_samples": 0,
+          "attempted_samples": 0,
+          "coverage": "unavailable",
+          "missing_reason": "unsupported_interval_statistic_by_queue_gauge_collector",
+          "acquisition": {
+            "start_ns": 179636968958220,
+            "end_ns": 179637168958220,
+            "available_at_ns": 179637175228298,
+            "clock_domain": "process-monotonic-d6d8387b-8629-4a67-bdff-381e46dc9181"
+          }
+        },
+        {
+          "name": "prefill_service_fraction",
+          "source": "server",
+          "unit": "fraction",
+          "value": null,
+          "valid_samples": 0,
+          "attempted_samples": 0,
+          "coverage": "unavailable",
+          "missing_reason": "unsupported_interval_statistic_by_queue_gauge_collector",
+          "acquisition": {
+            "start_ns": 179636968958220,
+            "end_ns": 179637168958220,
+            "available_at_ns": 179637175228298,
+            "clock_domain": "process-monotonic-d6d8387b-8629-4a67-bdff-381e46dc9181"
+          }
+        }
+      ],
+      "kernel": {
+        "capture_id": "capture-1",
+        "evidence_id": "capture-1:parsed-summary",
+        "device_uuid": "GPU-synthetic",
+        "worker_pids": [
+          123
+        ],
+        "kernel_count": 20,
+        "kernel_time_sum_s": 0.01,
+        "coverage": "single_configured_worker_and_device_verified",
+        "acquisition": {
+          "start_ns": 179636969085678,
+          "end_ns": 179636979222864,
+          "available_at_ns": 179637283108313,
+          "clock_domain": "process-monotonic-d6d8387b-8629-4a67-bdff-381e46dc9181"
+        }
+      }
+    }
+  ],
+  "predictions": [
+    {
+      "observation_id": "window-0:capture-0:parsed-summary",
+      "evidence_id": "capture-0:parsed-summary",
+      "provenance": "synthetic_simulation",
+      "available_at_ns": 179636968674001,
+      "decision_at_ns": 179636968861952,
+      "policy_label": null,
+      "cause_set": [],
+      "reasons": [
+        "calibration_unavailable",
+        "missing:request_wait_p95_ms",
+        "missing:prefill_service_fraction",
+        "prefill_policy_mapping_unvalidated"
+      ],
+      "classifier_version": "uncalibrated_measured_adapter_v1"
+    },
+    {
+      "observation_id": "window-1:capture-1:parsed-summary",
+      "evidence_id": "capture-1:parsed-summary",
+      "provenance": "synthetic_simulation",
+      "available_at_ns": 179637283108313,
+      "decision_at_ns": 179637283434281,
+      "policy_label": null,
+      "cause_set": [],
+      "reasons": [
+        "calibration_unavailable",
+        "missing:request_wait_p95_ms",
+        "missing:prefill_service_fraction",
+        "prefill_policy_mapping_unvalidated"
+      ],
+      "classifier_version": "uncalibrated_measured_adapter_v1"
+    }
+  ],
+  "raw_records": [
+    {
+      "request": {
+        "completion": {
+          "request_id": "r-0-0",
+          "start_ns": 179636651234496,
+          "end_ns": 179636653535480,
+          "available_at_ns": 179636653535480,
+          "clock_domain": "process-monotonic-d6d8387b-8629-4a67-bdff-381e46dc9181",
+          "success": true,
+          "error_kind": null
+        },
+        "prompt_tokens": 7,
+        "output_tokens": 3,
+        "usage_error": null
+      },
+      "server": {
+        "sample_id": "s-0-0",
+        "requested_at_ns": 179636653572998,
+        "received_at_ns": 179636655663400,
+        "clock_domain": "process-monotonic-d6d8387b-8629-4a67-bdff-381e46dc9181",
+        "queue_depth": 8.0,
+        "error": null
+      }
+    },
+    {
+      "request": {
+        "completion": {
+          "request_id": "r-0-1",
+          "start_ns": 179636655760624,
+          "end_ns": 179636658127143,
+          "available_at_ns": 179636658127143,
+          "clock_domain": "process-monotonic-d6d8387b-8629-4a67-bdff-381e46dc9181",
+          "success": true,
+          "error_kind": null
+        },
+        "prompt_tokens": 7,
+        "output_tokens": 3,
+        "usage_error": null
+      },
+      "server": {
+        "sample_id": "s-0-1",
+        "requested_at_ns": 179636658161293,
+        "received_at_ns": 179636660551809,
+        "clock_domain": "process-monotonic-d6d8387b-8629-4a67-bdff-381e46dc9181",
+        "queue_depth": 8.0,
+        "error": null
+      }
+    },
+    {
+      "request": {
+        "completion": {
+          "request_id": "r-0-2",
+          "start_ns": 179636660679013,
+          "end_ns": 179636662846930,
+          "available_at_ns": 179636662846930,
+          "clock_domain": "process-monotonic-d6d8387b-8629-4a67-bdff-381e46dc9181",
+          "success": true,
+          "error_kind": null
+        },
+        "prompt_tokens": 7,
+        "output_tokens": 3,
+        "usage_error": null
+      },
+      "server": {
+        "sample_id": "s-0-2",
+        "requested_at_ns": 179636662881734,
+        "received_at_ns": 179636664650482,
+        "clock_domain": "process-monotonic-d6d8387b-8629-4a67-bdff-381e46dc9181",
+        "queue_depth": 8.0,
+        "error": null
+      }
+    },
+    {
+      "request": {
+        "completion": {
+          "request_id": "r-1-0",
+          "start_ns": 179636969092129,
+          "end_ns": 179636971310944,
+          "available_at_ns": 179636971310944,
+          "clock_domain": "process-monotonic-d6d8387b-8629-4a67-bdff-381e46dc9181",
+          "success": true,
+          "error_kind": null
+        },
+        "prompt_tokens": 7,
+        "output_tokens": 3,
+        "usage_error": null
+      },
+      "server": {
+        "sample_id": "s-1-0",
+        "requested_at_ns": 179636971339698,
+        "received_at_ns": 179636973216949,
+        "clock_domain": "process-monotonic-d6d8387b-8629-4a67-bdff-381e46dc9181",
+        "queue_depth": 0.0,
+        "error": null
+      }
+    },
+    {
+      "request": {
+        "completion": {
+          "request_id": "r-1-1",
+          "start_ns": 179636973296347,
+          "end_ns": 179636974943249,
+          "available_at_ns": 179636974943249,
+          "clock_domain": "process-monotonic-d6d8387b-8629-4a67-bdff-381e46dc9181",
+          "success": true,
+          "error_kind": null
+        },
+        "prompt_tokens": 7,
+        "output_tokens": 3,
+        "usage_error": null
+      },
+      "server": {
+        "sample_id": "s-1-1",
+        "requested_at_ns": 179636974970502,
+        "received_at_ns": 179636976559008,
+        "clock_domain": "process-monotonic-d6d8387b-8629-4a67-bdff-381e46dc9181",
+        "queue_depth": 0.0,
+        "error": null
+      }
+    },
+    {
+      "request": {
+        "completion": {
+          "request_id": "r-1-2",
+          "start_ns": 179636976624247,
+          "end_ns": 179636978138231,
+          "available_at_ns": 179636978138231,
+          "clock_domain": "process-monotonic-d6d8387b-8629-4a67-bdff-381e46dc9181",
+          "success": true,
+          "error_kind": null
+        },
+        "prompt_tokens": 7,
+        "output_tokens": 3,
+        "usage_error": null
+      },
+      "server": {
+        "sample_id": "s-1-2",
+        "requested_at_ns": 179636978158880,
+        "received_at_ns": 179636979164986,
+        "clock_domain": "process-monotonic-d6d8387b-8629-4a67-bdff-381e46dc9181",
+        "queue_depth": 0.0,
+        "error": null
+      }
+    }
+  ],
+  "window_audits": [
+    {
+      "start_ns": 179636651034433,
+      "end_ns": 179636851034433,
+      "deadline_ns": 179636856034433,
+      "closed_at_ns": 179636857424203,
+      "min_latency_samples": 2,
+      "threshold_role": "development_guard_not_calibrated",
+      "completion_count": 3,
+      "successful_completions": 3,
+      "request_errors": 0,
+      "usage_missing": 0,
+      "events": [
+        {
+          "kind": "request",
+          "identity": "r-0-0",
+          "received_at_ns": 179636655681116,
+          "accepted": true,
+          "reason": "accepted"
+        },
+        {
+          "kind": "server",
+          "identity": "s-0-0",
+          "received_at_ns": 179636655691410,
+          "accepted": true,
+          "reason": "accepted"
+        },
+        {
+          "kind": "gpu",
+          "identity": "g-0-0",
+          "received_at_ns": 179636655712346,
+          "accepted": true,
+          "reason": "accepted"
+        },
+        {
+          "kind": "request",
+          "identity": "r-0-1",
+          "received_at_ns": 179636660572292,
+          "accepted": true,
+          "reason": "accepted"
+        },
+        {
+          "kind": "server",
+          "identity": "s-0-1",
+          "received_at_ns": 179636660592056,
+          "accepted": true,
+          "reason": "accepted"
+        },
+        {
+          "kind": "gpu",
+          "identity": "g-0-1",
+          "received_at_ns": 179636660624594,
+          "accepted": true,
+          "reason": "accepted"
+        },
+        {
+          "kind": "request",
+          "identity": "r-0-2",
+          "received_at_ns": 179636664666599,
+          "accepted": true,
+          "reason": "accepted"
+        },
+        {
+          "kind": "server",
+          "identity": "s-0-2",
+          "received_at_ns": 179636664674507,
+          "accepted": true,
+          "reason": "accepted"
+        },
+        {
+          "kind": "gpu",
+          "identity": "g-0-2",
+          "received_at_ns": 179636664690985,
+          "accepted": true,
+          "reason": "accepted"
+        }
+      ],
+      "note": "Completion-cohort features; pending admissions/censoring are recorded by the workload driver. Gauge means are sample means, not time-weighted means."
+    },
+    {
+      "start_ns": 179636968958220,
+      "end_ns": 179637168958220,
+      "deadline_ns": 179637173958220,
+      "closed_at_ns": 179637175228298,
+      "min_latency_samples": 2,
+      "threshold_role": "development_guard_not_calibrated",
+      "completion_count": 3,
+      "successful_completions": 3,
+      "request_errors": 0,
+      "usage_missing": 0,
+      "events": [
+        {
+          "kind": "request",
+          "identity": "r-1-0",
+          "received_at_ns": 179636973231766,
+          "accepted": true,
+          "reason": "accepted"
+        },
+        {
+          "kind": "server",
+          "identity": "s-1-0",
+          "received_at_ns": 179636973239515,
+          "accepted": true,
+          "reason": "accepted"
+        },
+        {
+          "kind": "gpu",
+          "identity": "g-1-0",
+          "received_at_ns": 179636973255944,
+          "accepted": true,
+          "reason": "accepted"
+        },
+        {
+          "kind": "request",
+          "identity": "r-1-1",
+          "received_at_ns": 179636976570692,
+          "accepted": true,
+          "reason": "accepted"
+        },
+        {
+          "kind": "server",
+          "identity": "s-1-1",
+          "received_at_ns": 179636976577170,
+          "accepted": true,
+          "reason": "accepted"
+        },
+        {
+          "kind": "gpu",
+          "identity": "g-1-1",
+          "received_at_ns": 179636976590521,
+          "accepted": true,
+          "reason": "accepted"
+        },
+        {
+          "kind": "request",
+          "identity": "r-1-2",
+          "received_at_ns": 179636979176719,
+          "accepted": true,
+          "reason": "accepted"
+        },
+        {
+          "kind": "server",
+          "identity": "s-1-2",
+          "received_at_ns": 179636979182925,
+          "accepted": true,
+          "reason": "accepted"
+        },
+        {
+          "kind": "gpu",
+          "identity": "g-1-2",
+          "received_at_ns": 179636979194682,
+          "accepted": true,
+          "reason": "accepted"
+        }
+      ],
+      "note": "Completion-cohort features; pending admissions/censoring are recorded by the workload driver. Gauge means are sample means, not time-weighted means."
+    }
+  ],
+  "profiler_events": [
+    {
+      "sequence": 0,
+      "name": "capture_attempted",
+      "scope": "capture-0",
+      "timestamp_ns": 179636651177455,
+      "clock_domain": "process-monotonic-d6d8387b-8629-4a67-bdff-381e46dc9181",
+      "provenance": "synthetic_simulation",
+      "status": null
+    },
+    {
+      "sequence": 1,
+      "name": "evidence_collection_started",
+      "scope": "capture-0",
+      "timestamp_ns": 179636651187481,
+      "clock_domain": "process-monotonic-d6d8387b-8629-4a67-bdff-381e46dc9181",
+      "provenance": "synthetic_simulation",
+      "status": null
+    },
+    {
+      "sequence": 2,
+      "name": "profile_process_wall_started",
+      "scope": "capture-0",
+      "timestamp_ns": 179636651194520,
+      "clock_domain": "process-monotonic-d6d8387b-8629-4a67-bdff-381e46dc9181",
+      "provenance": "synthetic_simulation",
+      "status": null
+    },
+    {
+      "sequence": 3,
+      "name": "server_startup_started",
+      "scope": "capture-0",
+      "timestamp_ns": 179636651198980,
+      "clock_domain": "process-monotonic-d6d8387b-8629-4a67-bdff-381e46dc9181",
+      "provenance": "synthetic_simulation",
+      "status": null
+    },
+    {
+      "sequence": 4,
+      "name": "server_startup_finished",
+      "scope": "capture-0",
+      "timestamp_ns": 179636651215434,
+      "clock_domain": "process-monotonic-d6d8387b-8629-4a67-bdff-381e46dc9181",
+      "provenance": "synthetic_simulation",
+      "status": "ok"
+    },
+    {
+      "sequence": 5,
+      "name": "capture_control_window_started",
+      "scope": "capture-0",
+      "timestamp_ns": 179636651222535,
+      "clock_domain": "process-monotonic-d6d8387b-8629-4a67-bdff-381e46dc9181",
+      "provenance": "synthetic_simulation",
+      "status": null
+    },
+    {
+      "sequence": 6,
+      "name": "capture_control_window_finished",
+      "scope": "capture-0",
+      "timestamp_ns": 179636664734359,
+      "clock_domain": "process-monotonic-d6d8387b-8629-4a67-bdff-381e46dc9181",
+      "provenance": "synthetic_simulation",
+      "status": "ok"
+    },
+    {
+      "sequence": 7,
+      "name": "report_finalization_started",
+      "scope": "capture-0",
+      "timestamp_ns": 179636664743902,
+      "clock_domain": "process-monotonic-d6d8387b-8629-4a67-bdff-381e46dc9181",
+      "provenance": "synthetic_simulation",
+      "status": null
+    },
+    {
+      "sequence": 8,
+      "name": "report_finalization_finished",
+      "scope": "capture-0",
+      "timestamp_ns": 179636965893623,
+      "clock_domain": "process-monotonic-d6d8387b-8629-4a67-bdff-381e46dc9181",
+      "provenance": "synthetic_simulation",
+      "status": "ok"
+    },
+    {
+      "sequence": 9,
+      "name": "profile_process_wall_finished",
+      "scope": "capture-0",
+      "timestamp_ns": 179636965913558,
+      "clock_domain": "process-monotonic-d6d8387b-8629-4a67-bdff-381e46dc9181",
+      "provenance": "synthetic_simulation",
+      "status": "ok"
+    },
+    {
+      "sequence": 10,
+      "name": "report_ready",
+      "scope": "capture-0",
+      "timestamp_ns": 179636965919605,
+      "clock_domain": "process-monotonic-d6d8387b-8629-4a67-bdff-381e46dc9181",
+      "provenance": "synthetic_simulation",
+      "status": null
+    },
+    {
+      "sequence": 11,
+      "name": "stats_command_started",
+      "scope": "capture-0",
+      "timestamp_ns": 179636965926263,
+      "clock_domain": "process-monotonic-d6d8387b-8629-4a67-bdff-381e46dc9181",
+      "provenance": "synthetic_simulation",
+      "status": null
+    },
+    {
+      "sequence": 12,
+      "name": "stats_command_finished",
+      "scope": "capture-0",
+      "timestamp_ns": 179636967209291,
+      "clock_domain": "process-monotonic-d6d8387b-8629-4a67-bdff-381e46dc9181",
+      "provenance": "synthetic_simulation",
+      "status": "ok"
+    },
+    {
+      "sequence": 13,
+      "name": "summary_parse_started",
+      "scope": "capture-0",
+      "timestamp_ns": 179636967233244,
+      "clock_domain": "process-monotonic-d6d8387b-8629-4a67-bdff-381e46dc9181",
+      "provenance": "synthetic_simulation",
+      "status": null
+    },
+    {
+      "sequence": 14,
+      "name": "summary_parse_finished",
+      "scope": "capture-0",
+      "timestamp_ns": 179636968686252,
+      "clock_domain": "process-monotonic-d6d8387b-8629-4a67-bdff-381e46dc9181",
+      "provenance": "synthetic_simulation",
+      "status": "ok"
+    },
+    {
+      "sequence": 15,
+      "name": "evidence_ready",
+      "scope": "capture-0",
+      "timestamp_ns": 179636968700611,
+      "clock_domain": "process-monotonic-d6d8387b-8629-4a67-bdff-381e46dc9181",
+      "provenance": "synthetic_simulation",
+      "status": null
+    },
+    {
+      "sequence": 16,
+      "name": "evidence_collection_finished",
+      "scope": "capture-0",
+      "timestamp_ns": 179636968773253,
+      "clock_domain": "process-monotonic-d6d8387b-8629-4a67-bdff-381e46dc9181",
+      "provenance": "synthetic_simulation",
+      "status": "ok"
+    },
+    {
+      "sequence": 17,
+      "name": "capture_attempted",
+      "scope": "capture-1",
+      "timestamp_ns": 179636969046043,
+      "clock_domain": "process-monotonic-d6d8387b-8629-4a67-bdff-381e46dc9181",
+      "provenance": "synthetic_simulation",
+      "status": null
+    },
+    {
+      "sequence": 18,
+      "name": "evidence_collection_started",
+      "scope": "capture-1",
+      "timestamp_ns": 179636969052372,
+      "clock_domain": "process-monotonic-d6d8387b-8629-4a67-bdff-381e46dc9181",
+      "provenance": "synthetic_simulation",
+      "status": null
+    },
+    {
+      "sequence": 19,
+      "name": "profile_process_wall_started",
+      "scope": "capture-1",
+      "timestamp_ns": 179636969056798,
+      "clock_domain": "process-monotonic-d6d8387b-8629-4a67-bdff-381e46dc9181",
+      "provenance": "synthetic_simulation",
+      "status": null
+    },
+    {
+      "sequence": 20,
+      "name": "server_startup_started",
+      "scope": "capture-1",
+      "timestamp_ns": 179636969060196,
+      "clock_domain": "process-monotonic-d6d8387b-8629-4a67-bdff-381e46dc9181",
+      "provenance": "synthetic_simulation",
+      "status": null
+    },
+    {
+      "sequence": 21,
+      "name": "server_startup_finished",
+      "scope": "capture-1",
+      "timestamp_ns": 179636969072611,
+      "clock_domain": "process-monotonic-d6d8387b-8629-4a67-bdff-381e46dc9181",
+      "provenance": "synthetic_simulation",
+      "status": "ok"
+    },
+    {
+      "sequence": 22,
+      "name": "capture_control_window_started",
+      "scope": "capture-1",
+      "timestamp_ns": 179636969077842,
+      "clock_domain": "process-monotonic-d6d8387b-8629-4a67-bdff-381e46dc9181",
+      "provenance": "synthetic_simulation",
+      "status": null
+    },
+    {
+      "sequence": 23,
+      "name": "capture_control_window_finished",
+      "scope": "capture-1",
+      "timestamp_ns": 179636979228460,
+      "clock_domain": "process-monotonic-d6d8387b-8629-4a67-bdff-381e46dc9181",
+      "provenance": "synthetic_simulation",
+      "status": "ok"
+    },
+    {
+      "sequence": 24,
+      "name": "report_finalization_started",
+      "scope": "capture-1",
+      "timestamp_ns": 179636979236876,
+      "clock_domain": "process-monotonic-d6d8387b-8629-4a67-bdff-381e46dc9181",
+      "provenance": "synthetic_simulation",
+      "status": null
+    },
+    {
+      "sequence": 25,
+      "name": "report_finalization_finished",
+      "scope": "capture-1",
+      "timestamp_ns": 179637280078527,
+      "clock_domain": "process-monotonic-d6d8387b-8629-4a67-bdff-381e46dc9181",
+      "provenance": "synthetic_simulation",
+      "status": "ok"
+    },
+    {
+      "sequence": 26,
+      "name": "profile_process_wall_finished",
+      "scope": "capture-1",
+      "timestamp_ns": 179637280108012,
+      "clock_domain": "process-monotonic-d6d8387b-8629-4a67-bdff-381e46dc9181",
+      "provenance": "synthetic_simulation",
+      "status": "ok"
+    },
+    {
+      "sequence": 27,
+      "name": "report_ready",
+      "scope": "capture-1",
+      "timestamp_ns": 179637280116019,
+      "clock_domain": "process-monotonic-d6d8387b-8629-4a67-bdff-381e46dc9181",
+      "provenance": "synthetic_simulation",
+      "status": null
+    },
+    {
+      "sequence": 28,
+      "name": "stats_command_started",
+      "scope": "capture-1",
+      "timestamp_ns": 179637280125578,
+      "clock_domain": "process-monotonic-d6d8387b-8629-4a67-bdff-381e46dc9181",
+      "provenance": "synthetic_simulation",
+      "status": null
+    },
+    {
+      "sequence": 29,
+      "name": "stats_command_finished",
+      "scope": "capture-1",
+      "timestamp_ns": 179637281548282,
+      "clock_domain": "process-monotonic-d6d8387b-8629-4a67-bdff-381e46dc9181",
+      "provenance": "synthetic_simulation",
+      "status": "ok"
+    },
+    {
+      "sequence": 30,
+      "name": "summary_parse_started",
+      "scope": "capture-1",
+      "timestamp_ns": 179637281573677,
+      "clock_domain": "process-monotonic-d6d8387b-8629-4a67-bdff-381e46dc9181",
+      "provenance": "synthetic_simulation",
+      "status": null
+    },
+    {
+      "sequence": 31,
+      "name": "summary_parse_finished",
+      "scope": "capture-1",
+      "timestamp_ns": 179637283132615,
+      "clock_domain": "process-monotonic-d6d8387b-8629-4a67-bdff-381e46dc9181",
+      "provenance": "synthetic_simulation",
+      "status": "ok"
+    },
+    {
+      "sequence": 32,
+      "name": "evidence_ready",
+      "scope": "capture-1",
+      "timestamp_ns": 179637283161416,
+      "clock_domain": "process-monotonic-d6d8387b-8629-4a67-bdff-381e46dc9181",
+      "provenance": "synthetic_simulation",
+      "status": null
+    },
+    {
+      "sequence": 33,
+      "name": "evidence_collection_finished",
+      "scope": "capture-1",
+      "timestamp_ns": 179637283248801,
+      "clock_domain": "process-monotonic-d6d8387b-8629-4a67-bdff-381e46dc9181",
+      "provenance": "synthetic_simulation",
+      "status": "ok"
+    }
+  ]
+}

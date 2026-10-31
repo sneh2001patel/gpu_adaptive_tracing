@@ -1,0 +1,31 @@
+{
+  "command": [
+    "/workspace/envs/vllm/bin/python",
+    "-m",
+    "revision.scripts.serve_vllm_cuda",
+    "--model",
+    "/dev/shm/hf-cache/hub/models--Qwen--Qwen2.5-7B-Instruct/snapshots/a09a35458c702b33eeacc393d103063234e8bc28",
+    "--served-model-name",
+    "Qwen/Qwen2.5-7B-Instruct",
+    "--host",
+    "127.0.0.1",
+    "--port",
+    "8011",
+    "--dtype",
+    "half",
+    "--enforce-eager",
+    "--gpu-memory-utilization",
+    "0.85",
+    "--max-model-len",
+    "2048",
+    "--max-num-seqs",
+    "16",
+    "--max-num-batched-tokens",
+    "2048",
+    "--worker-cls",
+    "revision.tracing.vllm_cuda_worker.CudaCaptureWorker",
+    "--disable-log-requests"
+  ],
+  "started_at_ns": 167211145521901,
+  "clock_domain": "process-monotonic-9762754f-b3a8-47ed-99d8-4b38e882c116"
+}

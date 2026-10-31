@@ -1,0 +1,995 @@
+{
+  "version": "event_challenge_preparation_v1",
+  "status": "CPU_prepared_not_executed",
+  "launch_supported": false,
+  "study_ready": false,
+  "calibration_enabled": false,
+  "reference_export_enabled": false,
+  "protocol_frozen": false,
+  "input_sha256": {
+    "corpus": "feccce39d603eaac5cbcefc7366e207972e37fa5ee7edfe9d46f0605b5ecdd2c",
+    "prospective_spec": "a97e6e1dbda48379705795d44990e42027880c1341e5fb79921d761b00fbcd5b",
+    "commission": "448e6ba33b9656ac2e6451be3d3443792510c7c6c19577e05e72e494aba98ab5",
+    "commission_audit": "90d8194bbfd0ea66dea1f545755557a065ae320c385ce0581d2cfb8647356886"
+  },
+  "budgets": {
+    "max_jobs": 16,
+    "max_total_requests_including_warmups": 3612,
+    "max_requests_per_session": 512,
+    "max_journal_events": 4096,
+    "max_probes_per_session": 32,
+    "max_client_inflight": 32,
+    "server_max_num_seqs": 16,
+    "horizon_ns": 60000000000,
+    "drain_ns": 30000000000,
+    "request_timeout_s": 30,
+    "max_admission_lateness_ns": 50000000,
+    "per_job_work_deadline_s": 240,
+    "cleanup_deadline_s": 45,
+    "max_schedule_bytes": 2097152
+  },
+  "common": {
+    "prefix_caching": false,
+    "warmup_requests": 1,
+    "warmup_output_tokens": 32,
+    "prompt_tokens": 1072,
+    "output_tokens": 32,
+    "metric_interval_ns": 500000000,
+    "max_metric_receipt_gap_ns": 750000000,
+    "min_successful_completions_for_p95_review": 20,
+    "latency_ratio_review_flag": 1.25,
+    "metric_collection_both_roles": true,
+    "profiler_enabled": false,
+    "extra_inference_probes": 0,
+    "warmup_request_id": "challenge-warmup",
+    "warmup_outside_case": true,
+    "wire_overlay": "request_id=offered_request_id,n=1; exact same transformation in both roles",
+    "cache_verification": "actual_effective_cache_config_required_in_both_roles_before_workload",
+    "quiet_barriers": "two_before_and_two_after_case_outside_measured_horizon_in_every_role",
+    "event_probe_schedule": "before_case_after_warmup; declared offsets; final_after_drain; off_role_records_noop_markers",
+    "guard_failure": "retain_failure_no_retry_no_unplanned_rate_or_threshold_adjustment"
+  },
+  "selection": {
+    "primary_job_id": "rate_ladder-b0-off",
+    "rule": "lowest_complete_level_with_three_consecutive_positive_queue_receipts_spanning_at_least_one_second",
+    "min_receipts_per_level": 12,
+    "min_positive_streak": 3,
+    "min_positive_span_ns": 1000000000,
+    "require_all_five_levels_covered": true,
+    "require_exact_successful_work_and_timely_admission": true,
+    "no_candidate": "no_sampled_pressure_candidate_stop_dependent_cases_no_cause_label",
+    "incomplete": "incomplete_evidence_stop_dependent_cases",
+    "use_classifier": false,
+    "use_instrumented_ladder": false
+  },
+  "observation_limits": [
+    "sampled_queue_evidence_not_continuous_queue_duration_or_causal_diagnosis",
+    "two_order_blocks_are_engineering_controls_not_statistical_power",
+    "receipt_withholding_is_consumer_unavailability_not_profiler_failure_or_true_journal_loss",
+    "latency_ratio_is_review_flag_not_equivalence; missing_or_mismatched_work_is_ineligible"
+  ],
+  "schedules": [
+    {
+      "schedule_id": "rate_ladder",
+      "path": "rate_ladder.json",
+      "file_sha256": "866c7623e7b846ce1074cf525f2bc23bd54d842068a72e6e66a5f1e8ffd1f0f6",
+      "wire_content_sha256": "881ab8dd82a107316d6dba62ca2b285aad5ac94795b6e75e21b5ee5842d63c5f",
+      "case_id": "rate_ladder",
+      "rate_rps": null,
+      "offered_requests": 124,
+      "total_requests_with_warmup": 125,
+      "phase_table": [
+        {
+          "name": "level-0",
+          "start_ns": 0,
+          "end_ns": 8000000000,
+          "rate_rps": 0.5
+        },
+        {
+          "name": "level-1",
+          "start_ns": 8000000000,
+          "end_ns": 16000000000,
+          "rate_rps": 1
+        },
+        {
+          "name": "level-2",
+          "start_ns": 16000000000,
+          "end_ns": 24000000000,
+          "rate_rps": 2
+        },
+        {
+          "name": "level-3",
+          "start_ns": 24000000000,
+          "end_ns": 32000000000,
+          "rate_rps": 4
+        },
+        {
+          "name": "level-4",
+          "start_ns": 32000000000,
+          "end_ns": 40000000000,
+          "rate_rps": 8
+        },
+        {
+          "name": "removal",
+          "start_ns": 40000000000,
+          "end_ns": 60000000000,
+          "rate_rps": 0
+        }
+      ],
+      "event_probe_offsets_ns": [
+        8000000000,
+        10000000000,
+        16000000000,
+        20000000000,
+        24000000000,
+        30000000000,
+        32000000000,
+        40000000000,
+        50000000000,
+        60000000000
+      ],
+      "total_event_probes_including_before_and_after_drain": 12
+    },
+    {
+      "schedule_id": "pressure_then_removal-0.5",
+      "path": "pressure_then_removal-0.5.json",
+      "file_sha256": "47918763f4c694b69fafca3cd194c449dc39f5337c2fd90768586fbf93de38d8",
+      "wire_content_sha256": "87f87d59675aa09b7c83a99b31edc01d27b674d4ca109d2ea4623c7498e0e506",
+      "case_id": "pressure_then_removal",
+      "rate_rps": 0.5,
+      "offered_requests": 20,
+      "total_requests_with_warmup": 21,
+      "phase_table": [
+        {
+          "name": "baseline",
+          "start_ns": 0,
+          "end_ns": 10000000000,
+          "rate_rps": 0.5
+        },
+        {
+          "name": "pressure",
+          "start_ns": 10000000000,
+          "end_ns": 40000000000,
+          "rate_rps": 0.5
+        },
+        {
+          "name": "removal",
+          "start_ns": 40000000000,
+          "end_ns": 60000000000,
+          "rate_rps": 0
+        }
+      ],
+      "event_probe_offsets_ns": [
+        10000000000,
+        20000000000,
+        30000000000,
+        40000000000,
+        50000000000,
+        60000000000
+      ],
+      "total_event_probes_including_before_and_after_drain": 8
+    },
+    {
+      "schedule_id": "pressure_then_removal-1",
+      "path": "pressure_then_removal-1.json",
+      "file_sha256": "1ac8b8ecf8ba701c29f0d88b9ad7912b1515fc4282f925a73b75272bb062b0f7",
+      "wire_content_sha256": "55ad9d7161a1a606c5ef47086f663015df27ffa74d15cbf845070efb43c36fc2",
+      "case_id": "pressure_then_removal",
+      "rate_rps": 1,
+      "offered_requests": 35,
+      "total_requests_with_warmup": 36,
+      "phase_table": [
+        {
+          "name": "baseline",
+          "start_ns": 0,
+          "end_ns": 10000000000,
+          "rate_rps": 0.5
+        },
+        {
+          "name": "pressure",
+          "start_ns": 10000000000,
+          "end_ns": 40000000000,
+          "rate_rps": 1
+        },
+        {
+          "name": "removal",
+          "start_ns": 40000000000,
+          "end_ns": 60000000000,
+          "rate_rps": 0
+        }
+      ],
+      "event_probe_offsets_ns": [
+        10000000000,
+        20000000000,
+        30000000000,
+        40000000000,
+        50000000000,
+        60000000000
+      ],
+      "total_event_probes_including_before_and_after_drain": 8
+    },
+    {
+      "schedule_id": "pressure_then_removal-2",
+      "path": "pressure_then_removal-2.json",
+      "file_sha256": "9365292e90f841bddbb81403963fb1e998a564805981eac3c02bbe9e3a36ace6",
+      "wire_content_sha256": "c0d660d312f051c86c300847f23a3facdec2152f2bd6b388b9817318d0d96a51",
+      "case_id": "pressure_then_removal",
+      "rate_rps": 2,
+      "offered_requests": 65,
+      "total_requests_with_warmup": 66,
+      "phase_table": [
+        {
+          "name": "baseline",
+          "start_ns": 0,
+          "end_ns": 10000000000,
+          "rate_rps": 0.5
+        },
+        {
+          "name": "pressure",
+          "start_ns": 10000000000,
+          "end_ns": 40000000000,
+          "rate_rps": 2
+        },
+        {
+          "name": "removal",
+          "start_ns": 40000000000,
+          "end_ns": 60000000000,
+          "rate_rps": 0
+        }
+      ],
+      "event_probe_offsets_ns": [
+        10000000000,
+        20000000000,
+        30000000000,
+        40000000000,
+        50000000000,
+        60000000000
+      ],
+      "total_event_probes_including_before_and_after_drain": 8
+    },
+    {
+      "schedule_id": "pressure_then_removal-4",
+      "path": "pressure_then_removal-4.json",
+      "file_sha256": "fd9f96676ee165cc08a7a07c8c65872f8ed725099f702a64fdf3b005570804b6",
+      "wire_content_sha256": "afaa6eb289c625e976a0733e9a8b039e04aae4f99150a6b379ae660071f001de",
+      "case_id": "pressure_then_removal",
+      "rate_rps": 4,
+      "offered_requests": 125,
+      "total_requests_with_warmup": 126,
+      "phase_table": [
+        {
+          "name": "baseline",
+          "start_ns": 0,
+          "end_ns": 10000000000,
+          "rate_rps": 0.5
+        },
+        {
+          "name": "pressure",
+          "start_ns": 10000000000,
+          "end_ns": 40000000000,
+          "rate_rps": 4
+        },
+        {
+          "name": "removal",
+          "start_ns": 40000000000,
+          "end_ns": 60000000000,
+          "rate_rps": 0
+        }
+      ],
+      "event_probe_offsets_ns": [
+        10000000000,
+        20000000000,
+        30000000000,
+        40000000000,
+        50000000000,
+        60000000000
+      ],
+      "total_event_probes_including_before_and_after_drain": 8
+    },
+    {
+      "schedule_id": "pressure_then_removal-8",
+      "path": "pressure_then_removal-8.json",
+      "file_sha256": "9e1848ad064edfc5578319d3d1ade12be21ccce780b6cb2a243104a51933f0a6",
+      "wire_content_sha256": "a7dd20d6189df3fda7a160763507ef5e3bd900a04f0a83a67b87e9a4f97765f1",
+      "case_id": "pressure_then_removal",
+      "rate_rps": 8,
+      "offered_requests": 245,
+      "total_requests_with_warmup": 246,
+      "phase_table": [
+        {
+          "name": "baseline",
+          "start_ns": 0,
+          "end_ns": 10000000000,
+          "rate_rps": 0.5
+        },
+        {
+          "name": "pressure",
+          "start_ns": 10000000000,
+          "end_ns": 40000000000,
+          "rate_rps": 8
+        },
+        {
+          "name": "removal",
+          "start_ns": 40000000000,
+          "end_ns": 60000000000,
+          "rate_rps": 0
+        }
+      ],
+      "event_probe_offsets_ns": [
+        10000000000,
+        20000000000,
+        30000000000,
+        40000000000,
+        50000000000,
+        60000000000
+      ],
+      "total_event_probes_including_before_and_after_drain": 8
+    },
+    {
+      "schedule_id": "lull_then_recurrence-0.5",
+      "path": "lull_then_recurrence-0.5.json",
+      "file_sha256": "ad2c5485b75280805bca9516e169767035a30ed9b2c98f4aece11ad8fb7ba00f",
+      "wire_content_sha256": "5bb93da34c08ab4977aa871c52cd3515e188debcfada103677cccdc4a3ed13a6",
+      "case_id": "lull_then_recurrence",
+      "rate_rps": 0.5,
+      "offered_requests": 23,
+      "total_requests_with_warmup": 24,
+      "phase_table": [
+        {
+          "name": "baseline",
+          "start_ns": 0,
+          "end_ns": 10000000000,
+          "rate_rps": 0.5
+        },
+        {
+          "name": "pressure",
+          "start_ns": 10000000000,
+          "end_ns": 25000000000,
+          "rate_rps": 0.5
+        },
+        {
+          "name": "lull",
+          "start_ns": 25000000000,
+          "end_ns": 30000000000,
+          "rate_rps": 0
+        },
+        {
+          "name": "recurrence",
+          "start_ns": 30000000000,
+          "end_ns": 50000000000,
+          "rate_rps": 0.5
+        },
+        {
+          "name": "removal",
+          "start_ns": 50000000000,
+          "end_ns": 60000000000,
+          "rate_rps": 0
+        }
+      ],
+      "event_probe_offsets_ns": [
+        10000000000,
+        20000000000,
+        25000000000,
+        30000000000,
+        40000000000,
+        50000000000,
+        60000000000
+      ],
+      "total_event_probes_including_before_and_after_drain": 9
+    },
+    {
+      "schedule_id": "lull_then_recurrence-1",
+      "path": "lull_then_recurrence-1.json",
+      "file_sha256": "787854f2c07b440746acc1a9aaef6e0b6520c38dc1d0e420713b7669ea1a679f",
+      "wire_content_sha256": "78a70f83b3010eb6ca10edc74c4d91e8f8a95e1293cf303d3a45e7237a7e3ab8",
+      "case_id": "lull_then_recurrence",
+      "rate_rps": 1,
+      "offered_requests": 40,
+      "total_requests_with_warmup": 41,
+      "phase_table": [
+        {
+          "name": "baseline",
+          "start_ns": 0,
+          "end_ns": 10000000000,
+          "rate_rps": 0.5
+        },
+        {
+          "name": "pressure",
+          "start_ns": 10000000000,
+          "end_ns": 25000000000,
+          "rate_rps": 1
+        },
+        {
+          "name": "lull",
+          "start_ns": 25000000000,
+          "end_ns": 30000000000,
+          "rate_rps": 0
+        },
+        {
+          "name": "recurrence",
+          "start_ns": 30000000000,
+          "end_ns": 50000000000,
+          "rate_rps": 1
+        },
+        {
+          "name": "removal",
+          "start_ns": 50000000000,
+          "end_ns": 60000000000,
+          "rate_rps": 0
+        }
+      ],
+      "event_probe_offsets_ns": [
+        10000000000,
+        20000000000,
+        25000000000,
+        30000000000,
+        40000000000,
+        50000000000,
+        60000000000
+      ],
+      "total_event_probes_including_before_and_after_drain": 9
+    },
+    {
+      "schedule_id": "lull_then_recurrence-2",
+      "path": "lull_then_recurrence-2.json",
+      "file_sha256": "29e77e1f5af8b88b6c7246def48bac2869be4b607afaa04f1b731287a90e9307",
+      "wire_content_sha256": "1880bb24de9dfab1a56e2ac88c6ac901f374df0bffc3637b6680f031747b1ab5",
+      "case_id": "lull_then_recurrence",
+      "rate_rps": 2,
+      "offered_requests": 75,
+      "total_requests_with_warmup": 76,
+      "phase_table": [
+        {
+          "name": "baseline",
+          "start_ns": 0,
+          "end_ns": 10000000000,
+          "rate_rps": 0.5
+        },
+        {
+          "name": "pressure",
+          "start_ns": 10000000000,
+          "end_ns": 25000000000,
+          "rate_rps": 2
+        },
+        {
+          "name": "lull",
+          "start_ns": 25000000000,
+          "end_ns": 30000000000,
+          "rate_rps": 0
+        },
+        {
+          "name": "recurrence",
+          "start_ns": 30000000000,
+          "end_ns": 50000000000,
+          "rate_rps": 2
+        },
+        {
+          "name": "removal",
+          "start_ns": 50000000000,
+          "end_ns": 60000000000,
+          "rate_rps": 0
+        }
+      ],
+      "event_probe_offsets_ns": [
+        10000000000,
+        20000000000,
+        25000000000,
+        30000000000,
+        40000000000,
+        50000000000,
+        60000000000
+      ],
+      "total_event_probes_including_before_and_after_drain": 9
+    },
+    {
+      "schedule_id": "lull_then_recurrence-4",
+      "path": "lull_then_recurrence-4.json",
+      "file_sha256": "e839ce8958db01439e6f9f607c80b3a8d8b4a81ffd34753c02b8740ba1720ab4",
+      "wire_content_sha256": "c69a4979031e2aaa881bfcab52ca4da777cbb826b85447d33198f26df53bb821",
+      "case_id": "lull_then_recurrence",
+      "rate_rps": 4,
+      "offered_requests": 145,
+      "total_requests_with_warmup": 146,
+      "phase_table": [
+        {
+          "name": "baseline",
+          "start_ns": 0,
+          "end_ns": 10000000000,
+          "rate_rps": 0.5
+        },
+        {
+          "name": "pressure",
+          "start_ns": 10000000000,
+          "end_ns": 25000000000,
+          "rate_rps": 4
+        },
+        {
+          "name": "lull",
+          "start_ns": 25000000000,
+          "end_ns": 30000000000,
+          "rate_rps": 0
+        },
+        {
+          "name": "recurrence",
+          "start_ns": 30000000000,
+          "end_ns": 50000000000,
+          "rate_rps": 4
+        },
+        {
+          "name": "removal",
+          "start_ns": 50000000000,
+          "end_ns": 60000000000,
+          "rate_rps": 0
+        }
+      ],
+      "event_probe_offsets_ns": [
+        10000000000,
+        20000000000,
+        25000000000,
+        30000000000,
+        40000000000,
+        50000000000,
+        60000000000
+      ],
+      "total_event_probes_including_before_and_after_drain": 9
+    },
+    {
+      "schedule_id": "lull_then_recurrence-8",
+      "path": "lull_then_recurrence-8.json",
+      "file_sha256": "57b8b96fbfbc3f9461ea7c9ffd2a66c0c85cc24759677b60fc27ac39b55c1f94",
+      "wire_content_sha256": "e5a049c8fbbbab01849d8e1ce26fb21f38a7833a30428f5c06a80938696551f0",
+      "case_id": "lull_then_recurrence",
+      "rate_rps": 8,
+      "offered_requests": 285,
+      "total_requests_with_warmup": 286,
+      "phase_table": [
+        {
+          "name": "baseline",
+          "start_ns": 0,
+          "end_ns": 10000000000,
+          "rate_rps": 0.5
+        },
+        {
+          "name": "pressure",
+          "start_ns": 10000000000,
+          "end_ns": 25000000000,
+          "rate_rps": 8
+        },
+        {
+          "name": "lull",
+          "start_ns": 25000000000,
+          "end_ns": 30000000000,
+          "rate_rps": 0
+        },
+        {
+          "name": "recurrence",
+          "start_ns": 30000000000,
+          "end_ns": 50000000000,
+          "rate_rps": 8
+        },
+        {
+          "name": "removal",
+          "start_ns": 50000000000,
+          "end_ns": 60000000000,
+          "rate_rps": 0
+        }
+      ],
+      "event_probe_offsets_ns": [
+        10000000000,
+        20000000000,
+        25000000000,
+        30000000000,
+        40000000000,
+        50000000000,
+        60000000000
+      ],
+      "total_event_probes_including_before_and_after_drain": 9
+    },
+    {
+      "schedule_id": "unresolved_source_gap_control-0.5",
+      "path": "unresolved_source_gap_control-0.5.json",
+      "file_sha256": "c831e084bb5c6fd8fa1d0fcfca7f07dcf25b26cd6ba9fa55694c273499096442",
+      "wire_content_sha256": "7991315bd806cfde4b8b61c141eda80e6ccec4e7fa3279885bab141f742dce88",
+      "case_id": "unresolved_source_gap_control",
+      "rate_rps": 0.5,
+      "offered_requests": 20,
+      "total_requests_with_warmup": 21,
+      "phase_table": [
+        {
+          "name": "baseline",
+          "start_ns": 0,
+          "end_ns": 10000000000,
+          "rate_rps": 0.5
+        },
+        {
+          "name": "pressure",
+          "start_ns": 10000000000,
+          "end_ns": 40000000000,
+          "rate_rps": 0.5
+        },
+        {
+          "name": "removal",
+          "start_ns": 40000000000,
+          "end_ns": 60000000000,
+          "rate_rps": 0
+        }
+      ],
+      "event_probe_offsets_ns": [
+        10000000000,
+        20000000000,
+        30000000000,
+        40000000000,
+        50000000000,
+        60000000000
+      ],
+      "total_event_probes_including_before_and_after_drain": 8
+    },
+    {
+      "schedule_id": "unresolved_source_gap_control-1",
+      "path": "unresolved_source_gap_control-1.json",
+      "file_sha256": "e339981d3a4ea06479837d3f4ed9cd3fb8f461b6039cdc020d57bbb48554ed36",
+      "wire_content_sha256": "2b5cbe3a630eed5541ea6aa35566314bb5ffd5b737aa94733f94b31abca75473",
+      "case_id": "unresolved_source_gap_control",
+      "rate_rps": 1,
+      "offered_requests": 35,
+      "total_requests_with_warmup": 36,
+      "phase_table": [
+        {
+          "name": "baseline",
+          "start_ns": 0,
+          "end_ns": 10000000000,
+          "rate_rps": 0.5
+        },
+        {
+          "name": "pressure",
+          "start_ns": 10000000000,
+          "end_ns": 40000000000,
+          "rate_rps": 1
+        },
+        {
+          "name": "removal",
+          "start_ns": 40000000000,
+          "end_ns": 60000000000,
+          "rate_rps": 0
+        }
+      ],
+      "event_probe_offsets_ns": [
+        10000000000,
+        20000000000,
+        30000000000,
+        40000000000,
+        50000000000,
+        60000000000
+      ],
+      "total_event_probes_including_before_and_after_drain": 8
+    },
+    {
+      "schedule_id": "unresolved_source_gap_control-2",
+      "path": "unresolved_source_gap_control-2.json",
+      "file_sha256": "2b65b097cc809685c96cad0f04bb2e68f6dd1af788f2ad18b972ad8cae80b34b",
+      "wire_content_sha256": "64457e1aed0403d86b027b430069265be8f466b2455d957887d97f7c548aee9f",
+      "case_id": "unresolved_source_gap_control",
+      "rate_rps": 2,
+      "offered_requests": 65,
+      "total_requests_with_warmup": 66,
+      "phase_table": [
+        {
+          "name": "baseline",
+          "start_ns": 0,
+          "end_ns": 10000000000,
+          "rate_rps": 0.5
+        },
+        {
+          "name": "pressure",
+          "start_ns": 10000000000,
+          "end_ns": 40000000000,
+          "rate_rps": 2
+        },
+        {
+          "name": "removal",
+          "start_ns": 40000000000,
+          "end_ns": 60000000000,
+          "rate_rps": 0
+        }
+      ],
+      "event_probe_offsets_ns": [
+        10000000000,
+        20000000000,
+        30000000000,
+        40000000000,
+        50000000000,
+        60000000000
+      ],
+      "total_event_probes_including_before_and_after_drain": 8
+    },
+    {
+      "schedule_id": "unresolved_source_gap_control-4",
+      "path": "unresolved_source_gap_control-4.json",
+      "file_sha256": "b623efdca137392ba19463eafc1bf40b16deff14ab5d0b35c29bc3d76e3db4c2",
+      "wire_content_sha256": "353223617fc42416d7b340d7d7996e04bd371fef7f5eff97a083accf177d384d",
+      "case_id": "unresolved_source_gap_control",
+      "rate_rps": 4,
+      "offered_requests": 125,
+      "total_requests_with_warmup": 126,
+      "phase_table": [
+        {
+          "name": "baseline",
+          "start_ns": 0,
+          "end_ns": 10000000000,
+          "rate_rps": 0.5
+        },
+        {
+          "name": "pressure",
+          "start_ns": 10000000000,
+          "end_ns": 40000000000,
+          "rate_rps": 4
+        },
+        {
+          "name": "removal",
+          "start_ns": 40000000000,
+          "end_ns": 60000000000,
+          "rate_rps": 0
+        }
+      ],
+      "event_probe_offsets_ns": [
+        10000000000,
+        20000000000,
+        30000000000,
+        40000000000,
+        50000000000,
+        60000000000
+      ],
+      "total_event_probes_including_before_and_after_drain": 8
+    },
+    {
+      "schedule_id": "unresolved_source_gap_control-8",
+      "path": "unresolved_source_gap_control-8.json",
+      "file_sha256": "cc9e55c9e2af21bebf4d7492abb94353834c10e87be33963a430e13c85f1d3ed",
+      "wire_content_sha256": "7dd1226c3d74c9a00a8ca00487c0ce6478ae5cbd46a794fefc4d8d20d2283c28",
+      "case_id": "unresolved_source_gap_control",
+      "rate_rps": 8,
+      "offered_requests": 245,
+      "total_requests_with_warmup": 246,
+      "phase_table": [
+        {
+          "name": "baseline",
+          "start_ns": 0,
+          "end_ns": 10000000000,
+          "rate_rps": 0.5
+        },
+        {
+          "name": "pressure",
+          "start_ns": 10000000000,
+          "end_ns": 40000000000,
+          "rate_rps": 8
+        },
+        {
+          "name": "removal",
+          "start_ns": 40000000000,
+          "end_ns": 60000000000,
+          "rate_rps": 0
+        }
+      ],
+      "event_probe_offsets_ns": [
+        10000000000,
+        20000000000,
+        30000000000,
+        40000000000,
+        50000000000,
+        60000000000
+      ],
+      "total_event_probes_including_before_and_after_drain": 8
+    }
+  ],
+  "jobs": [
+    {
+      "job_id": "rate_ladder-b0-off",
+      "case_id": "rate_ladder",
+      "block": 0,
+      "role": "off",
+      "event_instrumentation": false,
+      "prefix_caching": false,
+      "fresh_owned_restart_required": true,
+      "schedule_id": "rate_ladder",
+      "evidence_withheld_offsets_ns": null,
+      "executed": false
+    },
+    {
+      "job_id": "rate_ladder-b0-on",
+      "case_id": "rate_ladder",
+      "block": 0,
+      "role": "on",
+      "event_instrumentation": true,
+      "prefix_caching": false,
+      "fresh_owned_restart_required": true,
+      "schedule_id": "rate_ladder",
+      "evidence_withheld_offsets_ns": null,
+      "executed": false
+    },
+    {
+      "job_id": "rate_ladder-b1-on",
+      "case_id": "rate_ladder",
+      "block": 1,
+      "role": "on",
+      "event_instrumentation": true,
+      "prefix_caching": false,
+      "fresh_owned_restart_required": true,
+      "schedule_id": "rate_ladder",
+      "evidence_withheld_offsets_ns": null,
+      "executed": false
+    },
+    {
+      "job_id": "rate_ladder-b1-off",
+      "case_id": "rate_ladder",
+      "block": 1,
+      "role": "off",
+      "event_instrumentation": false,
+      "prefix_caching": false,
+      "fresh_owned_restart_required": true,
+      "schedule_id": "rate_ladder",
+      "evidence_withheld_offsets_ns": null,
+      "executed": false
+    },
+    {
+      "job_id": "pressure_then_removal-b0-off",
+      "case_id": "pressure_then_removal",
+      "block": 0,
+      "role": "off",
+      "event_instrumentation": false,
+      "prefix_caching": false,
+      "fresh_owned_restart_required": true,
+      "schedule_id": "select_exact_bank_entry_using_primary_off_ladder_rate",
+      "evidence_withheld_offsets_ns": null,
+      "executed": false
+    },
+    {
+      "job_id": "pressure_then_removal-b0-on",
+      "case_id": "pressure_then_removal",
+      "block": 0,
+      "role": "on",
+      "event_instrumentation": true,
+      "prefix_caching": false,
+      "fresh_owned_restart_required": true,
+      "schedule_id": "select_exact_bank_entry_using_primary_off_ladder_rate",
+      "evidence_withheld_offsets_ns": null,
+      "executed": false
+    },
+    {
+      "job_id": "pressure_then_removal-b1-on",
+      "case_id": "pressure_then_removal",
+      "block": 1,
+      "role": "on",
+      "event_instrumentation": true,
+      "prefix_caching": false,
+      "fresh_owned_restart_required": true,
+      "schedule_id": "select_exact_bank_entry_using_primary_off_ladder_rate",
+      "evidence_withheld_offsets_ns": null,
+      "executed": false
+    },
+    {
+      "job_id": "pressure_then_removal-b1-off",
+      "case_id": "pressure_then_removal",
+      "block": 1,
+      "role": "off",
+      "event_instrumentation": false,
+      "prefix_caching": false,
+      "fresh_owned_restart_required": true,
+      "schedule_id": "select_exact_bank_entry_using_primary_off_ladder_rate",
+      "evidence_withheld_offsets_ns": null,
+      "executed": false
+    },
+    {
+      "job_id": "lull_then_recurrence-b0-off",
+      "case_id": "lull_then_recurrence",
+      "block": 0,
+      "role": "off",
+      "event_instrumentation": false,
+      "prefix_caching": false,
+      "fresh_owned_restart_required": true,
+      "schedule_id": "select_exact_bank_entry_using_primary_off_ladder_rate",
+      "evidence_withheld_offsets_ns": null,
+      "executed": false
+    },
+    {
+      "job_id": "lull_then_recurrence-b0-on",
+      "case_id": "lull_then_recurrence",
+      "block": 0,
+      "role": "on",
+      "event_instrumentation": true,
+      "prefix_caching": false,
+      "fresh_owned_restart_required": true,
+      "schedule_id": "select_exact_bank_entry_using_primary_off_ladder_rate",
+      "evidence_withheld_offsets_ns": null,
+      "executed": false
+    },
+    {
+      "job_id": "lull_then_recurrence-b1-on",
+      "case_id": "lull_then_recurrence",
+      "block": 1,
+      "role": "on",
+      "event_instrumentation": true,
+      "prefix_caching": false,
+      "fresh_owned_restart_required": true,
+      "schedule_id": "select_exact_bank_entry_using_primary_off_ladder_rate",
+      "evidence_withheld_offsets_ns": null,
+      "executed": false
+    },
+    {
+      "job_id": "lull_then_recurrence-b1-off",
+      "case_id": "lull_then_recurrence",
+      "block": 1,
+      "role": "off",
+      "event_instrumentation": false,
+      "prefix_caching": false,
+      "fresh_owned_restart_required": true,
+      "schedule_id": "select_exact_bank_entry_using_primary_off_ladder_rate",
+      "evidence_withheld_offsets_ns": null,
+      "executed": false
+    },
+    {
+      "job_id": "unresolved_source_gap_control-b0-complete",
+      "case_id": "unresolved_source_gap_control",
+      "block": 0,
+      "role": "complete",
+      "event_instrumentation": true,
+      "prefix_caching": false,
+      "fresh_owned_restart_required": true,
+      "schedule_id": "select_exact_bank_entry_using_primary_off_ladder_rate",
+      "evidence_withheld_offsets_ns": null,
+      "executed": false
+    },
+    {
+      "job_id": "unresolved_source_gap_control-b0-withheld",
+      "case_id": "unresolved_source_gap_control",
+      "block": 0,
+      "role": "withheld",
+      "event_instrumentation": true,
+      "prefix_caching": false,
+      "fresh_owned_restart_required": true,
+      "schedule_id": "select_exact_bank_entry_using_primary_off_ladder_rate",
+      "evidence_withheld_offsets_ns": [
+        10000000000,
+        40000000000
+      ],
+      "executed": false
+    },
+    {
+      "job_id": "unresolved_source_gap_control-b1-withheld",
+      "case_id": "unresolved_source_gap_control",
+      "block": 1,
+      "role": "withheld",
+      "event_instrumentation": true,
+      "prefix_caching": false,
+      "fresh_owned_restart_required": true,
+      "schedule_id": "select_exact_bank_entry_using_primary_off_ladder_rate",
+      "evidence_withheld_offsets_ns": [
+        10000000000,
+        40000000000
+      ],
+      "executed": false
+    },
+    {
+      "job_id": "unresolved_source_gap_control-b1-complete",
+      "case_id": "unresolved_source_gap_control",
+      "block": 1,
+      "role": "complete",
+      "event_instrumentation": true,
+      "prefix_caching": false,
+      "fresh_owned_restart_required": true,
+      "schedule_id": "select_exact_bank_entry_using_primary_off_ladder_rate",
+      "evidence_withheld_offsets_ns": null,
+      "executed": false
+    }
+  ],
+  "scientific_limits": {
+    "reference_latency_mismatch_tolerance": null,
+    "precision_or_power_target": null,
+    "independent_reference_repetitions": null
+  },
+  "next_blockers": [
+    "owned_concurrent_challenge_runner_and_raw_receipt_adapters",
+    "effective_cache_receipt_for_uninstrumented_worker",
+    "CPU_lifecycle_control_and_budget_integration",
+    "prospective_packet_hash_and_source_freeze_before_GPU_execution"
+  ]
+}

@@ -1,0 +1,265 @@
+{
+  "run_id": "fixture-timeout",
+  "controller": {
+    "controller_version": "streaming_v4",
+    "policy_version": "stopping_v3",
+    "evidence_mode": "synthetic_simulation",
+    "clock_domain": "simulation-monotonic-af948bbc-0897-45df-8112-c1b50af10db7",
+    "state": "idle",
+    "finished": true,
+    "baseline": {
+      "p95_latency_ms": 100,
+      "source_id": "fixture-calibration",
+      "throughput_rps": null
+    },
+    "config": {
+      "policy": "fixed_burst",
+      "policy_config": {
+        "stability_windows": 2,
+        "repeated_bursts": 3,
+        "max_bursts": 2,
+        "recovery_windows": 2,
+        "recovery_latency_ratio": 1.1,
+        "recovery_gpu_util": 60.0
+      },
+      "latency_trigger_ratio": 1.5,
+      "gpu_trigger_percent": 85.0,
+      "gpu_trigger_windows": 2,
+      "burst_s": 0.2,
+      "startup_timeout_s": 0.5,
+      "evidence_timeout_s": 30.0,
+      "cooldown_s": 0,
+      "change_ratio_factor": 1.5,
+      "change_gpu_points": 20.0,
+      "retry_unresolved": false,
+      "reactivation_enabled": true
+    },
+    "episodes": [
+      {
+        "episode_id": "episode-1",
+        "started_at_ns": 1000000000,
+        "attempts": [
+          "episode-1:capture-1"
+        ],
+        "decisions": [
+          {
+            "decision": {
+              "stop": true,
+              "reason": "fixed_burst_complete",
+              "policy": "fixed_burst",
+              "bursts": 1,
+              "diagnosis_streak": 0,
+              "recovery_streak": 0,
+              "diagnosis_label": null,
+              "policy_condition_met": true
+            },
+            "capture_id": "episode-1:capture-1",
+            "evidence_id": null,
+            "evidence_ready_at_ns": null,
+            "decision_ready_at_ns": 1500000000,
+            "clock_domain": "simulation-monotonic-af948bbc-0897-45df-8112-c1b50af10db7",
+            "status": "capture_failed",
+            "error": "Capture attempt failed: episode-1:capture-1 (startup_timeout)",
+            "provenance": "synthetic_simulation"
+          }
+        ],
+        "round_number": 1,
+        "reactivation_attempts": 0,
+        "recovery_streak": 0,
+        "last_diagnosis": null,
+        "stop_reason": "fixed_burst_complete",
+        "stopped_at_ns": 1500000000,
+        "stop_signature": [
+          2.0,
+          95,
+          1
+        ],
+        "ended_at_ns": 5000000000,
+        "end_reason": "horizon_ended"
+      }
+    ],
+    "capture_timings": {
+      "episode-1:capture-1": {
+        "server_startup_s": 0.5,
+        "target_initialization_s": null,
+        "workload_span_s": null,
+        "shutdown_s": null,
+        "capture_control_window_s": null,
+        "profile_process_wall_s": 0.5,
+        "report_finalization_s": null,
+        "stats_command_s": null,
+        "summary_parse_s": null,
+        "diagnosis_compute_s": null,
+        "lifecycle_total_s": null,
+        "evidence_collection_s": 0.5,
+        "capture_active_s": null,
+        "capture_active_status": "unavailable",
+        "clock_domain": "simulation-monotonic-af948bbc-0897-45df-8112-c1b50af10db7",
+        "timing_provenance": "synthetic_simulation",
+        "timing_schema_version": "timing_v1",
+        "phase_status": {
+          "server_startup": "cancelled",
+          "target_initialization": null,
+          "workload_span": null,
+          "shutdown": null,
+          "capture_control_window": null,
+          "profile_process_wall": "cancelled",
+          "report_finalization": null,
+          "stats_command": null,
+          "summary_parse": null,
+          "diagnosis_compute": null,
+          "lifecycle_total": null,
+          "evidence_collection": "cancelled"
+        },
+        "evidence_ready_at_ns": null,
+        "decision_ready_at_ns": 1500000000
+      }
+    },
+    "events": [
+      {
+        "sequence": 0,
+        "event": "cheap_window_available",
+        "timestamp_ns": 1000000000,
+        "clock_domain": "simulation-monotonic-af948bbc-0897-45df-8112-c1b50af10db7",
+        "provenance": "synthetic_simulation",
+        "state": "idle",
+        "episode_id": null,
+        "window_id": "window-1000000000",
+        "window_start_ns": 0,
+        "window_end_ns": 1000000000,
+        "available_at_ns": 1000000000,
+        "sample_count": 1,
+        "request_count": null,
+        "request_error_count": null,
+        "gpu_sample_count": null,
+        "outstanding_request_count": null,
+        "oldest_pending_ms": null,
+        "p95_latency_ms": 200,
+        "gpu_util": 95,
+        "throughput_rps": 1,
+        "latency_ratio": 2.0,
+        "suspicious": true,
+        "suspicion_reasons": [
+          "latency_regression"
+        ]
+      },
+      {
+        "sequence": 1,
+        "event": "episode_started",
+        "timestamp_ns": 1000000000,
+        "clock_domain": "simulation-monotonic-af948bbc-0897-45df-8112-c1b50af10db7",
+        "provenance": "synthetic_simulation",
+        "state": "idle",
+        "episode_id": "episode-1",
+        "window_id": "window-1000000000"
+      },
+      {
+        "sequence": 2,
+        "event": "state_changed",
+        "timestamp_ns": 1000000000,
+        "clock_domain": "simulation-monotonic-af948bbc-0897-45df-8112-c1b50af10db7",
+        "provenance": "synthetic_simulation",
+        "state": "suspicious",
+        "episode_id": "episode-1",
+        "previous_state": "idle"
+      },
+      {
+        "sequence": 3,
+        "event": "state_changed",
+        "timestamp_ns": 1000000000,
+        "clock_domain": "simulation-monotonic-af948bbc-0897-45df-8112-c1b50af10db7",
+        "provenance": "synthetic_simulation",
+        "state": "starting",
+        "episode_id": "episode-1",
+        "previous_state": "suspicious"
+      },
+      {
+        "sequence": 4,
+        "event": "capture_requested",
+        "timestamp_ns": 1000000000,
+        "clock_domain": "simulation-monotonic-af948bbc-0897-45df-8112-c1b50af10db7",
+        "provenance": "synthetic_simulation",
+        "state": "starting",
+        "episode_id": "episode-1",
+        "capture_id": "episode-1:capture-1",
+        "window_id": "window-1000000000",
+        "round_number": 1
+      },
+      {
+        "sequence": 5,
+        "event": "capture_cancelled",
+        "timestamp_ns": 1500000000,
+        "clock_domain": "simulation-monotonic-af948bbc-0897-45df-8112-c1b50af10db7",
+        "provenance": "synthetic_simulation",
+        "state": "starting",
+        "episode_id": "episode-1",
+        "capture_id": "episode-1:capture-1",
+        "reason": "startup_timeout"
+      },
+      {
+        "sequence": 6,
+        "event": "policy_decision",
+        "timestamp_ns": 1500000000,
+        "clock_domain": "simulation-monotonic-af948bbc-0897-45df-8112-c1b50af10db7",
+        "provenance": "synthetic_simulation",
+        "state": "starting",
+        "episode_id": "episode-1",
+        "capture_id": "episode-1:capture-1",
+        "reason": "fixed_burst_complete",
+        "decision_status": "capture_failed",
+        "evidence_ready_at_ns": null,
+        "diagnosis_label": null
+      },
+      {
+        "sequence": 7,
+        "event": "state_changed",
+        "timestamp_ns": 1500000000,
+        "clock_domain": "simulation-monotonic-af948bbc-0897-45df-8112-c1b50af10db7",
+        "provenance": "synthetic_simulation",
+        "state": "monitoring",
+        "episode_id": "episode-1",
+        "previous_state": "starting"
+      },
+      {
+        "sequence": 8,
+        "event": "heavy_tracing_stopped",
+        "timestamp_ns": 1500000000,
+        "clock_domain": "simulation-monotonic-af948bbc-0897-45df-8112-c1b50af10db7",
+        "provenance": "synthetic_simulation",
+        "state": "monitoring",
+        "episode_id": "episode-1",
+        "reason": "fixed_burst_complete"
+      },
+      {
+        "sequence": 9,
+        "event": "episode_ended",
+        "timestamp_ns": 5000000000,
+        "clock_domain": "simulation-monotonic-af948bbc-0897-45df-8112-c1b50af10db7",
+        "provenance": "synthetic_simulation",
+        "state": "monitoring",
+        "episode_id": "episode-1",
+        "reason": "horizon_ended",
+        "stop_reason": "fixed_burst_complete"
+      },
+      {
+        "sequence": 10,
+        "event": "state_changed",
+        "timestamp_ns": 5000000000,
+        "clock_domain": "simulation-monotonic-af948bbc-0897-45df-8112-c1b50af10db7",
+        "provenance": "synthetic_simulation",
+        "state": "idle",
+        "episode_id": null,
+        "previous_state": "monitoring"
+      },
+      {
+        "sequence": 11,
+        "event": "stream_finished",
+        "timestamp_ns": 5000000000,
+        "clock_domain": "simulation-monotonic-af948bbc-0897-45df-8112-c1b50af10db7",
+        "provenance": "synthetic_simulation",
+        "state": "idle",
+        "episode_id": null
+      }
+    ]
+  }
+}

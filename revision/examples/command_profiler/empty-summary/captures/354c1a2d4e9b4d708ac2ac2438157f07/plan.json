@@ -1,0 +1,54 @@
+{
+  "protocol": "capture_command_v1",
+  "capture_id": "episode-1:capture-2",
+  "token": "354c1a2d4e9b4d708ac2ac2438157f07",
+  "validation": "cpu_contract_only",
+  "plan": {
+    "collect": [
+      "/usr/local/bin/python3",
+      "/Users/snehpatel/Documents/University/research/gpu_adaptive_tracing/revision/scripts/fake_profiler_command.py",
+      "collect",
+      "{directory}",
+      "--mode",
+      "empty-summary"
+    ],
+    "stop": [
+      "/usr/local/bin/python3",
+      "/Users/snehpatel/Documents/University/research/gpu_adaptive_tracing/revision/scripts/fake_profiler_command.py",
+      "stop",
+      "{directory}",
+      "--mode",
+      "empty-summary"
+    ],
+    "export": [
+      "/usr/local/bin/python3",
+      "/Users/snehpatel/Documents/University/research/gpu_adaptive_tracing/revision/scripts/fake_profiler_command.py",
+      "export",
+      "{directory}",
+      "--mode",
+      "empty-summary"
+    ],
+    "parse": [
+      "/usr/local/bin/python3",
+      "/Users/snehpatel/Documents/University/research/gpu_adaptive_tracing/revision/scripts/fake_profiler_command.py",
+      "parse",
+      "{directory}",
+      "--mode",
+      "empty-summary"
+    ],
+    "driver_id": "file_protocol_fixture",
+    "driver_version": "1",
+    "device_uuid": "GPU-fixture",
+    "worker_pids": [
+      4242
+    ],
+    "startup_s": 2,
+    "stop_s": 2,
+    "finalization_s": 2,
+    "export_s": 2,
+    "parse_s": 2,
+    "poll_s": 0.01,
+    "cleanup_grace_s": 0.1,
+    "max_artifact_bytes": 16777216
+  }
+}

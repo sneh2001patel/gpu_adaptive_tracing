@@ -1,0 +1,122 @@
+{
+ "case": "25418",
+ "phase": [
+  60,
+  180
+ ],
+ "baseline": {
+  "p95_base_s": 3.020051956176758,
+  "p95_base_measure": "median over steady windows of p95 in-flight age",
+  "n_windows": 120,
+  "completed_p95_s": 3.9922292232513428,
+  "n_completed": 176,
+  "baseline_ns_per_token": {
+   "gemm": 1398705.0671641792,
+   "attention": 39431.84608208955,
+   "other": 76574.92257462686
+  },
+  "baseline_tokens": 1072.0,
+  "baseline_shares": {
+   "Kernel2<cutlass_80_wmma_tensorop_bf16_s161616gemm_bf16_16x16_128x2_tn_align8>": 0.8204698481489405,
+   "ampere_bf16_s1688gemm_bf16_128_6...": 0.03554181031211956,
+   "ampere_bf16_s1688gemm_bf16_128_4...": 0.025628074860758944,
+   "ampere_bf16_s16816gemm_bf16_25_7...": 0.019320603274591622,
+   "flash_fwd_splitkv_kernel": 0.01631867151461438,
+   "elementwise_kernel": 0.016210095865433958,
+   "Kernel2<cutlass_80_tensorop_bf16_s16816gemm_bf16_128x128_64x3_tn_align2>": 0.009497086820897995,
+   "flash_fwd_splitkv_combine_kernel": 0.006620553278381811,
+   "vectorized_elementwise_kernel": 0.005266446153153824,
+   "rotary_kernel": 0.005005191347513388,
+   "triton_poi_fused_mul_silu_1": 0.00446379052661147,
+   "Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x64_32x4_tn_align8>": 0.0044312354451774795,
+   "unrolled_elementwise_kernel": 0.004019823390278273,
+   "Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_128x64_32x6_tn_align8>": 0.003765052873019254,
+   "ampere_bf16_s16816gemm_bf16_12_5...": 0.0036672422880336445,
+   "triton_red_fused__to_copy_add__2...": 0.003111993456062817,
+   "reshape_and_cache_flash_kernel<__nv_bfloat16>": 0.003093347970733175,
+   "triton_red_fused__to_copy_add__1...": 0.002871544538795237,
+   "triton_poi_fused_cat_3": 0.00242046494671914,
+   "device_kernel": 0.0021863796111635165,
+   "triton_poi_fused_view_4": 0.0013326804596979006,
+   "reduce_kernel": 0.0012040533388287548,
+   "sm86_xmma_fprop_implicit_gemm__3...": 0.0010923540966508451,
+   "CatArrayBatchedCopy_alignedK_contig": 0.0010417447462274312,
+   "_scatter_gather_elementwise_kernel": 0.0003715813173784013,
+   "apply_repetition_penalties_kernel<float>": 0.00032603733611988046,
+   "nchwToNhwcKernel<__nv_bfloat16>": 0.00019786040185979713,
+   "indexSelectSmallIndex<c10::BFloat16>": 0.0001552152282194102,
+   "prepare_varlen_num_blocks_kernel": 0.00011946511514682173,
+   "triton_poi_fused_cat_1": 0.00010228165855851228,
+   "vectorized_gather_kernel": 8.775621209976858e-05,
+   "triton_poi_fused_view_2": 3.821289863981123e-05,
+   "DeviceScanKernel": 1.7046737809633917e-05,
+   "masked_scatter_size_check": 2.364865360874069e-06,
+   "DeviceScanInitKernel": 2.0889644021054277e-06
+  },
+  "baseline_busy_fraction": 0.7469458882890193,
+  "env": "v0110",
+  "version": "0.11.0",
+  "model": "Qwen/Qwen2.5-VL-3B-Instruct",
+  "schedule": "symptoms/25418/healthy.jsonl",
+  "server_args": "--max-model-len 8192 --gpu-memory-utilization 0.9 --limit-mm-per-prompt {\"image\":1} --disable-log-requests"
+ },
+ "fixed": {
+  "error": null,
+  "scheduled": 115,
+  "completed": 115,
+  "ok": 115,
+  "failed": 0,
+  "errors": [],
+  "p50_latency_s": 3.606898069381714,
+  "p95_latency_s": 4.036841630935669,
+  "mean_lateness_s": 0.0,
+  "gen_tokens_per_s": 104.5,
+  "latency_ratio_median": 1.0148339593160693,
+  "latency_ratio_max": 1.345340449558128,
+  "elevated_window_share": 0.0,
+  "waiting_mean": 0.0,
+  "kv_usage_mean": 0.004,
+  "preemptions_per_s_mean": 0.0,
+  "gpu_util_mean": 0.876,
+  "cheap_diagnoses": [
+   [
+    "healthy",
+    83
+   ],
+   [
+    null,
+    37
+   ]
+  ],
+  "episode": {
+   "started_window": "w00006",
+   "stopped_window": null,
+   "decision": {
+    "stop": true,
+    "reason": "horizon_ended",
+    "policy": "NT"
+   },
+   "bursts": 0,
+   "final_state": "done"
+  }
+ },
+ "bug": {
+  "error": "TimeoutError: timed out",
+  "scheduled": 115,
+  "completed": 0,
+  "ok": 0,
+  "failed": 0,
+  "errors": [],
+  "p50_latency_s": null,
+  "p95_latency_s": null,
+  "mean_lateness_s": null,
+  "gen_tokens_per_s": null
+ },
+ "bug_over_fixed": {
+  "p50_latency": null,
+  "p95_latency": null,
+  "gen_tokens_per_s": null,
+  "completed": 0.0
+ },
+ "symptom_shown": false
+}

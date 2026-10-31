@@ -1,0 +1,212 @@
+{
+  "version": "paired_adjudication_packet_v1",
+  "record_role": "artifact_packet_not_adjudicated_reference",
+  "status": "awaiting_blinded_assessment",
+  "references_created": 0,
+  "references_locked": 0,
+  "predictions_computed": false,
+  "jobs": [
+    {
+      "job_id": "job-0",
+      "directory": "job-0",
+      "pair_id": "short",
+      "role": "feature_collection",
+      "order_in_pair": 0,
+      "schedule_sha256": "22164fc17a61164461782863cbbbeac275edc992384dc506901438c80d8ba2c5",
+      "worker_pid": 4974,
+      "generation": 0,
+      "session_nonce": "75b1a73ef80a41f5950484aef04beed7",
+      "offered": 2,
+      "completed": 2,
+      "request_latency_ms": [
+        1887.665365,
+        1887.731804
+      ],
+      "has_trace": false,
+      "correlation_limit": "separate_execution_not_same_request_GPU_event_correlation"
+    },
+    {
+      "job_id": "job-1",
+      "directory": "job-1",
+      "pair_id": "short",
+      "role": "matched_full_trace",
+      "order_in_pair": 1,
+      "schedule_sha256": "22164fc17a61164461782863cbbbeac275edc992384dc506901438c80d8ba2c5",
+      "worker_pid": 5432,
+      "generation": 1,
+      "session_nonce": "34cd945effd5409894cff6871c8e1401",
+      "offered": 2,
+      "completed": 2,
+      "request_latency_ms": [
+        1898.775449,
+        1890.680005
+      ],
+      "has_trace": true,
+      "correlation_limit": "separate_execution_not_same_request_GPU_event_correlation"
+    },
+    {
+      "job_id": "job-2",
+      "directory": "job-2",
+      "pair_id": "long",
+      "role": "matched_full_trace",
+      "order_in_pair": 0,
+      "schedule_sha256": "4f6473273601eedf65010f9ad0c479c4c7194941178c36723aa6087c996ca85c",
+      "worker_pid": 5969,
+      "generation": 2,
+      "session_nonce": "f5e5164a1b94497499b8f1031012231d",
+      "offered": 2,
+      "completed": 2,
+      "request_latency_ms": [
+        1918.079414,
+        1919.440268
+      ],
+      "has_trace": true,
+      "correlation_limit": "separate_execution_not_same_request_GPU_event_correlation"
+    },
+    {
+      "job_id": "job-3",
+      "directory": "job-3",
+      "pair_id": "long",
+      "role": "feature_collection",
+      "order_in_pair": 1,
+      "schedule_sha256": "4f6473273601eedf65010f9ad0c479c4c7194941178c36723aa6087c996ca85c",
+      "worker_pid": 6439,
+      "generation": 3,
+      "session_nonce": "fab4667cbda14fb389dfb2f98e464e3c",
+      "offered": 2,
+      "completed": 2,
+      "request_latency_ms": [
+        1911.838541,
+        1911.227564
+      ],
+      "has_trace": false,
+      "correlation_limit": "separate_execution_not_same_request_GPU_event_correlation"
+    }
+  ],
+  "artifacts": [
+    {
+      "job_id": "job-0",
+      "path": "job-0/collection/requests/receipts.json",
+      "sha256": "109ae6c4b4c00a1d5b4a9d8a4a0c7d388e3cb6ef4a8b76850b6001daac1ebedb",
+      "channel": "request_diagnostics"
+    },
+    {
+      "job_id": "job-0",
+      "path": "job-0/collection/playback.json",
+      "sha256": "d3b0c3c9b3c213bab75a6a06580ab1771308b880587ebf12b7cd9303585ef994",
+      "channel": "server_diagnostics"
+    },
+    {
+      "job_id": "job-1",
+      "path": "job-1/collection/requests/receipts.json",
+      "sha256": "5a70ce397d260f23ced858179341c473af2492b9e9d17c6b15b530635d016585",
+      "channel": "request_diagnostics"
+    },
+    {
+      "job_id": "job-1",
+      "path": "job-1/collection/playback.json",
+      "sha256": "a78cfb1aefd10fd219d195780a0b8c326965a76ed74c849e103310ea75ab085e",
+      "channel": "server_diagnostics"
+    },
+    {
+      "job_id": "job-1",
+      "path": "job-1/trace.sqlite",
+      "sha256": "a6e767ee077b42bed3cd2e03cb263082205a8ea193b2e68aa2a5b904fa03bfee",
+      "channel": "matched_full_trace"
+    },
+    {
+      "job_id": "job-2",
+      "path": "job-2/collection/requests/receipts.json",
+      "sha256": "27e071886e9209f6455f871ab0a565a6c8827988b01b938cec884430fdb0ec7d",
+      "channel": "request_diagnostics"
+    },
+    {
+      "job_id": "job-2",
+      "path": "job-2/collection/playback.json",
+      "sha256": "d19ebd64d96219b6066f99baa1a89183b816a339113e2ee649c350e324f84b3f",
+      "channel": "server_diagnostics"
+    },
+    {
+      "job_id": "job-2",
+      "path": "job-2/trace.sqlite",
+      "sha256": "d67896fbb10e82fd0be677ea7a588a9661ccc111ee83753ce8ebc703e33f5492",
+      "channel": "matched_full_trace"
+    },
+    {
+      "job_id": "job-3",
+      "path": "job-3/collection/requests/receipts.json",
+      "sha256": "20e6568937562f9ccba585ebc88666dd0fa8ae31c4a6cb0122ab50fcd401af69",
+      "channel": "request_diagnostics"
+    },
+    {
+      "job_id": "job-3",
+      "path": "job-3/collection/playback.json",
+      "sha256": "c1ce34c8ffa6bab057dbd33ef27f8cf3f0f5b4c596792854deb67faaeeeac256",
+      "channel": "server_diagnostics"
+    }
+  ],
+  "required_assessments": [
+    "realized_symptoms",
+    "alternative_causes",
+    "unresolved_or_negative_evidence",
+    "full_trace_control_bracketing_and_kernel_coverage",
+    "matched_run_latency_and_work_mismatch",
+    "clock_and_cohort_coverage"
+  ],
+  "limitations": [
+    "low_rate_two_prompt_plumbing_pilot_not_challenging_incidents",
+    "trace_is_a_separate_run_not_same_execution_truth",
+    "raw_HTTP_and_metrics_are_independent_of_classifier_but_not_independent_proof_of_causality",
+    "human_assessor_identity_blinding_and_rationale_required_before_reference_lock"
+  ],
+  "matched_run_differences": [
+    {
+      "pair_id": "short",
+      "runs": [
+        {
+          "job_id": "job-0",
+          "role": "feature_collection",
+          "latencies_ms": [
+            1887.665365,
+            1887.731804
+          ],
+          "completed": 2
+        },
+        {
+          "job_id": "job-1",
+          "role": "matched_full_trace",
+          "latencies_ms": [
+            1898.775449,
+            1890.680005
+          ],
+          "completed": 2
+        }
+      ],
+      "status": "requires_assessor_mismatch_assessment_no_automatic_equivalence"
+    },
+    {
+      "pair_id": "long",
+      "runs": [
+        {
+          "job_id": "job-2",
+          "role": "matched_full_trace",
+          "latencies_ms": [
+            1918.079414,
+            1919.440268
+          ],
+          "completed": 2
+        },
+        {
+          "job_id": "job-3",
+          "role": "feature_collection",
+          "latencies_ms": [
+            1911.838541,
+            1911.227564
+          ],
+          "completed": 2
+        }
+      ],
+      "status": "requires_assessor_mismatch_assessment_no_automatic_equivalence"
+    }
+  ]
+}

@@ -1,0 +1,279 @@
+{
+  "gpu_used": false,
+  "provenance": "synthetic_simulation",
+  "cases": [
+    {
+      "case": "positive",
+      "gates": {
+        "inventory": {
+          "status": "passed",
+          "reason": null
+        },
+        "metrics": {
+          "status": "passed",
+          "reason": null
+        },
+        "quiet_reset": {
+          "status": "passed",
+          "reason": null
+        },
+        "capture": {
+          "status": "passed",
+          "reason": null
+        },
+        "cleanup": {
+          "status": "passed",
+          "reason": null
+        }
+      },
+      "mechanics_passed": true,
+      "live_feasibility_passed": false,
+      "study_ready": false,
+      "calls": [
+        "inventory",
+        "metrics",
+        "quiet_reset",
+        "capture",
+        "cleanup"
+      ]
+    },
+    {
+      "case": "wrong_pin",
+      "gates": {
+        "inventory": {
+          "status": "failed",
+          "reason": "ValueError: Pinned vllm_version mismatch"
+        },
+        "metrics": {
+          "status": "skipped",
+          "reason": "prior_gate_not_passed"
+        },
+        "quiet_reset": {
+          "status": "skipped",
+          "reason": "prior_gate_not_passed"
+        },
+        "capture": {
+          "status": "skipped",
+          "reason": "prior_gate_not_passed"
+        },
+        "cleanup": {
+          "status": "passed",
+          "reason": null
+        }
+      },
+      "mechanics_passed": false,
+      "live_feasibility_passed": false,
+      "study_ready": false,
+      "calls": [
+        "inventory",
+        "cleanup"
+      ]
+    },
+    {
+      "case": "bad_hash",
+      "gates": {
+        "inventory": {
+          "status": "passed",
+          "reason": null
+        },
+        "metrics": {
+          "status": "failed",
+          "reason": "ValueError: Metric artifact hash mismatch"
+        },
+        "quiet_reset": {
+          "status": "skipped",
+          "reason": "prior_gate_not_passed"
+        },
+        "capture": {
+          "status": "skipped",
+          "reason": "prior_gate_not_passed"
+        },
+        "cleanup": {
+          "status": "passed",
+          "reason": null
+        }
+      },
+      "mechanics_passed": false,
+      "live_feasibility_passed": false,
+      "study_ready": false,
+      "calls": [
+        "inventory",
+        "metrics",
+        "cleanup"
+      ]
+    },
+    {
+      "case": "busy",
+      "gates": {
+        "inventory": {
+          "status": "passed",
+          "reason": null
+        },
+        "metrics": {
+          "status": "passed",
+          "reason": null
+        },
+        "quiet_reset": {
+          "status": "failed",
+          "reason": "ValueError: Busy or foreign quiet observation"
+        },
+        "capture": {
+          "status": "skipped",
+          "reason": "prior_gate_not_passed"
+        },
+        "cleanup": {
+          "status": "passed",
+          "reason": null
+        }
+      },
+      "mechanics_passed": false,
+      "live_feasibility_passed": false,
+      "study_ready": false,
+      "calls": [
+        "inventory",
+        "metrics",
+        "quiet_reset",
+        "cleanup"
+      ]
+    },
+    {
+      "case": "stale_reset",
+      "gates": {
+        "inventory": {
+          "status": "passed",
+          "reason": null
+        },
+        "metrics": {
+          "status": "passed",
+          "reason": null
+        },
+        "quiet_reset": {
+          "status": "failed",
+          "reason": "ValueError: Stale reset acknowledgement"
+        },
+        "capture": {
+          "status": "skipped",
+          "reason": "prior_gate_not_passed"
+        },
+        "cleanup": {
+          "status": "passed",
+          "reason": null
+        }
+      },
+      "mechanics_passed": false,
+      "live_feasibility_passed": false,
+      "study_ready": false,
+      "calls": [
+        "inventory",
+        "metrics",
+        "quiet_reset",
+        "cleanup"
+      ]
+    },
+    {
+      "case": "future_parse",
+      "gates": {
+        "inventory": {
+          "status": "passed",
+          "reason": null
+        },
+        "metrics": {
+          "status": "passed",
+          "reason": null
+        },
+        "quiet_reset": {
+          "status": "passed",
+          "reason": null
+        },
+        "capture": {
+          "status": "failed",
+          "reason": "ValueError: Capture/readiness/continuation ordering invalid"
+        },
+        "cleanup": {
+          "status": "passed",
+          "reason": null
+        }
+      },
+      "mechanics_passed": false,
+      "live_feasibility_passed": false,
+      "study_ready": false,
+      "calls": [
+        "inventory",
+        "metrics",
+        "quiet_reset",
+        "capture",
+        "cleanup"
+      ]
+    },
+    {
+      "case": "cleanup_failure",
+      "gates": {
+        "inventory": {
+          "status": "passed",
+          "reason": null
+        },
+        "metrics": {
+          "status": "passed",
+          "reason": null
+        },
+        "quiet_reset": {
+          "status": "passed",
+          "reason": null
+        },
+        "capture": {
+          "status": "passed",
+          "reason": null
+        },
+        "cleanup": {
+          "status": "failed",
+          "reason": "ValueError: Owned cleanup not confirmed"
+        }
+      },
+      "mechanics_passed": false,
+      "live_feasibility_passed": false,
+      "study_ready": false,
+      "calls": [
+        "inventory",
+        "metrics",
+        "quiet_reset",
+        "capture",
+        "cleanup"
+      ]
+    },
+    {
+      "case": "discovery_only",
+      "gates": {
+        "inventory": {
+          "status": "passed",
+          "reason": null
+        },
+        "metrics": {
+          "status": "passed",
+          "reason": null
+        },
+        "quiet_reset": {
+          "status": "unavailable",
+          "reason": "Owned activity adapter unavailable"
+        },
+        "capture": {
+          "status": "skipped",
+          "reason": "prior_gate_not_passed"
+        },
+        "cleanup": {
+          "status": "passed",
+          "reason": null
+        }
+      },
+      "mechanics_passed": false,
+      "live_feasibility_passed": false,
+      "study_ready": false,
+      "calls": [
+        "inventory",
+        "metrics",
+        "quiet_reset",
+        "cleanup"
+      ]
+    }
+  ],
+  "note": "Hand-authored gate receipts and synthetic SQLite kernels; not hardware/reset/capture validation."
+}

@@ -1,0 +1,92 @@
+{
+  "preflight_version": "preflight_v1",
+  "mode": "active_nvml_probe",
+  "environment": {
+    "platform": "Linux",
+    "python": "3.12.15",
+    "pynvml_module_present": true,
+    "nvidia_ml_py_version": "13.615.71",
+    "nsys_path": "/usr/local/bin/nsys",
+    "cuda_visible_devices": null
+  },
+  "telemetry": {
+    "status": "sample_received",
+    "gpu_util": 0.0,
+    "metadata": {
+      "device_uuid": "GPU-baa93118-dfa3-1258-be9e-b6051b77c1cb",
+      "name": "NVIDIA L4",
+      "driver_version": "615.71.09",
+      "scope": "device_wide_not_process_attributed",
+      "mig_enabled": false,
+      "binding_version": "13.615.71"
+    },
+    "sampling_interval": "unknown",
+    "timestamp_semantics": "parent_receipt",
+    "clock_domain": "process-monotonic-c00f2ee3-3491-4c73-a7be-9060fc62b22b",
+    "events": [
+      {
+        "event": "nvml_start_requested",
+        "timestamp_ns": 107376367190756,
+        "clock_domain": "process-monotonic-c00f2ee3-3491-4c73-a7be-9060fc62b22b"
+      },
+      {
+        "event": "nvml_ready",
+        "timestamp_ns": 107376573922758,
+        "clock_domain": "process-monotonic-c00f2ee3-3491-4c73-a7be-9060fc62b22b",
+        "metadata": {
+          "device_uuid": "GPU-baa93118-dfa3-1258-be9e-b6051b77c1cb",
+          "name": "NVIDIA L4",
+          "driver_version": "615.71.09",
+          "scope": "device_wide_not_process_attributed",
+          "mig_enabled": false,
+          "binding_version": "13.615.71"
+        }
+      },
+      {
+        "event": "nvml_read_requested",
+        "timestamp_ns": 107376573942505,
+        "clock_domain": "process-monotonic-c00f2ee3-3491-4c73-a7be-9060fc62b22b",
+        "request_id": 0
+      },
+      {
+        "event": "nvml_read_received",
+        "timestamp_ns": 107376579304253,
+        "clock_domain": "process-monotonic-c00f2ee3-3491-4c73-a7be-9060fc62b22b",
+        "request_id": 0,
+        "gpu_util": 0.0,
+        "sampling_interval": "unknown",
+        "timestamp_semantics": "parent_receipt"
+      },
+      {
+        "event": "nvml_closed",
+        "timestamp_ns": 107376616558805,
+        "clock_domain": "process-monotonic-c00f2ee3-3491-4c73-a7be-9060fc62b22b",
+        "shutdown_acknowledged": true,
+        "forced_termination": false,
+        "worker_alive": false
+      }
+    ],
+    "cleanup": {
+      "event": "nvml_closed",
+      "timestamp_ns": 107376616558805,
+      "clock_domain": "process-monotonic-c00f2ee3-3491-4c73-a7be-9060fc62b22b",
+      "shutdown_acknowledged": true,
+      "forced_termination": false,
+      "worker_alive": false
+    },
+    "device_uuid": "GPU-baa93118-dfa3-1258-be9e-b6051b77c1cb"
+  },
+  "configuration": {
+    "status": "not_supplied"
+  },
+  "worker_device_mapping": "unverified",
+  "real_profiler_backend": "not_implemented",
+  "capture_coverage": "unverified",
+  "live_experiment_ready": false,
+  "blockers": [
+    "NVML receipt succeeded; GPU/serving process attribution remains unverified",
+    "Serving worker/device mapping and healthy calibration require verification",
+    "Real profiler attachment, capture acknowledgement, readiness and coverage are unvalidated"
+  ],
+  "note": "Package/binary discovery does not establish GPU or capture readiness. No serving endpoint is contacted."
+}

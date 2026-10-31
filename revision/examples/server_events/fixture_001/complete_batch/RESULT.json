@@ -1,0 +1,32 @@
+{
+  "provenance": "synthetic_simulation",
+  "mode": "complete_batch",
+  "validation_error": null,
+  "result": {
+    "version": "scheduler_hook_events_v1",
+    "cohort": "first_positive_CPU_schedule_bracket_wholly_inside_half_open_window",
+    "start_ns": 0,
+    "end_ns": 50000000,
+    "available_at_ns": 310000000,
+    "observations": [
+      {
+        "request_id": "r1",
+        "wait_lower_ms": 23.0,
+        "wait_upper_ms": 29.0
+      },
+      {
+        "request_id": "r2",
+        "wait_lower_ms": 21.0,
+        "wait_upper_ms": 27.0
+      }
+    ],
+    "boundary_ambiguous_request_ids": [],
+    "still_unscheduled_at_probe_request_ids": [],
+    "finished_without_schedule_at_probe_request_ids": [],
+    "existing_request_wait_p95_mapping": "unsupported_scheduler_decision_proxy_and_interval_uncertainty",
+    "pending_status_scope": "source_probe_not_historical_window_end",
+    "prefill_service_fraction": null,
+    "phase_attribution": "not_instrumented"
+  },
+  "live_validation_passed": false
+}

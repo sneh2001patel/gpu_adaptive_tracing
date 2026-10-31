@@ -1,0 +1,31 @@
+{
+  "status": "planning_bounds_not_measured_cost",
+  "runs": 144,
+  "blocks": 18,
+  "observation_hours": 4.8,
+  "observation_plus_max_drain_hours": 6.6,
+  "excludes": [
+    "startup",
+    "warmup",
+    "healthy_calibration",
+    "capacity_measurement",
+    "export_after_horizon",
+    "failures_and_retries",
+    "sensitivity",
+    "confirmation",
+    "GPU_reference_pilot"
+  ],
+  "gpu_used": false,
+  "launch_supported": false,
+  "freeze_blockers": [
+    "measured_capacity_and_admission_semantics",
+    "prompt_corpus_hashes_and_token_bands",
+    "metrics_endpoint_names_and_availability",
+    "classifier_features_and_thresholds",
+    "reference_rubric_pilot",
+    "phase_lengths_and_drain_feasibility",
+    "server_reset_and_randomization_unit",
+    "confirmation_repetitions_and_precision",
+    "capture_active_clock_validation"
+  ]
+}

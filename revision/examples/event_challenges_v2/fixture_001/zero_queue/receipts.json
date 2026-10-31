@@ -1,0 +1,1362 @@
+[
+  {
+    "sample_id": "0",
+    "binding": {
+      "session_nonce": "CPU-fixture-v2",
+      "generation": 0,
+      "worker_pid": 43,
+      "device_uuid": "GPU-fixture",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "engine": "0",
+      "clock_domain": "CPU-fixture-clock"
+    },
+    "requested_at_ns": 1000000001,
+    "received_at_ns": 1000000002,
+    "http_status": 200,
+    "raw": "# TYPE vllm:num_requests_waiting gauge\nvllm:num_requests_waiting{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:num_requests_running gauge\nvllm:num_requests_running{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:request_queue_time_seconds histogram\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_queue_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_queue_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_prefill_time_seconds histogram\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_prefill_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_prefill_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_decode_time_seconds histogram\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_decode_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_decode_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n",
+    "error": null
+  },
+  {
+    "sample_id": "1",
+    "binding": {
+      "session_nonce": "CPU-fixture-v2",
+      "generation": 0,
+      "worker_pid": 43,
+      "device_uuid": "GPU-fixture",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "engine": "0",
+      "clock_domain": "CPU-fixture-clock"
+    },
+    "requested_at_ns": 1500000001,
+    "received_at_ns": 1500000002,
+    "http_status": 200,
+    "raw": "# TYPE vllm:num_requests_waiting gauge\nvllm:num_requests_waiting{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:num_requests_running gauge\nvllm:num_requests_running{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:request_queue_time_seconds histogram\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_queue_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_queue_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_prefill_time_seconds histogram\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_prefill_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_prefill_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_decode_time_seconds histogram\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_decode_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_decode_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n",
+    "error": null
+  },
+  {
+    "sample_id": "2",
+    "binding": {
+      "session_nonce": "CPU-fixture-v2",
+      "generation": 0,
+      "worker_pid": 43,
+      "device_uuid": "GPU-fixture",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "engine": "0",
+      "clock_domain": "CPU-fixture-clock"
+    },
+    "requested_at_ns": 2000000001,
+    "received_at_ns": 2000000002,
+    "http_status": 200,
+    "raw": "# TYPE vllm:num_requests_waiting gauge\nvllm:num_requests_waiting{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:num_requests_running gauge\nvllm:num_requests_running{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:request_queue_time_seconds histogram\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_queue_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_queue_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_prefill_time_seconds histogram\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_prefill_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_prefill_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_decode_time_seconds histogram\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_decode_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_decode_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n",
+    "error": null
+  },
+  {
+    "sample_id": "3",
+    "binding": {
+      "session_nonce": "CPU-fixture-v2",
+      "generation": 0,
+      "worker_pid": 43,
+      "device_uuid": "GPU-fixture",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "engine": "0",
+      "clock_domain": "CPU-fixture-clock"
+    },
+    "requested_at_ns": 2500000001,
+    "received_at_ns": 2500000002,
+    "http_status": 200,
+    "raw": "# TYPE vllm:num_requests_waiting gauge\nvllm:num_requests_waiting{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:num_requests_running gauge\nvllm:num_requests_running{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:request_queue_time_seconds histogram\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_queue_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_queue_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_prefill_time_seconds histogram\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_prefill_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_prefill_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_decode_time_seconds histogram\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_decode_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_decode_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n",
+    "error": null
+  },
+  {
+    "sample_id": "4",
+    "binding": {
+      "session_nonce": "CPU-fixture-v2",
+      "generation": 0,
+      "worker_pid": 43,
+      "device_uuid": "GPU-fixture",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "engine": "0",
+      "clock_domain": "CPU-fixture-clock"
+    },
+    "requested_at_ns": 3000000001,
+    "received_at_ns": 3000000002,
+    "http_status": 200,
+    "raw": "# TYPE vllm:num_requests_waiting gauge\nvllm:num_requests_waiting{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:num_requests_running gauge\nvllm:num_requests_running{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:request_queue_time_seconds histogram\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_queue_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_queue_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_prefill_time_seconds histogram\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_prefill_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_prefill_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_decode_time_seconds histogram\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_decode_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_decode_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n",
+    "error": null
+  },
+  {
+    "sample_id": "5",
+    "binding": {
+      "session_nonce": "CPU-fixture-v2",
+      "generation": 0,
+      "worker_pid": 43,
+      "device_uuid": "GPU-fixture",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "engine": "0",
+      "clock_domain": "CPU-fixture-clock"
+    },
+    "requested_at_ns": 3500000001,
+    "received_at_ns": 3500000002,
+    "http_status": 200,
+    "raw": "# TYPE vllm:num_requests_waiting gauge\nvllm:num_requests_waiting{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:num_requests_running gauge\nvllm:num_requests_running{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:request_queue_time_seconds histogram\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_queue_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_queue_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_prefill_time_seconds histogram\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_prefill_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_prefill_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_decode_time_seconds histogram\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_decode_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_decode_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n",
+    "error": null
+  },
+  {
+    "sample_id": "6",
+    "binding": {
+      "session_nonce": "CPU-fixture-v2",
+      "generation": 0,
+      "worker_pid": 43,
+      "device_uuid": "GPU-fixture",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "engine": "0",
+      "clock_domain": "CPU-fixture-clock"
+    },
+    "requested_at_ns": 4000000001,
+    "received_at_ns": 4000000002,
+    "http_status": 200,
+    "raw": "# TYPE vllm:num_requests_waiting gauge\nvllm:num_requests_waiting{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:num_requests_running gauge\nvllm:num_requests_running{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:request_queue_time_seconds histogram\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_queue_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_queue_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_prefill_time_seconds histogram\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_prefill_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_prefill_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_decode_time_seconds histogram\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_decode_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_decode_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n",
+    "error": null
+  },
+  {
+    "sample_id": "7",
+    "binding": {
+      "session_nonce": "CPU-fixture-v2",
+      "generation": 0,
+      "worker_pid": 43,
+      "device_uuid": "GPU-fixture",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "engine": "0",
+      "clock_domain": "CPU-fixture-clock"
+    },
+    "requested_at_ns": 4500000001,
+    "received_at_ns": 4500000002,
+    "http_status": 200,
+    "raw": "# TYPE vllm:num_requests_waiting gauge\nvllm:num_requests_waiting{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:num_requests_running gauge\nvllm:num_requests_running{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:request_queue_time_seconds histogram\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_queue_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_queue_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_prefill_time_seconds histogram\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_prefill_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_prefill_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_decode_time_seconds histogram\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_decode_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_decode_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n",
+    "error": null
+  },
+  {
+    "sample_id": "8",
+    "binding": {
+      "session_nonce": "CPU-fixture-v2",
+      "generation": 0,
+      "worker_pid": 43,
+      "device_uuid": "GPU-fixture",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "engine": "0",
+      "clock_domain": "CPU-fixture-clock"
+    },
+    "requested_at_ns": 5000000001,
+    "received_at_ns": 5000000002,
+    "http_status": 200,
+    "raw": "# TYPE vllm:num_requests_waiting gauge\nvllm:num_requests_waiting{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:num_requests_running gauge\nvllm:num_requests_running{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:request_queue_time_seconds histogram\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_queue_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_queue_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_prefill_time_seconds histogram\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_prefill_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_prefill_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_decode_time_seconds histogram\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_decode_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_decode_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n",
+    "error": null
+  },
+  {
+    "sample_id": "9",
+    "binding": {
+      "session_nonce": "CPU-fixture-v2",
+      "generation": 0,
+      "worker_pid": 43,
+      "device_uuid": "GPU-fixture",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "engine": "0",
+      "clock_domain": "CPU-fixture-clock"
+    },
+    "requested_at_ns": 5500000001,
+    "received_at_ns": 5500000002,
+    "http_status": 200,
+    "raw": "# TYPE vllm:num_requests_waiting gauge\nvllm:num_requests_waiting{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:num_requests_running gauge\nvllm:num_requests_running{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:request_queue_time_seconds histogram\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_queue_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_queue_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_prefill_time_seconds histogram\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_prefill_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_prefill_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_decode_time_seconds histogram\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_decode_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_decode_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n",
+    "error": null
+  },
+  {
+    "sample_id": "10",
+    "binding": {
+      "session_nonce": "CPU-fixture-v2",
+      "generation": 0,
+      "worker_pid": 43,
+      "device_uuid": "GPU-fixture",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "engine": "0",
+      "clock_domain": "CPU-fixture-clock"
+    },
+    "requested_at_ns": 6000000001,
+    "received_at_ns": 6000000002,
+    "http_status": 200,
+    "raw": "# TYPE vllm:num_requests_waiting gauge\nvllm:num_requests_waiting{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:num_requests_running gauge\nvllm:num_requests_running{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:request_queue_time_seconds histogram\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_queue_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_queue_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_prefill_time_seconds histogram\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_prefill_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_prefill_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_decode_time_seconds histogram\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_decode_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_decode_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n",
+    "error": null
+  },
+  {
+    "sample_id": "11",
+    "binding": {
+      "session_nonce": "CPU-fixture-v2",
+      "generation": 0,
+      "worker_pid": 43,
+      "device_uuid": "GPU-fixture",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "engine": "0",
+      "clock_domain": "CPU-fixture-clock"
+    },
+    "requested_at_ns": 6500000001,
+    "received_at_ns": 6500000002,
+    "http_status": 200,
+    "raw": "# TYPE vllm:num_requests_waiting gauge\nvllm:num_requests_waiting{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:num_requests_running gauge\nvllm:num_requests_running{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:request_queue_time_seconds histogram\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_queue_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_queue_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_prefill_time_seconds histogram\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_prefill_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_prefill_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_decode_time_seconds histogram\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_decode_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_decode_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n",
+    "error": null
+  },
+  {
+    "sample_id": "12",
+    "binding": {
+      "session_nonce": "CPU-fixture-v2",
+      "generation": 0,
+      "worker_pid": 43,
+      "device_uuid": "GPU-fixture",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "engine": "0",
+      "clock_domain": "CPU-fixture-clock"
+    },
+    "requested_at_ns": 7000000001,
+    "received_at_ns": 7000000002,
+    "http_status": 200,
+    "raw": "# TYPE vllm:num_requests_waiting gauge\nvllm:num_requests_waiting{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:num_requests_running gauge\nvllm:num_requests_running{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:request_queue_time_seconds histogram\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_queue_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_queue_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_prefill_time_seconds histogram\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_prefill_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_prefill_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_decode_time_seconds histogram\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_decode_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_decode_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n",
+    "error": null
+  },
+  {
+    "sample_id": "13",
+    "binding": {
+      "session_nonce": "CPU-fixture-v2",
+      "generation": 0,
+      "worker_pid": 43,
+      "device_uuid": "GPU-fixture",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "engine": "0",
+      "clock_domain": "CPU-fixture-clock"
+    },
+    "requested_at_ns": 7500000001,
+    "received_at_ns": 7500000002,
+    "http_status": 200,
+    "raw": "# TYPE vllm:num_requests_waiting gauge\nvllm:num_requests_waiting{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:num_requests_running gauge\nvllm:num_requests_running{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:request_queue_time_seconds histogram\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_queue_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_queue_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_prefill_time_seconds histogram\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_prefill_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_prefill_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_decode_time_seconds histogram\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_decode_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_decode_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n",
+    "error": null
+  },
+  {
+    "sample_id": "14",
+    "binding": {
+      "session_nonce": "CPU-fixture-v2",
+      "generation": 0,
+      "worker_pid": 43,
+      "device_uuid": "GPU-fixture",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "engine": "0",
+      "clock_domain": "CPU-fixture-clock"
+    },
+    "requested_at_ns": 8000000001,
+    "received_at_ns": 8000000002,
+    "http_status": 200,
+    "raw": "# TYPE vllm:num_requests_waiting gauge\nvllm:num_requests_waiting{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:num_requests_running gauge\nvllm:num_requests_running{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:request_queue_time_seconds histogram\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_queue_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_queue_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_prefill_time_seconds histogram\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_prefill_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_prefill_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_decode_time_seconds histogram\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_decode_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_decode_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n",
+    "error": null
+  },
+  {
+    "sample_id": "15",
+    "binding": {
+      "session_nonce": "CPU-fixture-v2",
+      "generation": 0,
+      "worker_pid": 43,
+      "device_uuid": "GPU-fixture",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "engine": "0",
+      "clock_domain": "CPU-fixture-clock"
+    },
+    "requested_at_ns": 8500000001,
+    "received_at_ns": 8500000002,
+    "http_status": 200,
+    "raw": "# TYPE vllm:num_requests_waiting gauge\nvllm:num_requests_waiting{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:num_requests_running gauge\nvllm:num_requests_running{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:request_queue_time_seconds histogram\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_queue_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_queue_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_prefill_time_seconds histogram\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_prefill_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_prefill_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_decode_time_seconds histogram\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_decode_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_decode_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n",
+    "error": null
+  },
+  {
+    "sample_id": "16",
+    "binding": {
+      "session_nonce": "CPU-fixture-v2",
+      "generation": 0,
+      "worker_pid": 43,
+      "device_uuid": "GPU-fixture",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "engine": "0",
+      "clock_domain": "CPU-fixture-clock"
+    },
+    "requested_at_ns": 9000000001,
+    "received_at_ns": 9000000002,
+    "http_status": 200,
+    "raw": "# TYPE vllm:num_requests_waiting gauge\nvllm:num_requests_waiting{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:num_requests_running gauge\nvllm:num_requests_running{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:request_queue_time_seconds histogram\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_queue_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_queue_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_prefill_time_seconds histogram\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_prefill_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_prefill_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_decode_time_seconds histogram\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_decode_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_decode_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n",
+    "error": null
+  },
+  {
+    "sample_id": "17",
+    "binding": {
+      "session_nonce": "CPU-fixture-v2",
+      "generation": 0,
+      "worker_pid": 43,
+      "device_uuid": "GPU-fixture",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "engine": "0",
+      "clock_domain": "CPU-fixture-clock"
+    },
+    "requested_at_ns": 9500000001,
+    "received_at_ns": 9500000002,
+    "http_status": 200,
+    "raw": "# TYPE vllm:num_requests_waiting gauge\nvllm:num_requests_waiting{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:num_requests_running gauge\nvllm:num_requests_running{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:request_queue_time_seconds histogram\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_queue_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_queue_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_prefill_time_seconds histogram\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_prefill_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_prefill_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_decode_time_seconds histogram\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_decode_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_decode_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n",
+    "error": null
+  },
+  {
+    "sample_id": "18",
+    "binding": {
+      "session_nonce": "CPU-fixture-v2",
+      "generation": 0,
+      "worker_pid": 43,
+      "device_uuid": "GPU-fixture",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "engine": "0",
+      "clock_domain": "CPU-fixture-clock"
+    },
+    "requested_at_ns": 10000000001,
+    "received_at_ns": 10000000002,
+    "http_status": 200,
+    "raw": "# TYPE vllm:num_requests_waiting gauge\nvllm:num_requests_waiting{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:num_requests_running gauge\nvllm:num_requests_running{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:request_queue_time_seconds histogram\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_queue_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_queue_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_prefill_time_seconds histogram\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_prefill_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_prefill_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_decode_time_seconds histogram\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_decode_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_decode_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n",
+    "error": null
+  },
+  {
+    "sample_id": "19",
+    "binding": {
+      "session_nonce": "CPU-fixture-v2",
+      "generation": 0,
+      "worker_pid": 43,
+      "device_uuid": "GPU-fixture",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "engine": "0",
+      "clock_domain": "CPU-fixture-clock"
+    },
+    "requested_at_ns": 10500000001,
+    "received_at_ns": 10500000002,
+    "http_status": 200,
+    "raw": "# TYPE vllm:num_requests_waiting gauge\nvllm:num_requests_waiting{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:num_requests_running gauge\nvllm:num_requests_running{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:request_queue_time_seconds histogram\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_queue_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_queue_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_prefill_time_seconds histogram\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_prefill_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_prefill_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_decode_time_seconds histogram\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_decode_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_decode_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n",
+    "error": null
+  },
+  {
+    "sample_id": "20",
+    "binding": {
+      "session_nonce": "CPU-fixture-v2",
+      "generation": 0,
+      "worker_pid": 43,
+      "device_uuid": "GPU-fixture",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "engine": "0",
+      "clock_domain": "CPU-fixture-clock"
+    },
+    "requested_at_ns": 11000000001,
+    "received_at_ns": 11000000002,
+    "http_status": 200,
+    "raw": "# TYPE vllm:num_requests_waiting gauge\nvllm:num_requests_waiting{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:num_requests_running gauge\nvllm:num_requests_running{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:request_queue_time_seconds histogram\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_queue_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_queue_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_prefill_time_seconds histogram\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_prefill_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_prefill_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_decode_time_seconds histogram\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_decode_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_decode_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n",
+    "error": null
+  },
+  {
+    "sample_id": "21",
+    "binding": {
+      "session_nonce": "CPU-fixture-v2",
+      "generation": 0,
+      "worker_pid": 43,
+      "device_uuid": "GPU-fixture",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "engine": "0",
+      "clock_domain": "CPU-fixture-clock"
+    },
+    "requested_at_ns": 11500000001,
+    "received_at_ns": 11500000002,
+    "http_status": 200,
+    "raw": "# TYPE vllm:num_requests_waiting gauge\nvllm:num_requests_waiting{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:num_requests_running gauge\nvllm:num_requests_running{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:request_queue_time_seconds histogram\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_queue_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_queue_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_prefill_time_seconds histogram\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_prefill_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_prefill_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_decode_time_seconds histogram\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_decode_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_decode_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n",
+    "error": null
+  },
+  {
+    "sample_id": "22",
+    "binding": {
+      "session_nonce": "CPU-fixture-v2",
+      "generation": 0,
+      "worker_pid": 43,
+      "device_uuid": "GPU-fixture",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "engine": "0",
+      "clock_domain": "CPU-fixture-clock"
+    },
+    "requested_at_ns": 12000000001,
+    "received_at_ns": 12000000002,
+    "http_status": 200,
+    "raw": "# TYPE vllm:num_requests_waiting gauge\nvllm:num_requests_waiting{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:num_requests_running gauge\nvllm:num_requests_running{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:request_queue_time_seconds histogram\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_queue_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_queue_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_prefill_time_seconds histogram\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_prefill_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_prefill_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_decode_time_seconds histogram\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_decode_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_decode_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n",
+    "error": null
+  },
+  {
+    "sample_id": "23",
+    "binding": {
+      "session_nonce": "CPU-fixture-v2",
+      "generation": 0,
+      "worker_pid": 43,
+      "device_uuid": "GPU-fixture",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "engine": "0",
+      "clock_domain": "CPU-fixture-clock"
+    },
+    "requested_at_ns": 12500000001,
+    "received_at_ns": 12500000002,
+    "http_status": 200,
+    "raw": "# TYPE vllm:num_requests_waiting gauge\nvllm:num_requests_waiting{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:num_requests_running gauge\nvllm:num_requests_running{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:request_queue_time_seconds histogram\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_queue_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_queue_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_prefill_time_seconds histogram\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_prefill_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_prefill_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_decode_time_seconds histogram\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_decode_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_decode_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n",
+    "error": null
+  },
+  {
+    "sample_id": "24",
+    "binding": {
+      "session_nonce": "CPU-fixture-v2",
+      "generation": 0,
+      "worker_pid": 43,
+      "device_uuid": "GPU-fixture",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "engine": "0",
+      "clock_domain": "CPU-fixture-clock"
+    },
+    "requested_at_ns": 13000000001,
+    "received_at_ns": 13000000002,
+    "http_status": 200,
+    "raw": "# TYPE vllm:num_requests_waiting gauge\nvllm:num_requests_waiting{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:num_requests_running gauge\nvllm:num_requests_running{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:request_queue_time_seconds histogram\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_queue_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_queue_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_prefill_time_seconds histogram\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_prefill_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_prefill_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_decode_time_seconds histogram\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_decode_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_decode_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n",
+    "error": null
+  },
+  {
+    "sample_id": "25",
+    "binding": {
+      "session_nonce": "CPU-fixture-v2",
+      "generation": 0,
+      "worker_pid": 43,
+      "device_uuid": "GPU-fixture",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "engine": "0",
+      "clock_domain": "CPU-fixture-clock"
+    },
+    "requested_at_ns": 13500000001,
+    "received_at_ns": 13500000002,
+    "http_status": 200,
+    "raw": "# TYPE vllm:num_requests_waiting gauge\nvllm:num_requests_waiting{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:num_requests_running gauge\nvllm:num_requests_running{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:request_queue_time_seconds histogram\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_queue_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_queue_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_prefill_time_seconds histogram\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_prefill_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_prefill_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_decode_time_seconds histogram\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_decode_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_decode_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n",
+    "error": null
+  },
+  {
+    "sample_id": "26",
+    "binding": {
+      "session_nonce": "CPU-fixture-v2",
+      "generation": 0,
+      "worker_pid": 43,
+      "device_uuid": "GPU-fixture",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "engine": "0",
+      "clock_domain": "CPU-fixture-clock"
+    },
+    "requested_at_ns": 14000000001,
+    "received_at_ns": 14000000002,
+    "http_status": 200,
+    "raw": "# TYPE vllm:num_requests_waiting gauge\nvllm:num_requests_waiting{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:num_requests_running gauge\nvllm:num_requests_running{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:request_queue_time_seconds histogram\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_queue_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_queue_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_prefill_time_seconds histogram\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_prefill_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_prefill_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_decode_time_seconds histogram\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_decode_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_decode_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n",
+    "error": null
+  },
+  {
+    "sample_id": "27",
+    "binding": {
+      "session_nonce": "CPU-fixture-v2",
+      "generation": 0,
+      "worker_pid": 43,
+      "device_uuid": "GPU-fixture",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "engine": "0",
+      "clock_domain": "CPU-fixture-clock"
+    },
+    "requested_at_ns": 14500000001,
+    "received_at_ns": 14500000002,
+    "http_status": 200,
+    "raw": "# TYPE vllm:num_requests_waiting gauge\nvllm:num_requests_waiting{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:num_requests_running gauge\nvllm:num_requests_running{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:request_queue_time_seconds histogram\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_queue_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_queue_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_prefill_time_seconds histogram\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_prefill_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_prefill_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_decode_time_seconds histogram\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_decode_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_decode_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n",
+    "error": null
+  },
+  {
+    "sample_id": "28",
+    "binding": {
+      "session_nonce": "CPU-fixture-v2",
+      "generation": 0,
+      "worker_pid": 43,
+      "device_uuid": "GPU-fixture",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "engine": "0",
+      "clock_domain": "CPU-fixture-clock"
+    },
+    "requested_at_ns": 15000000001,
+    "received_at_ns": 15000000002,
+    "http_status": 200,
+    "raw": "# TYPE vllm:num_requests_waiting gauge\nvllm:num_requests_waiting{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:num_requests_running gauge\nvllm:num_requests_running{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:request_queue_time_seconds histogram\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_queue_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_queue_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_prefill_time_seconds histogram\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_prefill_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_prefill_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_decode_time_seconds histogram\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_decode_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_decode_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n",
+    "error": null
+  },
+  {
+    "sample_id": "29",
+    "binding": {
+      "session_nonce": "CPU-fixture-v2",
+      "generation": 0,
+      "worker_pid": 43,
+      "device_uuid": "GPU-fixture",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "engine": "0",
+      "clock_domain": "CPU-fixture-clock"
+    },
+    "requested_at_ns": 15500000001,
+    "received_at_ns": 15500000002,
+    "http_status": 200,
+    "raw": "# TYPE vllm:num_requests_waiting gauge\nvllm:num_requests_waiting{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:num_requests_running gauge\nvllm:num_requests_running{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:request_queue_time_seconds histogram\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_queue_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_queue_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_prefill_time_seconds histogram\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_prefill_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_prefill_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_decode_time_seconds histogram\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_decode_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_decode_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n",
+    "error": null
+  },
+  {
+    "sample_id": "30",
+    "binding": {
+      "session_nonce": "CPU-fixture-v2",
+      "generation": 0,
+      "worker_pid": 43,
+      "device_uuid": "GPU-fixture",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "engine": "0",
+      "clock_domain": "CPU-fixture-clock"
+    },
+    "requested_at_ns": 16000000001,
+    "received_at_ns": 16000000002,
+    "http_status": 200,
+    "raw": "# TYPE vllm:num_requests_waiting gauge\nvllm:num_requests_waiting{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:num_requests_running gauge\nvllm:num_requests_running{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:request_queue_time_seconds histogram\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_queue_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_queue_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_prefill_time_seconds histogram\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_prefill_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_prefill_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_decode_time_seconds histogram\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_decode_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_decode_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n",
+    "error": null
+  },
+  {
+    "sample_id": "31",
+    "binding": {
+      "session_nonce": "CPU-fixture-v2",
+      "generation": 0,
+      "worker_pid": 43,
+      "device_uuid": "GPU-fixture",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "engine": "0",
+      "clock_domain": "CPU-fixture-clock"
+    },
+    "requested_at_ns": 16500000001,
+    "received_at_ns": 16500000002,
+    "http_status": 200,
+    "raw": "# TYPE vllm:num_requests_waiting gauge\nvllm:num_requests_waiting{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:num_requests_running gauge\nvllm:num_requests_running{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:request_queue_time_seconds histogram\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_queue_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_queue_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_prefill_time_seconds histogram\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_prefill_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_prefill_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_decode_time_seconds histogram\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_decode_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_decode_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n",
+    "error": null
+  },
+  {
+    "sample_id": "32",
+    "binding": {
+      "session_nonce": "CPU-fixture-v2",
+      "generation": 0,
+      "worker_pid": 43,
+      "device_uuid": "GPU-fixture",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "engine": "0",
+      "clock_domain": "CPU-fixture-clock"
+    },
+    "requested_at_ns": 17000000001,
+    "received_at_ns": 17000000002,
+    "http_status": 200,
+    "raw": "# TYPE vllm:num_requests_waiting gauge\nvllm:num_requests_waiting{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:num_requests_running gauge\nvllm:num_requests_running{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:request_queue_time_seconds histogram\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_queue_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_queue_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_prefill_time_seconds histogram\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_prefill_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_prefill_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_decode_time_seconds histogram\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_decode_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_decode_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n",
+    "error": null
+  },
+  {
+    "sample_id": "33",
+    "binding": {
+      "session_nonce": "CPU-fixture-v2",
+      "generation": 0,
+      "worker_pid": 43,
+      "device_uuid": "GPU-fixture",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "engine": "0",
+      "clock_domain": "CPU-fixture-clock"
+    },
+    "requested_at_ns": 17500000001,
+    "received_at_ns": 17500000002,
+    "http_status": 200,
+    "raw": "# TYPE vllm:num_requests_waiting gauge\nvllm:num_requests_waiting{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:num_requests_running gauge\nvllm:num_requests_running{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:request_queue_time_seconds histogram\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_queue_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_queue_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_prefill_time_seconds histogram\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_prefill_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_prefill_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_decode_time_seconds histogram\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_decode_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_decode_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n",
+    "error": null
+  },
+  {
+    "sample_id": "34",
+    "binding": {
+      "session_nonce": "CPU-fixture-v2",
+      "generation": 0,
+      "worker_pid": 43,
+      "device_uuid": "GPU-fixture",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "engine": "0",
+      "clock_domain": "CPU-fixture-clock"
+    },
+    "requested_at_ns": 18000000001,
+    "received_at_ns": 18000000002,
+    "http_status": 200,
+    "raw": "# TYPE vllm:num_requests_waiting gauge\nvllm:num_requests_waiting{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:num_requests_running gauge\nvllm:num_requests_running{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:request_queue_time_seconds histogram\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_queue_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_queue_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_prefill_time_seconds histogram\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_prefill_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_prefill_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_decode_time_seconds histogram\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_decode_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_decode_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n",
+    "error": null
+  },
+  {
+    "sample_id": "35",
+    "binding": {
+      "session_nonce": "CPU-fixture-v2",
+      "generation": 0,
+      "worker_pid": 43,
+      "device_uuid": "GPU-fixture",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "engine": "0",
+      "clock_domain": "CPU-fixture-clock"
+    },
+    "requested_at_ns": 18500000001,
+    "received_at_ns": 18500000002,
+    "http_status": 200,
+    "raw": "# TYPE vllm:num_requests_waiting gauge\nvllm:num_requests_waiting{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:num_requests_running gauge\nvllm:num_requests_running{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:request_queue_time_seconds histogram\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_queue_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_queue_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_prefill_time_seconds histogram\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_prefill_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_prefill_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_decode_time_seconds histogram\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_decode_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_decode_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n",
+    "error": null
+  },
+  {
+    "sample_id": "36",
+    "binding": {
+      "session_nonce": "CPU-fixture-v2",
+      "generation": 0,
+      "worker_pid": 43,
+      "device_uuid": "GPU-fixture",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "engine": "0",
+      "clock_domain": "CPU-fixture-clock"
+    },
+    "requested_at_ns": 19000000001,
+    "received_at_ns": 19000000002,
+    "http_status": 200,
+    "raw": "# TYPE vllm:num_requests_waiting gauge\nvllm:num_requests_waiting{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:num_requests_running gauge\nvllm:num_requests_running{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:request_queue_time_seconds histogram\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_queue_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_queue_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_prefill_time_seconds histogram\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_prefill_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_prefill_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_decode_time_seconds histogram\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_decode_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_decode_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n",
+    "error": null
+  },
+  {
+    "sample_id": "37",
+    "binding": {
+      "session_nonce": "CPU-fixture-v2",
+      "generation": 0,
+      "worker_pid": 43,
+      "device_uuid": "GPU-fixture",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "engine": "0",
+      "clock_domain": "CPU-fixture-clock"
+    },
+    "requested_at_ns": 19500000001,
+    "received_at_ns": 19500000002,
+    "http_status": 200,
+    "raw": "# TYPE vllm:num_requests_waiting gauge\nvllm:num_requests_waiting{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:num_requests_running gauge\nvllm:num_requests_running{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:request_queue_time_seconds histogram\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_queue_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_queue_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_prefill_time_seconds histogram\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_prefill_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_prefill_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_decode_time_seconds histogram\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_decode_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_decode_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n",
+    "error": null
+  },
+  {
+    "sample_id": "38",
+    "binding": {
+      "session_nonce": "CPU-fixture-v2",
+      "generation": 0,
+      "worker_pid": 43,
+      "device_uuid": "GPU-fixture",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "engine": "0",
+      "clock_domain": "CPU-fixture-clock"
+    },
+    "requested_at_ns": 20000000001,
+    "received_at_ns": 20000000002,
+    "http_status": 200,
+    "raw": "# TYPE vllm:num_requests_waiting gauge\nvllm:num_requests_waiting{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:num_requests_running gauge\nvllm:num_requests_running{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:request_queue_time_seconds histogram\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_queue_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_queue_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_prefill_time_seconds histogram\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_prefill_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_prefill_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_decode_time_seconds histogram\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_decode_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_decode_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n",
+    "error": null
+  },
+  {
+    "sample_id": "39",
+    "binding": {
+      "session_nonce": "CPU-fixture-v2",
+      "generation": 0,
+      "worker_pid": 43,
+      "device_uuid": "GPU-fixture",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "engine": "0",
+      "clock_domain": "CPU-fixture-clock"
+    },
+    "requested_at_ns": 20500000001,
+    "received_at_ns": 20500000002,
+    "http_status": 200,
+    "raw": "# TYPE vllm:num_requests_waiting gauge\nvllm:num_requests_waiting{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:num_requests_running gauge\nvllm:num_requests_running{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:request_queue_time_seconds histogram\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_queue_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_queue_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_prefill_time_seconds histogram\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_prefill_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_prefill_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_decode_time_seconds histogram\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_decode_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_decode_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n",
+    "error": null
+  },
+  {
+    "sample_id": "40",
+    "binding": {
+      "session_nonce": "CPU-fixture-v2",
+      "generation": 0,
+      "worker_pid": 43,
+      "device_uuid": "GPU-fixture",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "engine": "0",
+      "clock_domain": "CPU-fixture-clock"
+    },
+    "requested_at_ns": 21000000001,
+    "received_at_ns": 21000000002,
+    "http_status": 200,
+    "raw": "# TYPE vllm:num_requests_waiting gauge\nvllm:num_requests_waiting{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:num_requests_running gauge\nvllm:num_requests_running{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:request_queue_time_seconds histogram\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_queue_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_queue_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_prefill_time_seconds histogram\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_prefill_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_prefill_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_decode_time_seconds histogram\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_decode_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_decode_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n",
+    "error": null
+  },
+  {
+    "sample_id": "41",
+    "binding": {
+      "session_nonce": "CPU-fixture-v2",
+      "generation": 0,
+      "worker_pid": 43,
+      "device_uuid": "GPU-fixture",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "engine": "0",
+      "clock_domain": "CPU-fixture-clock"
+    },
+    "requested_at_ns": 21500000001,
+    "received_at_ns": 21500000002,
+    "http_status": 200,
+    "raw": "# TYPE vllm:num_requests_waiting gauge\nvllm:num_requests_waiting{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:num_requests_running gauge\nvllm:num_requests_running{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:request_queue_time_seconds histogram\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_queue_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_queue_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_prefill_time_seconds histogram\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_prefill_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_prefill_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_decode_time_seconds histogram\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_decode_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_decode_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n",
+    "error": null
+  },
+  {
+    "sample_id": "42",
+    "binding": {
+      "session_nonce": "CPU-fixture-v2",
+      "generation": 0,
+      "worker_pid": 43,
+      "device_uuid": "GPU-fixture",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "engine": "0",
+      "clock_domain": "CPU-fixture-clock"
+    },
+    "requested_at_ns": 22000000001,
+    "received_at_ns": 22000000002,
+    "http_status": 200,
+    "raw": "# TYPE vllm:num_requests_waiting gauge\nvllm:num_requests_waiting{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:num_requests_running gauge\nvllm:num_requests_running{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:request_queue_time_seconds histogram\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_queue_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_queue_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_prefill_time_seconds histogram\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_prefill_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_prefill_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_decode_time_seconds histogram\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_decode_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_decode_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n",
+    "error": null
+  },
+  {
+    "sample_id": "43",
+    "binding": {
+      "session_nonce": "CPU-fixture-v2",
+      "generation": 0,
+      "worker_pid": 43,
+      "device_uuid": "GPU-fixture",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "engine": "0",
+      "clock_domain": "CPU-fixture-clock"
+    },
+    "requested_at_ns": 22500000001,
+    "received_at_ns": 22500000002,
+    "http_status": 200,
+    "raw": "# TYPE vllm:num_requests_waiting gauge\nvllm:num_requests_waiting{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:num_requests_running gauge\nvllm:num_requests_running{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:request_queue_time_seconds histogram\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_queue_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_queue_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_prefill_time_seconds histogram\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_prefill_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_prefill_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_decode_time_seconds histogram\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_decode_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_decode_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n",
+    "error": null
+  },
+  {
+    "sample_id": "44",
+    "binding": {
+      "session_nonce": "CPU-fixture-v2",
+      "generation": 0,
+      "worker_pid": 43,
+      "device_uuid": "GPU-fixture",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "engine": "0",
+      "clock_domain": "CPU-fixture-clock"
+    },
+    "requested_at_ns": 23000000001,
+    "received_at_ns": 23000000002,
+    "http_status": 200,
+    "raw": "# TYPE vllm:num_requests_waiting gauge\nvllm:num_requests_waiting{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:num_requests_running gauge\nvllm:num_requests_running{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:request_queue_time_seconds histogram\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_queue_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_queue_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_prefill_time_seconds histogram\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_prefill_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_prefill_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_decode_time_seconds histogram\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_decode_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_decode_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n",
+    "error": null
+  },
+  {
+    "sample_id": "45",
+    "binding": {
+      "session_nonce": "CPU-fixture-v2",
+      "generation": 0,
+      "worker_pid": 43,
+      "device_uuid": "GPU-fixture",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "engine": "0",
+      "clock_domain": "CPU-fixture-clock"
+    },
+    "requested_at_ns": 23500000001,
+    "received_at_ns": 23500000002,
+    "http_status": 200,
+    "raw": "# TYPE vllm:num_requests_waiting gauge\nvllm:num_requests_waiting{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:num_requests_running gauge\nvllm:num_requests_running{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:request_queue_time_seconds histogram\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_queue_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_queue_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_prefill_time_seconds histogram\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_prefill_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_prefill_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_decode_time_seconds histogram\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_decode_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_decode_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n",
+    "error": null
+  },
+  {
+    "sample_id": "46",
+    "binding": {
+      "session_nonce": "CPU-fixture-v2",
+      "generation": 0,
+      "worker_pid": 43,
+      "device_uuid": "GPU-fixture",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "engine": "0",
+      "clock_domain": "CPU-fixture-clock"
+    },
+    "requested_at_ns": 24000000001,
+    "received_at_ns": 24000000002,
+    "http_status": 200,
+    "raw": "# TYPE vllm:num_requests_waiting gauge\nvllm:num_requests_waiting{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:num_requests_running gauge\nvllm:num_requests_running{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:request_queue_time_seconds histogram\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_queue_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_queue_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_prefill_time_seconds histogram\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_prefill_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_prefill_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_decode_time_seconds histogram\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_decode_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_decode_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n",
+    "error": null
+  },
+  {
+    "sample_id": "47",
+    "binding": {
+      "session_nonce": "CPU-fixture-v2",
+      "generation": 0,
+      "worker_pid": 43,
+      "device_uuid": "GPU-fixture",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "engine": "0",
+      "clock_domain": "CPU-fixture-clock"
+    },
+    "requested_at_ns": 24500000001,
+    "received_at_ns": 24500000002,
+    "http_status": 200,
+    "raw": "# TYPE vllm:num_requests_waiting gauge\nvllm:num_requests_waiting{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:num_requests_running gauge\nvllm:num_requests_running{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:request_queue_time_seconds histogram\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_queue_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_queue_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_prefill_time_seconds histogram\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_prefill_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_prefill_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_decode_time_seconds histogram\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_decode_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_decode_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n",
+    "error": null
+  },
+  {
+    "sample_id": "48",
+    "binding": {
+      "session_nonce": "CPU-fixture-v2",
+      "generation": 0,
+      "worker_pid": 43,
+      "device_uuid": "GPU-fixture",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "engine": "0",
+      "clock_domain": "CPU-fixture-clock"
+    },
+    "requested_at_ns": 25000000001,
+    "received_at_ns": 25000000002,
+    "http_status": 200,
+    "raw": "# TYPE vllm:num_requests_waiting gauge\nvllm:num_requests_waiting{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:num_requests_running gauge\nvllm:num_requests_running{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:request_queue_time_seconds histogram\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_queue_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_queue_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_prefill_time_seconds histogram\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_prefill_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_prefill_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_decode_time_seconds histogram\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_decode_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_decode_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n",
+    "error": null
+  },
+  {
+    "sample_id": "49",
+    "binding": {
+      "session_nonce": "CPU-fixture-v2",
+      "generation": 0,
+      "worker_pid": 43,
+      "device_uuid": "GPU-fixture",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "engine": "0",
+      "clock_domain": "CPU-fixture-clock"
+    },
+    "requested_at_ns": 25500000001,
+    "received_at_ns": 25500000002,
+    "http_status": 200,
+    "raw": "# TYPE vllm:num_requests_waiting gauge\nvllm:num_requests_waiting{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:num_requests_running gauge\nvllm:num_requests_running{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:request_queue_time_seconds histogram\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_queue_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_queue_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_prefill_time_seconds histogram\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_prefill_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_prefill_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_decode_time_seconds histogram\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_decode_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_decode_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n",
+    "error": null
+  },
+  {
+    "sample_id": "50",
+    "binding": {
+      "session_nonce": "CPU-fixture-v2",
+      "generation": 0,
+      "worker_pid": 43,
+      "device_uuid": "GPU-fixture",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "engine": "0",
+      "clock_domain": "CPU-fixture-clock"
+    },
+    "requested_at_ns": 26000000001,
+    "received_at_ns": 26000000002,
+    "http_status": 200,
+    "raw": "# TYPE vllm:num_requests_waiting gauge\nvllm:num_requests_waiting{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:num_requests_running gauge\nvllm:num_requests_running{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:request_queue_time_seconds histogram\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_queue_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_queue_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_prefill_time_seconds histogram\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_prefill_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_prefill_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_decode_time_seconds histogram\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_decode_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_decode_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n",
+    "error": null
+  },
+  {
+    "sample_id": "51",
+    "binding": {
+      "session_nonce": "CPU-fixture-v2",
+      "generation": 0,
+      "worker_pid": 43,
+      "device_uuid": "GPU-fixture",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "engine": "0",
+      "clock_domain": "CPU-fixture-clock"
+    },
+    "requested_at_ns": 26500000001,
+    "received_at_ns": 26500000002,
+    "http_status": 200,
+    "raw": "# TYPE vllm:num_requests_waiting gauge\nvllm:num_requests_waiting{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:num_requests_running gauge\nvllm:num_requests_running{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:request_queue_time_seconds histogram\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_queue_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_queue_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_prefill_time_seconds histogram\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_prefill_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_prefill_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_decode_time_seconds histogram\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_decode_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_decode_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n",
+    "error": null
+  },
+  {
+    "sample_id": "52",
+    "binding": {
+      "session_nonce": "CPU-fixture-v2",
+      "generation": 0,
+      "worker_pid": 43,
+      "device_uuid": "GPU-fixture",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "engine": "0",
+      "clock_domain": "CPU-fixture-clock"
+    },
+    "requested_at_ns": 27000000001,
+    "received_at_ns": 27000000002,
+    "http_status": 200,
+    "raw": "# TYPE vllm:num_requests_waiting gauge\nvllm:num_requests_waiting{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:num_requests_running gauge\nvllm:num_requests_running{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:request_queue_time_seconds histogram\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_queue_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_queue_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_prefill_time_seconds histogram\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_prefill_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_prefill_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_decode_time_seconds histogram\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_decode_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_decode_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n",
+    "error": null
+  },
+  {
+    "sample_id": "53",
+    "binding": {
+      "session_nonce": "CPU-fixture-v2",
+      "generation": 0,
+      "worker_pid": 43,
+      "device_uuid": "GPU-fixture",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "engine": "0",
+      "clock_domain": "CPU-fixture-clock"
+    },
+    "requested_at_ns": 27500000001,
+    "received_at_ns": 27500000002,
+    "http_status": 200,
+    "raw": "# TYPE vllm:num_requests_waiting gauge\nvllm:num_requests_waiting{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:num_requests_running gauge\nvllm:num_requests_running{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:request_queue_time_seconds histogram\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_queue_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_queue_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_prefill_time_seconds histogram\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_prefill_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_prefill_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_decode_time_seconds histogram\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_decode_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_decode_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n",
+    "error": null
+  },
+  {
+    "sample_id": "54",
+    "binding": {
+      "session_nonce": "CPU-fixture-v2",
+      "generation": 0,
+      "worker_pid": 43,
+      "device_uuid": "GPU-fixture",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "engine": "0",
+      "clock_domain": "CPU-fixture-clock"
+    },
+    "requested_at_ns": 28000000001,
+    "received_at_ns": 28000000002,
+    "http_status": 200,
+    "raw": "# TYPE vllm:num_requests_waiting gauge\nvllm:num_requests_waiting{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:num_requests_running gauge\nvllm:num_requests_running{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:request_queue_time_seconds histogram\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_queue_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_queue_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_prefill_time_seconds histogram\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_prefill_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_prefill_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_decode_time_seconds histogram\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_decode_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_decode_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n",
+    "error": null
+  },
+  {
+    "sample_id": "55",
+    "binding": {
+      "session_nonce": "CPU-fixture-v2",
+      "generation": 0,
+      "worker_pid": 43,
+      "device_uuid": "GPU-fixture",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "engine": "0",
+      "clock_domain": "CPU-fixture-clock"
+    },
+    "requested_at_ns": 28500000001,
+    "received_at_ns": 28500000002,
+    "http_status": 200,
+    "raw": "# TYPE vllm:num_requests_waiting gauge\nvllm:num_requests_waiting{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:num_requests_running gauge\nvllm:num_requests_running{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:request_queue_time_seconds histogram\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_queue_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_queue_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_prefill_time_seconds histogram\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_prefill_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_prefill_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_decode_time_seconds histogram\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_decode_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_decode_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n",
+    "error": null
+  },
+  {
+    "sample_id": "56",
+    "binding": {
+      "session_nonce": "CPU-fixture-v2",
+      "generation": 0,
+      "worker_pid": 43,
+      "device_uuid": "GPU-fixture",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "engine": "0",
+      "clock_domain": "CPU-fixture-clock"
+    },
+    "requested_at_ns": 29000000001,
+    "received_at_ns": 29000000002,
+    "http_status": 200,
+    "raw": "# TYPE vllm:num_requests_waiting gauge\nvllm:num_requests_waiting{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:num_requests_running gauge\nvllm:num_requests_running{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:request_queue_time_seconds histogram\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_queue_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_queue_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_prefill_time_seconds histogram\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_prefill_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_prefill_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_decode_time_seconds histogram\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_decode_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_decode_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n",
+    "error": null
+  },
+  {
+    "sample_id": "57",
+    "binding": {
+      "session_nonce": "CPU-fixture-v2",
+      "generation": 0,
+      "worker_pid": 43,
+      "device_uuid": "GPU-fixture",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "engine": "0",
+      "clock_domain": "CPU-fixture-clock"
+    },
+    "requested_at_ns": 29500000001,
+    "received_at_ns": 29500000002,
+    "http_status": 200,
+    "raw": "# TYPE vllm:num_requests_waiting gauge\nvllm:num_requests_waiting{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:num_requests_running gauge\nvllm:num_requests_running{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:request_queue_time_seconds histogram\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_queue_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_queue_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_prefill_time_seconds histogram\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_prefill_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_prefill_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_decode_time_seconds histogram\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_decode_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_decode_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n",
+    "error": null
+  },
+  {
+    "sample_id": "58",
+    "binding": {
+      "session_nonce": "CPU-fixture-v2",
+      "generation": 0,
+      "worker_pid": 43,
+      "device_uuid": "GPU-fixture",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "engine": "0",
+      "clock_domain": "CPU-fixture-clock"
+    },
+    "requested_at_ns": 30000000001,
+    "received_at_ns": 30000000002,
+    "http_status": 200,
+    "raw": "# TYPE vllm:num_requests_waiting gauge\nvllm:num_requests_waiting{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:num_requests_running gauge\nvllm:num_requests_running{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:request_queue_time_seconds histogram\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_queue_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_queue_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_prefill_time_seconds histogram\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_prefill_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_prefill_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_decode_time_seconds histogram\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_decode_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_decode_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n",
+    "error": null
+  },
+  {
+    "sample_id": "59",
+    "binding": {
+      "session_nonce": "CPU-fixture-v2",
+      "generation": 0,
+      "worker_pid": 43,
+      "device_uuid": "GPU-fixture",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "engine": "0",
+      "clock_domain": "CPU-fixture-clock"
+    },
+    "requested_at_ns": 30500000001,
+    "received_at_ns": 30500000002,
+    "http_status": 200,
+    "raw": "# TYPE vllm:num_requests_waiting gauge\nvllm:num_requests_waiting{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:num_requests_running gauge\nvllm:num_requests_running{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:request_queue_time_seconds histogram\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_queue_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_queue_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_prefill_time_seconds histogram\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_prefill_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_prefill_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_decode_time_seconds histogram\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_decode_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_decode_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n",
+    "error": null
+  },
+  {
+    "sample_id": "60",
+    "binding": {
+      "session_nonce": "CPU-fixture-v2",
+      "generation": 0,
+      "worker_pid": 43,
+      "device_uuid": "GPU-fixture",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "engine": "0",
+      "clock_domain": "CPU-fixture-clock"
+    },
+    "requested_at_ns": 31000000001,
+    "received_at_ns": 31000000002,
+    "http_status": 200,
+    "raw": "# TYPE vllm:num_requests_waiting gauge\nvllm:num_requests_waiting{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:num_requests_running gauge\nvllm:num_requests_running{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:request_queue_time_seconds histogram\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_queue_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_queue_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_prefill_time_seconds histogram\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_prefill_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_prefill_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_decode_time_seconds histogram\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_decode_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_decode_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n",
+    "error": null
+  },
+  {
+    "sample_id": "61",
+    "binding": {
+      "session_nonce": "CPU-fixture-v2",
+      "generation": 0,
+      "worker_pid": 43,
+      "device_uuid": "GPU-fixture",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "engine": "0",
+      "clock_domain": "CPU-fixture-clock"
+    },
+    "requested_at_ns": 31500000001,
+    "received_at_ns": 31500000002,
+    "http_status": 200,
+    "raw": "# TYPE vllm:num_requests_waiting gauge\nvllm:num_requests_waiting{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:num_requests_running gauge\nvllm:num_requests_running{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:request_queue_time_seconds histogram\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_queue_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_queue_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_prefill_time_seconds histogram\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_prefill_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_prefill_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_decode_time_seconds histogram\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_decode_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_decode_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n",
+    "error": null
+  },
+  {
+    "sample_id": "62",
+    "binding": {
+      "session_nonce": "CPU-fixture-v2",
+      "generation": 0,
+      "worker_pid": 43,
+      "device_uuid": "GPU-fixture",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "engine": "0",
+      "clock_domain": "CPU-fixture-clock"
+    },
+    "requested_at_ns": 32000000001,
+    "received_at_ns": 32000000002,
+    "http_status": 200,
+    "raw": "# TYPE vllm:num_requests_waiting gauge\nvllm:num_requests_waiting{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:num_requests_running gauge\nvllm:num_requests_running{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:request_queue_time_seconds histogram\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_queue_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_queue_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_prefill_time_seconds histogram\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_prefill_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_prefill_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_decode_time_seconds histogram\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_decode_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_decode_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n",
+    "error": null
+  },
+  {
+    "sample_id": "63",
+    "binding": {
+      "session_nonce": "CPU-fixture-v2",
+      "generation": 0,
+      "worker_pid": 43,
+      "device_uuid": "GPU-fixture",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "engine": "0",
+      "clock_domain": "CPU-fixture-clock"
+    },
+    "requested_at_ns": 32500000001,
+    "received_at_ns": 32500000002,
+    "http_status": 200,
+    "raw": "# TYPE vllm:num_requests_waiting gauge\nvllm:num_requests_waiting{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:num_requests_running gauge\nvllm:num_requests_running{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:request_queue_time_seconds histogram\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_queue_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_queue_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_prefill_time_seconds histogram\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_prefill_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_prefill_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_decode_time_seconds histogram\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_decode_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_decode_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n",
+    "error": null
+  },
+  {
+    "sample_id": "64",
+    "binding": {
+      "session_nonce": "CPU-fixture-v2",
+      "generation": 0,
+      "worker_pid": 43,
+      "device_uuid": "GPU-fixture",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "engine": "0",
+      "clock_domain": "CPU-fixture-clock"
+    },
+    "requested_at_ns": 33000000001,
+    "received_at_ns": 33000000002,
+    "http_status": 200,
+    "raw": "# TYPE vllm:num_requests_waiting gauge\nvllm:num_requests_waiting{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:num_requests_running gauge\nvllm:num_requests_running{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:request_queue_time_seconds histogram\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_queue_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_queue_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_prefill_time_seconds histogram\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_prefill_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_prefill_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_decode_time_seconds histogram\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_decode_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_decode_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n",
+    "error": null
+  },
+  {
+    "sample_id": "65",
+    "binding": {
+      "session_nonce": "CPU-fixture-v2",
+      "generation": 0,
+      "worker_pid": 43,
+      "device_uuid": "GPU-fixture",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "engine": "0",
+      "clock_domain": "CPU-fixture-clock"
+    },
+    "requested_at_ns": 33500000001,
+    "received_at_ns": 33500000002,
+    "http_status": 200,
+    "raw": "# TYPE vllm:num_requests_waiting gauge\nvllm:num_requests_waiting{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:num_requests_running gauge\nvllm:num_requests_running{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:request_queue_time_seconds histogram\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_queue_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_queue_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_prefill_time_seconds histogram\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_prefill_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_prefill_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_decode_time_seconds histogram\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_decode_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_decode_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n",
+    "error": null
+  },
+  {
+    "sample_id": "66",
+    "binding": {
+      "session_nonce": "CPU-fixture-v2",
+      "generation": 0,
+      "worker_pid": 43,
+      "device_uuid": "GPU-fixture",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "engine": "0",
+      "clock_domain": "CPU-fixture-clock"
+    },
+    "requested_at_ns": 34000000001,
+    "received_at_ns": 34000000002,
+    "http_status": 200,
+    "raw": "# TYPE vllm:num_requests_waiting gauge\nvllm:num_requests_waiting{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:num_requests_running gauge\nvllm:num_requests_running{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:request_queue_time_seconds histogram\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_queue_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_queue_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_prefill_time_seconds histogram\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_prefill_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_prefill_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_decode_time_seconds histogram\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_decode_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_decode_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n",
+    "error": null
+  },
+  {
+    "sample_id": "67",
+    "binding": {
+      "session_nonce": "CPU-fixture-v2",
+      "generation": 0,
+      "worker_pid": 43,
+      "device_uuid": "GPU-fixture",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "engine": "0",
+      "clock_domain": "CPU-fixture-clock"
+    },
+    "requested_at_ns": 34500000001,
+    "received_at_ns": 34500000002,
+    "http_status": 200,
+    "raw": "# TYPE vllm:num_requests_waiting gauge\nvllm:num_requests_waiting{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:num_requests_running gauge\nvllm:num_requests_running{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:request_queue_time_seconds histogram\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_queue_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_queue_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_prefill_time_seconds histogram\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_prefill_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_prefill_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_decode_time_seconds histogram\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_decode_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_decode_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n",
+    "error": null
+  },
+  {
+    "sample_id": "68",
+    "binding": {
+      "session_nonce": "CPU-fixture-v2",
+      "generation": 0,
+      "worker_pid": 43,
+      "device_uuid": "GPU-fixture",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "engine": "0",
+      "clock_domain": "CPU-fixture-clock"
+    },
+    "requested_at_ns": 35000000001,
+    "received_at_ns": 35000000002,
+    "http_status": 200,
+    "raw": "# TYPE vllm:num_requests_waiting gauge\nvllm:num_requests_waiting{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:num_requests_running gauge\nvllm:num_requests_running{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:request_queue_time_seconds histogram\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_queue_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_queue_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_prefill_time_seconds histogram\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_prefill_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_prefill_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_decode_time_seconds histogram\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_decode_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_decode_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n",
+    "error": null
+  },
+  {
+    "sample_id": "69",
+    "binding": {
+      "session_nonce": "CPU-fixture-v2",
+      "generation": 0,
+      "worker_pid": 43,
+      "device_uuid": "GPU-fixture",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "engine": "0",
+      "clock_domain": "CPU-fixture-clock"
+    },
+    "requested_at_ns": 35500000001,
+    "received_at_ns": 35500000002,
+    "http_status": 200,
+    "raw": "# TYPE vllm:num_requests_waiting gauge\nvllm:num_requests_waiting{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:num_requests_running gauge\nvllm:num_requests_running{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:request_queue_time_seconds histogram\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_queue_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_queue_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_prefill_time_seconds histogram\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_prefill_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_prefill_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_decode_time_seconds histogram\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_decode_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_decode_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n",
+    "error": null
+  },
+  {
+    "sample_id": "70",
+    "binding": {
+      "session_nonce": "CPU-fixture-v2",
+      "generation": 0,
+      "worker_pid": 43,
+      "device_uuid": "GPU-fixture",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "engine": "0",
+      "clock_domain": "CPU-fixture-clock"
+    },
+    "requested_at_ns": 36000000001,
+    "received_at_ns": 36000000002,
+    "http_status": 200,
+    "raw": "# TYPE vllm:num_requests_waiting gauge\nvllm:num_requests_waiting{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:num_requests_running gauge\nvllm:num_requests_running{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:request_queue_time_seconds histogram\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_queue_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_queue_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_prefill_time_seconds histogram\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_prefill_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_prefill_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_decode_time_seconds histogram\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_decode_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_decode_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n",
+    "error": null
+  },
+  {
+    "sample_id": "71",
+    "binding": {
+      "session_nonce": "CPU-fixture-v2",
+      "generation": 0,
+      "worker_pid": 43,
+      "device_uuid": "GPU-fixture",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "engine": "0",
+      "clock_domain": "CPU-fixture-clock"
+    },
+    "requested_at_ns": 36500000001,
+    "received_at_ns": 36500000002,
+    "http_status": 200,
+    "raw": "# TYPE vllm:num_requests_waiting gauge\nvllm:num_requests_waiting{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:num_requests_running gauge\nvllm:num_requests_running{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:request_queue_time_seconds histogram\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_queue_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_queue_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_prefill_time_seconds histogram\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_prefill_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_prefill_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_decode_time_seconds histogram\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_decode_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_decode_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n",
+    "error": null
+  },
+  {
+    "sample_id": "72",
+    "binding": {
+      "session_nonce": "CPU-fixture-v2",
+      "generation": 0,
+      "worker_pid": 43,
+      "device_uuid": "GPU-fixture",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "engine": "0",
+      "clock_domain": "CPU-fixture-clock"
+    },
+    "requested_at_ns": 37000000001,
+    "received_at_ns": 37000000002,
+    "http_status": 200,
+    "raw": "# TYPE vllm:num_requests_waiting gauge\nvllm:num_requests_waiting{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:num_requests_running gauge\nvllm:num_requests_running{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:request_queue_time_seconds histogram\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_queue_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_queue_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_prefill_time_seconds histogram\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_prefill_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_prefill_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_decode_time_seconds histogram\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_decode_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_decode_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n",
+    "error": null
+  },
+  {
+    "sample_id": "73",
+    "binding": {
+      "session_nonce": "CPU-fixture-v2",
+      "generation": 0,
+      "worker_pid": 43,
+      "device_uuid": "GPU-fixture",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "engine": "0",
+      "clock_domain": "CPU-fixture-clock"
+    },
+    "requested_at_ns": 37500000001,
+    "received_at_ns": 37500000002,
+    "http_status": 200,
+    "raw": "# TYPE vllm:num_requests_waiting gauge\nvllm:num_requests_waiting{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:num_requests_running gauge\nvllm:num_requests_running{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:request_queue_time_seconds histogram\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_queue_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_queue_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_prefill_time_seconds histogram\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_prefill_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_prefill_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_decode_time_seconds histogram\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_decode_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_decode_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n",
+    "error": null
+  },
+  {
+    "sample_id": "74",
+    "binding": {
+      "session_nonce": "CPU-fixture-v2",
+      "generation": 0,
+      "worker_pid": 43,
+      "device_uuid": "GPU-fixture",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "engine": "0",
+      "clock_domain": "CPU-fixture-clock"
+    },
+    "requested_at_ns": 38000000001,
+    "received_at_ns": 38000000002,
+    "http_status": 200,
+    "raw": "# TYPE vllm:num_requests_waiting gauge\nvllm:num_requests_waiting{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:num_requests_running gauge\nvllm:num_requests_running{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:request_queue_time_seconds histogram\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_queue_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_queue_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_prefill_time_seconds histogram\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_prefill_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_prefill_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_decode_time_seconds histogram\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_decode_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_decode_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n",
+    "error": null
+  },
+  {
+    "sample_id": "75",
+    "binding": {
+      "session_nonce": "CPU-fixture-v2",
+      "generation": 0,
+      "worker_pid": 43,
+      "device_uuid": "GPU-fixture",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "engine": "0",
+      "clock_domain": "CPU-fixture-clock"
+    },
+    "requested_at_ns": 38500000001,
+    "received_at_ns": 38500000002,
+    "http_status": 200,
+    "raw": "# TYPE vllm:num_requests_waiting gauge\nvllm:num_requests_waiting{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:num_requests_running gauge\nvllm:num_requests_running{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:request_queue_time_seconds histogram\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_queue_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_queue_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_prefill_time_seconds histogram\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_prefill_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_prefill_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_decode_time_seconds histogram\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_decode_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_decode_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n",
+    "error": null
+  },
+  {
+    "sample_id": "76",
+    "binding": {
+      "session_nonce": "CPU-fixture-v2",
+      "generation": 0,
+      "worker_pid": 43,
+      "device_uuid": "GPU-fixture",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "engine": "0",
+      "clock_domain": "CPU-fixture-clock"
+    },
+    "requested_at_ns": 39000000001,
+    "received_at_ns": 39000000002,
+    "http_status": 200,
+    "raw": "# TYPE vllm:num_requests_waiting gauge\nvllm:num_requests_waiting{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:num_requests_running gauge\nvllm:num_requests_running{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:request_queue_time_seconds histogram\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_queue_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_queue_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_prefill_time_seconds histogram\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_prefill_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_prefill_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_decode_time_seconds histogram\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_decode_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_decode_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n",
+    "error": null
+  },
+  {
+    "sample_id": "77",
+    "binding": {
+      "session_nonce": "CPU-fixture-v2",
+      "generation": 0,
+      "worker_pid": 43,
+      "device_uuid": "GPU-fixture",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "engine": "0",
+      "clock_domain": "CPU-fixture-clock"
+    },
+    "requested_at_ns": 39500000001,
+    "received_at_ns": 39500000002,
+    "http_status": 200,
+    "raw": "# TYPE vllm:num_requests_waiting gauge\nvllm:num_requests_waiting{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:num_requests_running gauge\nvllm:num_requests_running{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:request_queue_time_seconds histogram\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_queue_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_queue_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_prefill_time_seconds histogram\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_prefill_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_prefill_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_decode_time_seconds histogram\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_decode_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_decode_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n",
+    "error": null
+  },
+  {
+    "sample_id": "78",
+    "binding": {
+      "session_nonce": "CPU-fixture-v2",
+      "generation": 0,
+      "worker_pid": 43,
+      "device_uuid": "GPU-fixture",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "engine": "0",
+      "clock_domain": "CPU-fixture-clock"
+    },
+    "requested_at_ns": 40000000001,
+    "received_at_ns": 40000000002,
+    "http_status": 200,
+    "raw": "# TYPE vllm:num_requests_waiting gauge\nvllm:num_requests_waiting{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:num_requests_running gauge\nvllm:num_requests_running{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:request_queue_time_seconds histogram\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_queue_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_queue_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_prefill_time_seconds histogram\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_prefill_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_prefill_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_decode_time_seconds histogram\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_decode_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_decode_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n",
+    "error": null
+  },
+  {
+    "sample_id": "79",
+    "binding": {
+      "session_nonce": "CPU-fixture-v2",
+      "generation": 0,
+      "worker_pid": 43,
+      "device_uuid": "GPU-fixture",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "engine": "0",
+      "clock_domain": "CPU-fixture-clock"
+    },
+    "requested_at_ns": 40500000001,
+    "received_at_ns": 40500000002,
+    "http_status": 200,
+    "raw": "# TYPE vllm:num_requests_waiting gauge\nvllm:num_requests_waiting{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:num_requests_running gauge\nvllm:num_requests_running{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0\n# TYPE vllm:request_queue_time_seconds histogram\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_queue_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_queue_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_queue_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_prefill_time_seconds histogram\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_prefill_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_prefill_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_prefill_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n# TYPE vllm:request_decode_time_seconds histogram\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"0.1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"1\"} 2\nvllm:request_decode_time_seconds_bucket{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\",le=\"+Inf\"} 2\nvllm:request_decode_time_seconds_count{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 2\nvllm:request_decode_time_seconds_sum{model_name=\"Qwen/Qwen2.5-7B-Instruct\",engine=\"0\"} 0.02\n",
+    "error": null
+  }
+]

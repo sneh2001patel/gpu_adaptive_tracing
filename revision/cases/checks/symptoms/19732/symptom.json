@@ -1,0 +1,114 @@
+{
+ "case": "19732",
+ "phase": [
+  60,
+  180
+ ],
+ "baseline": {
+  "p95_base_s": 2.1501495838165283,
+  "p95_base_measure": "median over steady windows of p95 in-flight age",
+  "n_windows": 14,
+  "completed_p95_s": 2.9457640647888184,
+  "n_completed": 75,
+  "baseline_ns_per_token": {
+   "other": 3665502.242753623,
+   "gemm": 1642993.0398550725,
+   "attention": 115357.31521739131
+  },
+  "baseline_tokens": 276.0,
+  "baseline_shares": {
+   "kernel<int>": 0.6476736233393842,
+   "Kernel2<cutlass_80_wmma_tensorop_bf16_s161616gemm_bf16_16x16_128x2_tn_align8>": 0.2900395195252533,
+   "flash_fwd_splitkv_kernel": 0.015544968828800916,
+   "Kernel2<cutlass_80_wmma_tensorop_bf16_s161616gemm_bf16_16x16_128x1_tn_align8>": 0.012880408740052779,
+   "elementwise_kernel": 0.0048824498690121345,
+   "triton_red_fused__to_copy_add__3...": 0.004088958060178569,
+   "reshape_and_cache_flash_kernel<__nv_bfloat16>": 0.003798051010611229,
+   "triton_red_fused__to_copy_add__2...": 0.0037969608181010876,
+   "triton_poi_fused_cat_3": 0.003123435610070997,
+   "triton_poi_fused_cat_4": 0.0030034462969235616,
+   "triton_poi_fused_mul_silu_1": 0.0027822253947002405,
+   "triton_poi_fused_view_5": 0.0019422140293631608,
+   "flash_fwd_splitkv_combine_kernel": 0.0019254997482380093,
+   "vectorized_elementwise_kernel": 0.0012551161917858569,
+   "unrolled_elementwise_kernel": 0.0009577461443413,
+   "reduce_kernel": 0.0005832970815933281,
+   "index_elementwise_kernel": 0.00041814226844854007,
+   "_scatter_gather_elementwise_kernel": 0.00032727285229992983,
+   "apply_repetition_penalties_kernel<float>": 0.0002694485605947471,
+   "triton_red_fused__to_copy_add__1...": 0.0001675055407447804,
+   "triton_poi_fused_cat_1": 0.0001243246988035739,
+   "triton_poi_fused_cat_2": 0.00011643683534784509,
+   "triton_poi_fused___rshift___ar_5...": 8.715127184012565e-05,
+   "triton_poi_fused___rshift___ar_4...": 8.40096202621876e-05,
+   "triton_poi_fused_view_3": 7.344904833030948e-05,
+   "triton_poi_fused___rshift___ar_6...": 4.728442808691635e-05,
+   "elementwise_kernel_with_index<int>": 7.05418683032658e-06
+  },
+  "baseline_busy_fraction": 0.6950323392171055,
+  "env": "v092",
+  "version": "0.9.2",
+  "model": "/dev/shm/hf-cache/hub/models--Qwen--Qwen2.5-1.5B-Instruct/snapshots/989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+  "schedule": "symptoms/19732/healthy.jsonl",
+  "server_args": "--max-model-len 4096 --gpu-memory-utilization 0.6 --guided-decoding-backend xgrammar --disable-log-requests --served-model-name Qwen/Qwen2.5-1.5B-Instruct"
+ },
+ "fixed": {
+  "error": null,
+  "scheduled": 466,
+  "completed": 466,
+  "ok": 466,
+  "failed": 0,
+  "errors": [],
+  "p50_latency_s": 3.305485963821411,
+  "p95_latency_s": 3.4816248416900635,
+  "mean_lateness_s": 0.0,
+  "gen_tokens_per_s": 675.3,
+  "latency_ratio_median": 1.425322128217914,
+  "latency_ratio_max": 1.628523124050758,
+  "elevated_window_share": 0.227,
+  "waiting_mean": 0.017,
+  "kv_usage_mean": 0.004,
+  "preemptions_per_s_mean": 0.0,
+  "gpu_util_mean": 0.79,
+  "cheap_diagnoses": [
+   [
+    "healthy",
+    92
+   ],
+   [
+    null,
+    28
+   ]
+  ],
+  "episode": {
+   "started_window": "w00009",
+   "stopped_window": null,
+   "decision": {
+    "stop": true,
+    "reason": "horizon_ended",
+    "policy": "NT"
+   },
+   "bursts": 0,
+   "final_state": "done"
+  }
+ },
+ "bug": {
+  "error": null,
+  "scheduled": 466,
+  "completed": 466,
+  "ok": 466,
+  "failed": 0,
+  "errors": [],
+  "p50_latency_s": 3.305093765258789,
+  "p95_latency_s": 3.434638023376465,
+  "mean_lateness_s": 0.0,
+  "gen_tokens_per_s": 675.7
+ },
+ "bug_over_fixed": {
+  "p50_latency": 1.0,
+  "p95_latency": 0.987,
+  "gen_tokens_per_s": 1.001,
+  "completed": 1.0
+ },
+ "symptom_shown": false
+}
